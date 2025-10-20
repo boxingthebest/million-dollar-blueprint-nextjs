@@ -12,7 +12,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center">
-              <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={300} height={90} className="h-16 w-auto md:h-20" />
+              <Image src="/logo-full.jpg" alt="Million Dollar Blueprint" width={400} height={120} className="h-16 w-auto md:h-20" />
             </Link>
             <div className="flex gap-8">
               <Link href="/" className="text-slate-300 hover:text-white transition">Home</Link>
