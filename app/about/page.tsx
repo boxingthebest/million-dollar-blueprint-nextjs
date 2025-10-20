@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -10,8 +11,8 @@ export default function AboutPage() {
       <nav className="border-b border-slate-800 bg-slate-950/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Million Dollar Blueprint
+            <Link href="/" className="flex items-center">
+              <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={300} height={90} className="h-16 w-auto md:h-20" />
             </Link>
             <div className="flex gap-8">
               <Link href="/" className="text-slate-300 hover:text-white transition">Home</Link>
