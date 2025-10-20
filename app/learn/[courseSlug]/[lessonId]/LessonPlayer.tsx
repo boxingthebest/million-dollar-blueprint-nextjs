@@ -1,6 +1,6 @@
 "use client"
 
-import ReactPlayer, { type ReactPlayerProps } from "react-player"
+import ReactPlayer from "react-player"
 import { useState, useEffect } from "react"
 
 interface LessonPlayerProps {
@@ -80,7 +80,7 @@ export default function LessonPlayer({
       width="100%"
       height="100%"
       controls
-      onProgress={handleProgress as ReactPlayerProps['onProgress']}
+      onProgress={handleProgress as any}
       config={{
         vimeo: {
           playerOptions: {
