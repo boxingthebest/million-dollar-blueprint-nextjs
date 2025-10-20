@@ -272,8 +272,12 @@ export default function Home() {
       </nav>
 
       {/* Founder's Welcome Video */}
-      <section className="py-12 md:py-16 bg-slate-900">
-        <div className="container mx-auto px-4">
+      <section className="py-12 md:py-16 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-slate-900 to-cyan-900/40" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-600/20 via-transparent to-transparent animate-pulse" style={{animationDuration: '4s'}} />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
               A Message From Our Founders
