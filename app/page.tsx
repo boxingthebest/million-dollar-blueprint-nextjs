@@ -300,26 +300,36 @@ export default function Home() {
       </section>
 
       {/* Countdown Timer */}
-      <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 py-6">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 py-8 relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-yellow-300 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}} />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center text-white">
-            <p className="text-lg md:text-xl font-bold mb-3">⚡ Founding Member Pricing Ends In:</p>
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 animate-bounce">
+              <span className="text-sm md:text-base font-bold">🔥 LIMITED TIME OFFER</span>
+            </div>
+            <p className="text-2xl md:text-3xl font-bold mb-2">Founding Member Pricing Ends In:</p>
+            <p className="text-sm md:text-base mb-6 opacity-90">Lock in lifetime access at the lowest price you'll ever see</p>
             <div className="flex justify-center gap-3 md:gap-6">
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 md:px-6 py-3 md:py-4">
-                <div className="text-2xl md:text-4xl font-bold">{timeLeft.days}</div>
-                <div className="text-xs md:text-sm">Days</div>
+              <div className="bg-white/30 backdrop-blur-md rounded-xl px-4 md:px-8 py-4 md:py-6 shadow-2xl hover:scale-105 transition-transform">
+                <div className="text-3xl md:text-5xl font-bold drop-shadow-lg">{timeLeft.days}</div>
+                <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wider">Days</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 md:px-6 py-3 md:py-4">
-                <div className="text-2xl md:text-4xl font-bold">{timeLeft.hours}</div>
-                <div className="text-xs md:text-sm">Hours</div>
+              <div className="bg-white/30 backdrop-blur-md rounded-xl px-4 md:px-8 py-4 md:py-6 shadow-2xl hover:scale-105 transition-transform">
+                <div className="text-3xl md:text-5xl font-bold drop-shadow-lg">{timeLeft.hours}</div>
+                <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wider">Hours</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 md:px-6 py-3 md:py-4">
-                <div className="text-2xl md:text-4xl font-bold">{timeLeft.minutes}</div>
-                <div className="text-xs md:text-sm">Minutes</div>
+              <div className="bg-white/30 backdrop-blur-md rounded-xl px-4 md:px-8 py-4 md:py-6 shadow-2xl hover:scale-105 transition-transform">
+                <div className="text-3xl md:text-5xl font-bold drop-shadow-lg">{timeLeft.minutes}</div>
+                <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wider">Minutes</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 md:px-6 py-3 md:py-4">
-                <div className="text-2xl md:text-4xl font-bold">{timeLeft.seconds}</div>
-                <div className="text-xs md:text-sm">Seconds</div>
+              <div className="bg-white/30 backdrop-blur-md rounded-xl px-4 md:px-8 py-4 md:py-6 shadow-2xl hover:scale-105 transition-transform animate-pulse">
+                <div className="text-3xl md:text-5xl font-bold drop-shadow-lg">{timeLeft.seconds}</div>
+                <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wider">Seconds</div>
               </div>
             </div>
           </div>
@@ -491,28 +501,100 @@ export default function Home() {
             </div>
 
             {/* Bundle Section */}
-            <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/50 rounded-2xl p-8 md:p-12 text-center">
-              <div className="inline-block bg-cyan-500/20 text-cyan-300 px-6 py-2 rounded-full text-sm font-bold mb-6">
-                🔥 BEST VALUE - SAVE $100
+            <div className="mt-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">Choose Your Bundle</h2>
+              <p className="text-lg md:text-xl text-slate-400 text-center mb-12">Save more when you invest in your complete transformation</p>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Starter Bundle */}
+                <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/50 rounded-2xl p-8 text-center">
+                  <div className="inline-block bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                    💎 STARTER BUNDLE
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Career + Wellness</h3>
+                  <p className="text-base md:text-lg text-slate-300 mb-6">
+                    Get both flagship courses. Transform your career AND eliminate burnout.
+                  </p>
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    <span className="line-through text-slate-500 text-2xl md:text-3xl mr-2">$394</span>
+                    $297
+                  </div>
+                  <p className="text-cyan-400 font-semibold mb-6">Save $97</p>
+                  <ul className="text-left text-slate-300 mb-6 space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-cyan-400 mt-1">✓</span>
+                      <span>AI-Resistant Skills Course</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-cyan-400 mt-1">✓</span>
+                      <span>High-Performance Wellness Course</span>
+                    </li>
+                  </ul>
+                  <a
+                    href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl w-full"
+                  >
+                    Get Starter Bundle
+                  </a>
+                  <p className="text-slate-400 text-xs mt-4">30-Day Money-Back Guarantee</p>
+                </div>
+
+                {/* Complete Bundle */}
+                <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-2 border-purple-500/50 rounded-2xl p-8 text-center relative overflow-hidden">
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-4 py-1 rounded-full text-xs font-bold rotate-12">
+                    BEST VALUE
+                  </div>
+                  <div className="inline-block bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                    🔥 COMPLETE MASTERY
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">All 6 Courses</h3>
+                  <p className="text-base md:text-lg text-slate-300 mb-6">
+                    Master every skill. Complete transformation. Maximum savings.
+                  </p>
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    <span className="line-through text-slate-500 text-2xl md:text-3xl mr-2">$1,282</span>
+                    $697
+                  </div>
+                  <p className="text-purple-400 font-semibold mb-6">Save $585 (46% OFF!)</p>
+                  <ul className="text-left text-slate-300 mb-6 space-y-2 text-sm">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-400 mt-1">✓</span>
+                      <span>AI-Resistant Skills ($197)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-400 mt-1">✓</span>
+                      <span>High-Performance Wellness ($197)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-400 mt-1">✓</span>
+                      <span>Sales Mastery ($247)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-400 mt-1">✓</span>
+                      <span>Leadership & Influence ($247)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-400 mt-1">✓</span>
+                      <span>Digital Marketing Mastery ($197)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-400 mt-1">✓</span>
+                      <span>Wealth Building ($197)</span>
+                    </li>
+                  </ul>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl w-full"
+                  >
+                    Get Complete Bundle
+                  </a>
+                  <p className="text-slate-400 text-xs mt-4">30-Day Money-Back Guarantee | Lifetime Access</p>
+                </div>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Complete Success Bundle</h3>
-              <p className="text-lg md:text-xl text-slate-300 mb-8">
-                Get BOTH flagship courses and save $100. Transform your career AND health.
-              </p>
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">
-                <span className="line-through text-slate-500 text-3xl md:text-4xl mr-3">$394</span>
-                $297
-              </div>
-              <p className="text-cyan-400 font-semibold mb-8">Save $100 with the bundle</p>
-              <a
-                href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
-              >
-                Get Bundle - Save $100
-              </a>
-              <p className="text-slate-400 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access</p>
             </div>
           </div>
         </div>
@@ -532,7 +614,16 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {testimonials.map((testimonial, idx) => (
+              {testimonials.map((testimonial, idx) => {
+                const photoMap: {[key: string]: string} = {
+                  'Sarah Chen': '/testimonial-sarah.jpg',
+                  'Marcus Rodriguez': '/testimonial-marcus.jpg',
+                  'Jennifer Park': '/testimonial-jennifer.jpg',
+                  'David Thompson': '/testimonial-david.jpg',
+                  'Amanda Foster': '/testimonial-amanda.jpg',
+                  'Robert Kim': '/testimonial-robert.jpg'
+                };
+                return (
                 <div key={idx} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 md:p-8 hover:border-cyan-500/50 transition-all">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -548,13 +639,20 @@ export default function Home() {
                       {testimonial.result2}
                     </span>
                   </div>
-                  <div className="border-t border-slate-700 pt-4">
-                    <div className="font-bold text-white text-base md:text-lg">{testimonial.name}</div>
-                    <div className="text-slate-400 text-sm">{testimonial.role}</div>
-                    <div className="text-cyan-400 text-sm font-semibold">{testimonial.company}</div>
+                  <div className="border-t border-slate-700 pt-4 flex items-center gap-4">
+                    <img 
+                      src={photoMap[testimonial.name]} 
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover border-2 border-cyan-500/50"
+                    />
+                    <div>
+                      <div className="font-bold text-white text-base md:text-lg">{testimonial.name}</div>
+                      <div className="text-slate-400 text-sm">{testimonial.role}</div>
+                      <div className="text-cyan-400 text-sm font-semibold">{testimonial.company}</div>
+                    </div>
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
           </div>
         </div>
