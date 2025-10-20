@@ -76,11 +76,11 @@ export default function Home() {
       icon: TrendingUp,
       gradient: "from-orange-500 to-amber-600",
       bgGradient: "from-orange-500/10 to-amber-500/10",
-      stripeLink: "#",
+      stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
       description: "The exact sales frameworks used to scale companies from $500K to $50B+.",
       students: "Coming Soon",
       image: "/course-sales.jpg",
-      available: false,
+      available: true,
       badge: "NEW"
     },
     {
@@ -91,11 +91,11 @@ export default function Home() {
       icon: Users,
       gradient: "from-purple-500 to-indigo-600",
       bgGradient: "from-purple-500/10 to-indigo-500/10",
-      stripeLink: "#",
+      stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
       description: "Fortune 100 leadership strategies for executive presence and influence.",
       students: "Coming Soon",
       image: "/course-leadership.jpg",
-      available: false,
+      available: true,
       badge: "NEW"
     },
     {
@@ -106,11 +106,11 @@ export default function Home() {
       icon: BarChart3,
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-500/10 to-blue-500/10",
-      stripeLink: "#",
+      stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
       description: "Enterprise-level digital marketing tactics that drive real revenue.",
       students: "Coming Soon",
       image: "/course-marketing.jpg",
-      available: false,
+      available: true,
       badge: "NEW"
     },
     {
@@ -121,11 +121,11 @@ export default function Home() {
       icon: DollarSign,
       gradient: "from-emerald-500 to-green-600",
       bgGradient: "from-emerald-500/10 to-green-500/10",
-      stripeLink: "#",
+      stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
       description: "Build lasting wealth with strategies from Wall Street insiders.",
       students: "Coming Soon",
       image: "/course-wealth.jpg",
-      available: false,
+      available: true,
       badge: "NEW"
     }
   ];
@@ -531,7 +531,7 @@ export default function Home() {
                     </li>
                   </ul>
                   <a
-                    href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
+                    href="https://buy.stripe.com/4gM4gyepHdiD3dG7BO08g07"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl w-full"
@@ -585,7 +585,7 @@ export default function Home() {
                     </li>
                   </ul>
                   <a
-                    href="#"
+                    href="https://buy.stripe.com/4gM00i1CVa6r29CbS408g08"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl w-full"
