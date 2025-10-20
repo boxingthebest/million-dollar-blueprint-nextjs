@@ -671,29 +671,29 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
               <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Target className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">100+ Years of Combined Experience</h3>
-                <p className="text-slate-300">From Amazon, Apple, Google, Goldman Sachs & McKinsey. Real strategies from the highest levels.</p>
+                <h3 className="text-2xl font-bold text-white mb-4">Real-World Expertise</h3>
+                <p className="text-slate-300">Our instructors are current and former executives at companies like Apple, Google, Goldman Sachs, and McKinsey. You're learning from the best in the world.</p>
               </div>
 
               <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 text-center hover:border-emerald-500/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">$500K to $50B+ Scale</h3>
-                <p className="text-slate-300">Proven frameworks that actually work. Not academic theory.</p>
+                <h3 className="text-2xl font-bold text-white mb-4">Proven Frameworks</h3>
+                <p className="text-slate-300">We don't teach theory. We teach the exact, battle-tested frameworks that have scaled companies to billions in revenue. This is insider knowledge.</p>
               </div>
 
               <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 text-center hover:border-orange-500/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Star className="w-8 h-8 text-orange-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Founding Member Pricing</h3>
-                <p className="text-slate-300">Lock in lifetime access at the lowest price you'll ever see.</p>
+                <h3 className="text-2xl font-bold text-white mb-4">Unbeatable Value</h3>
+                <p className="text-slate-300">Get lifetime access to all courses for a fraction of the cost of a single day of executive coaching. This is the highest ROI investment you'll ever make.</p>
               </div>
             </div>
           </div>
