@@ -291,7 +291,7 @@ export default function Home() {
           </div>
           <div className="flex gap-4 md:gap-6 items-center">
             <a href="#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">Courses</a>
-            <a href="#testimonials" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base hidden sm:inline">About</a>
+            <Link href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base hidden sm:inline">About</Link>
             <a 
               href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
               target="_blank"
