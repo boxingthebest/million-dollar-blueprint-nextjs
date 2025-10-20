@@ -9,6 +9,9 @@ export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [email, setEmail] = useState("");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
 
   // Countdown timer
   useEffect(() => {
@@ -222,12 +225,42 @@ export default function Home() {
     }
   ];
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mailchimp integration will be added here
-    console.log("Newsletter signup:", email);
-    alert("Thanks for subscribing! We'll send you exclusive updates and tips.");
-    setEmail("");
+    setIsSubmitting(true);
+    setSubmitMessage("");
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setSubmitMessage("🎉 Thanks for subscribing! Check your email for confirmation.");
+        setEmail("");
+      } else {
+        setSubmitStatus("error");
+        setSubmitMessage(data.error || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setSubmitStatus("error");
+      setSubmitMessage("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+      // Clear message after 5 seconds
+      setTimeout(() => {
+        setSubmitMessage("");
+        setSubmitStatus(null);
+      }, 5000);
+    }
   };
 
   return (
@@ -752,15 +785,22 @@ export default function Home() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="flex-1 px-6 py-4 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500"
+                disabled={isSubmitting}
+                className="flex-1 px-6 py-4 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <button
                 type="submit"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold transition-all whitespace-nowrap"
+                disabled={isSubmitting}
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Get Free Training
+                {isSubmitting ? "Subscribing..." : "Get Free Training"}
               </button>
             </form>
+            {submitMessage && (
+              <p className={`text-sm font-semibold mt-4 ${submitStatus === "success" ? "text-green-400" : "text-red-400"}`}>
+                {submitMessage}
+              </p>
+            )}
             <p className="text-slate-400 text-sm mt-4">🔒 We respect your privacy. Unsubscribe anytime.</p>
             <p className="text-cyan-400 text-sm font-semibold mt-2">Join 5,000+ Subscribers</p>
           </div>
