@@ -18,7 +18,7 @@ export default function LessonPlayer({
 }: LessonPlayerProps) {
   const [hasMarkedComplete, setHasMarkedComplete] = useState(isCompleted)
 
-  const handleProgress = async (state: { played: number }) => {
+  const handleProgress = async (state: { played: number; playedSeconds: number; loaded: number; loadedSeconds: number }) => {
     // Mark as complete when user watches 90% of the video
     if (state.played > 0.9 && !hasMarkedComplete) {
       try {
