@@ -39,10 +39,10 @@ export default function AboutPage() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">The Origin</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
             <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
               <p>
-                After fifteen years navigating the corridors of Fortune 100 companies, a pattern emerged: 
+                After more than 25 years navigating the corridors of Fortune 100 companies, a pattern emerged: 
                 success wasn't correlated with effort, credentials, or even intelligence. It was about 
                 mastering specific frameworks—insider knowledge passed down through mentorship at firms 
                 like McKinsey, Goldman Sachs, and Amazon.
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 what people were learning and what actually mattered was widening.
               </p>
               <p className="text-white font-medium pt-4">
-                Million Dollar Blueprint was founded to close that gap.
+                Million Dollar Blueprint was founded by a team of former Fortune 100 executives with over 25 years of combined experience to close that gap. Our founding team includes veterans from Amazon, Google, Goldman Sachs, and McKinsey who saw the same problem from different vantage points.
               </p>
             </div>
           </div>
@@ -106,8 +106,9 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Proprietary Frameworks</h3>
                 <p className="text-slate-300 leading-relaxed">
-                  Every course distills the exact systems used by Fortune 100 companies to scale to billions 
-                  in revenue. Not theory—battle-tested frameworks with proven ROI.
+                  Our team of 25+ year veterans has distilled the exact systems used by Fortune 100 companies 
+                  to scale to billions in revenue. Not theory—battle-tested frameworks with proven ROI from 
+                  Amazon, Google, Goldman Sachs, and McKinsey.
                 </p>
               </div>
             </div>
