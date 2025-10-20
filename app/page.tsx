@@ -287,7 +287,7 @@ export default function Home() {
       <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <Image src="/logo-full.jpg" alt="Million Dollar Blueprint" width={400} height={120} className="h-16 w-auto md:h-20" />
+            <Image src="/logo-nav-horizontal.png" alt="Million Dollar Blueprint" width={600} height={150} className="h-12 w-auto md:h-16" />
           </div>
           <div className="flex gap-4 md:gap-6 items-center">
             <a href="#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">Courses</a>
@@ -385,6 +385,11 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            {/* Hero Logo */}
+            <div className="mb-12 flex justify-center">
+              <Image src="/logo-main-desktop.png" alt="Million Dollar Blueprint - Your Blueprint to Millions" width={800} height={365} className="w-full max-w-2xl h-auto" priority />
+            </div>
+            
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               Your Blueprint to
               <br />
