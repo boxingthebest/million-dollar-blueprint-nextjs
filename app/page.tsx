@@ -534,25 +534,29 @@ export default function Home() {
             </div>
 
             {/* Bundle Section */}
-            <div className="mt-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">Choose Your Bundle</h2>
-              <p className="text-lg md:text-xl text-slate-400 text-center mb-12">Save more when you invest in your complete transformation</p>
+            <div className="mt-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">Choose Your Bundle</h2>
+              <p className="text-xl md:text-2xl text-slate-400 text-center mb-16">Save more when you invest in your complete transformation</p>
               
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {/* Starter Bundle */}
-                <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/50 rounded-2xl p-8 text-center">
-                  <div className="inline-block bg-cyan-500/20 text-cyan-300 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                <div className="bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border-2 border-cyan-500/50 rounded-2xl p-8 md:p-10 text-center hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10">
+                  <div className="inline-block bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-cyan-400/30">
                     💎 STARTER BUNDLE
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Career + Wellness</h3>
-                  <p className="text-base md:text-lg text-slate-300 mb-6">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Career + Wellness</h3>
+                  <p className="text-lg md:text-xl text-slate-300 mb-8">
                     Get both flagship courses. Transform your career AND eliminate burnout.
                   </p>
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    <span className="line-through text-slate-500 text-2xl md:text-3xl mr-2">$394</span>
-                    $297
+                  <div className="mb-8">
+                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                      $297
+                    </div>
+                    <div className="text-2xl md:text-3xl text-slate-500 line-through mb-2">$394</div>
+                    <div className="inline-block bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-bold">Save $97</div>
                   </div>
-                  <p className="text-cyan-400 font-semibold mb-6">Save $97</p>
                   <ul className="text-left text-slate-300 mb-6 space-y-2">
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
@@ -567,30 +571,35 @@ export default function Home() {
                     href="https://buy.stripe.com/4gM4gyepHdiD3dG7BO08g07"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl w-full"
+                    className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all shadow-2xl shadow-cyan-500/30 w-full hover:shadow-cyan-500/50 hover:-translate-y-1"
                   >
                     Get Starter Bundle
                   </a>
-                  <p className="text-slate-400 text-xs mt-4">30-Day Money-Back Guarantee</p>
+                  <p className="text-slate-400 text-sm mt-6">✓ 30-Day Money-Back Guarantee</p>
+                  </div>
                 </div>
 
                 {/* Complete Bundle */}
-                <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-2 border-purple-500/50 rounded-2xl p-8 text-center relative overflow-hidden">
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-4 py-1 rounded-full text-xs font-bold rotate-12">
+                <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-2 border-purple-500/50 rounded-2xl p-8 md:p-10 text-center relative overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold rotate-12 shadow-lg animate-pulse">
                     BEST VALUE
                   </div>
-                  <div className="inline-block bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  <div className="relative z-10">
+                  <div className="inline-block bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-purple-400/30">
                     🔥 COMPLETE MASTERY
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">All 6 Courses</h3>
-                  <p className="text-base md:text-lg text-slate-300 mb-6">
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 6 Courses</h3>
+                  <p className="text-lg md:text-xl text-slate-300 mb-8">
                     Master every skill. Complete transformation. Maximum savings.
                   </p>
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    <span className="line-through text-slate-500 text-2xl md:text-3xl mr-2">$1,282</span>
-                    $697
+                  <div className="mb-8">
+                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">
+                      $697
+                    </div>
+                    <div className="text-2xl md:text-3xl text-slate-500 line-through mb-2">$1,282</div>
+                    <div className="inline-block bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-bold">Save $585 (46% OFF!)</div>
                   </div>
-                  <p className="text-purple-400 font-semibold mb-6">Save $585 (46% OFF!)</p>
                   <ul className="text-left text-slate-300 mb-6 space-y-2 text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
@@ -621,11 +630,12 @@ export default function Home() {
                     href="https://buy.stripe.com/4gM00i1CVa6r29CbS408g08"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl w-full"
+                    className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all shadow-2xl shadow-purple-500/30 w-full hover:shadow-purple-500/50 hover:-translate-y-1"
                   >
                     Get Complete Bundle
                   </a>
-                  <p className="text-slate-400 text-xs mt-4">30-Day Money-Back Guarantee | Lifetime Access</p>
+                  <p className="text-slate-400 text-sm mt-6">✓ 30-Day Money-Back Guarantee | ✓ Lifetime Access</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -692,41 +702,51 @@ export default function Home() {
       </section>
 
       {/* Why Million Dollar Blueprint Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-orange-500/5" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
+            <div className="text-center mb-16 md:mb-20">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Why Million Dollar Blueprint?
               </h2>
-              <p className="text-lg md:text-xl text-slate-400">
+              <p className="text-xl md:text-2xl text-slate-400">
                 This isn't theory. This is battle-tested insider knowledge.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50 transition-all">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Target className="w-8 h-8 text-cyan-400" />
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/30 rounded-2xl p-8 md:p-10 text-center hover:border-cyan-500/60 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <Target className="w-10 h-10 text-cyan-400" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Real-World Expertise</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">Our instructors are current and former executives at companies like Apple, Google, Goldman Sachs, and McKinsey. You're learning from the best in the world.</p>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Real-World Expertise</h3>
-                <p className="text-slate-300">Our instructors are current and former executives at companies like Apple, Google, Goldman Sachs, and McKinsey. You're learning from the best in the world.</p>
               </div>
 
-              <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 text-center hover:border-emerald-500/50 transition-all">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <TrendingUp className="w-8 h-8 text-emerald-400" />
+              <div className="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border-2 border-emerald-500/30 rounded-2xl p-8 md:p-10 text-center hover:border-emerald-500/60 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-300 group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-emerald-500/30 to-teal-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <TrendingUp className="w-10 h-10 text-emerald-400" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Proven Frameworks</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">We don't teach theory. We teach the exact, battle-tested frameworks that have scaled companies to billions in revenue. This is insider knowledge.</p>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Proven Frameworks</h3>
-                <p className="text-slate-300">We don't teach theory. We teach the exact, battle-tested frameworks that have scaled companies to billions in revenue. This is insider knowledge.</p>
               </div>
 
-              <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 text-center hover:border-orange-500/50 transition-all">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Star className="w-8 h-8 text-orange-400" />
+              <div className="bg-gradient-to-br from-orange-900/30 to-pink-900/30 border-2 border-orange-500/30 rounded-2xl p-8 md:p-10 text-center hover:border-orange-500/60 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-orange-500/30 to-pink-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                    <Star className="w-10 h-10 text-orange-400" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Unbeatable Value</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">Get lifetime access to all courses for a fraction of the cost of a single day of executive coaching. This is the highest ROI investment you'll ever make.</p>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Unbeatable Value</h3>
-                <p className="text-slate-300">Get lifetime access to all courses for a fraction of the cost of a single day of executive coaching. This is the highest ROI investment you'll ever make.</p>
               </div>
             </div>
           </div>
