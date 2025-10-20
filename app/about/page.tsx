@@ -8,11 +8,11 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Navigation */}
-      <nav className="border-b border-slate-800 bg-slate-950/50 backdrop-blur-sm sticky top-0 z-50">
+      <nav className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-b border-cyan-500/20 sticky top-0 z-50 shadow-2xl shadow-cyan-500/10 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center">
-              <Image src="/logo-main-desktop.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-16 w-auto md:h-20" />
+          <div className="flex justify-between items-center py-5">
+            <Link href="/" className="flex items-center drop-shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+              <Image src="/logo-main-desktop.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-20 w-auto md:h-24 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))'}} priority />
             </Link>
             <div className="flex gap-8">
               <Link href="/" className="text-slate-300 hover:text-white transition">Home</Link>
