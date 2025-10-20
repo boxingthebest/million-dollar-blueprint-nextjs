@@ -323,8 +323,18 @@ export default function Home() {
       </section>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-32 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
+      <section className="py-16 md:py-32 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image 
+            src="/hero-bg.jpg" 
+            alt="Executive Success" 
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-950/95" />
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
