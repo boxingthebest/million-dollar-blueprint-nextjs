@@ -83,9 +83,7 @@ export default function LessonPlayer({
       onProgress={handleProgress as any}
       config={{
         vimeo: {
-          playerOptions: {
-            responsive: true,
-          },
+          responsive: true,
         },
       }}
     />
