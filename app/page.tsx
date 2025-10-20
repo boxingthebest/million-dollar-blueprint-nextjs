@@ -287,7 +287,7 @@ export default function Home() {
       <nav className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-b border-cyan-500/20 sticky top-0 z-50 shadow-2xl shadow-cyan-500/10 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-5 flex justify-between items-center">
           <div className="flex items-center gap-3 drop-shadow-[0_0_15px_rgba(6,182,212,0.3)]">
-            <Image src="/logo-main-desktop.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-20 w-auto md:h-24 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))'}} priority />
+            <Image src="/logo-transparent.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-16 w-auto md:h-20 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))'}} priority />
           </div>
           <div className="flex gap-4 md:gap-6 items-center">
             <a href="#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">Courses</a>
@@ -857,7 +857,7 @@ export default function Home() {
           {/* Footer Logo */}
           <div className="flex justify-center mb-12">
             <div className="drop-shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-              <Image src="/logo-main-desktop.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-24 w-auto md:h-28 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 10px rgba(6, 182, 212, 0.5))'}} />
+              <Image src="/logo-transparent.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-20 w-auto md:h-24 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 10px rgba(6, 182, 212, 0.5))'}} />
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-8">

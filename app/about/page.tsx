@@ -12,7 +12,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-5">
             <Link href="/" className="flex items-center drop-shadow-[0_0_15px_rgba(6,182,212,0.3)]">
-              <Image src="/logo-main-desktop.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-20 w-auto md:h-24 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))'}} priority />
+              <Image src="/logo-transparent.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-16 w-auto md:h-20 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))'}} priority />
             </Link>
             <div className="flex gap-8">
               <Link href="/" className="text-slate-300 hover:text-white transition">Home</Link>
