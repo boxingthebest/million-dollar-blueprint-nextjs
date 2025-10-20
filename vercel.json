@@ -1,0 +1,7 @@
+{
+  "buildCommand": "prisma generate && prisma migrate deploy && next build",
+  "env": {
+    "NEXTAUTH_URL": "https://milliondollarblueprint.ai"
+  }
+}
+
