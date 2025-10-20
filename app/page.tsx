@@ -30,6 +30,15 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  const courseUrlMap: Record<string, string> = {
+    "AI-Resistant Skills": "/courses/ai-resistant-skills",
+    "High-Performance Wellness": "/courses/wellness",
+    "Sales Mastery": "/courses/sales",
+    "Leadership & Influence": "/courses/leadership",
+    "Digital Marketing Mastery": "/courses/marketing",
+    "Wealth Building": "/courses/wealth"
+  };
+
   const courses = [
     {
       title: "AI-Resistant Skills",
@@ -455,23 +464,12 @@ export default function Home() {
                         {course.students}
                       </div>
                       
-                      {course.available ? (
-                        <a
-                          href={course.stripeLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`block w-full text-center bg-gradient-to-r ${course.gradient} hover:opacity-90 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg transition-all`}
-                        >
-                          Enroll Now - {course.price}
-                        </a>
-                      ) : (
-                        <button
-                          disabled
-                          className="block w-full text-center bg-slate-700 text-slate-400 px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg cursor-not-allowed"
-                        >
-                          Coming Soon
-                        </button>
-                      )}
+                      <Link
+                        href={courseUrlMap[course.title] || '#'}
+                        className={`block w-full text-center ${course.available ? `bg-gradient-to-r ${course.gradient} hover:opacity-90` : 'bg-slate-700 hover:bg-slate-600'} text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg transition-all`}
+                      >
+                        {course.available ? `Learn More` : 'Coming Soon'}
+                      </Link>
                     </div>
                   </div>
                 );
