@@ -68,7 +68,7 @@ export default function Home() {
       gradient: "from-orange-500 to-amber-600",
       bgGradient: "from-orange-500/10 to-amber-500/10",
       stripeLink: "#",
-      description: "The exact sales frameworks used to scale companies from $500K to $1B+.",
+      description: "The exact sales frameworks used to scale companies from $500K to $50B+.",
       students: "Coming Soon",
       image: "/course-sales.jpg",
       available: false,
@@ -328,11 +328,11 @@ export default function Home() {
             </h1>
             
             <p className="text-xl md:text-2xl lg:text-3xl text-slate-200 mb-6">
-              Advised by Executives from Apple, Google, Goldman Sachs & McKinsey
+              Advised by Executives from Amazon, Apple, Google, Goldman Sachs & McKinsey
             </p>
             
             <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Master the insider strategies from the world's most successful companies. Learn from advisors who've scaled businesses from $500K to $1B+ at the highest levels.
+              Master the insider strategies from the world's most successful companies. Learn from advisors at Amazon, Apple, Google, Goldman Sachs & McKinsey who've scaled businesses from $500K to $50B+.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -360,6 +360,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-8 md:py-12">
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 opacity-60">
             <div className="text-slate-300 font-semibold text-sm md:text-lg">ADVISED BY EXECUTIVES FROM:</div>
+            <div className="text-slate-500 text-base md:text-lg">Amazon</div>
             <div className="text-slate-500 text-base md:text-lg">Apple</div>
             <div className="text-slate-500 text-base md:text-lg">Google</div>
             <div className="text-slate-500 text-base md:text-lg">Goldman Sachs</div>
@@ -409,7 +410,7 @@ export default function Home() {
                 Choose Your Transformation
               </h2>
               <p className="text-xl md:text-2xl text-slate-400">
-                Each course is packed with battle-tested strategies from 22 years at the highest levels
+                Each course is packed with battle-tested strategies from 100+ years of combined experience
               </p>
             </div>
 
@@ -514,7 +515,7 @@ export default function Home() {
                 Success Stories from Top Companies
               </h2>
               <p className="text-lg md:text-xl text-slate-400">
-                Join professionals from Apple, Google, Goldman Sachs, McKinsey & Company, and other Fortune 100 companies who've transformed their careers
+                Join professionals from Amazon, Apple, Google, Goldman Sachs, McKinsey & Company, and other Fortune 100 companies who've transformed their careers
               </p>
             </div>
 
@@ -565,15 +566,15 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Target className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">22 Years of Experience</h3>
-                <p className="text-slate-300">From AWS, Goldman Sachs, Citrix, and Rubrik. Real strategies from the highest levels.</p>
+                <h3 className="text-2xl font-bold text-white mb-4">100+ Years of Combined Experience</h3>
+                <p className="text-slate-300">From Amazon, Apple, Google, Goldman Sachs & McKinsey. Real strategies from the highest levels.</p>
               </div>
 
               <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 text-center hover:border-emerald-500/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="w-8 h-8 text-emerald-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">$500K to $1B+ Scale</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">$500K to $50B+ Scale</h3>
                 <p className="text-slate-300">Proven frameworks that actually work. Not academic theory.</p>
               </div>
 
@@ -632,7 +633,7 @@ export default function Home() {
               Get Exclusive Insider Strategies
             </h2>
             <p className="text-lg md:text-xl text-slate-300 mb-8">
-              Join our newsletter for course updates, free training, and insider tips from Apple, Google, Goldman Sachs & McKinsey advisors
+              Join our newsletter for course updates, free training, and insider tips from Amazon, Apple, Google, Goldman Sachs & McKinsey advisors
             </p>
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
               <input
