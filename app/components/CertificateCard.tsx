@@ -10,7 +10,7 @@ interface CertificateCardProps {
   isCompleted: boolean
   existingCertificate?: {
     certificateId: string
-    verificationUrl: string
+    verificationUrl: string | null
     completionDate: Date
   }
 }
