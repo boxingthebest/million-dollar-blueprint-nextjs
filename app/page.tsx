@@ -292,6 +292,12 @@ export default function Home() {
           <div className="flex gap-4 md:gap-6 items-center">
             <a href="#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">Courses</a>
             <Link href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base hidden sm:inline">About</Link>
+            <Link 
+              href="/view-course"
+              className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base border border-cyan-500/30 px-3 md:px-4 py-2 rounded-lg hover:border-cyan-400 hover:bg-cyan-500/10"
+            >
+              Login
+            </Link>
             <a 
               href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
               target="_blank"
