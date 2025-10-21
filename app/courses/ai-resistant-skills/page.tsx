@@ -167,15 +167,15 @@ export default function AIResistantSkillsPage() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Your Job Won't Exist in 5 Years.
+              Master the 5 Skills AI Can't Replace—
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">
-                Unless You Master These 5 Skills.
+                And Command a Million-Dollar Career
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-200 mb-6">
-              Taught by advisors from Amazon, Apple, Google, Goldman Sachs & McKinsey
+              McKinsey-level strategic frameworks for Fortune 100 career advancement
             </p>
             
             <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">

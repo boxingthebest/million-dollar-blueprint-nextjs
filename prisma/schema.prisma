@@ -7,7 +7,8 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
 model Account {
@@ -48,6 +49,7 @@ model User {
   sessions      Session[]
   enrollments   Enrollment[]
   progress      LessonProgress[]
+  certificates  Certificate[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 }
@@ -73,6 +75,7 @@ model Course {
   updatedAt   DateTime @updatedAt
   modules     Module[]
   enrollments Enrollment[]
+  certificates Certificate[]
 }
 
 model Module {
@@ -99,6 +102,19 @@ model Lesson {
   updatedAt   DateTime @updatedAt
   module      Module   @relation(fields: [moduleId], references: [id], onDelete: Cascade)
   progress    LessonProgress[]
+  resources   Resource[]
+}
+
+model Resource {
+  id          String   @id @default(cuid())
+  lessonId    String
+  title       String
+  description String?
+  fileUrl     String
+  fileType    String   // "pdf", "xlsx", "docx", etc.
+  createdAt   DateTime @default(now())
+  
+  lesson      Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
 }
 
 model Enrollment {
@@ -125,3 +141,22 @@ model LessonProgress {
 
   @@unique([userId, lessonId])
 }
+
+
+model Certificate {
+  id              String   @id @default(cuid())
+  userId          String
+  courseId        String
+  certificateId   String   @unique // Public verification ID
+  completionDate  DateTime @default(now())
+  pdfUrl          String?  // URL to generated PDF certificate
+  verificationUrl String?  // Public URL for verification
+  createdAt       DateTime @default(now())
+  
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course          Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, courseId])
+  @@index([certificateId])
+}
+
