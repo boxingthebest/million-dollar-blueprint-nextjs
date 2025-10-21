@@ -44,14 +44,14 @@ export async function POST(request: Request) {
                     title: 'The Executive Intelligence Framework',
                     description: 'Learn the proprietary 4-quadrant framework used by McKinsey consultants to analyze complex business problems. Includes the Strategic Thinking Assessment™ tool and real case study from Amazon\'s AWS expansion strategy.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-1',
-                    duration: 360,
+                    duration: 6,
                     order: 1
                   },
                   {
                     title: 'Systems Thinking for Complex Problems',
                     description: 'Master the interconnected thinking methodology used by Apple to revolutionize entire industries. Learn the 5-step Systems Analysis Process and apply it to your career decisions with measurable outcomes.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-2',
-                    duration: 300,
+                    duration: 5,
                     order: 2
                   }
                 ]
@@ -68,14 +68,14 @@ export async function POST(request: Request) {
                     title: 'The Goldman Sachs Relationship Framework',
                     description: 'Learn the exact 3-phase relationship-building system used by Goldman Sachs executives to build $100M+ client relationships. Includes the Emotional Intelligence Scorecard and networking templates.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-3',
-                    duration: 330,
+                    duration: 5,
                     order: 3
                   },
                   {
                     title: 'Influence Without Authority',
                     description: 'Master the persuasion frameworks used by McKinsey consultants to influence C-suite executives. Learn the 4 Pillars of Executive Presence and the Stakeholder Influence Matrix with real-world applications.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-4',
-                    duration: 330,
+                    duration: 5,
                     order: 4
                   }
                 ]
@@ -92,14 +92,14 @@ export async function POST(request: Request) {
                     title: 'The Apple Innovation Process',
                     description: 'Learn Apple\'s proprietary 6-step innovation framework that created the iPhone, iPad, and Apple Watch. Includes the Innovation Idea Generator tool and case study of how Apple disrupted 5 industries simultaneously.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-5',
-                    duration: 360,
+                    duration: 6,
                     order: 5
                   },
                   {
                     title: 'First Principles Thinking for Breakthrough Solutions',
                     description: 'Master Elon Musk\'s first principles methodology used at Tesla and SpaceX. Learn the 5-question framework to deconstruct any problem and rebuild innovative solutions. Includes implementation worksheet.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-6',
-                    duration: 300,
+                    duration: 5,
                     order: 6
                   }
                 ]
@@ -116,14 +116,14 @@ export async function POST(request: Request) {
                     title: 'Amazon\'s Leadership Principles in Action',
                     description: 'Learn how Amazon\'s 16 Leadership Principles drive decision-making at every level. Includes the Leadership Decision Matrix and real case studies from AWS team scaling from 50 to 5,000 employees.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-7',
-                    duration: 330,
+                    duration: 5,
                     order: 7
                   },
                   {
                     title: 'Building Trust at Scale',
                     description: 'Master the trust-building frameworks used by Google to maintain culture while scaling to 150,000+ employees. Learn the 4 Dimensions of Trust and the Team Performance Accelerator system.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-8',
-                    duration: 300,
+                    duration: 5,
                     order: 8
                   }
                 ]
@@ -140,14 +140,14 @@ export async function POST(request: Request) {
                     title: 'The 10X Learning System',
                     description: 'Learn the accelerated learning methodology used by McKinsey consultants to master new industries in 30 days. Includes the Skill Acquisition Framework and the 90-Day Mastery Plan template.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-9',
-                    duration: 330,
+                    duration: 5,
                     order: 9
                   },
                   {
                     title: 'Your AI-Resistant Career Action Plan',
                     description: 'Create your personalized 90-day implementation roadmap. Learn the Career Future-Proofing Matrix and receive your customized action plan with specific milestones, metrics, and accountability systems.',
                     videoUrl: 'https://placeholder-video-url.com/lesson-10',
-                    duration: 360,
+                    duration: 6,
                     order: 10
                   }
                 ]
