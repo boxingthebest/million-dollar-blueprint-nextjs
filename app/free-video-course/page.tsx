@@ -10,6 +10,18 @@ export default function FreeVideoCourse() {
   const [completedVideos, setCompletedVideos] = useState<number[]>([])
   const [showProfileForm, setShowProfileForm] = useState(false)
   const [profileData, setProfileData] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    city: "",
+    state: "",
+    country: "",
+    age: "",
+    gender: "",
+    phone: "",
+    company: "",
+    yearsExperience: "",
+    industry: "",
     role: "",
     challenge: "",
     goal: "",
@@ -85,7 +97,7 @@ export default function FreeVideoCourse() {
 
       if (response.ok) {
         setProfileSubmitMessage("✓ Thank you! We'll send you personalized recommendations soon.")
-        setProfileData({ role: "", challenge: "", goal: "", timeline: "" })
+        setProfileData({ email: "", firstName: "", lastName: "", city: "", state: "", country: "", age: "", gender: "", phone: "", company: "", yearsExperience: "", industry: "", role: "", challenge: "", goal: "", timeline: "" })
         setTimeout(() => setShowProfileForm(false), 3000)
       } else {
         setProfileSubmitMessage("Something went wrong. Please try again.")
@@ -365,9 +377,190 @@ export default function FreeVideoCourse() {
                   We'll send you personalized strategies based on your situation
                 </p>
                 <form onSubmit={handleProfileSubmit} className="space-y-6">
+                  {/* Contact Information */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        First Name *
+                      </label>
+                      <input
+                        type="text"
+                        value={profileData.firstName}
+                        onChange={(e) => setProfileData({...profileData, firstName: e.target.value})}
+                        placeholder="John"
+                        required
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        value={profileData.lastName}
+                        onChange={(e) => setProfileData({...profileData, lastName: e.target.value})}
+                        placeholder="Doe"
+                        required
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-white font-semibold mb-2">
-                      What's your current role?
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      value={profileData.email}
+                      onChange={(e) => setProfileData({...profileData, email: e.target.value})}
+                      placeholder="john@example.com"
+                      required
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                    />
+                  </div>
+
+                  {/* Location */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        City *
+                      </label>
+                      <input
+                        type="text"
+                        value={profileData.city}
+                        onChange={(e) => setProfileData({...profileData, city: e.target.value})}
+                        placeholder="New York"
+                        required
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        State/Province *
+                      </label>
+                      <input
+                        type="text"
+                        value={profileData.state}
+                        onChange={(e) => setProfileData({...profileData, state: e.target.value})}
+                        placeholder="NY"
+                        required
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        Country *
+                      </label>
+                      <input
+                        type="text"
+                        value={profileData.country}
+                        onChange={(e) => setProfileData({...profileData, country: e.target.value})}
+                        placeholder="USA"
+                        required
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Optional Demographics */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        Age (Optional)
+                      </label>
+                      <input
+                        type="number"
+                        value={profileData.age}
+                        onChange={(e) => setProfileData({...profileData, age: e.target.value})}
+                        placeholder="30"
+                        min="18"
+                        max="100"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        Gender (Optional)
+                      </label>
+                      <select
+                        value={profileData.gender}
+                        onChange={(e) => setProfileData({...profileData, gender: e.target.value})}
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors"
+                      >
+                        <option value="">Prefer not to say</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Non-binary">Non-binary</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Professional Information */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        Phone Number (Optional)
+                      </label>
+                      <input
+                        type="tel"
+                        value={profileData.phone}
+                        onChange={(e) => setProfileData({...profileData, phone: e.target.value})}
+                        placeholder="+1 (555) 123-4567"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        Company (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        value={profileData.company}
+                        onChange={(e) => setProfileData({...profileData, company: e.target.value})}
+                        placeholder="Acme Corp"
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        Industry (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        value={profileData.industry}
+                        onChange={(e) => setProfileData({...profileData, industry: e.target.value})}
+                        placeholder="Technology, Finance, Healthcare, etc."
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-semibold mb-2">
+                        Years of Experience (Optional)
+                      </label>
+                      <select
+                        value={profileData.yearsExperience}
+                        onChange={(e) => setProfileData({...profileData, yearsExperience: e.target.value})}
+                        className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors"
+                      >
+                        <option value="">Select experience</option>
+                        <option value="0-2 years">0-2 years</option>
+                        <option value="3-5 years">3-5 years</option>
+                        <option value="6-10 years">6-10 years</option>
+                        <option value="11-15 years">11-15 years</option>
+                        <option value="16+ years">16+ years</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-white font-semibold mb-2">
+                      What's your current role? *
                     </label>
                     <input
                       type="text"
@@ -381,7 +574,7 @@ export default function FreeVideoCourse() {
 
                   <div>
                     <label className="block text-white font-semibold mb-2">
-                      What's your biggest career challenge right now?
+                      What's your biggest career challenge right now? *
                     </label>
                     <textarea
                       value={profileData.challenge}
@@ -395,7 +588,7 @@ export default function FreeVideoCourse() {
 
                   <div>
                     <label className="block text-white font-semibold mb-2">
-                      What's your ultimate career goal?
+                      What's your ultimate career goal? *
                     </label>
                     <input
                       type="text"
@@ -409,7 +602,7 @@ export default function FreeVideoCourse() {
 
                   <div>
                     <label className="block text-white font-semibold mb-2">
-                      What's your timeline to achieve this?
+                      What's your timeline to achieve this? *
                     </label>
                     <select
                       value={profileData.timeline}
