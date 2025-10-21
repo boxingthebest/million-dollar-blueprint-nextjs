@@ -381,15 +381,28 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-950/95" />
+          
+          {/* Futuristic Grid Overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+          
+          {/* Glowing Orbs */}
+          <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '3s'}} />
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s', animationDelay: '1s'}} />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             
+            {/* Premium Badge */}
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-pink-500/20 border border-orange-500/30 px-6 py-3 rounded-full mb-8 backdrop-blur-sm">
+              <span className="text-orange-400 text-2xl">⚡</span>
+              <span className="text-white font-semibold text-sm md:text-base">AI-Resistant Skills Training</span>
+            </div>
+            
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-6 leading-tight">
               Your Blueprint to
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-400 to-purple-500 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">
                 A Million-Dollar Future
               </span>
             </h1>
@@ -402,21 +415,37 @@ export default function Home() {
               Master the insider strategies from the world's most successful companies. Learn from advisors at Amazon, Apple, Google, Goldman Sachs & McKinsey who've scaled businesses from $500K to $50B+.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <a
                 href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-cyan-500/50 transition-all"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all hover:scale-105 hover:shadow-orange-500/70"
               >
                 Get Complete Bundle - Save $100 <ArrowRight className="ml-2" />
               </a>
               <a
                 href="#courses"
-                className="inline-flex items-center justify-center border-2 border-cyan-400 text-cyan-300 hover:bg-cyan-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold transition-all"
+                className="inline-flex items-center justify-center border-2 border-pink-400 text-pink-300 hover:bg-pink-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold transition-all hover:scale-105"
               >
                 Browse Courses
               </a>
+            </div>
+            
+            {/* Trust Badges */}
+            <div className="flex flex-wrap justify-center gap-6 text-slate-300 text-sm md:text-base">
+              <div className="flex items-center gap-2">
+                <Check className="w-5 h-5 text-green-400" />
+                <span>30-Day Money-Back Guarantee</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-5 h-5 text-green-400" />
+                <span>Lifetime Access</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="w-5 h-5 text-green-400" />
+                <span>Instant Access</span>
+              </div>
             </div>
           </div>
         </div>
