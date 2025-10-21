@@ -59,13 +59,13 @@ export default function LeadMagnetPopup() {
 
       if (response.ok) {
         setSubmitStatus("success")
-        setSubmitMessage("🎉 Success! Check your email for your free guide.")
+        setSubmitMessage("🎉 Success! Redirecting to your free video course...")
         setEmail("")
         
-        // Close popup after 3 seconds
+        // Redirect to video course page after 2 seconds
         setTimeout(() => {
-          handleClose()
-        }, 3000)
+          window.location.href = "/free-video-course"
+        }, 2000)
       } else {
         setSubmitStatus("error")
         setSubmitMessage(data.error || "Something went wrong. Please try again.")
@@ -169,7 +169,7 @@ export default function LeadMagnetPopup() {
                     disabled={isSubmitting}
                     className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold shadow-lg shadow-orange-500/50 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
                   >
-                    {isSubmitting ? "Sending..." : "Get Free Guide"} <ArrowRight className="ml-2 w-5 h-5" />
+                    {isSubmitting ? "Sending..." : "Get Free Video Guide"} <ArrowRight className="ml-2 w-5 h-5" />
                   </button>
                 </div>
                 
