@@ -40,17 +40,10 @@ export default function CheckoutButton({ productType, productKey, children, clas
       }
 
       // Redirect to Stripe Checkout
-      const stripe = await stripePromise
-      if (!stripe) {
-        throw new Error('Stripe failed to load')
-      }
-
-      const { error: stripeError } = await stripe.redirectToCheckout({
-        sessionId: data.sessionId,
-      })
-
-      if (stripeError) {
-        throw new Error(stripeError.message)
+      if (data.url) {
+        window.location.href = data.url
+      } else {
+        throw new Error('No checkout URL received')
       }
     } catch (err: any) {
       console.error('Checkout error:', err)
