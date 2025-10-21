@@ -466,32 +466,35 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div className="container mx-auto px-4">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
+        {/* Background Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(251,146,60,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(251,146,60,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
+            <div className="text-center bg-slate-800/30 border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/50 transition-all hover:scale-105 duration-300">
+              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2 drop-shadow-[0_0_20px_rgba(6,182,212,0.3)]">
                 10,000+
               </div>
-              <div className="text-slate-400 text-sm md:text-lg">Students Enrolled</div>
+              <div className="text-slate-400 text-sm md:text-lg font-semibold">Students Enrolled</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500 mb-2">
+            <div className="text-center bg-slate-800/30 border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/50 transition-all hover:scale-105 duration-300">
+              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500 mb-2 drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                 $47K
               </div>
-              <div className="text-slate-400 text-sm md:text-lg">Avg Salary Increase</div>
+              <div className="text-slate-400 text-sm md:text-lg font-semibold">Avg Salary Increase</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 mb-2">
+            <div className="text-center bg-slate-800/30 border border-orange-500/20 rounded-xl p-6 hover:border-orange-500/50 transition-all hover:scale-105 duration-300">
+              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 mb-2 drop-shadow-[0_0_20px_rgba(251,146,60,0.3)]">
                 94%
               </div>
-              <div className="text-slate-400 text-sm md:text-lg">Satisfaction Rate</div>
+              <div className="text-slate-400 text-sm md:text-lg font-semibold">Satisfaction Rate</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 mb-2">
+            <div className="text-center bg-slate-800/30 border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/50 transition-all hover:scale-105 duration-300">
+              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 mb-2 drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]">
                 47
               </div>
-              <div className="text-slate-400 text-sm md:text-lg">Countries Worldwide</div>
+              <div className="text-slate-400 text-sm md:text-lg font-semibold">Countries Worldwide</div>
             </div>
           </div>
         </div>
@@ -514,7 +517,7 @@ export default function Home() {
               {courses.map((course, idx) => {
                 const Icon = course.icon;
                 return (
-                  <div key={idx} className="bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 transition-all rounded-xl overflow-hidden group relative">
+                  <div key={idx} className="bg-slate-800/50 border border-slate-700 hover:border-orange-500/50 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/20 hover:scale-105 duration-300">
                     {course.badge && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {course.badge}
