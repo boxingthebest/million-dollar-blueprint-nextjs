@@ -22,42 +22,42 @@ export default function FreeVideoCourse() {
     {
       id: 1,
       title: "Introduction: The AI Revolution & Your Career",
-      duration: "5:32",
+      duration: "1:32",
       vimeoUrl: "https://vimeo.com/1128979353",
       description: "Discover why traditional career advice is obsolete and what skills will make you irreplaceable in the AI era."
     },
     {
       id: 2,
       title: "Skill #1: Strategic Thinking",
-      duration: "6:15",
+      duration: "4:09",
       vimeoUrl: "https://vimeo.com/1128986794",
       description: "Learn the frameworks Fortune 100 executives use to make million-dollar decisions that AI can't replicate."
     },
     {
       id: 3,
       title: "Skill #2: Emotional Intelligence",
-      duration: "5:48",
+      duration: "4:38",
       vimeoUrl: "https://vimeo.com/1128990641",
       description: "Master the human connection skills that drive influence, leadership, and career advancement."
     },
     {
       id: 4,
       title: "Skill #3: Creative Problem-Solving",
-      duration: "6:22",
+      duration: "3:38",
       vimeoUrl: "https://vimeo.com/1128994962",
       description: "Unlock the creative thinking patterns that separate top performers from everyone else."
     },
     {
       id: 5,
       title: "Skill #4: Relationship Building",
-      duration: "5:55",
+      duration: "3:38",
       vimeoUrl: "https://vimeo.com/1128999628",
       description: "Build the strategic relationships that accelerate your career and open doors AI never could."
     },
     {
       id: 6,
       title: "Skill #5: Adaptive Learning",
-      duration: "6:08",
+      duration: "3:40",
       vimeoUrl: "https://vimeo.com/1129000237",
       description: "Develop the meta-skill that ensures you stay ahead no matter how fast technology evolves."
     }
@@ -173,7 +173,7 @@ export default function FreeVideoCourse() {
               </div>
               <div className="bg-[#0f1729]/50 border border-orange-500/20 rounded-xl p-6 hover:border-orange-500/40 transition-all">
                 <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 mb-2">
-                  35m
+                  21m
                 </div>
                 <div className="text-slate-400 text-sm font-medium">Expert Training</div>
               </div>
