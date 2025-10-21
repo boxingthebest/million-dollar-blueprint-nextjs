@@ -77,14 +77,16 @@ export default function LessonPlayer({
 
   return (
     <ReactPlayer
-      url={videoUrl}
-      width="100%"
-      height="100%"
-      controls
-      onProgress={handleProgress as any}
-      config={{
-        vimeo: {
-          responsive: true,
+      {...{
+        url: videoUrl,
+        width: "100%",
+        height: "100%",
+        controls: true,
+        onProgress: handleProgress,
+        config: {
+          vimeo: {
+            responsive: true,
+          },
         },
       } as any}
     />
