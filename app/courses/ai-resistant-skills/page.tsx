@@ -255,15 +255,24 @@ export default function AIResistantSkillsPage() {
               See What You'll Learn
             </h2>
             <p className="text-lg md:text-xl text-slate-400 text-center mb-8">
-              Watch this 3-minute course overview
+              Watch this 45-second overview
             </p>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl bg-slate-800 flex items-center justify-center border border-slate-700">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-orange-400 border-b-8 border-b-transparent ml-1"></div>
-                </div>
-                <p className="text-slate-400 text-lg">Course Trailer Coming Soon</p>
-                <p className="text-slate-500 text-sm">Professional video in production</p>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+              <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
+                <iframe 
+                  src="https://player.vimeo.com/video/1129181469?badge=0&autopause=0&player_id=0&app_id=58479" 
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%'
+                  }}
+                  title="AI-Resistant Skills: Master the 5 Skills AI Can't Replace"
+                />
               </div>
             </div>
           </div>
