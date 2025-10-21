@@ -293,7 +293,7 @@ export default function Home() {
             <a href="#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">Courses</a>
             <Link href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base hidden sm:inline">About</Link>
             <Link 
-              href="/view-course"
+              href="/auth/signin"
               className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base border border-cyan-500/30 px-3 md:px-4 py-2 rounded-lg hover:border-cyan-400 hover:bg-cyan-500/10"
             >
               Login
@@ -383,7 +383,7 @@ export default function Home() {
             src="/hero-bg.jpg" 
             alt="Executive Success" 
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-950/95" />
