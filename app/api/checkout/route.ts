@@ -2,10 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { STRIPE_PRODUCTS } from '@/lib/stripe-products'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2025-09-30.clover',
-})
-
 export async function POST(request: NextRequest) {
   try {
     const { productType, productKey, successUrl, cancelUrl } = await request.json()
@@ -16,6 +12,11 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       )
     }
+
+    // Initialize Stripe client inside the handler
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+      apiVersion: '2025-09-30.clover',
+    })
 
     // Get product details
     let product
