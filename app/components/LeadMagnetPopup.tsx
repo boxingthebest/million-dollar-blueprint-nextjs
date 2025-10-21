@@ -22,7 +22,9 @@ export default function LeadMagnetPopup() {
 
     // Exit intent detection
     const handleMouseLeave = (e: MouseEvent) => {
-      if (e.clientY <= 0 && !hasSeenPopup) {
+      // Check localStorage again to get the latest value
+      const currentHasSeenPopup = localStorage.getItem("hasSeenLeadMagnet")
+      if (e.clientY <= 0 && !currentHasSeenPopup) {
         setIsVisible(true)
       }
     }
