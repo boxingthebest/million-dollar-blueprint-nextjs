@@ -9,7 +9,7 @@ export default async function ViewCoursePage() {
     const allCourses = await prisma.course.findMany()
     
     const course = await prisma.course.findUnique({
-      where: { slug: 'ai-resistant-skills' },
+      where: { slug: 'ai-resistant-skills-free' },
       include: {
         modules: {
           orderBy: { order: 'asc' },
@@ -26,7 +26,7 @@ export default async function ViewCoursePage() {
       return (
         <div className="min-h-screen bg-gray-900 text-white p-8">
           <h1 className="text-3xl font-bold mb-4">Course Not Found</h1>
-          <p className="text-gray-400 mb-4">Looking for slug: ai-resistant-skills</p>
+          <p className="text-gray-400 mb-4">Looking for slug: ai-resistant-skills-free</p>
           <div className="bg-gray-800 p-4 rounded">
             <h2 className="text-xl font-bold mb-2">Available Courses ({allCourses.length}):</h2>
             {allCourses.map(c => (
