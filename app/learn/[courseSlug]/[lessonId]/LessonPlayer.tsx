@@ -86,7 +86,7 @@ export default function LessonPlayer({
         vimeo: {
           responsive: true,
         },
-      }}
+      } as any}
     />
   )
 }
