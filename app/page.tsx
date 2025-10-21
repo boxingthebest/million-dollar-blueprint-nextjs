@@ -898,15 +898,15 @@ export default function Home() {
               <ul className="space-y-2">
                 <li><a href="#courses" className="text-slate-400 hover:text-cyan-400 transition-colors">Courses</a></li>
                 <li><Link href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors">About Us</Link></li>
-                <li><a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact</a></li>
+                <li><Link href="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-bold text-lg mb-4">Legal</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">Refund Policy</a></li>
+                <li><Link href="/terms" className="text-slate-400 hover:text-cyan-400 transition-colors">Terms of Service</Link></li>
+                <li><Link href="/privacy" className="text-slate-400 hover:text-cyan-400 transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/refund-policy" className="text-slate-400 hover:text-cyan-400 transition-colors">Refund Policy</Link></li>
               </ul>
             </div>
             <div>
