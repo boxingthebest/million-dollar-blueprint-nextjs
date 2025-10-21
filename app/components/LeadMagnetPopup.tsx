@@ -63,6 +63,8 @@ export default function LeadMagnetPopup() {
         setSubmitStatus("success")
         setSubmitMessage("🎉 Success! Redirecting to your free video course...")
         setEmail("")
+        // Mark as seen so popup doesn't show again
+        localStorage.setItem("hasSeenLeadMagnet", "true")
         
         // Redirect to video course page after 2 seconds
         setTimeout(() => {

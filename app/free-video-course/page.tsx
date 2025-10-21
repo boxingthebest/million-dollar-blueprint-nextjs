@@ -126,6 +126,8 @@ export default function FreeVideoCourse() {
         // Grant access
         setHasAccess(true)
         localStorage.setItem('courseAccessGranted', 'true')
+        // Prevent popup from showing again
+        localStorage.setItem('hasSeenLeadMagnet', 'true')
         setEmailGateMessage("✓ Success! Enjoy your free training.")
       } else {
         setEmailGateMessage("Something went wrong. Please try again.")
