@@ -9,7 +9,7 @@ export default async function ViewCoursePage() {
     const allCourses = await prisma.course.findMany()
     
     const course = await prisma.course.findUnique({
-      where: { slug: 'ai-resistant-skills-free' },
+      where: { slug: 'ai-resistant-skills' },
       include: {
         modules: {
           orderBy: { order: 'asc' },
