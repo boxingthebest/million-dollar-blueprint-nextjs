@@ -855,7 +855,7 @@ export default function Home() {
               </p>
             )}
             <p className="text-slate-400 text-sm mt-4">🔒 We respect your privacy. Unsubscribe anytime.</p>
-            <p className="text-cyan-400 text-sm font-semibold mt-2">Join 5,000+ Subscribers</p>
+            <p className="text-cyan-400 text-sm font-semibold mt-2">Join 10,000+ Subscribers</p>
           </div>
         </div>
       </section>
