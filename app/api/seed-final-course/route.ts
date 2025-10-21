@@ -30,7 +30,7 @@ export async function POST(request: Request) {
         description: 'Master the 5 human skills AI will never replicate with proprietary frameworks from Fortune 100 executives. This isn\'t theory—these are battle-tested implementation strategies from Amazon, Apple, Google, Goldman Sachs, and McKinsey.',
         price: 197,
         isFree: false,
-        thumbnailUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
+        thumbnail: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800',
         modules: {
           create: [
             // MODULE 1: Strategic Thinking Mastery
