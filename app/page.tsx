@@ -66,7 +66,7 @@ export default function Home() {
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500/10 to-teal-500/10",
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
-      description: "The Fortune 100 protocols that executives pay $15K-$35K/year for. Now yours for $197.",
+      description: "What Fortune 100 executives pay $2,997 for in executive coaching. Yours for $197.",
       students: "187 enrolled",
       image: "/course-wellness.jpg",
       available: true

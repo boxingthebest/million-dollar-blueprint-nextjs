@@ -155,7 +155,7 @@ export default function WellnessPage() {
   const faqs = [
     {
       question: "Is this course worth the investment?",
-      answer: "A Harvard study of 4,000 executives found that those who optimized their wellness earned $140,000 more annually. Executive wellness programs cost $15,000-$35,000 per year. You're getting the same protocols for $197. The ROI is undeniable."
+      answer: "A Harvard study of 4,000 executives found that those who optimized their wellness earned $140,000 more annually. Executive coaching programs charge $2,997-$4,997 for these protocols. You're getting the same systems for $197. The ROI is undeniable."
     },
     {
       question: "How long do I have access?",
@@ -250,7 +250,7 @@ export default function WellnessPage() {
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-200 mb-6">
-              Fortune 100 wellness protocols that executives pay $15K-$35K/year for
+              What Fortune 100 executives pay $2,997 for in executive coaching
             </p>
             
             <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
@@ -305,7 +305,7 @@ export default function WellnessPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Do Executives Pay $15,000-$35,000/Year for Wellness Programs?
+              Why Do Executives Pay $2,997-$4,997 for These Wellness Protocols?
             </h2>
             <div className="text-lg md:text-xl text-slate-300 space-y-4 leading-relaxed">
               <p>
@@ -451,7 +451,7 @@ export default function WellnessPage() {
             <div className="text-center">
               <div className="inline-block bg-slate-800/50 border border-slate-700 rounded-xl p-8 mb-8">
                 <div className="text-slate-400 text-lg mb-2">Total Value:</div>
-                <div className="text-slate-500 line-through text-3xl mb-2">$15,000-$35,000/year</div>
+                <div className="text-slate-500 line-through text-3xl mb-2">$2,997</div>
                 <div className="text-emerald-400 text-5xl md:text-6xl font-bold mb-2">$197</div>
                 <div className="text-slate-400">One-time payment • Lifetime access</div>
               </div>
