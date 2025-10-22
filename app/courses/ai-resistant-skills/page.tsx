@@ -140,15 +140,15 @@ export default function AIResistantSkillsPage() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
-          </Link>
+          </button>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</button>
             <Link
               href="/auth/signup?course=ai-resistant-skills-paid"
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
             >
               Enroll Now - $197
-            </Link>
+            </button>
           </div>
         </div>
       </nav>
@@ -205,7 +205,7 @@ export default function AIResistantSkillsPage() {
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Enroll Now - $197 <ArrowRight className="ml-2" />
-              </Link>
+              </button>
               <a
                 href="#curriculum"
                 className="inline-flex items-center justify-center border-2 border-orange-400 text-orange-300 hover:bg-orange-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold transition-all"
@@ -330,7 +330,7 @@ export default function AIResistantSkillsPage() {
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Get Full Access Now - $197 <ArrowRight className="ml-2" />
-              </Link>
+              </button>
               <p className="text-slate-400 text-sm mt-4">Or 3 payments of $69</p>
             </div>
           </div>
@@ -387,6 +387,154 @@ export default function AIResistantSkillsPage() {
           </div>
         </div>
       </section>
+      {/* Downloadable Resources Section */}
+      <section className="py-16 md:py-24 bg-slate-950">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+              📚 Your Course Materials
+            </h2>
+            <p className="text-slate-300 text-center mb-12 max-w-3xl mx-auto text-lg">
+              Download all your implementation guides, templates, and resources. Print them out and use them daily for maximum impact.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {/* Quick Reference Guide */}
+              <div className="bg-slate-900 rounded-xl p-6 border border-slate-800 hover:border-cyan-500 transition-all hover:shadow-xl hover:shadow-cyan-500/20">
+                <div className="text-5xl mb-4">📋</div>
+                <h3 className="text-xl font-bold text-white mb-2">Quick Reference Guide</h3>
+                <p className="text-slate-400 text-sm mb-4">
+                  Print and keep at your desk for daily practice. All 5 frameworks on one page.
+                </p>
+                <a 
+                  href="/downloads/AI-Resistant-Skills-Quick-Reference.pdf" 
+                  download
+                  className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-3 rounded-lg font-semibold transition-all"
+                >
+                  Download PDF
+                </a>
+                <p className="text-xs text-slate-500 mt-2 text-center">10 pages • 4.7 MB</p>
+              </div>
+
+              {/* Progress Tracker */}
+              <div className="bg-slate-900 rounded-xl p-6 border border-slate-800 hover:border-emerald-500 transition-all hover:shadow-xl hover:shadow-emerald-500/20">
+                <div className="text-5xl mb-4">✅</div>
+                <h3 className="text-xl font-bold text-white mb-2">90-Day Progress Tracker</h3>
+                <p className="text-slate-400 text-sm mb-4">
+                  Track your transformation journey with weekly checklists and skill assessments.
+                </p>
+                <a 
+                  href="/downloads/AI-Resistant-Skills-Progress-Tracker.pdf" 
+                  download
+                  className="block w-full text-center bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white px-4 py-3 rounded-lg font-semibold transition-all"
+                >
+                  Download PDF
+                </a>
+                <p className="text-xs text-slate-500 mt-2 text-center">15 pages • 8.2 MB</p>
+              </div>
+
+              {/* Framework Templates */}
+              <div className="bg-slate-900 rounded-xl p-6 border border-slate-800 hover:border-orange-500 transition-all hover:shadow-xl hover:shadow-orange-500/20">
+                <div className="text-5xl mb-4">📝</div>
+                <h3 className="text-xl font-bold text-white mb-2">Framework Templates</h3>
+                <p className="text-slate-400 text-sm mb-4">
+                  Fill-in-the-blank worksheets for MECE, Trust Equation, Design Thinking, and more.
+                </p>
+                <a 
+                  href="/downloads/AI-Resistant-Skills-Framework-Templates.pdf" 
+                  download
+                  className="block w-full text-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-4 py-3 rounded-lg font-semibold transition-all"
+                >
+                  Download PDF
+                </a>
+                <p className="text-xs text-slate-500 mt-2 text-center">18 pages • 345 KB</p>
+              </div>
+
+              {/* Resource List */}
+              <div className="bg-slate-900 rounded-xl p-6 border border-slate-800 hover:border-purple-500 transition-all hover:shadow-xl hover:shadow-purple-500/20">
+                <div className="text-5xl mb-4">🎯</div>
+                <h3 className="text-xl font-bold text-white mb-2">Resource List</h3>
+                <p className="text-slate-400 text-sm mb-4">
+                  Curated books, tools, courses, and communities to accelerate your learning.
+                </p>
+                <a 
+                  href="/downloads/AI-Resistant-Skills-Resource-List.pdf" 
+                  download
+                  className="block w-full text-center bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-4 py-3 rounded-lg font-semibold transition-all"
+                >
+                  Download PDF
+                </a>
+                <p className="text-xs text-slate-500 mt-2 text-center">12 pages • 378 KB</p>
+              </div>
+            </div>
+
+            {/* Download All Button */}
+            <div className="text-center mb-12">
+              <button
+                onClick={() => {
+                  const pdfs = [
+                    '/downloads/AI-Resistant-Skills-Quick-Reference.pdf',
+                    '/downloads/AI-Resistant-Skills-Progress-Tracker.pdf',
+                    '/downloads/AI-Resistant-Skills-Framework-Templates.pdf',
+                    '/downloads/AI-Resistant-Skills-Resource-List.pdf'
+                  ];
+                  
+                  pdfs.forEach((pdf, index) => {
+                    setTimeout(() => {
+                      const link = document.createElement('a');
+                      link.href = pdf;
+                      link.download = pdf.split('/').pop() || '';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }, index * 500);
+                  });
+                }}
+                className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 hover:from-orange-600 hover:via-pink-600 hover:to-purple-600 text-white px-10 py-4 rounded-lg font-bold text-lg shadow-2xl shadow-orange-500/50 transition-all inline-flex items-center gap-2"
+              >
+                📥 Download All Resources (4 PDFs)
+              </button>
+              <p className="text-sm text-slate-400 mt-3">Total size: ~13.6 MB</p>
+            </div>
+
+            {/* Value Proposition */}
+            <div className="bg-gradient-to-br from-cyan-900/20 to-purple-900/20 border border-cyan-500/30 rounded-2xl p-8">
+              <h4 className="font-bold text-2xl mb-6 text-white text-center">💎 What You're Getting (Worth $997+)</h4>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-300">10 video lessons (50 minutes of content)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-300">Quick reference guide (print and use daily)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-300">90-day transformation tracker</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-300">5 framework templates (Fortune 100 quality)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-300">Curated resource list (books, tools, courses)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-300">Certificate of completion</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-slate-900">
@@ -433,7 +581,7 @@ export default function AIResistantSkillsPage() {
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Enroll Now - Lock in $197 Pricing <ArrowRight className="ml-2" />
-              </Link>
+              </button>
             <p className="text-white/90 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | Instant Access</p>
           </div>
         </div>
