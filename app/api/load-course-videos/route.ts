@@ -42,7 +42,8 @@ export async function GET() {
           price: 19700,
           isFree: false,
           isPublished: true,
-        }
+        },
+        include: { modules: true }
       })
     } else {
       // Delete existing modules to clean up
