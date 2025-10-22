@@ -40,7 +40,34 @@ export default async function Dashboard() {
     }
   })
 
-  const enrolledCourses = user?.enrollments || []
+  // If user is admin, show all courses; otherwise show only enrolled courses
+  const isAdmin = user?.role === 'admin'
+  
+  let coursesToDisplay = []
+  if (isAdmin) {
+    // Admins see all published courses
+    const allCourses = await prisma.course.findMany({
+      where: { isPublished: true },
+      include: {
+        modules: {
+          include: {
+            lessons: {
+              include: {
+                progress: {
+                  where: { userId: user?.id || "" }
+                }
+              }
+            }
+          }
+        }
+      }
+    })
+    coursesToDisplay = allCourses.map(course => ({ course }))
+  } else {
+    coursesToDisplay = user?.enrollments || []
+  }
+
+  const enrolledCourses = coursesToDisplay
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-black">
@@ -72,8 +99,13 @@ export default async function Dashboard() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-white mb-2">My Dashboard</h1>
-        <p className="text-slate-400 mb-8">Track your learning progress and achievements</p>
+        <h1 className="text-4xl font-bold text-white mb-2">{isAdmin ? 'Admin Dashboard' : 'My Dashboard'}</h1>
+        <p className="text-slate-400 mb-8">{isAdmin ? 'Manage and access all courses' : 'Track your learning progress and achievements'}</p>
+        {isAdmin && (
+          <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-4 mb-8">
+            <p className="text-cyan-400 font-semibold">🔑 Admin Access: You can view and access all courses</p>
+          </div>
+        )}
 
         {enrolledCourses.length === 0 ? (
           <div className="bg-slate-900/50 border border-slate-800 rounded-lg p-12 text-center">

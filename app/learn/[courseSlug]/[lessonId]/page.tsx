@@ -60,18 +60,22 @@ export default async function LessonPage({
 
   const course = lesson.module.course
 
-  // Check if user is enrolled
-  const enrollment = await prisma.enrollment.findUnique({
-    where: {
-      userId_courseId: {
-        userId: user.id,
-        courseId: course.id,
+  // Check if user is enrolled or is an admin
+  const isAdmin = user.role === 'admin'
+  
+  if (!isAdmin) {
+    const enrollment = await prisma.enrollment.findUnique({
+      where: {
+        userId_courseId: {
+          userId: user.id,
+          courseId: course.id,
+        },
       },
-    },
-  })
+    })
 
-  if (!enrollment) {
-    redirect(`/learn/${course.slug}`)
+    if (!enrollment) {
+      redirect(`/learn/${course.slug}`)
+    }
   }
 
   // Find all lessons in order

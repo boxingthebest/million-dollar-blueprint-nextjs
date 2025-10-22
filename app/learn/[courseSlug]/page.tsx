@@ -47,7 +47,8 @@ export default async function CoursePage({ params }: { params: { courseSlug: str
     notFound()
   }
 
-  const isEnrolled = course.enrollments.length > 0
+  const isAdmin = user.role === 'admin'
+  const isEnrolled = course.enrollments.length > 0 || isAdmin
   const firstLesson = course.modules[0]?.lessons[0]
 
   return (
