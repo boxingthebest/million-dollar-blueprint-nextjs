@@ -335,7 +335,7 @@ export default function WellnessPage() {
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-700">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
-                  src="https://player.vimeo.com/video/1129426955?badge=0&autopause=0&player_id=0&app_id=58479" 
+                  src="https://player.vimeo.com/video/1129441193?badge=0&autopause=0&player_id=0&app_id=58479" 
                   frameBorder="0" 
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                   referrerPolicy="strict-origin-when-cross-origin"
