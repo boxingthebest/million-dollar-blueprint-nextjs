@@ -140,15 +140,15 @@ export default function AIResistantSkillsPage() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
-          </button>
+          </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</button>
+            <Link href="/#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <Link
               href="/auth/signup?course=ai-resistant-skills-paid"
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
             >
               Enroll Now - $197
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -205,7 +205,7 @@ export default function AIResistantSkillsPage() {
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Enroll Now - $197 <ArrowRight className="ml-2" />
-              </button>
+              </Link>
               <a
                 href="#curriculum"
                 className="inline-flex items-center justify-center border-2 border-orange-400 text-orange-300 hover:bg-orange-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold transition-all"
@@ -330,7 +330,7 @@ export default function AIResistantSkillsPage() {
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Get Full Access Now - $197 <ArrowRight className="ml-2" />
-              </button>
+              </Link>
               <p className="text-slate-400 text-sm mt-4">Or 3 payments of $69</p>
             </div>
           </div>
@@ -581,7 +581,7 @@ export default function AIResistantSkillsPage() {
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Enroll Now - Lock in $197 Pricing <ArrowRight className="ml-2" />
-              </button>
+              </Link>
             <p className="text-white/90 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | Instant Access</p>
           </div>
         </div>

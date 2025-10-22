@@ -104,7 +104,7 @@
                 className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 hover:from-orange-600 hover:via-pink-600 hover:to-purple-600 text-white px-10 py-4 rounded-lg font-bold text-lg shadow-2xl shadow-orange-500/50 transition-all inline-flex items-center gap-2"
               >
                 📥 Download All Resources (4 PDFs)
-              </Link>
+              </button>
               <p className="text-sm text-slate-400 mt-3">Total size: ~13.6 MB</p>
             </div>
 
