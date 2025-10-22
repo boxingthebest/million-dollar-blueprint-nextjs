@@ -102,7 +102,7 @@ function CheckoutSuccessContent() {
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
                     <span>
-                      <strong className="text-white">Get your certificate</strong> - Complete courses to earn shareable certificates
+                      <strong className="text-white">Track your progress</strong> - Monitor your learning journey and course completion
                     </span>
                   </li>
                 </ul>
