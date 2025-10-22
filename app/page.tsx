@@ -35,7 +35,7 @@ export default function Home() {
 
   const courseUrlMap: Record<string, string> = {
     "AI-Resistant Skills": "/courses/ai-resistant-skills",
-    "High-Performance Wellness": "/courses/wellness",
+    "The Executive Energy System": "/courses/wellness",
     "Sales Mastery": "/courses/sales",
     "Leadership & Influence": "/courses/leadership",
     "Digital Marketing Mastery": "/courses/marketing",
