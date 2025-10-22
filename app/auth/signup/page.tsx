@@ -2,11 +2,11 @@
 
 import { signIn } from "next-auth/react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-export default function SignUp() {
+function SignUpForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const courseSlug = searchParams.get('course') || 'ai-resistant-skills-paid'
@@ -310,6 +310,21 @@ export default function SignUp() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function SignUp() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-black flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-cyan-500 mx-auto"></div>
+          <p className="text-white mt-4">Loading...</p>
+        </div>
+      </div>
+    }>
+      <SignUpForm />
+    </Suspense>
   )
 }
 
