@@ -52,8 +52,8 @@ function SignUpForm() {
       if (result?.error) {
         setError("Account created but sign in failed. Please try signing in.")
       } else {
-        // Redirect to checkout with course parameter
-        router.push(`/api/checkout-course?courseSlug=${courseSlug}`)
+        // Redirect to dashboard after successful signup
+        router.push("/dashboard")
       }
     } catch (error) {
       setError("Something went wrong")
