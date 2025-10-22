@@ -58,15 +58,15 @@ export default function Home() {
       available: true
     },
     {
-      title: "High-Performance Wellness",
-      subtitle: "Eliminate Burnout Forever",
+      title: "The Executive Energy System",
+      subtitle: "Turn Burnout Into Breakthrough",
       price: "$197",
       originalPrice: "$395",
       icon: Heart,
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500/10 to-teal-500/10",
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
-      description: "Executive wellness protocols to sustain peak performance without burning out.",
+      description: "The Fortune 100 protocols that executives pay $15K-$35K/year for. Now yours for $197.",
       students: "187 enrolled",
       image: "/course-wellness.jpg",
       available: true
