@@ -36,11 +36,6 @@ export default async function Dashboard() {
             }
           }
         }
-      },
-      certificates: {
-        include: {
-          course: true
-        }
       }
     }
   })
