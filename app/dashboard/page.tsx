@@ -4,7 +4,7 @@ import { authOptions } from "@/lib/auth"
 import { prisma } from "@/lib/prisma"
 import Link from "next/link"
 import Image from "next/image"
-import CertificateCard from "@/app/components/CertificateCard"
+// Certificate feature removed
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions)
@@ -147,34 +147,7 @@ export default async function Dashboard() {
               </div>
             </section>
 
-            {/* Certificates Section */}
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-6">My Certificates</h2>
-              <div className="space-y-4">
-                {enrolledCourses.map((enrollment) => {
-                  const course = enrollment.course
-                  const totalLessons = course.modules.reduce((acc, module) => acc + module.lessons.length, 0)
-                  const completedLessons = course.modules.reduce(
-                    (acc, module) =>
-                      acc + module.lessons.filter((lesson) => lesson.progress.some((p) => p.completed)).length,
-                    0
-                  )
-                  const isCompleted = totalLessons > 0 && completedLessons === totalLessons
-                  const existingCertificate = user?.certificates.find(cert => cert.courseId === course.id)
-
-                  return (
-                    <CertificateCard
-                      key={course.id}
-                      courseId={course.id}
-                      courseTitle={course.title}
-                      courseSlug={course.slug}
-                      isCompleted={isCompleted}
-                      existingCertificate={existingCertificate}
-                    />
-                  )
-                })}
-              </div>
-            </section>
+            {/* Certificates Section - Coming Soon */}
           </>
         )}
       </main>
