@@ -62,7 +62,7 @@ export async function GET() {
       'https://vimeo.com/1129418207/8f8000ae4f',
       'https://vimeo.com/1129417480/946e450263',
       'https://vimeo.com/1129417841/f4d6644de9',
-      'https://vimeo.com/1129418207/8f8000ae4f', // Note: duplicate of #7
+      'https://vimeo.com/1129416243/657cd05863'
     ]
 
     // Update each lesson with correct video URL
