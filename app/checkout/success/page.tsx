@@ -8,12 +8,23 @@ import { CheckCircle, ArrowRight, Mail } from 'lucide-react'
 function CheckoutSuccessContent() {
   const searchParams = useSearchParams()
   const sessionId = searchParams.get('session_id')
+  const courseSlug = searchParams.get('courseSlug') || 'ai-resistant-skills-paid'
   const [loading, setLoading] = useState(true)
+  const [redirecting, setRedirecting] = useState(false)
 
   useEffect(() => {
     // Simulate loading
     setTimeout(() => setLoading(false), 1000)
-  }, [])
+    
+    // Auto-redirect to Lesson 1 after 3 seconds
+    const redirectTimer = setTimeout(() => {
+      setRedirecting(true)
+      // Redirect to the course learn page which will show Lesson 1
+      window.location.href = `/learn/${courseSlug}`
+    }, 3000)
+
+    return () => clearTimeout(redirectTimer)
+  }, [courseSlug])
 
   if (loading) {
     return (
@@ -50,9 +61,15 @@ function CheckoutSuccessContent() {
             Welcome to Million Dollar Blueprint!
           </h1>
           
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-2">
             Your payment was successful. Get ready to transform your career.
           </p>
+          
+          {redirecting && (
+            <p className="text-cyan-400 font-semibold mb-6 animate-pulse">
+              Redirecting you to your course...
+            </p>
+          )}
 
           {/* Success Card */}
           <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8 mb-8">
