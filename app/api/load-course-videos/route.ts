@@ -54,7 +54,8 @@ export async function GET() {
       // Update course to ensure it's published
       course = await prisma.course.update({
         where: { id: course.id },
-        data: { isPublished: true }
+        data: { isPublished: true },
+        include: { modules: true }
       })
     }
 
