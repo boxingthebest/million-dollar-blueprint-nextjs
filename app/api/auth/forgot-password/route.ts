@@ -51,7 +51,19 @@ export async function POST(request: Request) {
     const resetUrl = `${process.env.NEXTAUTH_URL || "https://www.milliondollarblueprint.ai"}/auth/reset-password?token=${resetToken}`
 
     // Send email
-    await sendPasswordResetEmail(email, resetUrl)
+    const emailResult = await sendPasswordResetEmail(email, resetUrl)
+    
+    if (!emailResult.success) {
+      console.error("Failed to send password reset email:", emailResult.error)
+      // Delete the token since we couldn't send the email
+      await prisma.passwordResetToken.deleteMany({
+        where: { email: email.toLowerCase() },
+      })
+      return NextResponse.json(
+        { error: "Failed to send reset email. Please try again or contact support." },
+        { status: 500 }
+      )
+    }
 
     return NextResponse.json({
       message: "If an account exists with that email, a password reset link has been sent.",

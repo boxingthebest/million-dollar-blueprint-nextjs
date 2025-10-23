@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import bcrypt from "bcryptjs"
 import { prisma } from "@/lib/prisma"
+import { sendWelcomeEmail, sendAdminNewSignupNotification } from "@/lib/email"
 
 export async function POST(request: Request) {
   try {
@@ -27,6 +28,18 @@ export async function POST(request: Request) {
         password: hashedPassword,
         name: name || email.split('@')[0]
       }
+    })
+
+    // Send welcome email to new user (non-blocking)
+    sendWelcomeEmail(user.email, user.name).catch(error => {
+      console.error("Failed to send welcome email:", error)
+    })
+
+    // Send admin notification (non-blocking)
+    // Get admin email from environment variable or use default
+    const adminEmail = process.env.ADMIN_EMAIL || "dapenza@hotmail.com"
+    sendAdminNewSignupNotification(adminEmail, user.name, user.email).catch(error => {
+      console.error("Failed to send admin notification:", error)
     })
 
     return NextResponse.json({

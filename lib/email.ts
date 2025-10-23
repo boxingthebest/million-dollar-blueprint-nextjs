@@ -617,3 +617,98 @@ export async function sendAdminSaleNotification(adminEmail: string, studentName:
   }
 }
 
+
+export async function sendAdminNewSignupNotification(adminEmail: string, studentName: string, studentEmail: string) {
+  try {
+    await resend.emails.send({
+      from: "Million Dollar Blueprint <hello@milliondollarblueprint.ai>",
+      to: adminEmail,
+      subject: `🎉 New Signup: ${studentName}`,
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>New Signup Notification</title>
+          </head>
+          <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0f172a;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0f172a; padding: 40px 20px;">
+              <tr>
+                <td align="center">
+                  <table width="600" cellpadding="0" cellspacing="0" style="background: linear-gradient(to bottom, #1e293b, #0f172a); border-radius: 16px; overflow: hidden; border: 1px solid #334155;">
+                    <!-- Header -->
+                    <tr>
+                      <td style="padding: 40px 40px 20px 40px; text-align: center;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(to bottom right, #8b5cf6, #6366f1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                          <span style="color: white; font-size: 40px;">👤</span>
+                        </div>
+                        <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold;">
+                          New Student Signup! 🎉
+                        </h1>
+                      </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                      <td style="padding: 20px 40px;">
+                        <div style="margin: 0 0 30px 0; padding: 24px; background-color: #1e293b; border-radius: 12px; border: 1px solid #334155;">
+                          <h3 style="margin: 0 0 16px 0; color: #ffffff; font-size: 18px; font-weight: bold;">
+                            Student Details
+                          </h3>
+                          <table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="padding: 8px 0; color: #94a3b8; font-size: 14px;">Name:</td>
+                              <td style="padding: 8px 0; color: #ffffff; font-size: 14px; text-align: right; font-weight: 600;">${studentName}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 8px 0; color: #94a3b8; font-size: 14px;">Email:</td>
+                              <td style="padding: 8px 0; color: #06b6d4; font-size: 14px; text-align: right;">${studentEmail}</td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 8px 0; color: #94a3b8; font-size: 14px;">Signup Time:</td>
+                              <td style="padding: 8px 0; color: #ffffff; font-size: 14px; text-align: right;">${new Date().toLocaleString()}</td>
+                            </tr>
+                          </table>
+                        </div>
+                        
+                        <p style="margin: 0 0 30px 0; color: #cbd5e1; font-size: 15px; line-height: 1.6;">
+                          A new student has created an account on Million Dollar Blueprint. They're ready to start their transformation journey!
+                        </p>
+                        
+                        <!-- Button -->
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" style="padding: 20px 0;">
+                              <a href="https://www.milliondollarblueprint.ai/admin/dashboard" style="display: inline-block; padding: 16px 40px; background: linear-gradient(to right, #06b6d4, #3b82f6); color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 16px;">
+                                View Dashboard
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                      <td style="padding: 30px 40px; border-top: 1px solid #334155;">
+                        <p style="margin: 0; color: #64748b; font-size: 12px; line-height: 1.6;">
+                          © ${new Date().getFullYear()} Million Dollar Blueprint Admin Notifications
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </body>
+        </html>
+      `,
+    })
+    return { success: true }
+  } catch (error) {
+    console.error("Failed to send admin signup notification:", error)
+    return { success: false, error }
+  }
+}
+
