@@ -4,6 +4,7 @@ import { authOptions } from "@/lib/auth"
 import { prisma } from "@/lib/prisma"
 import Link from "next/link"
 import Image from "next/image"
+import LogoutButton from "@/components/LogoutButton"
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions)
@@ -100,12 +101,7 @@ export default async function Dashboard() {
                   <p className="text-xs text-slate-400">Student</p>
                 </div>
               </div>
-              <Link
-                href="/api/auth/signout"
-                className="text-slate-400 hover:text-white transition-colors text-sm"
-              >
-                Sign Out
-              </Link>
+              <LogoutButton />
             </div>
           </div>
         </div>

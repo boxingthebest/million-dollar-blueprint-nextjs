@@ -8,6 +8,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import LessonPlayer from "./LessonPlayer"
+import LogoutButton from "@/components/LogoutButton"
 
 export default async function LessonPage({
   params,
@@ -136,6 +137,7 @@ export default async function LessonPage({
                 </svg>
                 Back to Course
               </Link>
+              <LogoutButton />
             </div>
           </div>
         </div>

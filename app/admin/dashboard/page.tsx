@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useSession } from "next-auth/react"
 import { redirect } from "next/navigation"
+import LogoutButton from "@/components/LogoutButton"
 
 interface DashboardData {
   overview: {
@@ -254,11 +255,14 @@ export default function AdminDashboard() {
                 Course Manager
               </Link>
               <span className="text-slate-600">|</span>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white text-sm font-bold">
-                  {session?.user?.email?.[0].toUpperCase()}
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white text-sm font-bold">
+                    {session?.user?.email?.[0].toUpperCase()}
+                  </div>
+                  <span className="text-slate-300 hidden md:block">{session?.user?.email}</span>
                 </div>
-                <span className="text-slate-300 hidden md:block">{session?.user?.email}</span>
+                <LogoutButton />
               </div>
             </nav>
           </div>
