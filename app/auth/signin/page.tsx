@@ -28,7 +28,16 @@ export default function SignIn() {
       if (result?.error) {
         setError("Invalid email or password")
       } else {
-        router.push("/dashboard")
+        // Fetch user session to check role
+        const response = await fetch("/api/auth/session")
+        const session = await response.json()
+        
+        // Redirect based on user role
+        if (session?.user?.role === "admin") {
+          router.push("/admin/dashboard")
+        } else {
+          router.push("/dashboard")
+        }
         router.refresh()
       }
     } catch (error) {

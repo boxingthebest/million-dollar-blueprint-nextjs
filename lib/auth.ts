@@ -49,6 +49,38 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt"
   },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.role = user.role
+        token.id = user.id
+      }
+      return token
+    },
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.role = token.role as string
+        session.user.id = token.id as string
+      }
+      return session
+    },
+    async redirect({ url, baseUrl }) {
+      // Get the user's role from the token
+      // This runs after successful sign in
+      
+      // If redirecting after sign in
+      if (url.startsWith(baseUrl)) {
+        // Check if we're coming from sign in page
+        if (url === `${baseUrl}/auth/signin` || url === baseUrl) {
+          // We need to check user role - this will be handled by the sign-in page
+          return url
+        }
+        return url
+      }
+      
+      return baseUrl
+    },
+  },
   secret: process.env.NEXTAUTH_SECRET,
 }
 
