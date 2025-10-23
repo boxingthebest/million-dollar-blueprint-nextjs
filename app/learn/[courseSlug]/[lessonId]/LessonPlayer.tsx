@@ -1,8 +1,7 @@
 "use client"
 // @ts-nocheck
 
-import ReactPlayer from "react-player"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 interface LessonPlayerProps {
   videoUrl: string
@@ -18,27 +17,6 @@ export default function LessonPlayer({
   isCompleted,
 }: LessonPlayerProps) {
   const [hasMarkedComplete, setHasMarkedComplete] = useState(isCompleted)
-
-  const handleProgress = async (state: { played: number; playedSeconds: number; loaded: number; loadedSeconds: number }) => {
-    // Mark as complete when user watches 90% of the video
-    if (state.played > 0.9 && !hasMarkedComplete) {
-      try {
-        await fetch("/api/lessons/progress", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            lessonId,
-            completed: true,
-          }),
-        })
-        setHasMarkedComplete(true)
-      } catch (error) {
-        console.error("Failed to mark lesson as complete:", error)
-      }
-    }
-  }
 
   // Check if this is a PDF download
   const isPDF = videoUrl && videoUrl.endsWith('.pdf')
@@ -133,21 +111,76 @@ export default function LessonPlayer({
     )
   }
 
+  // Extract video ID from various Vimeo URL formats
+  const getVimeoId = (url: string) => {
+    // Handle player.vimeo.com/video/ID?h=hash format
+    const playerMatch = url.match(/player\.vimeo\.com\/video\/(\d+)/)
+    if (playerMatch) return playerMatch[1]
+    
+    // Handle vimeo.com/ID/hash format
+    const hashMatch = url.match(/vimeo\.com\/(\d+)\//)
+    if (hashMatch) return hashMatch[1]
+    
+    // Handle vimeo.com/ID format
+    const simpleMatch = url.match(/vimeo\.com\/(\d+)/)
+    if (simpleMatch) return simpleMatch[1]
+    
+    return null
+  }
+
+  const vimeoId = getVimeoId(videoUrl)
+
+  // Use iframe for Vimeo videos (like the wellness course page)
+  if (vimeoId) {
+    return (
+      <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+        <iframe
+          src={`https://player.vimeo.com/video/${vimeoId}?title=0&byline=0&portrait=0&badge=0&autopause=0`}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+          allowFullScreen
+          onLoad={() => {
+            // Mark as complete after video loads and user watches 90%
+            // We'll use Vimeo Player API for this
+            if (typeof window !== 'undefined' && (window as any).Vimeo) {
+              const iframe = document.querySelector('iframe')
+              if (iframe) {
+                const player = new (window as any).Vimeo.Player(iframe)
+                player.on('timeupdate', (data: any) => {
+                  const progress = data.percent
+                  if (progress > 0.9 && !hasMarkedComplete) {
+                    fetch("/api/lessons/progress", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ lessonId, completed: true }),
+                    }).catch(console.error)
+                    setHasMarkedComplete(true)
+                  }
+                })
+              }
+            }
+          }}
+        />
+        <script src="https://player.vimeo.com/api/player.js" async></script>
+      </div>
+    )
+  }
+
+  // Fallback: show error
   return (
-    <ReactPlayer
-      {...{
-        url: videoUrl,
-        width: "100%",
-        height: "100%",
-        controls: true,
-        onProgress: handleProgress,
-        config: {
-          vimeo: {
-            responsive: true,
-          },
-        },
-      } as any}
-    />
+    <div className="w-full h-full flex items-center justify-center bg-slate-900">
+      <div className="text-center p-8">
+        <p className="text-red-400 text-lg">Unable to load video</p>
+        <p className="text-slate-500 text-sm mt-2">Invalid video URL format</p>
+      </div>
+    </div>
   )
 }
 
