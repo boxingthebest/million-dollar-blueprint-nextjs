@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import StickyCTABar from "@/components/StickyCTABar";act";
+import StickyCTABar from "@/components/StickyCTABar";
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
