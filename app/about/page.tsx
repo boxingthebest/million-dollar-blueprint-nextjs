@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import AnimatedCounter from '@/components/AnimatedCounter';
+import StickyCTABar from '@/components/StickyCTABar';
 
 export default function AboutPage() {
   return (
@@ -26,8 +28,9 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Democratizing Elite<br />Career Intelligence
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <span className="text-white">Democratizing </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">Elite Career Intelligence</span>
           </h1>
           <p className="text-xl text-slate-300 leading-relaxed">
             The frameworks that build billion-dollar companies shouldn't be locked behind<br />
@@ -70,21 +73,21 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">The Market Failure</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8">
+            <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-cyan-500/50 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20">
               <div className="text-red-400 text-4xl font-bold mb-4">$50K+</div>
               <h3 className="text-xl font-semibold text-white mb-3">Executive Coaching</h3>
               <p className="text-slate-400">
                 Elite frameworks locked behind prohibitive price points, accessible only to C-suite executives.
               </p>
             </div>
-            <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8">
+            <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-cyan-500/50 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20">
               <div className="text-amber-400 text-4xl font-bold mb-4">5 Years</div>
               <h3 className="text-xl font-semibold text-white mb-3">Skill Obsolescence</h3>
               <p className="text-slate-400">
                 Average lifespan of technical skills before AI and automation render them commoditized.
               </p>
             </div>
-            <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8">
+            <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 hover:border-cyan-500/50 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20">
               <div className="text-emerald-400 text-4xl font-bold mb-4">0%</div>
               <h3 className="text-xl font-semibold text-white mb-3">Practical Application</h3>
               <p className="text-slate-400">
@@ -150,25 +153,25 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                10,000+
+                <AnimatedCounter end={10000} suffix="+" />
               </div>
               <div className="text-slate-400">Active Students</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                $47K
+                $<AnimatedCounter end={47} suffix="K" />
               </div>
               <div className="text-slate-400">Avg. Salary Increase</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                92%
+                <AnimatedCounter end={92} suffix="%" />
               </div>
               <div className="text-slate-400">Career Advancement</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                4.9/5
+                <AnimatedCounter end={4.9} decimals={1} suffix="/5" />
               </div>
               <div className="text-slate-400">Student Rating</div>
             </div>
@@ -245,6 +248,9 @@ export default function AboutPage() {
           </div>
         </div>
       </footer>
+
+      {/* Sticky CTA Bar */}
+      <StickyCTABar />
     </div>
   );
 }
