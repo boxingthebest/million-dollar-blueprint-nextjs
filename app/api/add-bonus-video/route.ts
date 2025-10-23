@@ -55,8 +55,8 @@ export async function GET() {
     const bonusLesson = await prisma.lesson.create({
       data: {
         title: '🎁 BONUS VIDEO: Executive Interview Mastery',
-        description: 'Watch this exclusive Synthesia-powered training on mastering executive interviews. Learn the frameworks and strategies that helped professionals land $200K+ roles.',
-        videoUrl: 'https://share.synthesia.io/embeds/videos/4cc7308f-c42f-44a5-b85f-7b238b98c60a',
+        description: 'Watch this exclusive video training on mastering executive interviews. Learn the frameworks and strategies that helped professionals land $200K+ roles.',
+        videoUrl: 'https://vimeo.com/1129743307',
         duration: 5, // Approximate duration in minutes
         order: 6, // After the 5 PDF resources
         moduleId: module.id,
