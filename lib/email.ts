@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function sendPasswordResetEmail(email: string, resetUrl: string) {
   try {
     await resend.emails.send({
-      from: "Million Dollar Blueprint <onboarding@resend.dev>",
+      from: "Million Dollar Blueprint <hello@milliondollarblueprint.ai>",
       to: email,
       subject: "Reset Your Password - Million Dollar Blueprint",
       html: `
@@ -97,7 +97,7 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string) {
 export async function sendPasswordChangedEmail(email: string) {
   try {
     await resend.emails.send({
-      from: "Million Dollar Blueprint <onboarding@resend.dev>",
+      from: "Million Dollar Blueprint <hello@milliondollarblueprint.ai>",
       to: email,
       subject: "Password Changed Successfully - Million Dollar Blueprint",
       html: `
@@ -186,7 +186,7 @@ export async function sendPasswordChangedEmail(email: string) {
 export async function sendWelcomeEmail(email: string, name: string) {
   try {
     await resend.emails.send({
-      from: "Million Dollar Blueprint <onboarding@resend.dev>",
+      from: "Million Dollar Blueprint <hello@milliondollarblueprint.ai>",
       to: email,
       subject: "Welcome to Your Transformation Journey! 🚀",
       html: `
@@ -295,7 +295,7 @@ export async function sendWelcomeEmail(email: string, name: string) {
 export async function sendCoursePurchaseEmail(email: string, name: string, courseTitle: string, coursePrice: number) {
   try {
     await resend.emails.send({
-      from: "Million Dollar Blueprint <onboarding@resend.dev>",
+      from: "Million Dollar Blueprint <hello@milliondollarblueprint.ai>",
       to: email,
       subject: `🎉 Welcome to ${courseTitle}!`,
       html: `
@@ -410,7 +410,7 @@ export async function sendCoursePurchaseEmail(email: string, name: string, cours
 export async function sendCourseCompletionEmail(email: string, name: string, courseTitle: string) {
   try {
     await resend.emails.send({
-      from: "Million Dollar Blueprint <onboarding@resend.dev>",
+      from: "Million Dollar Blueprint <hello@milliondollarblueprint.ai>",
       to: email,
       subject: `🏆 You Did It! ${courseTitle} Complete!`,
       html: `
@@ -519,7 +519,7 @@ export async function sendCourseCompletionEmail(email: string, name: string, cou
 export async function sendAdminSaleNotification(adminEmail: string, studentName: string, studentEmail: string, courseTitle: string, amount: number) {
   try {
     await resend.emails.send({
-      from: "Million Dollar Blueprint <onboarding@resend.dev>",
+      from: "Million Dollar Blueprint <hello@milliondollarblueprint.ai>",
       to: adminEmail,
       subject: `💰 New Sale: $${amount} - ${courseTitle}`,
       html: `
