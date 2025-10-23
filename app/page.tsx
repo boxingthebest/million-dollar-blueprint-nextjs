@@ -4,6 +4,8 @@ import { ArrowRight, Star, TrendingUp, Heart, Brain, DollarSign, Users, Target, 
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import AnimatedCounter from "@/components/AnimatedCounter";
+import StickyCTABar from "@/components/StickyCTABar";act";
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -480,25 +482,25 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
             <div className="text-center bg-slate-800/30 border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/50 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2 drop-shadow-[0_0_20px_rgba(6,182,212,0.3)]">
-                10,000+
+                <AnimatedCounter end={10000} suffix="+" />
               </div>
               <div className="text-slate-400 text-sm md:text-lg font-semibold">Students Enrolled</div>
             </div>
             <div className="text-center bg-slate-800/30 border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/50 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500 mb-2 drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-                $47K
+                $<AnimatedCounter end={47} suffix="K" />
               </div>
               <div className="text-slate-400 text-sm md:text-lg font-semibold">Avg Salary Increase</div>
             </div>
             <div className="text-center bg-slate-800/30 border border-orange-500/20 rounded-xl p-6 hover:border-orange-500/50 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 mb-2 drop-shadow-[0_0_20px_rgba(251,146,60,0.3)]">
-                94%
+                <AnimatedCounter end={94} suffix="%" />
               </div>
               <div className="text-slate-400 text-sm md:text-lg font-semibold">Satisfaction Rate</div>
             </div>
             <div className="text-center bg-slate-800/30 border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/50 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 mb-2 drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-                47
+                <AnimatedCounter end={47} />
               </div>
               <div className="text-slate-400 text-sm md:text-lg font-semibold">Countries Worldwide</div>
             </div>
@@ -706,7 +708,7 @@ export default function Home() {
                   'Robert Kim': '/testimonial-robert.jpg'
                 };
                 return (
-                <div key={idx} className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 md:p-8 hover:border-cyan-500/50 transition-all">
+                <div key={idx} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 md:p-8 hover:border-cyan-500/50 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 group">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -933,6 +935,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Sticky CTA Bar */}
+      <StickyCTABar />
     </div>
   );
 }
