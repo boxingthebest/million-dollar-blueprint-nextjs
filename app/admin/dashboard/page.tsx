@@ -14,6 +14,9 @@ interface DashboardData {
     totalEnrollments: number
     totalRevenue: number
     completionRate: number
+    signupsToday: number
+    signupsThisWeek: number
+    signupsThisMonth: number
   }
   recentStudents: Array<{
     id: string
@@ -40,6 +43,20 @@ interface DashboardData {
     course: {
       title: string
       isFree: boolean
+    }
+  }>
+  paidEnrollments: Array<{
+    id: string
+    createdAt: string
+    user: {
+      id: string
+      name: string | null
+      email: string | null
+    }
+    course: {
+      id: string
+      title: string
+      price: number
     }
   }>
 }
@@ -209,6 +226,60 @@ export default function AdminDashboard() {
           <p className="text-slate-400 text-lg">Welcome back! Here's what's happening with your platform.</p>
         </div>
 
+        {/* Signup Metrics */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-white mb-4">New Signups</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Signups Today */}
+            <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-xl p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-slate-400 text-sm font-medium mb-1">Today</h3>
+                  <p className="text-4xl font-bold text-white">{formatNumber(data.overview.signupsToday)}</p>
+                </div>
+                <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="text-sm text-green-400">Last 24 hours</div>
+            </div>
+
+            {/* Signups This Week */}
+            <div className="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/30 rounded-xl p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-slate-400 text-sm font-medium mb-1">This Week</h3>
+                  <p className="text-4xl font-bold text-white">{formatNumber(data.overview.signupsThisWeek)}</p>
+                </div>
+                <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="text-sm text-blue-400">New accounts</div>
+            </div>
+
+            {/* Signups This Month */}
+            <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-xl p-6">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-slate-400 text-sm font-medium mb-1">This Month</h3>
+                  <p className="text-4xl font-bold text-white">{formatNumber(data.overview.signupsThisMonth)}</p>
+                </div>
+                <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="text-sm text-purple-400">New accounts</div>
+            </div>
+          </div>
+        </div>
+
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {/* Total Students */}
@@ -332,6 +403,59 @@ export default function AdminDashboard() {
             </div>
           </div>
         </div>
+
+        {/* Course Payments */}
+        {data.paidEnrollments && data.paidEnrollments.length > 0 && (
+          <div className="mb-12">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-1">Course Payments</h2>
+                <p className="text-slate-400">Students who have purchased paid courses</p>
+              </div>
+              <div className="text-right">
+                <p className="text-sm text-slate-400 mb-1">Total Payments</p>
+                <p className="text-2xl font-bold text-emerald-400">{data.paidEnrollments.length}</p>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-emerald-500/10 to-green-500/10 border border-emerald-500/30 rounded-xl overflow-hidden backdrop-blur-sm">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-slate-800/50">
+                    <tr>
+                      <th className="text-left text-slate-400 font-semibold px-6 py-4 text-sm uppercase tracking-wider">Student</th>
+                      <th className="text-left text-slate-400 font-semibold px-6 py-4 text-sm uppercase tracking-wider">Email</th>
+                      <th className="text-left text-slate-400 font-semibold px-6 py-4 text-sm uppercase tracking-wider">Course</th>
+                      <th className="text-right text-slate-400 font-semibold px-6 py-4 text-sm uppercase tracking-wider">Amount</th>
+                      <th className="text-right text-slate-400 font-semibold px-6 py-4 text-sm uppercase tracking-wider">Date</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800">
+                    {data.paidEnrollments.map((enrollment) => (
+                      <tr key={enrollment.id} className="hover:bg-slate-800/30 transition-colors">
+                        <td className="px-6 py-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center text-white font-bold">
+                              {(enrollment.user.name || enrollment.user.email)?.[0]?.toUpperCase() || "?"}
+                            </div>
+                            <span className="text-white font-medium">{enrollment.user.name || "N/A"}</span>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 text-slate-300">{enrollment.user.email}</td>
+                        <td className="px-6 py-4 text-white font-medium">{enrollment.course.title}</td>
+                        <td className="px-6 py-4 text-right text-emerald-400 font-bold text-lg">
+                          {formatCurrency(enrollment.course.price)}
+                        </td>
+                        <td className="px-6 py-4 text-right text-slate-400 text-sm">
+                          {formatDate(enrollment.createdAt)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Course Stats */}
         <div className="mb-12">

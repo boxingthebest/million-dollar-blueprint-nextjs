@@ -20,10 +20,46 @@ export async function GET() {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 })
     }
 
+    // Calculate date ranges for signup metrics
+    const now = new Date()
+    const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    const startOfWeek = new Date(now)
+    startOfWeek.setDate(now.getDate() - now.getDay())
+    startOfWeek.setHours(0, 0, 0, 0)
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1)
+
     // Get total students
     const totalStudents = await prisma.user.count({
       where: { role: "user" },
     })
+
+    // Get signup metrics
+    const [signupsToday, signupsThisWeek, signupsThisMonth] = await Promise.all([
+      prisma.user.count({
+        where: {
+          role: "user",
+          createdAt: {
+            gte: startOfToday,
+          },
+        },
+      }),
+      prisma.user.count({
+        where: {
+          role: "user",
+          createdAt: {
+            gte: startOfWeek,
+          },
+        },
+      }),
+      prisma.user.count({
+        where: {
+          role: "user",
+          createdAt: {
+            gte: startOfMonth,
+          },
+        },
+      }),
+    ])
 
     // Get total courses
     const totalCourses = await prisma.course.count()
@@ -57,6 +93,34 @@ export async function GET() {
       (sum, enrollment) => sum + enrollment.course.price,
       0
     )
+
+    // Get detailed payment information (who has paid for courses)
+    const paidEnrollmentsDetailed = await prisma.enrollment.findMany({
+      where: {
+        course: {
+          isFree: false,
+        },
+      },
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            email: true,
+          },
+        },
+        course: {
+          select: {
+            id: true,
+            title: true,
+            price: true,
+          },
+        },
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+    })
 
     // Get recent students (last 10)
     const recentStudents = await prisma.user.findMany({
@@ -157,10 +221,14 @@ export async function GET() {
         totalEnrollments,
         totalRevenue,
         completionRate: Math.round(completionRate * 10) / 10,
+        signupsToday,
+        signupsThisWeek,
+        signupsThisMonth,
       },
       recentStudents,
       courseStats,
       recentEnrollments,
+      paidEnrollments: paidEnrollmentsDetailed,
     })
   } catch (error) {
     console.error("Dashboard API error:", error)
