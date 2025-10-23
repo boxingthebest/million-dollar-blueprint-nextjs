@@ -268,11 +268,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Top Bar with Social Links */}
-      <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400 py-3">
-        <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-white text-sm">
-          <div className="flex items-center gap-2">
-            <Mail className="w-4 h-4" />
-            <span>info@milliondollarblueprint.ai</span>
+      <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400 py-3 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+        <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-white text-sm relative z-10">
+          <div className="flex items-center gap-3">
+            <span className="font-semibold tracking-wide text-base">✨ Master the Skills That Create Real Wealth</span>
           </div>
           <div className="flex gap-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
@@ -927,7 +927,7 @@ export default function Home() {
                   <Instagram className="w-6 h-6" />
                 </a>
               </div>
-              <p className="text-slate-400 text-sm">info@milliondollarblueprint.ai</p>
+              <p className="text-slate-400 text-sm">Questions? Contact us at <a href="mailto:hello@milliondollarblueprint.ai" className="text-cyan-400 hover:text-cyan-300 transition-colors">hello@milliondollarblueprint.ai</a></p>
             </div>
           </div>
           <div className="text-center text-slate-500 text-sm pt-8 border-t border-slate-800">

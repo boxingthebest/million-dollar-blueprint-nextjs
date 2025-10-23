@@ -90,8 +90,8 @@ export default function CheckoutCancel() {
             <p className="text-gray-400 text-sm flex items-center justify-center gap-2">
               <Mail className="w-4 h-4" />
               Need help?{' '}
-              <a href="mailto:info@milliondollarblueprint.ai" className="text-cyan-400 hover:text-cyan-300">
-                info@milliondollarblueprint.ai
+              <a href="mailto:hello@milliondollarblueprint.ai" className="text-cyan-400 hover:text-cyan-300">
+                hello@milliondollarblueprint.ai
               </a>
             </p>
           </div>

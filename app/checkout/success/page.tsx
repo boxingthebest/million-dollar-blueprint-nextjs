@@ -140,8 +140,8 @@ function CheckoutSuccessContent() {
           <div className="mt-12 text-center">
             <p className="text-gray-400 text-sm">
               Need help? Contact us at{' '}
-              <a href="mailto:info@milliondollarblueprint.ai" className="text-cyan-400 hover:text-cyan-300">
-                info@milliondollarblueprint.ai
+              <a href="mailto:hello@milliondollarblueprint.ai" className="text-cyan-400 hover:text-cyan-300">
+                hello@milliondollarblueprint.ai
               </a>
             </p>
           </div>
