@@ -45,7 +45,17 @@ export async function POST(request: Request) {
     })
 
     // Enroll in specified courses
-    let enrollments = []
+    let enrollments: Array<{
+      id: string
+      userId: string
+      courseId: string
+      createdAt: Date
+      course: {
+        id: string
+        title: string
+        slug: string
+      }
+    }> = []
     if (enrollInCourses.length > 0) {
       const enrollmentData = enrollInCourses.map((courseId: string) => ({
         userId: testUser.id,
