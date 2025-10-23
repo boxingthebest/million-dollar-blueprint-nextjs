@@ -289,6 +289,168 @@ export async function GET() {
       enrollments: course.enrollments,
     }))
 
+    // Get signup trends (last 30 days)
+    const signupTrends = []
+    for (let i = 29; i >= 0; i--) {
+      const date = new Date()
+      date.setDate(date.getDate() - i)
+      date.setHours(0, 0, 0, 0)
+      const nextDate = new Date(date)
+      nextDate.setDate(nextDate.getDate() + 1)
+
+      const count = await prisma.user.count({
+        where: {
+          role: "user",
+          createdAt: {
+            gte: date,
+            lt: nextDate,
+          },
+        },
+      })
+
+      signupTrends.push({
+        date: date.toISOString().split('T')[0],
+        count,
+      })
+    }
+
+    // Get revenue trends (last 30 days)
+    const revenueTrends = []
+    for (let i = 29; i >= 0; i--) {
+      const date = new Date()
+      date.setDate(date.getDate() - i)
+      date.setHours(0, 0, 0, 0)
+      const nextDate = new Date(date)
+      nextDate.setDate(nextDate.getDate() + 1)
+
+      const enrollments = await prisma.enrollment.findMany({
+        where: {
+          createdAt: {
+            gte: date,
+            lt: nextDate,
+          },
+          course: {
+            isFree: false,
+          },
+        },
+        include: {
+          course: {
+            select: {
+              price: true,
+            },
+          },
+        },
+      })
+
+      const revenue = enrollments.reduce((sum, e) => sum + e.course.price, 0)
+
+      revenueTrends.push({
+        date: date.toISOString().split('T')[0],
+        revenue,
+      })
+    }
+
+    // Get engagement metrics
+    const activeStudentsLast7Days = await prisma.user.count({
+      where: {
+        role: "user",
+        progress: {
+          some: {
+            updatedAt: {
+              gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
+            },
+          },
+        },
+      },
+    })
+
+    const activeStudentsLast30Days = await prisma.user.count({
+      where: {
+        role: "user",
+        progress: {
+          some: {
+            updatedAt: {
+              gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
+            },
+          },
+        },
+      },
+    })
+
+    // Get recent activity (last 20 actions)
+    const recentActivity = []
+    
+    // Recent enrollments for activity feed
+    const recentEnrollmentsForActivity = await prisma.enrollment.findMany({
+      take: 10,
+      orderBy: { createdAt: "desc" },
+      include: {
+        user: {
+          select: {
+            name: true,
+            email: true,
+          },
+        },
+        course: {
+          select: {
+            title: true,
+          },
+        },
+      },
+    })
+
+    recentEnrollmentsForActivity.forEach((enrollment) => {
+      recentActivity.push({
+        type: "enrollment",
+        user: enrollment.user.name || enrollment.user.email,
+        course: enrollment.course.title,
+        timestamp: enrollment.createdAt,
+      })
+    })
+
+    // Recent lesson completions for activity feed
+    const recentCompletions = await prisma.lessonProgress.findMany({
+      take: 10,
+      where: { completed: true },
+      orderBy: { updatedAt: "desc" },
+      include: {
+        user: {
+          select: {
+            name: true,
+            email: true,
+          },
+        },
+        lesson: {
+          select: {
+            title: true,
+            module: {
+              select: {
+                course: {
+                  select: {
+                    title: true,
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    })
+
+    recentCompletions.forEach((completion) => {
+      recentActivity.push({
+        type: "completion",
+        user: completion.user.name || completion.user.email,
+        lesson: completion.lesson.title,
+        course: completion.lesson.module.course.title,
+        timestamp: completion.updatedAt,
+      })
+    })
+
+    // Sort activity by timestamp
+    recentActivity.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
+    const limitedActivity = recentActivity.slice(0, 20)
+
     return NextResponse.json({
       overview: {
         totalStudents,
@@ -300,6 +462,8 @@ export async function GET() {
         signupsToday,
         signupsThisWeek,
         signupsThisMonth,
+        activeStudentsLast7Days,
+        activeStudentsLast30Days,
       },
       recentStudents,
       passwordStudents,
@@ -308,6 +472,9 @@ export async function GET() {
       recentEnrollments,
       paidEnrollments: paidEnrollmentsDetailed,
       revenueByCourse,
+      signupTrends,
+      revenueTrends,
+      recentActivity: limitedActivity,
     })
   } catch (error) {
     console.error("Dashboard API error:", error)

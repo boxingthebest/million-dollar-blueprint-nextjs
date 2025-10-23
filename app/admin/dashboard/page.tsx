@@ -17,7 +17,24 @@ interface DashboardData {
     signupsToday: number
     signupsThisWeek: number
     signupsThisMonth: number
+    activeStudentsLast7Days: number
+    activeStudentsLast30Days: number
   }
+  signupTrends: Array<{
+    date: string
+    count: number
+  }>
+  revenueTrends: Array<{
+    date: string
+    revenue: number
+  }>
+  recentActivity: Array<{
+    type: string
+    user: string | null
+    course?: string
+    lesson?: string
+    timestamp: string
+  }>
   recentStudents: Array<{
     id: string
     name: string | null
