@@ -40,6 +40,64 @@ export default function LessonPlayer({
     }
   }
 
+  // Check if this is a PDF download
+  const isPDF = videoUrl && videoUrl.endsWith('.pdf')
+
+  // If PDF, show download interface
+  if (isPDF) {
+    return (
+      <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8">
+        <div className="max-w-2xl w-full text-center">
+          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl">
+            <svg
+              className="w-16 h-16 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+          </div>
+          <h3 className="text-2xl font-bold text-white mb-3">Downloadable Resource</h3>
+          <p className="text-slate-300 text-lg mb-8">
+            Click the button below to download this PDF resource
+          </p>
+          <a
+            href={videoUrl}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+            onClick={() => {
+              // Mark as complete when downloaded
+              if (!hasMarkedComplete) {
+                fetch("/api/lessons/progress", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ lessonId, completed: true }),
+                }).catch(console.error)
+                setHasMarkedComplete(true)
+              }
+            }}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download PDF
+          </a>
+          <p className="text-slate-400 text-sm mt-6">
+            The PDF will open in a new tab or download to your device
+          </p>
+        </div>
+      </div>
+    )
+  }
+
   // If no video URL, show placeholder
   if (!videoUrl || videoUrl === "placeholder") {
     return (
