@@ -31,15 +31,17 @@ export async function POST(request: Request) {
     })
 
     // Send welcome email to new user (non-blocking)
-    const userName = user.name || user.email.split('@')[0]
-    sendWelcomeEmail(user.email, userName).catch(error => {
+    // We know email is not null because we just created the user with it
+    const userEmail = user.email!
+    const userName = user.name || userEmail.split('@')[0]
+    sendWelcomeEmail(userEmail, userName).catch(error => {
       console.error("Failed to send welcome email:", error)
     })
 
     // Send admin notification (non-blocking)
     // Get admin email from environment variable or use default
     const adminEmail = process.env.ADMIN_EMAIL || "dapenza@hotmail.com"
-    sendAdminNewSignupNotification(adminEmail, userName, user.email).catch(error => {
+    sendAdminNewSignupNotification(adminEmail, userName, userEmail).catch(error => {
       console.error("Failed to send admin notification:", error)
     })
 
