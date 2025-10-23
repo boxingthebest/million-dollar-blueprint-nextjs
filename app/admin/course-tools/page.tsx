@@ -38,6 +38,8 @@ export default function CourseToolsPage() {
   const [courses, setCourses] = useState<Course[]>([])
   const [loading, setLoading] = useState(true)
   const [enrolling, setEnrolling] = useState<string | null>(null)
+  const [playingVideo, setPlayingVideo] = useState<string | null>(null)
+  const [videoTitle, setVideoTitle] = useState<string>('')
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -185,14 +187,23 @@ export default function CourseToolsPage() {
                               </div>
                             </div>
                             {lesson.videoUrl && (
-                              <div className="mt-2">
+                              <div className="mt-2 flex gap-3">
+                                <button
+                                  onClick={() => {
+                                    setPlayingVideo(lesson.videoUrl)
+                                    setVideoTitle(`${lesson.order}. ${lesson.title}`)
+                                  }}
+                                  className="px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg text-sm font-medium transition-colors"
+                                >
+                                  ▶️ Play Video
+                                </button>
                                 <a 
                                   href={lesson.videoUrl} 
                                   target="_blank" 
                                   rel="noopener noreferrer"
-                                  className="text-cyan-400 hover:text-cyan-300 text-sm underline"
+                                  className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-300 rounded-lg text-sm font-medium transition-colors"
                                 >
-                                  🎥 View Video: {lesson.videoUrl}
+                                  🔗 Open in Vimeo
                                 </a>
                               </div>
                             )}
@@ -207,6 +218,40 @@ export default function CourseToolsPage() {
           })}
         </div>
       </div>
+
+      {/* Video Player Modal */}
+      {playingVideo && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setPlayingVideo(null)}
+        >
+          <div 
+            className="bg-slate-900 rounded-lg w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between p-4 border-b border-slate-800">
+              <h3 className="text-white font-semibold">{videoTitle}</h3>
+              <button
+                onClick={() => setPlayingVideo(null)}
+                className="text-slate-400 hover:text-white transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="aspect-video">
+              <iframe
+                src={playingVideo.replace('https://vimeo.com/', 'https://player.vimeo.com/video/')}
+                className="w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
