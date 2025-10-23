@@ -1,4 +1,3 @@
-import type { NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
@@ -12,55 +11,25 @@ export async function POST(req: Request) {
       );
     }
 
-    const MailchimpKey = process.env.MAILCHIMP_API_KEY;
-    const MailchimpServer = process.env.MAILCHIMP_SERVER_PREFIX;
-    const MailchimpAudience = process.env.MAILCHIMP_AUDIENCE_ID;
-
-    if (!MailchimpKey || !MailchimpServer || !MailchimpAudience) {
-      console.error('Missing Mailchimp environment variables');
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Server configuration error' },
-        { status: 500 }
+        { error: 'Invalid email format' },
+        { status: 400 }
       );
     }
 
-    const customUrl = `https://${MailchimpServer}.api.mailchimp.com/3.0/lists/${MailchimpAudience}/members`;
-
-    const response = await fetch(customUrl, {
-      method: 'POST',
-      headers: {
-        Authorization: `Basic ${Buffer.from(`anystring:${MailchimpKey}`).toString('base64')}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email_address: email,
-        status: 'subscribed',
-      }),
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      // Handle specific Mailchimp errors
-      if (data.title === 'Member Exists') {
-        return NextResponse.json(
-          { error: 'This email is already subscribed!' },
-          { status: 400 }
-        );
-      }
-      
-      return NextResponse.json(
-        { error: data.detail || 'Failed to subscribe' },
-        { status: response.status }
-      );
-    }
+    // TODO: Save newsletter subscription to database
+    // For now, just log and return success
+    console.log('Newsletter subscription:', email);
 
     return NextResponse.json(
-      { message: 'Successfully subscribed!', data },
+      { message: 'Successfully subscribed to newsletter!' },
       { status: 201 }
     );
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Subscribe error:', error);
     return NextResponse.json(
       { error: 'Internal Server Error' },
       { status: 500 }
