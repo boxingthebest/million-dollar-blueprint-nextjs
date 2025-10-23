@@ -170,18 +170,32 @@ export default function CourseToolsPage() {
                       </h3>
                       <div className="space-y-1">
                         {module.lessons.map((lesson) => (
-                          <div key={lesson.id} className="flex items-center justify-between text-sm">
-                            <span className="text-slate-300">
-                              {lesson.order}. {lesson.title}
-                            </span>
-                            <div className="flex items-center gap-3">
-                              <span className="text-slate-400">{lesson.duration} min</span>
-                              {lesson.videoUrl ? (
-                                <span className="text-green-400">✓ Video</span>
-                              ) : (
-                                <span className="text-red-400">✗ No Video</span>
-                              )}
+                          <div key={lesson.id} className="border-l-2 border-slate-700 pl-4 py-2">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-slate-300 font-medium">
+                                {lesson.order}. {lesson.title}
+                              </span>
+                              <div className="flex items-center gap-3">
+                                <span className="text-slate-400">{lesson.duration} min</span>
+                                {lesson.videoUrl ? (
+                                  <span className="text-green-400">✓ Video</span>
+                                ) : (
+                                  <span className="text-red-400">✗ No Video</span>
+                                )}
+                              </div>
                             </div>
+                            {lesson.videoUrl && (
+                              <div className="mt-2">
+                                <a 
+                                  href={lesson.videoUrl} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="text-cyan-400 hover:text-cyan-300 text-sm underline"
+                                >
+                                  🎥 View Video: {lesson.videoUrl}
+                                </a>
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>
