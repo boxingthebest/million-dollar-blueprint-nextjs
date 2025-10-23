@@ -132,10 +132,78 @@ export async function GET() {
         name: true,
         email: true,
         createdAt: true,
+        password: true,
         _count: {
           select: {
             enrollments: true,
             progress: true,
+          },
+        },
+      },
+    })
+
+    // Get recent password-based students (last 10)
+    const passwordStudents = await prisma.user.findMany({
+      where: {
+        role: "user",
+        password: {
+          not: null,
+        },
+      },
+      orderBy: { createdAt: "desc" },
+      take: 10,
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        createdAt: true,
+        _count: {
+          select: {
+            enrollments: true,
+            progress: true,
+          },
+        },
+      },
+    })
+
+    // Get paying students (students with paid enrollments)
+    const payingStudents = await prisma.user.findMany({
+      where: {
+        role: "user",
+        enrollments: {
+          some: {
+            course: {
+              isFree: false,
+            },
+          },
+        },
+      },
+      orderBy: { createdAt: "desc" },
+      take: 10,
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        createdAt: true,
+        _count: {
+          select: {
+            enrollments: true,
+            progress: true,
+          },
+        },
+        enrollments: {
+          where: {
+            course: {
+              isFree: false,
+            },
+          },
+          include: {
+            course: {
+              select: {
+                title: true,
+                price: true,
+              },
+            },
           },
         },
       },
@@ -213,6 +281,14 @@ export async function GET() {
     const completionRate =
       totalLessons > 0 ? (completedLessons / totalLessons) * 100 : 0
 
+    // Calculate revenue by course
+    const revenueByCourse = courseStats.map((course) => ({
+      courseId: course.id,
+      courseTitle: course.title,
+      revenue: course.isFree ? 0 : course.enrollments * course.price,
+      enrollments: course.enrollments,
+    }))
+
     return NextResponse.json({
       overview: {
         totalStudents,
@@ -226,9 +302,12 @@ export async function GET() {
         signupsThisMonth,
       },
       recentStudents,
+      passwordStudents,
+      payingStudents,
       courseStats,
       recentEnrollments,
       paidEnrollments: paidEnrollmentsDetailed,
+      revenueByCourse,
     })
   } catch (error) {
     console.error("Dashboard API error:", error)
