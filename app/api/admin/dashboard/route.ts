@@ -378,7 +378,13 @@ export async function GET() {
     })
 
     // Get recent activity (last 20 actions)
-    const recentActivity = []
+    const recentActivity: Array<{
+      type: string
+      user: string | null
+      course?: string
+      lesson?: string
+      timestamp: Date
+    }> = []
     
     // Recent enrollments for activity feed
     const recentEnrollmentsForActivity = await prisma.enrollment.findMany({
