@@ -51,18 +51,18 @@ export async function GET() {
     const module = course.modules[0]
     const lessons = module.lessons
 
-    // Correct Vimeo URLs
+    // Correct Vimeo URLs (player.vimeo.com format for embedding)
     const videoUrls = [
-      'https://vimeo.com/1129374864/8462d84da1',
-      'https://vimeo.com/1129414459/c3afffad25',
-      'https://vimeo.com/1129414864/272f58a324',
-      'https://vimeo.com/1129415335/47efd8a1aa',
-      'https://vimeo.com/1129415686/b37c86e62c',
-      'https://vimeo.com/1129415885/7bba6f24bd',
-      'https://vimeo.com/1129418207/8f8000ae4f',
-      'https://vimeo.com/1129417480/946e450263',
-      'https://vimeo.com/1129417841/f4d6644de9',
-      'https://vimeo.com/1129416243/657cd05863'
+      'https://player.vimeo.com/video/1129374864',
+      'https://player.vimeo.com/video/1129414459',
+      'https://player.vimeo.com/video/1129414864',
+      'https://player.vimeo.com/video/1129415335',
+      'https://player.vimeo.com/video/1129415686',
+      'https://player.vimeo.com/video/1129415885',
+      'https://player.vimeo.com/video/1129416243',
+      'https://player.vimeo.com/video/1129417480',
+      'https://player.vimeo.com/video/1129417841',
+      'https://player.vimeo.com/video/1129418207'
     ]
 
     // Update each lesson with correct video URL
