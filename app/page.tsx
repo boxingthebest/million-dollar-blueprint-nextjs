@@ -581,11 +581,11 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">Choose Your Bundle</h2>
               <p className="text-xl md:text-2xl text-slate-400 text-center mb-16">Save more when you invest in your complete transformation</p>
               
-              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
                 {/* Starter Bundle */}
-                <div className="bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border-2 border-cyan-500/50 rounded-2xl p-8 md:p-10 text-center hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 relative group">
+                <div className="bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border-2 border-cyan-500/50 rounded-2xl p-8 md:p-10 text-center hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 relative group flex flex-col h-full">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex flex-col flex-grow">
                   <div className="inline-block bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-cyan-400/30">
                     💎 STARTER BUNDLE
                   </div>
@@ -600,7 +600,7 @@ export default function Home() {
                     <div className="text-2xl md:text-3xl text-slate-500 line-through mb-2">$394</div>
                     <div className="inline-block bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-bold">Save $97</div>
                   </div>
-                  <ul className="text-left text-slate-300 mb-6 space-y-2">
+                  <ul className="text-left text-slate-300 mb-6 space-y-2 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
                       <span>AI-Resistant Skills Course</span>
@@ -610,7 +610,8 @@ export default function Home() {
                       <span>High-Performance Wellness Course</span>
                     </li>
                   </ul>
-                  <a
+                  <div className="mt-auto">
+                    <a
                     href="https://buy.stripe.com/4gM4gyepHdiD3dG7BO08g07"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -620,15 +621,16 @@ export default function Home() {
                   </a>
                   <p className="text-slate-400 text-sm mt-6">✓ 30-Day Money-Back Guarantee</p>
                   </div>
+                  </div>
                 </div>
 
                 {/* Complete Bundle */}
-                <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-2 border-purple-500/50 rounded-2xl p-8 md:p-10 text-center relative overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group">
+                <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-2 border-purple-500/50 rounded-2xl p-8 md:p-10 text-center relative overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group flex flex-col h-full">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold rotate-12 shadow-lg animate-pulse">
                     BEST VALUE
                   </div>
-                  <div className="relative z-10">
+                  <div className="relative z-10 flex flex-col flex-grow">
                   <div className="inline-block bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-purple-400/30">
                     🔥 COMPLETE MASTERY
                   </div>
@@ -643,7 +645,7 @@ export default function Home() {
                     <div className="text-2xl md:text-3xl text-slate-500 line-through mb-2">$1,282</div>
                     <div className="inline-block bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-bold">Save $585 (46% OFF!)</div>
                   </div>
-                  <ul className="text-left text-slate-300 mb-6 space-y-2 text-sm">
+                  <ul className="text-left text-slate-300 mb-6 space-y-2 text-sm flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
                       <span>AI-Resistant Skills ($197)</span>
@@ -669,7 +671,8 @@ export default function Home() {
                       <span>Wealth Building ($197)</span>
                     </li>
                   </ul>
-                  <a
+                  <div className="mt-auto">
+                    <a
                     href="https://buy.stripe.com/4gM00i1CVa6r29CbS408g08"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -678,6 +681,7 @@ export default function Home() {
                     Get Complete Bundle
                   </a>
                   <p className="text-slate-400 text-sm mt-6">✓ 30-Day Money-Back Guarantee | ✓ Lifetime Access</p>
+                  </div>
                   </div>
                 </div>
               </div>
