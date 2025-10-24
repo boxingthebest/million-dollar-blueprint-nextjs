@@ -50,8 +50,7 @@ export async function POST() {
       await prisma.enrollment.create({
         data: {
           userId: user.id,
-          courseId: course.id,
-          enrolledAt: new Date()
+          courseId: course.id
         }
       });
 
