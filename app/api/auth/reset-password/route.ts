@@ -4,6 +4,7 @@ import { sendPasswordChangedEmail } from "@/lib/email"
 import bcrypt from "bcryptjs"
 import crypto from "crypto"
 
+export const dynamic = 'force-dynamic'
 export async function POST(request: Request) {
   try {
     const { token, password } = await request.json()

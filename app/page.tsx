@@ -521,11 +521,11 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 items-stretch">
               {courses.map((course, idx) => {
                 const Icon = course.icon;
                 return (
-                  <div key={idx} className="bg-slate-800/50 border border-slate-700 hover:border-orange-500/50 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/20 hover:scale-105 duration-300">
+                  <div key={idx} className="bg-slate-800/50 border border-slate-700 hover:border-orange-500/50 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/20 hover:scale-105 duration-300 flex flex-col h-full">
                     {course.badge && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {course.badge}
@@ -541,7 +541,7 @@ export default function Home() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
                     </div>
-                    <div className="p-6 md:p-8">
+                    <div className="p-6 md:p-8 flex flex-col flex-grow">
                       <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-br ${course.bgGradient} flex items-center justify-center mb-4 md:mb-6`}>
                         <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                       </div>
@@ -562,12 +562,14 @@ export default function Home() {
                         {course.students}
                       </div>
                       
-                      <Link
+                      <div className="mt-auto">
+                        <Link
                         href={courseUrlMap[course.title] || '#'}
                         className={`block w-full text-center ${course.available ? `bg-gradient-to-r ${course.gradient} hover:opacity-90` : 'bg-slate-700 hover:bg-slate-600'} text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg transition-all`}
                       >
                         {course.available ? `Learn More` : 'Coming Soon'}
                       </Link>
+                      </div>
                     </div>
                   </div>
                 );
