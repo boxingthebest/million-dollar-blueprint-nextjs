@@ -4,6 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Check, Clock, FileText, Play } from "lucide-react";
 
+// Force dynamic rendering for all course pages
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+// Optional: Keep static params for known courses
 export async function generateStaticParams() {
   const courses = await prisma.course.findMany({
     where: { isPublished: true },
