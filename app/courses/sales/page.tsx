@@ -5,8 +5,8 @@ import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, 
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import FuturisticBackground from "@/app/components/FuturisticBackground";
-import HeroSectionDivider from "@/app/components/HeroSectionDivider";
+import FuturisticBackground from "@/components/FuturisticBackground";
+import HeroSectionDivider from "@/components/HeroSectionDivider";
 
 export default function SalesMasteryPage() {
   const [openModule, setOpenModule] = useState<number | null>(null);

@@ -5,8 +5,8 @@ import { prisma } from "@/lib/prisma"
 import Link from "next/link"
 import Image from "next/image"
 import LogoutButton from "@/components/LogoutButton"
-import FuturisticBackground from "@/app/components/FuturisticBackground"
-import HeroSectionDivider from "@/app/components/HeroSectionDivider"
+import FuturisticBackground from "@/components/FuturisticBackground"
+import HeroSectionDivider from "@/components/HeroSectionDivider"
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions)

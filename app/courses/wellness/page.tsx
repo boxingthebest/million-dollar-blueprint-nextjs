@@ -1,6 +1,6 @@
 "use client";
-import FuturisticBackground from "@/app/components/FuturisticBackground";
-import HeroSectionDivider from "@/app/components/HeroSectionDivider";
+import FuturisticBackground from "@/components/FuturisticBackground";
+import HeroSectionDivider from "@/components/HeroSectionDivider";
 
 import { ArrowRight, Star, Check, ChevronDown, Heart, Brain, Zap, Moon, Dumbbell, Wind, Target, TrendingUp, Activity, BarChart } from "lucide-react";
 import Image from "next/image";

@@ -7,8 +7,8 @@ import { useSession } from "next-auth/react"
 import { redirect } from "next/navigation"
 import LogoutButton from "@/components/LogoutButton"
 import PremiumDashboard from "./PremiumDashboard"
-import FuturisticBackground from "@/app/components/FuturisticBackground"
-import HeroSectionDivider from "@/app/components/HeroSectionDivider"
+import FuturisticBackground from "@/components/FuturisticBackground"
+import HeroSectionDivider from "@/components/HeroSectionDivider"
 
 interface DashboardData {
   overview: {
