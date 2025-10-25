@@ -30,8 +30,8 @@ export default function AdminDashboardHero({
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000)',
-            filter: 'brightness(0.25)'
+            backgroundImage: 'url(/admin-hero-backdrop.jpg)',
+            filter: 'brightness(0.3)'
           }}
         />
         {/* Gradient Overlay */}

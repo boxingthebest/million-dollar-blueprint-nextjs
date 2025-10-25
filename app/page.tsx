@@ -441,23 +441,6 @@ export default function Home() {
               </a>
             </div>
             
-            {/* Trust B            {/* Trust Badges */}
-            <div className="flex flex-wrap gap-6 justify-center items-center mb-8">
-              <Image
-                src="/badge-guarantee.png"
-                alt="30-Day Money-Back Guarantee"
-                width={100}
-                height={100}
-                className="drop-shadow-lg"
-              />
-              <Image
-                src="/badge-secure.png"
-                alt="Secure Payment SSL Encrypted"
-                width={100}
-                height={100}
-                className="drop-shadow-lg"
-              />
-            </div>
             
             <div className="flex flex-col sm:flex-row gap-6 text-slate-300 text-sm md:text-base justify-center">
               <div className="flex items-center gap-2">

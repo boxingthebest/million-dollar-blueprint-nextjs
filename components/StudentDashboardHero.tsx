@@ -32,8 +32,8 @@ export default function StudentDashboardHero({
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=2000)',
-            filter: 'brightness(0.3)'
+            backgroundImage: 'url(/student-dashboard-hero.jpg)',
+            filter: 'brightness(0.35)'
           }}
         />
         {/* Gradient Overlay */}
