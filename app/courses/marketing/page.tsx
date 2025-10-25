@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
+import FuturisticBackground from "@/app/components/FuturisticBackground";
+import HeroSectionDivider from "@/app/components/HeroSectionDivider";
 
 import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, TrendingUp } from "lucide-react";
 import Image from "next/image";
@@ -119,7 +121,9 @@ export default function MarketingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-slate-950 relative">
+      {/* Futuristic Animated Background */}
+      <FuturisticBackground variant="enrollment" />
       {/* Navigation */}
       <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">

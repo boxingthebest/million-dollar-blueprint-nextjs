@@ -7,6 +7,8 @@ import { useSession } from "next-auth/react"
 import { redirect } from "next/navigation"
 import LogoutButton from "@/components/LogoutButton"
 import PremiumDashboard from "./PremiumDashboard"
+import FuturisticBackground from "@/app/components/FuturisticBackground"
+import HeroSectionDivider from "@/app/components/HeroSectionDivider"
 
 interface DashboardData {
   overview: {
@@ -216,7 +218,9 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-black">
+    <div className="min-h-screen bg-slate-950 relative">
+      {/* Futuristic Animated Background */}
+      <FuturisticBackground variant="admin" />
       {/* Header */}
       <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -271,12 +275,15 @@ export default function AdminDashboard() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 z-10">
         {/* Premium McKinsey-Level Dashboard */}
         <PremiumDashboard data={data} />
 
+        {/* Hero Divider */}
+        <HeroSectionDivider variant="admin" />
+
         {/* Signup Metrics */}
-        <div className="mb-8">
+        <div className="relative mb-8 z-10">
           <h2 className="text-2xl font-bold text-white mb-4">New Signups</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Signups Today */}

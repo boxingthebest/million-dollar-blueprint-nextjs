@@ -5,6 +5,8 @@ import { prisma } from "@/lib/prisma"
 import Link from "next/link"
 import Image from "next/image"
 import LogoutButton from "@/components/LogoutButton"
+import FuturisticBackground from "@/app/components/FuturisticBackground"
+import HeroSectionDivider from "@/app/components/HeroSectionDivider"
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions)
@@ -70,7 +72,9 @@ export default async function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-black">
+    <div className="min-h-screen bg-slate-950 relative">
+      {/* Futuristic Animated Background */}
+      <FuturisticBackground variant="student" />
       {/* Header */}
       <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -108,7 +112,7 @@ export default async function Dashboard() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 z-10">
         {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
