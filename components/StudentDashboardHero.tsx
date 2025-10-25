@@ -32,7 +32,7 @@ export default function StudentDashboardHero({
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2000)',
             filter: 'brightness(0.3)'
           }}
         />
@@ -52,10 +52,10 @@ export default function StudentDashboardHero({
       <div className="relative z-10 px-8 py-16 md:py-24">
         <div className="max-w-7xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-pink-500/20 border border-orange-500/30 backdrop-blur-sm mb-6">
-            <span className="text-2xl">💎</span>
-            <span className="text-sm font-semibold text-orange-300 uppercase tracking-wider">
-              Your Million-Dollar Journey
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-yellow-500/20 border border-amber-500/30 backdrop-blur-sm mb-6">
+            <span className="text-2xl">🏆</span>
+            <span className="text-sm font-semibold text-amber-300 uppercase tracking-wider">
+              Million-Dollar Blueprint
             </span>
           </div>
 
@@ -70,12 +70,12 @@ export default function StudentDashboardHero({
 
           {/* Subheadline */}
           <p className="text-2xl md:text-3xl text-slate-200 font-semibold mb-4 max-w-3xl">
-            Building Your Blueprint to Success
+            You're Building Your Million-Dollar Future
           </p>
 
           {/* Motivational Message */}
           <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl">
-            {getMotivationalMessage(overallProgress)}
+            Every lesson brings you closer to mastering the frameworks that built billion-dollar companies. {getMotivationalMessage(overallProgress)}
           </p>
 
           {/* Stats Bar */}
