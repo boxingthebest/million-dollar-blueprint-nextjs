@@ -56,7 +56,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00",
       description: "Master the 5 human skills AI will never replace. From the boardrooms of AWS & Goldman Sachs.",
       students: "253 enrolled",
-      image: "/course-ai-skills.jpg",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
       available: true
     },
     {
@@ -70,7 +70,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
       description: "What Fortune 100 executives pay $2,997 for in executive coaching. Yours for $197.",
       students: "187 enrolled",
-      image: "/course-wellness.jpg",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
       available: true
     },
     {
@@ -84,7 +84,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
       description: "The exact sales frameworks used to scale companies from $500K to $50B+.",
       students: "Coming Soon",
-      image: "/course-sales.jpg",
+      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
       available: true,
       badge: "NEW"
     },
@@ -99,7 +99,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
       description: "Fortune 100 leadership strategies for executive presence and influence.",
       students: "Coming Soon",
-      image: "/course-leadership.jpg",
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
       available: true,
       badge: "NEW"
     },
@@ -114,7 +114,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
       description: "Enterprise-level digital marketing tactics that drive real revenue.",
       students: "Coming Soon",
-      image: "/course-marketing.jpg",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
       available: true,
       badge: "NEW"
     },
@@ -129,7 +129,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
       description: "Build lasting wealth with strategies from Wall Street insiders.",
       students: "Coming Soon",
-      image: "/course-wealth.jpg",
+      image: "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80",
       available: true,
       badge: "NEW"
     }
