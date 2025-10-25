@@ -32,7 +32,7 @@ export default function StudentDashboardHero({
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000)',
             filter: 'brightness(0.3)'
           }}
         />
