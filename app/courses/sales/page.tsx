@@ -147,7 +147,7 @@ export default function SalesMasteryPage() {
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-slate-900 to-red-900/20" />
-        <div className="absolute inset-0 bg-[url('/course-sales.jpg')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('/sales-mastery-hero-final.jpg')] bg-cover bg-center opacity-20" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
