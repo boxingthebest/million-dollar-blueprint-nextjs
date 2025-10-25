@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
+
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -976,8 +976,7 @@ export default function Home() {
       {/* Sticky CTA Bar */}
       <StickyCTABar />
       
-      {/* Exit Intent Popup */}
-      <ExitIntentPopup />
+
     </div>
   );
 }
