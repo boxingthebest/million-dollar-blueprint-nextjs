@@ -70,7 +70,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
       description: "What Fortune 100 executives pay $2,997 for in executive coaching. Yours for $197.",
       students: "187 enrolled",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
       available: true
     },
     {
@@ -84,7 +84,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
       description: "The exact sales frameworks used to scale companies from $500K to $50B+.",
       students: "Coming Soon",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80",
       available: true,
       badge: "NEW"
     },
@@ -99,7 +99,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
       description: "Fortune 100 leadership strategies for executive presence and influence.",
       students: "Coming Soon",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
       available: true,
       badge: "NEW"
     },
@@ -129,7 +129,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
       description: "Build lasting wealth with strategies from Wall Street insiders.",
       students: "Coming Soon",
-      image: "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
       available: true,
       badge: "NEW"
     }
