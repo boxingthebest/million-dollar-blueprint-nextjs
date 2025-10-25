@@ -296,7 +296,7 @@ export default function Home() {
             <Link href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base hidden sm:inline">About</Link>
             <Link 
               href="/auth/signin"
-              className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base border border-cyan-500/30 px-3 md:px-4 py-2 rounded-lg hover:border-cyan-400 hover:bg-cyan-500/10"
+              className="bg-slate-800/80 hover:bg-slate-700 border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-cyan-200 px-4 md:px-6 py-2 rounded-lg font-bold transition-all text-sm md:text-base shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/30"
             >
               Login
             </Link>
