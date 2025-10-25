@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Check, Clock, FileText, Play } from "lucide-react";
+import EnrollButton from "@/components/EnrollButton";
 
 // Force dynamic rendering for all course pages
 export const dynamic = 'force-dynamic';
@@ -136,12 +137,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
             
             {course.isPublished ? (
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href={`/auth/signup?course=${course.slug}`}
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
-                >
-                  Enroll Now - ${course.price / 100} <ArrowRight className="ml-2" />
-                </Link>
+                <EnrollButton courseSlug={course.slug} coursePrice={course.price} />
                 <a
                   href="#curriculum"
                   className="inline-flex items-center justify-center border-2 border-orange-400 text-orange-300 hover:bg-orange-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold transition-all"
@@ -233,12 +229,12 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               </div>
 
               <div className="mt-12 text-center">
-                <Link
-                  href={`/auth/signup?course=${course.slug}`}
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-12 py-6 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
+                <EnrollButton 
+                  courseSlug={course.slug} 
+                  coursePrice={course.price}
                 >
-                  Start Learning Today - ${course.price / 100} <ArrowRight className="ml-2" />
-                </Link>
+                  Start Learning Today - ${course.price / 100}
+                </EnrollButton>
               </div>
             </div>
           </div>
