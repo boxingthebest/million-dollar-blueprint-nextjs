@@ -7,6 +7,7 @@ import Image from "next/image"
 import LogoutButton from "@/components/LogoutButton"
 import FuturisticBackground from "@/components/FuturisticBackground"
 import HeroSectionDivider from "@/components/HeroSectionDivider"
+import StudentDashboardHero from "@/components/StudentDashboardHero"
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions)
@@ -112,19 +113,16 @@ export default async function Dashboard() {
       </header>
 
       {/* Main Content */}
-      <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 z-10">
-        {/* Hero Section */}
-        <div className="mb-12">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-            Welcome Back, {user?.name?.split(' ')[0] || 'Champion'}! 👋
-          </h1>
-          <p className="text-2xl text-slate-300 font-semibold mb-2">
-            Your Transformation Journey
-          </p>
-          <p className="text-lg text-slate-400 max-w-3xl">
-            {getMotivationalMessage(overallProgress)}
-          </p>
-        </div>
+      <main className="relative z-10">
+        {/* Premium Hero Section */}
+        <StudentDashboardHero 
+          userName={user?.name || 'Champion'}
+          overallProgress={overallProgress}
+          totalCourses={totalCourses}
+          completedLessons={completedLessons}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         {enrolledCourses.length === 0 ? (
           <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-16 text-center">
@@ -387,6 +385,7 @@ export default async function Dashboard() {
             </div>
           </>
         )}
+        </div>
       </main>
     </div>
   )

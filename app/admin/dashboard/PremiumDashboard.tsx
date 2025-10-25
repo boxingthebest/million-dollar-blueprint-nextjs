@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import AdminDashboardHero from '@/components/AdminDashboardHero'
 
 interface PremiumDashboardProps {
   data: any
@@ -106,84 +107,12 @@ export default function PremiumDashboard({ data }: PremiumDashboardProps) {
 
   return (
     <>
-      {/* Premium Hero Section */}
-      <div className="relative overflow-hidden rounded-2xl mb-12 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-amber-500/20">
-        {/* Subtle grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30"></div>
-        
-        <div className="relative p-8 md:p-12">
-          {/* Top accent line */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
-          
-          <div className="flex flex-col md:flex-row items-start justify-between gap-8">
-            <div className="flex-1">
-              <div className="inline-block mb-4">
-                <span className="text-xs font-semibold tracking-wider text-amber-400 uppercase bg-amber-500/10 px-4 py-2 rounded-full border border-amber-500/30">
-                  Command Center
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 leading-tight">
-                Platform Performance
-              </h1>
-              <p className="text-xl text-slate-300 mb-8 max-w-2xl">
-                Real-time insights into your educational empire. Track revenue, student growth, and course performance.
-              </p>
-              
-              {/* Key Metrics Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-amber-500/50 transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all"></div>
-                  <div className="relative">
-                    <div className="text-sm font-medium text-slate-400 mb-2 tracking-wide">Total Revenue</div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
-                      {formatCurrency(data.overview.totalRevenue)}
-                    </div>
-                    <div className="mt-2 text-xs text-emerald-400 flex items-center gap-1">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clipRule="evenodd" />
-                      </svg>
-                      Lifetime
-                    </div>
-                  </div>
-                </div>
-
-                <div className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all"></div>
-                  <div className="relative">
-                    <div className="text-sm font-medium text-slate-400 mb-2 tracking-wide">Active Students</div>
-                    <div className="text-3xl font-bold text-white">
-                      {formatNumber(data.overview.totalStudents)}
-                    </div>
-                    <div className="mt-2 text-xs text-cyan-400 flex items-center gap-1">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                      </svg>
-                      Enrolled
-                    </div>
-                  </div>
-                </div>
-
-                <div className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300">
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all"></div>
-                  <div className="relative">
-                    <div className="text-sm font-medium text-slate-400 mb-2 tracking-wide">Total Enrollments</div>
-                    <div className="text-3xl font-bold text-white">
-                      {formatNumber(data.overview.totalEnrollments)}
-                    </div>
-                    <div className="mt-2 text-xs text-purple-400 flex items-center gap-1">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                      </svg>
-                      Courses
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Premium Hero Section with Background Image */}
+      <AdminDashboardHero 
+        totalRevenue={data.overview.totalRevenue}
+        totalStudents={data.overview.totalStudents}
+        totalCourses={data.overview.totalCourses}
+      />
 
       {/* Premium Course Cards */}
       <div className="mb-12">
