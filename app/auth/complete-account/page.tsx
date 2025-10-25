@@ -1,13 +1,15 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { signIn } from "next-auth/react"
 import Link from "next/link"
 import Image from "next/image"
 import FuturisticBackground from "@/components/FuturisticBackground"
 
-export default function CompleteAccount() {
+export const dynamic = "force-dynamic"
+
+function CompleteAccountForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const email = searchParams.get("email")
@@ -215,6 +217,18 @@ export default function CompleteAccount() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function CompleteAccount() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+        <div className="text-white text-lg">Loading...</div>
+      </div>
+    }>
+      <CompleteAccountForm />
+    </Suspense>
   )
 }
 
