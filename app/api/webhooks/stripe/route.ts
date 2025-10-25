@@ -71,6 +71,12 @@ export async function POST(request: NextRequest) {
         // Map product key to course slug
         const courseSlugMap: Record<string, string> = {
           "ai-resistant-skills": "ai-resistant-skills",
+          "high-performance-wellness": "wellness",
+          "sales-mastery": "sales",
+          "leadership-influence": "leadership",
+          "digital-marketing-mastery": "marketing",
+          "wealth-building": "wealth",
+          // Legacy mappings
           "leadership": "leadership",
           "marketing": "marketing",
           "sales": "sales",
