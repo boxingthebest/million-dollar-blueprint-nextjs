@@ -56,7 +56,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00",
       description: "Master the 5 human skills AI will never replace. From the boardrooms of AWS & Goldman Sachs.",
       students: "253 enrolled",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
       available: true
     },
     {
