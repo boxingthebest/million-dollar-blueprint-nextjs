@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -440,8 +441,25 @@ export default function Home() {
               </a>
             </div>
             
-            {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-6 text-slate-300 text-sm md:text-base">
+            {/* Trust B            {/* Trust Badges */}
+            <div className="flex flex-wrap gap-6 justify-center items-center mb-8">
+              <Image
+                src="/badge-guarantee.png"
+                alt="30-Day Money-Back Guarantee"
+                width={100}
+                height={100}
+                className="drop-shadow-lg"
+              />
+              <Image
+                src="/badge-secure.png"
+                alt="Secure Payment SSL Encrypted"
+                width={100}
+                height={100}
+                className="drop-shadow-lg"
+              />
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-6 text-slate-300 text-sm md:text-base justify-center">
               <div className="flex items-center gap-2">
                 <Check className="w-5 h-5 text-green-400" />
                 <span>30-Day Money-Back Guarantee</span>
@@ -454,8 +472,7 @@ export default function Home() {
                 <Check className="w-5 h-5 text-green-400" />
                 <span>Instant Access</span>
               </div>
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </section>
 
@@ -562,13 +579,19 @@ export default function Home() {
                         {course.students}
                       </div>
                       
-                      <div className="mt-auto">
+                      <div className="mt-auto space-y-3">
                         <Link
-                        href={courseUrlMap[course.title] || '#'}
-                        className={`block w-full text-center ${course.available ? `bg-gradient-to-r ${course.gradient} hover:opacity-90` : 'bg-slate-700 hover:bg-slate-600'} text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg transition-all`}
-                      >
-                        {course.available ? `Learn More` : 'Coming Soon'}
-                      </Link>
+                          href={courseUrlMap[course.title] || '#'}
+                          className="block w-full text-center bg-slate-700/50 hover:bg-slate-600 border border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-cyan-200 px-6 md:px-8 py-3 rounded-lg font-semibold text-sm md:text-base transition-all"
+                        >
+                          Preview Free Lesson →
+                        </Link>
+                        <Link
+                          href={courseUrlMap[course.title] || '#'}
+                          className={`block w-full text-center ${course.available ? `bg-gradient-to-r ${course.gradient} hover:opacity-90` : 'bg-slate-700 hover:bg-slate-600'} text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg transition-all shadow-lg`}
+                        >
+                          {course.available ? `Enroll Now - ${course.price}` : 'Coming Soon'}
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -743,6 +766,31 @@ export default function Home() {
                   </div>
                 </div>
               )})}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Transformation Visual Section */}
+      <section className="py-16 md:py-24 bg-slate-950">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Your Transformation Journey
+              </h2>
+              <p className="text-xl text-slate-400">
+                From overwhelmed professional to confident executive
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
+              <Image
+                src="/transformation-visual.jpg"
+                alt="Career Transformation Before and After"
+                width={1200}
+                height={600}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -944,6 +992,9 @@ export default function Home() {
 
       {/* Sticky CTA Bar */}
       <StickyCTABar />
+      
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup />
     </div>
   );
 }
