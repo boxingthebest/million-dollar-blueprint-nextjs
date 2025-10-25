@@ -68,55 +68,55 @@ export async function POST(request: NextRequest) {
           })
         }
 
-        // Map product key to course slug
-        const courseSlugMap: Record<string, string> = {
-          "ai-resistant-skills": "ai-resistant-skills",
-          "high-performance-wellness": "wellness",
-          "sales-mastery": "sales",
-          "leadership-influence": "leadership",
-          "digital-marketing-mastery": "marketing",
-          "wealth-building": "wealth",
-          // Legacy mappings
-          "leadership": "leadership",
-          "marketing": "marketing",
-          "sales": "sales",
-          "wealth": "wealth",
-          "wellness": "wellness",
+        // Map product key to course slugs (bundles return array, single courses return single slug)
+        const productToCourses: Record<string, string[]> = {
+          // Bundles
+          "starter-bundle": ["ai-resistant-skills", "wellness"],
+          "complete-mastery-bundle": ["ai-resistant-skills", "wellness", "sales", "leadership", "marketing", "wealth"],
+          // Individual Courses
+          "ai-resistant-skills": ["ai-resistant-skills"],
+          "high-performance-wellness": ["wellness"],
+          "sales-mastery": ["sales"],
+          "leadership-influence": ["leadership"],
+          "digital-marketing-mastery": ["marketing"],
+          "wealth-building": ["wealth"],
         }
 
-        const courseSlug = courseSlugMap[metadata.productKey]
+        const courseSlugs = productToCourses[metadata.productKey]
 
-        if (!courseSlug) {
+        if (!courseSlugs) {
           console.error("Unknown product key:", metadata.productKey)
           break
         }
 
-        // Find course
-        const course = await prisma.course.findUnique({
-          where: { slug: courseSlug },
-        })
+        // Enroll user in all courses for this product
+        for (const courseSlug of courseSlugs) {
+          const course = await prisma.course.findUnique({
+            where: { slug: courseSlug },
+          })
 
-        if (!course) {
-          console.error("Course not found:", courseSlug)
-          break
-        }
+          if (!course) {
+            console.error("Course not found:", courseSlug)
+            continue
+          }
 
-        // Create enrollment if it doesn't exist
-        await prisma.enrollment.upsert({
-          where: {
-            userId_courseId: {
+          // Create enrollment if it doesn't exist
+          await prisma.enrollment.upsert({
+            where: {
+              userId_courseId: {
+                userId: user.id,
+                courseId: course.id,
+              },
+            },
+            update: {},
+            create: {
               userId: user.id,
               courseId: course.id,
             },
-          },
-          update: {},
-          create: {
-            userId: user.id,
-            courseId: course.id,
-          },
-        })
+          })
 
-        console.log(`Enrolled user ${customerEmail} in course ${course.title}`)
+          console.log(`Enrolled user ${customerEmail} in course ${course.title}`)
+        }
         break
       }
 

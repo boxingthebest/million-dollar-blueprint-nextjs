@@ -54,8 +54,8 @@ export async function POST(request: NextRequest) {
         },
       ],
       mode: productType === 'subscription' ? 'subscription' : 'payment',
-      success_url: successUrl || `${request.headers.get('origin')}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: cancelUrl || `${request.headers.get('origin')}/checkout/cancel`,
+      success_url: successUrl || `${request.headers.get('origin')}/auth/complete-account?email={CUSTOMER_EMAIL}&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: cancelUrl || `${request.headers.get('origin')}/?canceled=true`,
       metadata: {
         productType,
         productKey,
