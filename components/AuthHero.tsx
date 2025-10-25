@@ -121,12 +121,17 @@ export default function AuthHero({ type }: AuthHeroProps) {
             <div className="flex items-center gap-4">
               {/* Avatar Stack */}
               <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
+                {[
+                  { initials: 'JS', gradient: 'from-cyan-400 to-blue-500' },
+                  { initials: 'MK', gradient: 'from-purple-400 to-pink-500' },
+                  { initials: 'AP', gradient: 'from-orange-400 to-red-500' },
+                  { initials: 'DL', gradient: 'from-emerald-400 to-green-500' }
+                ].map((avatar, i) => (
                   <div 
                     key={i}
-                    className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 border-2 border-slate-950 flex items-center justify-center text-white font-bold"
+                    className={`w-12 h-12 rounded-full bg-gradient-to-br ${avatar.gradient} border-2 border-slate-950 flex items-center justify-center text-white font-bold text-sm`}
                   >
-                    {String.fromCharCode(64 + i)}
+                    {avatar.initials}
                   </div>
                 ))}
               </div>
