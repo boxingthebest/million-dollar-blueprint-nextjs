@@ -85,7 +85,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
       description: "The exact sales frameworks used to scale companies from $500K to $50B+.",
       students: "Coming Soon",
-      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80",
+      image: "/course-sales-new.jpg",
       available: true,
       badge: "NEW"
     },
@@ -100,7 +100,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
       description: "Fortune 100 leadership strategies for executive presence and influence.",
       students: "Coming Soon",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+      image: "/course-leadership-new.jpg",
       available: true,
       badge: "NEW"
     },
@@ -115,7 +115,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
       description: "Enterprise-level digital marketing tactics that drive real revenue.",
       students: "Coming Soon",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+      image: "/course-marketing-new.jpg",
       available: true,
       badge: "NEW"
     },
@@ -130,7 +130,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
       description: "Build lasting wealth with strategies from Wall Street insiders.",
       students: "Coming Soon",
-      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
+      image: "/course-wealth-new.jpg",
       available: true,
       badge: "NEW"
     }
