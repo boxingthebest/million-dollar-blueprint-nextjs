@@ -6,6 +6,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import FuturisticBackground from "@/components/FuturisticBackground"
+import AuthHero from "@/components/AuthHero"
 
 export default function SignIn() {
   const router = useRouter()
@@ -54,71 +55,8 @@ export default function SignIn() {
       <FuturisticBackground variant="enrollment" />
 
       <div className="relative z-10 min-h-screen flex">
-        {/* Left Side - Hero Section */}
-        <div className="hidden lg:flex lg:w-1/2 flex-col justify-center px-12 py-16">
-          {/* Logo */}
-          <Link href="/" className="mb-12">
-            <Image
-              src="/logo-main-desktop.png"
-              alt="Million Dollar Blueprint"
-              width={250}
-              height={125}
-              className="h-20 w-auto object-contain"
-            />
-          </Link>
-
-          {/* Hero Content */}
-          <div className="max-w-xl">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500/20 to-pink-500/20 border border-orange-500/30 rounded-full mb-6">
-              <span className="text-xl">⚡</span>
-              <span className="text-sm font-semibold text-orange-300">McKinsey-Level Education</span>
-            </div>
-
-            {/* Headline */}
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-white">Welcome Back to</span>
-              <br />
-              <span className="bg-gradient-to-r from-orange-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Your Transformation
-              </span>
-            </h1>
-
-            {/* Subheadline */}
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Continue mastering the insider strategies from the world's most successful companies. 
-              Learn from frameworks used at Amazon, Apple, Google, Goldman Sachs & McKinsey.
-            </p>
-
-            {/* Trust Indicators */}
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 rounded-full bg-green-500/20 border border-green-500/50 flex items-center justify-center">
-                  <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-slate-300">Fortune 100 Frameworks</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 rounded-full bg-green-500/20 border border-green-500/50 flex items-center justify-center">
-                  <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-slate-300">Lifetime Access</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-6 h-6 rounded-full bg-green-500/20 border border-green-500/50 flex items-center justify-center">
-                  <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-slate-300">30-Day Money-Back Guarantee</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Left Side - Premium Hero Section */}
+        <AuthHero type="signin" />
 
         {/* Right Side - Sign In Form */}
         <div className="w-full lg:w-1/2 flex items-center justify-center px-4 py-16">
