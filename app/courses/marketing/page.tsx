@@ -293,23 +293,23 @@ export default function MarketingPage() {
             {[{
               title: "The AARRR Pirate Metrics Framework",
               description: "How to measure what actually matters and build a full-funnel growth model.",
-              icon: <TrendingUp className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+              icon: <TrendingUp className="h-20 w-20 text-emerald-400" />
             }, {
               title: "The Hook Model",
               description: "How to build products and marketing campaigns that are so engaging, they're addictive.",
-              icon: <Heart className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]" />
+              icon: <Heart className="h-20 w-20 text-pink-400" />
             }, {
               title: "The Bullseye Framework",
               description: "How to identify and dominate the one marketing channel that will drive 80% of your growth.",
-              icon: <Target className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(248,113,113,0.8)]" />
+              icon: <Target className="h-20 w-20 text-red-400" />
             }, {
               title: "The Viral Loop",
               description: "How to build virality into your product from day one.",
-              icon: <Brain className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+              icon: <Brain className="h-20 w-20 text-cyan-400" />
             }, {
               title: "The CRO Playbook",
               description: "How to systematically increase your conversion rates at every step of the funnel.",
-              icon: <Lightbulb className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
+              icon: <Lightbulb className="h-20 w-20 text-amber-400" />
             }].map((item, index) => (
               <div key={index} className="bg-black p-8 rounded-lg border-2 border-slate-800">
                 <div className="mb-4">{item.icon}</div>
@@ -334,7 +334,7 @@ export default function MarketingPage() {
                 >
                   <div className="flex items-center gap-4">
                     <div className="bg-gradient-to-br from-cyan-500 to-purple-600 p-4 rounded-full shadow-lg shadow-cyan-500/50">
-                      <module.icon className="h-14 w-14 text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+                      <module.icon className="h-14 w-14 text-cyan-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
@@ -348,7 +348,7 @@ export default function MarketingPage() {
                     <ul className="space-y-3">
                       {module.topics.map((topic, index) => (
                         <li key={index} className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-white drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+                          <Check className="h-5 w-5 text-emerald-400" />
                           <span className="text-white">{topic}</span>
                         </li>
                       ))}

@@ -293,8 +293,8 @@ export default function Home() {
             <Image src="/logo-transparent.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-16 w-auto md:h-20 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))'}} priority />
           </div>
           <div className="flex gap-4 md:gap-6 items-center">
-            <a href="#courses" className="text-slate-300 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors font-semibold text-sm md:text-base">Courses</a>
-            <Link href="/about" className="text-slate-300 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors font-semibold text-sm md:text-base hidden sm:inline">About</Link>
+            <a href="#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">Courses</a>
+            <Link href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base hidden sm:inline">About</Link>
             <Link 
               href="/auth/signin"
               className="bg-slate-800/80 hover:bg-slate-700 border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-cyan-200 px-4 md:px-6 py-2 rounded-lg font-bold transition-all text-sm md:text-base shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/30"
@@ -608,11 +608,11 @@ export default function Home() {
                   </div>
                   <ul className="text-left text-slate-300 mb-6 space-y-2 flex-grow">
                     <li className="flex items-start gap-2">
-                      <span className="text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] mt-1">✓</span>
+                      <span className="text-cyan-400 mt-1">✓</span>
                       <span>AI-Resistant Skills Course</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] mt-1">✓</span>
+                      <span className="text-cyan-400 mt-1">✓</span>
                       <span>High-Performance Wellness Course</span>
                     </li>
                   </ul>
@@ -653,27 +653,27 @@ export default function Home() {
                   </div>
                   <ul className="text-left text-slate-300 mb-6 space-y-2 text-sm flex-grow">
                     <li className="flex items-start gap-2">
-                      <span className="text-white drop-shadow-[0_0_15px_rgba(192,132,252,0.9)] mt-1">✓</span>
+                      <span className="text-purple-400 mt-1">✓</span>
                       <span>AI-Resistant Skills ($197)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-white drop-shadow-[0_0_15px_rgba(192,132,252,0.9)] mt-1">✓</span>
+                      <span className="text-purple-400 mt-1">✓</span>
                       <span>High-Performance Wellness ($197)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-white drop-shadow-[0_0_15px_rgba(192,132,252,0.9)] mt-1">✓</span>
+                      <span className="text-purple-400 mt-1">✓</span>
                       <span>Sales Mastery ($247)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-white drop-shadow-[0_0_15px_rgba(192,132,252,0.9)] mt-1">✓</span>
+                      <span className="text-purple-400 mt-1">✓</span>
                       <span>Leadership & Influence ($247)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-white drop-shadow-[0_0_15px_rgba(192,132,252,0.9)] mt-1">✓</span>
+                      <span className="text-purple-400 mt-1">✓</span>
                       <span>Digital Marketing Mastery ($197)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-white drop-shadow-[0_0_15px_rgba(192,132,252,0.9)] mt-1">✓</span>
+                      <span className="text-purple-400 mt-1">✓</span>
                       <span>Wealth Building ($197)</span>
                     </li>
                   </ul>
@@ -728,10 +728,10 @@ export default function Home() {
                   </div>
                   <p className="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">{testimonial.text}</p>
                   <div className="flex gap-2 mb-4 flex-wrap">
-                    <span className="bg-emerald-500/20 text-white drop-shadow-[0_0_15px_rgba(16,185,129,0.9)] px-3 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold">
                       {testimonial.result1}
                     </span>
-                    <span className="bg-cyan-500/20 text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] px-3 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold">
                       {testimonial.result2}
                     </span>
                   </div>
@@ -744,7 +744,7 @@ export default function Home() {
                     <div>
                       <div className="font-bold text-white text-base md:text-lg">{testimonial.name}</div>
                       <div className="text-slate-400 text-sm">{testimonial.role}</div>
-                      <div className="text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] text-sm font-semibold">{testimonial.company}</div>
+                      <div className="text-cyan-400 text-sm font-semibold">{testimonial.company}</div>
                     </div>
                   </div>
                 </div>
@@ -798,7 +798,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative z-10">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                    <Target className="w-10 h-10 text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)]" />
+                    <Target className="w-10 h-10 text-cyan-400" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Real-World Expertise</h3>
                   <p className="text-lg text-slate-300 leading-relaxed">Our instructors are current and former executives at companies like Apple, Google, Goldman Sachs, and McKinsey. You're learning from the best in the world.</p>
@@ -809,7 +809,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative z-10">
                   <div className="w-20 h-20 bg-gradient-to-br from-emerald-500/30 to-teal-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                    <TrendingUp className="w-10 h-10 text-white drop-shadow-[0_0_15px_rgba(16,185,129,0.9)]" />
+                    <TrendingUp className="w-10 h-10 text-emerald-400" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Proven Frameworks</h3>
                   <p className="text-lg text-slate-300 leading-relaxed">We don't teach theory. We teach the exact, battle-tested frameworks that have scaled companies to billions in revenue. This is insider knowledge.</p>
@@ -852,7 +852,7 @@ export default function Home() {
                     className="w-full px-6 md:px-8 py-4 md:py-6 flex justify-between items-center text-left hover:bg-slate-800/80 transition-all"
                   >
                     <span className="text-lg md:text-xl font-semibold text-white pr-4">{faq.question}</span>
-                    <ChevronDown className={`w-6 h-6 text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-6 h-6 text-cyan-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 md:px-8 pb-4 md:pb-6">
@@ -895,12 +895,12 @@ export default function Home() {
               </button>
             </form>
             {submitMessage && (
-              <p className={`text-sm font-semibold mt-4 ${submitStatus === "success" ? "text-green-400" : "text-white drop-shadow-[0_0_15px_rgba(248,113,113,0.9)]"}`}>
+              <p className={`text-sm font-semibold mt-4 ${submitStatus === "success" ? "text-green-400" : "text-red-400"}`}>
                 {submitMessage}
               </p>
             )}
             <p className="text-slate-400 text-sm mt-4">🔒 We respect your privacy. Unsubscribe anytime.</p>
-            <p className="text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] text-sm font-semibold mt-2">Join 10,000+ Subscribers</p>
+            <p className="text-cyan-400 text-sm font-semibold mt-2">Join 10,000+ Subscribers</p>
           </div>
         </div>
       </section>
@@ -941,30 +941,30 @@ export default function Home() {
             <div>
               <h4 className="text-white font-bold text-lg mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="#courses" className="text-slate-400 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors">Courses</a></li>
-                <li><Link href="/about" className="text-slate-400 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors">About Us</Link></li>
-                <li><Link href="/contact" className="text-slate-400 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors">Contact</Link></li>
+                <li><a href="#courses" className="text-slate-400 hover:text-cyan-400 transition-colors">Courses</a></li>
+                <li><Link href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors">About Us</Link></li>
+                <li><Link href="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors">Contact</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-bold text-lg mb-4">Legal</h4>
               <ul className="space-y-2">
-                <li><Link href="/terms" className="text-slate-400 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors">Terms of Service</Link></li>
-                <li><Link href="/privacy" className="text-slate-400 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/refund-policy" className="text-slate-400 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors">Refund Policy</Link></li>
+                <li><Link href="/terms" className="text-slate-400 hover:text-cyan-400 transition-colors">Terms of Service</Link></li>
+                <li><Link href="/privacy" className="text-slate-400 hover:text-cyan-400 transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/refund-policy" className="text-slate-400 hover:text-cyan-400 transition-colors">Refund Policy</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-bold text-lg mb-4">Connect With Us</h4>
               <div className="flex gap-4 mb-4">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] transition-colors">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
               </div>
-              <p className="text-slate-400 text-sm">Questions? Contact us at <a href="mailto:hello@milliondollarblueprint.ai" className="text-white drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] hover:text-cyan-300 transition-colors">hello@milliondollarblueprint.ai</a></p>
+              <p className="text-slate-400 text-sm">Questions? Contact us at <a href="mailto:hello@milliondollarblueprint.ai" className="text-cyan-400 hover:text-cyan-300 transition-colors">hello@milliondollarblueprint.ai</a></p>
             </div>
           </div>
           <div className="text-center text-slate-500 text-sm pt-8 border-t border-slate-800">

@@ -295,23 +295,23 @@ export default function SalesMasteryPage() {
             {[{
               title: "The Challenger Sale 2.0",
               description: "How to teach, tailor, and take control of any sales conversation.",
-              icon: <Brain className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+              icon: <Brain className="h-20 w-20 text-cyan-400" />
             }, {
               title: "The Trusted Advisor Blueprint",
               description: "The Goldman Sachs model for building unshakeable client relationships.",
-              icon: <Heart className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]" />
+              icon: <Heart className="h-20 w-20 text-pink-400" />
             }, {
               title: "Predictive Pipeline Architecture",
               description: "How to build a sales pipeline that never runs dry.",
-              icon: <TrendingUp className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+              icon: <TrendingUp className="h-20 w-20 text-emerald-400" />
             }, {
               title: "The Amazon \"Working Backwards\" Method",
               description: "How to close multi-million dollar deals by starting with the customer's press release.",
-              icon: <Lightbulb className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
+              icon: <Lightbulb className="h-20 w-20 text-amber-400" />
             }, {
               title: "The Google \"3-Layer Deep\" Discovery",
               description: "How to uncover needs your prospects don't even know they have.",
-              icon: <Target className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(248,113,113,0.8)]" />
+              icon: <Target className="h-20 w-20 text-red-400" />
             }].map((item, index) => (
               <div key={index} className="bg-black p-8 rounded-lg border-2 border-slate-800">
                 <div className="mb-4">{item.icon}</div>
@@ -336,7 +336,7 @@ export default function SalesMasteryPage() {
                 >
                   <div className="flex items-center gap-4">
                     <div className="bg-gradient-to-br from-cyan-500 to-purple-600 p-4 rounded-full shadow-lg shadow-cyan-500/50">
-                      <module.icon className="h-14 w-14 text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
+                      <module.icon className="h-14 w-14 text-cyan-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
@@ -350,7 +350,7 @@ export default function SalesMasteryPage() {
                     <ul className="space-y-3">
                       {module.topics.map((topic, index) => (
                         <li key={index} className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-white drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+                          <Check className="h-5 w-5 text-emerald-400" />
                           <span className="text-white">{topic}</span>
                         </li>
                       ))}
