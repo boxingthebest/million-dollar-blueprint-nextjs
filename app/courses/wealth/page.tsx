@@ -200,7 +200,7 @@ export default function WealthPage() {
       {/* Futuristic Animated Background */}
       <FuturisticBackground variant="enrollment" />
       {/* Navigation */}
-      <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
+      <nav className="bg-black border-b border-slate-800 sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
@@ -246,7 +246,7 @@ export default function WealthPage() {
       </section>
 
       {/* Video Preview Section */}
-      <section className="py-16 md:py-24 bg-slate-900">
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
@@ -269,13 +269,13 @@ export default function WealthPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You Have Authority, But No Influence</h2>
               <p className="text-lg text-white leading-relaxed">
                 You've been promoted. You have the title, the team, and the responsibility. But you feel like an imposter. Your voice isn't heard in meetings. Your ideas are overlooked. Your team is compliant, but not committed. You have authority, but you lack *influence*. In today's flat, fast-moving organizations, formal authority is a fragile and fleeting source of power. True leadership is the ability to influence without it.
               </p>
             </div>
-            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Master Executive Presence</h2>
               <p className="text-lg text-white leading-relaxed">
                 This isn't a course on management theory. This is a deep dive into the science and art of **executive presence**. We've decoded the specific verbal and non-verbal communication techniques, storytelling frameworks, and psychological triggers used by the world's most influential leaders—from McKinsey partners and White House speechwriters to Navy SEAL commanders. You'll learn how to command any room, inspire any team, and accelerate your career.
@@ -311,7 +311,7 @@ export default function WealthPage() {
               description: "The 3 elements of charisma and how to develop them.",
               icon: <Heart className="h-12 w-12 text-pink-400" />
             }].map((item, index) => (
-              <div key={index} className="bg-slate-900 p-8 rounded-lg border border-slate-800">
+              <div key={index} className="bg-black p-8 rounded-lg border border-slate-800">
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                 <p className="text-white">{item.description}</p>
@@ -322,12 +322,12 @@ export default function WealthPage() {
       </section>
 
       {/* Curriculum Section */}
-      <section id="curriculum" className="py-16 md:py-24 bg-slate-900">
+      <section id="curriculum" className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
           <div className="max-w-4xl mx-auto">
             {modules.map((module) => (
-              <div key={module.number} className="bg-slate-800 border border-slate-600 rounded-lg mb-4">
+              <div key={module.number} className="bg-black border border-slate-600 rounded-lg mb-4">
                 <button
                   className="w-full flex justify-between items-center p-6 text-left"
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
@@ -376,10 +376,10 @@ export default function WealthPage() {
       </section>
 
       {/* Benefits & Deliverables Section */}
-      <section className="py-16 md:py-24 bg-slate-900">
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -390,7 +390,7 @@ export default function WealthPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (

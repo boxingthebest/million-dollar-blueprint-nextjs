@@ -200,7 +200,7 @@ export default function SalesMasteryPage() {
       {/* Futuristic Animated Background */}
       <FuturisticBackground variant="enrollment" />
       {/* Navigation */}
-      <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
+      <nav className="bg-black border-b border-slate-800 sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
@@ -248,7 +248,7 @@ export default function SalesMasteryPage() {
       </section>
 
       {/* Video Preview Section */}
-      <section className="py-16 md:py-24 bg-slate-900">
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
@@ -271,13 +271,13 @@ export default function SalesMasteryPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You're Playing a Losing Game</h2>
               <p className="text-lg text-white leading-relaxed">
                 You've been taught to sell. You've read the books, attended the seminars, and practiced your pitch. But you're still struggling to hit your numbers consistently. Why? Because you've been taught a system designed for the 99%, not the 1%. The traditional sales playbook is dead. In a world of automated outreach and AI-powered lead scoring, the only thing that separates you from the noise is your ability to architect a deal, not just sell a product.
               </p>
             </div>
-            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Become a Revenue Architect</h2>
               <p className="text-lg text-white leading-relaxed">
                 This isn't another course on "sales techniques." This is a masterclass in **revenue architecture**. We've reverse-engineered the proprietary sales and deal-making frameworks used by the world's most dominant companies—Amazon, Google, Goldman Sachs, and Salesforce—to give you a blueprint for predictable, scalable revenue growth. You won't just learn how to sell; you'll learn how to think like a Chief Revenue Officer.
@@ -313,7 +313,7 @@ export default function SalesMasteryPage() {
               description: "How to uncover needs your prospects don't even know they have.",
               icon: <Target className="h-12 w-12 text-red-400" />
             }].map((item, index) => (
-              <div key={index} className="bg-slate-900 p-8 rounded-lg border border-slate-800">
+              <div key={index} className="bg-black p-8 rounded-lg border border-slate-800">
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                 <p className="text-white">{item.description}</p>
@@ -324,12 +324,12 @@ export default function SalesMasteryPage() {
       </section>
 
       {/* Curriculum Section */}
-      <section id="curriculum" className="py-16 md:py-24 bg-slate-900">
+      <section id="curriculum" className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
           <div className="max-w-4xl mx-auto">
             {modules.map((module) => (
-              <div key={module.number} className="bg-slate-800 border border-slate-600 rounded-lg mb-4">
+              <div key={module.number} className="bg-black border border-slate-600 rounded-lg mb-4">
                 <button
                   className="w-full flex justify-between items-center p-6 text-left"
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
@@ -378,10 +378,10 @@ export default function SalesMasteryPage() {
       </section>
 
       {/* Benefits & Deliverables Section */}
-      <section className="py-16 md:py-24 bg-slate-900">
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -392,7 +392,7 @@ export default function SalesMasteryPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (
