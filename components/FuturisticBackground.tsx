@@ -129,7 +129,7 @@ export default function FuturisticBackground({ variant = 'admin' }: FuturisticBa
       <canvas
         ref={canvasRef}
         className="fixed inset-0 pointer-events-none z-0"
-        style={{ opacity: 0.4 }}
+        style={{ opacity: 0.15 }}
       />
 
       {/* Gradient Mesh Background */}
@@ -157,7 +157,7 @@ export default function FuturisticBackground({ variant = 'admin' }: FuturisticBa
       {/* Geometric Grid Pattern */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.01]"
           style={{
             backgroundImage: `
               linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
