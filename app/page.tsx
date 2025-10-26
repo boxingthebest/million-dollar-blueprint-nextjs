@@ -480,29 +480,29 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div className="text-center bg-slate-800/30 border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/50 transition-all hover:scale-105 duration-300">
+            <div className="text-center bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-400 rounded-xl p-8 hover:border-cyan-300 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2 drop-shadow-[0_0_20px_rgba(6,182,212,0.3)]">
                 <AnimatedCounter end={10000} suffix="+" />
               </div>
-              <div className="text-slate-400 text-sm md:text-lg font-semibold">Students Enrolled</div>
+              <div className="text-white text-sm md:text-lg font-bold">Students Enrolled</div>
             </div>
-            <div className="text-center bg-slate-800/30 border border-emerald-500/20 rounded-xl p-6 hover:border-emerald-500/50 transition-all hover:scale-105 duration-300">
+            <div className="text-center bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border-2 border-emerald-400 rounded-xl p-8 hover:border-emerald-300 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500 mb-2 drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                 $<AnimatedCounter end={47} suffix="K" />
               </div>
-              <div className="text-slate-400 text-sm md:text-lg font-semibold">Avg Salary Increase</div>
+              <div className="text-white text-sm md:text-lg font-bold">Avg Salary Increase</div>
             </div>
-            <div className="text-center bg-slate-800/30 border border-orange-500/20 rounded-xl p-6 hover:border-orange-500/50 transition-all hover:scale-105 duration-300">
+            <div className="text-center bg-gradient-to-br from-orange-500/10 to-pink-500/10 border-2 border-orange-400 rounded-xl p-8 hover:border-orange-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 mb-2 drop-shadow-[0_0_20px_rgba(251,146,60,0.3)]">
                 <AnimatedCounter end={94} suffix="%" />
               </div>
-              <div className="text-slate-400 text-sm md:text-lg font-semibold">Satisfaction Rate</div>
+              <div className="text-white text-sm md:text-lg font-bold">Satisfaction Rate</div>
             </div>
-            <div className="text-center bg-slate-800/30 border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/50 transition-all hover:scale-105 duration-300">
+            <div className="text-center bg-gradient-to-br from-purple-500/10 to-indigo-500/10 border-2 border-purple-400 rounded-xl p-8 hover:border-purple-300 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 mb-2 drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]">
                 <AnimatedCounter end={47} />
               </div>
-              <div className="text-slate-400 text-sm md:text-lg font-semibold">Countries Worldwide</div>
+              <div className="text-white text-sm md:text-lg font-bold">Countries Worldwide</div>
             </div>
           </div>
         </div>
