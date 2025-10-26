@@ -81,6 +81,10 @@ body li,
 body span,
 body div {
   color: #ffffff !important;
+  font-weight: 500 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
 }
 
 /* Force white text with maximum specificity */
