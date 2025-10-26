@@ -587,106 +587,162 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">Choose Your Bundle</h2>
               <p className="text-xl md:text-2xl text-slate-400 text-center mb-16">Save more when you invest in your complete transformation</p>
               
-              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
                 {/* Starter Bundle */}
                 <div className="bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border-2 border-cyan-500/50 rounded-2xl p-8 md:p-10 text-center hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 relative group flex flex-col h-full">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col flex-grow">
                   <div className="inline-block bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-cyan-400/30">
-                    💎 STARTER BUNDLE
+                    💎 STARTER
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Career + Wellness</h3>
-                  <p className="text-lg md:text-xl text-slate-300 mb-8">
-                    Get both flagship courses. Transform your career AND eliminate burnout.
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose 3 Courses</h3>
+                  <p className="text-lg text-slate-300 mb-8">
+                    Perfect for focused skill development in your key areas
                   </p>
                   <div className="mb-8">
-                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                      $297
-                    </div>
-                    <div className="text-2xl md:text-3xl text-slate-500 line-through mb-2">$394</div>
-                    <div className="inline-block bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-bold">Save $97</div>
+                    <div className="text-5xl font-bold text-white mb-2">$397</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$788</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $391 (50%)</div>
                   </div>
-                  <ul className="text-left text-slate-300 mb-6 space-y-2 flex-grow">
+                  <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
-                      <span>AI-Resistant Skills Course</span>
+                      <span>Choose ANY 3 courses</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
-                      <span>High-Performance Wellness Course</span>
+                      <span>Lifetime access</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-cyan-400 mt-1">✓</span>
+                      <span>Professional certificates</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-cyan-400 mt-1">✓</span>
+                      <span>30-day money-back guarantee</span>
                     </li>
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/4gM4gyepHdiD3dG7BO08g07"
+                    href="https://buy.stripe.com/starter-bundle-397"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all shadow-2xl shadow-cyan-500/30 w-full hover:shadow-cyan-500/50 hover:-translate-y-1"
+                    className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-cyan-500/50"
                   >
-                    Get Starter Bundle
+                    Get Started - $397
                   </a>
-                  <p className="text-slate-400 text-sm mt-6">✓ 30-Day Money-Back Guarantee</p>
+                  <p className="text-slate-400 text-sm mt-4">✓ 30-Day Money-Back Guarantee</p>
                   </div>
                   </div>
                 </div>
 
-                {/* Complete Bundle */}
-                <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-2 border-purple-500/50 rounded-2xl p-8 md:p-10 text-center relative overflow-hidden hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 group flex flex-col h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold rotate-12 shadow-lg animate-pulse">
-                    BEST VALUE
+                {/* Professional Bundle - MOST POPULAR */}
+                <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 border-4 border-purple-400 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 relative group flex flex-col h-full">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                    🔥 MOST POPULAR
                   </div>
-                  <div className="relative z-10 flex flex-col flex-grow">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10 flex flex-col flex-grow pt-4">
                   <div className="inline-block bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-purple-400/30">
-                    🔥 COMPLETE MASTERY
+                    ⭐ PROFESSIONAL
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 6 Courses</h3>
-                  <p className="text-lg md:text-xl text-slate-300 mb-8">
-                    Master every skill. Complete transformation. Maximum savings.
+                  <p className="text-lg text-slate-300 mb-8">
+                    Complete transformation across all areas of your professional life
                   </p>
                   <div className="mb-8">
-                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent mb-2">
-                      $697
-                    </div>
-                    <div className="text-2xl md:text-3xl text-slate-500 line-through mb-2">$1,282</div>
-                    <div className="inline-block bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-bold">Save $585 (46% OFF!)</div>
+                    <div className="text-6xl font-bold text-white mb-2">$597</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$1,282</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $685 (53%)</div>
                   </div>
-                  <ul className="text-left text-slate-300 mb-6 space-y-2 text-sm flex-grow">
+                  <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span>AI-Resistant Skills ($197)</span>
+                      <span className="font-semibold">All 6 premium courses</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span>High-Performance Wellness ($197)</span>
+                      <span>Lifetime access to everything</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span>Sales Mastery ($247)</span>
+                      <span>6 professional certificates</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span>Leadership & Influence ($247)</span>
+                      <span>30-day money-back guarantee</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span>Digital Marketing Mastery ($197)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-purple-400 mt-1">✓</span>
-                      <span>Wealth Building ($197)</span>
+                      <span className="font-semibold">Future course updates FREE</span>
                     </li>
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/4gM00i1CVa6r29CbS408g08"
+                    href="https://buy.stripe.com/professional-bundle-597"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-5 rounded-xl font-bold text-xl transition-all shadow-2xl shadow-purple-500/30 w-full hover:shadow-purple-500/50 hover:-translate-y-1"
+                    className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white px-8 py-5 rounded-lg font-bold text-xl transition-all shadow-2xl w-full hover:shadow-purple-500/50"
                   >
-                    Get Complete Bundle
+                    Get Complete Access - $597
                   </a>
-                  <p className="text-slate-400 text-sm mt-6">✓ 30-Day Money-Back Guarantee | ✓ Lifetime Access</p>
+                  <p className="text-slate-400 text-sm mt-4">✓ 30-Day Money-Back Guarantee</p>
+                  </div>
+                  </div>
+                </div>
+
+                {/* VIP Bundle */}
+                <div className="bg-gradient-to-br from-amber-900/40 to-orange-900/40 border-2 border-amber-500/50 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300 relative group flex flex-col h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10 flex flex-col flex-grow">
+                  <div className="inline-block bg-gradient-to-r from-amber-500/30 to-orange-500/30 text-amber-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-amber-400/30">
+                    👑 VIP
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 6 + Coaching</h3>
+                  <p className="text-lg text-slate-300 mb-8">
+                    Everything plus personalized 1-on-1 coaching and private community
+                  </p>
+                  <div className="mb-8">
+                    <div className="text-5xl font-bold text-white mb-2">$797</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$1,782</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $985 (55%)</div>
+                  </div>
+                  <ul className="text-left text-white mb-6 space-y-3 flex-grow">
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400 mt-1">✓</span>
+                      <span className="font-semibold">All 6 premium courses</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400 mt-1">✓</span>
+                      <span className="font-semibold">1-on-1 coaching call ($500 value)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400 mt-1">✓</span>
+                      <span className="font-semibold">Private VIP community access</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400 mt-1">✓</span>
+                      <span>6 professional certificates</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400 mt-1">✓</span>
+                      <span>Priority email support</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-400 mt-1">✓</span>
+                      <span>Lifetime access + updates</span>
+                    </li>
+                  </ul>
+                  <div className="mt-auto">
+                    <a
+                    href="https://buy.stripe.com/vip-bundle-797"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-amber-500/50"
+                  >
+                    Get VIP Access - $797
+                  </a>
+                  <p className="text-slate-400 text-sm mt-4">✓ 30-Day Money-Back Guarantee</p>
                   </div>
                   </div>
                 </div>
