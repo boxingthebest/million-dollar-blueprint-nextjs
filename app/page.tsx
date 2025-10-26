@@ -329,7 +329,7 @@ export default function Home() {
             </p>
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
               <iframe 
-                src="https://player.vimeo.com/video/1130648860?badge=0&autopause=0&player_id=0&app_id=58479" 
+                src="https://player.vimeo.com/video/1130649118?badge=0&autopause=0&player_id=0&app_id=58479" 
                 className="w-full h-full"
                 frameBorder="0" 
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
