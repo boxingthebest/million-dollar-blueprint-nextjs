@@ -206,7 +206,7 @@ export default function SalesMasteryPage() {
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-cyan-100 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
               href="https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03"
               target="_blank"
@@ -295,23 +295,23 @@ export default function SalesMasteryPage() {
             {[{
               title: "The Challenger Sale 2.0",
               description: "How to teach, tailor, and take control of any sales conversation.",
-              icon: <Brain className="h-12 w-12 text-cyan-100" />
+              icon: <Brain className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
             }, {
               title: "The Trusted Advisor Blueprint",
               description: "The Goldman Sachs model for building unshakeable client relationships.",
-              icon: <Heart className="h-12 w-12 text-pink-400" />
+              icon: <Heart className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]" />
             }, {
               title: "Predictive Pipeline Architecture",
               description: "How to build a sales pipeline that never runs dry.",
-              icon: <TrendingUp className="h-12 w-12 text-emerald-400" />
+              icon: <TrendingUp className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
             }, {
               title: "The Amazon \"Working Backwards\" Method",
               description: "How to close multi-million dollar deals by starting with the customer's press release.",
-              icon: <Lightbulb className="h-12 w-12 text-yellow-400" />
+              icon: <Lightbulb className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
             }, {
               title: "The Google \"3-Layer Deep\" Discovery",
               description: "How to uncover needs your prospects don't even know they have.",
-              icon: <Target className="h-12 w-12 text-red-400" />
+              icon: <Target className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(248,113,113,0.8)]" />
             }].map((item, index) => (
               <div key={index} className="bg-black p-8 rounded-lg border-2 border-slate-800">
                 <div className="mb-4">{item.icon}</div>
@@ -335,22 +335,22 @@ export default function SalesMasteryPage() {
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="bg-slate-700 p-3 rounded-full">
-                      <module.icon className="h-6 w-6 text-cyan-100" />
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-600 p-4 rounded-full shadow-lg shadow-cyan-500/50">
+                      <module.icon className="h-14 w-14 text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
                       <p className="text-sm text-white">{module.duration} • {module.lessons} lessons</p>
                     </div>
                   </div>
-                  <ChevronDown className={`h-6 w-6 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-14 w-14 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
                 </button>
                 {openModule === module.number && (
                   <div className="p-6 border-t border-slate-600">
                     <ul className="space-y-3">
                       {module.topics.map((topic, index) => (
                         <li key={index} className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-emerald-400" />
+                          <Check className="h-5 w-5 text-white drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
                           <span className="text-white">{topic}</span>
                         </li>
                       ))}
@@ -368,11 +368,11 @@ export default function SalesMasteryPage() {
         <div className="container mx-auto px-4">
                     <h3 className="text-center text-white text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
           <p className="text-center text-white text-lg max-w-4xl mx-auto">
-            <span className="text-cyan-100 font-semibold">Salesforce top performers</span> • 
-            <span className="text-cyan-100 font-semibold"> Goldman Sachs advisors</span> • 
-            <span className="text-cyan-100 font-semibold"> Oracle enterprise teams</span> • 
-            <span className="text-cyan-100 font-semibold"> Google sales engineers</span> • 
-            <span className="text-cyan-100 font-semibold"> FBI negotiators</span>
+            <span className="text-cyan-400 font-semibold">Salesforce top performers</span> • 
+            <span className="text-cyan-400 font-semibold"> Goldman Sachs advisors</span> • 
+            <span className="text-cyan-400 font-semibold"> Oracle enterprise teams</span> • 
+            <span className="text-cyan-400 font-semibold"> Google sales engineers</span> • 
+            <span className="text-cyan-400 font-semibold"> FBI negotiators</span>
           </p>
         </div>
       </section>
@@ -386,7 +386,7 @@ export default function SalesMasteryPage() {
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-6 w-6 text-cyan-100 mt-1 flex-shrink-0" />
+                    <Check className="h-14 w-14 text-cyan-400 mt-1 flex-shrink-0" />
                     <span className="text-lg text-white">{benefit}</span>
                   </li>
                 ))}
@@ -397,7 +397,7 @@ export default function SalesMasteryPage() {
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                    <Check className="h-14 w-14 text-emerald-400 mt-1 flex-shrink-0" />
                     <span className="text-lg text-white">{deliverable}</span>
                   </li>
                 ))}
@@ -419,7 +419,7 @@ export default function SalesMasteryPage() {
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                  <ChevronDown className={`h-6 w-6 text-white transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-14 w-14 text-white transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openFaq === index && (
                   <div className="pb-6">

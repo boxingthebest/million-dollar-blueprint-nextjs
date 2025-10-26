@@ -206,7 +206,7 @@ export default function MarketingPage() {
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-cyan-100 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
               href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
               target="_blank"
@@ -293,23 +293,23 @@ export default function MarketingPage() {
             {[{
               title: "The AARRR Pirate Metrics Framework",
               description: "How to measure what actually matters and build a full-funnel growth model.",
-              icon: <TrendingUp className="h-12 w-12 text-emerald-400" />
+              icon: <TrendingUp className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
             }, {
               title: "The Hook Model",
               description: "How to build products and marketing campaigns that are so engaging, they're addictive.",
-              icon: <Heart className="h-12 w-12 text-pink-400" />
+              icon: <Heart className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]" />
             }, {
               title: "The Bullseye Framework",
               description: "How to identify and dominate the one marketing channel that will drive 80% of your growth.",
-              icon: <Target className="h-12 w-12 text-red-400" />
+              icon: <Target className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(248,113,113,0.8)]" />
             }, {
               title: "The Viral Loop",
               description: "How to build virality into your product from day one.",
-              icon: <Brain className="h-12 w-12 text-cyan-100" />
+              icon: <Brain className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
             }, {
               title: "The CRO Playbook",
               description: "How to systematically increase your conversion rates at every step of the funnel.",
-              icon: <Lightbulb className="h-12 w-12 text-yellow-400" />
+              icon: <Lightbulb className="h-20 w-20 text-white drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
             }].map((item, index) => (
               <div key={index} className="bg-black p-8 rounded-lg border-2 border-slate-800">
                 <div className="mb-4">{item.icon}</div>
@@ -333,22 +333,22 @@ export default function MarketingPage() {
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="bg-slate-700 p-3 rounded-full">
-                      <module.icon className="h-6 w-6 text-cyan-100" />
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-600 p-4 rounded-full shadow-lg shadow-cyan-500/50">
+                      <module.icon className="h-14 w-14 text-white drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
                       <p className="text-sm text-white">{module.duration} • {module.lessons} lessons</p>
                     </div>
                   </div>
-                  <ChevronDown className={`h-6 w-6 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-14 w-14 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
                 </button>
                 {openModule === module.number && (
                   <div className="p-6 border-t border-slate-600">
                     <ul className="space-y-3">
                       {module.topics.map((topic, index) => (
                         <li key={index} className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-emerald-400" />
+                          <Check className="h-5 w-5 text-white drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
                           <span className="text-white">{topic}</span>
                         </li>
                       ))}
@@ -366,11 +366,11 @@ export default function MarketingPage() {
         <div className="container mx-auto px-4">
                     <h3 className="text-center text-white text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
           <p className="text-center text-white text-lg max-w-4xl mx-auto">
-            <span className="text-cyan-100 font-semibold">Airbnb growth teams</span> • 
-            <span className="text-cyan-100 font-semibold"> Dropbox viral engineers</span> • 
-            <span className="text-cyan-100 font-semibold"> HubSpot marketers</span> • 
-            <span className="text-cyan-100 font-semibold"> Netflix data scientists</span> • 
-            <span className="text-cyan-100 font-semibold"> Google Ads specialists</span>
+            <span className="text-cyan-400 font-semibold">Airbnb growth teams</span> • 
+            <span className="text-cyan-400 font-semibold"> Dropbox viral engineers</span> • 
+            <span className="text-cyan-400 font-semibold"> HubSpot marketers</span> • 
+            <span className="text-cyan-400 font-semibold"> Netflix data scientists</span> • 
+            <span className="text-cyan-400 font-semibold"> Google Ads specialists</span>
           </p>
         </div>
       </section>
@@ -384,7 +384,7 @@ export default function MarketingPage() {
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-6 w-6 text-cyan-100 mt-1 flex-shrink-0" />
+                    <Check className="h-14 w-14 text-cyan-400 mt-1 flex-shrink-0" />
                     <span className="text-lg text-white">{benefit}</span>
                   </li>
                 ))}
@@ -395,7 +395,7 @@ export default function MarketingPage() {
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                    <Check className="h-14 w-14 text-emerald-400 mt-1 flex-shrink-0" />
                     <span className="text-lg text-white">{deliverable}</span>
                   </li>
                 ))}
@@ -417,7 +417,7 @@ export default function MarketingPage() {
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                  <ChevronDown className={`h-6 w-6 text-white transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-14 w-14 text-white transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openFaq === index && (
                   <div className="pb-6">
