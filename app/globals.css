@@ -34,3 +34,36 @@ body {
   animation: shimmer 2s infinite;
 }
 
+
+
+/* Force maximum text readability on course pages */
+.text-white {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.text-slate-100 {
+  color: #f1f5f9 !important;
+  opacity: 1 !important;
+}
+
+.text-slate-200 {
+  color: #e2e8f0 !important;
+  opacity: 1 !important;
+}
+
+.text-cyan-100 {
+  color: #cffafe !important;
+  opacity: 1 !important;
+}
+
+/* Ensure all paragraph text is fully opaque */
+p {
+  opacity: 1 !important;
+}
+
+/* Ensure all headings are fully opaque */
+h1, h2, h3, h4, h5, h6 {
+  opacity: 1 !important;
+}
+
