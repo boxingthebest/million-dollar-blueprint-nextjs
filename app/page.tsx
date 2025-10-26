@@ -542,8 +542,8 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
                     </div>
                     <div className="p-6 md:p-8 flex flex-col flex-grow">
-                      <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-br ${course.bgGradient} flex items-center justify-center mb-4 md:mb-6`}>
-                        <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                      <div className={`w-16 h-16 md:w-20 md:h-20 rounded-xl bg-gradient-to-br shadow-lg ${course.bgGradient} flex items-center justify-center mb-4 md:mb-6`}>
+                        <Icon className="w-8 h-8 md:w-12 md:h-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
                       </div>
                       
                       <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{course.title}</h3>
