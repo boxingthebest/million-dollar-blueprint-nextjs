@@ -270,14 +270,14 @@ export default function MarketingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-black border border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You're Stuck in the Marketing Hamster Wheel</h2>
-              <p className="text-lg text-white leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Problem: You're Stuck in the Marketing Hamster Wheel</h2>
+              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
                 You're spending money on ads, posting on social media, and writing blog posts. But your growth has flatlined. You're stuck in a cycle of "more content, more ads, more everything" with diminishing returns. Why? Because you're a marketer, not a growth engineer. The old marketing playbook is obsolete. In a world of infinite noise, the only way to win is to build a growth engine, not just run campaigns.
               </p>
             </div>
             <div className="bg-black border border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Become a Growth Engineer</h2>
-              <p className="text-lg text-white leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Solution: Become a Growth Engineer</h2>
+              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
                 This isn't a course on how to use Facebook Ads or write a blog post. This is a masterclass in **growth engineering**. We've dissected the growth playbooks of the fastest-growing companies in history—Airbnb, Dropbox, Uber, and more—to give you a systematic approach to acquiring and retaining users at scale. You'll learn how to think like a growth hacker and build a marketing machine that runs on data, not just creativity.
               </p>
             </div>

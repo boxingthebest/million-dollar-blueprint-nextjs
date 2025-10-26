@@ -270,14 +270,14 @@ export default function WealthPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-black border border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You Have Authority, But No Influence</h2>
-              <p className="text-lg text-white leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Problem: You Have Authority, But No Influence</h2>
+              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
                 You've been promoted. You have the title, the team, and the responsibility. But you feel like an imposter. Your voice isn't heard in meetings. Your ideas are overlooked. Your team is compliant, but not committed. You have authority, but you lack *influence*. In today's flat, fast-moving organizations, formal authority is a fragile and fleeting source of power. True leadership is the ability to influence without it.
               </p>
             </div>
             <div className="bg-black border border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Master Executive Presence</h2>
-              <p className="text-lg text-white leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Solution: Master Executive Presence</h2>
+              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
                 This isn't a course on management theory. This is a deep dive into the science and art of **executive presence**. We've decoded the specific verbal and non-verbal communication techniques, storytelling frameworks, and psychological triggers used by the world's most influential leaders—from McKinsey partners and White House speechwriters to Navy SEAL commanders. You'll learn how to command any room, inspire any team, and accelerate your career.
               </p>
             </div>

@@ -272,14 +272,14 @@ export default function SalesMasteryPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-black border border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You're Playing a Losing Game</h2>
-              <p className="text-lg text-white leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Problem: You're Playing a Losing Game</h2>
+              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
                 You've been taught to sell. You've read the books, attended the seminars, and practiced your pitch. But you're still struggling to hit your numbers consistently. Why? Because you've been taught a system designed for the 99%, not the 1%. The traditional sales playbook is dead. In a world of automated outreach and AI-powered lead scoring, the only thing that separates you from the noise is your ability to architect a deal, not just sell a product.
               </p>
             </div>
             <div className="bg-black border border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Become a Revenue Architect</h2>
-              <p className="text-lg text-white leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Solution: Become a Revenue Architect</h2>
+              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
                 This isn't another course on "sales techniques." This is a masterclass in **revenue architecture**. We've reverse-engineered the proprietary sales and deal-making frameworks used by the world's most dominant companies—Amazon, Google, Goldman Sachs, and Salesforce—to give you a blueprint for predictable, scalable revenue growth. You won't just learn how to sell; you'll learn how to think like a Chief Revenue Officer.
               </p>
             </div>
