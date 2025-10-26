@@ -206,7 +206,7 @@ export default function WealthPage() {
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-white hover:text-cyan-300 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
               href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
               target="_blank"
@@ -232,7 +232,7 @@ export default function WealthPage() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Your Salary Won't Make You Rich. Your System Will.
             </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-8">
+            <p className="text-xl md:text-2xl text-white mb-8">
               The wealth architecture systems used by Ray Dalio, Warren Buffett, and Peter Thiel to build billion-dollar fortunes.
             </p>
             <a
@@ -269,15 +269,15 @@ export default function WealthPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You Have Authority, But No Influence</h2>
-              <p className="text-lg text-slate-300 leading-relaxed">
+              <p className="text-lg text-white leading-relaxed">
                 You've been promoted. You have the title, the team, and the responsibility. But you feel like an imposter. Your voice isn't heard in meetings. Your ideas are overlooked. Your team is compliant, but not committed. You have authority, but you lack *influence*. In today's flat, fast-moving organizations, formal authority is a fragile and fleeting source of power. True leadership is the ability to influence without it.
               </p>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Master Executive Presence</h2>
-              <p className="text-lg text-slate-300 leading-relaxed">
+              <p className="text-lg text-white leading-relaxed">
                 This isn't a course on management theory. This is a deep dive into the science and art of **executive presence**. We've decoded the specific verbal and non-verbal communication techniques, storytelling frameworks, and psychological triggers used by the world's most influential leaders—from McKinsey partners and White House speechwriters to Navy SEAL commanders. You'll learn how to command any room, inspire any team, and accelerate your career.
               </p>
             </div>
@@ -293,7 +293,7 @@ export default function WealthPage() {
             {[{
               title: "The Steve Jobs \"Reality Distortion Field\"",
               description: "How to create a vision so compelling that people will do anything to make it a reality.",
-              icon: <Brain className="h-12 w-12 text-cyan-400" />
+              icon: <Brain className="h-12 w-12 text-cyan-300" />
             }, {
               title: "The McKinsey 3-Layer Influence Model™",
               description: "A framework for persuading any audience, from the boardroom to the front lines.",
@@ -314,7 +314,7 @@ export default function WealthPage() {
               <div key={index} className="bg-slate-900 p-8 rounded-lg border border-slate-800">
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-slate-300">{item.description}</p>
+                <p className="text-white">{item.description}</p>
               </div>
             ))}
           </div>
@@ -327,21 +327,21 @@ export default function WealthPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
           <div className="max-w-4xl mx-auto">
             {modules.map((module) => (
-              <div key={module.number} className="bg-slate-800/50 border border-slate-700 rounded-lg mb-4">
+              <div key={module.number} className="bg-slate-800/80 border border-slate-700 rounded-lg mb-4">
                 <button
                   className="w-full flex justify-between items-center p-6 text-left"
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                 >
                   <div className="flex items-center gap-4">
                     <div className="bg-slate-700 p-3 rounded-full">
-                      <module.icon className="h-6 w-6 text-cyan-400" />
+                      <module.icon className="h-6 w-6 text-cyan-300" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
-                      <p className="text-sm text-slate-400">{module.duration} • {module.lessons} lessons</p>
+                      <p className="text-sm text-slate-200">{module.duration} • {module.lessons} lessons</p>
                     </div>
                   </div>
-                  <ChevronDown className={`h-6 w-6 text-slate-400 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-6 w-6 text-slate-200 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
                 </button>
                 {openModule === module.number && (
                   <div className="p-6 border-t border-slate-700">
@@ -349,7 +349,7 @@ export default function WealthPage() {
                       {module.topics.map((topic, index) => (
                         <li key={index} className="flex items-center gap-3">
                           <Check className="h-5 w-5 text-emerald-400" />
-                          <span className="text-slate-300">{topic}</span>
+                          <span className="text-white">{topic}</span>
                         </li>
                       ))}
                     </ul>
@@ -364,13 +364,13 @@ export default function WealthPage() {
       {/* Social Proof Section */}
       <section className="py-16 bg-slate-950">
         <div className="container mx-auto px-4">
-                    <h3 className="text-center text-slate-300 text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
-          <p className="text-center text-slate-400 text-lg max-w-4xl mx-auto">
-            <span className="text-cyan-400 font-semibold">Ray Dalio (Bridgewater)</span> • 
-            <span className="text-cyan-400 font-semibold"> Warren Buffett (Berkshire Hathaway)</span> • 
-            <span className="text-cyan-400 font-semibold"> Peter Thiel (Founders Fund)</span> • 
-            <span className="text-cyan-400 font-semibold"> Vanguard advisors</span> • 
-            <span className="text-cyan-400 font-semibold"> FIRE movement leaders</span>
+                    <h3 className="text-center text-white text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
+          <p className="text-center text-slate-200 text-lg max-w-4xl mx-auto">
+            <span className="text-cyan-300 font-semibold">Ray Dalio (Bridgewater)</span> • 
+            <span className="text-cyan-300 font-semibold"> Warren Buffett (Berkshire Hathaway)</span> • 
+            <span className="text-cyan-300 font-semibold"> Peter Thiel (Founders Fund)</span> • 
+            <span className="text-cyan-300 font-semibold"> Vanguard advisors</span> • 
+            <span className="text-cyan-300 font-semibold"> FIRE movement leaders</span>
           </p>
         </div>
       </section>
@@ -379,24 +379,24 @@ export default function WealthPage() {
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-6 w-6 text-cyan-400 mt-1 flex-shrink-0" />
-                    <span className="text-lg text-slate-300">{benefit}</span>
+                    <Check className="h-6 w-6 text-cyan-300 mt-1 flex-shrink-0" />
+                    <span className="text-lg text-white">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                    <span className="text-lg text-slate-300">{deliverable}</span>
+                    <span className="text-lg text-white">{deliverable}</span>
                   </li>
                 ))}
               </ul>
@@ -417,11 +417,11 @@ export default function WealthPage() {
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                  <ChevronDown className={`h-6 w-6 text-slate-400 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-6 w-6 text-slate-200 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openFaq === index && (
                   <div className="pb-6">
-                    <p className="text-slate-300 leading-relaxed">{faq.answer}</p>
+                    <p className="text-white leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -448,7 +448,7 @@ export default function WealthPage() {
 
       {/* Footer */}
       <footer className="bg-slate-950 py-8">
-        <div className="container mx-auto px-4 text-center text-slate-400">
+        <div className="container mx-auto px-4 text-center text-slate-200">
           <p>&copy; 2025 Million Dollar Blueprint. All rights reserved.</p>
         </div>
       </footer>
