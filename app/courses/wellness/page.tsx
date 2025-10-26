@@ -262,19 +262,19 @@ export default function WellnessPage() {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-1">10</div>
                 <div className="text-sm text-white">Performance Protocols</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-emerald-400 mb-1">50min</div>
                 <div className="text-sm text-white">Expert Training</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-teal-400 mb-1">$140K</div>
                 <div className="text-sm text-white">Avg Salary Increase</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">187</div>
                 <div className="text-sm text-white">Students Enrolled</div>
               </div>
@@ -336,7 +336,7 @@ export default function WellnessPage() {
             <p className="text-lg md:text-xl text-white text-center mb-8">
               Watch this 50-second overview
             </p>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
                   src="https://player.vimeo.com/video/1129441193?badge=0&autopause=0&player_id=0&app_id=58479" 
@@ -375,7 +375,7 @@ export default function WellnessPage() {
               {modules.map((module) => {
                 const Icon = module.icon;
                 return (
-                  <div key={module.number} className="bg-black/50 border border-slate-700 rounded-xl overflow-hidden">
+                  <div key={module.number} className="bg-black/50 border-2 border-slate-700 rounded-xl overflow-hidden">
                     <button
                       onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                       className="w-full px-6 md:px-8 py-6 flex items-center gap-4 text-left hover:bg-black/80 transition-all"
@@ -431,7 +431,7 @@ export default function WellnessPage() {
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               {deliverables.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3 bg-black/30 border border-slate-700 rounded-lg p-4">
+                <div key={idx} className="flex items-start gap-3 bg-black/30 border-2 border-slate-700 rounded-lg p-4">
                   <Check className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <span className="text-white text-lg">{item}</span>
                 </div>
@@ -453,7 +453,7 @@ export default function WellnessPage() {
             </div>
 
             <div className="text-center">
-              <div className="inline-block bg-black/50 border border-slate-700 rounded-xl p-8 mb-8">
+              <div className="inline-block bg-black/50 border-2 border-slate-700 rounded-xl p-8 mb-8">
                 <div className="text-white text-lg mb-2">Total Value:</div>
                 <div className="text-slate-500 line-through text-3xl mb-2">$2,997</div>
                 <div className="text-emerald-400 text-5xl md:text-6xl font-bold mb-2">$197</div>
@@ -484,7 +484,7 @@ export default function WellnessPage() {
 
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-black/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div key={idx} className="bg-black/50 border-2 border-slate-700 rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                     className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-black/80 transition-all"

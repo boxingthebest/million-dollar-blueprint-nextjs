@@ -250,7 +250,7 @@ export default function LeadershipPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-600">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-600">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
                   src="https://player.vimeo.com/video/1130648860?badge=0&autopause=0&player_id=0&app_id=58479" 
@@ -269,13 +269,13 @@ export default function LeadershipPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-black border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Problem: You Have Authority, But No Influence</h2>
               <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
                 You've been promoted. You have the title, the team, and the responsibility. But you feel like an imposter. Your voice isn't heard in meetings. Your ideas are overlooked. Your team is compliant, but not committed. You have authority, but you lack *influence*. In today's flat, fast-moving organizations, formal authority is a fragile and fleeting source of power. True leadership is the ability to influence without it.
               </p>
             </div>
-            <div className="bg-black border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Solution: Master Executive Presence</h2>
               <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
                 This isn't a course on management theory. This is a deep dive into the science and art of **executive presence**. We've decoded the specific verbal and non-verbal communication techniques, storytelling frameworks, and psychological triggers used by the world's most influential leaders—from McKinsey partners and White House speechwriters to Navy SEAL commanders. You'll learn how to command any room, inspire any team, and accelerate your career.
@@ -311,7 +311,7 @@ export default function LeadershipPage() {
               description: "The 3 elements of charisma and how to develop them.",
               icon: <Heart className="h-12 w-12 text-pink-400" />
             }].map((item, index) => (
-              <div key={index} className="bg-black p-8 rounded-lg border border-slate-800">
+              <div key={index} className="bg-black p-8 rounded-lg border-2 border-slate-800">
                 <div className="mb-4">{item.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
                 <p className="text-white">{item.description}</p>
@@ -327,7 +327,7 @@ export default function LeadershipPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
           <div className="max-w-4xl mx-auto">
             {modules.map((module) => (
-              <div key={module.number} className="bg-black border border-slate-600 rounded-lg mb-4">
+              <div key={module.number} className="bg-black border-2 border-slate-600 rounded-lg mb-4">
                 <button
                   className="w-full flex justify-between items-center p-6 text-left"
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
@@ -379,7 +379,7 @@ export default function LeadershipPage() {
       <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-black border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -390,7 +390,7 @@ export default function LeadershipPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-black border border-slate-600 rounded-lg p-8">
+            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (

@@ -259,19 +259,19 @@ export default function AIResistantSkillsPage() {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-1">5</div>
                 <div className="text-sm text-white">AI-Resistant Skills</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-emerald-400 mb-1">3.5h</div>
                 <div className="text-sm text-white">Expert Training</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-orange-400 mb-1">$85K</div>
                 <div className="text-sm text-white">Avg Salary Increase</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-1">253</div>
                 <div className="text-sm text-white">Students Enrolled</div>
               </div>
@@ -331,7 +331,7 @@ export default function AIResistantSkillsPage() {
             <p className="text-lg md:text-xl text-white text-center mb-8">
               Watch this 45-second overview
             </p>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
                   src="https://player.vimeo.com/video/1129181469?badge=0&autopause=0&player_id=0&app_id=58479" 
@@ -370,7 +370,7 @@ export default function AIResistantSkillsPage() {
               {modules.map((module) => {
                 const Icon = module.icon;
                 return (
-                  <div key={module.number} className="bg-black/50 border border-slate-700 rounded-xl overflow-hidden">
+                  <div key={module.number} className="bg-black/50 border-2 border-slate-700 rounded-xl overflow-hidden">
                     <button
                       onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                       className="w-full px-6 md:px-8 py-6 flex items-center gap-4 text-left hover:bg-black/80 transition-all"
@@ -476,7 +476,7 @@ export default function AIResistantSkillsPage() {
 
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-black/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div key={idx} className="bg-black/50 border-2 border-slate-700 rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                     className="w-full px-6 md:px-8 py-6 flex justify-between items-center text-left hover:bg-black/80 transition-all"
