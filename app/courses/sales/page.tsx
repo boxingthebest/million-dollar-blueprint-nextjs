@@ -12,70 +12,145 @@ export default function SalesMasteryPage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const modules = [
+    const modules = [
     {
       number: 1,
       title: "The Revenue Architect's Mindset",
-      duration: "45 min",
-      lessons: 4,
+      duration: "8 min",
+      lessons: 1,
       icon: Brain,
       topics: [
-        "Why \"selling\" is obsolete",
-        "The 5 mental shifts of a 7-figure earner",
-        "How to think in systems, not tactics",
-        "Case study: The deal that made a Salesforce AE a millionaire"
+        "The Jordan Belfort Straight Line System (without the fraud)",
+        "Why \"selling\" died in 2015 and what replaced it",
+        "The 5 mental shifts of 7-figure earners at Salesforce",
+        "How Marc Benioff built a $200B company on trust, not tactics",
+        "Key takeaway: You're not a salesperson. You're a revenue architect."
       ]
     },
     {
       number: 2,
-      title: "Building Your Predictive Pipeline",
-      duration: "42 min",
-      lessons: 4,
-      icon: TrendingUp,
+      title: "The MEDDPICC Enterprise Sales Framework",
+      duration: "10 min",
+      lessons: 1,
+      icon: Target,
       topics: [
-        "The math behind a predictable pipeline",
-        "How to reverse-engineer your quota",
-        "The \"Lead Velocity\" framework",
-        "Automating outreach without losing the human touch"
+        "Metrics, Economic Buyer, Decision Criteria, Decision Process, Paper Process, Identify Pain, Champion, Competition",
+        "How Salesforce uses MEDDPICC to close $1M+ deals",
+        "The \"Champion Development\" playbook from Oracle",
+        "Navigating complex B2B sales cycles (6-18 months)",
+        "Key takeaway: Enterprise sales is a science, not an art"
       ]
     },
     {
       number: 3,
-      title: "Mastering the Deal",
-      duration: "48 min",
-      lessons: 4,
-      icon: Target,
+      title: "SPIN Selling: The Question Framework",
+      duration: "9 min",
+      lessons: 1,
+      icon: Lightbulb,
       topics: [
-        "The art of the multi-threaded deal",
-        "Navigating complex procurement processes",
-        "The \"Give-Get\" negotiation matrix",
-        "Closing techniques that actually work"
+        "Situation, Problem, Implication, Need-Payoff questions",
+        "How to uncover needs prospects don't know they have",
+        "The Google \"3-Layer Deep\" discovery technique",
+        "Case study: How a SaaS rep closed a $500K deal with 12 questions",
+        "Key takeaway: The best salespeople ask, they don't tell"
       ]
     },
     {
       number: 4,
-      title: "The Science of Scale",
-      duration: "38 min",
-      lessons: 4,
-      icon: Lightbulb,
+      title: "The Challenger Sale 2.0",
+      duration: "10 min",
+      lessons: 1,
+      icon: TrendingUp,
       topics: [
-        "How to build a sales process that runs itself",
-        "Hiring and training a world-class sales team",
-        "The metrics that actually matter",
-        "From salesperson to sales leader"
+        "Teach, Tailor, Take Control methodology",
+        "How to challenge prospects' thinking (without being aggressive)",
+        "The \"Commercial Teaching\" framework from CEB/Gartner",
+        "Why solution selling is dead and insight selling won",
+        "Key takeaway: Customers don't want solutions. They want insights."
       ]
     },
     {
       number: 5,
-      title: "The Future of Sales",
-      duration: "37 min",
-      lessons: 4,
+      title: "Building Your Predictive Pipeline",
+      duration: "9 min",
+      lessons: 1,
+      icon: TrendingUp,
+      topics: [
+        "The math behind a $1M quota: reverse-engineering success",
+        "Lead Velocity Rate (LVR): the metric that predicts growth",
+        "How to build a pipeline that never runs dry",
+        "The \"3x Rule\": Why you need 3x pipeline coverage",
+        "Key takeaway: Predictable revenue requires predictable pipeline"
+      ]
+    },
+    {
+      number: 6,
+      title: "The Trusted Advisor Blueprint",
+      duration: "8 min",
+      lessons: 1,
+      icon: Heart,
+      topics: [
+        "How Goldman Sachs builds unshakeable client relationships",
+        "The \"Trusted Advisor\" model from McKinsey",
+        "Moving from vendor to strategic partner",
+        "The 4 pillars of executive presence in sales",
+        "Key takeaway: Trust is the ultimate competitive advantage"
+      ]
+    },
+    {
+      number: 7,
+      title: "Negotiation Mastery: The Chris Voss Method",
+      duration: "10 min",
+      lessons: 1,
+      icon: Target,
+      topics: [
+        "Tactical empathy and mirroring from FBI hostage negotiation",
+        "The \"No-Oriented Question\" technique",
+        "How to anchor high and get to \"That's right\"",
+        "The \"Give-Get\" negotiation matrix for enterprise deals",
+        "Key takeaway: Never split the difference. Create value instead."
+      ]
+    },
+    {
+      number: 8,
+      title: "Closing Techniques That Actually Work",
+      duration: "9 min",
+      lessons: 1,
       icon: Star,
       topics: [
-        "How AI is changing the sales landscape",
-        "The skills that will be irreplaceable in 2030",
+        "The assumptive close (used by top 1% of reps)",
+        "Trial closes: testing commitment without pressure",
+        "How to handle objections like a pro (price, timing, competition)",
+        "The \"Puppy Dog Close\" from retail psychology",
+        "Key takeaway: Closing isn't a moment. It's a process."
+      ]
+    },
+    {
+      number: 9,
+      title: "The Science of Scale: Building a Sales Machine",
+      duration: "10 min",
+      lessons: 1,
+      icon: Lightbulb,
+      topics: [
+        "How to hire A-players (the Amazon \"Bar Raiser\" method)",
+        "Building a sales playbook that runs without you",
+        "The metrics that actually matter: CAC, LTV, Win Rate, Cycle Time",
+        "From individual contributor to VP of Sales",
+        "Key takeaway: Systems scale. Heroics don't."
+      ]
+    },
+    {
+      number: 10,
+      title: "The Future of Sales: AI-Resistant Skills",
+      duration: "8 min",
+      lessons: 1,
+      icon: Star,
+      topics: [
+        "How AI is changing prospecting, qualification, and forecasting",
+        "The skills that will be irreplaceable in 2030 (empathy, strategy, relationships)",
         "Building your personal brand as a sales leader",
-        "The path to Chief Revenue Officer"
+        "The path to Chief Revenue Officer (CRO)",
+        "Key takeaway: AI will replace salespeople. But not sales leaders."
       ]
     }
   ];

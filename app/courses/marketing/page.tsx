@@ -12,70 +12,145 @@ export default function MarketingPage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const modules = [
+    const modules = [
     {
       number: 1,
-      title: "The Growth Mindset",
-      duration: "45 min",
-      lessons: 4,
+      title: "Growth Engineering vs. Traditional Marketing",
+      duration: "8 min",
+      lessons: 1,
       icon: Brain,
       topics: [
-        "Why marketing is dead",
-        "The 5 principles of growth engineering",
-        "How to set and track growth goals",
-        "Case study: How Dropbox grew 3900% in 15 months"
+        "Why \"marketing\" is dead and \"growth engineering\" replaced it",
+        "The mindset shift from campaigns to systems",
+        "How Airbnb grew from $0 to $31B without traditional marketing",
+        "The \"T-Shaped Marketer\" model from Buffer",
+        "Key takeaway: Marketing is no longer creative. It's scientific."
       ]
     },
     {
       number: 2,
-      title: "Acquisition",
-      duration: "42 min",
-      lessons: 4,
-      icon: Target,
+      title: "The AARRR Pirate Metrics Framework",
+      duration: "10 min",
+      lessons: 1,
+      icon: TrendingUp,
       topics: [
-        "The Bullseye Framework in action",
-        "How to master paid acquisition (without breaking the bank)",
-        "The art of content marketing that converts",
-        "SEO for growth, not just rankings"
+        "Acquisition, Activation, Retention, Referral, Revenue",
+        "How to diagnose growth bottlenecks in your funnel",
+        "The metrics that actually predict sustainable growth",
+        "Case study: How Dropbox used referrals to grow 3900% in 15 months",
+        "Key takeaway: You can't fix what you don't measure."
       ]
     },
     {
       number: 3,
-      title: "Activation",
-      duration: "48 min",
-      lessons: 4,
-      icon: Lightbulb,
+      title: "The Viral Loop: Engineering Word-of-Mouth",
+      duration: "9 min",
+      lessons: 1,
+      icon: Target,
       topics: [
-        "The Hook Model explained",
-        "How to design a world-class onboarding experience",
-        "The psychology of user motivation",
-        "Case study: How Airbnb hacked activation"
+        "The \"K-Factor\": measuring virality mathematically",
+        "How Uber, Airbnb, and PayPal engineered viral growth",
+        "The \"Double-Sided Incentive\" model from Dropbox",
+        "Building network effects into your product",
+        "Key takeaway: The best marketing doesn't feel like marketing."
       ]
     },
     {
       number: 4,
-      title: "Retention",
-      duration: "38 min",
-      lessons: 4,
-      icon: Heart,
+      title: "The Hook Model: Making Products Addictive",
+      duration: "10 min",
+      lessons: 1,
+      icon: Lightbulb,
       topics: [
-        "The science of building a loyal user base",
-        "How to use email marketing to drive engagement",
-        "The art of the cohort analysis",
-        "Building a community that lasts"
+        "Trigger, Action, Variable Reward, Investment (Nir Eyal framework)",
+        "How Instagram, TikTok, and Slack create habit-forming products",
+        "The psychology of dopamine and behavioral loops",
+        "Ethical persuasion vs. manipulation",
+        "Key takeaway: Retention beats acquisition. Every time."
       ]
     },
     {
       number: 5,
-      title: "Revenue & Referral",
-      duration: "37 min",
-      lessons: 4,
+      title: "Content Marketing That Converts",
+      duration: "9 min",
+      lessons: 1,
+      icon: Star,
+      topics: [
+        "The \"Skyscraper Technique\" from Backlinko (10x content)",
+        "How HubSpot built a $30B company on content marketing",
+        "SEO fundamentals: keywords, backlinks, and domain authority",
+        "The \"Jobs to Be Done\" framework for content strategy",
+        "Key takeaway: Content is king. But distribution is queen."
+      ]
+    },
+    {
+      number: 6,
+      title: "Paid Acquisition: Facebook, Google, LinkedIn",
+      duration: "8 min",
+      lessons: 1,
+      icon: Target,
+      topics: [
+        "The \"CAC < LTV\" rule for profitable growth",
+        "How to run profitable Facebook and Google Ads campaigns",
+        "The \"Ladder of Awareness\" for targeting (Eugene Schwartz)",
+        "A/B testing frameworks from Optimizely and VWO",
+        "Key takeaway: Paid ads are a tax on companies that can't do organic."
+      ]
+    },
+    {
+      number: 7,
+      title: "Email Marketing & Marketing Automation",
+      duration: "10 min",
+      lessons: 1,
+      icon: Heart,
+      topics: [
+        "Why email has 40x ROI compared to social media",
+        "The \"Welcome Series\" framework that converts 50%+ of subscribers",
+        "Marketing automation with HubSpot, Marketo, and ActiveCampaign",
+        "Segmentation and personalization at scale",
+        "Key takeaway: The money is in the list. And the follow-up."
+      ]
+    },
+    {
+      number: 8,
+      title: "Conversion Rate Optimization (CRO)",
+      duration: "9 min",
+      lessons: 1,
       icon: TrendingUp,
       topics: [
-        "How to price your product for growth",
-        "The psychology of upselling and cross-selling",
-        "How to build a referral engine that scales",
-        "The path to a $100M+ valuation"
+        "The \"LIFT Model\" for conversion optimization (WiderFunnel)",
+        "How to run A/B tests that actually matter",
+        "Landing page psychology: headlines, CTAs, social proof",
+        "Case study: How Booking.com tests 1,000+ experiments per year",
+        "Key takeaway: A 1% conversion lift = millions in revenue."
+      ]
+    },
+    {
+      number: 9,
+      title: "Data-Driven Marketing & Analytics",
+      duration: "10 min",
+      lessons: 1,
+      icon: Lightbulb,
+      topics: [
+        "Google Analytics 4: tracking the customer journey",
+        "Building a marketing dashboard (the 5 metrics that matter)",
+        "Attribution modeling: first-touch, last-touch, multi-touch",
+        "How Netflix uses data to drive $30B in revenue",
+        "Key takeaway: Intuition is great. Data is better."
+      ]
+    },
+    {
+      number: 10,
+      title: "The Future of Marketing: AI & Automation",
+      duration: "8 min",
+      lessons: 1,
+      icon: Star,
+      topics: [
+        "How AI is changing SEO, content, and paid ads",
+        "The skills that will be irreplaceable in 2030 (strategy, creativity, empathy)",
+        "Building a personal brand as a marketing leader",
+        "The path to Chief Marketing Officer (CMO)",
+        "Key takeaway: AI will replace marketers. But not marketing strategists."
       ]
     }
   ];

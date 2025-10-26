@@ -12,70 +12,145 @@ export default function WealthPage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const modules = [
+    const modules = [
     {
       number: 1,
-      title: "The Science of Power",
-      duration: "45 min",
-      lessons: 4,
+      title: "The Wealth Mindset: From Earner to Builder",
+      duration: "8 min",
+      lessons: 1,
       icon: Brain,
       topics: [
-        "The 5 bases of power (and which one to use)",
-        "How to project confidence (even when you don't feel it)",
-        "The body language of a leader",
-        "Case study: How a junior analyst became a CEO in 5 years"
+        "Why your salary will never make you rich (but your system will)",
+        "The \"4 Levels of Financial Freedom\" from Naval Ravikant",
+        "How Warren Buffett thinks about wealth (compounding, not income)",
+        "The psychology of delayed gratification and long-term thinking",
+        "Key takeaway: Wealth isn't about making money. It's about keeping it."
       ]
     },
     {
       number: 2,
-      title: "The Art of Charisma",
-      duration: "42 min",
-      lessons: 4,
-      icon: Heart,
+      title: "The All-Weather Portfolio (Ray Dalio)",
+      duration: "10 min",
+      lessons: 1,
+      icon: TrendingUp,
       topics: [
-        "The 3 components of charisma: presence, warmth, and power",
-        "How to develop a captivating communication style",
-        "The art of active listening",
-        "Building rapport with anyone, instantly"
+        "The asset allocation that survived every market crash since 1970",
+        "30% stocks, 40% long-term bonds, 15% intermediate bonds, 7.5% gold, 7.5% commodities",
+        "How Bridgewater's $140B fund uses this strategy",
+        "Rebalancing and tax-loss harvesting",
+        "Key takeaway: Diversification is the only free lunch in investing."
       ]
     },
     {
       number: 3,
-      title: "The Investor's Playbook",
-      duration: "48 min",
-      lessons: 4,
-      icon: Lightbulb,
+      title: "Index Fund Investing: The Bogle Method",
+      duration: "9 min",
+      lessons: 1,
+      icon: Target,
       topics: [
-        "The 5 stories every leader must be able to tell",
-        "How to craft a compelling vision",
-        "Using stories to inspire action and drive change",
-        "Case study: The story that saved a failing company"
+        "Why 90% of active fund managers underperform the S&P 500",
+        "The \"3-Fund Portfolio\" from Bogleheads (stocks, bonds, international)",
+        "How to invest $1,000/month and retire a millionaire",
+        "The power of low fees (0.03% vs 1% = $500K difference)",
+        "Key takeaway: Boring wins. Complexity loses."
       ]
     },
     {
       number: 4,
-      title: "The Tax-Free Wealth Machine",
-      duration: "38 min",
-      lessons: 4,
-      icon: TrendingUp,
+      title: "Tax Optimization: Keeping What You Earn",
+      duration: "10 min",
+      lessons: 1,
+      icon: Lightbulb,
       topics: [
-        "The 6 principles of persuasion",
-        "How to build consensus and align stakeholders",
-        "The art of the difficult conversation",
-        "Navigating corporate politics with integrity"
+        "The \"Tax Alpha\" strategy from ultra-high-net-worth individuals",
+        "Roth IRA, 401(k), HSA, and backdoor Roth conversions",
+        "How Peter Thiel turned a $2,000 Roth IRA into $5 billion",
+        "Real estate tax advantages (depreciation, 1031 exchanges)",
+        "Key takeaway: It's not what you make. It's what you keep."
       ]
     },
     {
       number: 5,
-      title: "The Leader's Legacy",
-      duration: "37 min",
-      lessons: 4,
+      title: "Building Passive Income Machines",
+      duration: "9 min",
+      lessons: 1,
       icon: Star,
       topics: [
-        "How to build a high-performing team",
-        "The art of delegation and empowerment",
-        "Mentoring the next generation of leaders",
-        "Building a legacy that lasts"
+        "The \"4 Passive Income Streams\" from MJ DeMarco (The Millionaire Fastlane)",
+        "Dividend investing: building a portfolio that pays you monthly",
+        "Real estate: rental properties, REITs, and syndications",
+        "Digital assets: online businesses, courses, and royalties",
+        "Key takeaway: Trade time for money once. Get paid forever."
+      ]
+    },
+    {
+      number: 6,
+      title: "Real Estate Wealth Building",
+      duration: "8 min",
+      lessons: 1,
+      icon: Target,
+      topics: [
+        "The \"BRRRR Method\": Buy, Rehab, Rent, Refinance, Repeat",
+        "How to buy rental properties with little to no money down",
+        "The \"1% Rule\" for cash-flowing properties",
+        "Real estate syndications and crowdfunding (Fundrise, RealtyMogul)",
+        "Key takeaway: Real estate has created 90% of millionaires."
+      ]
+    },
+    {
+      number: 7,
+      title: "The Wealth Acceleration Formula",
+      duration: "10 min",
+      lessons: 1,
+      icon: TrendingUp,
+      topics: [
+        "Increase income, decrease expenses, invest the difference",
+        "The \"Savings Rate\" equation: wealth = income - lifestyle",
+        "How to increase your income 10x (not 10%)",
+        "Side hustles, consulting, and entrepreneurship",
+        "Key takeaway: You can't save your way to wealth. You have to earn it."
+      ]
+    },
+    {
+      number: 8,
+      title: "Protecting Your Wealth: Risk Management",
+      duration: "9 min",
+      lessons: 1,
+      icon: Heart,
+      topics: [
+        "The \"3 Pillars of Wealth Protection\": insurance, estate planning, asset protection",
+        "Life insurance, disability insurance, and umbrella policies",
+        "Trusts, wills, and legacy planning",
+        "How billionaires protect assets from lawsuits and creditors",
+        "Key takeaway: Making money is hard. Keeping it is harder."
+      ]
+    },
+    {
+      number: 9,
+      title: "The Psychology of Wealth: Avoiding Self-Sabotage",
+      duration: "10 min",
+      lessons: 1,
+      icon: Lightbulb,
+      topics: [
+        "Why 70% of lottery winners go broke (and how to avoid it)",
+        "The \"Hedonic Treadmill\": why more money doesn't = more happiness",
+        "Lifestyle inflation and the \"$100K trap\"",
+        "Building wealth without sacrificing life (the \"Die With Zero\" philosophy)",
+        "Key takeaway: Money is a tool, not a goal."
+      ]
+    },
+    {
+      number: 10,
+      title: "The Path to Financial Independence (FIRE)",
+      duration: "8 min",
+      lessons: 1,
+      icon: Star,
+      topics: [
+        "The \"4% Rule\": how much you need to retire early",
+        "FatFIRE, LeanFIRE, and CoastFIRE strategies",
+        "How to retire in 10 years (not 40)",
+        "Building a life you don't need to retire from",
+        "Key takeaway: Financial independence isn't about quitting. It's about choosing."
       ]
     }
   ];

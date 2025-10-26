@@ -12,70 +12,145 @@ export default function LeadershipPage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const modules = [
+    const modules = [
     {
       number: 1,
-      title: "The Science of Power",
-      duration: "45 min",
-      lessons: 4,
+      title: "The Leadership Mindset Shift",
+      duration: "8 min",
+      lessons: 1,
       icon: Brain,
       topics: [
-        "The 5 bases of power (and which one to use)",
-        "How to project confidence (even when you don't feel it)",
-        "The body language of a leader",
-        "Case study: How a junior analyst became a CEO in 5 years"
+        "From manager to leader: the fundamental difference",
+        "The \"Level 5 Leadership\" model from Jim Collins (Good to Great)",
+        "How Satya Nadella transformed Microsoft's culture ($300B to $3T)",
+        "The paradox of humility and will in great leaders",
+        "Key takeaway: Authority is given. Influence is earned."
       ]
     },
     {
       number: 2,
-      title: "The Art of Charisma",
-      duration: "42 min",
-      lessons: 4,
-      icon: Heart,
+      title: "The Steve Jobs Reality Distortion Field",
+      duration: "10 min",
+      lessons: 1,
+      icon: Star,
       topics: [
-        "The 3 components of charisma: presence, warmth, and power",
-        "How to develop a captivating communication style",
-        "The art of active listening",
-        "Building rapport with anyone, instantly"
+        "How Jobs inspired teams to achieve the impossible",
+        "The psychology of charisma and magnetic leadership",
+        "Creating a compelling vision that people want to follow",
+        "The \"Think Different\" leadership philosophy",
+        "Key takeaway: Great leaders don't predict the future. They create it."
       ]
     },
     {
       number: 3,
-      title: "The Storyteller's Toolkit",
-      duration: "48 min",
-      lessons: 4,
-      icon: Lightbulb,
+      title: "The McKinsey 3-Layer Influence Model",
+      duration: "9 min",
+      lessons: 1,
+      icon: Target,
       topics: [
-        "The 5 stories every leader must be able to tell",
-        "How to craft a compelling vision",
-        "Using stories to inspire action and drive change",
-        "Case study: The story that saved a failing company"
+        "Logical appeal (data and analysis)",
+        "Emotional appeal (storytelling and vision)",
+        "Cooperative appeal (building coalitions)",
+        "How McKinsey consultants influence C-suite executives",
+        "Key takeaway: Influence requires head, heart, and hands."
       ]
     },
     {
       number: 4,
-      title: "The Influencer's Playbook",
-      duration: "38 min",
-      lessons: 4,
-      icon: TrendingUp,
+      title: "The White House Message Box Technique",
+      duration: "10 min",
+      lessons: 1,
+      icon: Lightbulb,
       topics: [
-        "The 6 principles of persuasion",
-        "How to build consensus and align stakeholders",
-        "The art of the difficult conversation",
-        "Navigating corporate politics with integrity"
+        "How presidential speechwriters craft persuasive messages",
+        "The 4-quadrant message framework",
+        "Controlling the narrative in high-stakes situations",
+        "Crisis communication from the Situation Room",
+        "Key takeaway: The story you tell becomes the reality people believe."
       ]
     },
     {
       number: 5,
-      title: "The Leader's Legacy",
-      duration: "37 min",
-      lessons: 4,
+      title: "Navy SEAL Leadership Under Pressure",
+      duration: "9 min",
+      lessons: 1,
+      icon: Target,
+      topics: [
+        "Extreme Ownership: Jocko Willink's leadership philosophy",
+        "Decentralized command: empowering teams to execute",
+        "Leading through chaos and uncertainty",
+        "The \"Cover and Move\" teamwork principle",
+        "Key takeaway: Leaders don't make excuses. They make decisions."
+      ]
+    },
+    {
+      number: 6,
+      title: "Building High-Performing Teams",
+      duration: "8 min",
+      lessons: 1,
+      icon: TrendingUp,
+      topics: [
+        "Google's Project Aristotle: what makes teams effective",
+        "Psychological safety as the foundation of performance",
+        "The \"Tuckman Model\": Forming, Storming, Norming, Performing",
+        "How Amazon uses \"Two-Pizza Teams\" for agility",
+        "Key takeaway: Great teams aren't built. They're engineered."
+      ]
+    },
+    {
+      number: 7,
+      title: "The Art of Strategic Communication",
+      duration: "10 min",
+      lessons: 1,
+      icon: Lightbulb,
+      topics: [
+        "Executive presence: commanding the room without saying a word",
+        "The \"Pyramid Principle\" from McKinsey for clear communication",
+        "How to present to the C-suite (Jeff Bezos' 6-page memo rule)",
+        "Storytelling frameworks from Pixar and TED Talks",
+        "Key takeaway: Clarity is power. Confusion is weakness."
+      ]
+    },
+    {
+      number: 8,
+      title: "Conflict Resolution & Difficult Conversations",
+      duration: "9 min",
+      lessons: 1,
+      icon: Heart,
+      topics: [
+        "The \"Crucial Conversations\" framework for high-stakes dialogue",
+        "How to give feedback that changes behavior (not just feelings)",
+        "Managing up: influencing your boss and stakeholders",
+        "The \"Radical Candor\" model from Kim Scott (Google, Apple)",
+        "Key takeaway: Avoiding conflict doesn't prevent it. It guarantees it."
+      ]
+    },
+    {
+      number: 9,
+      title: "Decision-Making Under Uncertainty",
+      duration: "10 min",
+      lessons: 1,
+      icon: Target,
+      topics: [
+        "The \"OODA Loop\" from military strategy (Observe, Orient, Decide, Act)",
+        "How Jeff Bezos makes \"Type 1\" vs \"Type 2\" decisions",
+        "The \"Pre-Mortem\" technique from Gary Klein",
+        "Avoiding analysis paralysis in fast-moving environments",
+        "Key takeaway: Speed matters. But direction matters more."
+      ]
+    },
+    {
+      number: 10,
+      title: "Building Your Leadership Legacy",
+      duration: "8 min",
+      lessons: 1,
       icon: Star,
       topics: [
-        "How to build a high-performing team",
-        "The art of delegation and empowerment",
-        "Mentoring the next generation of leaders",
-        "Building a legacy that lasts"
+        "From individual contributor to executive: the career path",
+        "Developing future leaders (succession planning)",
+        "Building a personal brand as a thought leader",
+        "The path to C-suite: CEO, COO, Chief of Staff",
+        "Key takeaway: Leadership isn't about you. It's about who you develop."
       ]
     }
   ];

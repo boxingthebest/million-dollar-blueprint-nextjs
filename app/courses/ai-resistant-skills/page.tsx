@@ -11,71 +11,145 @@ export default function AIResistantSkillsPage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const modules = [
+    const modules = [
     {
       number: 1,
-      title: "Strategic Thinking AI Can't Replicate",
-      duration: "45 min",
-      lessons: 4,
-      icon: Target,
+      title: "The AI Revolution: What's Really Changing",
+      duration: "8 min",
+      lessons: 1,
+      icon: Brain,
       topics: [
-        "The McKinsey MECE Framework for problem decomposition",
-        "How to think like a $1M+ consultant in any situation",
-        "The 3-step strategic analysis used at Goldman Sachs",
-        "Case study: How strategic thinking saved a $500M deal"
+        "Why 47% of jobs will be automated by 2030 (Oxford study)",
+        "The skills AI can't replace (yet): creativity, empathy, strategy, judgment",
+        "How ChatGPT, Midjourney, and Copilot are changing work",
+        "The \"Centaur Model\": humans + AI outperform both alone",
+        "Key takeaway: AI won't replace you. Someone using AI will."
       ]
     },
     {
       number: 2,
-      title: "Emotional Intelligence That Builds Empire",
-      duration: "42 min",
-      lessons: 4,
-      icon: Heart,
+      title: "Strategic Thinking: The Ultimate AI-Proof Skill",
+      duration: "10 min",
+      lessons: 1,
+      icon: Target,
       topics: [
-        "The Goldman Sachs Relationship Capital Framework",
-        "Reading any room in 30 seconds (the Apple executive method)",
-        "Building influence without authority",
-        "The trust equation that closes $10M+ deals"
+        "The \"5 Whys\" technique from Toyota for root-cause analysis",
+        "How McKinsey consultants think strategically",
+        "The \"OODA Loop\" for decision-making under uncertainty",
+        "Systems thinking: seeing patterns, not just problems",
+        "Key takeaway: AI can optimize. Humans strategize."
       ]
     },
     {
       number: 3,
-      title: "Creative Problem-Solving That Drives Innovation",
-      duration: "48 min",
-      lessons: 5,
-      icon: Lightbulb,
+      title: "Emotional Intelligence (EQ) in the Age of AI",
+      duration: "9 min",
+      lessons: 1,
+      icon: Heart,
       topics: [
-        "The Apple Design Thinking Protocol (used for iPhone, iPad)",
-        "How Amazon approaches 'Day 1' thinking",
-        "The Google '10x thinking' framework",
-        "Generating breakthrough ideas on demand",
-        "Case study: $1B product innovation process"
+        "The \"4 Pillars of EQ\": self-awareness, self-management, social awareness, relationship management",
+        "Why EQ predicts success better than IQ (Daniel Goleman research)",
+        "How to read a room and influence without authority",
+        "Empathy as a competitive advantage in leadership",
+        "Key takeaway: Robots can't read emotions. You can."
       ]
     },
     {
       number: 4,
-      title: "Ethical Leadership That Inspires Teams",
-      duration: "38 min",
-      lessons: 4,
-      icon: Star,
+      title: "Creative Problem-Solving & Innovation",
+      duration: "10 min",
+      lessons: 1,
+      icon: Lightbulb,
       topics: [
-        "The Amazon Leadership Principles decoded",
-        "Making decisions when there's no right answer",
-        "Building psychological safety (Google's Project Aristotle)",
-        "Leading through crisis with integrity"
+        "The \"SCAMPER Method\" for creative thinking",
+        "How Pixar uses \"Braintrust\" sessions for breakthrough ideas",
+        "Design thinking from Stanford d.school",
+        "Lateral thinking techniques from Edward de Bono",
+        "Key takeaway: AI generates. Humans innovate."
       ]
     },
     {
       number: 5,
-      title: "Adaptive Learning That Keeps You Ahead",
-      duration: "37 min",
-      lessons: 4,
+      title: "High-Stakes Communication & Persuasion",
+      duration: "9 min",
+      lessons: 1,
+      icon: Target,
+      topics: [
+        "The \"Pyramid Principle\" from McKinsey for executive communication",
+        "How to present to the C-suite (Jeff Bezos' 6-page memo rule)",
+        "Storytelling frameworks from Pixar and TED Talks",
+        "The psychology of persuasion (Cialdini's 6 principles)",
+        "Key takeaway: AI can write. Humans persuade."
+      ]
+    },
+    {
+      number: 6,
+      title: "Relationship Building & Networking",
+      duration: "8 min",
+      lessons: 1,
+      icon: Heart,
+      topics: [
+        "The \"Give First\" philosophy from Brad Feld (Techstars)",
+        "How to build a network that opens doors",
+        "The \"Dunbar Number\": why 150 relationships matter most",
+        "LinkedIn strategies from top executives and investors",
+        "Key takeaway: AI can't build trust. You can."
+      ]
+    },
+    {
+      number: 7,
+      title: "Judgment & Decision-Making Under Uncertainty",
+      duration: "10 min",
+      lessons: 1,
+      icon: Target,
+      topics: [
+        "The \"Pre-Mortem\" technique from Gary Klein",
+        "How Jeff Bezos makes \"Type 1\" vs \"Type 2\" decisions",
+        "Avoiding cognitive biases (confirmation bias, sunk cost fallacy)",
+        "The \"10/10/10 Rule\" for long-term thinking",
+        "Key takeaway: AI predicts. Humans decide."
+      ]
+    },
+    {
+      number: 8,
+      title: "Adaptability & Continuous Learning",
+      duration: "9 min",
+      lessons: 1,
       icon: TrendingUp,
       topics: [
-        "The Google 'learning velocity' framework",
-        "How McKinsey consultants master new industries in weeks",
-        "Building a personal learning system",
-        "Staying relevant in a rapidly changing world"
+        "The \"T-Shaped Professional\" model: deep expertise + broad skills",
+        "How to learn anything in 20 hours (Josh Kaufman method)",
+        "The \"Growth Mindset\" from Carol Dweck (Stanford)",
+        "Building a personal learning system (Zettelkasten, Feynman Technique)",
+        "Key takeaway: AI is static. Humans evolve."
+      ]
+    },
+    {
+      number: 9,
+      title: "Ethical Leadership & Integrity",
+      duration: "10 min",
+      lessons: 1,
+      icon: Star,
+      topics: [
+        "Why ethics is the ultimate competitive advantage",
+        "The \"Stakeholder Capitalism\" model from Klaus Schwab (WEF)",
+        "How Patagonia built a $3B company on values",
+        "Navigating moral dilemmas in business",
+        "Key takeaway: AI has no conscience. You do."
+      ]
+    },
+    {
+      number: 10,
+      title: "Building Your AI-Proof Career",
+      duration: "8 min",
+      lessons: 1,
+      icon: Star,
+      topics: [
+        "The \"Barbell Strategy\": combine AI-proof skills with AI leverage",
+        "How to position yourself as irreplaceable in your organization",
+        "Building a personal brand as a thought leader",
+        "The path to executive roles that AI can't touch (CEO, CPO, CRO)",
+        "Key takeaway: The future belongs to those who adapt, not resist."
       ]
     }
   ];
