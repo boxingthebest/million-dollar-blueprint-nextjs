@@ -364,14 +364,14 @@ export default function WealthPage() {
       {/* Social Proof Section */}
       <section className="py-16 bg-slate-950">
         <div className="container mx-auto px-4">
-          <h3 className="text-center text-slate-400 text-lg mb-8">Trusted by professionals at</h3>
-          <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
-            <Image src="/logo-mckinsey.png" alt="McKinsey" width={150} height={100} className="h-12 w-auto object-contain" />
-            <Image src="/logo-goldman-sachs.png" alt="Goldman Sachs" width={150} height={100} className="h-12 w-auto object-contain" />
-            <Image src="/logo-white-house.png" alt="White House" width={150} height={100} className="h-12 w-auto object-contain" />
-            <Image src="/logo-google.png" alt="Google" width={150} height={100} className="h-12 w-auto object-contain" />
-            <Image src="/logo-amazon.png" alt="Amazon" width={150} height={100} className="h-12 w-auto object-contain" />
-          </div>
+                    <h3 className="text-center text-slate-300 text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
+          <p className="text-center text-slate-400 text-lg max-w-4xl mx-auto">
+            <span className="text-cyan-400 font-semibold">Ray Dalio (Bridgewater)</span> • 
+            <span className="text-cyan-400 font-semibold"> Warren Buffett (Berkshire Hathaway)</span> • 
+            <span className="text-cyan-400 font-semibold"> Peter Thiel (Founders Fund)</span> • 
+            <span className="text-cyan-400 font-semibold"> Vanguard advisors</span> • 
+            <span className="text-cyan-400 font-semibold"> FIRE movement leaders</span>
+          </p>
         </div>
       </section>
 
