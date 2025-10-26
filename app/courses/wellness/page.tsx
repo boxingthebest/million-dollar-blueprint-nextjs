@@ -228,7 +228,7 @@ export default function WellnessPage() {
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
             >
-              Enroll Now - $197
+              Enroll Now - $197 (Originally $495 • Save 50%)
             </a>
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function WellnessPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-emerald-500/50 transition-all"
               >
-                Enroll Now - $197 <ArrowRight className="ml-2" />
+                Enroll Now - $197 (Originally $495 • Save 50%) <ArrowRight className="ml-2" />
               </a>
               <a
                 href="#curriculum"
@@ -466,7 +466,7 @@ export default function WellnessPage() {
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-4 rounded-lg font-bold text-xl transition-all shadow-2xl mb-4"
               >
-                Enroll Now - $197
+                Enroll Now - $197 (Originally $495 • Save 50%)
               </a>
               <p className="text-white text-sm">30-Day Money-Back Guarantee</p>
             </div>
@@ -520,7 +520,7 @@ export default function WellnessPage() {
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-6 rounded-lg font-bold text-2xl transition-all shadow-2xl"
             >
-              Enroll Now - $197
+              Enroll Now - $197 (Originally $495 • Save 50%)
             </a>
             <p className="text-white text-sm mt-6">
               ✓ 30-Day Money-Back Guarantee &nbsp;&nbsp; ✓ Lifetime Access &nbsp;&nbsp; ✓ Instant Access
@@ -528,6 +528,25 @@ export default function WellnessPage() {
           </div>
         </div>
       </section>
+
+
+      {/* Sticky Bottom CTA Bar */}
+      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 border-t-4 border-orange-400 shadow-2xl z-50 py-4">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-center md:text-left">
+            <p className="text-white font-bold text-lg">🔥 Limited Time: Save 50% Today</p>
+            <p className="text-white/90 text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
+          </div>
+          <a
+            href="https://buy.stripe.com/5kA00i5Vf3I3cOg14B"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap"
+          >
+            Enroll Now - $197
+          </a>
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="bg-slate-950 border-t border-slate-800 py-8">
