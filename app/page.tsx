@@ -53,7 +53,7 @@ export default function Home() {
       originalPrice: "$395",
       icon: Brain,
       gradient: "from-orange-500 to-red-600",
-      bgGradient: "from-orange-500/10 to-red-500/10",
+      bgGradient: "from-orange-500 to-red-600",
       stripeLink: "https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00",
       description: "Master the 5 human skills AI will never replace. From the boardrooms of AWS & Goldman Sachs.",
       students: "253 enrolled",
@@ -67,7 +67,7 @@ export default function Home() {
       originalPrice: "$395",
       icon: Heart,
       gradient: "from-emerald-500 to-teal-600",
-      bgGradient: "from-emerald-500/10 to-teal-500/10",
+      bgGradient: "from-emerald-500 to-teal-600",
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
       description: "What Fortune 100 executives pay $2,997 for in executive coaching. Yours for $197.",
       students: "187 enrolled",
@@ -81,7 +81,7 @@ export default function Home() {
       originalPrice: "$495",
       icon: TrendingUp,
       gradient: "from-orange-500 to-amber-600",
-      bgGradient: "from-orange-500/10 to-amber-500/10",
+      bgGradient: "from-orange-500 to-amber-600",
       stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
       description: "The exact sales frameworks used to scale companies from $500K to $50B+.",
       students: "Coming Soon",
@@ -96,7 +96,7 @@ export default function Home() {
       originalPrice: "$495",
       icon: Users,
       gradient: "from-purple-500 to-indigo-600",
-      bgGradient: "from-purple-500/10 to-indigo-500/10",
+      bgGradient: "from-purple-500 to-indigo-600",
       stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
       description: "Fortune 100 leadership strategies for executive presence and influence.",
       students: "Coming Soon",
@@ -111,7 +111,7 @@ export default function Home() {
       originalPrice: "$395",
       icon: BarChart3,
       gradient: "from-cyan-500 to-blue-600",
-      bgGradient: "from-cyan-500/10 to-blue-500/10",
+      bgGradient: "from-cyan-500 to-blue-600",
       stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
       description: "Enterprise-level digital marketing tactics that drive real revenue.",
       students: "Coming Soon",
@@ -542,8 +542,8 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
                     </div>
                     <div className="p-6 md:p-8 flex flex-col flex-grow">
-                      <div className={`w-16 h-16 md:w-20 md:h-20 rounded-xl bg-gradient-to-br shadow-lg ${course.bgGradient} flex items-center justify-center mb-4 md:mb-6`}>
-                        <Icon className="w-8 h-8 md:w-12 md:h-12 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
+                      <div className={`w-16 h-16 md:w-20 md:h-20 rounded-xl bg-gradient-to-br shadow-2xl hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-shadow duration-300 ${course.bgGradient} flex items-center justify-center mb-4 md:mb-6`}>
+                        <Icon className="w-8 h-8 md:w-12 md:h-12 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
                       </div>
                       
                       <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{course.title}</h3>
