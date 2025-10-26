@@ -206,7 +206,7 @@ export default function MarketingPage() {
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-cyan-300 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-white hover:text-cyan-100 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
               href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
               target="_blank"
@@ -250,7 +250,7 @@ export default function MarketingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-600">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
                   src="https://player.vimeo.com/video/1130648338?badge=0&autopause=0&player_id=0&app_id=58479" 
@@ -269,13 +269,13 @@ export default function MarketingPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You're Stuck in the Marketing Hamster Wheel</h2>
               <p className="text-lg text-white leading-relaxed">
                 You're spending money on ads, posting on social media, and writing blog posts. But your growth has flatlined. You're stuck in a cycle of "more content, more ads, more everything" with diminishing returns. Why? Because you're a marketer, not a growth engineer. The old marketing playbook is obsolete. In a world of infinite noise, the only way to win is to build a growth engine, not just run campaigns.
               </p>
             </div>
-            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Become a Growth Engineer</h2>
               <p className="text-lg text-white leading-relaxed">
                 This isn't a course on how to use Facebook Ads or write a blog post. This is a masterclass in **growth engineering**. We've dissected the growth playbooks of the fastest-growing companies in history—Airbnb, Dropbox, Uber, and more—to give you a systematic approach to acquiring and retaining users at scale. You'll learn how to think like a growth hacker and build a marketing machine that runs on data, not just creativity.
@@ -305,7 +305,7 @@ export default function MarketingPage() {
             }, {
               title: "The Viral Loop",
               description: "How to build virality into your product from day one.",
-              icon: <Brain className="h-12 w-12 text-cyan-300" />
+              icon: <Brain className="h-12 w-12 text-cyan-100" />
             }, {
               title: "The CRO Playbook",
               description: "How to systematically increase your conversion rates at every step of the funnel.",
@@ -327,24 +327,24 @@ export default function MarketingPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
           <div className="max-w-4xl mx-auto">
             {modules.map((module) => (
-              <div key={module.number} className="bg-slate-800/80 border border-slate-700 rounded-lg mb-4">
+              <div key={module.number} className="bg-slate-800/90 border border-slate-600 rounded-lg mb-4">
                 <button
                   className="w-full flex justify-between items-center p-6 text-left"
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                 >
                   <div className="flex items-center gap-4">
                     <div className="bg-slate-700 p-3 rounded-full">
-                      <module.icon className="h-6 w-6 text-cyan-300" />
+                      <module.icon className="h-6 w-6 text-cyan-100" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
-                      <p className="text-sm text-slate-200">{module.duration} • {module.lessons} lessons</p>
+                      <p className="text-sm text-white">{module.duration} • {module.lessons} lessons</p>
                     </div>
                   </div>
-                  <ChevronDown className={`h-6 w-6 text-slate-200 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-6 w-6 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
                 </button>
                 {openModule === module.number && (
-                  <div className="p-6 border-t border-slate-700">
+                  <div className="p-6 border-t border-slate-600">
                     <ul className="space-y-3">
                       {module.topics.map((topic, index) => (
                         <li key={index} className="flex items-center gap-3">
@@ -365,12 +365,12 @@ export default function MarketingPage() {
       <section className="py-16 bg-slate-950">
         <div className="container mx-auto px-4">
                     <h3 className="text-center text-white text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
-          <p className="text-center text-slate-200 text-lg max-w-4xl mx-auto">
-            <span className="text-cyan-300 font-semibold">Airbnb growth teams</span> • 
-            <span className="text-cyan-300 font-semibold"> Dropbox viral engineers</span> • 
-            <span className="text-cyan-300 font-semibold"> HubSpot marketers</span> • 
-            <span className="text-cyan-300 font-semibold"> Netflix data scientists</span> • 
-            <span className="text-cyan-300 font-semibold"> Google Ads specialists</span>
+          <p className="text-center text-white text-lg max-w-4xl mx-auto">
+            <span className="text-cyan-100 font-semibold">Airbnb growth teams</span> • 
+            <span className="text-cyan-100 font-semibold"> Dropbox viral engineers</span> • 
+            <span className="text-cyan-100 font-semibold"> HubSpot marketers</span> • 
+            <span className="text-cyan-100 font-semibold"> Netflix data scientists</span> • 
+            <span className="text-cyan-100 font-semibold"> Google Ads specialists</span>
           </p>
         </div>
       </section>
@@ -379,18 +379,18 @@ export default function MarketingPage() {
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-6 w-6 text-cyan-300 mt-1 flex-shrink-0" />
+                    <Check className="h-6 w-6 text-cyan-100 mt-1 flex-shrink-0" />
                     <span className="text-lg text-white">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (
@@ -417,7 +417,7 @@ export default function MarketingPage() {
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                  <ChevronDown className={`h-6 w-6 text-slate-200 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-6 w-6 text-white transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openFaq === index && (
                   <div className="pb-6">
@@ -448,7 +448,7 @@ export default function MarketingPage() {
 
       {/* Footer */}
       <footer className="bg-slate-950 py-8">
-        <div className="container mx-auto px-4 text-center text-slate-200">
+        <div className="container mx-auto px-4 text-center text-white">
           <p>&copy; 2025 Million Dollar Blueprint. All rights reserved.</p>
         </div>
       </footer>

@@ -206,7 +206,7 @@ export default function SalesMasteryPage() {
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-cyan-300 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-white hover:text-cyan-100 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
               href="https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03"
               target="_blank"
@@ -252,7 +252,7 @@ export default function SalesMasteryPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-600">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
                   src="https://player.vimeo.com/video/1130648006?badge=0&autopause=0&player_id=0&app_id=58479" 
@@ -271,13 +271,13 @@ export default function SalesMasteryPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You're Playing a Losing Game</h2>
               <p className="text-lg text-white leading-relaxed">
                 You've been taught to sell. You've read the books, attended the seminars, and practiced your pitch. But you're still struggling to hit your numbers consistently. Why? Because you've been taught a system designed for the 99%, not the 1%. The traditional sales playbook is dead. In a world of automated outreach and AI-powered lead scoring, the only thing that separates you from the noise is your ability to architect a deal, not just sell a product.
               </p>
             </div>
-            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Become a Revenue Architect</h2>
               <p className="text-lg text-white leading-relaxed">
                 This isn't another course on "sales techniques." This is a masterclass in **revenue architecture**. We've reverse-engineered the proprietary sales and deal-making frameworks used by the world's most dominant companies—Amazon, Google, Goldman Sachs, and Salesforce—to give you a blueprint for predictable, scalable revenue growth. You won't just learn how to sell; you'll learn how to think like a Chief Revenue Officer.
@@ -295,7 +295,7 @@ export default function SalesMasteryPage() {
             {[{
               title: "The Challenger Sale 2.0",
               description: "How to teach, tailor, and take control of any sales conversation.",
-              icon: <Brain className="h-12 w-12 text-cyan-300" />
+              icon: <Brain className="h-12 w-12 text-cyan-100" />
             }, {
               title: "The Trusted Advisor Blueprint",
               description: "The Goldman Sachs model for building unshakeable client relationships.",
@@ -329,24 +329,24 @@ export default function SalesMasteryPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
           <div className="max-w-4xl mx-auto">
             {modules.map((module) => (
-              <div key={module.number} className="bg-slate-800/80 border border-slate-700 rounded-lg mb-4">
+              <div key={module.number} className="bg-slate-800/90 border border-slate-600 rounded-lg mb-4">
                 <button
                   className="w-full flex justify-between items-center p-6 text-left"
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                 >
                   <div className="flex items-center gap-4">
                     <div className="bg-slate-700 p-3 rounded-full">
-                      <module.icon className="h-6 w-6 text-cyan-300" />
+                      <module.icon className="h-6 w-6 text-cyan-100" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
-                      <p className="text-sm text-slate-200">{module.duration} • {module.lessons} lessons</p>
+                      <p className="text-sm text-white">{module.duration} • {module.lessons} lessons</p>
                     </div>
                   </div>
-                  <ChevronDown className={`h-6 w-6 text-slate-200 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-6 w-6 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
                 </button>
                 {openModule === module.number && (
-                  <div className="p-6 border-t border-slate-700">
+                  <div className="p-6 border-t border-slate-600">
                     <ul className="space-y-3">
                       {module.topics.map((topic, index) => (
                         <li key={index} className="flex items-center gap-3">
@@ -367,12 +367,12 @@ export default function SalesMasteryPage() {
       <section className="py-16 bg-slate-950">
         <div className="container mx-auto px-4">
                     <h3 className="text-center text-white text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
-          <p className="text-center text-slate-200 text-lg max-w-4xl mx-auto">
-            <span className="text-cyan-300 font-semibold">Salesforce top performers</span> • 
-            <span className="text-cyan-300 font-semibold"> Goldman Sachs advisors</span> • 
-            <span className="text-cyan-300 font-semibold"> Oracle enterprise teams</span> • 
-            <span className="text-cyan-300 font-semibold"> Google sales engineers</span> • 
-            <span className="text-cyan-300 font-semibold"> FBI negotiators</span>
+          <p className="text-center text-white text-lg max-w-4xl mx-auto">
+            <span className="text-cyan-100 font-semibold">Salesforce top performers</span> • 
+            <span className="text-cyan-100 font-semibold"> Goldman Sachs advisors</span> • 
+            <span className="text-cyan-100 font-semibold"> Oracle enterprise teams</span> • 
+            <span className="text-cyan-100 font-semibold"> Google sales engineers</span> • 
+            <span className="text-cyan-100 font-semibold"> FBI negotiators</span>
           </p>
         </div>
       </section>
@@ -381,18 +381,18 @@ export default function SalesMasteryPage() {
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-6 w-6 text-cyan-300 mt-1 flex-shrink-0" />
+                    <Check className="h-6 w-6 text-cyan-100 mt-1 flex-shrink-0" />
                     <span className="text-lg text-white">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-slate-800/80 border border-slate-700 rounded-lg p-8">
+            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (
@@ -419,7 +419,7 @@ export default function SalesMasteryPage() {
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                  <ChevronDown className={`h-6 w-6 text-slate-200 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`h-6 w-6 text-white transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                 </button>
                 {openFaq === index && (
                   <div className="pb-6">
@@ -450,7 +450,7 @@ export default function SalesMasteryPage() {
 
       {/* Footer */}
       <footer className="bg-slate-950 py-8">
-        <div className="container mx-auto px-4 text-center text-slate-200">
+        <div className="container mx-auto px-4 text-center text-white">
           <p>&copy; 2025 Million Dollar Blueprint. All rights reserved.</p>
         </div>
       </footer>
