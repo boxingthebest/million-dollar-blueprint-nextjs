@@ -529,7 +529,7 @@ export default function AIResistantSkillsPage() {
             href="https://buy.stripe.com/4gw28q8bv0vV0bCdRo"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap"
+            className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#ea580c'}}
           >
             Enroll Now - $197
           </a>

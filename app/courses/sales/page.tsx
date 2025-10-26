@@ -460,7 +460,7 @@ export default function SalesMasteryPage() {
             href="https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap"
+            className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#ea580c'}}
           >
             Enroll Now - $247
           </a>
