@@ -269,13 +269,13 @@ export default function MarketingPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
+            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You're Stuck in the Marketing Hamster Wheel</h2>
               <p className="text-lg text-white leading-relaxed">
                 You're spending money on ads, posting on social media, and writing blog posts. But your growth has flatlined. You're stuck in a cycle of "more content, more ads, more everything" with diminishing returns. Why? Because you're a marketer, not a growth engineer. The old marketing playbook is obsolete. In a world of infinite noise, the only way to win is to build a growth engine, not just run campaigns.
               </p>
             </div>
-            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
+            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Solution: Become a Growth Engineer</h2>
               <p className="text-lg text-white leading-relaxed">
                 This isn't a course on how to use Facebook Ads or write a blog post. This is a masterclass in **growth engineering**. We've dissected the growth playbooks of the fastest-growing companies in history—Airbnb, Dropbox, Uber, and more—to give you a systematic approach to acquiring and retaining users at scale. You'll learn how to think like a growth hacker and build a marketing machine that runs on data, not just creativity.
@@ -327,7 +327,7 @@ export default function MarketingPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
           <div className="max-w-4xl mx-auto">
             {modules.map((module) => (
-              <div key={module.number} className="bg-slate-800/90 border border-slate-600 rounded-lg mb-4">
+              <div key={module.number} className="bg-slate-800 border border-slate-600 rounded-lg mb-4">
                 <button
                   className="w-full flex justify-between items-center p-6 text-left"
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
@@ -379,7 +379,7 @@ export default function MarketingPage() {
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
+            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -390,7 +390,7 @@ export default function MarketingPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-slate-800/90 border border-slate-600 rounded-lg p-8">
+            <div className="bg-slate-800 border border-slate-600 rounded-lg p-8">
               <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (

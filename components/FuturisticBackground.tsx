@@ -129,7 +129,7 @@ export default function FuturisticBackground({ variant = 'admin' }: FuturisticBa
       <canvas
         ref={canvasRef}
         className="fixed inset-0 pointer-events-none z-0"
-        style={{ opacity: 0.15 }}
+        style={{ opacity: 0.05 }}
       />
 
       {/* Gradient Mesh Background */}
@@ -144,13 +144,13 @@ export default function FuturisticBackground({ variant = 'admin' }: FuturisticBa
         
         {/* Animated gradient orbs */}
         <div className={`absolute top-0 left-1/4 w-96 h-96 ${
-          variant === 'admin' ? 'bg-amber-500/10' : variant === 'student' ? 'bg-cyan-500/10' : 'bg-pink-500/10'
+          variant === 'admin' ? 'bg-amber-500/5' : variant === 'student' ? 'bg-cyan-500/5' : 'bg-pink-500/5'
         } rounded-full blur-3xl animate-pulse-slow`}></div>
         <div className={`absolute bottom-0 right-1/4 w-96 h-96 ${
-          variant === 'admin' ? 'bg-blue-500/10' : variant === 'student' ? 'bg-purple-500/10' : 'bg-amber-500/10'
+          variant === 'admin' ? 'bg-blue-500/5' : variant === 'student' ? 'bg-purple-500/5' : 'bg-amber-500/5'
         } rounded-full blur-3xl animate-pulse-slow`} style={{ animationDelay: '1s' }}></div>
         <div className={`absolute top-1/2 left-1/2 w-96 h-96 ${
-          variant === 'admin' ? 'bg-purple-500/10' : variant === 'student' ? 'bg-pink-500/10' : 'bg-cyan-500/10'
+          variant === 'admin' ? 'bg-purple-500/5' : variant === 'student' ? 'bg-pink-500/5' : 'bg-cyan-500/5'
         } rounded-full blur-3xl animate-pulse-slow`} style={{ animationDelay: '2s' }}></div>
       </div>
 
