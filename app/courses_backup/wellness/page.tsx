@@ -215,13 +215,13 @@ export default function WellnessPage() {
       {/* Futuristic Animated Background */}
       <FuturisticBackground variant="enrollment" />
       {/* Navigation */}
-      <nav className="bg-black border-b border-slate-800 sticky top-0 z-50 shadow-lg">
+      <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
               href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
               target="_blank"
@@ -253,30 +253,30 @@ export default function WellnessPage() {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white mb-6">
+            <p className="text-xl md:text-2xl text-slate-200 mb-6">
               What Fortune 100 executives pay $2,997 for in executive coaching
             </p>
             
-            <p className="text-lg md:text-xl text-white mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
               A Harvard study of 4,000 executives found that those who optimized their wellness earned $140,000 more annually. Not by working harder—by working smarter. These are the exact protocols used at Amazon, Google, and Goldman Sachs to sustain peak performance for decades, not days.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-1">10</div>
-                <div className="text-sm text-white">Performance Protocols</div>
+                <div className="text-sm text-slate-400">Performance Protocols</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-emerald-400 mb-1">50min</div>
-                <div className="text-sm text-white">Expert Training</div>
+                <div className="text-sm text-slate-400">Expert Training</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-teal-400 mb-1">$140K</div>
-                <div className="text-sm text-white">Avg Salary Increase</div>
+                <div className="text-sm text-slate-400">Avg Salary Increase</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-1">187</div>
-                <div className="text-sm text-white">Students Enrolled</div>
+                <div className="text-sm text-slate-400">Students Enrolled</div>
               </div>
             </div>
             
@@ -297,7 +297,7 @@ export default function WellnessPage() {
               </a>
             </div>
 
-            <p className="text-white text-sm mt-6">
+            <p className="text-slate-400 text-sm mt-6">
               ✓ 30-Day Money-Back Guarantee &nbsp;&nbsp; ✓ Lifetime Access &nbsp;&nbsp; ✓ Instant Access
             </p>
           </div>
@@ -305,13 +305,13 @@ export default function WellnessPage() {
       </section>
 
       {/* The Problem Section */}
-      <section className="py-16 md:py-24 bg-black">
+      <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Why Do Executives Pay $2,997-$4,997 for These Wellness Protocols?
             </h2>
-            <div className="text-lg md:text-xl text-white space-y-4 leading-relaxed">
+            <div className="text-lg md:text-xl text-slate-300 space-y-4 leading-relaxed">
               <p>
                 Because they know something you don't: <strong className="text-white">Peak performance isn't about working harder—it's about engineering your body and mind like a high-performance system.</strong>
               </p>
@@ -333,7 +333,7 @@ export default function WellnessPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
               See What You'll Learn
             </h2>
-            <p className="text-lg md:text-xl text-white text-center mb-8">
+            <p className="text-lg md:text-xl text-slate-400 text-center mb-8">
               Watch this 50-second overview
             </p>
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-700">
@@ -359,14 +359,14 @@ export default function WellnessPage() {
       </section>
 
       {/* Curriculum Section */}
-      <section id="curriculum" className="py-16 md:py-24 bg-black">
+      <section id="curriculum" className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Complete Course Curriculum
               </h2>
-              <p className="text-lg md:text-xl text-white">
+              <p className="text-lg md:text-xl text-slate-400">
                 10 comprehensive lessons • 50 minutes of expert training • Lifetime access
               </p>
             </div>
@@ -375,10 +375,10 @@ export default function WellnessPage() {
               {modules.map((module) => {
                 const Icon = module.icon;
                 return (
-                  <div key={module.number} className="bg-black/50 border border-slate-700 rounded-xl overflow-hidden">
+                  <div key={module.number} className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
                     <button
                       onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
-                      className="w-full px-6 md:px-8 py-6 flex items-center gap-4 text-left hover:bg-black/80 transition-all"
+                      className="w-full px-6 md:px-8 py-6 flex items-center gap-4 text-left hover:bg-slate-800/80 transition-all"
                     >
                       <div className="w-12 h-12 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon className="w-6 h-6 text-emerald-400" />
@@ -386,7 +386,7 @@ export default function WellnessPage() {
                       <div className="flex-1">
                         <div className="text-sm text-emerald-400 font-semibold mb-1">Lesson {module.number}</div>
                         <div className="text-lg md:text-xl font-semibold text-white mb-1">{module.title}</div>
-                        <div className="text-sm text-white">{module.duration} • {module.lessons} video</div>
+                        <div className="text-sm text-slate-400">{module.duration} • {module.lessons} video</div>
                       </div>
                       <ChevronDown className={`w-6 h-6 text-emerald-400 flex-shrink-0 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
                     </button>
@@ -396,7 +396,7 @@ export default function WellnessPage() {
                           {module.topics.map((topic, idx) => (
                             <li key={idx} className="flex items-start gap-3">
                               <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                              <span className="text-white">{topic}</span>
+                              <span className="text-slate-300">{topic}</span>
                             </li>
                           ))}
                         </ul>
@@ -431,9 +431,9 @@ export default function WellnessPage() {
 
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               {deliverables.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3 bg-black/30 border border-slate-700 rounded-lg p-4">
+                <div key={idx} className="flex items-start gap-3 bg-slate-800/30 border border-slate-700 rounded-lg p-4">
                   <Check className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-white text-lg">{item}</span>
+                  <span className="text-slate-200 text-lg">{item}</span>
                 </div>
               ))}
             </div>
@@ -446,18 +446,18 @@ export default function WellnessPage() {
                 {benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <Star className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-white text-lg">{benefit}</span>
+                    <span className="text-slate-200 text-lg">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="text-center">
-              <div className="inline-block bg-black/50 border border-slate-700 rounded-xl p-8 mb-8">
-                <div className="text-white text-lg mb-2">Total Value:</div>
+              <div className="inline-block bg-slate-800/50 border border-slate-700 rounded-xl p-8 mb-8">
+                <div className="text-slate-400 text-lg mb-2">Total Value:</div>
                 <div className="text-slate-500 line-through text-3xl mb-2">$2,997</div>
                 <div className="text-emerald-400 text-5xl md:text-6xl font-bold mb-2">$197</div>
-                <div className="text-white">One-time payment • Lifetime access</div>
+                <div className="text-slate-400">One-time payment • Lifetime access</div>
               </div>
 
               <a
@@ -468,14 +468,14 @@ export default function WellnessPage() {
               >
                 Enroll Now - $197
               </a>
-              <p className="text-white text-sm">30-Day Money-Back Guarantee</p>
+              <p className="text-slate-400 text-sm">30-Day Money-Back Guarantee</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-black">
+      <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
@@ -484,17 +484,17 @@ export default function WellnessPage() {
 
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-black/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div key={idx} className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-black/80 transition-all"
+                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/80 transition-all"
                   >
                     <span className="text-lg font-semibold text-white pr-4">{faq.question}</span>
                     <ChevronDown className={`w-6 h-6 text-emerald-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 pb-5 border-t border-slate-700">
-                      <p className="text-white mt-4 leading-relaxed">{faq.answer}</p>
+                      <p className="text-slate-300 mt-4 leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
                 </div>
@@ -511,7 +511,7 @@ export default function WellnessPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Your Transformation Starts Now
             </h2>
-            <p className="text-xl text-white mb-8">
+            <p className="text-xl text-slate-300 mb-8">
               Join 187 executives who've already invested in The Executive Energy System
             </p>
             <a
@@ -522,7 +522,7 @@ export default function WellnessPage() {
             >
               Enroll Now - $197
             </a>
-            <p className="text-white text-sm mt-6">
+            <p className="text-slate-400 text-sm mt-6">
               ✓ 30-Day Money-Back Guarantee &nbsp;&nbsp; ✓ Lifetime Access &nbsp;&nbsp; ✓ Instant Access
             </p>
           </div>

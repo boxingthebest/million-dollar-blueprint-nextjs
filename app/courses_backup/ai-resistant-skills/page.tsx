@@ -214,13 +214,13 @@ export default function AIResistantSkillsPage() {
       {/* Futuristic Animated Background */}
       <FuturisticBackground variant="enrollment" />
       {/* Navigation */}
-      <nav className="bg-black border-b border-slate-800 sticky top-0 z-50 shadow-lg">
+      <nav className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16" />
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <Link
               href="/auth/signup?course=ai-resistant-skills-paid"
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
@@ -250,30 +250,30 @@ export default function AIResistantSkillsPage() {
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white mb-6">
+            <p className="text-xl md:text-2xl text-slate-200 mb-6">
               McKinsey-level strategic frameworks for Fortune 100 career advancement
             </p>
             
-            <p className="text-lg md:text-xl text-white mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
               The World Economic Forum predicts 85 million jobs will be displaced by AI by 2025. But there are 5 human skills AI will never replicate. Master them, and you'll be irreplaceable. This isn't theory—these are the exact frameworks used by executives at the world's most successful companies to stay ahead of automation.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-1">5</div>
-                <div className="text-sm text-white">AI-Resistant Skills</div>
+                <div className="text-sm text-slate-400">AI-Resistant Skills</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-emerald-400 mb-1">3.5h</div>
-                <div className="text-sm text-white">Expert Training</div>
+                <div className="text-sm text-slate-400">Expert Training</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-orange-400 mb-1">$85K</div>
-                <div className="text-sm text-white">Avg Salary Increase</div>
+                <div className="text-sm text-slate-400">Avg Salary Increase</div>
               </div>
-              <div className="bg-black/50 border border-slate-700 rounded-lg p-4 text-center">
+              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
                 <div className="text-3xl font-bold text-purple-400 mb-1">253</div>
-                <div className="text-sm text-white">Students Enrolled</div>
+                <div className="text-sm text-slate-400">Students Enrolled</div>
               </div>
             </div>
             
@@ -292,7 +292,7 @@ export default function AIResistantSkillsPage() {
               </a>
             </div>
 
-            <p className="text-white text-sm mt-6">
+            <p className="text-slate-400 text-sm mt-6">
               ✓ 30-Day Money-Back Guarantee &nbsp;&nbsp; ✓ Lifetime Access &nbsp;&nbsp; ✓ Instant Access
             </p>
           </div>
@@ -300,13 +300,13 @@ export default function AIResistantSkillsPage() {
       </section>
 
       {/* The Problem Section */}
-      <section className="py-16 md:py-24 bg-black">
+      <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Most "AI-Proof" Career Advice Is Dangerously Wrong
             </h2>
-            <div className="text-lg md:text-xl text-white space-y-4 leading-relaxed">
+            <div className="text-lg md:text-xl text-slate-300 space-y-4 leading-relaxed">
               <p>
                 They tell you to "be creative" or "develop soft skills"—but that's too vague to be useful. The truth? Amazon, Google, and Goldman Sachs have identified <strong className="text-white">5 specific capabilities</strong> that separate executives from employees.
               </p>
@@ -328,7 +328,7 @@ export default function AIResistantSkillsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
               See What You'll Learn
             </h2>
-            <p className="text-lg md:text-xl text-white text-center mb-8">
+            <p className="text-lg md:text-xl text-slate-400 text-center mb-8">
               Watch this 45-second overview
             </p>
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-slate-700">
@@ -354,14 +354,14 @@ export default function AIResistantSkillsPage() {
       </section>
 
       {/* Curriculum Section */}
-      <section id="curriculum" className="py-16 md:py-24 bg-black">
+      <section id="curriculum" className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Complete Course Curriculum
               </h2>
-              <p className="text-lg md:text-xl text-white">
+              <p className="text-lg md:text-xl text-slate-400">
                 5 comprehensive modules • 3.5 hours of expert training • Lifetime access
               </p>
             </div>
@@ -370,10 +370,10 @@ export default function AIResistantSkillsPage() {
               {modules.map((module) => {
                 const Icon = module.icon;
                 return (
-                  <div key={module.number} className="bg-black/50 border border-slate-700 rounded-xl overflow-hidden">
+                  <div key={module.number} className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
                     <button
                       onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
-                      className="w-full px-6 md:px-8 py-6 flex items-center gap-4 text-left hover:bg-black/80 transition-all"
+                      className="w-full px-6 md:px-8 py-6 flex items-center gap-4 text-left hover:bg-slate-800/80 transition-all"
                     >
                       <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-pink-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Icon className="w-6 h-6 text-orange-400" />
@@ -381,7 +381,7 @@ export default function AIResistantSkillsPage() {
                       <div className="flex-1">
                         <div className="text-sm text-orange-400 font-semibold mb-1">Module {module.number}</div>
                         <div className="text-lg md:text-xl font-semibold text-white mb-1">{module.title}</div>
-                        <div className="text-sm text-white">{module.duration} • {module.lessons} lessons</div>
+                        <div className="text-sm text-slate-400">{module.duration} • {module.lessons} lessons</div>
                       </div>
                       <ChevronDown className={`w-6 h-6 text-orange-400 flex-shrink-0 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
                     </button>
@@ -391,7 +391,7 @@ export default function AIResistantSkillsPage() {
                           {module.topics.map((topic, idx) => (
                             <li key={idx} className="flex items-start gap-3">
                               <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                              <span className="text-white">{topic}</span>
+                              <span className="text-slate-300">{topic}</span>
                             </li>
                           ))}
                         </ul>
@@ -409,7 +409,7 @@ export default function AIResistantSkillsPage() {
               >
                 Get Full Access Now - $197 <ArrowRight className="ml-2" />
               </Link>
-              <p className="text-white text-sm mt-4">Or 3 payments of $69</p>
+              <p className="text-slate-400 text-sm mt-4">Or 3 payments of $69</p>
             </div>
           </div>
         </div>
@@ -430,7 +430,7 @@ export default function AIResistantSkillsPage() {
                   {deliverables.slice(0, 5).map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-white">{item}</span>
+                      <span className="text-slate-300">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -442,7 +442,7 @@ export default function AIResistantSkillsPage() {
                   {deliverables.slice(5).map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-white">{item}</span>
+                      <span className="text-slate-300">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -457,7 +457,7 @@ export default function AIResistantSkillsPage() {
                 {benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-center gap-3 justify-center">
                     <Star className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                    <span className="text-white text-lg">{benefit}</span>
+                    <span className="text-slate-200 text-lg">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -467,7 +467,7 @@ export default function AIResistantSkillsPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-black">
+      <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
@@ -476,17 +476,17 @@ export default function AIResistantSkillsPage() {
 
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-black/50 border border-slate-700 rounded-xl overflow-hidden">
+                <div key={idx} className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full px-6 md:px-8 py-6 flex justify-between items-center text-left hover:bg-black/80 transition-all"
+                    className="w-full px-6 md:px-8 py-6 flex justify-between items-center text-left hover:bg-slate-800/80 transition-all"
                   >
                     <span className="text-lg md:text-xl font-semibold text-white pr-4">{faq.question}</span>
                     <ChevronDown className={`w-6 h-6 text-orange-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 md:px-8 pb-6">
-                      <p className="text-white leading-relaxed">{faq.answer}</p>
+                      <p className="text-slate-300 leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
                 </div>
