@@ -271,7 +271,7 @@ export default function SalesMasteryPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You're Playing a Losing Game</h2>
               <p className="text-lg text-slate-300 leading-relaxed">
                 You've been taught to sell. You've read the books, attended the seminars, and practiced your pitch. But you're still struggling to hit your numbers consistently. Why? Because you've been taught a system designed for the 99%, not the 1%. The traditional sales playbook is dead. In a world of automated outreach and AI-powered lead scoring, the only thing that separates you from the noise is your ability to architect a deal, not just sell a product.

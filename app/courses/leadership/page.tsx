@@ -269,7 +269,7 @@ export default function LeadershipPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You Have Authority, But No Influence</h2>
               <p className="text-lg text-slate-300 leading-relaxed">
                 You've been promoted. You have the title, the team, and the responsibility. But you feel like an imposter. Your voice isn't heard in meetings. Your ideas are overlooked. Your team is compliant, but not committed. You have authority, but you lack *influence*. In today's flat, fast-moving organizations, formal authority is a fragile and fleeting source of power. True leadership is the ability to influence without it.

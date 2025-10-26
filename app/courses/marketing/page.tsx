@@ -269,7 +269,7 @@ export default function MarketingPage() {
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">The Problem: You're Stuck in the Marketing Hamster Wheel</h2>
               <p className="text-lg text-slate-300 leading-relaxed">
                 You're spending money on ads, posting on social media, and writing blog posts. But your growth has flatlined. You're stuck in a cycle of "more content, more ads, more everything" with diminishing returns. Why? Because you're a marketer, not a growth engineer. The old marketing playbook is obsolete. In a world of infinite noise, the only way to win is to build a growth engine, not just run campaigns.
