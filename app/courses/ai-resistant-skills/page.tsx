@@ -466,6 +466,88 @@ export default function AIResistantSkillsPage() {
         </div>
       </section>
 
+
+      {/* Professional Certificate Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">Earn Your Professional Certificate</h2>
+            <p className="text-xl text-white text-center mb-12 max-w-3xl mx-auto">
+              Upon completion, receive a verified certificate you can share with employers, add to your LinkedIn profile, and showcase your expertise.
+            </p>
+            
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-cyan-400 rounded-2xl p-8 md:p-12 shadow-2xl shadow-cyan-500/20">
+              <div className="text-center mb-8">
+                <div className="inline-block bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
+                  <h3 className="text-3xl md:text-4xl font-bold mb-2">Certificate of Completion</h3>
+                </div>
+                <p className="text-white/80 text-lg">Million Dollar Blueprint</p>
+              </div>
+              
+              <div className="border-t-2 border-b-2 border-cyan-400/30 py-8 mb-8">
+                <p className="text-white/60 text-sm text-center mb-2">This certifies that</p>
+                <p className="text-3xl md:text-4xl font-bold text-white text-center mb-4">[Your Name]</p>
+                <p className="text-white/60 text-sm text-center mb-2">has successfully completed</p>
+                <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 text-center mb-4">
+                  AI-Resistant Skills Certificate
+                </p>
+                <p className="text-white/80 text-center text-sm md:text-base">
+                  Demonstrating mastery in: Strategic Thinking, Emotional Intelligence, Creative Problem-Solving, Human Connection
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <p className="text-white/60 text-sm mb-1">Certificate ID</p>
+                  <p className="text-white font-mono text-xs">MDB-AI--XXXXX</p>
+                </div>
+                <div>
+                  <p className="text-white/60 text-sm mb-1">Issued Date</p>
+                  <p className="text-white font-semibold">Upon Completion</p>
+                </div>
+                <div>
+                  <p className="text-white/60 text-sm mb-1">Verification</p>
+                  <p className="text-cyan-400 font-semibold">Blockchain Verified</p>
+                </div>
+              </div>
+              
+              <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
+                <div className="flex items-center justify-center gap-2 text-white/80">
+                  <Check className="h-5 w-5 text-emerald-400" />
+                  <span>Add to LinkedIn</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-white/80">
+                  <Check className="h-5 w-5 text-emerald-400" />
+                  <span>Download PDF</span>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-white/80">
+                  <Check className="h-5 w-5 text-emerald-400" />
+                  <span>Share on Social Media</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
+              <div className="bg-black/30 border border-cyan-400/30 rounded-xl p-6">
+                <div className="text-4xl mb-3">🎓</div>
+                <h4 className="text-white font-bold mb-2">Career Advancement</h4>
+                <p className="text-white/70 text-sm">Show employers your commitment to professional development</p>
+              </div>
+              <div className="bg-black/30 border border-purple-400/30 rounded-xl p-6">
+                <div className="text-4xl mb-3">✅</div>
+                <h4 className="text-white font-bold mb-2">Verified Credentials</h4>
+                <p className="text-white/70 text-sm">Blockchain-verified certificates with unique IDs</p>
+              </div>
+              <div className="bg-black/30 border border-emerald-400/30 rounded-xl p-6">
+                <div className="text-4xl mb-3">💼</div>
+                <h4 className="text-white font-bold mb-2">LinkedIn Ready</h4>
+                <p className="text-white/70 text-sm">One-click integration with your LinkedIn profile</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
