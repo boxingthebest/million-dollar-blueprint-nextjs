@@ -222,14 +222,6 @@ export default function WellnessPage() {
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
             <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
-            <a 
-              href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
-            >
-              Enroll Now - $197 (Originally $495 • Save 50%)
-            </a>
           </div>
         </div>
       </nav>

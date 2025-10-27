@@ -207,14 +207,6 @@ export default function SalesMasteryPage() {
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
             <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
-            <a 
-              href="https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
-            >
-              Enroll Now - $247 (Originally $495 • Save 50%)
-            </a>
           </div>
         </div>
       </nav>

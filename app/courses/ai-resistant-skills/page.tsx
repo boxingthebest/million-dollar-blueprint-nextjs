@@ -221,12 +221,6 @@ export default function AIResistantSkillsPage() {
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
             <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
-            <Link
-              href="/auth/signup?course=ai-resistant-skills-paid"
-              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
-            >
-              Enroll Now - $197 (Originally $495 • Save 50%)
-            </Link>
           </div>
         </div>
       </nav>

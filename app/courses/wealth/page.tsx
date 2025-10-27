@@ -207,14 +207,6 @@ export default function WealthPage() {
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
             <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
-            <a 
-              href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
-            >
-              Enroll Now - $247 (Originally $495 • Save 50%)
-            </a>
           </div>
         </div>
       </nav>
