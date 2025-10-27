@@ -3,6 +3,8 @@ import { prisma } from '@/lib/prisma';
 import Stripe from 'stripe';
 import bcrypt from 'bcryptjs';
 
+export const dynamic = 'force-dynamic';
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder', {
   apiVersion: '2024-09-30.acacia' as any,
 });
