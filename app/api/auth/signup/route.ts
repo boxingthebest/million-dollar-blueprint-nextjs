@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       return new NextResponse(errors, { status: 400 })
     }
     
-    const { email, password, name } = validationResult.data
+    const { email, password, firstName, lastName } = validationResult.data
 
     const existingUser = await prisma.user.findUnique({
       where: { email }
@@ -51,7 +51,9 @@ export async function POST(request: Request) {
       data: {
         email,
         password: hashedPassword,
-        name: name || email.split('@')[0],
+        firstName,
+        lastName,
+        name: `${firstName} ${lastName}`, // Full name for backward compatibility
         emailVerified: null // User must verify email
       }
     })

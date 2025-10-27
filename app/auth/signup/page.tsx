@@ -10,7 +10,8 @@ import AuthHero from "@/components/AuthHero"
 
 export default function SignUp() {
   const router = useRouter()
-  const [name, setName] = useState("")
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
@@ -25,7 +26,7 @@ export default function SignUp() {
       const res = await fetch("/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ firstName, lastName, email, password }),
       })
 
       const data = await res.json()
@@ -36,20 +37,10 @@ export default function SignUp() {
         return
       }
 
-      // Auto sign in after successful signup
-      const result = await signIn("credentials", {
-        email,
-        password,
-        redirect: false,
-      })
-
-      if (result?.error) {
-        setError("Account created but sign in failed. Please sign in manually.")
-        setLoading(false)
-      } else {
-        router.push("/dashboard")
-        router.refresh()
-      }
+      // Show success message - user must verify email before logging in
+      setError("") // Clear any errors
+      alert(data.message || "Account created! Please check your email to verify your account.")
+      router.push("/auth/signin")
     } catch (error) {
       setError("Something went wrong")
       setLoading(false)
@@ -96,21 +87,39 @@ export default function SignUp() {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-slate-300 mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    autoComplete="name"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
-                    placeholder="John Doe"
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-semibold text-slate-300 mb-2">
+                      First Name
+                    </label>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                      autoComplete="given-name"
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+                      placeholder="John"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-semibold text-slate-300 mb-2">
+                      Last Name
+                    </label>
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      required
+                      autoComplete="family-name"
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+                      placeholder="Doe"
+                    />
+                  </div>
                 </div>
 
                 <div>

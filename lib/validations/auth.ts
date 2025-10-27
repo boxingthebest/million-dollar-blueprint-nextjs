@@ -5,6 +5,18 @@ import { z } from 'zod'
  * Enforces strong password requirements and email format
  */
 export const signupSchema = z.object({
+  firstName: z
+    .string()
+    .min(1, 'First name is required')
+    .max(50, 'First name must be less than 50 characters')
+    .trim(),
+  
+  lastName: z
+    .string()
+    .min(1, 'Last name is required')
+    .max(50, 'Last name must be less than 50 characters')
+    .trim(),
+  
   email: z
     .string()
     .email('Invalid email address')
@@ -19,14 +31,7 @@ export const signupSchema = z.object({
     .max(100, 'Password must be less than 100 characters')
     .regex(/[A-Z]/, 'Password must contain at least one uppercase letter')
     .regex(/[a-z]/, 'Password must contain at least one lowercase letter')
-    .regex(/[0-9]/, 'Password must contain at least one number'),
-  
-  name: z
-    .string()
-    .min(2, 'Name must be at least 2 characters')
-    .max(100, 'Name must be less than 100 characters')
-    .trim()
-    .optional()
+    .regex(/[0-9]/, 'Password must contain at least one number')
 })
 
 /**
