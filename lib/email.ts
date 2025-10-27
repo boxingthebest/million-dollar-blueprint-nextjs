@@ -42,10 +42,10 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string) {
                     <!-- Content -->
                     <tr>
                       <td style="padding: 20px 40px;">
-                        <p style="margin: 0 0 20px 0; color: #cbd5e1; font-size: 16px; line-height: 1.6;">
+                        <p style="margin: 0 0 20px 0; color: #f1f5f9; font-size: 17px; line-height: 1.7;">
                           We received a request to reset your password for your Million Dollar Blueprint account.
                         </p>
-                        <p style="margin: 0 0 30px 0; color: #cbd5e1; font-size: 16px; line-height: 1.6;">
+                        <p style="margin: 0 0 30px 0; color: #f1f5f9; font-size: 17px; line-height: 1.7;">
                           Click the button below to create a new password:
                         </p>
                         
@@ -53,24 +53,24 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string) {
                         <table width="100%" cellpadding="0" cellspacing="0">
                           <tr>
                             <td align="center" style="padding: 20px 0;">
-                              <a href="${resetUrl}" style="display: inline-block; padding: 16px 40px; background: linear-gradient(to right, #06b6d4, #3b82f6); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
+                              <a href="${resetUrl}" style="display: inline-block; padding: 18px 48px; background: linear-gradient(to right, #06b6d4, #3b82f6); color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);">
                                 Reset Password
                               </a>
                             </td>
                           </tr>
                         </table>
                         
-                        <p style="margin: 30px 0 20px 0; color: #94a3b8; font-size: 14px; line-height: 1.6;">
+                        <p style="margin: 30px 0 20px 0; color: #e2e8f0; font-size: 15px; line-height: 1.6;">
                           Or copy and paste this link into your browser:
                         </p>
-                        <p style="margin: 0 0 30px 0; padding: 12px; background-color: #1e293b; border-radius: 6px; color: #06b6d4; font-size: 14px; word-break: break-all; border: 1px solid #334155;">
+                        <p style="margin: 0 0 30px 0; padding: 16px; background-color: #1e293b; border-radius: 8px; color: #22d3ee; font-size: 15px; word-break: break-all; border: 1px solid #0891b2;">
                           ${resetUrl}
                         </p>
                         
-                        <p style="margin: 0 0 10px 0; color: #94a3b8; font-size: 14px; line-height: 1.6;">
-                          This link will expire in <strong style="color: #cbd5e1;">1 hour</strong> for security reasons.
+                        <p style="margin: 0 0 10px 0; color: #cbd5e1; font-size: 15px; line-height: 1.6;">
+                          This link will expire in <strong style="color: #fbbf24;">1 hour</strong> for security reasons.
                         </p>
-                        <p style="margin: 0; color: #94a3b8; font-size: 14px; line-height: 1.6;">
+                        <p style="margin: 0; color: #cbd5e1; font-size: 15px; line-height: 1.6;">
                           If you didn't request this password reset, you can safely ignore this email.
                         </p>
                       </td>
@@ -79,11 +79,11 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string) {
                     <!-- Footer -->
                     <tr>
                       <td style="padding: 30px 40px; border-top: 1px solid #334155;">
-                        <p style="margin: 0 0 10px 0; color: #64748b; font-size: 12px; line-height: 1.6;">
+                        <p style="margin: 0 0 10px 0; color: #94a3b8; font-size: 14px; line-height: 1.6;">
                           Best regards,<br>
-                          <strong style="color: #94a3b8;">The Million Dollar Blueprint Team</strong>
+                          <strong style="color: #cbd5e1;">The Million Dollar Blueprint Team</strong>
                         </p>
-                        <p style="margin: 20px 0 0 0; color: #64748b; font-size: 12px; line-height: 1.6;">
+                        <p style="margin: 20px 0 0 0; color: #94a3b8; font-size: 13px; line-height: 1.6;">
                           © ${new Date().getFullYear()} Million Dollar Blueprint. All rights reserved.
                         </p>
                       </td>
@@ -166,11 +166,11 @@ export async function sendPasswordChangedEmail(email: string) {
                     <!-- Footer -->
                     <tr>
                       <td style="padding: 30px 40px; border-top: 1px solid #334155;">
-                        <p style="margin: 0 0 10px 0; color: #64748b; font-size: 12px; line-height: 1.6;">
+                        <p style="margin: 0 0 10px 0; color: #94a3b8; font-size: 14px; line-height: 1.6;">
                           Best regards,<br>
-                          <strong style="color: #94a3b8;">The Million Dollar Blueprint Team</strong>
+                          <strong style="color: #cbd5e1;">The Million Dollar Blueprint Team</strong>
                         </p>
-                        <p style="margin: 20px 0 0 0; color: #64748b; font-size: 12px; line-height: 1.6;">
+                        <p style="margin: 20px 0 0 0; color: #94a3b8; font-size: 13px; line-height: 1.6;">
                           © ${new Date().getFullYear()} Million Dollar Blueprint. All rights reserved.
                         </p>
                       </td>
