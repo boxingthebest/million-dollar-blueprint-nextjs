@@ -624,7 +624,7 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/5kQ14m6Xf2DZ15yf4g"
+                    href="https://buy.stripe.com/5kQ14m6Xf2DZ15yf4g08g09"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-cyan-500/50"
@@ -679,7 +679,7 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/bJe28qbdvcezcOgf4g"
+                    href="https://buy.stripe.com/bJe28qbdvcezcOgf4g08g0a"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white px-8 py-5 rounded-lg font-bold text-xl transition-all shadow-2xl w-full hover:shadow-purple-500/50"
@@ -735,7 +735,7 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/4gM14mgxPfqLg0saO0"
+                    href="https://buy.stripe.com/4gM14mgxPfqLg0saO008g0b"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-amber-500/50"
