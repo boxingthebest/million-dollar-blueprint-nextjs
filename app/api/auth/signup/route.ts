@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 import bcrypt from "bcryptjs"
 import { prisma } from "@/lib/prisma"
-import { sendWelcomeEmail } from "@/lib/email"
+import { sendVerificationEmail } from "@/lib/email"
 import { signupRatelimit } from "@/lib/ratelimit-simple"
 import { signupSchema } from "@/lib/validations/auth"
 import { z } from "zod"
@@ -46,29 +46,43 @@ export async function POST(request: Request) {
 
     const hashedPassword = await bcrypt.hash(password, 12)
 
+    // Create user with emailVerified = null (unverified)
     const user = await prisma.user.create({
       data: {
         email,
         password: hashedPassword,
-        name: name || email.split('@')[0]
+        name: name || email.split('@')[0],
+        emailVerified: null // User must verify email
       }
     })
 
-    // Send welcome email to new user (non-blocking)
-    // We know email is not null because we just created the user with it
-    const userEmail = user.email!
-    const userName = user.name || userEmail.split('@')[0]
-    sendWelcomeEmail(userEmail, userName).catch(error => {
-      console.error("Failed to send welcome email:", error)
+    // Generate verification token
+    const crypto = await import('crypto')
+    const verificationToken = crypto.randomBytes(32).toString('hex')
+    const hashedToken = crypto.createHash('sha256').update(verificationToken).digest('hex')
+
+    // Store verification token (expires in 24 hours)
+    await prisma.emailVerificationToken.create({
+      data: {
+        email: email,
+        token: hashedToken,
+        expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours
+      }
     })
 
-    // Admin notification removed - function not available in current email library
+    // Send verification email
+    const verificationUrl = `${process.env.NEXTAUTH_URL || 'https://www.milliondollarblueprint.ai'}/auth/verify-email?token=${verificationToken}`
+    sendVerificationEmail(email, verificationUrl).catch(error => {
+      console.error('Failed to send verification email:', error)
+    })
 
     return NextResponse.json({
+      message: 'Account created! Please check your email to verify your account.',
       user: {
         id: user.id,
         email: user.email,
-        name: user.name
+        name: user.name,
+        emailVerified: false
       }
     })
   } catch (error) {

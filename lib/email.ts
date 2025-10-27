@@ -458,3 +458,208 @@ export async function sendAdminNewSignupNotification(adminEmail: string, student
   }
 }
 
+
+
+export async function sendVerificationEmail(email: string, verificationUrl: string) {
+  try {
+    await transporter.sendMail({
+      from: `${process.env.SMTP_FROM_NAME || "Million Dollar Blueprint"} <${process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER}>`,
+      to: email,
+      subject: "Verify Your Email - Million Dollar Blueprint",
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Verify Your Email</title>
+          </head>
+          <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0f172a;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0f172a; padding: 40px 20px;">
+              <tr>
+                <td align="center">
+                  <table width="600" cellpadding="0" cellspacing="0" style="background: linear-gradient(to bottom, #1e293b, #0f172a); border-radius: 16px; overflow: hidden; border: 1px solid #334155;">
+                    <!-- Header -->
+                    <tr>
+                      <td style="padding: 40px 40px 20px 40px; text-align: center;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(to bottom right, #06b6d4, #3b82f6); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                          <span style="color: white; font-size: 40px;">✉️</span>
+                        </div>
+                        <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: bold;">
+                          Verify Your Email Address
+                        </h1>
+                      </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                      <td style="padding: 20px 40px;">
+                        <p style="margin: 0 0 20px 0; color: #f1f5f9; font-size: 18px; line-height: 1.7;">
+                          Welcome to <strong style="color: #22d3ee;">Million Dollar Blueprint</strong>! 🚀
+                        </p>
+                        <p style="margin: 0 0 30px 0; color: #f1f5f9; font-size: 17px; line-height: 1.7;">
+                          To complete your registration and access your student dashboard, please verify your email address by clicking the button below:
+                        </p>
+                        
+                        <!-- Button -->
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" style="padding: 20px 0;">
+                              <a href="${verificationUrl}" style="display: inline-block; padding: 20px 50px; background: linear-gradient(to right, #06b6d4, #3b82f6); color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 19px; box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);">
+                                Verify Email Address
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                        
+                        <p style="margin: 30px 0 20px 0; color: #e2e8f0; font-size: 15px; line-height: 1.6;">
+                          Or copy and paste this link into your browser:
+                        </p>
+                        <p style="margin: 0 0 30px 0; padding: 16px; background-color: #1e293b; border-radius: 8px; color: #22d3ee; font-size: 14px; word-break: break-all; border: 1px solid #0891b2;">
+                          ${verificationUrl}
+                        </p>
+                        
+                        <div style="margin: 30px 0; padding: 20px; background-color: #1e293b; border-radius: 8px; border-left: 4px solid #fbbf24;">
+                          <p style="margin: 0; color: #cbd5e1; font-size: 15px; line-height: 1.6;">
+                            <strong style="color: #fbbf24;">⏰ Important:</strong><br>
+                            This verification link will expire in <strong>24 hours</strong> for security reasons.
+                          </p>
+                        </div>
+                        
+                        <p style="margin: 0; color: #cbd5e1; font-size: 15px; line-height: 1.6;">
+                          If you didn't create an account with Million Dollar Blueprint, you can safely ignore this email.
+                        </p>
+                      </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                      <td style="padding: 30px 40px; border-top: 1px solid #334155;">
+                        <p style="margin: 0 0 10px 0; color: #94a3b8; font-size: 14px; line-height: 1.6;">
+                          Best regards,<br>
+                          <strong style="color: #cbd5e1;">The Million Dollar Blueprint Team</strong>
+                        </p>
+                        <p style="margin: 20px 0 0 0; color: #94a3b8; font-size: 13px; line-height: 1.6;">
+                          © ${new Date().getFullYear()} Million Dollar Blueprint. All rights reserved.
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </body>
+        </html>
+      `,
+    })
+    return { success: true }
+  } catch (error) {
+    console.error("Failed to send verification email:", error)
+    return { success: false, error }
+  }
+}
+
+export async function sendNewsletterVerificationEmail(email: string, verificationUrl: string) {
+  try {
+    await transporter.sendMail({
+      from: `${process.env.SMTP_FROM_NAME || "Million Dollar Blueprint"} <${process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER}>`,
+      to: email,
+      subject: "Confirm Your Newsletter Subscription - Million Dollar Blueprint",
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Confirm Newsletter Subscription</title>
+          </head>
+          <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0f172a;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0f172a; padding: 40px 20px;">
+              <tr>
+                <td align="center">
+                  <table width="600" cellpadding="0" cellspacing="0" style="background: linear-gradient(to bottom, #1e293b, #0f172a); border-radius: 16px; overflow: hidden; border: 1px solid #334155;">
+                    <!-- Header -->
+                    <tr>
+                      <td style="padding: 40px 40px 20px 40px; text-align: center;">
+                        <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: linear-gradient(to bottom right, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                          <span style="color: white; font-size: 40px;">📬</span>
+                        </div>
+                        <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: bold;">
+                          Confirm Your Subscription
+                        </h1>
+                      </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                      <td style="padding: 20px 40px;">
+                        <p style="margin: 0 0 20px 0; color: #f1f5f9; font-size: 18px; line-height: 1.7;">
+                          Thank you for subscribing to <strong style="color: #10b981;">Million Dollar Blueprint</strong>! 🎉
+                        </p>
+                        <p style="margin: 0 0 30px 0; color: #f1f5f9; font-size: 17px; line-height: 1.7;">
+                          To complete your subscription and start receiving exclusive insights, strategies, and updates, please confirm your email address:
+                        </p>
+                        
+                        <!-- Button -->
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" style="padding: 20px 0;">
+                              <a href="${verificationUrl}" style="display: inline-block; padding: 20px 50px; background: linear-gradient(to right, #10b981, #059669); color: #ffffff; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 19px; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);">
+                                Confirm Subscription
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                        
+                        <p style="margin: 30px 0 20px 0; color: #e2e8f0; font-size: 15px; line-height: 1.6;">
+                          Or copy and paste this link into your browser:
+                        </p>
+                        <p style="margin: 0 0 30px 0; padding: 16px; background-color: #1e293b; border-radius: 8px; color: #10b981; font-size: 14px; word-break: break-all; border: 1px solid #059669;">
+                          ${verificationUrl}
+                        </p>
+                        
+                        <div style="margin: 30px 0; padding: 20px; background-color: #1e293b; border-radius: 8px; border-left: 4px solid #06b6d4;">
+                          <p style="margin: 0 0 10px 0; color: #cbd5e1; font-size: 15px; line-height: 1.6;">
+                            <strong style="color: #22d3ee;">📚 What You'll Get:</strong>
+                          </p>
+                          <ul style="margin: 0; padding-left: 20px; color: #cbd5e1; font-size: 15px; line-height: 1.8;">
+                            <li>Exclusive strategies and insights</li>
+                            <li>Early access to new courses</li>
+                            <li>Special offers and discounts</li>
+                            <li>Weekly tips for success</li>
+                          </ul>
+                        </div>
+                        
+                        <p style="margin: 0; color: #cbd5e1; font-size: 15px; line-height: 1.6;">
+                          If you didn't subscribe to our newsletter, you can safely ignore this email.
+                        </p>
+                      </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                      <td style="padding: 30px 40px; border-top: 1px solid #334155;">
+                        <p style="margin: 0 0 10px 0; color: #94a3b8; font-size: 14px; line-height: 1.6;">
+                          Best regards,<br>
+                          <strong style="color: #cbd5e1;">The Million Dollar Blueprint Team</strong>
+                        </p>
+                        <p style="margin: 20px 0 0 0; color: #94a3b8; font-size: 13px; line-height: 1.6;">
+                          © ${new Date().getFullYear()} Million Dollar Blueprint. All rights reserved.
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </body>
+        </html>
+      `,
+    })
+    return { success: true }
+  } catch (error) {
+    console.error("Failed to send newsletter verification email:", error)
+    return { success: false, error }
+  }
+}
+
