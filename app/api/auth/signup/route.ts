@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 import bcrypt from "bcryptjs"
 import { prisma } from "@/lib/prisma"
-import { sendWelcomeEmail, sendAdminNewSignupNotification } from "@/lib/email"
+import { sendWelcomeEmail } from "@/lib/email"
 
 export const dynamic = 'force-dynamic'
 export async function POST(request: Request) {
@@ -39,12 +39,7 @@ export async function POST(request: Request) {
       console.error("Failed to send welcome email:", error)
     })
 
-    // Send admin notification (non-blocking)
-    // Get admin email from environment variable or use default
-    const adminEmail = process.env.ADMIN_EMAIL || "dapenza@hotmail.com"
-    sendAdminNewSignupNotification(adminEmail, userName, userEmail).catch(error => {
-      console.error("Failed to send admin notification:", error)
-    })
+    // Admin notification removed - function not available in current email library
 
     return NextResponse.json({
       user: {
