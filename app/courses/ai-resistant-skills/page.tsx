@@ -602,7 +602,7 @@ export default function AIResistantSkillsPage() {
             <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
           </div>
           <a
-            href="https://buy.stripe.com/4gw28q8bv0vV0bCdRo"
+            href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap"

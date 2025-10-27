@@ -612,7 +612,7 @@ export default function WellnessPage() {
             <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
           </div>
           <a
-            href="https://buy.stripe.com/5kA00i5Vf3I3cOg14B"
+            href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#ea580c'}}
