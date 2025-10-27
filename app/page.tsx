@@ -535,7 +535,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border-2 border-orange-500/30 rounded-2xl p-8 md:p-12 shadow-2xl shadow-orange-500/10 hover:shadow-orange-500/20 transition-all duration-300 hover:scale-[1.02]">
               <div className="space-y-6">
                 <p className="text-lg md:text-xl text-white leading-relaxed">
-                  Because free content gives you <span className="text-orange-500 font-bold">information</span>—we give you <span className="text-orange-500 font-bold">transformation</span>. YouTube and A.I. will tell you <em>what</em> to do. We show you <span className="text-cyan-400 font-semibold">exactly how</span> to do it, with battle-tested frameworks from 100+ years of combined experience at companies like Goldman Sachs and top consulting firms.
+                  Because free content gives you <span className="text-orange-500 font-bold">information</span>—we give you <span className="text-orange-500 font-bold">transformation</span>. YouTube and A.I. will tell you what to do. We show you <span className="text-cyan-400 font-semibold">exactly how</span> to do it, with battle-tested frameworks from 100+ years of combined experience at companies like Goldman Sachs and top consulting firms.
                 </p>
                 
                 <p className="text-lg md:text-xl text-white leading-relaxed">
