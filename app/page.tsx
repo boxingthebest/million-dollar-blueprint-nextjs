@@ -465,7 +465,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
             <div className="text-center bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-400 rounded-xl p-8 hover:border-cyan-300 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all hover:scale-105 duration-300">
               <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2 drop-shadow-[0_0_20px_rgba(6,182,212,0.3)]">
-                <AnimatedCounter end={10000} /><span className="ml-1">&#43;</span>
+                <AnimatedCounter end={10000} /><span className="ml-1 text-cyan-400">+</span>
               </div>
               <div className="text-white text-sm md:text-lg font-bold">Students Enrolled</div>
             </div>

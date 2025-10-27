@@ -153,7 +153,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                <AnimatedCounter end={10000} /><span className="ml-1">&#43;</span>
+                <AnimatedCounter end={10000} /><span className="ml-1 text-cyan-400">+</span>
               </div>
               <div className="text-slate-400">Active Students</div>
             </div>
