@@ -295,23 +295,23 @@ export default function SalesMasteryPage() {
             {[{
               title: "The Challenger Sale 2.0",
               description: "How to teach, tailor, and take control of any sales conversation.",
-              icon: <Brain className="h-20 w-20 text-cyan-400" />
+              icon: <Brain className="h-20 w-20 text-orange-400" />
             }, {
               title: "The Trusted Advisor Blueprint",
               description: "The Goldman Sachs model for building unshakeable client relationships.",
-              icon: <Heart className="h-20 w-20 text-pink-400" />
+              icon: <Heart className="h-20 w-20 text-orange-400" />
             }, {
               title: "Predictive Pipeline Architecture",
               description: "How to build a sales pipeline that never runs dry.",
-              icon: <TrendingUp className="h-20 w-20 text-emerald-400" />
+              icon: <TrendingUp className="h-20 w-20 text-orange-400" />
             }, {
               title: "The Amazon \"Working Backwards\" Method",
               description: "How to close multi-million dollar deals by starting with the customer's press release.",
-              icon: <Lightbulb className="h-20 w-20 text-amber-400" />
+              icon: <Lightbulb className="h-20 w-20 text-orange-400" />
             }, {
               title: "The Google \"3-Layer Deep\" Discovery",
               description: "How to uncover needs your prospects don't even know they have.",
-              icon: <Target className="h-20 w-20 text-red-400" />
+              icon: <Target className="h-20 w-20 text-orange-400" />
             }].map((item, index) => (
               <div key={index} className="bg-black p-8 rounded-lg border-2 border-slate-800">
                 <div className="mb-4">{item.icon}</div>
@@ -335,8 +335,8 @@ export default function SalesMasteryPage() {
                   onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="bg-gradient-to-br from-cyan-500 to-purple-600 p-4 rounded-full shadow-lg shadow-cyan-500/50">
-                      <module.icon className="h-14 w-14 text-cyan-400" />
+                    <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 p-4 rounded-full shadow-lg shadow-orange-500/50">
+                      <module.icon className="h-14 w-14 text-orange-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
@@ -350,7 +350,7 @@ export default function SalesMasteryPage() {
                     <ul className="space-y-3">
                       {module.topics.map((topic, index) => (
                         <li key={index} className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-emerald-400" />
+                          <Check className="h-5 w-5 text-orange-400" />
                           <span className="text-white">{topic}</span>
                         </li>
                       ))}
@@ -386,7 +386,7 @@ export default function SalesMasteryPage() {
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-14 w-14 text-cyan-400 mt-1 flex-shrink-0" />
+                    <Check className="h-14 w-14 text-orange-400 mt-1 flex-shrink-0" />
                     <span className="text-lg text-white">{benefit}</span>
                   </li>
                 ))}
@@ -397,7 +397,7 @@ export default function SalesMasteryPage() {
               <ul className="space-y-4">
                 {deliverables.map((deliverable, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-14 w-14 text-emerald-400 mt-1 flex-shrink-0" />
+                    <Check className="h-14 w-14 text-orange-400 mt-1 flex-shrink-0" />
                     <span className="text-lg text-white">{deliverable}</span>
                   </li>
                 ))}
@@ -409,7 +409,7 @@ export default function SalesMasteryPage() {
 
 
       {/* Professional Certificate Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-orange-500/20 to-red-500/20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">Earn Your Professional Certificate</h2>
@@ -454,15 +454,15 @@ export default function SalesMasteryPage() {
               
               <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
                 <div className="flex items-center justify-center gap-2 text-white/80">
-                  <Check className="h-5 w-5 text-emerald-400" />
+                  <Check className="h-5 w-5 text-orange-400" />
                   <span>Add to LinkedIn</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-white/80">
-                  <Check className="h-5 w-5 text-emerald-400" />
+                  <Check className="h-5 w-5 text-orange-400" />
                   <span>Download PDF</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-white/80">
-                  <Check className="h-5 w-5 text-emerald-400" />
+                  <Check className="h-5 w-5 text-orange-400" />
                   <span>Share on Social Media</span>
                 </div>
               </div>

@@ -375,22 +375,22 @@ export default function AIResistantSkillsPage() {
                       onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
                       className="w-full px-6 md:px-8 py-6 flex items-center gap-4 text-left hover:bg-black/80 transition-all"
                     >
-                      <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-pink-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6 text-orange-400" />
+                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-6 h-6 text-cyan-400" />
                       </div>
                       <div className="flex-1">
                         <div className="text-sm text-orange-400 font-semibold mb-1">Module {module.number}</div>
                         <div className="text-lg md:text-xl font-semibold text-white mb-1">{module.title}</div>
                         <div className="text-sm text-white">{module.duration} • {module.lessons} lessons</div>
                       </div>
-                      <ChevronDown className={`w-6 h-6 text-orange-400 flex-shrink-0 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-6 h-6 text-cyan-400 flex-shrink-0 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
                     </button>
                     {openModule === module.number && (
                       <div className="px-6 md:px-8 pb-6 border-t border-slate-700">
                         <ul className="space-y-3 mt-4">
                           {module.topics.map((topic, idx) => (
                             <li key={idx} className="flex items-start gap-3">
-                              <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                              <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                               <span className="text-white">{topic}</span>
                             </li>
                           ))}
@@ -429,7 +429,7 @@ export default function AIResistantSkillsPage() {
                 <ul className="space-y-3">
                   {deliverables.slice(0, 5).map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                       <span className="text-white">{item}</span>
                     </li>
                   ))}
@@ -449,14 +449,14 @@ export default function AIResistantSkillsPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-900/30 to-pink-900/30 border-2 border-orange-500/50 rounded-2xl p-8 text-center">
+            <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-orange-500/50 rounded-2xl p-8 text-center">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 After Completing This Course, You Will:
               </h3>
               <ul className="space-y-3 max-w-2xl mx-auto">
                 {benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-center gap-3 justify-center">
-                    <Star className="w-5 h-5 text-orange-400 flex-shrink-0" />
+                    <Star className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     <span className="text-white text-lg">{benefit}</span>
                   </li>
                 ))}
@@ -468,7 +468,7 @@ export default function AIResistantSkillsPage() {
 
 
       {/* Professional Certificate Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">Earn Your Professional Certificate</h2>
@@ -513,15 +513,15 @@ export default function AIResistantSkillsPage() {
               
               <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
                 <div className="flex items-center justify-center gap-2 text-white/80">
-                  <Check className="h-5 w-5 text-emerald-400" />
+                  <Check className="h-5 w-5 text-cyan-400" />
                   <span>Add to LinkedIn</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-white/80">
-                  <Check className="h-5 w-5 text-emerald-400" />
+                  <Check className="h-5 w-5 text-cyan-400" />
                   <span>Download PDF</span>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-white/80">
-                  <Check className="h-5 w-5 text-emerald-400" />
+                  <Check className="h-5 w-5 text-cyan-400" />
                   <span>Share on Social Media</span>
                 </div>
               </div>
@@ -564,7 +564,7 @@ export default function AIResistantSkillsPage() {
                     className="w-full px-6 md:px-8 py-6 flex justify-between items-center text-left hover:bg-black/80 transition-all"
                   >
                     <span className="text-lg md:text-xl font-semibold text-white pr-4">{faq.question}</span>
-                    <ChevronDown className={`w-6 h-6 text-orange-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-6 h-6 text-cyan-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 md:px-8 pb-6">
