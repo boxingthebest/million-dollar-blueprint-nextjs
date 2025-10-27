@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
+import ValueProposition from "@/components/ValueProposition";
 
 
 export default function Home() {
@@ -507,6 +508,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ValueProposition />
 
       {/* Courses Grid */}
       <section id="courses" className="py-16 md:py-24 bg-gradient-to-b from-slate-900 to-slate-950">
