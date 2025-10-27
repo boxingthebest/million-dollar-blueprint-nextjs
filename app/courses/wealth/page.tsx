@@ -420,46 +420,46 @@ export default function WealthPage() {
                 <div className="inline-block bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
                   <h3 className="text-3xl md:text-4xl font-bold mb-2">Certificate of Completion</h3>
                 </div>
-                <p className="text-white/80 text-lg">Million Dollar Blueprint</p>
+                <p className="text-white text-lg">Million Dollar Blueprint</p>
               </div>
               
               <div className="border-t-2 border-b-2 border-cyan-400/30 py-8 mb-8">
-                <p className="text-white/60 text-sm text-center mb-2">This certifies that</p>
+                <p className="text-white text-sm text-center mb-2">This certifies that</p>
                 <p className="text-3xl md:text-4xl font-bold text-white text-center mb-4">[Your Name]</p>
-                <p className="text-white/60 text-sm text-center mb-2">has successfully completed</p>
+                <p className="text-white text-sm text-center mb-2">has successfully completed</p>
                 <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 text-center mb-4">
                   Wealth Building Certificate
                 </p>
-                <p className="text-white/80 text-center text-sm md:text-base">
+                <p className="text-white text-center text-sm md:text-base">
                   Demonstrating mastery in: Investment Strategy, Portfolio Management, Tax Optimization, Wealth Preservation
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <p className="text-white/60 text-sm mb-1">Certificate ID</p>
+                  <p className="text-white text-sm mb-1">Certificate ID</p>
                   <p className="text-white font-mono text-xs">MDB-WEA-XXXXX</p>
                 </div>
                 <div>
-                  <p className="text-white/60 text-sm mb-1">Issued Date</p>
+                  <p className="text-white text-sm mb-1">Issued Date</p>
                   <p className="text-white font-semibold">Upon Completion</p>
                 </div>
                 <div>
-                  <p className="text-white/60 text-sm mb-1">Verification</p>
+                  <p className="text-white text-sm mb-1">Verification</p>
                   <p className="text-cyan-400 font-semibold">Blockchain Verified</p>
                 </div>
               </div>
               
               <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-                <div className="flex items-center justify-center gap-2 text-white/80">
+                <div className="flex items-center justify-center gap-2 text-white">
                   <Check className="h-5 w-5 text-emerald-400" />
                   <span>Add to LinkedIn</span>
                 </div>
-                <div className="flex items-center justify-center gap-2 text-white/80">
+                <div className="flex items-center justify-center gap-2 text-white">
                   <Check className="h-5 w-5 text-emerald-400" />
                   <span>Download PDF</span>
                 </div>
-                <div className="flex items-center justify-center gap-2 text-white/80">
+                <div className="flex items-center justify-center gap-2 text-white">
                   <Check className="h-5 w-5 text-emerald-400" />
                   <span>Share on Social Media</span>
                 </div>
@@ -470,17 +470,17 @@ export default function WealthPage() {
               <div className="bg-black/30 border border-cyan-400/30 rounded-xl p-6">
                 <div className="text-4xl mb-3">🎓</div>
                 <h4 className="text-white font-bold mb-2">Career Advancement</h4>
-                <p className="text-white/70 text-sm">Show employers your commitment to professional development</p>
+                <p className="text-white text-sm">Show employers your commitment to professional development</p>
               </div>
               <div className="bg-black/30 border border-purple-400/30 rounded-xl p-6">
                 <div className="text-4xl mb-3">✅</div>
                 <h4 className="text-white font-bold mb-2">Verified Credentials</h4>
-                <p className="text-white/70 text-sm">Blockchain-verified certificates with unique IDs</p>
+                <p className="text-white text-sm">Blockchain-verified certificates with unique IDs</p>
               </div>
               <div className="bg-black/30 border border-emerald-400/30 rounded-xl p-6">
                 <div className="text-4xl mb-3">💼</div>
                 <h4 className="text-white font-bold mb-2">LinkedIn Ready</h4>
-                <p className="text-white/70 text-sm">One-click integration with your LinkedIn profile</p>
+                <p className="text-white text-sm">One-click integration with your LinkedIn profile</p>
               </div>
             </div>
           </div>
@@ -516,7 +516,7 @@ export default function WealthPage() {
       <section id="enroll" className="py-16 md:py-24 bg-gradient-to-r from-green-600 to-emerald-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Don't Just Manage. Lead.</h2>
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">Ready to unlock your leadership potential? Enroll now and get lifetime access to the frameworks that build empires.</p>
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">Ready to unlock your leadership potential? Enroll now and get lifetime access to the frameworks that build empires.</p>
           <a
             href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
             target="_blank"
@@ -534,7 +534,7 @@ export default function WealthPage() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-white font-bold text-lg">🔥 Limited Time: Save 50% Today</p>
-            <p className="text-white/90 text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
+            <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
           </div>
           <a
             href="https://buy.stripe.com/aEU7sKbdv4M7bKc4gM"
