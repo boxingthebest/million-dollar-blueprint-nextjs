@@ -838,58 +838,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Million Dollar Blueprint Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-orange-500/5" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16 md:mb-20">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Why Million Dollar Blueprint?
-              </h2>
-              <p className="text-xl md:text-2xl text-slate-400">
-                This isn't theory. This is battle-tested insider knowledge.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/30 rounded-2xl p-8 md:p-10 text-center hover:border-cyan-500/60 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                    <Target className="w-10 h-10 text-cyan-400" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Real-World Expertise</h3>
-                  <p className="text-lg text-slate-300 leading-relaxed">Our instructors are current and former executives at companies like Apple, Google, Goldman Sachs, and McKinsey. You're learning from the best in the world.</p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border-2 border-emerald-500/30 rounded-2xl p-8 md:p-10 text-center hover:border-emerald-500/60 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-300 group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-emerald-500/30 to-teal-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                    <TrendingUp className="w-10 h-10 text-emerald-400" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Proven Frameworks</h3>
-                  <p className="text-lg text-slate-300 leading-relaxed">We don't teach theory. We teach the exact, battle-tested frameworks that have scaled companies to billions in revenue. This is insider knowledge.</p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-900/30 to-pink-900/30 border-2 border-orange-500/30 rounded-2xl p-8 md:p-10 text-center hover:border-orange-500/60 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative z-10">
-                  <div className="w-20 h-20 bg-gradient-to-br from-orange-500/30 to-pink-500/30 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                    <Star className="w-10 h-10 text-orange-400" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Unbeatable Value</h3>
-                  <p className="text-lg text-slate-300 leading-relaxed">Get lifetime access to all courses for a fraction of the cost of a single day of executive coaching. This is the highest ROI investment you'll ever make.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
