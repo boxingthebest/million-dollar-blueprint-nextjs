@@ -530,7 +530,7 @@ export default function LeadershipPage() {
 
 
       {/* Sticky Bottom CTA Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 border-t-4 border-orange-400 shadow-2xl z-50 py-4">
+      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-purple-700 via-purple-600 to-yellow-500 border-t-4 border-purple-400 shadow-2xl z-50 py-4">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-white font-bold text-lg">🔥 Limited Time: Save 50% Today</p>
@@ -540,7 +540,7 @@ export default function LeadershipPage() {
             href="https://buy.stripe.com/fZe00i4Rb2E38y0cNb"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#ea580c'}}
+            className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap text-purple-700 hover:bg-purple-50"
           >
             Enroll Now - $247
           </a>

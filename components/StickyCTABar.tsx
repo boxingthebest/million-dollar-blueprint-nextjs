@@ -26,39 +26,58 @@ export default function StickyCTABar() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 ${
+      className={`fixed bottom-0 left-0 right-0 z-50 transition-transform duration-500 ease-out ${
         isVisible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <div className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex-1 min-w-0">
-              <p className="text-white font-bold text-lg sm:text-xl truncate">
-                🔥 Limited Time: Save $585 on Complete Bundle
-              </p>
-              <p className="text-white/90 text-sm hidden sm:block">
+      {/* Premium Gradient Background - Orange to Pink to Purple */}
+      <div className="relative bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 shadow-2xl">
+        {/* Top border glow effect */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-300 via-pink-300 to-purple-400 opacity-50"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            {/* Left Side - Compelling Text Content */}
+            <div className="flex-1 min-w-0 text-center sm:text-left">
+              <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                <span className="text-2xl animate-pulse">🔥</span>
+                <p className="text-white font-extrabold text-xl sm:text-2xl tracking-tight">
+                  Limited Time: Save $585 on Complete Bundle
+                </p>
+              </div>
+              <p className="text-white/95 text-base font-medium">
                 Join 10,000+ professionals transforming their careers
               </p>
             </div>
-            <div className="flex items-center gap-3">
+
+            {/* Right Side - CTA Button and Close */}
+            <div className="flex items-center gap-3 flex-shrink-0">
+              {/* Premium CTA Button */}
               <Link
                 href="/auth/signup"
-                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all flex items-center gap-2 whitespace-nowrap shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="group relative bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gradient-to-r hover:from-white hover:to-purple-50 transition-all duration-300 flex items-center gap-2 whitespace-nowrap shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 hover:-translate-y-1"
               >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
+                <span className="relative z-10">Get Started</span>
+                <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+                
+                {/* Subtle shine effect on hover */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </Link>
+
+              {/* Close Button */}
               <button
                 onClick={() => setIsDismissed(true)}
-                className="text-white/80 hover:text-white transition-colors p-2"
-                aria-label="Dismiss"
+                className="text-white/90 hover:text-white transition-all duration-200 p-2.5 hover:bg-white/20 rounded-lg backdrop-blur-sm"
+                aria-label="Dismiss banner"
               >
-                <X className="w-5 h-5" />
+                <X className="w-6 h-6" />
               </button>
             </div>
           </div>
         </div>
+
+        {/* Bottom subtle shadow for depth */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-black/10"></div>
       </div>
     </div>
   )
