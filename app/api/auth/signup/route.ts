@@ -2,16 +2,39 @@ import { NextResponse } from "next/server"
 import bcrypt from "bcryptjs"
 import { prisma } from "@/lib/prisma"
 import { sendWelcomeEmail } from "@/lib/email"
+import { signupRatelimit } from "@/lib/ratelimit-simple"
+import { signupSchema } from "@/lib/validations/auth"
+import { z } from "zod"
 
 export const dynamic = 'force-dynamic'
 export async function POST(request: Request) {
   try {
-    const body = await request.json()
-    const { email, password, name } = body
-
-    if (!email || !password) {
-      return new NextResponse("Missing fields", { status: 400 })
+    // Rate limiting: 5 signups per minute per IP
+    const ip = request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip") || "unknown"
+    const { success, limit, reset, remaining } = signupRatelimit(ip)
+    
+    if (!success) {
+      return new NextResponse("Too many signup attempts. Please try again later.", { 
+        status: 429,
+        headers: {
+          "X-RateLimit-Limit": limit.toString(),
+          "X-RateLimit-Remaining": remaining.toString(),
+          "X-RateLimit-Reset": new Date(reset).toISOString(),
+        }
+      })
     }
+
+    const body = await request.json()
+    
+    // Validate input with Zod
+    const validationResult = signupSchema.safeParse(body)
+    
+    if (!validationResult.success) {
+      const errors = validationResult.error.issues.map(err => `${err.path.join('.')}: ${err.message}`).join(', ')
+      return new NextResponse(errors, { status: 400 })
+    }
+    
+    const { email, password, name } = validationResult.data
 
     const existingUser = await prisma.user.findUnique({
       where: { email }

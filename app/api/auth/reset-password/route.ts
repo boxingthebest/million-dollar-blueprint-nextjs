@@ -3,25 +3,25 @@ import { prisma } from "@/lib/prisma"
 import { sendPasswordChangedEmail } from "@/lib/email"
 import bcrypt from "bcryptjs"
 import crypto from "crypto"
+import { resetPasswordSchema } from "@/lib/validations/auth"
 
 export const dynamic = 'force-dynamic'
 export async function POST(request: Request) {
   try {
-    const { token, password } = await request.json()
-
-    if (!token || !password) {
+    const body = await request.json()
+    
+    // Validate input
+    const validationResult = resetPasswordSchema.safeParse(body)
+    
+    if (!validationResult.success) {
+      const errors = validationResult.error.issues.map(err => `${err.path.join('.')}: ${err.message}`).join(', ')
       return NextResponse.json(
-        { error: "Token and password are required" },
+        { error: errors },
         { status: 400 }
       )
     }
-
-    if (password.length < 8) {
-      return NextResponse.json(
-        { error: "Password must be at least 8 characters" },
-        { status: 400 }
-      )
-    }
+    
+    const { token, password } = validationResult.data
 
     // Hash the token to compare with database
     const hashedToken = crypto

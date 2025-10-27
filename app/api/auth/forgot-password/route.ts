@@ -2,19 +2,26 @@ import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma"
 import { sendPasswordResetEmail } from "@/lib/email"
 import crypto from "crypto"
+import { forgotPasswordSchema } from "@/lib/validations/auth"
 
 export const dynamic = 'force-dynamic'
 
 export async function POST(request: Request) {
   try {
-    const { email } = await request.json()
-
-    if (!email) {
+    const body = await request.json()
+    
+    // Validate input
+    const validationResult = forgotPasswordSchema.safeParse(body)
+    
+    if (!validationResult.success) {
+      const errors = validationResult.error.issues.map(err => `${err.path.join('.')}: ${err.message}`).join(', ')
       return NextResponse.json(
-        { error: "Email is required" },
+        { error: errors },
         { status: 400 }
       )
     }
+    
+    const { email } = validationResult.data
 
     // Check if user exists
     const user = await prisma.user.findUnique({
