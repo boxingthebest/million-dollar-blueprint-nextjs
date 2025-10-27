@@ -133,3 +133,14 @@ model LessonProgress {
 
   @@unique([userId, lessonId])
 }
+
+model PendingCourseSelection {
+  id                String   @id @default(cuid())
+  email             String
+  stripeSessionId   String   @unique
+  bundleType        String   // "starter", "professional", "vip"
+  coursesSelected   String[] // Array of course IDs
+  completed         Boolean  @default(false)
+  createdAt         DateTime @default(now())
+  expiresAt         DateTime // 7 days from creation
+}
