@@ -540,7 +540,7 @@ export default function MarketingPage() {
             href="https://buy.stripe.com/5kA5kC5Vf1zZ8y0bJg"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#ea580c'}}
+            className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#ea580c'}}
           >
             Enroll Now - $197
           </a>
