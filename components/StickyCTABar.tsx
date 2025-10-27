@@ -40,13 +40,13 @@ export default function StickyCTABar() {
             {/* Left Side - Compelling Text Content */}
             <div className="flex-1 min-w-0 text-center sm:text-left">
               <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
-                <span className="text-2xl animate-pulse">🔥</span>
+                <span className="text-2xl">🎓</span>
                 <p className="text-white font-extrabold text-xl sm:text-2xl tracking-tight">
-                  Limited Time: Save $585 on Complete Bundle
+                  Start Your Transformation Today
                 </p>
               </div>
               <p className="text-white/95 text-base font-medium">
-                Join 10,000+ professionals transforming their careers
+                Founding member pricing available • 30-day money-back guarantee
               </p>
             </div>
 

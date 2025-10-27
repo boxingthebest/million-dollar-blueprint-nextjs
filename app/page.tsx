@@ -342,8 +342,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Countdown Timer */}
-      <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 py-8 relative overflow-hidden">
+      {/* Launch Pricing Banner */}
+      <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 py-6 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse" />
@@ -352,29 +352,11 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center text-white">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4 animate-bounce">
-              <span className="text-sm md:text-base font-bold">🔥 LIMITED TIME OFFER</span>
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-2">
+              <span className="text-sm md:text-base font-bold">🎉 FOUNDING MEMBER PRICING</span>
             </div>
-            <p className="text-2xl md:text-3xl font-bold mb-2">Founding Member Pricing Ends In:</p>
-            <p className="text-sm md:text-base mb-6 opacity-90">Lock in lifetime access at the lowest price you'll ever see</p>
-            <div className="flex justify-center gap-3 md:gap-6">
-              <div className="bg-white/30 backdrop-blur-md rounded-xl px-4 md:px-8 py-4 md:py-6 shadow-2xl hover:scale-105 transition-transform">
-                <div className="text-3xl md:text-5xl font-bold drop-shadow-lg">{timeLeft.days}</div>
-                <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wider">Days</div>
-              </div>
-              <div className="bg-white/30 backdrop-blur-md rounded-xl px-4 md:px-8 py-4 md:py-6 shadow-2xl hover:scale-105 transition-transform">
-                <div className="text-3xl md:text-5xl font-bold drop-shadow-lg">{timeLeft.hours}</div>
-                <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wider">Hours</div>
-              </div>
-              <div className="bg-white/30 backdrop-blur-md rounded-xl px-4 md:px-8 py-4 md:py-6 shadow-2xl hover:scale-105 transition-transform">
-                <div className="text-3xl md:text-5xl font-bold drop-shadow-lg">{timeLeft.minutes}</div>
-                <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wider">Minutes</div>
-              </div>
-              <div className="bg-white/30 backdrop-blur-md rounded-xl px-4 md:px-8 py-4 md:py-6 shadow-2xl hover:scale-105 transition-transform animate-pulse">
-                <div className="text-3xl md:text-5xl font-bold drop-shadow-lg">{timeLeft.seconds}</div>
-                <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wider">Seconds</div>
-              </div>
-            </div>
+            <p className="text-xl md:text-2xl font-bold mb-1">Lock in lifetime access at our lowest price ever</p>
+            <p className="text-sm md:text-base opacity-90">Early adopter pricing available during launch period</p>
           </div>
         </div>
       </section>
@@ -809,6 +791,9 @@ export default function Home() {
                 </div>
               )})}
             </div>
+            <p className="text-center text-slate-500 text-sm mt-8 max-w-3xl mx-auto">
+              *Individual results shown. Results may vary based on individual effort, experience, and market conditions. These testimonials represent exceptional outcomes and are not typical. Your results will depend on your dedication and implementation of the strategies taught.
+            </p>
           </div>
         </div>
       </section>
@@ -907,7 +892,7 @@ export default function Home() {
               </p>
             )}
             <p className="text-slate-400 text-sm mt-4">🔒 We respect your privacy. Unsubscribe anytime.</p>
-            <p className="text-cyan-400 text-sm font-semibold mt-2">Join 10,000+ Subscribers</p>
+            <p className="text-cyan-400 text-sm font-semibold mt-2">Join our growing community of professionals</p>
           </div>
         </div>
       </section>

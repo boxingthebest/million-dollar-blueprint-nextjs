@@ -117,6 +117,9 @@ export default function ValueProposition() {
               <p className="text-slate-400 text-sm">Years into hours</p>
             </div>
           </div>
+          <p className="text-center text-slate-500 text-xs mt-8 max-w-2xl mx-auto">
+            *$47K average salary increase based on self-reported data from students who completed courses and implemented strategies. Individual results vary significantly based on effort, experience, industry, and market conditions. Past performance does not guarantee future results.
+          </p>
         </div>
       </div>
     </section>
