@@ -6,9 +6,6 @@ import { X, Download, ArrowRight, Check } from "lucide-react"
 export default function LeadMagnetPopup() {
   const [isVisible, setIsVisible] = useState(false)
   const [email, setEmail] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
-  const [submitMessage, setSubmitMessage] = useState("")
 
   useEffect(() => {
     // Check if user has already seen the popup
@@ -42,44 +39,17 @@ export default function LeadMagnetPopup() {
     localStorage.setItem("hasSeenLeadMagnet", "true")
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus("idle")
-    setSubmitMessage("")
-
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      })
-
-      const data = await response.json()
-
-      if (response.ok) {
-        setSubmitStatus("success")
-        setSubmitMessage("🎉 Success! Redirecting to your free video course...")
-        setEmail("")
-        // Mark as seen so popup doesn't show again
-        localStorage.setItem("hasSeenLeadMagnet", "true")
-        
-        // Redirect to video course page after 2 seconds
-        setTimeout(() => {
-          window.location.href = "/free-video-course"
-        }, 2000)
-      } else {
-        setSubmitStatus("error")
-        setSubmitMessage(data.error || "Something went wrong. Please try again.")
-      }
-    } catch (error) {
-      setSubmitStatus("error")
-      setSubmitMessage("Network error. Please check your connection.")
-    } finally {
-      setIsSubmitting(false)
-    }
+    
+    // Store email in localStorage to pre-fill the form on landing page
+    localStorage.setItem("leadMagnetEmail", email)
+    
+    // Mark as seen so popup doesn't show again
+    localStorage.setItem("hasSeenLeadMagnet", "true")
+    
+    // Redirect to free video course page immediately
+    window.location.href = "/free-video-course"
   }
 
   if (!isVisible) return null
@@ -157,43 +127,28 @@ export default function LeadMagnetPopup() {
             </div>
             
             {/* Form */}
-            {submitStatus !== "success" ? (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email address"
-                    required
-                    className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 transition-colors"
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold shadow-lg shadow-orange-500/50 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-                  >
-                    {isSubmitting ? "Sending..." : "Get Free Video Guide"} <ArrowRight className="ml-2 w-5 h-5" />
-                  </button>
-                </div>
-                
-                {submitStatus === "error" && (
-                  <p className="text-red-400 text-sm">{submitMessage}</p>
-                )}
-                
-                <p className="text-slate-400 text-xs text-center">
-                  🔒 We respect your privacy. Unsubscribe anytime.
-                </p>
-              </form>
-            ) : (
-              <div className="text-center py-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/20 rounded-full mb-4">
-                  <Check className="w-8 h-8 text-green-400" />
-                </div>
-                <p className="text-xl text-white font-semibold mb-2">{submitMessage}</p>
-                <p className="text-slate-400">This popup will close automatically...</p>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  required
+                  className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 transition-colors"
+                />
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-bold shadow-lg shadow-orange-500/50 transition-all hover:scale-105 whitespace-nowrap"
+                >
+                  Get Free Video Guide <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
               </div>
-            )}
+              
+              <p className="text-slate-400 text-xs text-center">
+                🔒 We respect your privacy. Unsubscribe anytime.
+              </p>
+            </form>
           </div>
         </div>
       </div>

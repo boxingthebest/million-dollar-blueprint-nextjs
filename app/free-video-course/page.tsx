@@ -48,6 +48,14 @@ export default function FreeVideoCourse() {
     if (accessGranted === 'true') {
       setHasAccess(true)
     }
+    
+    // Pre-fill email if coming from popup
+    const savedEmail = localStorage.getItem('leadMagnetEmail')
+    if (savedEmail) {
+      setEmailGateData(prev => ({ ...prev, email: savedEmail }))
+      // Clear the saved email after using it
+      localStorage.removeItem('leadMagnetEmail')
+    }
   }, [])
 
   const videos = [
