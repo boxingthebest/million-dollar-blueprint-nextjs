@@ -231,7 +231,7 @@ export default function MarketingPage() {
               href="#enroll"
               className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
-              Enroll Now - $197 (Originally $495 • Save 50%)
+              Enroll Now - $197 (Originally $395 • Save 50%)
             </a>
           </div>
         </div>
@@ -515,7 +515,7 @@ export default function MarketingPage() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-blue-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
           >
-            Enroll Now - $197 (Originally $495 • Save 50%)
+            Enroll Now - $197 (Originally $395 • Save 50%)
           </a>
         </div>
       </section>

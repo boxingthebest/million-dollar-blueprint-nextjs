@@ -279,7 +279,7 @@ export default function WellnessPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-emerald-500/50 transition-all"
               >
-                Enroll Now - $197 (Originally $495 • Save 50%) <ArrowRight className="ml-2" />
+                Enroll Now - $197 (Originally $395 • Save 50%) <ArrowRight className="ml-2" />
               </a>
               <a
                 href="#curriculum"
@@ -458,7 +458,7 @@ export default function WellnessPage() {
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-4 rounded-lg font-bold text-xl transition-all shadow-2xl mb-4"
               >
-                Enroll Now - $197 (Originally $495 • Save 50%)
+                Enroll Now - $197 (Originally $395 • Save 50%)
               </a>
               <p className="text-white text-sm">30-Day Money-Back Guarantee</p>
             </div>
@@ -594,7 +594,7 @@ export default function WellnessPage() {
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-6 rounded-lg font-bold text-2xl transition-all shadow-2xl"
             >
-              Enroll Now - $197 (Originally $495 • Save 50%)
+              Enroll Now - $197 (Originally $395 • Save 50%)
             </a>
             <p className="text-white text-sm mt-6">
               ✓ 30-Day Money-Back Guarantee &nbsp;&nbsp; ✓ Lifetime Access &nbsp;&nbsp; ✓ Instant Access

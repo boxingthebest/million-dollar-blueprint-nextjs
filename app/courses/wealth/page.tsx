@@ -219,7 +219,7 @@ export default function WealthPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-green-500/20 text-purple-300 px-6 py-2 rounded-full text-sm font-bold mb-6">
-              💰 $247 • 412 Students Enrolled • Only 47 Spots Left This Month
+              💰 $197 • 412 Students Enrolled • Only 47 Spots Left This Month
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Your Salary Won't Make You Rich. Your System Will.
@@ -231,7 +231,7 @@ export default function WealthPage() {
               href="#enroll"
               className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
-              Enroll Now - $247 (Originally $495 • Save 50%)
+              Enroll Now - $197 (Originally $395 • Save 50%)
             </a>
           </div>
         </div>
@@ -515,7 +515,7 @@ export default function WealthPage() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-green-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
           >
-            Enroll Now - $247 (Originally $495 • Save 50%)
+            Enroll Now - $197 (Originally $395 • Save 50%)
           </a>
         </div>
       </section>
