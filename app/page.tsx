@@ -157,15 +157,6 @@ export default function Home() {
       rating: 5
     },
     {
-      name: "Jennifer Park",
-      role: "Director of Engineering",
-      company: "Google",
-      text: "The High-Performance Wellness course saved my career and my health. I was burning out managing a 50-person team. Now I work smarter, not harder - 40-hour weeks with better results. This is essential for every tech leader.",
-      result1: "40-Hour Weeks",
-      result2: "Zero Burnout",
-      rating: 5
-    },
-    {
       name: "David Thompson",
       role: "Principal Consultant",
       company: "McKinsey & Company",
@@ -173,31 +164,13 @@ export default function Home() {
       result1: "$240K Contract",
       result2: "First Week ROI",
       rating: 5
-    },
-    {
-      name: "Amanda Foster",
-      role: "Head of Growth Marketing",
-      company: "Netflix",
-      text: "I was skeptical about another online course, but the 30-day guarantee made it risk-free. Best decision ever. I've implemented 15+ strategies that increased our user acquisition by 187%. My VP asked me to train the entire growth team.",
-      result1: "+187% Acquisition",
-      result2: "Promoted to VP",
-      rating: 5
-    },
-    {
-      name: "Robert Kim",
-      role: "Senior Investment Analyst",
-      company: "Goldman Sachs",
-      text: "The bundle was the best investment I've made in my career. Both courses together cost less than one day of executive coaching, but delivered 100x more value. The emotional intelligence module alone transformed how I interact with clients.",
-      result1: "100x ROI",
-      result2: "$2M+ Deals Closed",
-      rating: 5
     }
   ];
 
   const faqs = [
     {
-      question: "Who is this program for?",
-      answer: "This program is designed for ambitious professionals, entrepreneurs, and executives who want to future-proof their careers and build lasting wealth. Whether you're in tech, finance, consulting, or any other industry, these strategies apply universally."
+      question: "Is this right for me?",
+      answer: "These courses are designed for mid-career professionals (5-15 years of experience) making $60K-$150K who are ready to break into six figures and senior leadership. If you're ambitious, hardworking, but feeling stuck—and you want the insider frameworks used at Fortune 100 companies—this is for you. Entry-level professionals and students can benefit too, but the content is optimized for those with real-world experience to apply immediately."
     },
     {
       question: "How long do I have access to the courses?",
@@ -294,8 +267,8 @@ export default function Home() {
             <Image src="/logo-transparent.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-16 w-auto md:h-20 transition-all hover:scale-105" style={{imageRendering: 'auto', filter: 'drop-shadow(0 0 8px rgba(6, 182, 212, 0.4))'}} priority />
           </div>
           <div className="flex gap-4 md:gap-6 items-center">
-            <a href="#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">Courses</a>
-            <Link href="/about" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base hidden sm:inline">About</Link>
+            <a href="#courses" className="text-slate-300 hover:text-cyan-400 border-2 border-cyan-500/50 hover:border-cyan-400 px-4 md:px-6 py-2 rounded-lg transition-all font-semibold text-sm md:text-base">Courses</a>
+            <Link href="/about" className="text-slate-300 hover:text-cyan-400 border-2 border-cyan-500/50 hover:border-cyan-400 px-4 md:px-6 py-2 rounded-lg transition-all font-semibold text-sm md:text-base hidden sm:inline">About</Link>
             <Link 
               href="/auth/signin"
               className="bg-slate-800/80 hover:bg-slate-700 border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-cyan-200 px-4 md:px-6 py-2 rounded-lg font-bold transition-all text-sm md:text-base shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/30"
@@ -306,60 +279,13 @@ export default function Home() {
               href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 border-2 border-cyan-500/30 hover:border-cyan-400/50 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base shadow-lg shadow-orange-500/20"
             >
               Get Started
             </a>
           </div>
         </div>
       </nav>
-
-      {/* Founder's Welcome Video */}
-      <section className="py-12 md:py-16 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-slate-900 to-cyan-900/40" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-600/20 via-transparent to-transparent animate-pulse" style={{animationDuration: '4s'}} />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
-              A Message From Our Founders
-            </h2>
-            <p className="text-lg md:text-xl text-slate-400 text-center mb-8">
-              Discover why Million Dollar Blueprint is different from every other course platform
-            </p>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
-              <iframe 
-                src="https://player.vimeo.com/video/1130649118?badge=0&autopause=0&player_id=0&app_id=58479" 
-                className="w-full h-full"
-                frameBorder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
-                title="Million Dollar Blueprint - Your Blueprint to Millions"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Launch Pricing Banner */}
-      <section className="bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 py-6 relative overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-yellow-300 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}} />
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center text-white">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-2">
-              <span className="text-sm md:text-base font-bold">🎉 FOUNDING MEMBER PRICING</span>
-            </div>
-            <p className="text-xl md:text-2xl font-bold mb-1">Lock in lifetime access at our lowest price ever</p>
-            <p className="text-sm md:text-base opacity-90">Early adopter pricing available during launch period</p>
-          </div>
-        </div>
-      </section>
 
       {/* Hero Section */}
       <section className="py-16 md:py-32 relative overflow-hidden">
@@ -387,24 +313,41 @@ export default function Home() {
             
             {/* Premium Badge */}
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-pink-500/20 border border-orange-500/30 px-6 py-3 rounded-full mb-8 backdrop-blur-sm">
-              <span className="text-orange-400 text-2xl">⚡</span>
               <span className="text-white font-semibold text-sm md:text-base">AI-Resistant Skills Training</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-              Your Blueprint to
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Master the Skills That
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-400 to-purple-500 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">
-                A Million-Dollar Future
+                Create Real Wealth
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl lg:text-3xl text-slate-200 mb-6">
-              Advised by Executives from Amazon, Apple, Google, Goldman Sachs & McKinsey
+            <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
+              6 Online Courses to Accelerate Your Career
             </p>
             
-            <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Master the insider strategies from the world's most successful companies. Learn from advisors at Amazon, Apple, Google, Goldman Sachs & McKinsey who've scaled businesses from $500K to $50B+.
+            <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
+              For Ambitious Professionals Ready to Break Into Six Figures & Senior Leadership
+            </p>
+            
+            <p className="text-base md:text-lg text-slate-400 mb-6">
+              Frameworks from 22+ Years at Amazon, Goldman Sachs & Elite Tech Startups
+            </p>
+            
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 px-6 py-3 rounded-full mb-6 backdrop-blur-sm">
+              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-cyan-400">
+                <Image src="/dana-penza-headshot.png" alt="Dana Penza" width={40} height={40} className="object-cover" />
+              </div>
+              <div className="text-left">
+                <div className="text-cyan-400 font-bold text-sm">Created by Dana Penza</div>
+                <div className="text-slate-300 text-xs">22+ Years in Cloud Computing, Wall Street & Tech Startups</div>
+              </div>
+            </div>
+            
+            <p className="text-base md:text-lg text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Learn <strong className="text-white">AI-Resistant Skills</strong>, <strong className="text-white">Sales Mastery</strong>, <strong className="text-white">Leadership</strong>, <strong className="text-white">Digital Marketing</strong>, <strong className="text-white">Executive Wellness</strong> & <strong className="text-white">Wealth Building</strong> from battle-tested frameworks used to scale companies from $10M to $100M+.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -442,56 +385,232 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="bg-slate-900/50 backdrop-blur-sm border-y border-slate-800">
-        <div className="container mx-auto px-4 py-8 md:py-12">
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 opacity-60">
-            <div className="text-slate-300 font-semibold text-sm md:text-lg">ADVISED BY EXECUTIVES FROM:</div>
-            <div className="text-slate-500 text-base md:text-lg">Amazon</div>
-            <div className="text-slate-500 text-base md:text-lg">Apple</div>
-            <div className="text-slate-500 text-base md:text-lg">Google</div>
-            <div className="text-slate-500 text-base md:text-lg">Goldman Sachs</div>
-            <div className="text-slate-500 text-base md:text-lg">McKinsey & Company</div>
+      {/* Experience-Based Credibility Section */}
+      <section className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-y border-cyan-500/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:32px_32px]" />
+        
+        <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
+          <div className="text-center mb-8">
+            <p className="text-cyan-400 font-bold text-sm md:text-base mb-2">REAL-WORLD EXPERIENCE</p>
+            <h3 className="text-2xl md:text-3xl font-bold text-white">Frameworks from the World's Most Elite Companies</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-3">Fortune 100</div>
+              <div className="text-slate-300 text-base font-medium mb-2">Amazon • Google • Apple</div>
+              <div className="text-slate-400 text-sm">Microsoft • Meta • McKinsey</div>
+            </div>
+            <div className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-3">Wall Street Elite</div>
+              <div className="text-slate-300 text-base font-medium mb-2">Goldman Sachs • Morgan Stanley</div>
+              <div className="text-slate-400 text-sm">JP Morgan • Citigroup</div>
+            </div>
+            <div className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-3">Tech Unicorns</div>
+              <div className="text-slate-300 text-base font-medium mb-2">Salesforce • Oracle • Cisco</div>
+              <div className="text-slate-400 text-sm">$10M to $100M+ scaling expertise</div>
+            </div>
+          </div>
+          
+          {/* Personal Quote from Dana */}
+          <div className="text-center mt-10 mb-6">
+            <div className="max-w-3xl mx-auto bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-cyan-500/30 rounded-2xl p-8">
+              <div className="text-cyan-400 text-5xl mb-4">"</div>
+              <p className="text-white text-lg md:text-xl font-medium leading-relaxed mb-6">
+                I spent 22 years at Amazon, Goldman Sachs, and elite tech startups. I've partnered with advisors from Google, Apple, Microsoft, and more. Together, we've distilled decades of experience into frameworks you can implement in weeks—so you don't waste years figuring it out yourself.
+              </p>
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-cyan-400"></div>
+                <p className="text-cyan-400 font-semibold">Dana Penza</p>
+                <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-cyan-400"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-slate-400 text-sm md:text-base max-w-3xl mx-auto">These frameworks are developed from real-world experience at elite companies, with input from advisors across multiple industries. They are not affiliated with, endorsed by, or represent the proprietary methods of any company listed.</p>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* What You'll Learn - Course Preview Grid */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
-        {/* Background Grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(251,146,60,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(251,146,60,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" />
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.02)_1px,transparent_1px)] bg-[size:48px_48px]" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div className="text-center bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-400 rounded-xl p-8 hover:border-cyan-300 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all hover:scale-105 duration-300">
-              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2 drop-shadow-[0_0_20px_rgba(6,182,212,0.3)]">
-                <AnimatedCounter end={10000} /><span className="ml-1 text-cyan-400">+</span>
-              </div>
-              <div className="text-white text-sm md:text-lg font-bold">Students Enrolled</div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+                What You'll <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Master</span>
+              </h2>
+              <p className="text-xl md:text-2xl text-slate-300">6 courses designed to future-proof your career and accelerate your wealth</p>
             </div>
-            <div className="text-center bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border-2 border-emerald-400 rounded-xl p-8 hover:border-emerald-300 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all hover:scale-105 duration-300">
-              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500 mb-2 drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-                $<AnimatedCounter end={47} suffix="K" />
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {/* AI-Resistant Skills */}
+              <div className="group bg-gradient-to-br from-orange-900/20 to-red-900/20 border-2 border-orange-500/30 rounded-2xl p-6 md:p-8 hover:border-orange-400 hover:shadow-2xl hover:shadow-orange-500/20 transition-all hover:scale-105">
+                <div className="text-5xl mb-4">🧠</div>
+                <h3 className="text-2xl font-bold text-white mb-3">AI-Resistant Skills</h3>
+                <p className="text-slate-300 mb-4">Master the 5 human skills AI will never replace—from the boardrooms of Fortune 100 companies.</p>
+                <div className="text-orange-400 font-semibold text-sm">$197 • 253 enrolled</div>
               </div>
-              <div className="text-white text-sm md:text-lg font-bold">Avg Salary Increase</div>
+              
+              {/* Sales Mastery */}
+              <div className="group bg-gradient-to-br from-amber-900/20 to-orange-900/20 border-2 border-amber-500/30 rounded-2xl p-6 md:p-8 hover:border-amber-400 hover:shadow-2xl hover:shadow-amber-500/20 transition-all hover:scale-105">
+                <div className="text-5xl mb-4">💰</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Sales Mastery</h3>
+                <p className="text-slate-300 mb-4">Close high-ticket deals using frameworks that scaled companies from $500K to $50B+.</p>
+                <div className="text-amber-400 font-semibold text-sm">$247 • Coming Soon</div>
+              </div>
+              
+              {/* Leadership & Influence */}
+              <div className="group bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border-2 border-purple-500/30 rounded-2xl p-6 md:p-8 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/20 transition-all hover:scale-105">
+                <div className="text-5xl mb-4">👥</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Leadership & Influence</h3>
+                <p className="text-slate-300 mb-4">Command any room with executive presence strategies from Fortune 100 leaders.</p>
+                <div className="text-purple-400 font-semibold text-sm">$247 • Coming Soon</div>
+              </div>
+              
+              {/* Digital Marketing */}
+              <div className="group bg-gradient-to-br from-pink-900/20 to-rose-900/20 border-2 border-pink-500/30 rounded-2xl p-6 md:p-8 hover:border-pink-400 hover:shadow-2xl hover:shadow-pink-500/20 transition-all hover:scale-105">
+                <div className="text-5xl mb-4">📱</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Digital Marketing</h3>
+                <p className="text-slate-300 mb-4">Grow your brand online with enterprise-level tactics that drive real revenue.</p>
+                <div className="text-pink-400 font-semibold text-sm">$197 • Coming Soon</div>
+              </div>
+              
+              {/* Executive Energy */}
+              <div className="group bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border-2 border-emerald-500/30 rounded-2xl p-6 md:p-8 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all hover:scale-105">
+                <div className="text-5xl mb-4">⚡</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Executive Energy</h3>
+                <p className="text-slate-300 mb-4">Turn burnout into breakthrough with wellness protocols used by top executives.</p>
+                <div className="text-emerald-400 font-semibold text-sm">$197 • 187 enrolled</div>
+              </div>
+              
+              {/* Wealth Building */}
+              <div className="group bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/30 rounded-2xl p-6 md:p-8 hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all hover:scale-105">
+                <div className="text-5xl mb-4">💎</div>
+                <h3 className="text-2xl font-bold text-white mb-3">Wealth Building</h3>
+                <p className="text-slate-300 mb-4">Build lasting wealth with financial intelligence strategies from Wall Street insiders.</p>
+                <div className="text-cyan-400 font-semibold text-sm">$197 • Coming Soon</div>
+              </div>
             </div>
-            <div className="text-center bg-gradient-to-br from-orange-500/10 to-pink-500/10 border-2 border-orange-400 rounded-xl p-8 hover:border-orange-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 transition-all hover:scale-105 duration-300">
-              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 mb-2 drop-shadow-[0_0_20px_rgba(251,146,60,0.3)]">
-                <AnimatedCounter end={94} suffix="%" />
-              </div>
-              <div className="text-white text-sm md:text-lg font-bold">Satisfaction Rate</div>
-            </div>
-            <div className="text-center bg-gradient-to-br from-purple-500/10 to-indigo-500/10 border-2 border-purple-400 rounded-xl p-8 hover:border-purple-300 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all hover:scale-105 duration-300">
-              <div className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500 mb-2 drop-shadow-[0_0_20px_rgba(168,85,247,0.3)]">
-                <AnimatedCounter end={47} />
-              </div>
-              <div className="text-white text-sm md:text-lg font-bold">Countries Worldwide</div>
+            
+            <div className="text-center mt-12">
+              <a
+                href="#courses"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 md:px-12 py-4 md:py-5 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-cyan-500/30 transition-all hover:scale-105"
+              >
+                View All Course Details <ArrowRight className="ml-2" />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <ValueProposition />
+
+      {/* Founder's Welcome Video */}
+      <section className="py-16 md:py-24 bg-slate-950 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-slate-900 to-cyan-900/40" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-600/20 via-transparent to-transparent animate-pulse" style={{animationDuration: '4s'}} />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
+              A Message From <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Dana Penza</span>
+            </h2>
+            <p className="text-lg md:text-xl text-slate-400 text-center mb-8">
+              Discover why Million Dollar Blueprint is different from every other course platform
+            </p>
+            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
+              <iframe 
+                src="https://player.vimeo.com/video/1130649118?badge=0&autopause=0&player_id=0&app_id=58479" 
+                className="w-full h-full"
+                frameBorder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
+                title="Million Dollar Blueprint - Your Blueprint to Millions"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Your Instructor Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Learn From Someone Who's <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Been There</span>
+              </h2>
+              <p className="text-xl text-slate-300">Real Experience. Real Results. Real Frameworks.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-900/80 via-slate-800/50 to-slate-900/80 border border-cyan-500/30 rounded-3xl p-8 md:p-12 shadow-2xl shadow-cyan-500/10">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                {/* Photo */}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-2xl"></div>
+                  <Image 
+                    src="/dana-penza-headshot.png" 
+                    alt="Dana Penza - Founder & CEO" 
+                    width={500} 
+                    height={500}
+                    className="relative rounded-2xl shadow-2xl border-2 border-cyan-500/30"
+                  />
+                </div>
+
+                {/* Bio */}
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">Dana Penza</h3>
+                  <p className="text-xl text-cyan-400 font-semibold mb-6">Founder & CEO</p>
+                  
+                  <div className="space-y-4 text-slate-300 leading-relaxed mb-8">
+                    <p className="text-lg">
+                      Dana is not a theoretical coach. He's a <span className="text-white font-semibold">battle-tested executive with 22+ years</span> at the world's most elite companies, having driven <span className="text-cyan-400 font-semibold">hundreds of millions of dollars in revenue</span>.
+                    </p>
+                    <p>
+                      From <span className="text-white font-semibold">Amazon Web Services (AWS)</span> to <span className="text-white font-semibold">Goldman Sachs</span> and high-growth tech startups like <span className="text-white font-semibold">Rubrik, Citrix, and Perfecto</span>, Dana has seen what "good" looks like at the highest levels.
+                    </p>
+                    <p className="text-white font-semibold italic">
+                      "After helping companies scale from $10M to $100M+, I created Million Dollar Blueprint to share the frameworks I learned—not the theory they teach in business school."
+                    </p>
+                  </div>
+
+                  {/* Quick Stats */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-cyan-400 mb-1">22+</div>
+                      <div className="text-sm text-slate-400">Years Experience</div>
+                    </div>
+                    <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-cyan-400 mb-1">$100M+</div>
+                      <div className="text-sm text-slate-400">Revenue Driven</div>
+                    </div>
+                  </div>
+
+                  <Link 
+                    href="/about"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition transform hover:scale-105"
+                  >
+                    Learn More About Dana <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Courses Grid */}
       <section id="courses" className="py-16 md:py-24 bg-gradient-to-b from-slate-900 to-slate-950">
@@ -510,7 +629,7 @@ export default function Home() {
               {courses.map((course, idx) => {
                 const Icon = course.icon;
                 return (
-                  <div key={idx} className="bg-slate-800/50 border border-slate-700 hover:border-orange-500/50 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/20 hover:scale-105 duration-300 flex flex-col h-full">
+                  <div key={idx} className="bg-slate-800/50 border-2 border-slate-700/50 hover:border-orange-500/60 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/30 hover:scale-[1.02] duration-300 flex flex-col h-full cursor-pointer">
                     {course.badge && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {course.badge}
@@ -624,7 +743,7 @@ export default function Home() {
                 {/* Professional Bundle - MOST POPULAR */}
                 <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 border-4 border-purple-400 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 relative group flex flex-col h-full">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                    🔥 MOST POPULAR
+                    MOST POPULAR
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col flex-grow pt-4">
@@ -798,31 +917,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Transformation Visual Section */}
-      <section className="py-16 md:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Your Transformation Journey
-              </h2>
-              <p className="text-xl text-slate-400">
-                From overwhelmed professional to confident executive
-              </p>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
-              <Image
-                src="/transformation-visual.jpg"
-                alt="Career Transformation Before and After"
-                width={1200}
-                height={600}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -854,45 +948,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border-2 border-cyan-500/50 rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Get Exclusive Insider Strategies
-            </h2>
-            <p className="text-lg md:text-xl text-slate-300 mb-8">
-              Join our newsletter for course updates, free training, and insider tips from Amazon, Apple, Google, Goldman Sachs & McKinsey advisors
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                disabled={isSubmitting}
-                className="flex-1 px-6 py-4 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed"
-              />
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-bold transition-all whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "Subscribing..." : "Get Free Training"}
-              </button>
-            </form>
-            {submitMessage && (
-              <p className={`text-sm font-semibold mt-4 ${submitStatus === "success" ? "text-green-400" : "text-red-400"}`}>
-                {submitMessage}
-              </p>
-            )}
-            <p className="text-slate-400 text-sm mt-4">🔒 We respect your privacy. Unsubscribe anytime.</p>
-            <p className="text-cyan-400 text-sm font-semibold mt-2">Join our growing community of professionals</p>
           </div>
         </div>
       </section>
