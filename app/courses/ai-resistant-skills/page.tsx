@@ -328,7 +328,7 @@ export default function AIResistantSkillsPage() {
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
-                  src="https://player.vimeo.com/video/1129181469?badge=0&autopause=0&player_id=0&app_id=58479" 
+                  src="https://player.vimeo.com/video/1129181469?badge=0&autopause=0&player_id=0&app_id=58479&playsinline=1&muted=0" 
                   frameBorder="0" 
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                   referrerPolicy="strict-origin-when-cross-origin"
@@ -340,6 +340,7 @@ export default function AIResistantSkillsPage() {
                     height: '100%'
                   }}
                   title="AI-Resistant Skills: Master the 5 Skills AI Can't Replace"
+                  allowFullScreen
                 />
               </div>
             </div>

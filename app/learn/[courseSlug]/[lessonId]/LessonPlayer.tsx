@@ -135,7 +135,7 @@ export default function LessonPlayer({
     return (
       <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
         <iframe
-          src={`https://player.vimeo.com/video/${vimeoId}?title=0&byline=0&portrait=0&badge=0&autopause=0`}
+          src={`https://player.vimeo.com/video/${vimeoId}?title=0&byline=0&portrait=0&badge=0&autopause=0&playsinline=1&muted=0`}
           style={{
             position: 'absolute',
             top: 0,
