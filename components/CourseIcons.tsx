@@ -21,10 +21,8 @@ export const ExecutiveEnergyIcon = ({ className, style }: IconProps) => (
 
 export const SalesMasteryIcon = ({ className, style }: IconProps) => (
   <svg className={className} style={style} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 8C16 10.21 13.31 12 10 12C6.69 12 4 10.21 4 8C4 5.79 6.69 4 10 4C13.31 4 16 5.79 16 8Z" stroke="currentColor" strokeWidth="2"/>
-    <path d="M16 8V16C16 18.21 13.31 20 10 20C6.69 20 4 18.21 4 16V8" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M20 6V14C20 16.21 17.31 18 14 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M20 6C20 8.21 17.31 10 14 10C13.5 10 13 9.96 12.53 9.89" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M12 5C10.067 5 8.5 6.567 8.5 8.5V11H7C5.895 11 5 11.895 5 13V14C5 15.105 5.895 16 7 16H8.5V18.5C8.5 20.433 10.067 22 12 22C13.933 22 15.5 20.433 15.5 18.5V16H17C18.105 16 19 15.105 19 14V13C19 11.895 18.105 11 17 11H15.5V8.5C15.5 6.567 13.933 5 12 5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+    <path d="M8.5 13.5H15.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
   </svg>
 );
 
