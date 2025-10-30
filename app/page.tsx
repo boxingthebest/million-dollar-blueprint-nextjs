@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowRight, Star, TrendingUp, Heart, Brain, DollarSign, Users, Target, BarChart3, Facebook, Instagram, Mail, Check, ChevronDown } from "lucide-react";
+import { ArrowRight, Star, Facebook, Instagram, Mail, Check, ChevronDown } from "lucide-react";
+import { AIResistantIcon, ExecutiveEnergyIcon, SalesMasteryIcon, LeadershipIcon, DigitalMarketingIcon, WealthBuildingIcon } from "@/components/CourseIcons";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -52,7 +53,7 @@ export default function Home() {
       subtitle: "Future-Proof Your Career",
       price: "$197",
       originalPrice: "$395",
-      icon: Brain,
+      icon: AIResistantIcon,
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
       stripeLink: "https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00",
@@ -66,7 +67,7 @@ export default function Home() {
       subtitle: "Turn Burnout Into Breakthrough",
       price: "$197",
       originalPrice: "$395",
-      icon: Heart,
+      icon: ExecutiveEnergyIcon,
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500 to-teal-600",
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
@@ -80,7 +81,7 @@ export default function Home() {
       subtitle: "Close High-Ticket Deals",
       price: "$247",
       originalPrice: "$495",
-      icon: TrendingUp,
+      icon: SalesMasteryIcon,
       gradient: "from-orange-500 to-amber-600",
       bgGradient: "from-orange-500 to-amber-600",
       stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
@@ -95,7 +96,7 @@ export default function Home() {
       subtitle: "Command Any Room",
       price: "$247",
       originalPrice: "$495",
-      icon: Users,
+      icon: LeadershipIcon,
       gradient: "from-purple-500 to-indigo-600",
       bgGradient: "from-purple-500 to-indigo-600",
       stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
@@ -110,7 +111,7 @@ export default function Home() {
       subtitle: "Grow Your Brand Online",
       price: "$197",
       originalPrice: "$395",
-      icon: BarChart3,
+      icon: DigitalMarketingIcon,
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-500 to-blue-600",
       stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
@@ -125,7 +126,7 @@ export default function Home() {
       subtitle: "Financial Intelligence",
       price: "$197",
       originalPrice: "$395",
-      icon: DollarSign,
+      icon: WealthBuildingIcon,
       gradient: "from-emerald-500 to-green-600",
       bgGradient: "from-emerald-500/10 to-green-500/10",
       stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
