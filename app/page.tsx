@@ -5,6 +5,7 @@ import { AIResistantIcon, ExecutiveEnergyIcon, SalesMasteryIcon, LeadershipIcon,
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
 import ValueProposition from "@/components/ValueProposition";
@@ -397,21 +398,39 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0 }}
+              className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center"
+            >
               <div className="text-3xl font-bold text-cyan-400 mb-3">Fortune 100</div>
               <div className="text-slate-300 text-base font-medium mb-2">Amazon • Google • Apple</div>
               <div className="text-slate-400 text-sm">Microsoft • Meta • McKinsey</div>
-            </div>
-            <div className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center"
+            >
               <div className="text-3xl font-bold text-cyan-400 mb-3">Wall Street Elite</div>
               <div className="text-slate-300 text-base font-medium mb-2">Goldman Sachs • Morgan Stanley</div>
               <div className="text-slate-400 text-sm">JP Morgan • Citigroup</div>
-            </div>
-            <div className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-slate-900/50 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all text-center"
+            >
               <div className="text-3xl font-bold text-cyan-400 mb-3">Tech Unicorns</div>
               <div className="text-slate-300 text-base font-medium mb-2">Salesforce • Oracle • Cisco</div>
               <div className="text-slate-400 text-sm">$10M to $100M+ scaling expertise</div>
-            </div>
+            </motion.div>
           </div>
           
           {/* Personal Quote from Dana */}
@@ -453,64 +472,100 @@ export default function Home() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* AI-Resistant Skills */}
-              <div className="group bg-gradient-to-br from-orange-900/20 to-red-900/20 border-2 border-orange-500/30 rounded-2xl p-6 md:p-8 hover:border-orange-400 hover:shadow-2xl hover:shadow-orange-500/20 transition-all hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0 }}
+                className="group bg-gradient-to-br from-orange-900/20 to-red-900/20 border-2 border-orange-500/30 rounded-2xl p-6 md:p-8 hover:border-orange-400 hover:shadow-2xl hover:shadow-orange-500/20 transition-all hover:scale-105"
+              >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mb-4">
                   <AIResistantIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">AI-Resistant Skills</h3>
                 <p className="text-slate-300 mb-4">Master the 5 human skills AI will never replace—from the boardrooms of Fortune 100 companies.</p>
                 <div className="text-orange-400 font-semibold text-sm">$197 • 253 enrolled</div>
-              </div>
+              </motion.div>
               
               {/* Sales Mastery */}
-              <div className="group bg-gradient-to-br from-amber-900/20 to-orange-900/20 border-2 border-amber-500/30 rounded-2xl p-6 md:p-8 hover:border-amber-400 hover:shadow-2xl hover:shadow-amber-500/20 transition-all hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="group bg-gradient-to-br from-amber-900/20 to-orange-900/20 border-2 border-amber-500/30 rounded-2xl p-6 md:p-8 hover:border-amber-400 hover:shadow-2xl hover:shadow-amber-500/20 transition-all hover:scale-105"
+              >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center mb-4">
                   <SalesMasteryIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Sales Mastery</h3>
                 <p className="text-slate-300 mb-4">Close high-ticket deals using frameworks that scaled companies from $500K to $50B+.</p>
                 <div className="text-amber-400 font-semibold text-sm">$247 • Coming Soon</div>
-              </div>
+              </motion.div>
               
               {/* Leadership & Influence */}
-              <div className="group bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border-2 border-purple-500/30 rounded-2xl p-6 md:p-8 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/20 transition-all hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="group bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border-2 border-purple-500/30 rounded-2xl p-6 md:p-8 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/20 transition-all hover:scale-105"
+              >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-4">
                   <LeadershipIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Leadership & Influence</h3>
                 <p className="text-slate-300 mb-4">Command any room with executive presence strategies from Fortune 100 leaders.</p>
                 <div className="text-purple-400 font-semibold text-sm">$247 • Coming Soon</div>
-              </div>
+              </motion.div>
               
               {/* Digital Marketing */}
-              <div className="group bg-gradient-to-br from-pink-900/20 to-rose-900/20 border-2 border-pink-500/30 rounded-2xl p-6 md:p-8 hover:border-pink-400 hover:shadow-2xl hover:shadow-pink-500/20 transition-all hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="group bg-gradient-to-br from-pink-900/20 to-rose-900/20 border-2 border-pink-500/30 rounded-2xl p-6 md:p-8 hover:border-pink-400 hover:shadow-2xl hover:shadow-pink-500/20 transition-all hover:scale-105"
+              >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
                   <DigitalMarketingIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Digital Marketing</h3>
                 <p className="text-slate-300 mb-4">Grow your brand online with enterprise-level tactics that drive real revenue.</p>
                 <div className="text-pink-400 font-semibold text-sm">$197 • Coming Soon</div>
-              </div>
+              </motion.div>
               
               {/* Executive Energy */}
-              <div className="group bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border-2 border-emerald-500/30 rounded-2xl p-6 md:p-8 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="group bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border-2 border-emerald-500/30 rounded-2xl p-6 md:p-8 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all hover:scale-105"
+              >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-4">
                   <ExecutiveEnergyIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Executive Energy</h3>
                 <p className="text-slate-300 mb-4">Turn burnout into breakthrough with wellness protocols used by top executives.</p>
                 <div className="text-emerald-400 font-semibold text-sm">$197 • 187 enrolled</div>
-              </div>
+              </motion.div>
               
               {/* Wealth Building */}
-              <div className="group bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/30 rounded-2xl p-6 md:p-8 hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="group bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/30 rounded-2xl p-6 md:p-8 hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all hover:scale-105"
+              >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center mb-4">
                   <WealthBuildingIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Wealth Building</h3>
                 <p className="text-slate-300 mb-4">Build lasting wealth with financial intelligence strategies from Wall Street insiders.</p>
                 <div className="text-cyan-400 font-semibold text-sm">$197 • Coming Soon</div>
-              </div>
+              </motion.div>
             </div>
             
             <div className="text-center mt-12">
@@ -643,7 +698,14 @@ export default function Home() {
               {courses.map((course, idx) => {
                 const Icon = course.icon;
                 return (
-                  <div key={idx} className="bg-slate-800/50 border-2 border-slate-700/50 hover:border-orange-500/60 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/30 hover:scale-[1.02] duration-300 flex flex-col h-full cursor-pointer">
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    className="bg-slate-800/50 border-2 border-slate-700/50 hover:border-orange-500/60 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/30 hover:scale-[1.02] duration-300 flex flex-col h-full cursor-pointer"
+                  >
                     {course.badge && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {course.badge}
@@ -695,7 +757,7 @@ export default function Home() {
                         </Link>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
