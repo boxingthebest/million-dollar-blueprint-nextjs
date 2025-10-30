@@ -454,7 +454,9 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {/* AI-Resistant Skills */}
               <div className="group bg-gradient-to-br from-orange-900/20 to-red-900/20 border-2 border-orange-500/30 rounded-2xl p-6 md:p-8 hover:border-orange-400 hover:shadow-2xl hover:shadow-orange-500/20 transition-all hover:scale-105">
-                <div className="text-5xl mb-4">🧠</div>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mb-4">
+                  <AIResistantIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
+                </div>
                 <h3 className="text-2xl font-bold text-white mb-3">AI-Resistant Skills</h3>
                 <p className="text-slate-300 mb-4">Master the 5 human skills AI will never replace—from the boardrooms of Fortune 100 companies.</p>
                 <div className="text-orange-400 font-semibold text-sm">$197 • 253 enrolled</div>
@@ -462,7 +464,9 @@ export default function Home() {
               
               {/* Sales Mastery */}
               <div className="group bg-gradient-to-br from-amber-900/20 to-orange-900/20 border-2 border-amber-500/30 rounded-2xl p-6 md:p-8 hover:border-amber-400 hover:shadow-2xl hover:shadow-amber-500/20 transition-all hover:scale-105">
-                <div className="text-5xl mb-4">💰</div>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center mb-4">
+                  <SalesMasteryIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
+                </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Sales Mastery</h3>
                 <p className="text-slate-300 mb-4">Close high-ticket deals using frameworks that scaled companies from $500K to $50B+.</p>
                 <div className="text-amber-400 font-semibold text-sm">$247 • Coming Soon</div>
@@ -470,7 +474,9 @@ export default function Home() {
               
               {/* Leadership & Influence */}
               <div className="group bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border-2 border-purple-500/30 rounded-2xl p-6 md:p-8 hover:border-purple-400 hover:shadow-2xl hover:shadow-purple-500/20 transition-all hover:scale-105">
-                <div className="text-5xl mb-4">👥</div>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center mb-4">
+                  <LeadershipIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
+                </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Leadership & Influence</h3>
                 <p className="text-slate-300 mb-4">Command any room with executive presence strategies from Fortune 100 leaders.</p>
                 <div className="text-purple-400 font-semibold text-sm">$247 • Coming Soon</div>
@@ -478,7 +484,9 @@ export default function Home() {
               
               {/* Digital Marketing */}
               <div className="group bg-gradient-to-br from-pink-900/20 to-rose-900/20 border-2 border-pink-500/30 rounded-2xl p-6 md:p-8 hover:border-pink-400 hover:shadow-2xl hover:shadow-pink-500/20 transition-all hover:scale-105">
-                <div className="text-5xl mb-4">📱</div>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
+                  <DigitalMarketingIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
+                </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Digital Marketing</h3>
                 <p className="text-slate-300 mb-4">Grow your brand online with enterprise-level tactics that drive real revenue.</p>
                 <div className="text-pink-400 font-semibold text-sm">$197 • Coming Soon</div>
@@ -486,7 +494,9 @@ export default function Home() {
               
               {/* Executive Energy */}
               <div className="group bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border-2 border-emerald-500/30 rounded-2xl p-6 md:p-8 hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all hover:scale-105">
-                <div className="text-5xl mb-4">⚡</div>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-4">
+                  <ExecutiveEnergyIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
+                </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Executive Energy</h3>
                 <p className="text-slate-300 mb-4">Turn burnout into breakthrough with wellness protocols used by top executives.</p>
                 <div className="text-emerald-400 font-semibold text-sm">$197 • 187 enrolled</div>
@@ -494,7 +504,9 @@ export default function Home() {
               
               {/* Wealth Building */}
               <div className="group bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border-2 border-cyan-500/30 rounded-2xl p-6 md:p-8 hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all hover:scale-105">
-                <div className="text-5xl mb-4">💎</div>
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center mb-4">
+                  <WealthBuildingIcon className="w-10 h-10 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
+                </div>
                 <h3 className="text-2xl font-bold text-white mb-3">Wealth Building</h3>
                 <p className="text-slate-300 mb-4">Build lasting wealth with financial intelligence strategies from Wall Street insiders.</p>
                 <div className="text-cyan-400 font-semibold text-sm">$197 • Coming Soon</div>
@@ -699,7 +711,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col flex-grow">
                   <div className="inline-block bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-cyan-400/30">
-                    💎 STARTER
+                    STARTER
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose 3 Courses</h3>
                   <p className="text-lg text-slate-300 mb-8">
