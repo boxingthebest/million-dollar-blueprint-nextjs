@@ -1,3 +1,4 @@
+// Professional custom SVG icons for course cards
 import { CSSProperties } from 'react';
 
 interface IconProps {
