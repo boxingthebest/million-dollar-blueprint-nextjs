@@ -34,3 +34,25 @@ body {
   animation: shimmer 2s infinite;
 }
 
+/* Sophisticated pulse animation for CTA buttons */
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 0 20px 60px rgba(251, 146, 60, 0.5);
+  }
+  50% {
+    box-shadow: 0 20px 80px rgba(251, 146, 60, 0.7);
+  }
+}
+
+.cta-pulse {
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+/* Smooth hover transitions */
+.smooth-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.smooth-hover:hover {
+  transform: translateY(-4px);
+}
