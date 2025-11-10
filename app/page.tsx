@@ -344,7 +344,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-400 to-purple-500 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)] animate-gradient-text inline-block"
+                className="holographic-text inline-block"
               >
                 Create Real Wealth
               </motion.span>
@@ -411,7 +411,7 @@ export default function Home() {
                 href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative inline-flex items-center justify-center bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500 bg-size-200 hover:bg-right text-white px-10 md:px-14 py-5 md:py-7 rounded-xl text-xl md:text-2xl font-bold cta-pulse transition-all shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/80 overflow-hidden group"
+                className="neon-button relative inline-flex items-center justify-center bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500 text-white px-10 md:px-14 py-5 md:py-7 rounded-xl text-xl md:text-2xl font-bold overflow-hidden group"
                 style={{ backgroundSize: '200% 100%' }}
               >
                 <span className="relative z-10 flex items-center">
@@ -428,7 +428,7 @@ export default function Home() {
               </motion.a>
               <a
                 href="#courses"
-                className="inline-flex items-center justify-center border-2 border-pink-400 text-pink-300 hover:bg-pink-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold smooth-hover"
+                className="neon-button-cyan inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold"
               >
                 Browse Courses
               </a>
@@ -594,7 +594,7 @@ export default function Home() {
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                     className="h-full"
                   >
-                    <TiltCard className="bg-slate-800/50 border-2 border-slate-700/50 hover:border-orange-500/60 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/30 duration-300 flex flex-col h-full cursor-pointer animate-border-glow">
+                    <TiltCard className="glass-card rounded-xl overflow-hidden group relative duration-300 flex flex-col h-full cursor-pointer">
                     {course.badge && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {course.badge}
