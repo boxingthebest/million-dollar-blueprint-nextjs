@@ -12,6 +12,7 @@ interface Message {
 export default function ApexChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -36,16 +37,29 @@ export default function ApexChatbot() {
       setIsVisible(true);
     }, 5000); // Show after 5 seconds
 
+    let scrollTimer: NodeJS.Timeout;
+
     const handleScroll = () => {
+      // Make chatbot visible if scrolled down
       if (window.scrollY > window.innerHeight * 0.5) {
         setIsVisible(true);
       }
+
+      // Hide chatbot while scrolling
+      setIsScrolling(true);
+
+      // Show chatbot 1 second after scrolling stops
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        setIsScrolling(false);
+      }, 1000);
     };
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       clearTimeout(timer);
+      clearTimeout(scrollTimer);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -89,7 +103,7 @@ export default function ApexChatbot() {
   return (
     <>
       {/* Floating Chat Button */}
-      {isVisible && !isOpen && (
+      {isVisible && !isOpen && !isScrolling && (
         <button
           onClick={() => setIsOpen(true)}
           className="fixed bottom-24 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full p-2 shadow-2xl hover:scale-110 transition-all duration-300 group"
