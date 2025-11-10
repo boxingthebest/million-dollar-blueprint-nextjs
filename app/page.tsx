@@ -363,7 +363,7 @@ export default function Home() {
               </a>
               <a
                 href="#courses"
-                className="inline-flex items-center justify-center border-2 border-pink-400 text-pink-300 hover:bg-pink-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold transition-all hover:scale-105"
+                className="inline-flex items-center justify-center border-2 border-pink-400 text-pink-300 hover:bg-pink-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold smooth-hover"
               >
                 Browse Courses
               </a>
@@ -571,7 +571,7 @@ export default function Home() {
             <div className="text-center mt-12">
               <a
                 href="#courses"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 md:px-12 py-4 md:py-5 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-cyan-500/30 transition-all hover:scale-105"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 md:px-12 py-4 md:py-5 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-cyan-500/30 smooth-hover"
               >
                 View All Course Details <ArrowRight className="ml-2" />
               </a>
