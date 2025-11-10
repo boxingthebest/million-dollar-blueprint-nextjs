@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
 import ValueProposition from "@/components/ValueProposition";
+import ApexChatbot from "@/components/ApexChatbot";
 
 
 export default function Home() {
@@ -1099,8 +1100,10 @@ export default function Home() {
       {/* Sticky CTA Bar */}
       <StickyCTABar />
       
-
+      {/* Apex AI Chatbot */}
+      <ApexChatbot />
+      
     </div>
   );
-}
+}}
 
