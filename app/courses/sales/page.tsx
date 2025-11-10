@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import AnimatedMeshBackground from "@/components/AnimatedMeshBackground";
 import TiltCard from "@/components/TiltCard";
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, TrendingUp } from "lucide-react";

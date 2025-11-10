@@ -1,7 +1,6 @@
 "use client";
 import FuturisticBackground from "@/components/FuturisticBackground";
 import HeroSectionDivider from "@/components/HeroSectionDivider";
-import AnimatedMeshBackground from "@/components/AnimatedMeshBackground";
 import TiltCard from "@/components/TiltCard";
 import { motion } from "framer-motion";
 

@@ -10,7 +10,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
 import ValueProposition from "@/components/ValueProposition";
 import ApexChatbot from "@/components/ApexChatbot";
-import AnimatedMeshBackground from "@/components/AnimatedMeshBackground";
+
 import TiltCard from "@/components/TiltCard";
 import TrustBadgeCarousel from "@/components/TrustBadgeCarousel";
 import ScrollIndicator from "@/components/ScrollIndicator";
@@ -310,8 +310,7 @@ export default function Home() {
           {/* Futuristic Grid Overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
           
-          {/* Animated Mesh Background */}
-          <AnimatedMeshBackground variant="default" />
+
           
           {/* Glowing Orbs */}
           <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />

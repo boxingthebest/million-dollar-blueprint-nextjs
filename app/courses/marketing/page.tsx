@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import FuturisticBackground from "@/components/FuturisticBackground";
-import AnimatedMeshBackground from "@/components/AnimatedMeshBackground";
 import TiltCard from "@/components/TiltCard";
 import { motion } from "framer-motion";
 import HeroSectionDivider from "@/components/HeroSectionDivider";
