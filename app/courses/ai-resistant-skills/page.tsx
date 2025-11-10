@@ -1,6 +1,9 @@
 "use client";
 import FuturisticBackground from "@/components/FuturisticBackground";
 import HeroSectionDivider from "@/components/HeroSectionDivider";
+import FloatingParticles from "@/components/FloatingParticles";
+import TiltCard from "@/components/TiltCard";
+import { motion } from "framer-motion";
 
 import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, TrendingUp } from "lucide-react";
 import Image from "next/image";
@@ -226,9 +229,16 @@ export default function AIResistantSkillsPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden animated-gradient-bg">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
         <div className="absolute inset-0 bg-[url('/course-ai-skills.jpg')] opacity-10 bg-cover bg-center" />
+        
+        {/* Floating Particles */}
+        <FloatingParticles />
+        
+        {/* Glowing Orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-glow-pulse" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-glow-pulse" style={{animationDelay: '2s'}} />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
@@ -236,13 +246,30 @@ export default function AIResistantSkillsPage() {
               ⚡ Limited Founding Member Pricing - Ends Soon
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Master the 5 Skills AI Can't Replace—
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="inline-block"
+              >
+                Master the 5 Skills AI Can't Replace—
+              </motion.span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">
+              <motion.span 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 animate-gradient-text inline-block"
+              >
                 And Command a Million-Dollar Career
-              </span>
-            </h1>
+              </motion.span>
+            </motion.h1>
             
             <p className="text-xl md:text-2xl text-white mb-6">
               McKinsey-level strategic frameworks for Fortune 100 career advancement

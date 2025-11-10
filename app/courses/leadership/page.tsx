@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import FuturisticBackground from "@/components/FuturisticBackground";
+import FloatingParticles from "@/components/FloatingParticles";
+import TiltCard from "@/components/TiltCard";
+import { motion } from "framer-motion";
 import HeroSectionDivider from "@/components/HeroSectionDivider";
 
 import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, TrendingUp } from "lucide-react";
@@ -212,9 +215,16 @@ export default function LeadershipPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden animated-gradient-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-slate-900 to-pink-900/20" />
         <div className="absolute inset-0 bg-[url('/course-leadership.jpg')] bg-cover bg-center opacity-10" />
+        
+        {/* Floating Particles */}
+        <FloatingParticles />
+        
+        {/* Glowing Orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-glow-pulse" style={{animationDelay: '2s'}} />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
