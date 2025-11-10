@@ -469,3 +469,17 @@ body {
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
 }
+
+/* Bundle Card Pulse Glow Animation */
+@keyframes bundle-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(236, 72, 153, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(236, 72, 153, 0.4);
+  }
+}
+
+.bundle-pulse {
+  animation: bundle-pulse 2s ease-in-out infinite;
+}

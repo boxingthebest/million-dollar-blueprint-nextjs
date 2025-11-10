@@ -63,7 +63,7 @@ export default function Home() {
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
       stripeLink: "https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00",
-      description: "Master the 5 human skills AI will never replace. From the boardrooms of AWS & Goldman Sachs.",
+      description: "Master the 5 human skills AI can't replace. From AWS & Goldman Sachs boardrooms.",
       students: "253 enrolled",
       image: "/ai-resistant-hero-new.jpg",
       available: true
@@ -77,7 +77,7 @@ export default function Home() {
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500 to-teal-600",
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
-      description: "What Fortune 100 executives pay $2,997 for in executive coaching. Yours for $197.",
+      description: "Fortune 100 executive coaching ($2,997 value) for $197.",
       students: "187 enrolled",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
       available: true
@@ -91,7 +91,7 @@ export default function Home() {
       gradient: "from-orange-500 to-amber-600",
       bgGradient: "from-orange-500 to-amber-600",
       stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
-      description: "The exact sales frameworks used to scale companies from $500K to $50B+.",
+      description: "Sales frameworks that scaled companies from $500K to $50B+.",
       students: "Coming Soon",
       image: "/course-sales-new.jpg",
       available: true,
@@ -106,7 +106,7 @@ export default function Home() {
       gradient: "from-purple-500 to-indigo-600",
       bgGradient: "from-purple-500 to-indigo-600",
       stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
-      description: "Fortune 100 leadership strategies for executive presence and influence.",
+      description: "Fortune 100 leadership strategies for executive presence.",
       students: "Coming Soon",
       image: "/course-leadership-new.jpg",
       available: true,
@@ -121,7 +121,7 @@ export default function Home() {
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-500 to-blue-600",
       stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
-      description: "Enterprise-level digital marketing tactics that drive real revenue.",
+      description: "Enterprise digital marketing tactics that drive revenue.",
       students: "Coming Soon",
       image: "/course-marketing-new.jpg",
       available: true,
@@ -136,7 +136,7 @@ export default function Home() {
       gradient: "from-emerald-500 to-green-600",
       bgGradient: "from-emerald-500/10 to-green-500/10",
       stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
-      description: "Build lasting wealth with strategies from Wall Street insiders.",
+      description: "Build wealth with Wall Street insider strategies.",
       students: "Coming Soon",
       image: "/course-wealth-new.jpg",
       available: true,
@@ -643,7 +643,7 @@ export default function Home() {
                 </div>
 
                 {/* Professional Bundle - MOST POPULAR */}
-                <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 border-4 border-purple-400 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 relative group flex flex-col h-full">
+                <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 border-4 border-purple-400 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 relative group flex flex-col h-full bundle-pulse">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                     MOST POPULAR
                   </div>
