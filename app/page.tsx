@@ -10,8 +10,10 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
 import ValueProposition from "@/components/ValueProposition";
 import ApexChatbot from "@/components/ApexChatbot";
-import FloatingParticles from "@/components/FloatingParticles";
+import AnimatedMeshBackground from "@/components/AnimatedMeshBackground";
 import TiltCard from "@/components/TiltCard";
+import TrustBadgeCarousel from "@/components/TrustBadgeCarousel";
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 
 export default function Home() {
@@ -308,8 +310,8 @@ export default function Home() {
           {/* Futuristic Grid Overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
           
-          {/* Floating Particles */}
-          <FloatingParticles />
+          {/* Animated Mesh Background */}
+          <AnimatedMeshBackground variant="default" />
           
           {/* Glowing Orbs */}
           <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />
@@ -376,17 +378,55 @@ export default function Home() {
               Learn <strong className="text-white">AI-Resistant Skills</strong>, <strong className="text-white">Sales Mastery</strong>, <strong className="text-white">Leadership</strong>, <strong className="text-white">Digital Marketing</strong>, <strong className="text-white">Executive Wellness</strong> & <strong className="text-white">Wealth Building</strong> from battle-tested frameworks used to scale companies from $10M to $100M+.
             </p>
             
+            {/* Animated Stats Counter */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8"
+            >
+              <div className="bg-slate-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-center">
+                <AnimatedCounter end={440} suffix="+" className="text-3xl md:text-4xl font-bold text-cyan-400" />
+                <p className="text-slate-300 text-sm mt-1">Students</p>
+              </div>
+              <div className="bg-slate-900/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-4 text-center">
+                <AnimatedCounter end={22} suffix="+" className="text-3xl md:text-4xl font-bold text-purple-400" />
+                <p className="text-slate-300 text-sm mt-1">Years Experience</p>
+              </div>
+              <div className="bg-slate-900/50 backdrop-blur-sm border border-pink-500/30 rounded-lg p-4 text-center">
+                <AnimatedCounter end={6} className="text-3xl md:text-4xl font-bold text-pink-400" />
+                <p className="text-slate-300 text-sm mt-1">Elite Courses</p>
+              </div>
+              <div className="bg-slate-900/50 backdrop-blur-sm border border-orange-500/30 rounded-lg p-4 text-center">
+                <AnimatedCounter end={100} suffix="%" className="text-3xl md:text-4xl font-bold text-orange-400" />
+                <p className="text-slate-300 text-sm mt-1">Money-Back</p>
+              </div>
+            </motion.div>
+            
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <motion.a
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
+                whileHover={{ scale: 1.15, rotate: [0, -1, 1, -1, 0] }}
+                whileTap={{ scale: 0.95 }}
                 href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold cta-pulse transition-all hover:scale-110 magnetic-button"
+                className="relative inline-flex items-center justify-center bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500 bg-size-200 hover:bg-right text-white px-10 md:px-14 py-5 md:py-7 rounded-xl text-xl md:text-2xl font-bold cta-pulse transition-all shadow-2xl shadow-orange-500/50 hover:shadow-orange-500/80 overflow-hidden group"
+                style={{ backgroundSize: '200% 100%' }}
               >
-                Get Complete Bundle - Save $100 <ArrowRight className="ml-2" />
+                <span className="relative z-10 flex items-center">
+                  Get Complete Bundle - Save $100 
+                  <motion.span
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="ml-2"
+                  >
+                    <ArrowRight className="w-6 h-6" />
+                  </motion.span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
               </motion.a>
               <a
                 href="#courses"
@@ -396,6 +436,15 @@ export default function Home() {
               </a>
             </div>
             
+            {/* Trust Badge Carousel */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              className="mb-8"
+            >
+              <TrustBadgeCarousel />
+            </motion.div>
             
             <div className="flex flex-col sm:flex-row gap-6 text-slate-300 text-sm md:text-base justify-center">
               <div className="flex items-center gap-2">
@@ -410,8 +459,12 @@ export default function Home() {
                 <Check className="w-5 h-5 text-green-400" />
                 <span>Instant Access</span>
               </div>
-            </div>          </div>
+            </div>
+          </div>
         </div>
+        
+        {/* Scroll Indicator */}
+        <ScrollIndicator />
       </section>
 
       {/* Experience-Based Credibility Section */}

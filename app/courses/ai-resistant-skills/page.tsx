@@ -1,7 +1,7 @@
 "use client";
 import FuturisticBackground from "@/components/FuturisticBackground";
 import HeroSectionDivider from "@/components/HeroSectionDivider";
-import FloatingParticles from "@/components/FloatingParticles";
+import AnimatedMeshBackground from "@/components/AnimatedMeshBackground";
 import TiltCard from "@/components/TiltCard";
 import { motion } from "framer-motion";
 
@@ -233,8 +233,8 @@ export default function AIResistantSkillsPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
         <div className="absolute inset-0 bg-[url('/course-ai-skills.jpg')] opacity-10 bg-cover bg-center" />
         
-        {/* Floating Particles */}
-        <FloatingParticles />
+        {/* Animated Mesh Background */}
+        <AnimatedMeshBackground variant="orange" />
         
         {/* Glowing Orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-glow-pulse" />

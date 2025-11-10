@@ -1,7 +1,7 @@
 "use client";
 import FuturisticBackground from "@/components/FuturisticBackground";
 import HeroSectionDivider from "@/components/HeroSectionDivider";
-import FloatingParticles from "@/components/FloatingParticles";
+import AnimatedMeshBackground from "@/components/AnimatedMeshBackground";
 import TiltCard from "@/components/TiltCard";
 import { motion } from "framer-motion";
 
@@ -235,7 +235,7 @@ export default function WellnessPage() {
         <div className="absolute inset-0 bg-[url('/hero-wellness-v2.jpg')] opacity-10 bg-cover bg-center" />
         
         {/* Floating Particles */}
-        <FloatingParticles />
+        <AnimatedMeshBackground variant="cyan" />
         
         {/* Glowing Orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />
