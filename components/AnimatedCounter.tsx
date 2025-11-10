@@ -8,6 +8,7 @@ interface AnimatedCounterProps {
   suffix?: string
   prefix?: string
   decimals?: number
+  className?: string
 }
 
 export default function AnimatedCounter({
@@ -15,7 +16,8 @@ export default function AnimatedCounter({
   duration = 2000,
   suffix = "",
   prefix = "",
-  decimals = 0
+  decimals = 0,
+  className = ""
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0)
   const [hasAnimated, setHasAnimated] = useState(false)
@@ -70,7 +72,7 @@ export default function AnimatedCounter({
     : count.toLocaleString()
 
   return (
-    <span ref={counterRef} className="tabular-nums">
+    <span ref={counterRef} className={`tabular-nums ${className}`}>
       {prefix}{formattedCount}{suffix}
     </span>
   )
