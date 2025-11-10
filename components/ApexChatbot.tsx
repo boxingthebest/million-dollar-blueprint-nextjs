@@ -71,7 +71,7 @@ export default function ApexChatbot() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-32 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full p-2 shadow-2xl hover:scale-110 transition-all duration-300 group"
+          className="fixed bottom-48 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full p-2 shadow-2xl hover:scale-110 transition-all duration-300 group"
           aria-label="Open chat with Apex"
         >
           <div className="relative w-14 h-14 rounded-full bg-white p-1.5 flex items-center justify-center">
@@ -89,7 +89,7 @@ export default function ApexChatbot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-32 right-6 z-50 w-96 h-[600px] bg-slate-900 border-2 border-cyan-500/30 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div className="fixed bottom-48 right-6 z-50 w-96 h-[600px] bg-slate-900 border-2 border-cyan-500/30 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
