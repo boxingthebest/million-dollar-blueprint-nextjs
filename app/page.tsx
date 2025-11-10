@@ -10,6 +10,8 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
 import ValueProposition from "@/components/ValueProposition";
 import ApexChatbot from "@/components/ApexChatbot";
+import FloatingParticles from "@/components/FloatingParticles";
+import TiltCard from "@/components/TiltCard";
 
 
 export default function Home() {
@@ -291,7 +293,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-32 relative overflow-hidden">
+      <section className="py-16 md:py-32 relative overflow-hidden animated-gradient-bg">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image 
@@ -306,9 +308,13 @@ export default function Home() {
           {/* Futuristic Grid Overlay */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
           
+          {/* Floating Particles */}
+          <FloatingParticles />
+          
           {/* Glowing Orbs */}
-          <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '3s'}} />
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{animationDuration: '4s', animationDelay: '1s'}} />
+          <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />
+          <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-glow-pulse" style={{animationDelay: '2s'}} />
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-glow-pulse" style={{animationDelay: '1s'}} />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -319,13 +325,30 @@ export default function Home() {
               <span className="text-white font-semibold text-sm md:text-base">AI-Resistant Skills Training</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Master the Skills That
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="inline-block"
+              >
+                Master the Skills That
+              </motion.span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-400 to-purple-500 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">
+              <motion.span 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-400 to-purple-500 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)] animate-gradient-text inline-block"
+              >
                 Create Real Wealth
-              </span>
-            </h1>
+              </motion.span>
+            </motion.h1>
             
             <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
               6 Online Courses to Accelerate Your Career
@@ -354,14 +377,17 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <a
+              <motion.a
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
                 href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold cta-pulse transition-all hover:scale-105"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold cta-pulse transition-all hover:scale-110 magnetic-button"
               >
                 Get Complete Bundle - Save $100 <ArrowRight className="ml-2" />
-              </a>
+              </motion.a>
               <a
                 href="#courses"
                 className="inline-flex items-center justify-center border-2 border-pink-400 text-pink-300 hover:bg-pink-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold smooth-hover"
@@ -705,8 +731,9 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="bg-slate-800/50 border-2 border-slate-700/50 hover:border-orange-500/60 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/30 hover:scale-[1.02] duration-300 flex flex-col h-full cursor-pointer"
+                    className="h-full"
                   >
+                    <TiltCard className="bg-slate-800/50 border-2 border-slate-700/50 hover:border-orange-500/60 transition-all rounded-xl overflow-hidden group relative hover:shadow-2xl hover:shadow-orange-500/30 duration-300 flex flex-col h-full cursor-pointer animate-border-glow">
                     {course.badge && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {course.badge}
@@ -758,6 +785,7 @@ export default function Home() {
                         </Link>
                       </div>
                     </div>
+                    </TiltCard>
                   </motion.div>
                 );
               })}
