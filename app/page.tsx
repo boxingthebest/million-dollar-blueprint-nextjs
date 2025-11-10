@@ -481,7 +481,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">See What's Possible</span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-400 text-center mb-8">
+            <p className="text-lg md:text-xl text-slate-400 text-center mb-12">
               Watch how 440+ professionals are breaking into six figures with Million Dollar Blueprint <span className="text-cyan-400">(2 min)</span>
             </p>
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
