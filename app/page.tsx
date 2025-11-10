@@ -496,20 +496,58 @@ export default function Home() {
               />
             </div>
             
-            {/* Condensed Bio Below Video */}
-            <div className="mt-12 text-center max-w-3xl mx-auto">
-              <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-                Dana isn't a theoretical coach—he's a <span className="text-white font-semibold">battle-tested executive with 22+ years</span> at Amazon, Goldman Sachs, and elite tech startups, having driven <span className="text-cyan-400 font-semibold">$100M+ in revenue</span>. These frameworks helped scale companies from $10M to $100M+.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-6 max-w-md mx-auto">
-                <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-6">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">22+</div>
-                  <div className="text-sm text-slate-400">Years Experience</div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Your Instructor Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Learn From Someone Who's <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Been There</span>
+              </h2>
+              <p className="text-xl text-slate-300">Real Experience. Real Results. Real Frameworks.</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-900/80 via-slate-800/50 to-slate-900/80 border border-cyan-500/30 rounded-3xl p-8 md:p-12 shadow-2xl shadow-cyan-500/10">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                {/* Photo */}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-2xl"></div>
+                  <Image 
+                    src="/dana-penza-headshot.png" 
+                    alt="Dana Penza - Founder & CEO" 
+                    width={500} 
+                    height={500}
+                    className="relative rounded-2xl shadow-2xl border-2 border-cyan-500/30"
+                  />
                 </div>
-                <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-6">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">$100M+</div>
-                  <div className="text-sm text-slate-400">Revenue Driven</div>
+                {/* Bio */}
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">Dana Penza</h3>
+                  <p className="text-cyan-400 text-xl font-semibold mb-6">Founder & CEO</p>
+                  <p className="text-slate-300 text-lg mb-6 leading-relaxed">
+                    Dana isn't a theoretical coach—he's a <span className="text-white font-semibold">battle-tested executive with 22+ years</span> at Amazon, Goldman Sachs, and elite tech startups, having driven <span className="text-cyan-400 font-semibold">$100M+ in revenue</span>.
+                  </p>
+                  <p className="text-slate-300 text-lg mb-8 leading-relaxed">
+                    These frameworks helped scale companies from $10M to $100M+. Now they're yours.
+                  </p>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-4">
+                      <div className="text-3xl font-bold text-cyan-400 mb-1">22+</div>
+                      <div className="text-sm text-slate-400">Years Experience</div>
+                    </div>
+                    <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-4">
+                      <div className="text-3xl font-bold text-cyan-400 mb-1">$100M+</div>
+                      <div className="text-sm text-slate-400">Revenue Driven</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
