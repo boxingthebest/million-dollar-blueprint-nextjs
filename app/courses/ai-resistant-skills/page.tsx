@@ -1,4 +1,5 @@
 "use client";
+import ApexChatbot from "@/components/ApexChatbot";
 import FuturisticBackground from "@/components/FuturisticBackground";
 import HeroSectionDivider from "@/components/HeroSectionDivider";
 import TiltCard from "@/components/TiltCard";
@@ -637,6 +638,8 @@ export default function AIResistantSkillsPage() {
           </a>
         </div>
       </div>
+
+      <ApexChatbot />
 
       {/* Footer */}
       <footer className="bg-slate-950 border-t border-slate-800 py-8">

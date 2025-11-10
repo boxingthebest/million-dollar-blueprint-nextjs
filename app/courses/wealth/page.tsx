@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import ApexChatbot from "@/components/ApexChatbot";
 "use client";
 import FuturisticBackground from "@/components/FuturisticBackground";
 import TiltCard from "@/components/TiltCard";
@@ -545,6 +546,8 @@ export default function WealthPage() {
           </a>
         </div>
       </div>
+
+      <ApexChatbot />
 
       {/* Footer */}
       <footer className="bg-slate-950 py-8">
