@@ -484,7 +484,7 @@ export default function Home() {
             <p className="text-lg md:text-xl text-slate-400 text-center mb-12">
               Watch how 440+ professionals are breaking into six figures with Million Dollar Blueprint <span className="text-cyan-400">(2 min)</span>
             </p>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
+            <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
               <iframe 
                 src="https://player.vimeo.com/video/1130649118?badge=0&autopause=0&player_id=0&app_id=58479&h=0&title=1&byline=1&portrait=1&playsinline=1&muted=0" 
                 className="w-full h-full"
