@@ -482,7 +482,7 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">See What's Possible</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-400 text-center mb-12">
-              Watch how 440+ professionals are breaking into six figures with Million Dollar Blueprint <span className="text-cyan-400">(2 min)</span>
+              Watch how 440+ professionals are breaking into six figures with Million Dollar Blueprint <span className="text-cyan-400">(55 sec)</span>
             </p>
             <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
               <iframe 
