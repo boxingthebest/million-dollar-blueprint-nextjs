@@ -14,11 +14,19 @@ export const metadata: Metadata = {
   description: "Master the 5 skills AI can't replace. Learn frameworks from Fortune 100 companies like Amazon, Google, McKinsey, and Goldman Sachs.",
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-64.png', sizes: '64x64', type: 'image/png' },
       { url: '/favicon-128.png', sizes: '128x128', type: 'image/png' },
     ],
-    apple: { url: '/favicon-256.png', sizes: '256x256', type: 'image/png' },
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'icon', url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { rel: 'icon', url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
   },
 };
 
