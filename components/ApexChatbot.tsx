@@ -11,6 +11,7 @@ interface Message {
 
 export default function ApexChatbot() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -28,6 +29,26 @@ export default function ApexChatbot() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Show chatbot after 5 seconds or after scrolling down
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 5000); // Show after 5 seconds
+
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.5) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const sendMessage = async () => {
     if (!input.trim() || isLoading) return;
@@ -68,7 +89,7 @@ export default function ApexChatbot() {
   return (
     <>
       {/* Floating Chat Button */}
-      {!isOpen && (
+      {isVisible && !isOpen && (
         <button
           onClick={() => setIsOpen(true)}
           className="fixed bottom-24 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full p-2 shadow-2xl hover:scale-110 transition-all duration-300 group"
@@ -88,7 +109,7 @@ export default function ApexChatbot() {
       )}
 
       {/* Chat Window */}
-      {isOpen && (
+      {isVisible && isOpen && (
         <div className="fixed bottom-24 right-6 z-50 w-96 h-[600px] bg-slate-900 border-2 border-cyan-500/30 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-4 flex items-center justify-between">
