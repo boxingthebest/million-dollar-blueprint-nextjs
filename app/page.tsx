@@ -357,7 +357,7 @@ export default function Home() {
                 href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all hover:scale-105 hover:shadow-orange-500/70"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold cta-pulse transition-all hover:scale-105"
               >
                 Get Complete Bundle - Save $100 <ArrowRight className="ml-2" />
               </a>
