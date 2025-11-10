@@ -1,0 +1,31 @@
+/* Glowing Logo Effect */
+.logo-glow {
+  filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5)) 
+          drop-shadow(0 0 20px rgba(6, 182, 212, 0.3))
+          drop-shadow(0 0 30px rgba(6, 182, 212, 0.2));
+  transition: filter 0.3s ease;
+}
+
+.logo-glow:hover {
+  filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.7)) 
+          drop-shadow(0 0 30px rgba(6, 182, 212, 0.5))
+          drop-shadow(0 0 45px rgba(6, 182, 212, 0.3));
+}
+
+/* Animated glow pulse for logos */
+@keyframes logo-glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.5)) 
+            drop-shadow(0 0 20px rgba(6, 182, 212, 0.3))
+            drop-shadow(0 0 30px rgba(6, 182, 212, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.7)) 
+            drop-shadow(0 0 30px rgba(6, 182, 212, 0.5))
+            drop-shadow(0 0 45px rgba(6, 182, 212, 0.3));
+  }
+}
+
+.logo-glow-animated {
+  animation: logo-glow-pulse 3s ease-in-out infinite;
+}
