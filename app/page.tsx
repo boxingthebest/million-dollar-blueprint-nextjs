@@ -257,10 +257,10 @@ export default function Home() {
             <span className="font-semibold tracking-wide text-base">✨ Master the Skills That Create Real Wealth</span>
           </div>
           <div className="flex gap-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <a href="https://www.facebook.com/milliondollarblueprint.official/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <a href="https://www.instagram.com/milliondollarblueprint.ai" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
               <Instagram className="w-5 h-5" />
             </a>
           </div>
@@ -970,10 +970,10 @@ export default function Home() {
             <div>
               <h4 className="text-white font-bold text-lg mb-4">Connect With Us</h4>
               <div className="flex gap-4 mb-4">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                <a href="https://www.facebook.com/milliondollarblueprint.official/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                <a href="https://www.instagram.com/milliondollarblueprint.ai" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
                   <Instagram className="w-6 h-6" />
                 </a>
               </div>
