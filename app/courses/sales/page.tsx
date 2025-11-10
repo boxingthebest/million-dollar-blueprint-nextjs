@@ -1,6 +1,6 @@
+"use client";
 /* eslint-disable react/no-unescaped-entities */
 import ApexChatbot from "@/components/ApexChatbot";
-"use client";
 
 import TiltCard from "@/components/TiltCard";
 import { motion } from "framer-motion";
@@ -560,4 +560,3 @@ export default function SalesMasteryPage() {
     </div>
   );
 }
-
