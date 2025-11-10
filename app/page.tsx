@@ -479,10 +479,10 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
-              A Message From <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Dana Penza</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">See What's Possible</span>
             </h2>
             <p className="text-lg md:text-xl text-slate-400 text-center mb-8">
-              Discover why Million Dollar Blueprint is different from every other course platform
+              Watch how 440+ professionals are breaking into six figures with Million Dollar Blueprint <span className="text-cyan-400">(2 min)</span>
             </p>
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
               <iframe 
