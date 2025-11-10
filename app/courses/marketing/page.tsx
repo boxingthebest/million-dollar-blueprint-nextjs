@@ -218,8 +218,6 @@ export default function MarketingPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-cyan-900/20" />
         <div className="absolute inset-0 bg-[url('/course-marketing.jpg')] bg-cover bg-center opacity-10" />
         
-        {/* Floating Particles */}
-        <AnimatedMeshBackground variant="cyan" />
         
         {/* Glowing Orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />

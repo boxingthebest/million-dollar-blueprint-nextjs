@@ -233,8 +233,6 @@ export default function WellnessPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
         <div className="absolute inset-0 bg-[url('/hero-wellness-v2.jpg')] opacity-10 bg-cover bg-center" />
         
-        {/* Floating Particles */}
-        <AnimatedMeshBackground variant="cyan" />
         
         {/* Glowing Orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />
