@@ -71,10 +71,18 @@ export default function ApexChatbot() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full p-4 shadow-2xl hover:scale-110 transition-all duration-300 group"
+          className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full p-2 shadow-2xl hover:scale-110 transition-all duration-300 group"
           aria-label="Open chat with Apex"
         >
-          <MessageCircle className="w-6 h-6" />
+          <div className="relative w-14 h-14 rounded-full bg-white p-1.5 flex items-center justify-center">
+            <Image
+              src="/apex-avatar.png"
+              alt="Apex"
+              width={56}
+              height={56}
+              className="rounded-full"
+            />
+          </div>
           <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full animate-pulse"></span>
         </button>
       )}
