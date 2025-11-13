@@ -63,7 +63,7 @@ export default function Home() {
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
       stripeLink: "https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00",
-      description: "Master the 5 human skills AI will never replace. From the boardrooms of AWS & Goldman Sachs.",
+      description: "Master the 5 human skills AI can't replace. From AWS & Goldman Sachs boardrooms.",
       students: "253 enrolled",
       image: "/ai-resistant-hero-new.jpg",
       available: true
@@ -77,7 +77,7 @@ export default function Home() {
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500 to-teal-600",
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
-      description: "What Fortune 100 executives pay $2,997 for in executive coaching. Yours for $197.",
+      description: "Fortune 100 executive coaching ($2,997 value) for $197.",
       students: "187 enrolled",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
       available: true
@@ -91,7 +91,7 @@ export default function Home() {
       gradient: "from-orange-500 to-amber-600",
       bgGradient: "from-orange-500 to-amber-600",
       stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
-      description: "The exact sales frameworks used to scale companies from $500K to $50B+.",
+      description: "Sales frameworks that scaled companies from $500K to $50B+.",
       students: "Coming Soon",
       image: "/course-sales-new.jpg",
       available: true,
@@ -106,7 +106,7 @@ export default function Home() {
       gradient: "from-purple-500 to-indigo-600",
       bgGradient: "from-purple-500 to-indigo-600",
       stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
-      description: "Fortune 100 leadership strategies for executive presence and influence.",
+      description: "Fortune 100 leadership strategies for executive presence.",
       students: "Coming Soon",
       image: "/course-leadership-new.jpg",
       available: true,
@@ -121,7 +121,7 @@ export default function Home() {
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-500 to-blue-600",
       stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
-      description: "Enterprise-level digital marketing tactics that drive real revenue.",
+      description: "Enterprise digital marketing tactics that drive revenue.",
       students: "Coming Soon",
       image: "/course-marketing-new.jpg",
       available: true,
@@ -136,7 +136,7 @@ export default function Home() {
       gradient: "from-emerald-500 to-green-600",
       bgGradient: "from-emerald-500/10 to-green-500/10",
       stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
-      description: "Build lasting wealth with strategies from Wall Street insiders.",
+      description: "Build wealth with Wall Street insider strategies.",
       students: "Coming Soon",
       image: "/course-wealth-new.jpg",
       available: true,
@@ -479,12 +479,12 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
-              A Message From <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Dana Penza</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">See What's Possible</span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-400 text-center mb-8">
-              Discover why Million Dollar Blueprint is different from every other course platform
+            <p className="text-lg md:text-xl text-slate-400 text-center mb-12">
+              Watch how 440+ professionals are breaking into six figures with Million Dollar Blueprint <span className="text-cyan-400">(55 sec)</span>
             </p>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
+            <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
               <iframe 
                 src="https://player.vimeo.com/video/1130649118?badge=0&autopause=0&player_id=0&app_id=58479&h=0&title=1&byline=1&portrait=1&playsinline=1&muted=0" 
                 className="w-full h-full"
@@ -495,6 +495,8 @@ export default function Home() {
                 allowFullScreen
               />
             </div>
+            
+
           </div>
         </div>
       </section>
@@ -512,7 +514,6 @@ export default function Home() {
               </h2>
               <p className="text-xl text-slate-300">Real Experience. Real Results. Real Frameworks.</p>
             </div>
-
             <div className="bg-gradient-to-br from-slate-900/80 via-slate-800/50 to-slate-900/80 border border-cyan-500/30 rounded-3xl p-8 md:p-12 shadow-2xl shadow-cyan-500/10">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Photo */}
@@ -526,42 +527,27 @@ export default function Home() {
                     className="relative rounded-2xl shadow-2xl border-2 border-cyan-500/30"
                   />
                 </div>
-
                 {/* Bio */}
                 <div>
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">Dana Penza</h3>
-                  <p className="text-xl text-cyan-400 font-semibold mb-6">Founder & CEO</p>
+                  <p className="text-cyan-400 text-xl font-semibold mb-6">Founder & CEO</p>
+                  <p className="text-slate-300 text-lg mb-6 leading-relaxed">
+                    Dana isn't a theoretical coach—he's a <span className="text-white font-semibold">battle-tested executive with 22+ years</span> at Amazon, Goldman Sachs, and elite tech startups, having driven <span className="text-cyan-400 font-semibold">$100M+ in revenue</span>.
+                  </p>
+                  <p className="text-slate-300 text-lg mb-8 leading-relaxed">
+                    These frameworks helped scale companies from $10M to $100M+. Now they're yours.
+                  </p>
                   
-                  <div className="space-y-4 text-slate-300 leading-relaxed mb-8">
-                    <p className="text-lg">
-                      Dana is not a theoretical coach. He's a <span className="text-white font-semibold">battle-tested executive with 22+ years</span> at the world's most elite companies, having driven <span className="text-cyan-400 font-semibold">hundreds of millions of dollars in revenue</span>.
-                    </p>
-                    <p>
-                      From <span className="text-white font-semibold">Amazon Web Services (AWS)</span> to <span className="text-white font-semibold">Goldman Sachs</span> and high-growth tech startups like <span className="text-white font-semibold">Rubrik, Citrix, and Perfecto</span>, Dana has seen what "good" looks like at the highest levels.
-                    </p>
-                    <p className="text-white font-semibold italic">
-                      "After helping companies scale from $10M to $100M+, I created Million Dollar Blueprint to share the frameworks I learned—not the theory they teach in business school."
-                    </p>
-                  </div>
-
-                  {/* Quick Stats */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-2 gap-4">
                     <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-cyan-400 mb-1">22+</div>
+                      <div className="text-3xl font-bold text-cyan-400 mb-1">22+</div>
                       <div className="text-sm text-slate-400">Years Experience</div>
                     </div>
                     <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-cyan-400 mb-1">$100M+</div>
+                      <div className="text-3xl font-bold text-cyan-400 mb-1">$100M+</div>
                       <div className="text-sm text-slate-400">Revenue Driven</div>
                     </div>
                   </div>
-
-                  <Link 
-                    href="/about"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition transform hover:scale-105"
-                  >
-                    Learn More About Dana <ArrowRight className="w-4 h-4" />
-                  </Link>
                 </div>
               </div>
             </div>
@@ -615,34 +601,22 @@ export default function Home() {
                         <Icon className="w-8 h-8 md:w-12 md:h-12 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
                       </div>
                       
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{course.title}</h3>
-                      <p className="text-base md:text-lg text-slate-400 mb-4">{course.subtitle}</p>
-                      <p className="text-slate-300 mb-6 text-sm md:text-base">{course.description}</p>
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{course.title}</h3>
+                      <p className="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">{course.description}</p>
                       
-                      <div className="flex items-center gap-4 mb-6">
-                        <div className="text-3xl md:text-4xl font-bold text-white">{course.price}</div>
-                        <div className="text-lg md:text-xl text-slate-500 line-through">{course.originalPrice}</div>
-                        <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs md:text-sm font-semibold">
-                          Save 50%
+                      <div className="mb-6">
+                        <div className="text-4xl md:text-5xl font-bold text-white mb-3">{course.price}</div>
+                        <div className="text-sm text-slate-400">
+                          {course.students}
                         </div>
                       </div>
                       
-                      <div className="text-sm text-slate-400 mb-6">
-                        {course.students}
-                      </div>
-                      
-                      <div className="mt-auto space-y-3">
+                      <div className="mt-auto">
                         <Link
                           href={courseUrlMap[course.title] || '#'}
-                          className="block w-full text-center bg-slate-700/50 hover:bg-slate-600 border border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-cyan-200 px-6 md:px-8 py-3 rounded-lg font-semibold text-sm md:text-base transition-all"
+                          className={`neon-button-cyan block w-full text-center ${course.available ? `bg-gradient-to-r ${course.gradient}` : 'bg-slate-700 hover:bg-slate-600'} text-white px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg`}
                         >
-                          Preview Free Lesson →
-                        </Link>
-                        <Link
-                          href={courseUrlMap[course.title] || '#'}
-                          className={`block w-full text-center ${course.available ? `bg-gradient-to-r ${course.gradient} hover:opacity-90` : 'bg-slate-700 hover:bg-slate-600'} text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold text-base md:text-lg transition-all shadow-lg`}
-                        >
-                          {course.available ? `Enroll Now - ${course.price}` : 'Coming Soon'}
+                          {course.available ? `Enroll Now` : 'Coming Soon'}
                         </Link>
                       </div>
                     </div>
@@ -707,7 +681,7 @@ export default function Home() {
                 </div>
 
                 {/* Professional Bundle - MOST POPULAR */}
-                <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 border-4 border-purple-400 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 relative group flex flex-col h-full">
+                <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 border-4 border-purple-400 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 relative group flex flex-col h-full bundle-pulse">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
                     MOST POPULAR
                   </div>
@@ -903,7 +877,20 @@ export default function Home() {
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                     className="w-full px-6 md:px-8 py-4 md:py-6 flex justify-between items-center text-left hover:bg-slate-800/80 transition-all"
                   >
-                    <span className="text-lg md:text-xl font-semibold text-white pr-4">{faq.question}</span>
+                    <div className="flex items-center gap-3 flex-1">
+                      <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                        {idx === 0 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>}
+                        {idx === 1 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
+                        {idx === 2 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
+                        {idx === 3 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>}
+                        {idx === 4 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>}
+                        {idx === 5 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>}
+                        {idx === 6 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>}
+                        {idx === 7 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>}
+                        {idx > 7 && <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>}
+                      </div>
+                      <span className="text-lg md:text-xl font-semibold text-white">{faq.question}</span>
+                    </div>
                     <ChevronDown className={`w-6 h-6 text-cyan-400 flex-shrink-0 transition-transform ${openFaq === idx ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === idx && (

@@ -14,6 +14,9 @@ import ApexChatbot from "@/components/ApexChatbot";
 import TiltCard from "@/components/TiltCard";
 import TrustBadgeCarousel from "@/components/TrustBadgeCarousel";
 import ScrollIndicator from "@/components/ScrollIndicator";
+import AnimatedNavigation from "@/components/AnimatedNavigation";
+import Enhanced3DCard from "@/components/Enhanced3DCard";
+import ScrollReveal from "@/components/ScrollReveal";
 
 
 export default function Home() {
@@ -268,31 +271,7 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-b border-cyan-500/20 sticky top-0 z-50 shadow-2xl shadow-cyan-500/10 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-5 flex justify-between items-center">
-          <div className="flex items-center gap-3 drop-shadow-[0_0_15px_rgba(6,182,212,0.3)]">
-            <Image src="/logo-transparent.png" alt="Million Dollar Blueprint" width={800} height={365} className="h-16 w-auto md:h-20 transition-all hover:scale-105 logo-glow-animated" priority />
-          </div>
-          <div className="flex gap-4 md:gap-6 items-center">
-            <a href="#courses" className="text-slate-300 hover:text-cyan-400 border-2 border-cyan-500/50 hover:border-cyan-400 px-4 md:px-6 py-2 rounded-lg transition-all font-semibold text-sm md:text-base">Courses</a>
-            <Link href="/about" className="text-slate-300 hover:text-cyan-400 border-2 border-cyan-500/50 hover:border-cyan-400 px-4 md:px-6 py-2 rounded-lg transition-all font-semibold text-sm md:text-base hidden sm:inline">About</Link>
-            <Link 
-              href="/auth/signin"
-              className="bg-slate-800/80 hover:bg-slate-700 border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-cyan-200 px-4 md:px-6 py-2 rounded-lg font-bold transition-all text-sm md:text-base shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/30"
-            >
-              Login
-            </Link>
-            <a 
-              href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 border-2 border-cyan-500/30 hover:border-cyan-400/50 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base shadow-lg shadow-orange-500/20"
-            >
-              Get Started
-            </a>
-          </div>
-        </div>
-      </nav>
+      <AnimatedNavigation />
 
       {/* Hero Section */}
       <section className="py-16 md:py-32 relative overflow-hidden animated-gradient-bg">
@@ -508,12 +487,13 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
+            <ScrollReveal className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Learn From Someone Who's <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Been There</span>
               </h2>
               <p className="text-xl text-slate-300">Real Experience. Real Results. Real Frameworks.</p>
-            </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
             <div className="bg-gradient-to-br from-slate-900/80 via-slate-800/50 to-slate-900/80 border border-cyan-500/30 rounded-3xl p-8 md:p-12 shadow-2xl shadow-cyan-500/10">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Photo */}
@@ -551,6 +531,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -559,14 +540,14 @@ export default function Home() {
       <section id="courses" className="py-16 md:py-24 bg-gradient-to-b from-slate-900 to-slate-950">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
+            <ScrollReveal className="text-center mb-12 md:mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Choose Your Transformation
               </h2>
               <p className="text-xl md:text-2xl text-slate-400">
                 Each course is packed with battle-tested strategies from 100+ years of combined experience
               </p>
-            </div>
+            </ScrollReveal>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 items-stretch">
               {courses.map((course, idx) => {
@@ -580,7 +561,7 @@ export default function Home() {
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                     className="h-full"
                   >
-                    <TiltCard className="glass-card rounded-xl overflow-hidden group relative duration-300 flex flex-col h-full cursor-pointer">
+                    <Enhanced3DCard className="glass-card rounded-xl overflow-hidden group relative duration-300 flex flex-col h-full cursor-pointer">
                     {course.badge && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {course.badge}
@@ -620,14 +601,14 @@ export default function Home() {
                         </Link>
                       </div>
                     </div>
-                    </TiltCard>
+                    </Enhanced3DCard>
                   </motion.div>
                 );
               })}
             </div>
 
             {/* Bundle Section */}
-            <div className="mt-16">
+            <ScrollReveal className="mt-16">
               <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">Choose Your Bundle</h2>
               <p className="text-xl md:text-2xl text-slate-400 text-center mb-16">Save more when you invest in your complete transformation</p>
               
@@ -791,7 +772,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
