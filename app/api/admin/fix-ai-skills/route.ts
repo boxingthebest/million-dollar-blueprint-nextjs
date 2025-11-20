@@ -33,7 +33,7 @@ export async function POST() {
     }
 
     // Find the Published course (price $197)
-    const publishedCourse = courses.find(c => c.price === 197 && c.status === 'PUBLISHED');
+    const publishedCourse = courses.find(c => c.price === 197);
     
     if (!publishedCourse) {
       return NextResponse.json({ error: 'Published course not found' }, { status: 404 });
