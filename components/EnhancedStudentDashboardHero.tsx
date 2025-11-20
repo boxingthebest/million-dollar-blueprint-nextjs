@@ -1,0 +1,170 @@
+"use client"
+
+import React from 'react'
+
+interface EnhancedStudentDashboardHeroProps {
+  userName: string
+  overallProgress: number
+  totalCourses: number
+  completedLessons: number
+}
+
+export default function EnhancedStudentDashboardHero({ 
+  userName, 
+  overallProgress, 
+  totalCourses,
+  completedLessons 
+}: EnhancedStudentDashboardHeroProps) {
+  
+  const getMotivationalMessage = (progress: number) => {
+    if (progress === 0) return "Your million-dollar transformation begins today."
+    if (progress < 25) return "Every lesson is a step closer to your breakthrough."
+    if (progress < 50) return "You're building unstoppable momentum."
+    if (progress < 75) return "Your future is taking shape. Keep going."
+    if (progress < 100) return "You're almost there. Finish strong."
+    return "You've mastered the blueprint. Now build your empire."
+  }
+
+  return (
+    <div className="relative mb-12 overflow-hidden rounded-3xl">
+      {/* Futuristic Animated Background */}
+      <div className="absolute inset-0 z-0">
+        {/* Blueprint background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-15"
+          style={{ backgroundImage: 'url(/images/dashboard/blueprint-hero.jpg)' }}
+        />
+        {/* Student success hero image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-25"
+          style={{ backgroundImage: 'url(/student-dashboard-hero-new.jpg)' }}
+        />
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/50 to-purple-950/50" />
+        
+        {/* Animated grid pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+
+        {/* Glowing orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl glow-pulse" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl glow-pulse" style={{animationDelay: '2s'}} />
+        
+        {/* Scan line effect */}
+        <div className="absolute inset-0 opacity-10 scan-line" />
+      </div>
+
+      {/* HUD Corner Brackets */}
+      <div className="absolute top-6 left-6 w-16 h-16 border-l-2 border-t-2 border-cyan-500/50 z-20" />
+      <div className="absolute top-6 right-6 w-16 h-16 border-r-2 border-t-2 border-cyan-500/50 z-20" />
+      <div className="absolute bottom-6 left-6 w-16 h-16 border-l-2 border-b-2 border-cyan-500/50 z-20" />
+      <div className="absolute bottom-6 right-6 w-16 h-16 border-r-2 border-b-2 border-cyan-500/50 z-20" />
+
+      {/* Content */}
+      <div className="relative z-10 px-8 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-yellow-500/20 border border-amber-500/30 backdrop-blur-sm mb-6 hover:scale-105 transition-transform">
+            <span className="text-2xl">🏆</span>
+            <span className="text-sm font-semibold text-amber-300 uppercase tracking-wider">
+              Million-Dollar Blueprint
+            </span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <span className="text-white">Welcome Back, </span>
+            <br />
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-gradient">
+              {userName.split(' ')[0] || 'Champion'}
+            </span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-2xl md:text-3xl text-slate-200 font-semibold mb-4 max-w-3xl">
+            You're Building Your Million-Dollar Future
+          </p>
+
+          {/* Motivational Message */}
+          <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl">
+            Every lesson brings you closer to mastering the frameworks that built billion-dollar companies. {getMotivationalMessage(overallProgress)}
+          </p>
+
+          {/* Stats Bar */}
+          <div className="flex flex-wrap gap-6 items-center">
+            {/* Progress Indicator */}
+            <div className="stat-card group">
+              <div className="flex items-center gap-3">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-400 flex items-center justify-center shadow-lg shadow-emerald-500/50 group-hover:shadow-emerald-500/70 transition-shadow">
+                  <span className="text-white font-bold text-lg">{overallProgress}%</span>
+                </div>
+                <div>
+                  <p className="text-xs text-cyan-400 uppercase tracking-wider font-semibold">Progress</p>
+                  <p className="text-sm font-semibold text-white">Overall Completion</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Courses Enrolled */}
+            <div className="stat-card group">
+              <div className="flex items-center gap-3">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 flex items-center justify-center shadow-lg shadow-blue-500/50 group-hover:shadow-blue-500/70 transition-shadow">
+                  <span className="text-white font-bold text-xl">{totalCourses}</span>
+                </div>
+                <div>
+                  <p className="text-xs text-blue-400 uppercase tracking-wider font-semibold">Courses</p>
+                  <p className="text-sm font-semibold text-white">Active Learning</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Lessons Completed */}
+            <div className="stat-card group">
+              <div className="flex items-center gap-3">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-pink-400 flex items-center justify-center shadow-lg shadow-orange-500/50 group-hover:shadow-orange-500/70 transition-shadow">
+                  <span className="text-white font-bold text-xl">{completedLessons}</span>
+                </div>
+                <div>
+                  <p className="text-xs text-orange-400 uppercase tracking-wider font-semibold">Lessons</p>
+                  <p className="text-sm font-semibold text-white">Mastered</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Value Props */}
+          <div className="mt-8 flex flex-wrap gap-6 text-sm text-slate-300">
+            <div className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+              <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span>Fortune 100 Frameworks</span>
+            </div>
+            <div className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+              <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span>Lifetime Access</span>
+            </div>
+            <div className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+              <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span>McKinsey-Level Quality</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent z-10" />
+    </div>
+  )
+}

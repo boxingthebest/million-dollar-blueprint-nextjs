@@ -7,7 +7,7 @@ import Image from "next/image"
 import LogoutButton from "@/components/LogoutButton"
 import FuturisticBackground from "@/components/FuturisticBackground"
 import HeroSectionDivider from "@/components/HeroSectionDivider"
-import StudentDashboardHero from "@/components/StudentDashboardHero"
+import EnhancedStudentDashboardHero from "@/components/EnhancedStudentDashboardHero"
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions)
@@ -115,7 +115,7 @@ export default async function Dashboard() {
       {/* Main Content */}
       <main className="relative z-10">
         {/* Premium Hero Section */}
-        <StudentDashboardHero 
+        <EnhancedStudentDashboardHero 
           userName={user?.name || 'Champion'}
           overallProgress={overallProgress}
           totalCourses={totalCourses}
