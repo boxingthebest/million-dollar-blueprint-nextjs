@@ -36,7 +36,7 @@ export async function POST() {
 
     // Enroll in AI-Resistant Skills
     if (aiCourse) {
-      const existing = await prisma.purchase.findFirst({
+      const existing = await prisma.enrollment.findFirst({
         where: {
           userId: admin.id,
           courseId: aiCourse.id,
@@ -44,7 +44,7 @@ export async function POST() {
       })
 
       if (!existing) {
-        const enrollment = await prisma.purchase.create({
+        const enrollment = await prisma.enrollment.create({
           data: {
             userId: admin.id,
             courseId: aiCourse.id,
@@ -58,7 +58,7 @@ export async function POST() {
 
     // Enroll in Executive Energy System
     if (energyCourse) {
-      const existing = await prisma.purchase.findFirst({
+      const existing = await prisma.enrollment.findFirst({
         where: {
           userId: admin.id,
           courseId: energyCourse.id,
@@ -66,7 +66,7 @@ export async function POST() {
       })
 
       if (!existing) {
-        const enrollment = await prisma.purchase.create({
+        const enrollment = await prisma.enrollment.create({
           data: {
             userId: admin.id,
             courseId: energyCourse.id,
