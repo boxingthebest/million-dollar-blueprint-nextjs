@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Link from 'next/link'
 import AdminDashboardHero from '@/components/AdminDashboardHero'
 
 interface PremiumDashboardProps {
@@ -207,14 +208,13 @@ export default function PremiumDashboard({ data }: PremiumDashboardProps) {
 
                 {/* Preview as Student Button */}
                 <div className="mt-4">
-                  <a
+                  <Link
                     href={`/learn/${course.slug}`}
                     target="_blank"
-                    rel="noopener noreferrer"
                     className={`block w-full text-center py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-300 bg-gradient-to-r ${style.gradient} text-white hover:shadow-lg ${style.shadow} hover:scale-105`}
                   >
                     👁️ Preview as Student
-                  </a>
+                  </Link>
                 </div>
               </div>
             )
