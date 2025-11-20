@@ -71,6 +71,28 @@ export default async function Dashboard() {
     return BookOpen
   }
 
+  // Get course icon color
+  const getCourseIconColor = (slug: string) => {
+    if (slug.includes('ai')) return 'text-cyan-400'
+    if (slug.includes('energy') || slug.includes('wellness')) return 'text-yellow-400'
+    if (slug.includes('sales')) return 'text-emerald-400'
+    if (slug.includes('leadership')) return 'text-purple-400'
+    if (slug.includes('marketing')) return 'text-pink-400'
+    if (slug.includes('wealth')) return 'text-orange-400'
+    return 'text-blue-400'
+  }
+
+  // Get course background gradient
+  const getCourseGradient = (slug: string) => {
+    if (slug.includes('ai')) return 'from-cyan-500/20 to-blue-500/20'
+    if (slug.includes('energy') || slug.includes('wellness')) return 'from-yellow-500/20 to-orange-500/20'
+    if (slug.includes('sales')) return 'from-emerald-500/20 to-green-500/20'
+    if (slug.includes('leadership')) return 'from-purple-500/20 to-indigo-500/20'
+    if (slug.includes('marketing')) return 'from-pink-500/20 to-rose-500/20'
+    if (slug.includes('wealth')) return 'from-orange-500/20 to-red-500/20'
+    return 'from-blue-500/20 to-cyan-500/20'
+  }
+
   return (
     <div className="min-h-screen bg-slate-950 relative overflow-hidden">
       {/* Animated Background */}
@@ -237,6 +259,8 @@ export default async function Dashboard() {
                     acc + module.lessons.filter((lesson) => lesson.progress.some((p) => p.completed)).length, 0)
                   const courseProgress = courseLessons > 0 ? Math.round((courseCompleted / courseLessons) * 100) : 0
                   const Icon = getCourseIcon(course.slug)
+                  const iconColor = getCourseIconColor(course.slug)
+                  const bgGradient = getCourseGradient(course.slug)
 
                   return (
                     <div 
@@ -244,10 +268,10 @@ export default async function Dashboard() {
                       className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-2"
                     >
                       {/* Course Icon */}
-                      <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 group-hover:scale-110 transition-transform duration-700"></div>
+                      <div className={`h-48 bg-gradient-to-br ${bgGradient} flex items-center justify-center relative overflow-hidden`}>
+                        <div className={`absolute inset-0 bg-gradient-to-br ${bgGradient} group-hover:scale-110 transition-transform duration-700`}></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
-                        <Icon className="relative w-24 h-24 text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-500 drop-shadow-2xl" strokeWidth={1.5} />
+                        <Icon className={`relative w-24 h-24 ${iconColor} group-hover:scale-110 transition-all duration-500 drop-shadow-2xl`} strokeWidth={1.5} />
                       </div>
 
                       <div className="p-6">
