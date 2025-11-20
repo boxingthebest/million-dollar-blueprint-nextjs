@@ -30,9 +30,14 @@ export default function EnhancedAdminDashboardHero({
     <div className="relative mb-12 overflow-hidden rounded-3xl">
       {/* Futuristic Animated Background */}
       <div className="absolute inset-0 z-0">
+        {/* Futuristic team hero image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: 'url(/images/dashboard/admin-hero-team.jpg)' }}
+        />
         {/* Blueprint background image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-25"
           style={{ backgroundImage: 'url(/images/dashboard/blueprint-hero.jpg)' }}
         />
         {/* Dark gradient overlay */}
