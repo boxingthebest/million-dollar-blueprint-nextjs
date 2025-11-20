@@ -483,3 +483,99 @@ body {
 .bundle-pulse {
   animation: bundle-pulse 2s ease-in-out infinite;
 }
+
+/* ========================================
+   DASHBOARD ENHANCEMENTS - FUTURISTIC UX
+   ======================================== */
+
+/* Animated gradient background for hero sections */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Scanning line effect for futuristic feel */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scan {
+  animation: scan 8s linear infinite;
+}
+
+/* Premium card hover with lift effect */
+.premium-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.4, 0.25, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glow effect for stat cards */
+@keyframes stat-glow {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 20px currentColor;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 40px currentColor;
+  }
+}
+
+.stat-glow {
+  animation: stat-glow 2s ease-in-out infinite;
+}
+
+/* Futuristic grid pattern */
+.grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* HUD corner brackets animation */
+@keyframes bracket-pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.bracket-pulse {
+  animation: bracket-pulse 3s ease-in-out infinite;
+}

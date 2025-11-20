@@ -6,7 +6,7 @@ import Image from "next/image"
 import { useSession } from "next-auth/react"
 import { redirect } from "next/navigation"
 import LogoutButton from "@/components/LogoutButton"
-import PremiumDashboard from "./PremiumDashboard"
+import EnhancedPremiumDashboard from "./EnhancedPremiumDashboard"
 import FuturisticBackground from "@/components/FuturisticBackground"
 import HeroSectionDivider from "@/components/HeroSectionDivider"
 
@@ -277,7 +277,7 @@ export default function AdminDashboard() {
       {/* Main Content */}
       <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 z-10">
         {/* Premium McKinsey-Level Dashboard */}
-        <PremiumDashboard data={data} />
+        <EnhancedPremiumDashboard data={data} />
 
         {/* Hero Divider */}
         <HeroSectionDivider variant="admin" />
