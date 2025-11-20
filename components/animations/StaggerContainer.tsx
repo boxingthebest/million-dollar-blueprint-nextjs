@@ -9,7 +9,7 @@ interface StaggerContainerProps {
   className?: string
 }
 
-export default function StaggerContainer({
+function StaggerContainer({
   children,
   staggerDelay = 0.1,
   className = ''
@@ -34,7 +34,7 @@ export default function StaggerContainer({
   )
 }
 
-export function StaggerItem({ children, className = '' }: { children: ReactNode; className?: string }) {
+function StaggerItem({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
     <motion.div
       variants={{
@@ -54,3 +54,6 @@ export function StaggerItem({ children, className = '' }: { children: ReactNode;
     </motion.div>
   )
 }
+
+export { StaggerContainer, StaggerItem }
+export default StaggerContainer
