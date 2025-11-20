@@ -6,7 +6,11 @@ export async function GET() {
     // Get the Executive Energy System course
     const course = await prisma.course.findFirst({
       where: { title: { contains: 'Executive Energy' } },
-      include: { lessons: true }
+      include: { 
+        modules: {
+          include: { lessons: true }
+        }
+      }
     });
 
     if (!course) {
@@ -32,8 +36,9 @@ export async function GET() {
     };
 
     const updates = [];
+    const allLessons = course.modules.flatMap(m => m.lessons);
 
-    for (const lesson of course.lessons) {
+    for (const lesson of allLessons) {
       const correctFilename = pdfMapping[lesson.title];
       if (correctFilename && lesson.pdfUrl) {
         const currentFilename = lesson.pdfUrl.split('/').pop();
