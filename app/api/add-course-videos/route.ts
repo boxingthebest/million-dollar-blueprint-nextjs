@@ -7,16 +7,16 @@ export async function POST() {
 
     // Executive Energy System videos
     const energyVideos = [
-      { lessonTitle: 'The Executive Mindset Shift', videoUrl: 'https://vimeo.com/1130296747/f5b1bd80d5' },
-      { lessonTitle: 'The Sleep Protocol', videoUrl: 'https://vimeo.com/1138745027/524b88735b' },
-      { lessonTitle: 'The Nutrition Framework', videoUrl: 'https://vimeo.com/1138748339/5c63088665' },
-      { lessonTitle: 'The Stress Management System', videoUrl: 'https://vimeo.com/1138749400/9b3b0fb28f' },
-      { lessonTitle: 'The Energy Optimization Protocol', videoUrl: 'https://vimeo.com/1138750184/c424ba9650' },
-      { lessonTitle: 'The Recovery & Regeneration System', videoUrl: 'https://vimeo.com/1138750599/d0903f4318' },
-      { lessonTitle: 'The Flow State Formula', videoUrl: 'https://vimeo.com/1138751058/78b743134a' },
-      { lessonTitle: 'The Resilience Framework', videoUrl: 'https://vimeo.com/1138751605/0ad1ac3082' },
-      { lessonTitle: 'The Breathwork & Meditation Protocol', videoUrl: 'https://vimeo.com/1138753391/d1242f342b' },
-      { lessonTitle: 'The Quantified Wellness System', videoUrl: 'https://vimeo.com/1138758043/adcad49484' },
+      { lessonTitle: 'The High-Performance Mindset', videoUrl: 'https://vimeo.com/1130296747/f5b1bd80d5' },
+      { lessonTitle: 'Sleep Optimization for Peak Performance', videoUrl: 'https://vimeo.com/1138745027/524b88735b' },
+      { lessonTitle: 'Nutrition for Cognitive & Physical Excellence', videoUrl: 'https://vimeo.com/1138748339/5c63088665' },
+      { lessonTitle: 'Stress Management & Resilience', videoUrl: 'https://vimeo.com/1138749400/9b3b0fb28f' },
+      { lessonTitle: 'Energy Mastery: The Executive\'s Secret Weapon', videoUrl: 'https://vimeo.com/1138750184/c424ba9650' },
+      { lessonTitle: 'Advanced Recovery Protocols', videoUrl: 'https://vimeo.com/1138750599/d0903f4318' },
+      { lessonTitle: 'The Flow State: Accessing Peak Performance', videoUrl: 'https://vimeo.com/1138751058/78b743134a' },
+      { lessonTitle: 'Building Unshakeable Resilience', videoUrl: 'https://vimeo.com/1138751605/0ad1ac3082' },
+      { lessonTitle: 'Breathwork & Nervous System Control', videoUrl: 'https://vimeo.com/1138753391/d1242f342b' },
+      { lessonTitle: 'The Quantified Executive: Data-Driven Wellness', videoUrl: 'https://vimeo.com/1138758043/adcad49484' },
     ]
 
     // AI-Resistant Skills videos
