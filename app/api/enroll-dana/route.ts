@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
-export async function POST() {
+async function enrollDana() {
   try {
     // Find Dana Penza
     const user = await prisma.user.findFirst({
@@ -62,4 +62,12 @@ export async function POST() {
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
+}
+
+export async function GET() {
+  return enrollDana()
+}
+
+export async function POST() {
+  return enrollDana()
 }
