@@ -6,11 +6,12 @@ const prisma = new PrismaClient();
 export async function POST() {
   try {
     // Find and delete the draft AI-Resistant Skills course
+    // Find the draft AI-Resistant Skills course
+    // There should be 2 courses with this title - one published, one draft
     const draftCourse = await prisma.course.findFirst({
       where: {
         title: 'AI-Resistant Skills: Future-Proof Your Career',
-        status: 'DRAFT',
-        price: 1.97
+        isPublished: false
       }
     });
 
