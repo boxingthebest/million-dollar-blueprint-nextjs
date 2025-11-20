@@ -24,11 +24,11 @@ export default function LessonPlayer({
   // If PDF, show download interface
   if (isPDF) {
     return (
-      <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8">
+      <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-4 sm:p-8">
         <div className="max-w-2xl w-full text-center">
-          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl">
+          <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl">
             <svg
-              className="w-16 h-16 text-white"
+              className="w-12 h-12 sm:w-16 sm:h-16 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -41,8 +41,8 @@ export default function LessonPlayer({
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-white mb-3">Downloadable Resource</h3>
-          <p className="text-slate-300 text-lg mb-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">Downloadable Resource</h3>
+          <p className="text-slate-300 text-base sm:text-lg mb-6 sm:mb-8 px-4">
             Click the button below to download this PDF resource
           </p>
           <a
@@ -50,7 +50,7 @@ export default function LessonPlayer({
             download
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+            className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 text-sm sm:text-base"
             onClick={() => {
               // Mark as complete when downloaded
               if (!hasMarkedComplete) {
@@ -68,7 +68,7 @@ export default function LessonPlayer({
             </svg>
             Download PDF
           </a>
-          <p className="text-slate-400 text-sm mt-6">
+          <p className="text-slate-400 text-xs sm:text-sm mt-4 sm:mt-6 px-4">
             The PDF will open in a new tab or download to your device
           </p>
         </div>
