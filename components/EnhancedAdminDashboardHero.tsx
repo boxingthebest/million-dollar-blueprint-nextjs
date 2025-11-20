@@ -30,7 +30,12 @@ export default function EnhancedAdminDashboardHero({
     <div className="relative mb-12 overflow-hidden rounded-3xl">
       {/* Futuristic Animated Background */}
       <div className="absolute inset-0 z-0">
-        {/* Dark gradient base */}
+        {/* Blueprint background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: 'url(/images/dashboard/blueprint-hero.jpg)' }}
+        />
+        {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/50 to-purple-950/50" />
         
         {/* Animated grid pattern */}
