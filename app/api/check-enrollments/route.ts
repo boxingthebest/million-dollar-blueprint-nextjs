@@ -33,7 +33,7 @@ export async function GET() {
       enrollments: user.enrollments.map(e => ({
         courseTitle: e.course.title,
         courseSlug: e.course.slug,
-        enrolledAt: e.enrolledAt
+        createdAt: e.createdAt
       }))
     })
   } catch (error: any) {
