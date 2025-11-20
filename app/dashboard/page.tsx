@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma"
 import Link from "next/link"
 import Image from "next/image"
 import LogoutButton from "@/components/LogoutButton"
+import { Brain, Zap, TrendingUp, Crown, Megaphone, DollarSign, BookOpen, Flame, Star, Trophy, Target, Rocket } from "lucide-react"
 
 export default async function Dashboard() {
   const session = await getServerSession(authOptions)
@@ -59,6 +60,17 @@ export default async function Dashboard() {
   // Calculate streak (simplified)
   const currentStreak = 5
 
+  // Get course icon
+  const getCourseIcon = (slug: string) => {
+    if (slug.includes('ai')) return Brain
+    if (slug.includes('energy') || slug.includes('wellness')) return Zap
+    if (slug.includes('sales')) return TrendingUp
+    if (slug.includes('leadership')) return Crown
+    if (slug.includes('marketing')) return Megaphone
+    if (slug.includes('wealth')) return DollarSign
+    return BookOpen
+  }
+
   return (
     <div className="min-h-screen bg-slate-950 relative overflow-hidden">
       {/* Animated Background */}
@@ -66,6 +78,7 @@ export default async function Dashboard() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/20 to-cyan-950/20"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         
         {/* Blueprint Pattern */}
         <div 
@@ -92,8 +105,8 @@ export default async function Dashboard() {
               />
             </Link>
             <div className="flex items-center gap-6">
-              <div className="hidden md:flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full">
-                <span className="text-2xl">🔥</span>
+              <div className="hidden md:flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-full">
+                <Flame className="w-5 h-5 text-orange-400" />
                 <div>
                   <p className="text-xs text-slate-400">Current Streak</p>
                   <p className="text-sm font-bold text-orange-400">{currentStreak} days</p>
@@ -128,51 +141,60 @@ export default async function Dashboard() {
             }}
           ></div>
           
+          {/* Animated particles */}
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+            <div className="absolute top-40 right-20 w-2 h-2 bg-blue-400 rounded-full animate-ping delay-300"></div>
+            <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-ping delay-700"></div>
+          </div>
+          
           {/* HUD Corners */}
-          <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-cyan-500/50"></div>
-          <div className="absolute top-0 right-0 w-32 h-32 border-r-2 border-t-2 border-cyan-500/50"></div>
-          <div className="absolute bottom-0 left-0 w-32 h-32 border-l-2 border-b-2 border-cyan-500/50"></div>
-          <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-cyan-500/50"></div>
+          <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-cyan-500/50 animate-pulse"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 border-r-2 border-t-2 border-cyan-500/50 animate-pulse delay-200"></div>
+          <div className="absolute bottom-0 left-0 w-32 h-32 border-l-2 border-b-2 border-cyan-500/50 animate-pulse delay-400"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-cyan-500/50 animate-pulse delay-600"></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center">
-              <div className="inline-block px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full mb-6">
-                <span className="text-cyan-400 font-semibold text-sm flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+              <div className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full mb-6 animate-fade-in">
+                <Star className="w-4 h-4 text-cyan-400 animate-spin-slow" />
+                <span className="text-cyan-400 font-semibold text-sm">
                   LEARNING COMMAND CENTER
                 </span>
+                <Star className="w-4 h-4 text-cyan-400 animate-spin-slow" />
               </div>
               
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-slide-up">
                 <span className="text-white">Welcome Back, </span>
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-gradient">
                   {user?.name || 'Champion'}
                 </span>
               </h1>
               
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto animate-fade-in delay-200">
                 {overallProgress === 0 
-                  ? "Your transformation starts NOW! Take the first step today."
+                  ? "🚀 Your transformation starts NOW! Take the first step today."
                   : overallProgress < 50
-                  ? "You're building momentum! Keep pushing forward to your goals."
+                  ? "💪 You're building momentum! Keep pushing forward to your goals."
                   : overallProgress < 100
-                  ? "Incredible progress! You're more than halfway to mastery."
-                  : "You've achieved mastery! Now it's time to apply and teach others."}
+                  ? "🔥 Incredible progress! You're more than halfway to mastery."
+                  : "🏆 You've achieved mastery! Now it's time to apply and teach others."}
               </p>
 
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">
-                <div className="bg-slate-900/60 backdrop-blur-sm border border-cyan-500/30 rounded-xl px-6 py-4">
+                <div className="bg-slate-900/60 backdrop-blur-sm border border-cyan-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300 animate-fade-in delay-300">
+                  <Target className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-cyan-400">{totalCourses}</p>
                   <p className="text-sm text-slate-400">Courses</p>
                 </div>
-                <div className="bg-slate-900/60 backdrop-blur-sm border border-purple-500/30 rounded-xl px-6 py-4">
+                <div className="bg-slate-900/60 backdrop-blur-sm border border-purple-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300 animate-fade-in delay-400">
+                  <BookOpen className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-purple-400">{completedLessons}</p>
                   <p className="text-sm text-slate-400">Lessons Done</p>
                 </div>
-                <div className="bg-slate-900/60 backdrop-blur-sm border border-emerald-500/30 rounded-xl px-6 py-4">
+                <div className="bg-slate-900/60 backdrop-blur-sm border border-emerald-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300 animate-fade-in delay-500">
+                  <Trophy className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-emerald-400">{overallProgress}%</p>
                   <p className="text-sm text-slate-400">Complete</p>
                 </div>
@@ -183,9 +205,9 @@ export default async function Dashboard() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {enrolledCourses.length === 0 ? (
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-16 text-center">
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-16 text-center animate-fade-in">
               <div className="max-w-2xl mx-auto">
-                <div className="text-6xl mb-6">🚀</div>
+                <Rocket className="w-24 h-24 text-cyan-400 mx-auto mb-6 animate-bounce" />
                 <h2 className="text-3xl font-bold text-white mb-4">
                   Ready to Start Your Transformation?
                 </h2>
@@ -202,36 +224,35 @@ export default async function Dashboard() {
             </div>
           ) : (
             <>
-              <h2 className="text-3xl font-bold text-white mb-8">Your Courses</h2>
+              <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <BookOpen className="w-8 h-8 text-cyan-400" />
+                Your Courses
+              </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {enrolledCourses.map((enrollment) => {
+                {enrolledCourses.map((enrollment, index) => {
                   const course = enrollment.course
                   const courseLessons = course.modules.reduce((acc, module) => acc + module.lessons.length, 0)
                   const courseCompleted = course.modules.reduce((acc, module) => 
                     acc + module.lessons.filter((lesson) => lesson.progress.some((p) => p.completed)).length, 0)
                   const courseProgress = courseLessons > 0 ? Math.round((courseCompleted / courseLessons) * 100) : 0
+                  const Icon = getCourseIcon(course.slug)
 
                   return (
                     <div 
                       key={course.id}
-                      className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:scale-105"
+                      className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-2 animate-fade-in"
+                      style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      {/* Course Image/Icon */}
+                      {/* Course Icon */}
                       <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 group-hover:scale-110 transition-transform duration-500"></div>
-                        <div className="relative text-6xl">
-                          {course.slug.includes('ai') ? '🤖' : 
-                           course.slug.includes('energy') || course.slug.includes('wellness') ? '⚡' :
-                           course.slug.includes('sales') ? '💼' :
-                           course.slug.includes('leadership') ? '👑' :
-                           course.slug.includes('marketing') ? '📱' :
-                           course.slug.includes('wealth') ? '💰' : '📚'}
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 group-hover:scale-110 transition-transform duration-700"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+                        <Icon className="relative w-24 h-24 text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-500 drop-shadow-2xl" strokeWidth={1.5} />
                       </div>
 
                       <div className="p-6">
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2">
                           {course.title}
                         </h3>
                         
@@ -243,7 +264,7 @@ export default async function Dashboard() {
                           </div>
                           <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
                             <div 
-                              className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-500"
+                              className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-700 group-hover:from-cyan-400 group-hover:to-blue-400"
                               style={{ width: `${courseProgress}%` }}
                             ></div>
                           </div>
@@ -256,7 +277,7 @@ export default async function Dashboard() {
 
                         <Link
                           href={`/learn/${course.slug}`}
-                          className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-center shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/50"
+                          className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-center shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/50 group-hover:scale-105"
                         >
                           {courseProgress === 0 ? 'Start Learning' : courseProgress === 100 ? 'Review Course' : 'Continue Learning'} →
                         </Link>
@@ -269,6 +290,75 @@ export default async function Dashboard() {
           )}
         </div>
       </main>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slide-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.6s ease-out forwards;
+        }
+
+        .animate-slide-up {
+          animation: slide-up 0.8s ease-out forwards;
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 3s linear infinite;
+        }
+
+        .delay-200 {
+          animation-delay: 200ms;
+        }
+
+        .delay-300 {
+          animation-delay: 300ms;
+        }
+
+        .delay-400 {
+          animation-delay: 400ms;
+        }
+
+        .delay-500 {
+          animation-delay: 500ms;
+        }
+
+        .delay-600 {
+          animation-delay: 600ms;
+        }
+
+        .delay-700 {
+          animation-delay: 700ms;
+        }
+      `}</style>
     </div>
   )
 }
