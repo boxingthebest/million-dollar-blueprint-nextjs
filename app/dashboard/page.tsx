@@ -156,22 +156,22 @@ export default async function Dashboard() {
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full mb-6 animate-fade-in">
-                <Star className="w-4 h-4 text-cyan-400 animate-spin-slow" />
+              <div className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full mb-6">
+                <Star className="w-4 h-4 text-cyan-400 animate-spin" />
                 <span className="text-cyan-400 font-semibold text-sm">
                   LEARNING COMMAND CENTER
                 </span>
-                <Star className="w-4 h-4 text-cyan-400 animate-spin-slow" />
+                <Star className="w-4 h-4 text-cyan-400 animate-spin" />
               </div>
               
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-slide-up">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 <span className="text-white">Welcome Back, </span>
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-gradient">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                   {user?.name || 'Champion'}
                 </span>
               </h1>
               
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto animate-fade-in delay-200">
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 {overallProgress === 0 
                   ? "🚀 Your transformation starts NOW! Take the first step today."
                   : overallProgress < 50
@@ -183,17 +183,17 @@ export default async function Dashboard() {
 
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">
-                <div className="bg-slate-900/60 backdrop-blur-sm border border-cyan-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300 animate-fade-in delay-300">
+                <div className="bg-slate-900/60 backdrop-blur-sm border border-cyan-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300">
                   <Target className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-cyan-400">{totalCourses}</p>
                   <p className="text-sm text-slate-400">Courses</p>
                 </div>
-                <div className="bg-slate-900/60 backdrop-blur-sm border border-purple-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300 animate-fade-in delay-400">
+                <div className="bg-slate-900/60 backdrop-blur-sm border border-purple-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300">
                   <BookOpen className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-purple-400">{completedLessons}</p>
                   <p className="text-sm text-slate-400">Lessons Done</p>
                 </div>
-                <div className="bg-slate-900/60 backdrop-blur-sm border border-emerald-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300 animate-fade-in delay-500">
+                <div className="bg-slate-900/60 backdrop-blur-sm border border-emerald-500/30 rounded-xl px-6 py-4 hover:scale-105 transition-transform duration-300">
                   <Trophy className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
                   <p className="text-3xl font-bold text-emerald-400">{overallProgress}%</p>
                   <p className="text-sm text-slate-400">Complete</p>
@@ -205,7 +205,7 @@ export default async function Dashboard() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {enrolledCourses.length === 0 ? (
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-16 text-center animate-fade-in">
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-2 border-cyan-500/30 rounded-2xl p-16 text-center">
               <div className="max-w-2xl mx-auto">
                 <Rocket className="w-24 h-24 text-cyan-400 mx-auto mb-6 animate-bounce" />
                 <h2 className="text-3xl font-bold text-white mb-4">
@@ -241,8 +241,7 @@ export default async function Dashboard() {
                   return (
                     <div 
                       key={course.id}
-                      className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-2 animate-fade-in"
-                      style={{ animationDelay: `${index * 100}ms` }}
+                      className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-2"
                     >
                       {/* Course Icon */}
                       <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center relative overflow-hidden">
@@ -291,74 +290,7 @@ export default async function Dashboard() {
         </div>
       </main>
 
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
 
-        @keyframes slide-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes spin-slow {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
-        }
-
-        .animate-slide-up {
-          animation: slide-up 0.8s ease-out forwards;
-        }
-
-        .animate-spin-slow {
-          animation: spin-slow 3s linear infinite;
-        }
-
-        .delay-200 {
-          animation-delay: 200ms;
-        }
-
-        .delay-300 {
-          animation-delay: 300ms;
-        }
-
-        .delay-400 {
-          animation-delay: 400ms;
-        }
-
-        .delay-500 {
-          animation-delay: 500ms;
-        }
-
-        .delay-600 {
-          animation-delay: 600ms;
-        }
-
-        .delay-700 {
-          animation-delay: 700ms;
-        }
-      `}</style>
     </div>
   )
 }
