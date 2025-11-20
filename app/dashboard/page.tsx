@@ -120,7 +120,7 @@ export default async function Dashboard() {
         <div className="relative bg-gradient-to-br from-slate-900/80 to-blue-900/40 border-b border-cyan-500/20 overflow-hidden">
           {/* Hero Background Image */}
           <div 
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0 opacity-30"
             style={{
               backgroundImage: 'url(/student-success-hero.jpg)',
               backgroundSize: 'cover',
