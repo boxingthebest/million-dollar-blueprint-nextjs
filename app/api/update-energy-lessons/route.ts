@@ -44,7 +44,7 @@ export async function GET() {
     const updates = [];
 
     for (const lesson of allLessons) {
-      const update = lessonUpdates[lesson.title];
+      const update = lessonUpdates[lesson.title as keyof typeof lessonUpdates];
       if (update) {
         await prisma.lesson.update({
           where: { id: lesson.id },
