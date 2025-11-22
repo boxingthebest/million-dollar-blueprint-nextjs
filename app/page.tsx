@@ -403,7 +403,7 @@ export default function Home() {
                     <ArrowRight className="w-6 h-6" />
                   </motion.span>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-500 pointer-events-none" />
               </motion.a>
               <a
                 href="#courses"
