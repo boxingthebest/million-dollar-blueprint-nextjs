@@ -87,8 +87,6 @@ export default function AnimatedNavigation() {
           {/* Get Started Button */}
           <a 
             href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
-            target="_blank"
-            rel="noopener noreferrer"
             className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 border-2 border-cyan-500/30 hover:border-cyan-400/50 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base shadow-lg shadow-orange-500/20"
           >
             Get Started
