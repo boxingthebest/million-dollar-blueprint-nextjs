@@ -145,17 +145,17 @@ export async function POST() {
                   },
                   {
                     title: 'Quick Reference Guide',
-                    description: 'Cheat sheets and quick-reference templates (Coming Soon)',
+                    description: 'Cheat sheets and quick-reference templates for all growth frameworks',
                     order: 4,
                     duration: 0,
-                    videoUrl: '/downloads/Digital-Marketing-Quick-Reference.pdf'
+                    videoUrl: '/downloads/Doc4-Digital-Marketing-Quick-Reference-Guide.pdf'
                   },
                   {
                     title: 'Resource List',
-                    description: 'Curated resources for continued learning (Coming Soon)',
+                    description: 'Curated tools, books, platforms, and communities for growth marketers',
                     order: 5,
                     duration: 0,
-                    videoUrl: '/downloads/Digital-Marketing-Resource-List.pdf'
+                    videoUrl: '/downloads/Doc5-Digital-Marketing-Resource-List.pdf'
                   }
                 ]
               }
