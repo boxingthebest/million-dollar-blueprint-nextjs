@@ -16,11 +16,11 @@ function CheckoutSuccessContent() {
     // Simulate loading
     setTimeout(() => setLoading(false), 1000)
     
-    // Auto-redirect to Lesson 1 after 3 seconds
+    // Auto-redirect to Dashboard after 3 seconds
     const redirectTimer = setTimeout(() => {
       setRedirecting(true)
-      // Redirect to the course learn page which will show Lesson 1
-      window.location.href = `/learn/${courseSlug}`
+      // Redirect to dashboard to see all enrolled courses
+      window.location.href = `/dashboard`
     }, 3000)
 
     return () => clearTimeout(redirectTimer)
@@ -67,7 +67,7 @@ function CheckoutSuccessContent() {
           
           {redirecting && (
             <p className="text-cyan-400 font-semibold mb-6 animate-pulse">
-              Redirecting you to your course...
+              Redirecting you to your dashboard...
             </p>
           )}
 

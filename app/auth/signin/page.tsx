@@ -12,6 +12,7 @@ export default function SignIn() {
   const router = useRouter()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [rememberMe, setRememberMe] = useState(false)
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
 
@@ -123,7 +124,16 @@ export default function SignIn() {
                   />
                 </div>
 
-                <div className="flex items-center justify-end">
+                <div className="flex items-center justify-between">
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={(e) => setRememberMe(e.target.checked)}
+                      className="w-4 h-4 rounded border-slate-600 bg-slate-800/50 text-orange-500 focus:ring-2 focus:ring-orange-500/20 focus:ring-offset-0 cursor-pointer"
+                    />
+                    <span className="text-sm text-slate-300 select-none">Remember me</span>
+                  </label>
                   <Link
                     href="/auth/forgot-password"
                     className="text-sm text-orange-400 hover:text-orange-300 transition-colors font-medium"
