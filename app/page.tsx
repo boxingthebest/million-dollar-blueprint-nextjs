@@ -388,8 +388,6 @@ export default function Home() {
                 whileHover={{ scale: 1.15, rotate: [0, -1, 1, -1, 0] }}
                 whileTap={{ scale: 0.95 }}
                 href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="neon-button relative inline-flex items-center justify-center bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500 text-white px-10 md:px-14 py-5 md:py-7 rounded-xl text-xl md:text-2xl font-bold overflow-hidden group"
                 style={{ backgroundSize: '200% 100%' }}
               >
@@ -650,8 +648,6 @@ export default function Home() {
                   <div className="mt-auto">
                     <a
                     href="https://buy.stripe.com/5kQ14m6Xf2DZ15yf4g08g09"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-cyan-500/50"
                   >
                     Get Started - $397
@@ -705,8 +701,6 @@ export default function Home() {
                   <div className="mt-auto">
                     <a
                     href="https://buy.stripe.com/bJe28qbdvcezcOgf4g08g0a"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white px-8 py-5 rounded-lg font-bold text-xl transition-all shadow-2xl w-full hover:shadow-purple-500/50"
                   >
                     Get Complete Access - $597
@@ -761,8 +755,6 @@ export default function Home() {
                   <div className="mt-auto">
                     <a
                     href="https://buy.stripe.com/4gM14mgxPfqLg0saO008g0b"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-amber-500/50"
                   >
                     Get VIP Access - $797
@@ -898,8 +890,6 @@ export default function Home() {
             </p>
             <a
               href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-block bg-white text-red-600 hover:bg-slate-100 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
               Get Started Now - Save $100
