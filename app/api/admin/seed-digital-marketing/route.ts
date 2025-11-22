@@ -36,7 +36,7 @@ export async function POST() {
         slug: 'marketing',
         description: 'Master growth engineering, viral loops, and data-driven marketing strategies used by Silicon Valley\'s fastest-growing companies',
         price: 247,
-        published: true,
+        isPublished: true,
         modules: {
           create: [
             {
