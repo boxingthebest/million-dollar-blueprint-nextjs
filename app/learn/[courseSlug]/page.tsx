@@ -36,6 +36,9 @@ export default async function CoursePage({ params }: { params: { courseSlug: str
                 where: { userId: user.id }
               }
             }
+          },
+          resources: {
+            orderBy: { order: 'asc' }
           }
         }
       },
@@ -52,6 +55,14 @@ export default async function CoursePage({ params }: { params: { courseSlug: str
   const isAdmin = user.role === 'admin'
   const isEnrolled = course.enrollments.length > 0 || isAdmin
   const firstLesson = course.modules[0]?.lessons[0]
+
+  // Calculate progress
+  const totalLessons = course.modules.reduce((sum, module) => sum + module.lessons.length, 0)
+  const completedLessons = course.modules.reduce(
+    (sum, module) => sum + module.lessons.filter(l => l.progress.some(p => p.completed)).length,
+    0
+  )
+  const progressPercentage = totalLessons > 0 ? Math.round((completedLessons / totalLessons) * 100) : 0
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-black">
@@ -84,7 +95,27 @@ export default async function CoursePage({ params }: { params: { courseSlug: str
           {/* Course Info */}
           <div className="lg:col-span-2">
             <h1 className="text-4xl font-bold text-white mb-4">{course.title}</h1>
-            <p className="text-slate-300 text-lg mb-8">{course.description}</p>
+            <p className="text-slate-300 text-lg mb-6">{course.description}</p>
+
+            {/* Progress Bar */}
+            {isEnrolled && totalLessons > 0 && (
+              <div className="mb-8">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm text-slate-400">
+                    {completedLessons} of {totalLessons} lessons completed
+                  </span>
+                  <span className="text-sm font-semibold text-cyan-400">
+                    {progressPercentage}%
+                  </span>
+                </div>
+                <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                  <div
+                    className="bg-gradient-to-r from-cyan-500 to-blue-500 h-full transition-all duration-500"
+                    style={{ width: `${progressPercentage}%` }}
+                  />
+                </div>
+              </div>
+            )}
 
             {isEnrolled && firstLesson && (
               <Link
@@ -140,13 +171,42 @@ export default async function CoursePage({ params }: { params: { courseSlug: str
                                 )}
                               </div>
                             </div>
-                            <span className="text-sm text-slate-500">
+                            <span className="text-sm text-slate-500 ml-auto">
                               {Math.floor(lesson.duration / 60)} min
                             </span>
                           </div>
                         </Link>
                       )
                     })}
+                    {/* Resources */}
+                    {module.resources && module.resources.length > 0 && module.resources.map((resource, resourceIndex) => (
+                      <a
+                        key={resource.id}
+                        href={resource.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-4 hover:bg-slate-800/50 transition-colors group"
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-4">
+                            <div className="w-8 h-8 rounded-full flex items-center justify-center bg-green-500/20 text-green-400">
+                              ✓
+                            </div>
+                            <div>
+                              <p className="text-white group-hover:text-cyan-400 transition-colors">
+                                {resource.title}
+                              </p>
+                              {resource.description && (
+                                <p className="text-sm text-slate-500">{resource.description}</p>
+                              )}
+                            </div>
+                          </div>
+                          <span className="text-sm text-slate-500 ml-auto">
+                            0 min
+                          </span>
+                        </div>
+                      </a>
+                    ))}
                   </div>
                 </div>
               ))}

@@ -10,6 +10,8 @@ import { notFound } from "next/navigation"
 import LessonPlayer from "./LessonPlayer"
 import LogoutButton from "@/components/LogoutButton"
 import LessonHeroBackdrop from "@/components/LessonHeroBackdrop"
+import LessonKeyboardNav from "@/components/LessonKeyboardNav"
+import MarkCompleteButton from "@/components/MarkCompleteButton"
 
 export default async function LessonPage({
   params,
@@ -102,6 +104,12 @@ export default async function LessonPage({
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-black">
+      {/* Keyboard Navigation */}
+      <LessonKeyboardNav
+        courseSlug={course.slug}
+        previousLessonId={previousLesson?.id || null}
+        nextLessonId={nextLesson?.id || null}
+      />
       {/* Lesson Hero Backdrop */}
       <LessonHeroBackdrop
         lessonNumber={currentIndex + 1}
@@ -198,6 +206,11 @@ export default async function LessonPage({
                       <p className="text-slate-400 text-lg leading-relaxed">{lesson.description}</p>
                     )}
                   </div>
+                </div>
+
+                {/* Mark Complete Button */}
+                <div className="mt-6">
+                  <MarkCompleteButton lessonId={lesson.id} isCompleted={isCompleted} />
                 </div>
 
                 {/* Motivational Message */}
