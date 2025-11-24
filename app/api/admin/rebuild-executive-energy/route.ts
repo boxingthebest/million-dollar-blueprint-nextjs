@@ -33,7 +33,7 @@ export async function POST() {
       { order: 2, title: 'Lesson 2: Sleep Optimization for Peak Performance', description: 'Optimize your sleep for peak performance' },
       { order: 3, title: 'Lesson 3: Nutrition for Cognitive & Physical Excellence', description: 'Fuel your body for sustained energy' },
       { order: 4, title: 'Lesson 4: Stress Management & Resilience', description: 'Master stress for peak performance' },
-      { order: 5, title: 'Lesson 5: Energy Mastery - The Executive\\'s Secret Weapon', description: 'Maximize your daily energy levels' },
+      { order: 5, title: "Lesson 5: Energy Mastery - The Executive's Secret Weapon", description: 'Maximize your daily energy levels' },
       { order: 6, title: 'Lesson 6: Advanced Recovery Protocols', description: 'Exercise protocols for busy executives' },
       { order: 7, title: 'Lesson 7: The Flow State - Accessing Peak Performance', description: 'Achieve more in less time' },
       { order: 8, title: 'Lesson 8: Building Unshakeable Resilience', description: 'Bounce back stronger from setbacks' },
