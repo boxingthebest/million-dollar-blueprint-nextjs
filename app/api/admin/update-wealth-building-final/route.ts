@@ -5,7 +5,7 @@ export async function POST() {
   try {
     // Find Wealth Building course
     const course = await prisma.course.findFirst({
-      where: { slug: 'wealth-building-blueprint' },
+      where: { slug: 'wealth' },
       include: {
         modules: {
           include: {
