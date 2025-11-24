@@ -30,45 +30,6 @@ export async function GET() {
     startOfWeek.setHours(0, 0, 0, 0)
     const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1)
 
-    // Get newsletter subscribers
-    const totalNewsletterSubscribers = await prisma.newsletterSubscriber.count()
-    
-    const newsletterSubscribersToday = await prisma.newsletterSubscriber.count({
-      where: {
-        createdAt: {
-          gte: startOfToday,
-        },
-      },
-    })
-
-    const newsletterSubscribersThisWeek = await prisma.newsletterSubscriber.count({
-      where: {
-        createdAt: {
-          gte: startOfWeek,
-        },
-      },
-    })
-
-    const newsletterSubscribersThisMonth = await prisma.newsletterSubscriber.count({
-      where: {
-        createdAt: {
-          gte: startOfMonth,
-        },
-      },
-    })
-
-    // Get recent newsletter subscribers
-    const recentNewsletterSubscribers = await prisma.newsletterSubscriber.findMany({
-      orderBy: { createdAt: "desc" },
-      take: 20,
-      select: {
-        id: true,
-        email: true,
-        verified: true,
-        createdAt: true,
-      },
-    })
-
     // Get total students
     const totalStudents = await prisma.user.count({
       where: { role: "user" },
@@ -233,13 +194,16 @@ export async function GET() {
           },
         },
         enrollments: {
+          where: {
+            course: {
+              isFree: false,
+            },
+          },
           include: {
             course: {
               select: {
-                id: true,
                 title: true,
                 price: true,
-                isFree: true,
               },
             },
           },
@@ -508,12 +472,7 @@ export async function GET() {
         signupsThisMonth,
         activeStudentsLast7Days,
         activeStudentsLast30Days,
-        totalNewsletterSubscribers,
-        newsletterSubscribersToday,
-        newsletterSubscribersThisWeek,
-        newsletterSubscribersThisMonth,
       },
-      newsletterSubscribers: recentNewsletterSubscribers,
       recentStudents,
       passwordStudents,
       payingStudents,
