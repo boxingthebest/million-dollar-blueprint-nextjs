@@ -183,8 +183,7 @@ function PurchaseSuccessContent() {
         }}
       />
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/85 to-slate-900/90 z-[1]" />
-      <FuturisticBackground />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/85 to-slate-900/90 z-[5]" />
       
       {/* Main Hero Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-20">
