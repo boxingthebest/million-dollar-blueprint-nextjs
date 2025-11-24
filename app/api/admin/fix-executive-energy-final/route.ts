@@ -27,20 +27,18 @@ export async function POST() {
       return NextResponse.json({ error: 'Module 1 not found' }, { status: 404 });
     }
 
-    // The correct mapping based on the actual video content
-    // The videos are numbered Lesson 1, Lesson 2, etc. in the video itself
-    // So we need to match the database titles to the video content
+    // Correct titles from actual Vimeo videos
     const correctTitles = [
-      { order: 1, title: 'Lesson 1: Welcome to The Executive Energy System™' },
+      { order: 1, title: 'Lesson 1: The High-Performance Mindset' },
       { order: 2, title: 'Lesson 2: Sleep Optimization for Peak Performance' },
-      { order: 3, title: 'Lesson 3: The High-Performance Mindset' },
-      { order: 4, title: 'Lesson 4: Sleep Architecture for Executives' },
-      { order: 5, title: 'Lesson 5: Strategic Nutrition' },
-      { order: 6, title: 'Lesson 6: Movement & Recovery' },
-      { order: 7, title: 'Lesson 7: Stress Management' },
-      { order: 8, title: 'Lesson 8: Energy Optimization' },
-      { order: 9, title: 'Lesson 9: Focus & Productivity' },
-      { order: 10, title: 'Lesson 10: Resilience Building' }
+      { order: 3, title: 'Lesson 3: Nutrition for Cognitive & Physical Excellence' },
+      { order: 4, title: 'Lesson 4: Stress Management & Resilience' },
+      { order: 5, title: 'Lesson 5: Energy Mastery - The Executive\'s Secret Weapon' },
+      { order: 6, title: 'Lesson 6: Advanced Recovery Protocols' },
+      { order: 7, title: 'Lesson 7: The Flow State - Accessing Peak Performance' },
+      { order: 8, title: 'Lesson 8: Building Unshakeable Resilience' },
+      { order: 9, title: 'Lesson 9: Breathwork & Nervous System Control' },
+      { order: 10, title: 'Lesson 10: The Quantified Executive - Data-Driven Wellness' }
     ];
 
     const updates = [];
