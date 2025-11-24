@@ -171,7 +171,19 @@ function PurchaseSuccessContent() {
 
   // Welcome Screen - Full Hero Style
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Hero Background Image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/purchase-success-hero-v2.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/85 to-slate-900/90 z-[1]" />
       <FuturisticBackground />
       
       {/* Main Hero Content */}
