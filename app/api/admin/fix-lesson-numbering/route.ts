@@ -61,25 +61,8 @@ export async function POST() {
       }
     }
 
-    // 3. Fix Leadership Module 2 resources - Ensure all have proper numbering
-    const leadership = await prisma.course.findFirst({
-      where: { slug: 'leadership' },
-      include: { modules: { include: { resources: { orderBy: { order: 'asc' } } } } }
-    });
-
-    if (leadership && leadership.modules[1]) {
-      const resources = leadership.modules[1].resources;
-      for (let i = 0; i < resources.length; i++) {
-        if (resources[i].order !== i + 1) {
-          updates.push(
-            prisma.resource.update({
-              where: { id: resources[i].id },
-              data: { order: i + 1 }
-            })
-          );
-        }
-      }
-    }
+    // Resources are actually lessons with PDF URLs, not a separate model
+    // The numbering is handled by the lesson order field
 
     // Execute all updates
     await Promise.all(updates);

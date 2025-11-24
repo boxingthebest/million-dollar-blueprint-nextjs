@@ -36,9 +36,6 @@ export default async function CoursePage({ params }: { params: { courseSlug: str
                 where: { userId: user.id }
               }
             }
-          },
-          resources: {
-            orderBy: { order: 'asc' }
           }
         }
       },
@@ -178,35 +175,6 @@ export default async function CoursePage({ params }: { params: { courseSlug: str
                         </Link>
                       )
                     })}
-                    {/* Resources */}
-                    {module.resources && module.resources.length > 0 && module.resources.map((resource, resourceIndex) => (
-                      <a
-                        key={resource.id}
-                        href={resource.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block p-4 hover:bg-slate-800/50 transition-colors group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-4">
-                            <div className="w-8 h-8 rounded-full flex items-center justify-center bg-green-500/20 text-green-400">
-                              ✓
-                            </div>
-                            <div>
-                              <p className="text-white group-hover:text-cyan-400 transition-colors">
-                                {resource.title}
-                              </p>
-                              {resource.description && (
-                                <p className="text-sm text-slate-500">{resource.description}</p>
-                              )}
-                            </div>
-                          </div>
-                          <span className="text-sm text-slate-500 ml-auto">
-                            0 min
-                          </span>
-                        </div>
-                      </a>
-                    ))}
                   </div>
                 </div>
               ))}
