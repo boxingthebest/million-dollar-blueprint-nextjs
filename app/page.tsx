@@ -93,7 +93,7 @@ export default function Home() {
       icon: SalesMasteryIcon,
       gradient: "from-orange-500 to-amber-600",
       bgGradient: "from-orange-500 to-amber-600",
-      stripeLink: "https://buy.stripe.com/6oU14mgxP5Qb5lOe0c08g03",
+      stripeLink: "https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c",
       description: "Sales frameworks that scaled companies from $500K to $50B+.",
       students: "Coming Soon",
       image: "/course-sales-new.jpg",
