@@ -41,7 +41,7 @@ export async function POST() {
       { order: 10, title: 'Lesson 10: The Quantified Executive - Data-Driven Wellness', description: 'Build a foundation for long-term health' }
     ];
 
-    const lessons = module1.lessons.filter(l => !l.pdfUrl); // Only get video lessons, not PDFs
+    const lessons = module1.lessons; // Get all lessons in order
     
     if (lessons.length < 10) {
       return NextResponse.json({ 
