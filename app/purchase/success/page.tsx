@@ -2,9 +2,10 @@
 
 import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { CheckCircle, ArrowRight, Sparkles } from "lucide-react";
+import { CheckCircle, ArrowRight, Sparkles, Trophy, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import FuturisticBackground from "@/components/FuturisticBackground";
+import HeroSectionDivider from "@/components/HeroSectionDivider";
 
 function PurchaseSuccessContent() {
   const router = useRouter();
@@ -61,72 +62,13 @@ function PurchaseSuccessContent() {
     }
   };
 
-  return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <FuturisticBackground />
-      
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-12">
-        <div className="w-full max-w-2xl">
-          {step === "welcome" ? (
-            // Welcome/Congratulations Screen
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl p-8 md:p-12 text-center">
-              {/* Success Icon with Animation */}
-              <div className="mb-8 flex justify-center">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-green-500/30 rounded-full blur-2xl animate-pulse"></div>
-                  <CheckCircle className="relative w-24 h-24 text-green-400 animate-bounce" />
-                </div>
-              </div>
-
-              {/* Heading */}
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                🎉 Congratulations!
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-200 mb-8">
-                Your Purchase is Complete
-              </p>
-
-              {/* Course Info */}
-              <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 rounded-2xl p-6 mb-8 border border-orange-500/30">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Sparkles className="w-5 h-5 text-amber-400" />
-                  <p className="text-lg text-white font-semibold">You now have access to:</p>
-                </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white">
-                  Sales Mastery Course
-                </h2>
-                <p className="text-blue-200 mt-2">
-                  The frameworks that scaled companies from $500K to $50B+
-                </p>
-              </div>
-
-              {/* Next Steps */}
-              <div className="bg-white/5 rounded-2xl p-6 mb-8 text-left">
-                <h3 className="text-xl font-bold text-white mb-4 text-center">Next Step</h3>
-                <p className="text-blue-200 text-center mb-4">
-                  Create your password to access your course and start learning immediately.
-                </p>
-              </div>
-
-              {/* CTA Button */}
-              <button
-                onClick={() => setStep("setup")}
-                className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-2"
-              >
-                Set Up Your Account
-                <ArrowRight className="w-5 h-5" />
-              </button>
-
-              {/* Support */}
-              <p className="text-blue-300 text-sm mt-6">
-                Questions? Email us at{" "}
-                <a href="mailto:support@milliondollarblueprint.ai" className="text-amber-400 hover:underline">
-                  support@milliondollarblueprint.ai
-                </a>
-              </p>
-            </div>
-          ) : (
-            // Account Setup Screen
+  if (step === "setup") {
+    return (
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <FuturisticBackground />
+        
+        <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-12">
+          <div className="w-full max-w-2xl">
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl p-8 md:p-12">
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
@@ -138,7 +80,7 @@ function PurchaseSuccessContent() {
               </div>
 
               <form onSubmit={handleSetupAccount} className="space-y-6">
-                {/* Email (read-only) */}
+                {/* Email */}
                 <div>
                   <label className="block text-sm font-medium text-blue-200 mb-2">
                     Email Address
@@ -195,7 +137,7 @@ function PurchaseSuccessContent() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl hover:shadow-2xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {loading ? "Creating Account..." : "Create Account & Access Course"}
                   {!loading && <ArrowRight className="w-5 h-5" />}
@@ -221,9 +163,111 @@ function PurchaseSuccessContent() {
                 </p>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
+    );
+  }
+
+  // Welcome Screen - Full Hero Style
+  return (
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <FuturisticBackground />
+      
+      {/* Main Hero Content */}
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-20">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Success Badge */}
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3 mb-8 animate-pulse">
+            <CheckCircle className="w-6 h-6 text-green-400" />
+            <span className="text-green-300 font-semibold uppercase tracking-wider text-sm">
+              Payment Successful
+            </span>
+          </div>
+
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+            Welcome to the
+            <br />
+            <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+              Million Dollar
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent">
+              Blueprint
+            </span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl lg:text-3xl text-blue-200 mb-4 max-w-4xl mx-auto">
+            You've Just Unlocked Elite-Level Training
+          </p>
+          <p className="text-lg md:text-xl text-blue-300 mb-12 max-w-3xl mx-auto">
+            Join ambitious professionals transforming their careers with frameworks from Amazon, Goldman Sachs & McKinsey
+          </p>
+
+          {/* Course Access Card */}
+          <div className="bg-gradient-to-br from-orange-500/20 to-pink-600/20 backdrop-blur-xl border border-orange-500/30 rounded-3xl p-8 md:p-12 mb-12 max-w-3xl mx-auto shadow-2xl">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Trophy className="w-8 h-8 text-amber-400" />
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
+                Sales Mastery Course
+              </h2>
+            </div>
+            <p className="text-lg text-blue-200 mb-6">
+              The frameworks that scaled companies from <span className="text-amber-400 font-bold">$500K to $50B+</span>
+            </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="bg-white/5 rounded-xl p-4">
+                <div className="text-3xl font-bold text-white mb-1">6</div>
+                <div className="text-sm text-blue-300">Modules</div>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4">
+                <div className="text-3xl font-bold text-white mb-1">40+</div>
+                <div className="text-sm text-blue-300">Lessons</div>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4">
+                <div className="text-3xl font-bold text-white mb-1">∞</div>
+                <div className="text-sm text-blue-300">Lifetime Access</div>
+              </div>
+            </div>
+
+            {/* Next Step */}
+            <div className="bg-white/10 rounded-2xl p-6 mb-6">
+              <div className="flex items-center gap-2 mb-2">
+                <TrendingUp className="w-5 h-5 text-green-400" />
+                <h3 className="text-xl font-bold text-white">Next Step</h3>
+              </div>
+              <p className="text-blue-200">
+                Create your password to access your course and start learning immediately
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <button
+              onClick={() => setStep("setup")}
+              className="w-full bg-gradient-to-r from-orange-500 via-pink-600 to-purple-600 hover:from-orange-600 hover:via-pink-700 hover:to-purple-700 text-white px-12 py-6 rounded-2xl font-bold text-xl transition-all shadow-2xl hover:shadow-orange-500/50 hover:scale-105 flex items-center justify-center gap-3 group"
+            >
+              <Sparkles className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+              Set Up Your Account & Start Learning
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+            </button>
+          </div>
+
+          {/* Support */}
+          <p className="text-blue-300 text-sm">
+            Questions? Email us at{" "}
+            <a href="mailto:support@milliondollarblueprint.ai" className="text-amber-400 hover:underline font-semibold">
+              support@milliondollarblueprint.ai
+            </a>
+          </p>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <HeroSectionDivider />
     </div>
   );
 }
