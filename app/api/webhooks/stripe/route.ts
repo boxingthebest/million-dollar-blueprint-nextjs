@@ -79,15 +79,15 @@ export async function POST(request: NextRequest) {
         // Map product key to course slugs (bundles return array, single courses return single slug)
         const productToCourses: Record<string, string[]> = {
           // Bundles
-          "starter-bundle": ["ai-resistant-skills", "wellness"],
-          "complete-mastery-bundle": ["ai-resistant-skills", "wellness", "sales", "leadership", "marketing", "wealth"],
+          "starter-bundle": ["ai-resistant-skills", "executive-energy-system"],
+          "complete-mastery-bundle": ["ai-resistant-skills", "executive-energy-system", "sales", "leadership", "marketing", "wealth"],
           // Individual Courses
           "ai-resistant-skills": ["ai-resistant-skills"],
-          "high-performance-wellness": ["wellness"],
+          "executive-energy-system": ["executive-energy-system"],
           "sales-mastery": ["sales"],
-          "leadership-influence": ["leadership"],
-          "digital-marketing-mastery": ["marketing"],
-          "wealth-building": ["wealth"],
+          "leadership": ["leadership"],
+          "marketing": ["marketing"],
+          "wealth": ["wealth"],
         }
 
         const courseSlugs = productToCourses[metadata.productKey]
