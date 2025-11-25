@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
+import { signIn } from "next-auth/react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -49,9 +50,25 @@ function ResetPasswordForm() {
 
       if (response.ok) {
         setSuccess(true)
-        setTimeout(() => {
-          router.push("/auth/signin")
-        }, 3000)
+        
+        // Auto-login the user with their new password
+        const email = data.email
+        const signInResult = await signIn("credentials", {
+          email,
+          password,
+          redirect: false,
+        })
+
+        if (signInResult?.ok) {
+          // Successfully logged in, redirect to dashboard
+          router.push("/dashboard")
+        } else {
+          // If auto-login fails, fall back to signin page
+          console.error("Auto-login failed:", signInResult?.error)
+          setTimeout(() => {
+            router.push("/auth/signin")
+          }, 2000)
+        }
       } else {
         setError(data.error || "Failed to reset password")
       }
@@ -104,13 +121,13 @@ function ResetPasswordForm() {
           <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
             <span className="text-white text-3xl">✓</span>
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2">Password Reset Successful!</h1>
+          <h1 className="text-2xl font-bold text-white mb-2">Account Setup Complete!</h1>
           <p className="text-slate-400 mb-6">
-            Your password has been changed. Redirecting you to sign in...
+            Your password has been set and you're being logged in...
           </p>
           <div className="flex items-center justify-center gap-2 text-cyan-400">
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-400"></div>
-            <span className="text-sm">Redirecting...</span>
+            <span className="text-sm">Taking you to your dashboard...</span>
           </div>
         </div>
       </div>
@@ -134,9 +151,9 @@ function ResetPasswordForm() {
       <div className="w-full max-w-md">
         <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-8 backdrop-blur-sm">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-white mb-2">Reset Your Password</h1>
+            <h1 className="text-3xl font-bold text-white mb-2">Create Your Password</h1>
             <p className="text-slate-400">
-              Enter your new password below.
+              Set up your password to access your course.
             </p>
           </div>
 
@@ -184,7 +201,7 @@ function ResetPasswordForm() {
               disabled={loading}
               className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40"
             >
-              {loading ? "Resetting..." : "Reset Password"}
+              {loading ? "Setting up your account..." : "Create Password & Access Course"}
             </button>
           </form>
 
@@ -193,7 +210,7 @@ function ResetPasswordForm() {
               href="/auth/signin"
               className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
             >
-              ← Back to Sign In
+              ← Already have a password? Sign in
             </Link>
           </div>
         </div>
