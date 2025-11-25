@@ -70,6 +70,7 @@ export async function POST(request: NextRequest) {
             data: {
               email: customerEmail,
               name: session.customer_details?.name || customerEmail.split("@")[0],
+              hasCompletedOnboarding: true, // Skip onboarding for paid users
             },
           })
         }
