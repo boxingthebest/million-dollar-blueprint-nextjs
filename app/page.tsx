@@ -387,7 +387,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 whileHover={{ scale: 1.15, rotate: [0, -1, 1, -1, 0] }}
                 whileTap={{ scale: 0.95 }}
-                href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
+                href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
                 className="neon-button relative inline-flex items-center justify-center bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500 text-white px-10 md:px-14 py-5 md:py-7 rounded-xl text-xl md:text-2xl font-bold overflow-hidden group"
                 style={{ backgroundSize: '200% 100%' }}
               >
@@ -889,7 +889,7 @@ export default function Home() {
               Founding member pricing ends soon. Lock in lifetime access at the lowest price ever.
             </p>
             <a
-              href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
+              href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
               className="inline-block bg-white text-red-600 hover:bg-slate-100 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
               Get Started Now - Save $100
