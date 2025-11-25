@@ -236,7 +236,7 @@ export default function SalesMasteryPage() {
               The counterintuitive sales frameworks used by Amazon, Google, and Goldman Sachs to dominate their markets.
             </p>
             <a
-              href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
+              href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
@@ -520,7 +520,7 @@ export default function SalesMasteryPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Don't Just Hit Your Quota. Redefine It.</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">Ready to become a revenue architect? Enroll now and get lifetime access to the frameworks that build empires.</p>
           <a
-            href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
+            href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-orange-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
@@ -539,7 +539,7 @@ export default function SalesMasteryPage() {
             <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
           </div>
           <a
-            href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
+            href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#ea580c'}}
