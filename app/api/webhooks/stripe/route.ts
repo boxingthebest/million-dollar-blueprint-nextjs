@@ -39,9 +39,11 @@ export async function POST(request: NextRequest) {
     switch (event.type) {
       case "checkout.session.completed": {
         const session = event.data.object as Stripe.Checkout.Session
+        console.log("Webhook received for session:", session.id)
 
         // Get customer email
         const customerEmail = session.customer_email || session.customer_details?.email
+        console.log("Customer email:", customerEmail)
 
         if (!customerEmail) {
           console.error("No customer email found in session")
@@ -50,10 +52,12 @@ export async function POST(request: NextRequest) {
 
         // Get product metadata
         const metadata = session.metadata
+        console.log("Session metadata:", JSON.stringify(metadata))
         if (!metadata?.productKey) {
-          console.error("No product key in metadata")
+          console.error("No product key in metadata. Full metadata:", JSON.stringify(metadata))
           break
         }
+        console.log("Product key:", metadata.productKey)
 
         // Find or create user
         let user = await prisma.user.findUnique({
