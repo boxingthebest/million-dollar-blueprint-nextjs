@@ -84,7 +84,7 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
         {/* CTA */}
         <div className="text-center mt-16">
           <a
-            href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
+            href="https://buy.stripe.com/5kQfZg2GZ5Qb5lO9JW08g02"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-12 py-6 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all hover:scale-105"
