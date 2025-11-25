@@ -6,30 +6,17 @@ async function main() {
   const courses = await prisma.course.findMany({
     select: {
       id: true,
-      title: true,
       slug: true,
-      isPublished: true,
+      title: true,
     },
-    orderBy: {
-      createdAt: 'desc'
-    }
   })
-
-  console.log('\n📚 Courses in database:\n')
+  
+  console.log('Courses in database:')
   courses.forEach(course => {
-    console.log(`${course.isPublished ? '✓' : '○'} ${course.title}`)
-    console.log(`   Slug: ${course.slug}`)
-    console.log(`   URL: https://www.milliondollarblueprint.ai/courses/${course.slug}`)
-    console.log('')
+    console.log(`  - ${course.slug} (${course.title})`)
   })
 }
 
 main()
-  .catch((e) => {
-    console.error('❌ Error:', e)
-    process.exit(1)
-  })
-  .finally(async () => {
-    await prisma.$disconnect()
-  })
-
+  .catch(console.error)
+  .finally(() => prisma.$disconnect())

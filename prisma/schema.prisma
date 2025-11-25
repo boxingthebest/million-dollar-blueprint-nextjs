@@ -43,14 +43,13 @@ model User {
   emailVerified DateTime?
   image         String?
   password      String?
-  role                     String           @default("user")
-  hasCompletedOnboarding   Boolean          @default(false)
-  createdAt                DateTime         @default(now())
-  updatedAt                DateTime         @updatedAt
-  accounts                 Account[]
-  enrollments              Enrollment[]
-  progress                 LessonProgress[]
-  sessions                 Session[]
+  role          String           @default("user")
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+  accounts      Account[]
+  enrollments   Enrollment[]
+  progress      LessonProgress[]
+  sessions      Session[]
 }
 
 model VerificationToken {
