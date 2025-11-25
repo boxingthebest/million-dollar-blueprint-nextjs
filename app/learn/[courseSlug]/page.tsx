@@ -150,25 +150,25 @@ export default async function CoursePage({ params }: { params: { courseSlug: str
                           href={`/learn/${course.slug}/${lesson.id}`}
                           className="block p-4 hover:bg-slate-800/50 transition-colors group"
                         >
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-4">
-                              <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                          <div className="flex items-center justify-between gap-4">
+                            <div className="flex items-center gap-4 flex-1 min-w-0">
+                              <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                                 isCompleted
                                   ? 'bg-green-500/20 text-green-400'
                                   : 'bg-slate-800 text-slate-400'
                               }`}>
                                 {isCompleted ? '✓' : lessonIndex + 1}
                               </div>
-                              <div>
+                              <div className="flex-1 min-w-0">
                                 <p className="text-white group-hover:text-cyan-400 transition-colors">
                                   {lesson.title}
                                 </p>
                                 {lesson.description && (
-                                  <p className="text-sm text-slate-500">{lesson.description}</p>
+                                  <p className="text-sm text-slate-500 line-clamp-2">{lesson.description}</p>
                                 )}
                               </div>
                             </div>
-                            <span className="text-sm text-slate-500 ml-auto">
+                            <span className="text-sm text-slate-500 flex-shrink-0">
                               {Math.floor(lesson.duration / 60)} min
                             </span>
                           </div>
