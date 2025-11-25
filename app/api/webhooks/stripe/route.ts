@@ -3,6 +3,8 @@ export const dynamic = "force-dynamic"
 import { NextRequest, NextResponse } from "next/server"
 import Stripe from "stripe"
 import { prisma } from "@/lib/prisma"
+import { sendPasswordResetEmail } from "@/lib/email"
+import crypto from "crypto"
 
 export async function POST(request: NextRequest) {
   try {
@@ -122,6 +124,40 @@ export async function POST(request: NextRequest) {
           })
 
           console.log(`Enrolled user ${customerEmail} in course ${course.title}`)
+        }
+
+        // Generate password reset token for new users
+        try {
+          // Delete any existing reset tokens
+          await prisma.passwordResetToken.deleteMany({
+            where: { email: customerEmail },
+          })
+
+          // Generate reset token
+          const resetToken = crypto.randomBytes(32).toString("hex")
+          const hashedToken = crypto
+            .createHash("sha256")
+            .update(resetToken)
+            .digest("hex")
+
+          // Create reset token in database (expires in 24 hours for new users)
+          await prisma.passwordResetToken.create({
+            data: {
+              email: customerEmail,
+              token: hashedToken,
+              expires: new Date(Date.now() + 86400000), // 24 hours
+            },
+          })
+
+          // Create password setup URL
+          const setupUrl = `${process.env.NEXTAUTH_URL || "https://www.milliondollarblueprint.ai"}/auth/reset-password?token=${resetToken}`
+
+          // Send welcome email with password setup link
+          await sendPasswordResetEmail(customerEmail, setupUrl)
+          console.log(`Sent welcome email with password setup link to ${customerEmail}`)
+        } catch (emailError) {
+          console.error("Failed to send welcome email:", emailError)
+          // Don't break the webhook if email fails
         }
         break
       }
