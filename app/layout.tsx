@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import LeadMagnetPopup from "./components/LeadMagnetPopup";
+
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <Providers>
           {children}
-          <LeadMagnetPopup />
+
           <SpeedInsights />
         </Providers>
       </body>
