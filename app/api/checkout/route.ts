@@ -28,6 +28,8 @@ export async function POST(request: NextRequest) {
       product = STRIPE_PRODUCTS.bundles[productKey as keyof typeof STRIPE_PRODUCTS.bundles]
     } else if (productType === 'subscription') {
       product = STRIPE_PRODUCTS.subscriptions[productKey as keyof typeof STRIPE_PRODUCTS.subscriptions]
+    } else if (productType === 'playbook') {
+      product = STRIPE_PRODUCTS.playbook[productKey as keyof typeof STRIPE_PRODUCTS.playbook]
     }
 
     if (!product) {
