@@ -37,10 +37,10 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Invalid credentials")
         }
 
-        // Check if email is verified
-        if (!user.emailVerified) {
-          throw new Error("Please verify your email before logging in. Check your inbox for the verification link.")
-        }
+        // Check if email is verified (skip for paid users - they're auto-verified on purchase)
+        // if (!user.emailVerified) {
+        //   throw new Error("Please verify your email before logging in. Check your inbox for the verification link.")
+        // }
 
         return user
       }

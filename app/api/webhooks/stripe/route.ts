@@ -4,6 +4,8 @@ import { NextRequest, NextResponse } from "next/server"
 import Stripe from "stripe"
 import { prisma } from "@/lib/prisma"
 import { sendPasswordResetEmail } from "@/lib/email"
+import { getWelcomeEmailHTML, getWelcomeEmailText } from "@/lib/email-templates"
+import nodemailer from "nodemailer"
 import crypto from "crypto"
 
 export async function POST(request: NextRequest) {
@@ -72,7 +74,14 @@ export async function POST(request: NextRequest) {
             data: {
               email: customerEmail,
               name: session.customer_details?.name || customerEmail.split("@")[0],
+              emailVerified: new Date(), // Auto-verify email for paid users
             },
+          })
+        } else if (!user.emailVerified) {
+          // Auto-verify existing users who purchase
+          await prisma.user.update({
+            where: { id: user.id },
+            data: { emailVerified: new Date() },
           })
         }
 
@@ -88,6 +97,9 @@ export async function POST(request: NextRequest) {
           "leadership": ["leadership"],
           "marketing": ["marketing"],
           "wealth": ["wealth"],
+          // Playbook Products
+          "executive-presence-playbook": ["executive-presence-playbook"],
+          "executive-presence-course": ["executive-presence-course"],
         }
 
         const courseSlugs = productToCourses[metadata.productKey]
@@ -153,7 +165,23 @@ export async function POST(request: NextRequest) {
           const setupUrl = `${process.env.NEXTAUTH_URL || "https://www.milliondollarblueprint.ai"}/auth/reset-password?token=${resetToken}`
 
           // Send welcome email with password setup link
-          await sendPasswordResetEmail(customerEmail, setupUrl)
+          const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST || "smtp.gmail.com",
+            port: parseInt(process.env.SMTP_PORT || "587"),
+            secure: false,
+            auth: {
+              user: process.env.SMTP_USER,
+              pass: process.env.SMTP_PASSWORD,
+            },
+          })
+
+          await transporter.sendMail({
+            from: `${process.env.SMTP_FROM_NAME || "Million Dollar Blueprint"} <${process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER}>`,
+            to: customerEmail,
+            subject: "Welcome to Million Dollar Blueprint! 🎉",
+            html: getWelcomeEmailHTML(user.name || customerEmail.split("@")[0], setupUrl),
+            text: getWelcomeEmailText(user.name || customerEmail.split("@")[0], setupUrl),
+          })
           console.log(`Sent welcome email with password setup link to ${customerEmail}`)
         } catch (emailError) {
           console.error("Failed to send welcome email:", emailError)
