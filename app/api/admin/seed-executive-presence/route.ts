@@ -21,7 +21,7 @@ export async function POST() {
         slug: 'executive-presence-playbook',
         description: 'The exact strategies to command respect, influence decisions, and accelerate your career.',
         price: 27,
-        published: true,
+        isPublished: true,
         modules: {
           create: [
             {
