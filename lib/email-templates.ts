@@ -18,8 +18,11 @@ export function getWelcomeEmailHTML(name: string, passwordSetupUrl: string, cour
                 <!-- Header with Success Icon -->
                 <tr>
                   <td style="padding: 40px 40px 30px 40px; text-align: center; background: linear-gradient(to right, #10b981, #06b6d4);">
-                    <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px);">
-                      <span style="font-size: 48px;">✓</span>
+                    <div style="width: 80px; height: 80px; margin: 0 auto 20px; background: rgba(255,255,255,0.3); border-radius: 50%; position: relative;">
+                      <svg width="80" height="80" viewBox="0 0 80 80" style="position: absolute; top: 0; left: 0;">
+                        <circle cx="40" cy="40" r="35" fill="rgba(255,255,255,0.2)" stroke="#ffffff" stroke-width="2"/>
+                        <path d="M25 40 L35 50 L55 30" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
                     </div>
                     <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
                       Welcome to Million Dollar Blueprint! 🎉

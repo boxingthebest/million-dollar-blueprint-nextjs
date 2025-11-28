@@ -1,15 +1,21 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CheckCircle2, TrendingUp, Star, Users, Zap, ArrowRight, Download, Target, Briefcase, Award, BarChart3, Rocket, Video, FileText, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { CheckCircle2, TrendingUp, Star, Users, Zap, ArrowRight, Download, Target, Briefcase, Award, BarChart3, Rocket, Video, FileText, MessageCircle, Play, BookOpen, Clock, DollarSign, Shield } from "lucide-react";
 
 export default function ThankYou() {
   const [isLoading, setIsLoading] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(() => setIsVisible(true), 100);
+    
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleUpgrade = async () => {
@@ -43,34 +49,41 @@ export default function ThankYou() {
 
   const videos = [
     {
-      title: "Video 1: The Goldman Sachs Framework",
+      title: "The Goldman Sachs Framework",
+      number: 1,
       embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141440345?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 1_ The Goldman Sachs Framework"></iframe></div>',
       description: "Command respect in any room with the 3-pillar system used at Goldman Sachs"
     },
     {
-      title: "Video 2: The Strategic Pause Technique",
+      title: "The Strategic Pause Technique",
+      number: 2,
       embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141442140?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 2_ The Strategic Pause Technique"></iframe></div>',
       description: "Control any conversation using silence as your secret weapon"
     },
     {
-      title: "Video 3: Salary Negotiation Mastery",
+      title: "Salary Negotiation Mastery",
+      number: 3,
       embedCode: '<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141443129?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 3_ Salary Negotiation Mastery"></iframe></div>',
       description: "The exact 3-step framework I used to negotiate $100K+ raises"
     },
     {
-      title: "Video 4: Executive Communication",
+      title: "Executive Communication",
+      number: 4,
       embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141459744?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 4_ Executive Communication"></iframe></div>',
       description: "Speak with authority and influence without needing a title"
     },
     {
-      title: "Video 5: The Meeting Before the Meeting",
+      title: "The Meeting Before the Meeting",
+      number: 5,
       embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141460242?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 5_ The Meeting Before the Meeting"></iframe></div>',
       description: "Amazon's insider strategy for winning decisions before they're made"
     },
     {
-      title: "Video 6: Breaking the $120K Ceiling",
+      title: "Breaking the $120K Ceiling",
+      number: 6,
       embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141460954?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 6_ Breaking the $120K Ceiling"></iframe></div>',
-      description: "The mindset shifts required to reach $400K+ (BONUS VIDEO)"
+      description: "The mindset shifts required to reach $400K+ (BONUS VIDEO)",
+      isBonus: true
     }
   ];
 
@@ -79,25 +92,25 @@ export default function ThankYou() {
       icon: Video,
       title: "15-20 Advanced Video Masterclasses",
       description: "Deep-dive training on advanced salary negotiation, executive leadership presence, strategic relationship building, navigating office politics, and career acceleration frameworks",
-      color: "bg-blue-500"
+      color: "from-blue-500 to-blue-600"
     },
     {
       icon: FileText,
       title: "Complete Framework Library",
       description: "Downloadable email scripts, negotiation worksheets, career roadmap planner, executive communication templates, and all the tools you need to implement immediately",
-      color: "bg-purple-500"
+      color: "from-purple-500 to-purple-600"
     },
     {
       icon: Users,
       title: "Private Community Access",
       description: "Connect with 2,000+ ambitious professionals climbing to $400K+. Share wins, get feedback, and build strategic relationships with peers on the same journey",
-      color: "bg-emerald-500"
+      color: "from-emerald-500 to-emerald-600"
     },
     {
       icon: Zap,
       title: "Lifetime Access + Updates",
       description: "All current content plus any new masterclasses, frameworks, or resources added in the future. One payment, lifetime value—yours forever",
-      color: "bg-orange-500"
+      color: "from-orange-500 to-orange-600"
     }
   ];
 
@@ -109,50 +122,101 @@ export default function ThankYou() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Success Header */}
-      <div className="bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className={`container relative z-10 mx-auto px-4 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <CheckCircle2 className="w-24 h-24 mx-auto mb-6 animate-bounce" />
-          <h1 className="text-5xl md:text-6xl font-black mb-6">
-            🎉 You're In! Welcome to the Executive Presence Playbook
-          </h1>
-          <p className="text-2xl text-emerald-50 mb-4 font-bold">
-            Your purchase was successful. Check your email for login instructions.
-          </p>
-          <p className="text-xl text-emerald-100 mb-8 font-semibold">
-            Start watching the 6 video masterclasses below ↓
-          </p>
-          
-          {/* PDF Download Button */}
-          <a
-            href="/Executive-Presence-Playbook.pdf"
-            download
-            className="inline-flex items-center gap-3 bg-white text-emerald-600 font-black py-5 px-10 rounded-xl hover:bg-emerald-50 transition-all duration-200 shadow-2xl transform hover:scale-105 active:scale-95 text-lg"
-          >
-            <Download className="w-6 h-6" />
-            📥 Download Your PDF Workbook
-          </a>
+    <div className="min-h-screen bg-slate-900">
+      {/* Hero Banner with Executive Background */}
+      <div className="relative h-[600px] overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
+          style={{
+            backgroundImage: "url('/hero-man-executive.jpg')",
+            transform: `translateY(${scrollY * 0.5}px)`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/70"></div>
+        </div>
+        
+        <div className={`container relative z-10 mx-auto px-4 h-full flex flex-col justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/50">
+                <CheckCircle2 className="w-8 h-8 text-white" />
+              </div>
+              <div className="h-1 w-24 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+              Welcome to the<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500">
+                Executive Presence Playbook
+              </span>
+            </h1>
+            
+            <p className="text-2xl text-slate-300 mb-6 font-semibold">
+              Your purchase was successful. Check your email for login instructions.
+            </p>
+            
+            <p className="text-xl text-emerald-400 mb-8 flex items-center gap-2">
+              <Play className="w-5 h-5" />
+              Start watching the 6 video masterclasses below
+            </p>
+            
+            <a
+              href="/Executive-Presence-Playbook.pdf"
+              download
+              className="inline-flex items-center gap-3 bg-white text-slate-900 font-bold py-5 px-10 rounded-xl hover:bg-slate-100 transition-all duration-200 shadow-2xl transform hover:scale-105 active:scale-95 text-lg group"
+            >
+              <Download className="w-6 h-6 group-hover:animate-bounce" />
+              Download Your PDF Workbook
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Bar */}
+      <div className="bg-gradient-to-r from-slate-800 to-slate-900 border-y border-slate-700">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <div key={index} className="text-center">
+                  <Icon className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
+                  <div className="text-3xl font-black text-white mb-1">{stat.number}</div>
+                  <div className="text-sm text-slate-400 font-semibold">{stat.label}</div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 
       {/* Videos Section */}
-      <div className="py-16 bg-slate-50">
+      <div className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-8">
             {videos.map((video, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-slate-200 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl">
+              <div key={index} className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-yellow-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10">
                 <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className={`${index === 5 ? 'bg-gradient-to-r from-yellow-500 to-orange-500' : 'bg-gradient-to-r from-emerald-600 to-teal-600'} text-white font-black px-4 py-2 rounded-full text-sm shadow-lg`}>
-                      {index === 5 ? "🎁 BONUS VIDEO" : `▶️ Video ${index + 1}`}
-                    </span>
-                    <h3 className="text-2xl font-black text-slate-900">{video.title}</h3>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`${video.isBonus ? 'bg-gradient-to-r from-yellow-500 to-orange-500' : 'bg-gradient-to-r from-emerald-500 to-teal-500'} text-white font-black px-5 py-2 rounded-full text-sm shadow-lg flex items-center gap-2`}>
+                      {video.isBonus ? (
+                        <>
+                          <Star className="w-4 h-4" />
+                          BONUS VIDEO
+                        </>
+                      ) : (
+                        <>
+                          <Play className="w-4 h-4" />
+                          Video {video.number}
+                        </>
+                      )}
+                    </div>
+                    <h3 className="text-2xl font-black text-white">{video.title}</h3>
                   </div>
-                  <p className="text-slate-600 mb-4 font-semibold">{video.description}</p>
+                  <p className="text-slate-400 mb-4 font-medium">{video.description}</p>
                   <div 
-                    className="rounded-lg overflow-hidden shadow-lg"
+                    className="rounded-lg overflow-hidden shadow-2xl"
                     dangerouslySetInnerHTML={{ __html: video.embedCode }}
                   />
                 </div>
@@ -163,342 +227,354 @@ export default function ThankYou() {
       </div>
 
       {/* Transition Section */}
-      <div className="bg-gradient-to-b from-slate-50 to-white py-16">
+      <div className="bg-gradient-to-b from-slate-900 to-slate-800 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">
+            <div className="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 px-6 py-3 rounded-full mb-8">
+              <Zap className="w-5 h-5 text-yellow-400" />
+              <span className="text-yellow-400 font-bold">ONE-TIME OPPORTUNITY</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
               You've Got the Foundation.<br />Now Get the Complete System.
             </h2>
-            <p className="text-xl text-slate-700 mb-8 leading-relaxed">
-              The <strong>$27 Playbook</strong> gave you 6 powerful videos to get started. But this is just <span className="text-blue-600 font-bold">20% of the complete system</span> that's helped 2,000+ executives reach $400K+ salaries.
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              The <strong className="text-white">$27 Playbook</strong> gave you 6 powerful videos to get started. But this is just <span className="text-yellow-400 font-bold">20% of the complete system</span> that's helped 2,000+ executives reach $400K+ salaries.
             </p>
-            <div className="bg-yellow-50 border-l-8 border-yellow-400 p-6 rounded-xl">
-              <p className="text-lg font-bold text-slate-900">
-                ⚡ <strong>ONE-TIME OPPORTUNITY:</strong> Upgrade to the full <strong>Executive Presence Course</strong> at exclusive pricing—available only on this page.
-              </p>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Gap Analysis Section - Why 6 Videos Aren't Enough */}
-      <div className="bg-white py-20">
+      {/* Gap Analysis Section */}
+      <div className="bg-slate-800 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-black text-center text-slate-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
               Here's The Truth: 6 Videos Won't Get You to $400K
             </h2>
-            <p className="text-2xl text-center text-slate-700 mb-16 font-bold">
-              You need the <span className="text-red-600">complete system</span>. Here's why.
-            </p>
-
-            {/* Side-by-Side Comparison */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* What You Have */}
-              <div className="bg-slate-100 border-4 border-slate-300 rounded-2xl p-8">
-                <div className="text-center mb-6">
-                  <div className="inline-block bg-slate-600 text-white px-6 py-3 rounded-full font-black text-lg mb-4">
-                    What You Have Now ($27)
+              <div className="bg-slate-900 border-2 border-red-500/50 rounded-2xl p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
+                    <BookOpen className="w-6 h-6 text-red-400" />
                   </div>
+                  <h3 className="text-2xl font-black text-white">What You Have Now ($27)</h3>
                 </div>
+                
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <div>
-                      <p className="font-black text-slate-900 text-lg">6 Foundation Videos</p>
-                      <p className="text-slate-600 font-semibold">Awareness of the frameworks</p>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
+                    <span className="text-slate-300">6 foundational videos (30 minutes)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <div>
-                      <p className="font-black text-slate-900 text-lg">Basic PDF Workbook</p>
-                      <p className="text-slate-600 font-semibold">High-level overview</p>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
+                    <span className="text-slate-300">Basic PDF workbook</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">❌</span>
-                    <div>
-                      <p className="font-black text-red-600 text-lg">No Implementation Roadmap</p>
-                      <p className="text-slate-600 font-semibold">You know WHAT to do, but not HOW or WHEN</p>
-                    </div>
+                    <div className="w-5 h-5 rounded-full border-2 border-red-400 flex-shrink-0 mt-1"></div>
+                    <span className="text-red-300 line-through">NO implementation roadmap</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">❌</span>
-                    <div>
-                      <p className="font-black text-red-600 text-lg">No Advanced Strategies</p>
-                      <p className="text-slate-600 font-semibold">Missing the $200K+ to $400K+ tactics</p>
-                    </div>
+                    <div className="w-5 h-5 rounded-full border-2 border-red-400 flex-shrink-0 mt-1"></div>
+                    <span className="text-red-300 line-through">NO advanced strategies for $200K-$400K</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">❌</span>
-                    <div>
-                      <p className="font-black text-red-600 text-lg">No Community Support</p>
-                      <p className="text-slate-600 font-semibold">You're figuring it out alone</p>
-                    </div>
+                    <div className="w-5 h-5 rounded-full border-2 border-red-400 flex-shrink-0 mt-1"></div>
+                    <span className="text-red-300 line-through">NO community support</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">❌</span>
-                    <div>
-                      <p className="font-black text-red-600 text-lg">No Email Scripts or Templates</p>
-                      <p className="text-slate-600 font-semibold">You have to create everything from scratch</p>
-                    </div>
+                    <div className="w-5 h-5 rounded-full border-2 border-red-400 flex-shrink-0 mt-1"></div>
+                    <span className="text-red-300 line-through">NO copy-paste templates</span>
                   </li>
                 </ul>
-                <div className="mt-8 bg-red-50 border-l-4 border-red-500 p-4 rounded">
-                  <p className="text-red-900 font-black text-center">
-                    ⚠️ Result: You'll plateau at $120K-$150K
+                
+                <div className="mt-8 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                  <p className="text-red-300 font-bold text-center">
+                    Result: You'll plateau at $120K-$150K
                   </p>
                 </div>
               </div>
 
               {/* What You Need */}
-              <div className="bg-gradient-to-br from-emerald-50 to-green-50 border-4 border-emerald-400 rounded-2xl p-8 transform scale-105 shadow-2xl">
-                <div className="text-center mb-6">
-                  <div className="inline-block bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-full font-black text-lg mb-4 shadow-lg">
-                    What You Need ($397)
+              <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/50 border-2 border-emerald-500 rounded-2xl p-8 shadow-2xl shadow-emerald-500/20">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                    <Rocket className="w-6 h-6 text-emerald-400" />
                   </div>
+                  <h3 className="text-2xl font-black text-white">What You Need ($397)</h3>
                 </div>
+                
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <div>
-                      <p className="font-black text-slate-900 text-lg">20+ Advanced Videos</p>
-                      <p className="text-slate-700 font-semibold">Deep-dive on negotiation, politics, leadership</p>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
+                    <span className="text-white font-semibold">20+ video masterclasses (3+ hours)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <div>
-                      <p className="font-black text-slate-900 text-lg">Complete Framework Library</p>
-                      <p className="text-slate-700 font-semibold">Email scripts, worksheets, career roadmap</p>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
+                    <span className="text-white font-semibold">Complete framework library</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <div>
-                      <p className="font-black text-emerald-600 text-lg">Step-by-Step Implementation</p>
-                      <p className="text-slate-700 font-semibold">Exact playbook: Week 1, Week 2, Week 3...</p>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
+                    <span className="text-white font-semibold">Step-by-step implementation roadmap</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <div>
-                      <p className="font-black text-emerald-600 text-lg">$200K to $400K Strategies</p>
-                      <p className="text-slate-700 font-semibold">Advanced tactics for executive-level roles</p>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
+                    <span className="text-white font-semibold">Advanced $200K-$400K strategies</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <div>
-                      <p className="font-black text-emerald-600 text-lg">Private Community (2,000+)</p>
-                      <p className="text-slate-700 font-semibold">Network, feedback, accountability</p>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
+                    <span className="text-white font-semibold">Private community (2,000+ executives)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-2xl">✅</span>
-                    <div>
-                      <p className="font-black text-emerald-600 text-lg">Copy-Paste Templates</p>
-                      <p className="text-slate-700 font-semibold">Proven emails, scripts, frameworks ready to use</p>
-                    </div>
+                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
+                    <span className="text-white font-semibold">Copy-paste email scripts & templates</span>
                   </li>
                 </ul>
-                <div className="mt-8 bg-emerald-100 border-l-4 border-emerald-600 p-4 rounded">
-                  <p className="text-emerald-900 font-black text-center">
-                    🚀 Result: You'll reach $400K+ in 18-24 months
+                
+                <div className="mt-8 p-4 bg-emerald-500/20 border border-emerald-500/50 rounded-lg">
+                  <p className="text-emerald-300 font-bold text-center">
+                    Result: You'll reach $400K+ in 18-24 months
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* The Gap Explanation */}
-            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-2xl p-10 mb-12">
-              <h3 className="text-3xl font-black mb-6 text-center">
-                💡 The Gap That's Costing You $250K+
-              </h3>
-              <div className="space-y-6 text-lg leading-relaxed">
-                <p className="font-semibold">
-                  <strong className="text-yellow-300">The 6 videos gave you awareness.</strong> You now know the Goldman Sachs Framework, the Strategic Pause, and salary negotiation basics. That's valuable—but it's only <strong>20% of the system</strong>.
-                </p>
-                <p className="font-semibold">
-                  <strong className="text-yellow-300">Here's what's missing:</strong> You don't have the <strong>implementation roadmap</strong>, the <strong>advanced $200K-$400K strategies</strong>, the <strong>copy-paste email scripts</strong>, or the <strong>community support</strong> to actually execute at the executive level.
-                </p>
-                <p className="font-semibold">
-                  <strong className="text-yellow-300">The brutal truth:</strong> Most people who stop at the $27 Playbook plateau at $120K-$150K. They have the knowledge but lack the <strong>execution system</strong> to reach $400K+.
-                </p>
-                <p className="font-black text-2xl text-center mt-8 text-yellow-300">
-                  The Complete Course fills that gap. It's the difference between knowing and doing.
-                </p>
+            {/* The Gap */}
+            <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 border-2 border-red-500 rounded-2xl p-8 mb-12">
+              <div className="flex items-center gap-3 mb-4">
+                <Shield className="w-8 h-8 text-red-400" />
+                <h3 className="text-3xl font-black text-white">The Gap That's Costing You $250K+</h3>
               </div>
+              <p className="text-slate-300 text-lg leading-relaxed mb-4">
+                The 6 videos give you <strong className="text-white">awareness</strong> (about 20% of the system). But without the <strong className="text-white">implementation roadmap</strong>, <strong className="text-white">advanced strategies</strong>, <strong className="text-white">scripts</strong>, and <strong className="text-white">community</strong>, most people plateau at $120K-$150K.
+              </p>
+              <p className="text-white text-xl font-bold">
+                The Complete Course fills that gap. It's the difference between knowing and doing.
+              </p>
             </div>
 
-            {/* Testimonial - Someone Who Upgraded */}
-            <div className="bg-blue-50 border-2 border-blue-300 rounded-2xl p-8">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-black text-2xl">
-                    JK
-                  </div>
+            {/* Testimonial */}
+            <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-black text-2xl">
+                  JK
                 </div>
                 <div>
-                  <p className="text-lg text-slate-700 italic mb-4 leading-relaxed">
-                    "I bought the $27 Playbook first and thought I could figure out the rest on my own. <strong>I was wrong.</strong> After 6 months of trying, I upgraded to the Complete Course. Within 3 months, I had the exact scripts, the implementation plan, and the community support I needed. I went from $135K to $215K in 8 months. <strong>The Complete Course is what actually got me there.</strong>"
-                  </p>
-                  <p className="font-black text-slate-900">— Jessica Kim</p>
-                  <p className="text-slate-600 font-semibold">Senior Product Manager, Salesforce</p>
-                  <p className="text-emerald-600 font-black mt-2">$135K → $215K in 8 months after upgrading</p>
+                  <div className="text-white font-bold text-lg">Jessica Kim</div>
+                  <div className="text-slate-400">Senior Product Manager → Director of Product</div>
                 </div>
+              </div>
+              <p className="text-slate-300 text-lg leading-relaxed mb-4">
+                "I bought the $27 playbook first and tried to implement it on my own for 6 months. I got stuck at $140K. Then I upgraded to the $397 course, got the scripts, implementation guide, and community support. <strong className="text-white">8 months later, I went from $135K to $215K.</strong> The complete system made all the difference."
+              </p>
+              <div className="flex items-center gap-2">
+                {[1,2,3,4,5].map((i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Upsell Section */}
-      <div className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-24">
+      {/* ROI Calculator */}
+      <div className="bg-slate-900 py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <DollarSign className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+                The Math Is Simple
+              </h2>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 mb-8">
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-slate-400 text-sm font-semibold mb-2">Investment</div>
+                  <div className="text-4xl font-black text-white">$397</div>
+                </div>
+                <div>
+                  <div className="text-slate-400 text-sm font-semibold mb-2">Average Salary Increase</div>
+                  <div className="text-4xl font-black text-emerald-400">$127K</div>
+                </div>
+                <div>
+                  <div className="text-slate-400 text-sm font-semibold mb-2">ROI</div>
+                  <div className="text-4xl font-black text-yellow-400">31,991%</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-6 text-center">
+              <p className="text-yellow-400 text-lg font-bold">
+                Even a $5K raise gives you a 1,159% ROI. This is the easiest decision you'll make this year.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* What's Included */}
+      <div className="bg-slate-800 py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
+              What's Included in the Complete Course
+            </h2>
             
-            {/* Stats Bar */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
+            <div className="grid md:grid-cols-2 gap-8">
+              {courseFeatures.map((feature, index) => {
+                const Icon = feature.icon;
                 return (
-                  <div key={index} className="text-center bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-emerald-400 transition-all duration-300 hover:transform hover:scale-105">
-                    <Icon className="w-10 h-10 text-emerald-400 mx-auto mb-3" />
-                    <div className="text-3xl font-black text-white mb-2">{stat.number}</div>
-                    <div className="text-sm text-gray-400 font-semibold uppercase tracking-wide">{stat.label}</div>
+                  <div key={index} className="bg-slate-900 border border-slate-700 rounded-2xl p-8 hover:border-yellow-500/50 transition-all duration-300">
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 shadow-lg`}>
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-black text-white mb-4">{feature.title}</h3>
+                    <p className="text-slate-400 leading-relaxed">{feature.description}</p>
                   </div>
                 );
               })}
             </div>
+          </div>
+        </div>
+      </div>
 
-            {/* Course Features */}
-            <div className="mb-16">
-              <h3 className="text-3xl font-black mb-8 text-center">What You Get in the Complete Course</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                {courseFeatures.map((feature, index) => {
-                  const Icon = feature.icon;
-                  return (
-                    <div key={index} className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-6 hover:border-emerald-400 transition-all duration-300 hover:transform hover:-translate-y-1">
-                      <div className={`${feature.color} w-14 h-14 rounded-xl flex items-center justify-center mb-4 shadow-lg`}>
-                        <Icon className="w-7 h-7 text-white" />
-                      </div>
-                      <h4 className="text-xl font-black mb-3">{feature.title}</h4>
-                      <p className="text-slate-300 leading-relaxed">{feature.description}</p>
-                    </div>
-                  );
-                })}
-              </div>
+      {/* Comparison Table */}
+      <div className="bg-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black text-center text-white mb-12">
+              Playbook vs. Complete Course
+            </h2>
+            
+            <div className="bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-slate-900">
+                    <th className="text-left p-6 text-white font-bold">Feature</th>
+                    <th className="text-center p-6 text-slate-400 font-bold">Playbook ($27)</th>
+                    <th className="text-center p-6 text-emerald-400 font-bold">Complete Course ($397)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-700">
+                  <tr>
+                    <td className="p-6 text-slate-300">Video Masterclasses</td>
+                    <td className="p-6 text-center text-slate-400">6 videos (30 min)</td>
+                    <td className="p-6 text-center text-white font-bold">20+ videos (3+ hours)</td>
+                  </tr>
+                  <tr>
+                    <td className="p-6 text-slate-300">Framework Library</td>
+                    <td className="p-6 text-center text-slate-400">Basic PDF</td>
+                    <td className="p-6 text-center text-white font-bold">Complete Library</td>
+                  </tr>
+                  <tr>
+                    <td className="p-6 text-slate-300">Implementation Roadmap</td>
+                    <td className="p-6 text-center">
+                      <div className="w-5 h-5 rounded-full border-2 border-red-400 mx-auto"></div>
+                    </td>
+                    <td className="p-6 text-center">
+                      <CheckCircle2 className="w-6 h-6 text-emerald-400 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-6 text-slate-300">Advanced Strategies ($200K-$400K)</td>
+                    <td className="p-6 text-center">
+                      <div className="w-5 h-5 rounded-full border-2 border-red-400 mx-auto"></div>
+                    </td>
+                    <td className="p-6 text-center">
+                      <CheckCircle2 className="w-6 h-6 text-emerald-400 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-6 text-slate-300">Private Community Access</td>
+                    <td className="p-6 text-center">
+                      <div className="w-5 h-5 rounded-full border-2 border-red-400 mx-auto"></div>
+                    </td>
+                    <td className="p-6 text-center">
+                      <CheckCircle2 className="w-6 h-6 text-emerald-400 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-6 text-slate-300">Copy-Paste Templates & Scripts</td>
+                    <td className="p-6 text-center">
+                      <div className="w-5 h-5 rounded-full border-2 border-red-400 mx-auto"></div>
+                    </td>
+                    <td className="p-6 text-center">
+                      <CheckCircle2 className="w-6 h-6 text-emerald-400 mx-auto" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-6 text-slate-300 font-bold">Expected Outcome</td>
+                    <td className="p-6 text-center text-red-300">Plateau at $120K-$150K</td>
+                    <td className="p-6 text-center text-emerald-400 font-bold">Reach $400K+ in 18-24 months</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </div>
+        </div>
+      </div>
 
-            {/* ROI Comparison */}
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 mb-12 border-4 border-yellow-400">
-              <h3 className="text-3xl font-black mb-8 text-center">The Math Is Simple</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                  <div className="text-5xl font-black text-white mb-3">$397</div>
-                  <p className="text-blue-100 font-semibold">Your Investment</p>
-                </div>
-                <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl p-6 transform scale-110 shadow-2xl">
-                  <div className="text-5xl font-black text-white mb-3">$127K</div>
-                  <p className="text-green-100 font-semibold">Average Salary Increase</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur rounded-xl p-6">
-                  <div className="text-5xl font-black text-white mb-3">31,991%</div>
-                  <p className="text-blue-100 font-semibold">Your ROI</p>
-                </div>
+      {/* Final CTA */}
+      <div className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <Rocket className="w-20 h-20 text-white mx-auto mb-6" />
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+              Ready to Reach $400K+?
+            </h2>
+            <p className="text-2xl text-emerald-50 mb-8 font-semibold">
+              Upgrade to the Complete Executive Presence Course
+            </p>
+            
+            <div className="bg-white/10 backdrop-blur-sm border border-white/30 rounded-2xl p-8 mb-8">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="text-white/60 text-3xl font-bold line-through">$997</div>
+                <div className="text-6xl font-black text-white">$397</div>
               </div>
-              <div className="mt-8 bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <p className="text-2xl font-black mb-2">
-                  Even a $10K raise gives you a 2,418% ROI
-                </p>
-                <p className="text-lg text-blue-100 font-semibold">
-                  This isn't an expense—it's the highest-leverage investment in your career.
-                </p>
-              </div>
+              <p className="text-emerald-100 text-lg font-semibold mb-2">
+                Exclusive upgrade pricing - Available only on this page
+              </p>
+              <p className="text-white/80 text-sm">
+                This offer expires when you leave this page
+              </p>
             </div>
-
-            {/* Pricing */}
-            <div className="bg-slate-800 border-4 border-emerald-400 rounded-2xl p-8 mb-8">
-              <div className="text-center">
-                <p className="text-xl mb-4 text-slate-300">
-                  You Paid: <span className="font-bold text-white">$27</span> for 6 videos (20% of the system)
-                </p>
-                <div className="flex items-center justify-center gap-4 mb-4">
-                  <span className="text-4xl font-black text-slate-400 line-through">$597</span>
-                  <span className="text-7xl font-black text-emerald-400">$397</span>
-                </div>
-                <div className="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-full font-black text-lg mb-4 animate-pulse">
-                  🔥 67% OFF - Exclusive Upgrade Pricing
-                </div>
-                <p className="text-emerald-300 font-bold text-lg">
-                  (Only available on this page for Playbook customers)
-                </p>
-              </div>
-            </div>
-
-            {/* Comparison Table */}
-            <div className="bg-slate-800 rounded-2xl p-8 mb-12 border-2 border-slate-700">
-              <h3 className="text-2xl font-black mb-6 text-center">Playbook vs. Complete Course</h3>
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b-2 border-slate-700">
-                      <th className="text-left py-4 px-4 font-black text-slate-300">Feature</th>
-                      <th className="text-center py-4 px-4 font-black text-slate-300">$27 Playbook</th>
-                      <th className="text-center py-4 px-4 font-black text-emerald-400">$397 Course</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-slate-300">
-                    <tr className="border-b border-slate-700">
-                      <td className="py-4 px-4 font-semibold">Video Masterclasses</td>
-                      <td className="text-center py-4 px-4">6 videos</td>
-                      <td className="text-center py-4 px-4 font-bold text-emerald-400">20+ videos</td>
-                    </tr>
-                    <tr className="border-b border-slate-700">
-                      <td className="py-4 px-4 font-semibold">Frameworks & Templates</td>
-                      <td className="text-center py-4 px-4">Basic</td>
-                      <td className="text-center py-4 px-4 font-bold text-emerald-400">Complete Library</td>
-                    </tr>
-                    <tr className="border-b border-slate-700">
-                      <td className="py-4 px-4 font-semibold">Private Community</td>
-                      <td className="text-center py-4 px-4">❌</td>
-                      <td className="text-center py-4 px-4 font-bold text-emerald-400">✅</td>
-                    </tr>
-                    <tr className="border-b border-slate-700">
-                      <td className="py-4 px-4 font-semibold">Advanced Strategies</td>
-                      <td className="text-center py-4 px-4">❌</td>
-                      <td className="text-center py-4 px-4 font-bold text-emerald-400">✅</td>
-                    </tr>
-                    <tr>
-                      <td className="py-4 px-4 font-semibold">Lifetime Updates</td>
-                      <td className="text-center py-4 px-4">✅</td>
-                      <td className="text-center py-4 px-4 font-bold text-emerald-400">✅</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* CTA */}
+            
             <button
               onClick={handleUpgrade}
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white font-black py-7 px-8 rounded-xl transition-all duration-200 flex items-center justify-center gap-3 text-2xl disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 hover:shadow-2xl active:scale-95 border-4 border-yellow-400"
+              className="inline-flex items-center gap-3 bg-white text-slate-900 font-black py-6 px-12 rounded-xl hover:bg-slate-100 transition-all duration-200 shadow-2xl transform hover:scale-105 active:scale-95 text-xl disabled:opacity-50 disabled:cursor-not-allowed group"
             >
-              {isLoading ? "Processing..." : "🚀 UPGRADE TO COMPLETE COURSE NOW"}
-              {!isLoading && <ArrowRight className="w-7 h-7" />}
+              {isLoading ? (
+                <>
+                  <div className="w-6 h-6 border-4 border-slate-900 border-t-transparent rounded-full animate-spin"></div>
+                  Processing...
+                </>
+              ) : (
+                <>
+                  <Zap className="w-6 h-6" />
+                  Upgrade to Complete Course - $397
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                </>
+              )}
             </button>
-
-            <p className="text-center text-slate-400 mt-6 font-semibold text-lg">
-              ✅ 30-Day Money-Back Guarantee • ⚡ Instant Access • 🔄 Lifetime Updates
-            </p>
-
-            <div className="mt-8 bg-yellow-50 border-l-8 border-yellow-400 p-6 rounded-xl">
-              <p className="text-slate-900 font-bold text-center">
-                ⏰ <strong>This exclusive upgrade pricing expires when you leave this page.</strong> Lock in $397 now before it goes to $597.
-              </p>
+            
+            <div className="mt-8 flex items-center justify-center gap-6 text-white/80">
+              <div className="flex items-center gap-2">
+                <Shield className="w-5 h-5" />
+                <span>Lifetime Access</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="w-5 h-5" />
+                <span>Instant Access</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                <span>2,000+ Members</span>
+              </div>
             </div>
           </div>
         </div>
