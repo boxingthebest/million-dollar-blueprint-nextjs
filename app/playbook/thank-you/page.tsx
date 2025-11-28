@@ -181,6 +181,179 @@ export default function ThankYou() {
         </div>
       </div>
 
+      {/* Gap Analysis Section - Why 6 Videos Aren't Enough */}
+      <div className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black text-center text-slate-900 mb-6">
+              Here's The Truth: 6 Videos Won't Get You to $400K
+            </h2>
+            <p className="text-2xl text-center text-slate-700 mb-16 font-bold">
+              You need the <span className="text-red-600">complete system</span>. Here's why.
+            </p>
+
+            {/* Side-by-Side Comparison */}
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {/* What You Have */}
+              <div className="bg-slate-100 border-4 border-slate-300 rounded-2xl p-8">
+                <div className="text-center mb-6">
+                  <div className="inline-block bg-slate-600 text-white px-6 py-3 rounded-full font-black text-lg mb-4">
+                    What You Have Now ($27)
+                  </div>
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-black text-slate-900 text-lg">6 Foundation Videos</p>
+                      <p className="text-slate-600 font-semibold">Awareness of the frameworks</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-black text-slate-900 text-lg">Basic PDF Workbook</p>
+                      <p className="text-slate-600 font-semibold">High-level overview</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">❌</span>
+                    <div>
+                      <p className="font-black text-red-600 text-lg">No Implementation Roadmap</p>
+                      <p className="text-slate-600 font-semibold">You know WHAT to do, but not HOW or WHEN</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">❌</span>
+                    <div>
+                      <p className="font-black text-red-600 text-lg">No Advanced Strategies</p>
+                      <p className="text-slate-600 font-semibold">Missing the $200K+ to $400K+ tactics</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">❌</span>
+                    <div>
+                      <p className="font-black text-red-600 text-lg">No Community Support</p>
+                      <p className="text-slate-600 font-semibold">You're figuring it out alone</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">❌</span>
+                    <div>
+                      <p className="font-black text-red-600 text-lg">No Email Scripts or Templates</p>
+                      <p className="text-slate-600 font-semibold">You have to create everything from scratch</p>
+                    </div>
+                  </li>
+                </ul>
+                <div className="mt-8 bg-red-50 border-l-4 border-red-500 p-4 rounded">
+                  <p className="text-red-900 font-black text-center">
+                    ⚠️ Result: You'll plateau at $120K-$150K
+                  </p>
+                </div>
+              </div>
+
+              {/* What You Need */}
+              <div className="bg-gradient-to-br from-emerald-50 to-green-50 border-4 border-emerald-400 rounded-2xl p-8 transform scale-105 shadow-2xl">
+                <div className="text-center mb-6">
+                  <div className="inline-block bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-full font-black text-lg mb-4 shadow-lg">
+                    What You Need ($397)
+                  </div>
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-black text-slate-900 text-lg">20+ Advanced Videos</p>
+                      <p className="text-slate-700 font-semibold">Deep-dive on negotiation, politics, leadership</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-black text-slate-900 text-lg">Complete Framework Library</p>
+                      <p className="text-slate-700 font-semibold">Email scripts, worksheets, career roadmap</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-black text-emerald-600 text-lg">Step-by-Step Implementation</p>
+                      <p className="text-slate-700 font-semibold">Exact playbook: Week 1, Week 2, Week 3...</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-black text-emerald-600 text-lg">$200K to $400K Strategies</p>
+                      <p className="text-slate-700 font-semibold">Advanced tactics for executive-level roles</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-black text-emerald-600 text-lg">Private Community (2,000+)</p>
+                      <p className="text-slate-700 font-semibold">Network, feedback, accountability</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✅</span>
+                    <div>
+                      <p className="font-black text-emerald-600 text-lg">Copy-Paste Templates</p>
+                      <p className="text-slate-700 font-semibold">Proven emails, scripts, frameworks ready to use</p>
+                    </div>
+                  </li>
+                </ul>
+                <div className="mt-8 bg-emerald-100 border-l-4 border-emerald-600 p-4 rounded">
+                  <p className="text-emerald-900 font-black text-center">
+                    🚀 Result: You'll reach $400K+ in 18-24 months
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* The Gap Explanation */}
+            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-2xl p-10 mb-12">
+              <h3 className="text-3xl font-black mb-6 text-center">
+                💡 The Gap That's Costing You $250K+
+              </h3>
+              <div className="space-y-6 text-lg leading-relaxed">
+                <p className="font-semibold">
+                  <strong className="text-yellow-300">The 6 videos gave you awareness.</strong> You now know the Goldman Sachs Framework, the Strategic Pause, and salary negotiation basics. That's valuable—but it's only <strong>20% of the system</strong>.
+                </p>
+                <p className="font-semibold">
+                  <strong className="text-yellow-300">Here's what's missing:</strong> You don't have the <strong>implementation roadmap</strong>, the <strong>advanced $200K-$400K strategies</strong>, the <strong>copy-paste email scripts</strong>, or the <strong>community support</strong> to actually execute at the executive level.
+                </p>
+                <p className="font-semibold">
+                  <strong className="text-yellow-300">The brutal truth:</strong> Most people who stop at the $27 Playbook plateau at $120K-$150K. They have the knowledge but lack the <strong>execution system</strong> to reach $400K+.
+                </p>
+                <p className="font-black text-2xl text-center mt-8 text-yellow-300">
+                  The Complete Course fills that gap. It's the difference between knowing and doing.
+                </p>
+              </div>
+            </div>
+
+            {/* Testimonial - Someone Who Upgraded */}
+            <div className="bg-blue-50 border-2 border-blue-300 rounded-2xl p-8">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-black text-2xl">
+                    JK
+                  </div>
+                </div>
+                <div>
+                  <p className="text-lg text-slate-700 italic mb-4 leading-relaxed">
+                    "I bought the $27 Playbook first and thought I could figure out the rest on my own. <strong>I was wrong.</strong> After 6 months of trying, I upgraded to the Complete Course. Within 3 months, I had the exact scripts, the implementation plan, and the community support I needed. I went from $135K to $215K in 8 months. <strong>The Complete Course is what actually got me there.</strong>"
+                  </p>
+                  <p className="font-black text-slate-900">— Jessica Kim</p>
+                  <p className="text-slate-600 font-semibold">Senior Product Manager, Salesforce</p>
+                  <p className="text-emerald-600 font-black mt-2">$135K → $215K in 8 months after upgrading</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Upsell Section */}
       <div className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-24">
         <div className="container mx-auto px-4">
