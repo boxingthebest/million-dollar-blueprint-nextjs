@@ -54,7 +54,7 @@ export const STRIPE_PRODUCTS = {
       description: '5 Video Masterclasses on the Exact Frameworks That Took Me From $70K to $400K',
       price: 2700, // $27.00 in cents
       currency: 'usd',
-      // After creating in Stripe, add: priceId: 'price_playbook_27'
+      priceId: 'price_1SYTyEACB3eWMOQ2UuLcPMpX', // Test mode Price ID
     },
     executivePresence397: {
       id: 'executive-presence-course',
@@ -62,7 +62,7 @@ export const STRIPE_PRODUCTS = {
       description: 'Complete Executive Presence Course - 15+ videos, templates, community, and quarterly coaching',
       price: 39700, // $397.00 in cents
       currency: 'usd',
-      // After creating in Stripe, add: priceId: 'price_executive_presence_397'
+      priceId: 'price_1SYU0pACB3eWMOQ2K5zpjH3s', // Test mode Price ID
     },
   },
   bundles: {

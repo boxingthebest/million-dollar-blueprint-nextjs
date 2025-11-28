@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CheckCircle2, TrendingUp, Star, Users, Zap, ArrowRight } from "lucide-react";
+import { CheckCircle2, TrendingUp, Star, Users, Zap, ArrowRight, Download } from "lucide-react";
 
 export default function ThankYou() {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +20,7 @@ export default function ThankYou() {
         body: JSON.stringify({
           productType: "playbook",
           productKey: "executivePresence397",
-          successUrl: `${window.location.origin}/playbook/executive-presence`,
+          successUrl: `${window.location.origin}/welcome`,
           cancelUrl: `${window.location.origin}/playbook/thank-you`,
         }),
       });
@@ -41,29 +41,34 @@ export default function ThankYou() {
 
   const videos = [
     {
-      title: "Video 1: Welcome & The Hidden Truth",
-      url: "https://share.synthesia.io/embeds/videos/d0b8a7c8-3c1a-4b8d-b9f3-7e5c6d4a2b1c",
-      description: "The 3 pillars of executive presence that took me from $70K to $400K"
+      title: "Video 1: The Goldman Sachs Framework",
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141440345?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 1_ The Goldman Sachs Framework"></iframe></div>',
+      description: "Command respect in any room with the 3-pillar system used at Goldman Sachs"
     },
     {
-      title: "Video 2: The Meeting Before the Meeting",
-      url: "https://share.synthesia.io/embeds/videos/e1c9b8d9-4d2b-5c9e-c0g4-8f6d7e5b3c2d",
+      title: "Video 2: The Strategic Pause Technique",
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141442140?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 2_ The Strategic Pause Technique"></iframe></div>',
+      description: "Control any conversation using silence as your secret weapon"
+    },
+    {
+      title: "Video 3: Salary Negotiation Mastery",
+      embedCode: '<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141443129?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 3_ Salary Negotiation Mastery"></iframe></div>',
+      description: "The exact 3-step framework I used to negotiate $100K+ raises"
+    },
+    {
+      title: "Video 4: Executive Communication",
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141459744?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 4_ Executive Communication"></iframe></div>',
+      description: "Speak with authority and influence without needing a title"
+    },
+    {
+      title: "Video 5: The Meeting Before the Meeting",
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141460242?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 5_ The Meeting Before the Meeting"></iframe></div>',
       description: "Amazon's insider strategy for winning decisions before they're made"
     },
     {
-      title: "Video 3: Why Smart People Plateau at $120K",
-      url: "https://share.synthesia.io/embeds/videos/f2d0c9e0-5e3c-6d0f-d1h5-9g7e8f6c4d3e",
-      description: "The mindset shifts required to break into $200K-$400K territory"
-    },
-    {
-      title: "Video 4: The Strategic Pause Technique",
-      url: "https://share.synthesia.io/embeds/videos/g3e1d0f1-6f4d-7e1g-e2i6-0h8f9g7d5e4f",
-      description: "How to use silence and timing to project confidence and control conversations"
-    },
-    {
-      title: "Video 5: Making Raises Feel Inevitable",
-      url: "https://share.synthesia.io/embeds/videos/h4f2e1g2-7g5e-8f2h-f3j7-1i9g0h8e6f5g",
-      description: "The 4-step framework for negotiating $50K-$100K raises without sounding greedy"
+      title: "Video 6: Breaking the $120K Ceiling",
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141460954?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 6_ Breaking the $120K Ceiling"></iframe></div>',
+      description: "The mindset shifts required to reach $400K+ (BONUS VIDEO)"
     }
   ];
 
@@ -77,11 +82,21 @@ export default function ThankYou() {
             Welcome to the Executive Presence Playbook!
           </h1>
           <p className="text-2xl text-emerald-50 mb-4">
-            Your purchase was successful. Check your email for the receipt and PDF workbook.
+            Your purchase was successful. Check your email for login instructions.
           </p>
-          <p className="text-lg text-emerald-100">
-            Start watching the 5 video masterclasses below ↓
+          <p className="text-lg text-emerald-100 mb-8">
+            Start watching the 6 video masterclasses below ↓
           </p>
+          
+          {/* PDF Download Button */}
+          <a
+            href="/Executive-Presence-Playbook.pdf"
+            download
+            className="inline-flex items-center gap-3 bg-white text-emerald-600 font-bold py-4 px-8 rounded-xl hover:bg-emerald-50 transition-all duration-200 shadow-lg"
+          >
+            <Download className="w-6 h-6" />
+            Download Your PDF Workbook
+          </a>
         </div>
       </div>
 
@@ -92,17 +107,17 @@ export default function ThankYou() {
             {videos.map((video, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{video.title}</h3>
-                  <p className="text-slate-600 mb-4">{video.description}</p>
-                  <div className="aspect-video bg-slate-900 rounded-lg overflow-hidden">
-                    <iframe
-                      src={video.url}
-                      title={video.title}
-                      loading="lazy"
-                      allow="encrypted-media; fullscreen;"
-                      className="w-full h-full"
-                    ></iframe>
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="bg-emerald-600 text-white font-bold px-3 py-1 rounded-full text-sm">
+                      {index === 5 ? "BONUS" : `Video ${index + 1}`}
+                    </span>
+                    <h3 className="text-2xl font-bold text-slate-900">{video.title}</h3>
                   </div>
+                  <p className="text-slate-600 mb-4">{video.description}</p>
+                  <div 
+                    className="rounded-lg overflow-hidden"
+                    dangerouslySetInnerHTML={{ __html: video.embedCode }}
+                  />
                 </div>
               </div>
             ))}
@@ -119,14 +134,14 @@ export default function ThankYou() {
                 Ready to Take It to the Next Level?
               </h2>
               <p className="text-xl text-slate-300">
-                You've just completed the <strong>Executive Presence Playbook</strong> — 5 foundational videos to get you started. But this is just the beginning.
+                You've just completed the <strong>Executive Presence Playbook</strong> — 6 foundational videos to get you started. But this is just the beginning.
               </p>
             </div>
 
             <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8 mb-12">
               <div className="text-center mb-8">
                 <p className="text-2xl text-slate-200 mb-4">
-                  <strong className="text-white">The $27 Playbook gave you 5 videos. The $397 Executive Presence Course gives you the complete system.</strong>
+                  <strong className="text-white">The $27 Playbook gave you 6 videos. The $397 Executive Presence Course gives you the complete system.</strong>
                 </p>
                 <p className="text-lg text-slate-300 mb-6">
                   This is the full course from the Million Dollar Blueprint — one of 7 premium courses that professionals pay $597-$797 to access in our bundles.
@@ -179,7 +194,7 @@ export default function ThankYou() {
             {/* Pricing */}
             <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 mb-8">
               <div className="text-center">
-                <p className="text-lg mb-2">You Paid: $27 for 5 videos</p>
+                <p className="text-lg mb-2">You Paid: $27 for 6 videos</p>
                 <p className="text-5xl font-bold mb-4">
                   Complete Course: <span className="line-through text-3xl opacity-75">$597</span> $397
                 </p>
