@@ -6,6 +6,15 @@ const prisma = new PrismaClient();
 
 export async function POST() {
   try {
+    console.log("Attempting to seed Executive Presence Playbook...");
+    const existingCourse = await prisma.course.findUnique({
+      where: { slug: 'executive-presence-playbook' },
+    });
+
+    if (existingCourse) {
+      console.log("Executive Presence Playbook already exists.");
+      return NextResponse.json({ success: true, message: 'Executive Presence Playbook already exists', course: existingCourse });
+    }
     const course = await prisma.course.create({
       data: {
         title: 'Executive Presence Playbook',
@@ -59,7 +68,7 @@ export async function POST() {
 
     return NextResponse.json({ success: true, message: 'Executive Presence Playbook created successfully', course });
   } catch (error) {
-    console.error('Error seeding Executive Presence Playbook:', error);
+    console.error('Detailed error seeding Executive Presence Playbook:', JSON.stringify(error, null, 2));
     return NextResponse.json({ success: false, message: 'Error seeding Executive Presence Playbook' }, { status: 500 });
   }
 }
