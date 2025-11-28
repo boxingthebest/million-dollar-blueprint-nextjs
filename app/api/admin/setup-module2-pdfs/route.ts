@@ -112,7 +112,6 @@ export async function POST() {
             duration: 0, // PDFs don't have duration
             order: i + 1,
             moduleId: module2.id,
-            isPublished: true,
           },
         });
       }
