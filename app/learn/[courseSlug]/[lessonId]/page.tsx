@@ -32,7 +32,8 @@ export default async function LessonPage({
     redirect("/auth/signin")
   }
 
-  const lesson = await prisma.lesson.findUnique({
+  // Try to find lesson by ID first, then by order number
+  let lesson = await prisma.lesson.findUnique({
     where: { id: params.lessonId },
     include: {
       module: {
@@ -64,6 +65,67 @@ export default async function LessonPage({
       },
     },
   })
+
+  // If not found by ID, try to find by order number within the course
+  if (!lesson) {
+    const lessonOrder = parseInt(params.lessonId)
+    if (!isNaN(lessonOrder)) {
+      const course = await prisma.course.findUnique({
+        where: { slug: params.courseSlug },
+        include: {
+          modules: {
+            orderBy: { order: 'asc' },
+            include: {
+              lessons: {
+                where: { order: lessonOrder },
+                orderBy: { order: 'asc' },
+                include: {
+                  module: {
+                    include: {
+                      course: {
+                        include: {
+                          modules: {
+                            orderBy: { order: "asc" },
+                            include: {
+                              lessons: {
+                                orderBy: { order: "asc" },
+                                include: {
+                                  progress: {
+                                    where: { userId: user.id },
+                                  },
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                      lessons: {
+                        orderBy: { order: "asc" },
+                      },
+                    },
+                  },
+                  progress: {
+                    where: { userId: user.id },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
+      
+      // Find the first lesson with the matching order number across all modules
+      if (course) {
+        for (const module of course.modules) {
+          const foundLesson = module.lessons.find(l => l.order === lessonOrder)
+          if (foundLesson) {
+            lesson = foundLesson
+            break
+          }
+        }
+      }
+    }
+  }
 
   if (!lesson) {
     notFound()
