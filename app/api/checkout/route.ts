@@ -54,34 +54,25 @@ export async function POST(request: NextRequest) {
       sessionConfig.customer_email = customerEmail
     }
 
-    // Use Price ID if available (for playbook products), otherwise use price_data
-    if ((product as any).priceId) {
-      sessionConfig.line_items = [
-        {
-          price: (product as any).priceId,
-          quantity: 1,
-        },
-      ]
-    } else {
-      sessionConfig.line_items = [
-        {
-          price_data: {
-            currency: product.currency,
-            product_data: {
-              name: product.name,
-              description: product.description,
-            },
-            unit_amount: product.price,
-            ...(productType === 'subscription' && {
-              recurring: {
-                interval: (product as any).interval,
-              },
-            }),
+    // Temporarily use dynamic pricing for all products to test webhook flow
+    sessionConfig.line_items = [
+      {
+        price_data: {
+          currency: product.currency,
+          product_data: {
+            name: product.name,
+            description: product.description,
           },
-          quantity: 1,
+          unit_amount: product.price,
+          ...(productType === 'subscription' && {
+            recurring: {
+              interval: (product as any).interval,
+            },
+          }),
         },
-      ]
-    }
+        quantity: 1,
+      },
+    ]
 
     const session = await stripe.checkout.sessions.create(sessionConfig)
 
