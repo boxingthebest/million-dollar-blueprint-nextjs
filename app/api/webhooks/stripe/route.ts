@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic"
+// Force env var reload - updated webhook secret 2025-11-28
 
 import { NextRequest, NextResponse } from "next/server"
 import Stripe from "stripe"
