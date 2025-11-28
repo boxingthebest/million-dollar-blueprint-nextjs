@@ -130,11 +130,15 @@ export default function ThankYou() {
           style={{
             backgroundImage: "url('/hero-executive-suit.jpg')",
             backgroundSize: 'cover',
-            backgroundPosition: 'center 50%',
+            backgroundPosition: 'center 65%',
             transform: `translateY(${scrollY * 0.5}px)`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/70">
+            {/* Glowing orbs */}
+            <div className="absolute top-20 left-10 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          </div>
         </div>
         
         <div className={`container relative z-10 mx-auto px-4 h-full flex flex-col justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

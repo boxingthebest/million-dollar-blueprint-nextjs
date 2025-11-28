@@ -31,31 +31,37 @@ export async function POST() {
                   {
                     title: 'The Goldman Sachs Framework',
                     videoUrl: 'https://vimeo.com/1141440345',
+                    duration: 282,
                     order: 1,
                   },
                   {
                     title: 'The Strategic Pause Technique',
                     videoUrl: 'https://vimeo.com/1141442140',
+                    duration: 279,
                     order: 2,
                   },
                   {
                     title: 'Salary Negotiation Mastery',
                     videoUrl: 'https://vimeo.com/1141443129',
+                    duration: 288,
                     order: 3,
                   },
                   {
                     title: 'Executive Communication',
                     videoUrl: 'https://vimeo.com/1141459744',
+                    duration: 301,
                     order: 4,
                   },
                   {
                     title: 'The Meeting Before the Meeting',
                     videoUrl: 'https://vimeo.com/1141460242',
+                    duration: 299,
                     order: 5,
                   },
                   {
                     title: 'Breaking the $120K Ceiling',
                     videoUrl: 'https://vimeo.com/1141460954',
+                    duration: 279,
                     order: 6,
                   },
                 ],
