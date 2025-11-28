@@ -26,6 +26,7 @@ export async function POST() {
           create: [
             {
               title: 'Executive Presence Masterclasses',
+              order: 1,
               lessons: {
                 create: [
                   {
