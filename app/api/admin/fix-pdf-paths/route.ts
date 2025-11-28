@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export async function POST() {
   try {
-    // Correct PDF mappings based on actual files in public/downloads
+    // Correct PDF mappings based on ACTUAL files in public/downloads
     const pdfMappings = {
       'ai-resistant-skills': [
         { title: 'Complete AI-Resistant Skills Blueprint', file: 'AI-Resistant-Skills.pdf' },
