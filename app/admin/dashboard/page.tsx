@@ -254,12 +254,6 @@ export default function AdminDashboard() {
                 Test Accounts
               </Link>
               <Link
-                href="/admin/dashboard/playbook-analytics"
-                className="text-slate-400 hover:text-white transition-colors"
-              >
-                📊 Playbook Analytics
-              </Link>
-              <Link
                 href="/admin"
                 className="text-slate-400 hover:text-white transition-colors"
               >
@@ -450,12 +444,6 @@ export default function AdminDashboard() {
               Quick Actions
             </h3>
             <div className="space-y-3">
-              <Link
-                href="/admin/dashboard/playbook-analytics"
-                className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 text-center shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40"
-              >
-                📊 Playbook Analytics
-              </Link>
               <Link
                 href="/admin/dashboard/test-accounts"
                 className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 text-center shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40"
