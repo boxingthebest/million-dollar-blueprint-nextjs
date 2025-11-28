@@ -83,6 +83,7 @@ export async function POST() {
 
       // Check if Module 2 already exists
       let module2 = course.modules.find(m => m.title.includes('Toolkit'));
+      console.log(`${courseSlug}: Found ${course.modules.length} modules, Module 2 exists: ${!!module2}`);
 
       if (!module2) {
         // Create Module 2
@@ -120,6 +121,8 @@ export async function POST() {
         course: courseSlug,
         status: 'success',
         pdfsAdded: config.pdfs.length,
+        module2Id: module2.id,
+        module2Title: module2.title,
       });
     }
 
