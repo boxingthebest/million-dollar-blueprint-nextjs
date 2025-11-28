@@ -1,8 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 // Video URL mappings from Vimeo
-const courseVideoMappings: Record<string, Array<{ lessonNumber: number; videoUrl: string; title: string; isBonus?: boolean }>> = {
+const courseVideoMappings = {
   'ai-resistant-skills': [
     { lessonNumber: 1, videoUrl: 'https://vimeo.com/1129374864', title: 'The Executive Intelligence Framework' },
     { lessonNumber: 2, videoUrl: 'https://vimeo.com/1129414459', title: 'Systems Thinking Mastery' },
@@ -14,6 +15,7 @@ const courseVideoMappings: Record<string, Array<{ lessonNumber: number; videoUrl
     { lessonNumber: 8, videoUrl: 'https://vimeo.com/1129416368', title: 'Building Trust at Scale' },
     { lessonNumber: 9, videoUrl: 'https://vimeo.com/1129416625', title: 'The 10X Learning System' },
     { lessonNumber: 10, videoUrl: 'https://vimeo.com/1129416936', title: 'Your 90-Day Career Action Plan' },
+    { lessonNumber: 11, videoUrl: 'https://vimeo.com/1129416936', title: 'BONUS: Executive Interview Secrets', isBonus: true },
   ],
   'executive-energy-system': [
     { lessonNumber: 1, videoUrl: 'https://vimeo.com/1138978464', title: 'The Executive Energy Framework' },
@@ -77,45 +79,32 @@ const courseVideoMappings: Record<string, Array<{ lessonNumber: number; videoUrl
   ],
 };
 
-export async function POST(request: NextRequest) {
+async function updateAllVideoUrls() {
+  console.log('🚀 Starting video URL update for all courses...\n');
+
   try {
-    const { adminKey } = await request.json();
-
-    // Simple admin key check
-    if (adminKey !== process.env.ADMIN_SECRET_KEY) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const results: Record<string, any> = {};
-
     for (const [courseSlug, videos] of Object.entries(courseVideoMappings)) {
-      console.log(`Processing course: ${courseSlug}`);
+      console.log(`📚 Processing course: ${courseSlug}`);
 
-      // Find the course with modules and lessons
+      // Find the course
       const course = await prisma.course.findUnique({
         where: { slug: courseSlug },
-        include: {
-          modules: {
-            include: {
-              lessons: true,
-            },
-          },
-        },
+        include: { lessons: true },
       });
 
       if (!course) {
-        results[courseSlug] = { error: 'Course not found' };
+        console.log(`❌ Course not found: ${courseSlug}\n`);
         continue;
       }
 
-      const updates: any[] = [];
-
-      // Get all lessons from all modules
-      const allLessons = course.modules.flatMap((module) => module.lessons);
+      console.log(`✅ Found course: ${course.title}`);
+      console.log(`   Updating ${videos.length} video URLs...\n`);
 
       // Update each lesson's video URL
       for (const videoData of videos) {
-        const lesson = allLessons.find((l) => l.order === videoData.lessonNumber);
+        const lesson = course.lessons.find(
+          (l) => l.order === videoData.lessonNumber
+        );
 
         if (lesson) {
           await prisma.lesson.update({
@@ -125,31 +114,23 @@ export async function POST(request: NextRequest) {
               title: videoData.title,
             },
           });
-          updates.push({
-            lessonNumber: videoData.lessonNumber,
-            title: videoData.title,
-            videoUrl: videoData.videoUrl,
-          });
+          console.log(`   ✓ Lesson ${videoData.lessonNumber}: ${videoData.title}`);
+          console.log(`     ${videoData.videoUrl}`);
+        } else {
+          console.log(`   ⚠️  Lesson ${videoData.lessonNumber} not found in database`);
         }
       }
 
-      results[courseSlug] = {
-        success: true,
-        updatedCount: updates.length,
-        updates,
-      };
+      console.log(`\n✅ Completed ${courseSlug}\n`);
     }
 
-    return NextResponse.json({
-      success: true,
-      message: 'All video URLs updated successfully',
-      results,
-    });
-  } catch (error: any) {
-    console.error('Error updating video URLs:', error);
-    return NextResponse.json(
-      { error: error.message || 'Failed to update video URLs' },
-      { status: 500 }
-    );
+    console.log('\n🎉 All video URLs updated successfully!');
+  } catch (error) {
+    console.error('❌ Error updating video URLs:', error);
+    throw error;
+  } finally {
+    await prisma.$disconnect();
   }
 }
+
+updateAllVideoUrls();
