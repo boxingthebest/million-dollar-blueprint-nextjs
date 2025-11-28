@@ -125,6 +125,7 @@ model Lesson {
   videoUrl    String
   duration    Int
   order       Int
+  resources   Json?            // Array of downloadable resources (PDFs, worksheets, etc.)
   createdAt   DateTime         @default(now())
   updatedAt   DateTime         @updatedAt
   module      Module           @relation(fields: [moduleId], references: [id], onDelete: Cascade)
