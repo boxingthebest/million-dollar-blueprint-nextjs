@@ -126,10 +126,11 @@ export default function ThankYou() {
       {/* Hero Banner with Executive Background */}
       <div className="relative h-[600px] overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover transition-transform duration-700"
+          className="absolute inset-0 transition-transform duration-700"
           style={{
             backgroundImage: "url('/hero-executive-suit.jpg')",
-            backgroundPosition: 'center 20%',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 35%',
             transform: `translateY(${scrollY * 0.5}px)`,
           }}
         >
