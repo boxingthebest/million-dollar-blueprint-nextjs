@@ -128,7 +128,7 @@ export default function ThankYou() {
         <div 
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
           style={{
-            backgroundImage: "url('/hero-man-executive.jpg')",
+            backgroundImage: "url('/hero-executive-suit.jpg')",
             transform: `translateY(${scrollY * 0.5}px)`,
           }}
         >
@@ -357,19 +357,35 @@ export default function ThankYou() {
 
             {/* Testimonial */}
             <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-black text-2xl">
-                  JK
+              <p className="text-slate-300 text-lg leading-relaxed mb-6">
+                "I bought the $27 playbook first and tried to implement it on my own for 6 months. I got stuck at $140K. Then I upgraded to the $397 course, got the scripts, implementation guide, and community support. <strong className="text-white">8 months later, I went from $135K to $215K.</strong> The complete system made all the difference."
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold border border-emerald-500/30">
+                  +$80K Salary
+                </span>
+                <span className="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold border border-blue-500/30">
+                  8 Months
+                </span>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-slate-700">
+                  <Image
+                    src="/testimonial-jessica-kim.jpg"
+                    alt="Jessica Kim"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <div className="text-white font-bold text-lg">Jessica Kim</div>
                   <div className="text-slate-400">Senior Product Manager → Director of Product</div>
                 </div>
               </div>
-              <p className="text-slate-300 text-lg leading-relaxed mb-4">
-                "I bought the $27 playbook first and tried to implement it on my own for 6 months. I got stuck at $140K. Then I upgraded to the $397 course, got the scripts, implementation guide, and community support. <strong className="text-white">8 months later, I went from $135K to $215K.</strong> The complete system made all the difference."
-              </p>
-              <div className="flex items-center gap-2">
+              
+              <div className="flex items-center gap-2 mt-4">
                 {[1,2,3,4,5].map((i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
