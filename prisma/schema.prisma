@@ -167,28 +167,3 @@ model PendingCourseSelection {
   expiresAt         DateTime // 7 days from creation
 }
 
-// TEMPORARILY COMMENTED OUT - Will be enabled after migration
-// model Purchase {
-//   id                String   @id @default(cuid())
-//   email             String
-//   userId            String?  // Linked to User if account created
-//   productType       String   // "playbook", "course", "bundle"
-//   productKey        String   // "playbook27", "executivePresence397", etc.
-//   productName       String   // Human-readable product name
-//   amount            Int      // Amount in cents
-//   currency          String   @default("usd")
-//   stripeSessionId   String?  @unique
-//   stripePaymentId   String?  // Stripe payment intent ID
-//   status            String   @default("completed") // "pending", "completed", "refunded"
-//   isUpsell          Boolean  @default(false) // True if this was an upsell purchase
-//   originalPurchaseId String? // Reference to original purchase if this is an upsell
-//   metadata          Json?    // Additional data (source, campaign, etc.)
-//   createdAt         DateTime @default(now())
-//   updatedAt         DateTime @updatedAt
-//
-//   @@index([email])
-//   @@index([userId])
-//   @@index([productType])
-//   @@index([productKey])
-//   @@index([createdAt])
-// }
