@@ -113,6 +113,60 @@ export async function POST(request: NextRequest) {
           break
         }
 
+        // Record the purchase
+        const productNames: Record<string, string> = {
+          "playbook27": "Executive Presence Playbook ($27)",
+          "executivePresence397": "Executive Presence Complete Course ($397)",
+          "starter-bundle": "Starter Bundle",
+          "complete-mastery-bundle": "Complete Mastery Bundle",
+          "ai-resistant-skills": "AI-Resistant Skills",
+          "executive-energy-system": "Executive Energy System",
+          "sales-mastery": "Sales Mastery",
+          "leadership": "Leadership",
+          "marketing": "Marketing",
+          "wealth": "Wealth",
+        }
+
+        const isPlaybookUpsell = metadata.productKey === "executivePresence397"
+        let originalPurchaseId: string | undefined
+
+        // If this is an upsell, find the original playbook purchase
+        if (isPlaybookUpsell) {
+          const originalPurchase = await prisma.purchase.findFirst({
+            where: {
+              email: customerEmail,
+              productKey: "playbook27",
+            },
+            orderBy: {
+              createdAt: "desc",
+            },
+          })
+          originalPurchaseId = originalPurchase?.id
+        }
+
+        // Create purchase record
+        await prisma.purchase.create({
+          data: {
+            email: customerEmail,
+            userId: user.id,
+            productType: metadata.productKey.startsWith("playbook") || metadata.productKey.startsWith("executivePresence") ? "playbook" : "course",
+            productKey: metadata.productKey,
+            productName: productNames[metadata.productKey] || metadata.productKey,
+            amount: session.amount_total || 0,
+            currency: session.currency || "usd",
+            stripeSessionId: session.id,
+            stripePaymentId: session.payment_intent as string | undefined,
+            status: "completed",
+            isUpsell: isPlaybookUpsell,
+            originalPurchaseId: originalPurchaseId,
+            metadata: {
+              customerName: session.customer_details?.name,
+              lineItems: session.line_items,
+            },
+          },
+        })
+        console.log(`Recorded purchase for ${customerEmail}: ${metadata.productKey}`)
+
         // Enroll user in all courses for this product
         for (const courseSlug of courseSlugs) {
           const course = await prisma.course.findUnique({
