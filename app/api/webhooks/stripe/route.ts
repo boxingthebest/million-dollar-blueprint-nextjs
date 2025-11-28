@@ -97,7 +97,10 @@ export async function POST(request: NextRequest) {
           "leadership": ["leadership"],
           "marketing": ["marketing"],
           "wealth": ["wealth"],
-          // Playbook Products
+          // Playbook Products (using the actual keys from STRIPE_PRODUCTS)
+          "playbook27": ["executive-presence-playbook"],
+          "executivePresence397": ["executive-presence-course"],
+          // Also support the ID-based keys for backwards compatibility
           "executive-presence-playbook": ["executive-presence-playbook"],
           "executive-presence-course": ["executive-presence-course"],
         }
