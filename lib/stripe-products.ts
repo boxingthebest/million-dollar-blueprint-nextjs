@@ -52,7 +52,7 @@ export const STRIPE_PRODUCTS = {
       id: 'executive-presence-playbook',
       name: 'Executive Presence Playbook',
       description: '5 Video Masterclasses on the Exact Frameworks That Took Me From $70K to $400K',
-      price: 2700, // $27.00 in cents
+      price: 100, // $1.00 in cents (TEST - change to 2700 for production)
       currency: 'usd',
       priceId: 'price_1SYTyEACB3eWMOQ2UuLcPMpX', // Test mode Price ID
     },
@@ -60,7 +60,7 @@ export const STRIPE_PRODUCTS = {
       id: 'executive-presence-course',
       name: 'Executive Presence Course',
       description: 'Complete Executive Presence Course - 15+ videos, templates, community, and quarterly coaching',
-      price: 39700, // $397.00 in cents
+      price: 100, // $1.00 in cents (TEST - change to 39700 for production)
       currency: 'usd',
       priceId: 'price_1SYU0pACB3eWMOQ2K5zpjH3s', // Test mode Price ID
     },
