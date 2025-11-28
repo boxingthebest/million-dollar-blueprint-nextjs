@@ -24,6 +24,7 @@ export default function PlaybookLanding() {
         body: JSON.stringify({
           productType: "playbook",
           productKey: "playbook27",
+          customerEmail: email,
           successUrl: `${window.location.origin}/playbook/thank-you`,
           cancelUrl: `${window.location.origin}/playbook`,
         }),

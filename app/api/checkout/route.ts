@@ -6,7 +6,7 @@ import { STRIPE_PRODUCTS } from '@/lib/stripe-products'
 
 export async function POST(request: NextRequest) {
   try {
-    const { productType, productKey, successUrl, cancelUrl } = await request.json()
+    const { productType, productKey, successUrl, cancelUrl, customerEmail } = await request.json()
 
     if (!process.env.STRIPE_SECRET_KEY) {
       return NextResponse.json(
@@ -37,9 +37,33 @@ export async function POST(request: NextRequest) {
     }
 
     // Create Stripe checkout session
-    const session = await stripe.checkout.sessions.create({
+    const sessionConfig: any = {
       payment_method_types: ['card'],
-      line_items: [
+      mode: productType === 'subscription' ? 'subscription' : 'payment',
+      success_url: successUrl || `${request.headers.get('origin')}/welcome`,
+      cancel_url: cancelUrl || `${request.headers.get('origin')}/?canceled=true`,
+      metadata: {
+        productType,
+        productKey,
+        productId: product.id,
+      },
+    }
+
+    // Add customer email if provided
+    if (customerEmail) {
+      sessionConfig.customer_email = customerEmail
+    }
+
+    // Use Price ID if available (for playbook products), otherwise use price_data
+    if ((product as any).priceId) {
+      sessionConfig.line_items = [
+        {
+          price: (product as any).priceId,
+          quantity: 1,
+        },
+      ]
+    } else {
+      sessionConfig.line_items = [
         {
           price_data: {
             currency: product.currency,
@@ -56,16 +80,10 @@ export async function POST(request: NextRequest) {
           },
           quantity: 1,
         },
-      ],
-      mode: productType === 'subscription' ? 'subscription' : 'payment',
-      success_url: successUrl || `${request.headers.get('origin')}/welcome`,
-      cancel_url: cancelUrl || `${request.headers.get('origin')}/?canceled=true`,
-      metadata: {
-        productType,
-        productKey,
-        productId: product.id,
-      },
-    })
+      ]
+    }
+
+    const session = await stripe.checkout.sessions.create(sessionConfig)
 
     return NextResponse.json({ sessionId: session.id, url: session.url })
   } catch (error: any) {
