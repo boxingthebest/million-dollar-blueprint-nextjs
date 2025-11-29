@@ -34,6 +34,7 @@ export async function POST(request: Request) {
     const course = await prisma.course.findFirst({
       where: {
         OR: [
+          { title: { contains: 'Playbook' } },
           { title: { contains: 'Executive Prescence' } },
           { title: { contains: 'Executive Presence' } },
         ],
