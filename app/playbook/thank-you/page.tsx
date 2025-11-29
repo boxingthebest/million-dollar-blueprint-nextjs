@@ -131,6 +131,7 @@ export default function ThankYou() {
             backgroundImage: "url('/hero-executive-suit.jpg')",
             backgroundSize: '40%',
             backgroundPosition: 'center 40%',
+            backgroundRepeat: 'no-repeat',
             transform: `translateY(${scrollY * 0.5}px) scale(1.05)`,
           }}
         >
