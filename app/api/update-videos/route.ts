@@ -33,9 +33,10 @@ export async function POST(request: Request) {
     // Find the Executive Presence course
     const course = await prisma.course.findFirst({
       where: {
-        title: {
-          contains: 'Executive Presence',
-        },
+        OR: [
+          { title: { contains: 'Executive Presence Playbook' } },
+          { title: { contains: 'Executive Presence' } },
+        ],
       },
       include: {
         modules: {
