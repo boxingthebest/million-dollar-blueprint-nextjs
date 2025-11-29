@@ -129,15 +129,19 @@ export default function ThankYou() {
           className="absolute inset-0 transition-transform duration-700"
           style={{
             backgroundImage: "url('/hero-executive-suit.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center 65%',
-            transform: `translateY(${scrollY * 0.5}px)`,
+            backgroundSize: '110%',
+            backgroundPosition: 'center 40%',
+            transform: `translateY(${scrollY * 0.5}px) scale(1.05)`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/70">
-            {/* Glowing orbs */}
-            <div className="absolute top-20 left-10 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/85 to-slate-900/60">
+            {/* Enhanced Glowing orbs */}
+            <div className="absolute top-20 left-10 w-[500px] h-[500px] bg-emerald-500/30 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-yellow-500/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+            {/* Additional accent glows */}
+            <div className="absolute top-10 right-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-10 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-2xl"></div>
           </div>
         </div>
         
