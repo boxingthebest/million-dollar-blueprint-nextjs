@@ -368,12 +368,12 @@ export default function ThankYou() {
             {/* Testimonial */}
             <div className="bg-slate-900 border border-slate-700 rounded-2xl p-8">
               <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                "I bought the $27 playbook first and tried to implement it on my own for 6 months. I got stuck at $140K. Then I upgraded to the $397 course, got the scripts, implementation guide, and community support. <strong className="text-white">8 months later, I went from $135K to $215K.</strong> The complete system made all the difference."
+                "I bought the $27 playbook first and tried to implement it on my own for 6 months. I got stuck at $140K. Then I upgraded to the $397 course, got the scripts, implementation guide, and community support. <strong className="text-white">8 months later, I went from $135K to $210K in total compensation (including stock and bonus incentives).</strong> The complete system made all the difference."
               </p>
               
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <span className="px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold border border-emerald-500/30">
-                  +$80K Salary
+                  +$75K Total Comp
                 </span>
                 <span className="px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-semibold border border-blue-500/30">
                   8 Months
@@ -391,7 +391,7 @@ export default function ThankYou() {
                 </div>
                 <div>
                   <div className="text-white font-bold text-lg">Jessica Kim</div>
-                  <div className="text-slate-400">Senior Product Manager → Director of Product</div>
+                  <div className="text-slate-400">Director of Product at Google</div>
                 </div>
               </div>
               
