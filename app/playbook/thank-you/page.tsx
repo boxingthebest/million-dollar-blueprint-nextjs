@@ -84,6 +84,96 @@ export default function ThankYou() {
       embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141460954?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 6_ Breaking the $120K Ceiling"></iframe></div>',
       description: "The mindset shifts required to reach $400K+ (BONUS VIDEO)",
       isBonus: true
+    },
+    {
+      title: "The McKinsey Problem-Solving Blueprint",
+      number: 7,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141607107?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 7_ The McKinsey Problem-Solving Blueprint"></iframe></div>',
+      description: "Master the 6-step problem-solving framework used by top consultants"
+    },
+    {
+      title: "The Amazon Working Backwards Blueprint",
+      number: 8,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141607526?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 8_ The Amazon _Working Backwards_ Blueprint"></iframe></div>',
+      description: "Start with the customer and work backwards to build winning products"
+    },
+    {
+      title: "The Google OKR Blueprint for Career Acceleration",
+      number: 9,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141607761?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 9_ The Google OKR Blueprint for Career Acceleration"></iframe></div>',
+      description: "Set and achieve ambitious goals using Google's OKR framework"
+    },
+    {
+      title: "The Netflix Culture Blueprint for High-Performance Teams",
+      number: 10,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141608131?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 10_ The Netflix Culture Blueprint for High-Performance Teams"></iframe></div>',
+      description: "Build a culture of freedom, responsibility, and excellence"
+    },
+    {
+      title: "The Apple Innovation Blueprint (Deep Dive)",
+      number: 11,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141608782?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="VIDEO 11_ The Apple Innovation Blueprint (Deep Dive)"></iframe></div>',
+      description: "Apply design thinking to create breakthrough innovations"
+    },
+    {
+      title: "The Strategic Networking Blueprint",
+      number: 12,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141609074?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 12_ The Strategic Networking Blueprint"></iframe></div>',
+      description: "Build a powerful network with the 3-tier system"
+    },
+    {
+      title: "The Executive Writing Blueprint",
+      number: 13,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141609527?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 13_ The Executive Writing Blueprint"></iframe></div>',
+      description: "Write with clarity and impact using the one-page memo framework"
+    },
+    {
+      title: "The Financial Acumen Blueprint for Non-Finance Leaders",
+      number: 14,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141611410?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 14_ The Financial Acumen Blueprint for Non-Finance Leaders"></iframe></div>',
+      description: "Understand the 3 financial statements and speak the language of business"
+    },
+    {
+      title: "The 90-Day Leadership Transition Blueprint",
+      number: 15,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141611628?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 15_ The 90-Day Leadership Transition Blueprint"></iframe></div>',
+      description: "Navigate your first 90 days in a new leadership role"
+    },
+    {
+      title: "The Boardroom Presence Blueprint",
+      number: 16,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141611926?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 16_ The Boardroom Presence Blueprint"></iframe></div>',
+      description: "Command respect and influence in high-stakes executive meetings"
+    },
+    {
+      title: "The Thought Leadership Blueprint",
+      number: 17,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141612249?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 17_ The Thought Leadership Blueprint"></iframe></div>',
+      description: "Build your personal brand and become a recognized expert"
+    },
+    {
+      title: "The Wealth Generation Blueprint",
+      number: 18,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141612565?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video_18_The_Wealth_Generation_Blueprint"></iframe></div>',
+      description: "Build lasting wealth with the 70-20-10 investment strategy"
+    },
+    {
+      title: "The Legacy Blueprint",
+      number: 19,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141612902?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video_19_The_Legacy_Blueprint"></iframe></div>',
+      description: "Define your legacy and create lasting impact"
+    },
+    {
+      title: "The Personal Energy Management Blueprint",
+      number: 20,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141613211?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video_20_The_Personal_Energy_Management_Blueprint"></iframe></div>',
+      description: "Optimize your physical, mental, emotional, and spiritual energy"
+    },
+    {
+      title: "The Executive Presence Integration Blueprint",
+      number: 21,
+      embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141613480?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video_21_The_Executive_Presence_Integration_Blueprint"></iframe></div>',
+      description: "Integrate all 21 frameworks into your daily leadership practice"
     }
   ];
 
