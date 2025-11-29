@@ -129,8 +129,8 @@ export default function ThankYou() {
           className="absolute inset-0 transition-transform duration-700"
           style={{
             backgroundImage: "url('/hero-executive-suit.jpg')",
-            backgroundSize: '110%',
-            backgroundPosition: 'center 40%',
+            backgroundSize: '120%',
+            backgroundPosition: 'center 30%',
             transform: `translateY(${scrollY * 0.5}px) scale(1.05)`,
           }}
         >
