@@ -84,7 +84,13 @@ export default function ThankYou() {
       embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141460954?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video 6_ Breaking the $120K Ceiling"></iframe></div>',
       description: "The mindset shifts required to reach $400K+ (BONUS VIDEO)",
       isBonus: true
-    },
+    }
+  ];
+
+  // Removed videos 7-21 - only available in $397 Complete Course
+  // See /playbook/complete for the full experience
+  
+  const removedForUpgrade = [
     {
       title: "The McKinsey Problem-Solving Blueprint",
       number: 7,
@@ -175,7 +181,7 @@ export default function ThankYou() {
       embedCode: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1141613480?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video_21_The_Executive_Presence_Integration_Blueprint"></iframe></div>',
       description: "Integrate all 21 frameworks into your daily leadership practice"
     }
-  ];
+  ]; // End of removed videos
 
   const courseFeatures = [
     {
