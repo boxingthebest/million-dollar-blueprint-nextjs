@@ -57,6 +57,9 @@ export default function Home() {
     "The Executive Energy System™": "/courses/wellness"
   };
 
+  // Courses ordered by purchase psychology and customer journey
+  // Top row: AI-Resistant Skills, Executive Presence, Sales Mastery
+  // Bottom row: Leadership, Digital Marketing, Wealth Building, Wellness
   const courses = [
     {
       title: "AI-Resistant Skills",
