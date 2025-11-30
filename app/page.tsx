@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight, Star, Facebook, Instagram, Mail, Check, ChevronDown } from "lucide-react";
-import { AIResistantIcon, ExecutiveEnergyIcon, SalesMasteryIcon, LeadershipIcon, DigitalMarketingIcon, WealthBuildingIcon } from "@/components/CourseIcons";
+import { AIResistantIcon, ExecutiveEnergyIcon, ExecutivePresenceIcon, SalesMasteryIcon, LeadershipIcon, DigitalMarketingIcon, WealthBuildingIcon } from "@/components/CourseIcons";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -80,7 +80,7 @@ export default function Home() {
       subtitle: "Command Any Room",
       price: "$397",
       originalPrice: "$997",
-      icon: ExecutiveEnergyIcon,
+      icon: ExecutivePresenceIcon,
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500 to-teal-600",
       stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE",
