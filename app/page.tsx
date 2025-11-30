@@ -49,11 +49,12 @@ export default function Home() {
 
   const courseUrlMap: Record<string, string> = {
     "AI-Resistant Skills": "/courses/ai-resistant-skills",
-    "The Executive Energy System": "/courses/wellness",
+    "Executive Presence": "/courses/executive-presence",
     "Sales Mastery": "/courses/sales",
     "Leadership & Influence": "/courses/leadership",
     "Digital Marketing Mastery": "/courses/marketing",
-    "Wealth Building": "/courses/wealth"
+    "Wealth Building": "/courses/wealth",
+    "The Executive Energy System™": "/courses/wellness"
   };
 
   const courses = [
@@ -74,16 +75,17 @@ export default function Home() {
     {
       title: "Executive Presence",
       subtitle: "Command Any Room",
-      price: "$197",
-      originalPrice: "$395",
+      price: "$397",
+      originalPrice: "$997",
       icon: ExecutiveEnergyIcon,
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500 to-teal-600",
-      stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
+      stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE",
       description: "Master executive presence and influence without authority. From Fortune 100 leaders.",
-      students: "187 enrolled",
+      students: "Coming Soon",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
-      available: true
+      available: true,
+      badge: "NEW"
     },
     {
       title: "Sales Mastery",
@@ -142,6 +144,21 @@ export default function Home() {
       description: "Build wealth with Wall Street insider strategies.",
       students: "Coming Soon",
       image: "/course-wealth-new.jpg",
+      available: true,
+      badge: "NEW"
+    },
+    {
+      title: "The Executive Energy System™",
+      subtitle: "Peak Performance",
+      price: "$197",
+      originalPrice: "$395",
+      icon: ExecutiveEnergyIcon,
+      gradient: "from-pink-500 to-rose-600",
+      bgGradient: "from-pink-500 to-rose-600",
+      stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_ENERGY",
+      description: "Master executive wellness and sustainable high performance.",
+      students: "Coming Soon",
+      image: "/hero-wellness-v2.jpg",
       available: true,
       badge: "NEW"
     }
@@ -559,7 +576,7 @@ export default function Home() {
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                     className="h-full"
                   >
-                    <Enhanced3DCard className="glass-card rounded-xl overflow-hidden group relative duration-300 flex flex-col h-full cursor-pointer">
+                    <div className="glass-card rounded-xl overflow-hidden group relative hover:scale-[1.02] transition-transform duration-200 flex flex-col h-full cursor-pointer">
                     {course.badge && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
                         {course.badge}
@@ -599,7 +616,7 @@ export default function Home() {
                         </Link>
                       </div>
                     </div>
-                    </Enhanced3DCard>
+                    </div>
                   </motion.div>
                 );
               })}
