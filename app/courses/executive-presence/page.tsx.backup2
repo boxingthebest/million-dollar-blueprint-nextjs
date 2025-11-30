@@ -31,282 +31,128 @@ export default function ExecutivePresencePage() {
     },
     {
       number: 2,
-      title: "The Strategic Pause Technique",
-      duration: "5 min",
+      title: "Command the Room: Gravitas",
+      duration: "15 min",
       lessons: 1,
       icon: Target,
       topics: [
-        "Control any conversation using silence as your secret weapon",
-        "The psychology of the strategic pause in negotiations",
-        "How top executives use silence to command attention",
-        "When and how to pause for maximum impact",
-        "Key takeaway: The most powerful thing you can say is nothing"
+        "The \"Strategic Pause\" technique used by Fortune 100 CEOs",
+        "How to project confidence without arrogance",
+        "The power of silence: why pausing makes you more persuasive",
+        "Body language secrets from FBI negotiators",
+        "Key takeaway: Gravitas is not about talking more. It's about saying less, better."
       ]
     },
     {
       number: 3,
-      title: "Salary Negotiation Mastery",
-      duration: "5 min",
+      title: "Executive Communication Mastery",
+      duration: "14 min",
       lessons: 1,
-      icon: TrendingUp,
+      icon: Users,
       topics: [
-        "The exact 3-step framework I used to negotiate $100K+ raises",
-        "How to anchor the negotiation in your favor",
-        "The \"walk-away\" strategy that gets you what you deserve",
-        "Timing your ask for maximum leverage",
-        "Key takeaway: You don't get what you deserve. You get what you negotiate"
+        "The \"Pyramid Principle\" from McKinsey for C-suite presentations",
+        "How to present to senior leaders (Jeff Bezos' 6-page memo rule)",
+        "Storytelling frameworks from Pixar and TED Talks",
+        "The psychology of persuasion (Cialdini's 6 principles)",
+        "Key takeaway: Executives don't have time for details. Lead with the answer."
       ]
     },
     {
       number: 4,
-      title: "Executive Communication",
-      duration: "5 min",
+      title: "Influence Without Authority",
+      duration: "13 min",
       lessons: 1,
-      icon: Users,
+      icon: Zap,
       topics: [
-        "Speak with authority and influence without needing a title",
-        "The Pyramid Principle for C-suite presentations",
-        "How to structure your message for executive audiences",
-        "Storytelling techniques that drive action",
-        "Key takeaway: Executives don't have time for details. Lead with the answer"
+        "How to lead cross-functional teams without being the boss",
+        "The \"Give First\" philosophy from Brad Feld (Techstars)",
+        "Building strategic relationships that open doors",
+        "The art of \"managing up\": influencing your own manager",
+        "Key takeaway: The best leaders don't need a title to lead."
       ]
     },
     {
       number: 5,
-      title: "The Meeting Before the Meeting",
-      duration: "5 min",
+      title: "The Executive Appearance Code",
+      duration: "10 min",
       lessons: 1,
-      icon: Lightbulb,
+      icon: Star,
       topics: [
-        "Amazon's insider strategy for winning decisions before they're made",
-        "How to build consensus before the formal meeting",
-        "The art of pre-selling your ideas to key stakeholders",
-        "Why decisions are made in hallways, not conference rooms",
-        "Key takeaway: The meeting is just a formality. The real work happens before"
+        "Why appearance matters more than you think (Harvard study)",
+        "The \"Dress for the Job You Want\" principle (and when it's wrong)",
+        "How to build an executive wardrobe on any budget",
+        "Grooming, posture, and presence: the details that matter",
+        "Key takeaway: You're always on stage. Dress like it."
       ]
     },
     {
       number: 6,
-      title: "Breaking the $120K Ceiling (BONUS)",
-      duration: "5 min",
+      title: "Decision-Making Under Pressure",
+      duration: "12 min",
       lessons: 1,
-      icon: Star,
+      icon: Target,
       topics: [
-        "The mindset shifts required to reach $400K+",
-        "Why most professionals plateau at $120K-$150K",
-        "The identity shift from employee to executive",
-        "How to think like a $400K+ earner",
-        "Key takeaway: Your income is a reflection of your identity, not your effort"
+        "The \"OODA Loop\" for decision-making under uncertainty",
+        "How Navy SEALs make life-or-death decisions in seconds",
+        "The \"10/10/10 Rule\" for evaluating tough choices",
+        "Why great leaders make fewer, better decisions",
+        "Key takeaway: Executives are paid to make hard calls. Fast."
       ]
     },
     {
       number: 7,
-      title: "The McKinsey Blueprint: How to Solve Any Business Problem",
-      duration: "5 min",
+      title: "Building Your Executive Brand",
+      duration: "11 min",
       lessons: 1,
-      icon: Brain,
+      icon: TrendingUp,
       topics: [
-        "The exact problem-solving system used by elite consultants",
-        "How to dissect complex challenges using the MECE framework",
-        "Building issue trees to map every possible solution",
-        "The 80/20 rule for prioritizing high-impact actions",
-        "Key takeaway: Executives don't solve problems. They dissect them"
+        "How to position yourself as a thought leader",
+        "LinkedIn strategies from Fortune 500 executives",
+        "The \"Personal Board of Directors\" concept",
+        "Networking that actually works (quality over quantity)",
+        "Key takeaway: Your reputation precedes you. Manage it."
       ]
     },
     {
       number: 8,
-      title: "The Amazon Blueprint: Invent Like a Day 1 Company",
-      duration: "5 min",
+      title: "Navigating Office Politics",
+      duration: "13 min",
       lessons: 1,
-      icon: Lightbulb,
+      icon: Brain,
       topics: [
-        "The 'Working Backwards' process Amazon uses to create world-changing products",
-        "How to start with the customer and work backward to the solution",
-        "Writing press releases before building the product",
-        "Why Amazon banned PowerPoint in favor of 6-page memos",
-        "Key takeaway: Start with the end in mind, then build the path to get there"
+        "Understanding power dynamics in organizations",
+        "How to build coalitions and strategic alliances",
+        "The art of diplomatic disagreement",
+        "Protecting yourself from political landmines",
+        "Key takeaway: Politics is a game. Learn the rules or lose."
       ]
     },
     {
       number: 9,
-      title: "The Google Blueprint: Get Promoted in Half the Time",
-      duration: "5 min",
+      title: "Leading High-Stakes Meetings",
+      duration: "10 min",
       lessons: 1,
-      icon: TrendingUp,
+      icon: Users,
       topics: [
-        "The OKR system Google uses for career acceleration",
-        "How to set objectives that align with company priorities",
-        "Measuring key results that prove your impact",
-        "The quarterly review process that drives promotions",
-        "Key takeaway: You get promoted when your impact is undeniable"
+        "How to run board-level meetings like a CEO",
+        "The \"Pre-Wire\" technique for guaranteed outcomes",
+        "Handling difficult questions and pushback",
+        "Creating alignment in the room",
+        "Key takeaway: Meetings are won before they start."
       ]
     },
     {
       number: 10,
-      title: "The Netflix Blueprint: Lead Like a Silicon Valley Icon",
-      duration: "5 min",
-      lessons: 1,
-      icon: Users,
-      topics: [
-        "Build and lead high-performance teams using Netflix's culture principles",
-        "The 'Freedom and Responsibility' framework",
-        "How to hire A-players and fire fast",
-        "Creating a culture of radical candor and high performance",
-        "Key takeaway: Great teams are built, not found"
-      ]
-    },
-    {
-      number: 11,
-      title: "The Apple Blueprint: Think Like a Design Genius",
-      duration: "5 min",
-      lessons: 1,
-      icon: Lightbulb,
-      topics: [
-        "Deep dive into Apple's innovation framework",
-        "The 'Think Different' philosophy in practice",
-        "How to simplify complexity and create elegant solutions",
-        "Steve Jobs' product development process",
-        "Key takeaway: Innovation is saying no to 1,000 things"
-      ]
-    },
-    {
-      number: 12,
-      title: "The Networking Blueprint: Build a World-Class Network",
-      duration: "5 min",
-      lessons: 1,
-      icon: Users,
-      topics: [
-        "Strategic networking systems for executive-level relationships",
-        "The 'Give First' philosophy for building powerful connections",
-        "How to network without feeling salesy or transactional",
-        "Building a personal board of advisors",
-        "Key takeaway: Your network is your net worth"
-      ]
-    },
-    {
-      number: 13,
-      title: "The Writing Blueprint: Write Like a C-Suite Executive",
-      duration: "5 min",
-      lessons: 1,
-      icon: Brain,
-      topics: [
-        "Master executive-level written communication",
-        "The BLUF (Bottom Line Up Front) writing method",
-        "How to write emails that get read and acted on",
-        "Crafting executive summaries and strategic memos",
-        "Key takeaway: Clear writing is clear thinking"
-      ]
-    },
-    {
-      number: 14,
-      title: "The Finance Blueprint: Speak the Language of the C-Suite",
-      duration: "5 min",
-      lessons: 1,
-      icon: TrendingUp,
-      topics: [
-        "Financial acumen for non-finance leaders",
-        "Understanding P&L, balance sheets, and cash flow",
-        "How to speak confidently about ROI, EBITDA, and margins",
-        "Making data-driven decisions that drive business results",
-        "Key takeaway: If you can't speak finance, you can't lead at the executive level"
-      ]
-    },
-    {
-      number: 15,
-      title: "The 90-Day Blueprint: Master Any New Leadership Role",
-      duration: "5 min",
-      lessons: 1,
-      icon: Target,
-      topics: [
-        "The leadership transition framework for new roles",
-        "How to make an impact in your first 90 days",
-        "Building credibility and trust with your new team",
-        "The 30-60-90 day plan for executive success",
-        "Key takeaway: The first 90 days set the tone for your entire tenure"
-      ]
-    },
-    {
-      number: 16,
-      title: "The Boardroom Blueprint: Command the Highest-Stakes Room",
-      duration: "5 min",
+      title: "The Path to C-Suite",
+      duration: "14 min",
       lessons: 1,
       icon: Crown,
       topics: [
-        "Presence and influence in boardroom settings",
-        "How to present to board members and investors",
-        "Handling tough questions with confidence and grace",
-        "The art of executive storytelling in high-stakes presentations",
-        "Key takeaway: The boardroom is where careers are made or broken"
-      ]
-    },
-    {
-      number: 17,
-      title: "The Thought Leadership Blueprint: Become the Go-To Expert",
-      duration: "5 min",
-      lessons: 1,
-      icon: Star,
-      topics: [
-        "Build your reputation as an industry thought leader",
-        "How to create content that positions you as an expert",
-        "Speaking, writing, and publishing strategies",
-        "Building a personal brand that opens doors",
-        "Key takeaway: Thought leadership is the ultimate career accelerator"
-      ]
-    },
-    {
-      number: 18,
-      title: "The Wealth Blueprint: Turn Your Income into Freedom",
-      duration: "5 min",
-      lessons: 1,
-      icon: TrendingUp,
-      topics: [
-        "Wealth generation strategies for high earners",
-        "How to invest your executive income for long-term wealth",
-        "Tax optimization strategies for $200K+ earners",
-        "Building multiple income streams beyond your salary",
-        "Key takeaway: High income doesn't equal wealth. Wealth is what you keep"
-      ]
-    },
-    {
-      number: 19,
-      title: "The Legacy Blueprint: Define Your Ultimate Mission",
-      duration: "5 min",
-      lessons: 1,
-      icon: Heart,
-      topics: [
-        "Create lasting impact and define your leadership legacy",
-        "How to align your career with your deepest values",
-        "Building a mission-driven career that matters",
-        "Defining success on your own terms",
-        "Key takeaway: Your legacy is not what you achieve. It's who you become"
-      ]
-    },
-    {
-      number: 20,
-      title: "The Energy Blueprint: Perform Like a World-Class Athlete",
-      duration: "5 min",
-      lessons: 1,
-      icon: Zap,
-      topics: [
-        "Personal energy management for sustained high performance",
-        "The sleep, nutrition, and exercise habits of top executives",
-        "How to manage stress and avoid burnout",
-        "Building sustainable high-performance routines",
-        "Key takeaway: You can't lead others if you can't manage your own energy"
-      ]
-    },
-    {
-      number: 21,
-      title: "The Final Blueprint: Make Executive Presence Your Identity",
-      duration: "5 min",
-      lessons: 1,
-      icon: Crown,
-      topics: [
-        "Integration of all frameworks into your daily leadership practice",
-        "Creating your personal executive presence playbook",
-        "The 30-day integration challenge",
-        "How to make these principles automatic and effortless",
-        "Key takeaway: Executive presence is not something you do. It's who you are"
+        "What it really takes to become a C-level executive",
+        "The hidden criteria for executive promotions",
+        "Building your executive sponsor network",
+        "Accelerating your timeline to senior leadership",
+        "Key takeaway: The C-suite isn't about working harder. It's about being seen differently."
       ]
     }
   ];
@@ -566,7 +412,7 @@ export default function ExecutivePresencePage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">21 video masterclasses (3+ hours)</span>
+                  <span className="text-lg text-white">20+ video masterclasses (3+ hours)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
