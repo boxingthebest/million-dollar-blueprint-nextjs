@@ -519,8 +519,7 @@ export default function MarketingPage() {
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">Ready to build a growth engine? Enroll now and get lifetime access to the playbooks that build unicorns.</p>
           <a
             href="https://buy.stripe.com/00w14mepHbav5lO9JW08g05"
-            target="_blank"
-            rel="noopener noreferrer"
+
             className="inline-block bg-white text-blue-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
           >
             Enroll Now - $197 (Originally $395 • Save 50%)
@@ -538,8 +537,7 @@ export default function MarketingPage() {
           </div>
           <a
             href="https://buy.stripe.com/00w14mepHbav5lO9JW08g05"
-            target="_blank"
-            rel="noopener noreferrer"
+
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap text-cyan-600 hover:bg-cyan-50"
           >
             Enroll Now - $197

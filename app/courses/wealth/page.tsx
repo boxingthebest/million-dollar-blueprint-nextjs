@@ -519,8 +519,6 @@ export default function WealthPage() {
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">Ready to unlock your leadership potential? Enroll now and get lifetime access to the frameworks that build empires.</p>
           <a
             href="https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06"
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-block bg-white text-green-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
           >
             Enroll Now - $197 (Originally $395 • Save 50%)
@@ -538,8 +536,6 @@ export default function WealthPage() {
           </div>
           <a
             href="https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06"
-            target="_blank"
-            rel="noopener noreferrer"
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap text-emerald-700 hover:bg-emerald-50"
           >
             Enroll Now - $197

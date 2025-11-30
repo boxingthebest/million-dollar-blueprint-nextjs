@@ -283,8 +283,6 @@ export default function WellnessPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-emerald-500/50 transition-all"
               >
                 Enroll Now - $197 (Originally $395 • Save 50%) <ArrowRight className="ml-2" />
@@ -410,8 +408,6 @@ export default function WellnessPage() {
             <div className="mt-12 text-center">
               <a
                 href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-4 rounded-lg font-bold text-xl transition-all shadow-2xl"
               >
                 Get Full Access Now - $197
@@ -462,8 +458,6 @@ export default function WellnessPage() {
 
               <a
                 href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-4 rounded-lg font-bold text-xl transition-all shadow-2xl mb-4"
               >
                 Enroll Now - $197 (Originally $395 • Save 50%)
@@ -598,8 +592,6 @@ export default function WellnessPage() {
             </p>
             <a
               href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-6 rounded-lg font-bold text-2xl transition-all shadow-2xl"
             >
               Enroll Now - $197 (Originally $395 • Save 50%)
@@ -621,8 +613,6 @@ export default function WellnessPage() {
           </div>
           <a
             href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
-            target="_blank"
-            rel="noopener noreferrer"
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#ea580c'}}
           >
             Enroll Now - $197
