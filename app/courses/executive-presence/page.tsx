@@ -472,7 +472,8 @@ export default function ExecutivePresencePage() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
           <div className="max-w-4xl mx-auto">
-            {modules.map((module) => (
+            {/* Modules 1-10 */}
+            {modules.slice(0, 10).map((module) => (
               <div key={module.number} className="bg-black border-2 border-slate-600 rounded-lg mb-4">
                 <button
                   className="w-full flex justify-between items-center p-6 text-left"
@@ -503,6 +504,53 @@ export default function ExecutivePresencePage() {
                 )}
               </div>
             ))}
+            
+            {/* Advanced Modules Dropdown (11-21) */}
+            <div className="mt-8">
+              <button
+                className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-4 px-6 rounded-lg flex justify-between items-center transition-all"
+                onClick={() => setOpenModule(openModule === 999 ? null : 999)}
+              >
+                <span className="text-lg">View Advanced Modules (11-21)</span>
+                <ChevronDown className={`h-6 w-6 transition-transform ${openModule === 999 ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {openModule === 999 && (
+                <div className="mt-4 space-y-4">
+                  {modules.slice(10).map((module) => (
+                    <div key={module.number} className="bg-black border-2 border-slate-600 rounded-lg">
+                      <button
+                        className="w-full flex justify-between items-center p-6 text-left"
+                        onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 p-4 rounded-full shadow-lg shadow-emerald-500/50">
+                            <module.icon className="h-14 w-14 text-emerald-400" />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
+                            <p className="text-sm text-white">{module.duration} • {module.lessons} lessons</p>
+                          </div>
+                        </div>
+                        <ChevronDown className={`h-14 w-14 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                      </button>
+                      {openModule === module.number && (
+                        <div className="p-6 border-t border-slate-600">
+                          <ul className="space-y-3">
+                            {module.topics.map((topic, index) => (
+                              <li key={index} className="flex items-center gap-3">
+                                <Check className="h-5 w-5 text-emerald-400" />
+                                <span className="text-white">{topic}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
