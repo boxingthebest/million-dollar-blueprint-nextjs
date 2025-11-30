@@ -2,14 +2,28 @@
 
 import { ArrowRight, CheckCircle2, Brain, Zap, Target, Award } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FlagshipBundlePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(251,146,60,0.1),transparent_50%)]" />
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero-executive-team.jpg"
+            alt="Executive team background"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/90 to-slate-950" />
+        </div>
+        
+        {/* Animated Gradient Orbs */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(251,146,60,0.15),transparent_50%)]" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
@@ -29,12 +43,12 @@ export default function FlagshipBundlePage() {
               </div>
               <div className="text-slate-400 text-2xl font-bold">vs</div>
               <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-4xl font-bold text-slate-500 line-through mb-1">$790</div>
+                <div className="text-4xl font-bold text-slate-500 line-through mb-1">$594</div>
                 <div className="text-sm text-slate-400">Individual Price</div>
               </div>
             </div>
             <div className="inline-block bg-emerald-500/20 text-emerald-400 px-6 py-3 rounded-full text-lg font-bold mb-8">
-              Save $493 (62% OFF)
+              Save $297 (50% OFF)
             </div>
             
             <Link
@@ -64,7 +78,7 @@ export default function FlagshipBundlePage() {
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-white">AI-Resistant Skills</h3>
-                  <p className="text-orange-300 text-lg">Value: $395</p>
+                  <p className="text-orange-300 text-lg">Value: $197</p>
                 </div>
               </div>
               <p className="text-slate-300 text-lg mb-6 leading-relaxed">
@@ -98,7 +112,7 @@ export default function FlagshipBundlePage() {
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold text-white">Executive Presence</h3>
-                  <p className="text-cyan-300 text-lg">Value: $395</p>
+                  <p className="text-cyan-300 text-lg">Value: $397</p>
                 </div>
               </div>
               <p className="text-slate-300 text-lg mb-6 leading-relaxed">
@@ -126,9 +140,9 @@ export default function FlagshipBundlePage() {
           </div>
 
           <div className="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 border-2 border-emerald-500/50 rounded-2xl p-8 text-center">
-            <h3 className="text-3xl font-bold text-white mb-4">Total Bundle Value: $790</h3>
+            <h3 className="text-3xl font-bold text-white mb-4">Total Bundle Value: $594</h3>
             <p className="text-2xl text-emerald-400 font-bold mb-4">Your Price: $297</p>
-            <p className="text-xl text-slate-300">You Save: <span className="text-emerald-400 font-bold">$493 (62% OFF)</span></p>
+            <p className="text-xl text-slate-300">You Save: <span className="text-emerald-400 font-bold">$297 (50% OFF)</span></p>
           </div>
         </div>
       </section>
