@@ -403,10 +403,18 @@ export default function ExecutivePresencePage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-600">
-              <div className="bg-slate-800 h-full flex items-center justify-center">
-                <p className="text-white text-xl">Watch the course preview to see what you'll learn</p>
+              <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
+                <iframe 
+                  src="https://player.vimeo.com/video/1141887983?badge=0&autopause=0&player_id=0&app_id=58479" 
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
+                  title="Executive Presence Course-MDB"
+                />
               </div>
             </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </div>
       </section>
