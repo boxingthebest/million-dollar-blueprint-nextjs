@@ -298,7 +298,9 @@ export default function AIResistantSkillsPage() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/auth/signup?course=ai-resistant-skills-paid"
+                href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Enroll Now - $197 (Originally $395 • Save 50%) <ArrowRight className="ml-2" />
@@ -424,7 +426,9 @@ export default function AIResistantSkillsPage() {
 
             <div className="mt-12 text-center">
               <Link
-                href="/auth/signup?course=ai-resistant-skills-paid"
+                href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Get Full Access Now - $197 <ArrowRight className="ml-2" />
@@ -609,7 +613,9 @@ export default function AIResistantSkillsPage() {
               AI is moving faster than anyone predicted. The time to future-proof your career is NOW.
             </p>
               <Link
-                href="/auth/signup?course=ai-resistant-skills-paid"
+                href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
                 Enroll Now - Lock in $197 Pricing <ArrowRight className="ml-2" />
