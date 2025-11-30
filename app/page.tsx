@@ -72,15 +72,15 @@ export default function Home() {
       available: true
     },
     {
-      title: "The Executive Energy System",
-      subtitle: "Turn Burnout Into Breakthrough",
+      title: "Executive Presence",
+      subtitle: "Command Any Room",
       price: "$197",
       originalPrice: "$395",
       icon: ExecutiveEnergyIcon,
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500 to-teal-600",
       stripeLink: "https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01",
-      description: "Fortune 100 executive coaching ($2,997 value) for $197.",
+      description: "Master executive presence and influence without authority. From Fortune 100 leaders.",
       students: "187 enrolled",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
       available: true
@@ -387,12 +387,12 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 whileHover={{ scale: 1.15, rotate: [0, -1, 1, -1, 0] }}
                 whileTap={{ scale: 0.95 }}
-                href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
+                href="/bundle/flagship"
                 className="neon-button relative inline-flex items-center justify-center bg-gradient-to-r from-orange-500 via-pink-500 to-orange-500 text-white px-10 md:px-14 py-5 md:py-7 rounded-xl text-xl md:text-2xl font-bold overflow-hidden group"
                 style={{ backgroundSize: '200% 100%' }}
               >
                 <span className="relative z-10 flex items-center">
-                  Get Complete Bundle - Save $100 
+                  Get Started 
                   <motion.span
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
