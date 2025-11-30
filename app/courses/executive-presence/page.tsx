@@ -370,7 +370,7 @@ export default function ExecutivePresencePage() {
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden animated-gradient-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-teal-900/20" />
-        <div className="absolute inset-0 bg-[url('/hero-executive-presence-futuristic.png')] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-[url('/hero-executive-presence-futuristic.png')] bg-cover bg-top opacity-30" />
         
         {/* Glowing Orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />

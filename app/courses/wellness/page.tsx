@@ -232,7 +232,7 @@ export default function WellnessPage() {
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden animated-gradient-bg">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
-        <div className="absolute inset-0 bg-[url('/hero-wellness-v2.jpg')] opacity-10 bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/hero-wellness-v2.jpg')] opacity-10 bg-cover bg-top" />
         
         
         {/* Glowing Orbs */}
