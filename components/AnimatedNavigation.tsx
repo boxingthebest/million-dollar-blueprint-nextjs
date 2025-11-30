@@ -47,39 +47,27 @@ export default function AnimatedNavigation() {
               {link.href.startsWith('#') ? (
                 <a
                   href={link.href}
-                  className="text-slate-300 hover:text-cyan-400 border-2 border-cyan-500/50 hover:border-cyan-400 px-4 md:px-6 py-2 rounded-lg transition-all font-semibold text-sm md:text-base relative z-10"
+                  className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base"
                 >
                   {link.label}
                 </a>
               ) : (
                 <Link
                   href={link.href}
-                  className="text-slate-300 hover:text-cyan-400 border-2 border-cyan-500/50 hover:border-cyan-400 px-4 md:px-6 py-2 rounded-lg transition-all font-semibold text-sm md:text-base hidden sm:inline relative z-10"
+                  className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base hidden sm:inline"
                 >
                   {link.label}
                 </Link>
               )}
               
-              {/* Shared Layout Animation Background */}
-              {hoveredLink === link.href && (
-                <motion.div
-                  layoutId="navHighlight"
-                  className="absolute inset-0 bg-cyan-500/10 rounded-lg border-2 border-cyan-400/50"
-                  initial={false}
-                  transition={{
-                    type: "spring",
-                    stiffness: 500,
-                    damping: 30
-                  }}
-                />
-              )}
+
             </motion.div>
           ))}
 
           {/* Login Button */}
           <Link 
             href="/auth/signin"
-            className="bg-slate-800/80 hover:bg-slate-700 border-2 border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-cyan-200 px-4 md:px-6 py-2 rounded-lg font-bold transition-all text-sm md:text-base shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/30"
+            className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base"
           >
             Login
           </Link>
@@ -87,7 +75,7 @@ export default function AnimatedNavigation() {
           {/* Get Started Button */}
           <a 
             href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
-            className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 border-2 border-cyan-500/30 hover:border-cyan-400/50 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base shadow-lg shadow-orange-500/20"
+            className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-bold transition-all text-sm md:text-base shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
           >
             Get Started
           </a>
