@@ -86,7 +86,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE",
       description: "Master executive presence and influence without authority. From Fortune 100 leaders.",
       students: "Enroll Now",
-      image: "/hero-executive-presence-woman.png",
+      image: "/hero-executive-presence-professional.png",
     },
     {
       title: "Sales Mastery",
