@@ -15,7 +15,7 @@ export default function FlagshipBundlePage() {
             src="/hero-executive-team.jpg"
             alt="Executive team background"
             fill
-            className="object-cover object-top opacity-20"
+            className="object-cover object-top opacity-55"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/90 to-slate-950" />
