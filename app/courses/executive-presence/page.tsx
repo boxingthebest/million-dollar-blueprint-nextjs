@@ -405,16 +405,16 @@ export default function ExecutivePresencePage() {
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-600">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
-                  src="https://player.vimeo.com/video/1141887983?badge=0&autopause=0&player_id=0&app_id=58479" 
-                  frameBorder="0" 
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin" 
+                  src="https://player.vimeo.com/video/1141887983?h=9b8c7d6e5f&title=0&byline=0&portrait=0" 
                   style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
-                  title="Executive Presence Course-MDB"
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture" 
+                  allowFullScreen
+                  title="Executive Presence Course"
                 />
               </div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </div>
       </section>
