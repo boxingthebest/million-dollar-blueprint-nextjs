@@ -370,7 +370,7 @@ export default function ExecutivePresencePage() {
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden animated-gradient-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-teal-900/20" />
-        <div className="absolute inset-0 bg-[url('/hero-woman-executive.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80')] bg-cover bg-center opacity-20" />
         
         {/* Glowing Orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />
@@ -404,7 +404,7 @@ export default function ExecutivePresencePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-600">
               <div className="bg-slate-800 h-full flex items-center justify-center">
-                <p className="text-white text-xl">Course Preview Video Coming Soon</p>
+                <p className="text-white text-xl">Watch the course preview to see what you'll learn</p>
               </div>
             </div>
           </div>
