@@ -85,7 +85,7 @@ export default function Home() {
       bgGradient: "from-emerald-500 to-teal-600",
       stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE",
       description: "Master executive presence and influence without authority. From Fortune 100 leaders.",
-      students: "Coming Soon",
+      students: "Enroll Now",
       image: "/hero-executive-presence-woman.png",
     },
     {
