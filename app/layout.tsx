@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
         <Providers>
+          <GoogleAnalytics />
           {children}
 
           <SpeedInsights />
