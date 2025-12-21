@@ -69,7 +69,7 @@ export default function Home() {
       icon: AIResistantIcon,
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
-      stripeLink: "https://buy.stripe.com/00w14mepHbav01u3ly08g0g",
+      stripeLink: "https://buy.stripe.com/dRmbJ02GZ2DZ7tW5tG08g0q",
       description: "Master the 10 proprietary frameworks AI can't replicate. From AWS & Goldman Sachs boardrooms.",
       students: "253 enrolled",
       image: "/ai-resistant-hero-new.jpg",
@@ -97,7 +97,7 @@ export default function Home() {
       icon: SalesMasteryIcon,
       gradient: "from-orange-500 to-amber-600",
       bgGradient: "from-orange-500 to-amber-600",
-      stripeLink: "https://buy.stripe.com/6oU8wO3L31zV4hKe9c88g61",
+      stripeLink: "https://buy.stripe.com/6oU8wO3L31zV4hKe0c08g0i",
       description: "Sales frameworks that scaled companies from $500K to $50B+.",
       students: "142 enrolled",
       image: "/course-sales-new.jpg",
@@ -990,7 +990,7 @@ export default function Home() {
               Founding member pricing ends soon. Lock in lifetime access at the lowest price ever.
             </p>
             <a
-              href="https://buy.stripe.com/eVqdR895n4M79C4cPa08g0a"
+              href="https://buy.stripe.com/8x214mepH2DZ4hKcW808g0p"
               className="inline-block bg-white text-red-600 hover:bg-slate-100 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
               Get All 6 Courses - $597

@@ -208,7 +208,7 @@ export default function MarketingPage() {
           <div className="flex gap-4 md:gap-6 items-center">
             <Link href="/#courses" className="text-white hover:text-cyan-100 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
-              href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
+              href="https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
@@ -436,7 +436,7 @@ export default function MarketingPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Don't Just Market. Engineer Growth.</h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">Ready to build a growth engine? Enroll now and get lifetime access to the playbooks that build unicorns.</p>
           <a
-            href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
+            href="https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-blue-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"

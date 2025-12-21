@@ -208,7 +208,7 @@ export default function LeadershipPage() {
           <div className="flex gap-4 md:gap-6 items-center">
             <Link href="/#courses" className="text-white hover:text-cyan-100 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
-              href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
+              href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
@@ -436,7 +436,7 @@ export default function LeadershipPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Don't Just Manage. Lead.</h2>
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">Ready to unlock your leadership potential? Enroll now and get lifetime access to the frameworks that build empires.</p>
           <a
-            href="https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00"
+            href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-purple-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"

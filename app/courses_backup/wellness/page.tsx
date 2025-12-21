@@ -223,7 +223,7 @@ export default function WellnessPage() {
           <div className="flex gap-4 md:gap-6 items-center">
             <Link href="/#courses" className="text-slate-300 hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
             <a 
-              href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
+              href="https://buy.stripe.com/14A00ibdvdiDaG86xK08g0m"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
@@ -282,7 +282,7 @@ export default function WellnessPage() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
+                href="https://buy.stripe.com/14A00ibdvdiDaG86xK08g0m"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-emerald-500/50 transition-all"
@@ -409,7 +409,7 @@ export default function WellnessPage() {
 
             <div className="mt-12 text-center">
               <a
-                href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
+                href="https://buy.stripe.com/14A00ibdvdiDaG86xK08g0m"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-4 rounded-lg font-bold text-xl transition-all shadow-2xl"
@@ -461,7 +461,7 @@ export default function WellnessPage() {
               </div>
 
               <a
-                href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
+                href="https://buy.stripe.com/14A00ibdvdiDaG86xK08g0m"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-4 rounded-lg font-bold text-xl transition-all shadow-2xl mb-4"
@@ -515,7 +515,7 @@ export default function WellnessPage() {
               Join 187 executives who've already invested in The Executive Energy System
             </p>
             <a
-              href="https://buy.stripe.com/4gMbJ095n92n7tW6xK08g01"
+              href="https://buy.stripe.com/14A00ibdvdiDaG86xK08g0m"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 py-6 rounded-lg font-bold text-2xl transition-all shadow-2xl"
