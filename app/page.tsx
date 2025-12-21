@@ -69,7 +69,7 @@ export default function Home() {
       icon: AIResistantIcon,
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
-      stripeLink: "https://buy.stripe.com/aFa4gy2GZemHdSkg8k08g00",
+      stripeLink: "https://buy.stripe.com/00w14mepHbav01u3ly08g0g",
       description: "Master the 5 human skills AI can't replace. From AWS & Goldman Sachs boardrooms.",
       students: "253 enrolled",
       image: "/ai-resistant-hero-new.jpg",
@@ -83,7 +83,7 @@ export default function Home() {
       icon: ExecutivePresenceIcon,
       gradient: "from-emerald-500 to-teal-600",
       bgGradient: "from-emerald-500 to-teal-600",
-      stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE",
+      stripeLink: "https://buy.stripe.com/14A6oG95nguP9C43ly08g0h",
       description: "Master executive presence and influence without authority. From Fortune 100 leaders.",
       students: "187 enrolled",
       image: "/hero-executive-presence-futuristic.png",
@@ -97,7 +97,7 @@ export default function Home() {
       icon: SalesMasteryIcon,
       gradient: "from-orange-500 to-amber-600",
       bgGradient: "from-orange-500 to-amber-600",
-      stripeLink: "https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c",
+      stripeLink: "https://buy.stripe.com/6oU8wO3L31zV4hKe9c88g61",
       description: "Sales frameworks that scaled companies from $500K to $50B+.",
       students: "142 enrolled",
       image: "/course-sales-new.jpg",
@@ -112,7 +112,7 @@ export default function Home() {
       icon: LeadershipIcon,
       gradient: "from-purple-500 to-indigo-600",
       bgGradient: "from-purple-500 to-indigo-600",
-      stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
+      stripeLink: "https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j",
       description: "Fortune 100 leadership strategies for executive presence.",
       students: "168 enrolled",
       image: "/course-leadership-new.jpg",
@@ -127,7 +127,7 @@ export default function Home() {
       icon: DigitalMarketingIcon,
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-500 to-blue-600",
-      stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
+      stripeLink: "https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k",
       description: "Enterprise digital marketing tactics that drive revenue.",
       students: "195 enrolled",
       image: "/course-marketing-new.jpg",
@@ -142,7 +142,7 @@ export default function Home() {
       icon: WealthBuildingIcon,
       gradient: "from-emerald-500 to-green-600",
       bgGradient: "from-emerald-500/10 to-green-500/10",
-      stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
+      stripeLink: "https://buy.stripe.com/fZu00i2GZemH15yf4g08g0l",
       description: "Build wealth with Wall Street insider strategies.",
       students: "221 enrolled",
       image: "/course-wealth-new.jpg",
@@ -157,7 +157,7 @@ export default function Home() {
       icon: ExecutiveEnergyIcon,
       gradient: "from-pink-500 to-rose-600",
       bgGradient: "from-pink-500 to-rose-600",
-      stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_ENERGY",
+      stripeLink: "https://buy.stripe.com/14A00ibdvdiDaG86xK08g0m",
       description: "Master executive wellness and sustainable high performance.",
       students: "134 enrolled",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&v=2",
@@ -713,29 +713,33 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col flex-grow">
                   <div className="inline-block bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-cyan-400/30">
-                    STARTER
+                    🚀 FLAGSHIP
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Choose 3 Courses</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">2-Course Bundle</h3>
                   <p className="text-lg text-slate-300 mb-8">
-                    Perfect for focused skill development in your key areas
+                    AI-Resistant Skills + Executive Presence - the foundation for career success
                   </p>
                   <div className="mb-8">
                     <div className="text-5xl font-bold text-white mb-2">$397</div>
-                    <div className="text-xl text-slate-400 line-through mb-2">$788</div>
-                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $391 (50%)</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$594</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $197 (33%)</div>
                   </div>
                   <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
-                      <span>Choose ANY 3 courses</span>
+                      <span className="font-semibold">AI-Resistant Skills ($197 value)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
-                      <span>Lifetime access</span>
+                      <span className="font-semibold">Executive Presence ($397 value)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
-                      <span>Professional certificates</span>
+                      <span>Lifetime access to both courses</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-cyan-400 mt-1">✓</span>
+                      <span>2 professional certificates</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
@@ -744,10 +748,10 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/5kQ14m6Xf2DZ15yf4g08g09"
+                    href="https://buy.stripe.com/14A28q0yRa6rbKc3ly08g0n"
                     className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-cyan-500/50"
                   >
-                    Get Started - $397
+                    Get Flagship Bundle - $397
                   </a>
                   <p className="text-slate-400 text-sm mt-4">✓ 30-Day Money-Back Guarantee</p>
                   </div>
@@ -764,19 +768,19 @@ export default function Home() {
                   <div className="inline-block bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-purple-400/30">
                     ⭐ PROFESSIONAL
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 6 Courses</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 7 Courses</h3>
                   <p className="text-lg text-slate-300 mb-8">
                     Complete transformation across all areas of your professional life
                   </p>
                   <div className="mb-8">
-                    <div className="text-6xl font-bold text-white mb-2">$597</div>
-                    <div className="text-xl text-slate-400 line-through mb-2">$1,282</div>
-                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $685 (53%)</div>
+                    <div className="text-6xl font-bold text-white mb-2">$797</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$1,679</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $882 (53%)</div>
                   </div>
                   <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span className="font-semibold">All 6 premium courses</span>
+                      <span className="font-semibold">All 7 premium courses</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
@@ -784,7 +788,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span>6 professional certificates</span>
+                      <span>7 professional certificates</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
@@ -797,10 +801,10 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/bJe28qbdvcezcOgf4g08g0a"
+                    href="https://buy.stripe.com/dRmfZg1CV1zV29C3ly08g0o"
                     className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white px-8 py-5 rounded-lg font-bold text-xl transition-all shadow-2xl w-full hover:shadow-purple-500/50"
                   >
-                    Get Complete Access - $597
+                    Get Complete Access - $797
                   </a>
                   <p className="text-slate-400 text-sm mt-4">✓ 30-Day Money-Back Guarantee</p>
                   </div>
@@ -814,23 +818,23 @@ export default function Home() {
                   <div className="inline-block bg-gradient-to-r from-amber-500/30 to-orange-500/30 text-amber-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-amber-400/30">
                     👑 VIP
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 6 + Coaching</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 7 + 1-on-1 Strategy</h3>
                   <p className="text-lg text-slate-300 mb-8">
                     Everything plus personalized 1-on-1 coaching and private community
                   </p>
                   <div className="mb-8">
-                    <div className="text-5xl font-bold text-white mb-2">$797</div>
-                    <div className="text-xl text-slate-400 line-through mb-2">$1,782</div>
-                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $985 (55%)</div>
+                    <div className="text-5xl font-bold text-white mb-2">$2,497</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$4,679</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $2,182 (47%)</div>
                   </div>
                   <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
-                      <span className="font-semibold">All 6 premium courses</span>
+                      <span className="font-semibold">All 7 premium courses</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
-                      <span className="font-semibold">1-on-1 coaching call ($500 value)</span>
+                      <span className="font-semibold">1-hour strategy session + customized roadmap</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
@@ -838,7 +842,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
-                      <span>6 professional certificates</span>
+                      <span>7 professional certificates</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
@@ -851,10 +855,10 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/4gM14mgxPfqLg0saO008g0b"
+                    href="https://buy.stripe.com/8x214mepH2DZ4hKcW808g0p"
                     className="inline-block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-amber-500/50"
                   >
-                    Get VIP Access - $797
+                    Get VIP Access - $2,497
                   </a>
                   <p className="text-slate-400 text-sm mt-4">✓ 30-Day Money-Back Guarantee</p>
                   </div>

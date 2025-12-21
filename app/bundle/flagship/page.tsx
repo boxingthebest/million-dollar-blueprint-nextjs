@@ -38,7 +38,7 @@ export default function FlagshipBundlePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-4xl font-bold text-orange-400 mb-1">$297</div>
+                <div className="text-4xl font-bold text-orange-400 mb-1">$397</div>
                 <div className="text-sm text-slate-400">Bundle Price</div>
               </div>
               <div className="text-slate-400 text-2xl font-bold">vs</div>
@@ -48,14 +48,14 @@ export default function FlagshipBundlePage() {
               </div>
             </div>
             <div className="inline-block bg-emerald-500/20 text-emerald-400 px-6 py-3 rounded-full text-lg font-bold mb-8">
-              Save $297 (50% OFF)
+              Save $197 (33% OFF)
             </div>
             
             <Link
-              href="https://buy.stripe.com/test_PLACEHOLDER"
+              href="https://buy.stripe.com/14A28q0yRa6rbKc3ly08g0n"
               className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-12 py-6 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all hover:scale-105"
             >
-              Get Started Now - $297 <ArrowRight className="ml-2" />
+              Get Started Now - $397 <ArrowRight className="ml-2" />
             </Link>
             <p className="text-slate-400 text-sm mt-4">✓ 30-Day Money-Back Guarantee • Lifetime Access • Instant Access</p>
           </div>
@@ -141,8 +141,8 @@ export default function FlagshipBundlePage() {
 
           <div className="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 border-2 border-emerald-500/50 rounded-2xl p-8 text-center">
             <h3 className="text-3xl font-bold text-white mb-4">Total Bundle Value: $594</h3>
-            <p className="text-2xl text-emerald-400 font-bold mb-4">Your Price: $297</p>
-            <p className="text-xl text-slate-300">You Save: <span className="text-emerald-400 font-bold">$297 (50% OFF)</span></p>
+            <p className="text-2xl text-emerald-400 font-bold mb-4">Your Price: $397</p>
+            <p className="text-xl text-slate-300">You Save: <span className="text-emerald-400 font-bold">$197 (33% OFF)</span></p>
           </div>
         </div>
       </section>
@@ -193,10 +193,10 @@ export default function FlagshipBundlePage() {
           </p>
           
           <Link
-            href="https://buy.stripe.com/test_PLACEHOLDER"
+            href="https://buy.stripe.com/14A28q0yRa6rbKc3ly08g0n"
             className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-slate-100 px-12 py-6 rounded-lg text-xl font-bold shadow-2xl transition-all hover:scale-105"
           >
-            Get Started Now - $297 <ArrowRight className="ml-2" />
+            Get Started Now - $397 <ArrowRight className="ml-2" />
           </Link>
           <p className="text-white text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | Instant Access</p>
         </div>

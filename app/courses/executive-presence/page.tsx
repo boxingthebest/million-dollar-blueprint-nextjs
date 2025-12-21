@@ -388,7 +388,7 @@ export default function ExecutivePresencePage() {
               The executive presence frameworks used by Fortune 100 leaders to accelerate to the C-suite.
             </p>
             <a
-              href="https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE"
+              href="https://buy.stripe.com/14A6oG95nguP9C43ly08g0h"
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
               Enroll Now - $397 (Originally $997 • Save 60%)
@@ -766,7 +766,7 @@ export default function ExecutivePresencePage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Command Any Room?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">Enroll now and get lifetime access to the frameworks that accelerate careers to the C-suite.</p>
           <a
-            href="https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE"
+            href="https://buy.stripe.com/14A6oG95nguP9C43ly08g0h"
             className="inline-block bg-white text-emerald-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
           >
             Enroll Now - $397 (Originally $997 • Save 60%)
@@ -782,7 +782,7 @@ export default function ExecutivePresencePage() {
             <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
           </div>
           <a
-            href="https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE"
+            href="https://buy.stripe.com/14A6oG95nguP9C43ly08g0h"
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#059669'}}
           >
             Enroll Now - $397
