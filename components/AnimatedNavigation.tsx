@@ -73,12 +73,12 @@ export default function AnimatedNavigation() {
           </Link>
 
           {/* Get Started Button */}
-          <Link 
-            href="/bundle/flagship"
+          <a 
+            href="#bundles"
             className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-bold transition-all text-sm md:text-base shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105"
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

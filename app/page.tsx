@@ -85,7 +85,7 @@ export default function Home() {
       bgGradient: "from-emerald-500 to-teal-600",
       stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_PRESENCE",
       description: "Master executive presence and influence without authority. From Fortune 100 leaders.",
-      students: "Enroll Now",
+      students: "187 enrolled",
       image: "/hero-executive-presence-futuristic.png",
       available: true,
     },
@@ -101,7 +101,7 @@ export default function Home() {
       description: "Sales frameworks that scaled companies from $500K to $50B+.",
       students: "Coming Soon",
       image: "/course-sales-new.jpg",
-      available: true,
+      available: false,
       badge: "NEW"
     },
     {
@@ -116,7 +116,7 @@ export default function Home() {
       description: "Fortune 100 leadership strategies for executive presence.",
       students: "Coming Soon",
       image: "/course-leadership-new.jpg",
-      available: true,
+      available: false,
       badge: "NEW"
     },
     {
@@ -131,7 +131,7 @@ export default function Home() {
       description: "Enterprise digital marketing tactics that drive revenue.",
       students: "Coming Soon",
       image: "/course-marketing-new.jpg",
-      available: true,
+      available: false,
       badge: "NEW"
     },
     {
@@ -146,7 +146,7 @@ export default function Home() {
       description: "Build wealth with Wall Street insider strategies.",
       students: "Coming Soon",
       image: "/course-wealth-new.jpg",
-      available: true,
+      available: false,
       badge: "NEW"
     },
     {
@@ -161,7 +161,7 @@ export default function Home() {
       description: "Master executive wellness and sustainable high performance.",
       students: "Coming Soon",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&v=2",
-      available: true,
+      available: false,
       badge: "NEW"
     }
   ];
@@ -611,12 +611,21 @@ export default function Home() {
                       </div>
                       
                       <div className="mt-auto">
-                        <Link
-                          href={courseUrlMap[course.title] || '#'}
-                          className={`neon-button-cyan block w-full text-center ${course.available ? `bg-gradient-to-r ${course.gradient}` : 'bg-slate-700 hover:bg-slate-600'} text-white px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg`}
-                        >
-                          {course.available ? `Enroll Now` : 'Coming Soon'}
-                        </Link>
+                        {course.available ? (
+                          <Link
+                            href={courseUrlMap[course.title] || '#'}
+                            className={`neon-button-cyan block w-full text-center bg-gradient-to-r ${course.gradient} text-white px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg`}
+                          >
+                            Enroll Now
+                          </Link>
+                        ) : (
+                          <button
+                            disabled
+                            className="block w-full text-center bg-slate-700 text-slate-400 px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg cursor-not-allowed"
+                          >
+                            Coming Soon
+                          </button>
+                        )}
                       </div>
                     </div>
                     </div>
@@ -670,12 +679,21 @@ export default function Home() {
                       </div>
                       
                       <div className="mt-auto">
-                        <Link
-                          href={courseUrlMap[course.title] || '#'}
-                          className={`neon-button-cyan block w-full text-center ${course.available ? `bg-gradient-to-r ${course.gradient}` : 'bg-slate-700 hover:bg-slate-600'} text-white px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg`}
-                        >
-                          {course.available ? `Enroll Now` : 'Coming Soon'}
-                        </Link>
+                        {course.available ? (
+                          <Link
+                            href={courseUrlMap[course.title] || '#'}
+                            className={`neon-button-cyan block w-full text-center bg-gradient-to-r ${course.gradient} text-white px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg`}
+                          >
+                            Enroll Now
+                          </Link>
+                        ) : (
+                          <button
+                            disabled
+                            className="block w-full text-center bg-slate-700 text-slate-400 px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg cursor-not-allowed"
+                          >
+                            Coming Soon
+                          </button>
+                        )}
                       </div>
                     </div>
                     </div>
@@ -685,7 +703,7 @@ export default function Home() {
             </div>
 
             {/* Bundle Section */}
-            <ScrollReveal className="mt-16">
+            <ScrollReveal id="bundles" className="mt-16">
               <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">Choose Your Bundle</h2>
               <p className="text-xl md:text-2xl text-slate-400 text-center mb-16">Save more when you invest in your complete transformation</p>
               
@@ -968,10 +986,10 @@ export default function Home() {
               Founding member pricing ends soon. Lock in lifetime access at the lowest price ever.
             </p>
             <a
-              href="https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c"
+              href="https://buy.stripe.com/eVqdR895n4M79C4cPa08g0a"
               className="inline-block bg-white text-red-600 hover:bg-slate-100 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
-              Get Started Now - Save $100
+              Get All 6 Courses - $597
             </a>
             <p className="text-white/90 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | No Risk</p>
           </div>

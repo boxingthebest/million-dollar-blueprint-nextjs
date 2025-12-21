@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
+  id?: string;
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
   duration?: number;
@@ -14,6 +15,7 @@ interface ScrollRevealProps {
 export default function ScrollReveal({ 
   children, 
   className = "",
+  id,
   delay = 0,
   direction = "up",
   duration = 0.6
@@ -36,6 +38,7 @@ export default function ScrollReveal({
   return (
     <motion.div
       ref={ref}
+      id={id}
       className={className}
       initial={{ 
         opacity: 0, 

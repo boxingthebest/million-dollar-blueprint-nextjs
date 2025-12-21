@@ -53,10 +53,10 @@ export default function StickyCTABar() {
             <div className="flex items-center gap-3 flex-shrink-0">
               {/* Premium CTA Button */}
               <Link
-                href="/auth/signup"
+                href="/#bundles"
                 className="group relative bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gradient-to-r hover:from-white hover:to-purple-50 transition-all duration-300 flex items-center gap-2 whitespace-nowrap shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 hover:-translate-y-1"
               >
-                <span className="relative z-10">Get Started</span>
+                <span className="relative z-10">View Pricing</span>
                 <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
                 
                 {/* Subtle shine effect on hover */}
