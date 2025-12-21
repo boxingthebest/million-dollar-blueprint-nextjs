@@ -343,7 +343,7 @@ export default function ExecutivePresencePage() {
   ];
 
   const deliverables = [
-    "21 video lessons across 4 comprehensive modules",
+    "21 video lessons across 4 modules + bonus toolkit",
     "BONUS: Breaking the $120K Ceiling video lesson",
     "5 downloadable PDF toolkits & workbooks",
     "The Complete Framework Library - All 21 blueprints reference guide",
