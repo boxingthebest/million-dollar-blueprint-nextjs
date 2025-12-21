@@ -590,7 +590,7 @@ export default function AIResistantSkillsPage() {
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-cyan-400/30 rounded-2xl p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <Image
-                    src="/testimonials/testimonial1.jpg"
+                    src="/michael-chen.png"
                     alt="Michael Chen"
                     width={64}
                     height={64}
@@ -615,7 +615,7 @@ export default function AIResistantSkillsPage() {
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-purple-400/30 rounded-2xl p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <Image
-                    src="/testimonials/testimonial2.jpg"
+                    src="/sarah-williams.png"
                     alt="Sarah Williams"
                     width={64}
                     height={64}
@@ -640,7 +640,7 @@ export default function AIResistantSkillsPage() {
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-emerald-400/30 rounded-2xl p-8">
                 <div className="flex items-center gap-4 mb-6">
                   <Image
-                    src="/testimonials/testimonial3.jpg"
+                    src="/david-rodriguez.png"
                     alt="David Rodriguez"
                     width={64}
                     height={64}
