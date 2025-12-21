@@ -70,7 +70,7 @@ export default function Home() {
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
       stripeLink: "https://buy.stripe.com/00w14mepHbav01u3ly08g0g",
-      description: "Master the 5 human skills AI can't replace. From AWS & Goldman Sachs boardrooms.",
+      description: "Master the 10 proprietary frameworks AI can't replicate. From AWS & Goldman Sachs boardrooms.",
       students: "253 enrolled",
       image: "/ai-resistant-hero-new.jpg",
       available: true

@@ -5,7 +5,7 @@ import HeroSectionDivider from "@/components/HeroSectionDivider";
 import TiltCard from "@/components/TiltCard";
 import { motion } from "framer-motion";
 
-import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, TrendingUp } from "lucide-react";
+import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, TrendingUp, Users, MessageSquare, Scale, Compass, Award, Zap, FileText, Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -17,114 +17,114 @@ export default function AIResistantSkillsPage() {
     const modules = [
     {
       number: 1,
-      title: "The Executive Intelligence Framework",
+      title: "The Executive Intelligence Framework™",
       duration: "8 min",
       lessons: 1,
       icon: Brain,
       topics: [
-        "Why 47% of jobs will be automated by 2030 (Oxford study)",
-        "The skills AI can't replace (yet): creativity, empathy, strategy, judgment",
-        "How ChatGPT, Midjourney, and Copilot are changing work",
-        "The \"Centaur Model\": humans + AI outperform both alone",
-        "Key takeaway: AI won't replace you. Someone using AI will."
+        "The 4-part diagnostic tool for any business challenge",
+        "Problem Definition through Second-Order Thinking",
+        "The Five Whys Plus One technique for root-cause analysis",
+        "Stakeholder Analysis using the Power-Interest Matrix",
+        "Case Study: How Amazon used this to build AWS ($80B business)"
       ]
     },
     {
       number: 2,
-      title: "The Systems Mastery Framework",
+      title: "The Systems Mastery Framework™",
       duration: "10 min",
       lessons: 1,
       icon: Target,
       topics: [
-        "The \"5 Whys\" technique from Toyota for root-cause analysis",
-        "How McKinsey consultants think strategically",
-        "The \"OODA Loop\" for decision-making under uncertainty",
-        "Systems thinking: seeing patterns, not just problems",
-        "Key takeaway: AI can optimize. Humans strategize."
+        "The 5-step framework for seeing connections AI will never find",
+        "How to map complex systems visually",
+        "Identifying positive and negative feedback loops",
+        "Finding leverage points where small changes create massive impact",
+        "Case Study: Why Apple succeeded where Nokia failed (trillion-dollar difference)"
       ]
     },
     {
       number: 3,
-      title: "The Trust Acceleration Formula",
+      title: "The Trust Acceleration Formula™",
       duration: "9 min",
       lessons: 1,
       icon: Heart,
       topics: [
-        "The \"4 Pillars of EQ\": self-awareness, self-management, social awareness, relationship management",
-        "Why EQ predicts success better than IQ (Daniel Goleman research)",
-        "How to read a room and influence without authority",
-        "Empathy as a competitive advantage in leadership",
-        "Key takeaway: Robots can't read emotions. You can."
+        "The formula: Trust = (Credibility + Reliability + Intimacy) / Self-Orientation",
+        "Goldman Sachs' 3-phase relationship framework",
+        "The Discovery Phase: Strategic listening techniques",
+        "The Value-Add Phase: Give before you get principle",
+        "Case Study: How Goldman Sachs maintains 50+ year client relationships"
       ]
     },
     {
       number: 4,
-      title: "Influence Without Authority",
+      title: "The Stakeholder Influence Map",
       duration: "10 min",
       lessons: 1,
-      icon: Lightbulb,
+      icon: Users,
       topics: [
-        "The \"SCAMPER Method\" for creative thinking",
-        "How Pixar uses \"Braintrust\" sessions for breakthrough ideas",
-        "Design thinking from Stanford d.school",
-        "Lateral thinking techniques from Edward de Bono",
-        "Key takeaway: AI generates. Humans innovate."
+        "How to get things done when you have zero formal power",
+        "The 4 layers: Decision Ecosystem, Motivations, Coalitions, Reciprocity",
+        "Mapping formal power vs informal influence",
+        "Building coalitions before you need them",
+        "Case Study: How I closed $8M deals at Amazon without being the decision maker"
       ]
     },
     {
       number: 5,
-      title: "Creative Problem-Solving",
-      duration: "9 min",
+      title: "The Innovation Sprint Framework",
+      duration: "11 min",
       lessons: 1,
-      icon: Target,
+      icon: Lightbulb,
       topics: [
-        "The \"Pyramid Principle\" from McKinsey for executive communication",
-        "How to present to the C-suite (Jeff Bezos' 6-page memo rule)",
-        "Storytelling frameworks from Pixar and TED Talks",
-        "The psychology of persuasion (Cialdini's 6 principles)",
-        "Key takeaway: AI can write. Humans persuade."
+        "Google's 5-day framework for breakthrough ideas",
+        "Day 1: Map the problem space with Critical Moment Analysis",
+        "Day 2-3: Sketch solutions individually, then decide",
+        "Day 4-5: Build realistic prototypes and test with users",
+        "Case Study: How Google redesigned Gmail (1B+ users)"
       ]
     },
     {
       number: 6,
-      title: "Executive Communication (Pyramid Principle)",
-      duration: "8 min",
+      title: "The Pyramid Principle",
+      duration: "10 min",
       lessons: 1,
-      icon: Heart,
+      icon: MessageSquare,
       topics: [
-        "The \"Give First\" philosophy from Brad Feld (Techstars)",
-        "How to build a network that opens doors",
-        "The \"Dunbar Number\": why 150 relationships matter most",
-        "LinkedIn strategies from top executives and investors",
-        "Key takeaway: AI can't build trust. You can."
+        "McKinsey's framework for executive communication",
+        "Answer first, logic second, evidence third",
+        "The MECE principle: Mutually Exclusive, Collectively Exhaustive",
+        "The 30-second test for any presentation",
+        "Case Study: How McKinsey won a $50M consulting engagement"
       ]
     },
     {
       number: 7,
       title: "The Value Creation Framework",
-      duration: "10 min",
+      duration: "12 min",
       lessons: 1,
-      icon: Target,
+      icon: Scale,
       topics: [
-        "The \"Pre-Mortem\" technique from Gary Klein",
-        "How Jeff Bezos makes \"Type 1\" vs \"Type 2\" decisions",
-        "Avoiding cognitive biases (confirmation bias, sunk cost fallacy)",
-        "The \"10/10/10 Rule\" for long-term thinking",
-        "Key takeaway: AI predicts. Humans decide."
+        "Harvard's framework for win-win negotiations",
+        "Focus on interests, not positions (the orange example)",
+        "Expand the pie before you divide it",
+        "Develop your BATNA (Best Alternative)",
+        "Case Study: Amazon's $50M retail partnership"
       ]
     },
     {
       number: 8,
       title: "The Probabilistic Thinking Framework",
-      duration: "9 min",
+      duration: "11 min",
       lessons: 1,
-      icon: TrendingUp,
+      icon: Target,
       topics: [
-        "The \"T-Shaped Professional\" model: deep expertise + broad skills",
-        "How to learn anything in 20 hours (Josh Kaufman method)",
-        "The \"Growth Mindset\" from Carol Dweck (Stanford)",
-        "Building a personal learning system (Zettelkasten, Feynman Technique)",
-        "Key takeaway: AI is static. Humans evolve."
+        "How poker champions and hedge fund managers make decisions",
+        "Frame every decision as a bet with expected value",
+        "Assign probabilities to outcomes (confidence intervals)",
+        "Pre-mortems and pre-parades for risk assessment",
+        "Case Study: How Jeff Bezos decided to launch AWS"
       ]
     },
     {
@@ -132,27 +132,27 @@ export default function AIResistantSkillsPage() {
       title: "The Thought Leadership Framework",
       duration: "10 min",
       lessons: 1,
-      icon: Star,
+      icon: Award,
       topics: [
-        "Why ethics is the ultimate competitive advantage",
-        "The \"Stakeholder Capitalism\" model from Klaus Schwab (WEF)",
-        "How Patagonia built a $3B company on values",
-        "Navigating moral dilemmas in business",
-        "Key takeaway: AI has no conscience. You do."
+        "How to position yourself as THE expert in your field",
+        "The Positioning Statement Formula",
+        "Building a content engine (30 pieces from 1 anchor)",
+        "Strategic relationship building for visibility",
+        "How I went from 0 to 10,000 followers in one year"
       ]
     },
     {
       number: 10,
       title: "The Career Resilience Framework",
-      duration: "8 min",
+      duration: "12 min",
       lessons: 1,
-      icon: Star,
+      icon: Compass,
       topics: [
-        "The \"Barbell Strategy\": combine AI-proof skills with AI leverage",
-        "How to position yourself as irreplaceable in your organization",
-        "Building a personal brand as a thought leader",
-        "The path to executive roles that AI can't touch (CEO, CPO, CRO)",
-        "Key takeaway: The future belongs to those who adapt, not resist."
+        "The 5 pillars for staying valuable for the next 20 years",
+        "T-Shaped Skills: Deep expertise + broad knowledge",
+        "Building an AI-augmented workflow (Delegation Matrix)",
+        "The Three Horizons Model for portfolio careers",
+        "How to become the person AI can't replace"
       ]
     }
   ];
@@ -184,32 +184,32 @@ export default function AIResistantSkillsPage() {
     },
     {
       question: "How long does it take to complete?",
-      answer: "The course is designed to be completed at your own pace. Most students finish within 4-6 weeks, spending 2-3 hours per week. However, you can go faster or slower based on your schedule."
+      answer: "The course is designed to be completed in 10 days—one lesson per day, about 10 minutes each. However, you can go faster or slower based on your schedule. Most students complete it within 2-4 weeks."
     },
     {
       question: "Will this work for my industry?",
-      answer: "Yes! The skills taught—strategic thinking, emotional intelligence, creative problem-solving, ethical leadership, and adaptive learning—are universal. Our students come from tech, finance, healthcare, consulting, manufacturing, and more, all seeing remarkable results."
+      answer: "Yes! The skills taught—strategic thinking, emotional intelligence, creative problem-solving, negotiation, and executive communication—are universal. Our students come from tech, finance, healthcare, consulting, manufacturing, and more, all seeing remarkable results."
     }
   ];
 
   const benefits = [
     "Think strategically like a McKinsey consultant",
-    "Build relationships like a Goldman Sachs executive",
-    "Innovate like an Apple product manager",
-    "Lead with integrity like an Amazon director",
-    "Learn faster than 99% of professionals"
+    "Build trust like a Goldman Sachs relationship manager",
+    "Innovate like a Google product designer",
+    "Communicate like a Fortune 500 executive",
+    "Negotiate like a Harvard-trained dealmaker"
   ];
 
   const deliverables = [
-    "The Executive Intelligence Assessment™",
-    "The Strategic Thinking Toolkit (12 templates)",
-    "The Emotional Intelligence Scorecard",
-    "The Innovation Idea Generator",
-    "The Leadership Decision Matrix",
-    "50+ page Executive Workbook",
-    "Real case studies from Fortune 100 companies",
-    "Access to private community of high-achievers",
-    "Monthly Q&A sessions with course advisors"
+    "10 video lessons (~10 min each) with proprietary frameworks",
+    "5 downloadable PDF toolkits with templates & worksheets",
+    "Strategic Thinking Blueprint with case studies",
+    "Influence & Communication Toolkit",
+    "Decision-Making Framework with calculators",
+    "Interview Mastery Guide (Bonus)",
+    "Real case studies from Amazon, Goldman Sachs, McKinsey, Google, Apple",
+    "Action steps after every lesson",
+    "Lifetime access to all future updates"
   ];
 
   return (
@@ -245,247 +245,427 @@ export default function AIResistantSkillsPage() {
             </div>
             
             <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="inline-block"
-              >
-                Master the 10 Proprietary Frameworks AI Can't Replicate—
-              </motion.span>
-              <br />
-              <motion.span 
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500 animate-gradient-text inline-block"
-              >
-                Future-Proof Your Career and Command Executive Pay
-              </motion.span>
+              Master the <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400">10 Frameworks</span> That Make You Irreplaceable in the Age of AI
             </motion.h1>
             
-            <p className="text-xl md:text-2xl text-white mb-6">
-              The 10 Proprietary Blueprints Used by Fortune 100 Executives to Stay Irreplaceable in the Age of AI Disruption.
-            </p>
-            
-            <p className="text-lg md:text-xl text-white mb-8 leading-relaxed">
-              The World Economic Forum predicts 85 million jobs will be displaced by AI by 2025. But there are 5 human skills AI will never replicate. Master them, and you'll be irreplaceable. This isn't theory—these are the exact frameworks used by executives at the world's most successful companies to stay ahead of automation.
-            </p>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-xl md:text-2xl text-slate-300 mb-8"
+            >
+              The exact strategic thinking, influence, and decision-making frameworks used by executives at Amazon, Goldman Sachs, and McKinsey—skills AI will never replace.
+            </motion.p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-1">5</div>
-                <div className="text-sm text-white">AI-Resistant Skills</div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="flex flex-wrap gap-4 mb-8"
+            >
+              <div className="flex items-center gap-2 text-slate-300">
+                <Check className="w-5 h-5 text-cyan-400" />
+                <span>10 Video Lessons</span>
               </div>
-              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-1">3.5h</div>
-                <div className="text-sm text-white">Expert Training</div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <Check className="w-5 h-5 text-cyan-400" />
+                <span>5 PDF Toolkits</span>
               </div>
-              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-1">$85K</div>
-                <div className="text-sm text-white">Avg Salary Increase</div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <Check className="w-5 h-5 text-cyan-400" />
+                <span>Lifetime Access</span>
               </div>
-              <div className="bg-black/50 border-2 border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-1">253</div>
-                <div className="text-sm text-white">Students Enrolled</div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <Check className="w-5 h-5 text-cyan-400" />
+                <span>30-Day Guarantee</span>
               </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
+            >
               <Link
                 href="https://buy.stripe.com/00w14mepHbav01u3ly08g0g"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105"
               >
-                Enroll Now - $197 (Originally $395 • Save 50%) <ArrowRight className="ml-2" />
+                Enroll Now - $197 <ArrowRight className="ml-2" />
               </Link>
-              <a
-                href="#curriculum"
-                className="inline-flex items-center justify-center border-2 border-orange-400 text-orange-300 hover:bg-orange-500/10 backdrop-blur-sm px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold transition-all"
-              >
-                See Full Curriculum
-              </a>
+              <div className="text-slate-400">
+                <span className="line-through">$397</span>
+                <span className="text-orange-400 font-bold ml-2">50% OFF</span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <HeroSectionDivider />
+
+      {/* Social Proof Bar */}
+      <section className="py-8 bg-black border-y border-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-white">250+</p>
+              <p className="text-slate-400 text-sm">Students Enrolled</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-white">$85K+</p>
+              <p className="text-slate-400 text-sm">Avg. Salary Increase</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-white">22</p>
+              <p className="text-slate-400 text-sm">Years Experience</p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-white">4.9/5</p>
+              <p className="text-slate-400 text-sm">Student Rating</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section className="py-16 md:py-24 bg-slate-950">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 text-center">
+              85 Million Jobs Will Be Displaced by AI by 2025
+            </h2>
+            <p className="text-xl text-slate-300 mb-8 text-center">
+              That's not a prediction. That's a World Economic Forum report.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-red-400 mb-4">❌ Skills AI Will Replace</h3>
+                <ul className="space-y-3 text-slate-300">
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-400">•</span>
+                    Data entry and basic analysis
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-400">•</span>
+                    Routine customer service
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-400">•</span>
+                    Standard content creation
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-red-400">•</span>
+                    Repetitive decision-making
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-emerald-400 mb-4">✓ Skills AI Will Never Replace</h3>
+                <ul className="space-y-3 text-slate-300">
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400">•</span>
+                    Strategic thinking & systems analysis
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400">•</span>
+                    Building trust & relationships
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400">•</span>
+                    Influence without authority
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400">•</span>
+                    High-stakes decision-making
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <p className="text-white text-sm mt-6">
-              ✓ 30-Day Money-Back Guarantee &nbsp;&nbsp; ✓ Lifetime Access &nbsp;&nbsp; ✓ Instant Access
+            <p className="text-xl text-white text-center font-semibold">
+              The question isn't whether AI will change your industry.<br/>
+              <span className="text-orange-400">The question is whether you'll be ready.</span>
             </p>
           </div>
         </div>
       </section>
 
-      {/* The Problem Section */}
+      {/* What You'll Learn */}
       <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Most "AI-Proof" Career Advice Is Dangerously Wrong
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-center">
+              10 Proprietary Frameworks in 10 Days
             </h2>
-            <div className="text-lg md:text-xl text-white space-y-4 leading-relaxed">
-              <p>
-                They tell you to "be creative" or "develop soft skills"—but that's too vague to be useful. The truth? Amazon, Google, and Goldman Sachs have identified <strong className="text-white">5 specific capabilities</strong> that separate executives from employees.
-              </p>
-              <p>
-                These aren't soft skills—they're <strong className="text-white">strategic thinking frameworks</strong> that take years to develop... unless you learn them directly from those who've mastered them.
-              </p>
-              <p className="text-cyan-400 font-semibold text-2xl">
-                This course gives you those frameworks in 3.5 hours.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Course Trailer Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">
-              See What You'll Learn
-            </h2>
-            <p className="text-lg md:text-xl text-white text-center mb-8">
-              Watch this 45-second overview
+            <p className="text-xl text-slate-300 mb-12 text-center">
+              The exact methodologies that McKinsey charges $50,000/week to teach
             </p>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700">
-              <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
-                <iframe 
-                  src="https://player.vimeo.com/video/1129181469?badge=0&autopause=0&player_id=0&app_id=58479&playsinline=1&muted=0" 
-                  frameBorder="0" 
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%'
-                  }}
-                  title="AI-Resistant Skills: Master the 5 Skills AI Can't Replace"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Curriculum Section */}
-      <section id="curriculum" className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Complete Course Curriculum
-              </h2>
-              <p className="text-lg md:text-xl text-white">
-                5 comprehensive modules • 3.5 hours of expert training • Lifetime access
-              </p>
-            </div>
 
             <div className="space-y-4">
-              {modules.map((module) => {
-                const Icon = module.icon;
-                return (
-                  <div key={module.number} className="bg-black/50 border-2 border-slate-700 rounded-xl overflow-hidden">
-                    <button
-                      onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
-                      className="w-full px-6 md:px-8 py-6 flex items-center gap-4 text-left hover:bg-black/80 transition-all"
-                    >
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6 text-cyan-400" />
+              {modules.map((module, idx) => (
+                <div key={idx} className="bg-gradient-to-r from-slate-900 to-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all">
+                  <button
+                    onClick={() => setOpenModule(openModule === idx ? null : idx)}
+                    className="w-full px-6 py-5 flex items-center justify-between text-left"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
+                        <module.icon className="w-6 h-6 text-white" />
                       </div>
-                      <div className="flex-1">
-                        <div className="text-sm text-orange-400 font-semibold mb-1">Module {module.number}</div>
-                        <div className="text-lg md:text-xl font-semibold text-white mb-1">{module.title}</div>
-                        <div className="text-sm text-white">{module.duration} • {module.lessons} lessons</div>
+                      <div>
+                        <p className="text-cyan-400 text-sm font-semibold">Lesson {module.number}</p>
+                        <h3 className="text-lg font-bold text-white">{module.title}</h3>
                       </div>
-                      <ChevronDown className={`w-6 h-6 text-cyan-400 flex-shrink-0 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
-                    </button>
-                    {openModule === module.number && (
-                      <div className="px-6 md:px-8 pb-6 border-t border-slate-700">
-                        <ul className="space-y-3 mt-4">
-                          {module.topics.map((topic, idx) => (
-                            <li key={idx} className="flex items-start gap-3">
-                              <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                              <span className="text-white">{topic}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="text-slate-400 text-sm hidden md:block">{module.duration}</span>
+                      <ChevronDown className={`w-5 h-5 text-cyan-400 transition-transform ${openModule === idx ? 'rotate-180' : ''}`} />
+                    </div>
+                  </button>
+                  
+                  {openModule === idx && (
+                    <div className="px-6 pb-6 pt-2 border-t border-slate-700">
+                      <ul className="space-y-2">
+                        {module.topics.map((topic, topicIdx) => (
+                          <li key={topicIdx} className="flex items-start gap-3 text-slate-300">
+                            <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                            <span>{topic}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Bonus Section */}
+            <div className="mt-8 bg-gradient-to-r from-orange-500/20 to-pink-500/20 border-2 border-orange-500/50 rounded-xl p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <p className="text-orange-400 text-sm font-semibold">BONUS LESSON</p>
+                  <h3 className="text-lg font-bold text-white">Interview Mastery: The Meta-Skill</h3>
+                </div>
+              </div>
+              <p className="text-slate-300">
+                The one skill that ties everything together. Learn how to demonstrate all 10 frameworks in high-stakes interviews and presentations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included */}
+      <section className="py-16 md:py-24 bg-slate-950">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-center">
+              Everything You Get Today
+            </h2>
+            <p className="text-xl text-slate-300 mb-12 text-center">
+              Instant access to the complete AI-Resistant Skills system
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {deliverables.map((item, idx) => (
+                <div key={idx} className="flex items-start gap-4 bg-slate-900/50 border border-slate-700 rounded-xl p-5">
+                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Check className="w-5 h-5 text-white" />
                   </div>
-                );
-              })}
+                  <p className="text-white text-lg">{item}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* PDF Toolkits Highlight */}
+            <div className="mt-12 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <FileText className="w-8 h-8 text-cyan-400" />
+                <h3 className="text-2xl font-bold text-white">5 Downloadable PDF Toolkits</h3>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Strategic Thinking Blueprint</span>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Influence & Communication Toolkit</span>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Decision-Making Framework</span>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Interview Mastery Guide</span>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Complete Course Blueprints</span>
+                </div>
+              </div>
             </div>
 
             <div className="mt-12 text-center">
               <Link
                 href="https://buy.stripe.com/00w14mepHbav01u3ly08g0g"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-10 py-5 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105"
               >
-                Get Full Access Now - $197 <ArrowRight className="ml-2" />
+                Get Instant Access - $197 <ArrowRight className="ml-2" />
               </Link>
-              <p className="text-white text-sm mt-4">Or 3 payments of $69</p>
+              <p className="text-slate-400 mt-4">30-Day Money-Back Guarantee • Lifetime Access</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What You'll Get Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900">
+      {/* About the Instructor */}
+      <section className="py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
-              What You'll Get
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
-                <ul className="space-y-3">
-                  {deliverables.slice(0, 5).map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-white">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Learn From Someone Who's Been There
+                </h2>
+                <p className="text-slate-300 mb-6 text-lg">
+                  I spent 22 years at Amazon and Goldman Sachs, working alongside executives who earn seven figures. I've seen entire departments automated. But I've also seen professionals who became <span className="text-cyan-400 font-semibold">more valuable</span> because they developed the right skills.
+                </p>
+                <p className="text-slate-300 mb-6 text-lg">
+                  These aren't soft skills. They're <span className="text-orange-400 font-semibold">power skills</span>. They're the frameworks that McKinsey charges $50,000 per week to teach. And I've packaged them into a course you can complete in 10 days.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <div className="bg-slate-800 rounded-lg px-4 py-2">
+                    <p className="text-cyan-400 font-bold">Amazon</p>
+                  </div>
+                  <div className="bg-slate-800 rounded-lg px-4 py-2">
+                    <p className="text-cyan-400 font-bold">Goldman Sachs</p>
+                  </div>
+                  <div className="bg-slate-800 rounded-lg px-4 py-2">
+                    <p className="text-cyan-400 font-bold">22 Years</p>
+                  </div>
+                </div>
               </div>
-
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Bonus Materials</h3>
-                <ul className="space-y-3">
-                  {deliverables.slice(5).map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-white">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-30" />
+                <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700">
+                  <div className="text-6xl mb-4">🎯</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">My Promise to You</h3>
+                  <p className="text-slate-300">
+                    These are the exact frameworks I used to close deals worth millions, advise Fortune 500 CEOs, and navigate three major technology disruptions. If they don't work for you, I'll give you a full refund. No questions asked.
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-orange-500/50 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                After Completing This Course, You Will:
-              </h3>
-              <ul className="space-y-3 max-w-2xl mx-auto">
-                {benefits.map((benefit, idx) => (
-                  <li key={idx} className="flex items-center gap-3 justify-center">
-                    <Star className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    <span className="text-white text-lg">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-16 md:py-24 bg-slate-950">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-center">
+              What Our Students Say
+            </h2>
+            <p className="text-xl text-slate-300 mb-12 text-center">
+              Join 250+ professionals who are already future-proofing their careers
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Testimonial 1 */}
+              <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-cyan-400/30 rounded-2xl p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <Image
+                    src="/testimonials/testimonial1.jpg"
+                    alt="Michael Chen"
+                    width={64}
+                    height={64}
+                    className="rounded-full border-2 border-cyan-400"
+                  />
+                  <div>
+                    <h4 className="text-white font-bold">Michael Chen</h4>
+                    <p className="text-cyan-400 text-sm">Senior Product Manager → VP of Product</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  "Within 3 months of completing this course, I was promoted to VP. The frameworks for strategic thinking and stakeholder influence completely changed how I approach my work. My salary increased by $120K."
+                </p>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-purple-400/30 rounded-2xl p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <Image
+                    src="/testimonials/testimonial2.jpg"
+                    alt="Sarah Williams"
+                    width={64}
+                    height={64}
+                    className="rounded-full border-2 border-purple-400"
+                  />
+                  <div>
+                    <h4 className="text-white font-bold">Sarah Williams</h4>
+                    <p className="text-purple-400 text-sm">Marketing Director at Fortune 500</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  "I was terrified AI would make my marketing skills obsolete. This course taught me how to leverage AI while developing irreplaceable strategic capabilities. I'm now leading our company's AI transformation initiative."
+                </p>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-emerald-400/30 rounded-2xl p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <Image
+                    src="/testimonials/testimonial3.jpg"
+                    alt="David Rodriguez"
+                    width={64}
+                    height={64}
+                    className="rounded-full border-2 border-emerald-400"
+                  />
+                  <div>
+                    <h4 className="text-white font-bold">David Rodriguez</h4>
+                    <p className="text-emerald-400 text-sm">Tech Lead → CTO at Startup</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  "As a developer, I thought coding was enough. This course opened my eyes to executive-level thinking. The Pyramid Principle alone helped me secure $2M in funding by presenting to investors like a McKinsey consultant."
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-slate-400 text-sm">Average salary increase reported by students: <span className="text-cyan-400 font-bold">$85,000+</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Professional Certificate Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
@@ -509,17 +689,17 @@ export default function AIResistantSkillsPage() {
                 <p className="text-3xl md:text-4xl font-bold text-white text-center mb-4">[Your Name]</p>
                 <p className="text-white text-sm text-center mb-2">has successfully completed</p>
                 <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 text-center mb-4">
-                10 Proprietary Frameworks Certificate
+                AI-Resistant Skills: 10 Proprietary Frameworks
                 </p>
                 <p className="text-white text-center text-sm md:text-base">
-                  Demonstrating mastery in: Strategic Thinking, Emotional Intelligence, Creative Problem-Solving, Human Connection
+                  Demonstrating mastery in: Strategic Thinking, Systems Analysis, Trust Building, Influence, Innovation, Executive Communication, Negotiation, Decision-Making, Thought Leadership, Career Resilience
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
                   <p className="text-white text-sm mb-1">Certificate ID</p>
-                  <p className="text-white font-mono text-xs">MDB-AI--XXXXX</p>
+                  <p className="text-white font-mono text-xs">MDB-AI-XXXXX</p>
                 </div>
                 <div>
                   <p className="text-white text-sm mb-1">Issued Date</p>
@@ -640,12 +820,12 @@ export default function AIResistantSkillsPage() {
       <ApexChatbot />
 
       {/* Footer */}
-      <footer className="bg-slate-950 border-t border-slate-800 py-8">
+      <footer className="bg-slate-950 border-t border-slate-800 py-8 pb-24">
         <div className="container mx-auto px-4 text-center">
           <p className="text-slate-500 text-sm">© 2025 Million Dollar Blueprint. All rights reserved.</p>
+          <p className="text-slate-600 text-xs mt-2">Questions? Email us at hello@milliondollarblueprint.ai</p>
         </div>
       </footer>
     </div>
   );
 }
-
