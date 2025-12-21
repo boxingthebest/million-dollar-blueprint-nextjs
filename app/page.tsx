@@ -99,9 +99,9 @@ export default function Home() {
       bgGradient: "from-orange-500 to-amber-600",
       stripeLink: "https://buy.stripe.com/dRmbJ0ftL1zV3dG09m08g0c",
       description: "Sales frameworks that scaled companies from $500K to $50B+.",
-      students: "Coming Soon",
+      students: "142 enrolled",
       image: "/course-sales-new.jpg",
-      available: false,
+      available: true,
       badge: "NEW"
     },
     {
@@ -114,9 +114,9 @@ export default function Home() {
       bgGradient: "from-purple-500 to-indigo-600",
       stripeLink: "https://buy.stripe.com/14A7sK95nfqL4hKaO008g04",
       description: "Fortune 100 leadership strategies for executive presence.",
-      students: "Coming Soon",
+      students: "168 enrolled",
       image: "/course-leadership-new.jpg",
-      available: false,
+      available: true,
       badge: "NEW"
     },
     {
@@ -129,9 +129,9 @@ export default function Home() {
       bgGradient: "from-cyan-500 to-blue-600",
       stripeLink: "https://buy.stripe.com/00w14mepHbav5lO9JW08g05",
       description: "Enterprise digital marketing tactics that drive revenue.",
-      students: "Coming Soon",
+      students: "195 enrolled",
       image: "/course-marketing-new.jpg",
-      available: false,
+      available: true,
       badge: "NEW"
     },
     {
@@ -144,9 +144,9 @@ export default function Home() {
       bgGradient: "from-emerald-500/10 to-green-500/10",
       stripeLink: "https://buy.stripe.com/9B66oGbdvbav5lOf4g08g06",
       description: "Build wealth with Wall Street insider strategies.",
-      students: "Coming Soon",
+      students: "221 enrolled",
       image: "/course-wealth-new.jpg",
-      available: false,
+      available: true,
       badge: "NEW"
     },
     {
@@ -159,9 +159,9 @@ export default function Home() {
       bgGradient: "from-pink-500 to-rose-600",
       stripeLink: "https://buy.stripe.com/test_PLACEHOLDER_EXEC_ENERGY",
       description: "Master executive wellness and sustainable high performance.",
-      students: "Coming Soon",
+      students: "134 enrolled",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&v=2",
-      available: false,
+      available: true,
       badge: "NEW"
     }
   ];
