@@ -40,14 +40,16 @@ const testimonials = [
     name: "Jennifer Park",
     role: "Chief Marketing Officer",
     company: "Series B Startup",
+    image: "/testimonial-jennifer.jpg",
     text: "The VIP strategy session alone was worth 10x what I paid. Within 3 months, I negotiated a $250K package with equity. The personalized roadmap gave me the confidence to ask for what I deserved.",
     rating: 5,
     result: "$250K+ Package"
   },
   {
-    name: "Michael Thompson",
+    name: "David Thompson",
     role: "Managing Director",
     company: "Investment Bank",
+    image: "/testimonial-david.jpg",
     text: "I was skeptical about the price, but the ROI has been incredible. The 1-on-1 coaching helped me identify blind spots I'd had for years. Promoted to MD within 6 months.",
     rating: 5,
     result: "Promoted to MD"
@@ -56,6 +58,7 @@ const testimonials = [
     name: "Amanda Foster",
     role: "VP of Engineering",
     company: "FAANG Company",
+    image: "/testimonial-amanda.jpg",
     text: "The customized roadmap was a game-changer. It gave me a clear path from Senior Manager to VP. The priority support helped me navigate every challenge along the way.",
     rating: 5,
     result: "Senior Manager → VP"
@@ -293,10 +296,20 @@ export default function VIPBundlePage() {
                   {testimonial.result}
                 </div>
                 <p className="text-slate-300 mb-6 leading-relaxed">"{testimonial.text}"</p>
-                <div>
-                  <div className="font-bold text-white">{testimonial.name}</div>
-                  <div className="text-amber-400 text-sm">{testimonial.role}</div>
-                  <div className="text-slate-500 text-sm">{testimonial.company}</div>
+                <div className="flex items-center gap-4">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-amber-500/50">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="font-bold text-white">{testimonial.name}</div>
+                    <div className="text-amber-400 text-sm">{testimonial.role}</div>
+                    <div className="text-slate-500 text-sm">{testimonial.company}</div>
+                  </div>
                 </div>
               </div>
             ))}

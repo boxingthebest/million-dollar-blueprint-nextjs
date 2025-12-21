@@ -748,7 +748,7 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/14A28q0yRa6rbKc3ly08g0n"
+                    href="/bundle/flagship"
                     className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-cyan-500/50"
                   >
                     Get Flagship Bundle - $397
@@ -801,7 +801,7 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/dRmfZg1CV1zV29C3ly08g0o"
+                    href="/bundle/professional"
                     className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white px-8 py-5 rounded-lg font-bold text-xl transition-all shadow-2xl w-full hover:shadow-purple-500/50"
                   >
                     Get Complete Access - $797
@@ -855,7 +855,7 @@ export default function Home() {
                   </ul>
                   <div className="mt-auto">
                     <a
-                    href="https://buy.stripe.com/8x214mepH2DZ4hKcW808g0p"
+                    href="/bundle/vip"
                     className="inline-block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg w-full hover:shadow-amber-500/50"
                   >
                     Get VIP Access - $2,497
