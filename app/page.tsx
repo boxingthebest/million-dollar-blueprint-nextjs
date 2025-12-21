@@ -1036,7 +1036,7 @@ export default function Home() {
                   <Instagram className="w-6 h-6" />
                 </a>
               </div>
-              <p className="text-slate-400 text-sm">Questions? Contact us at <a href="mailto:hello@milliondollarblueprint.ai" className="text-cyan-400 hover:text-cyan-300 transition-colors">hello@milliondollarblueprint.ai</a></p>
+              <p className="text-slate-400 text-sm">Need help? For questions, technical issues, or setup support, email <a href="mailto:hello@milliondollarblueprint.ai" className="text-cyan-400 hover:text-cyan-300 transition-colors">hello@milliondollarblueprint.ai</a></p>
             </div>
           </div>
           <div className="text-center text-slate-500 text-sm pt-8 border-t border-slate-800">
