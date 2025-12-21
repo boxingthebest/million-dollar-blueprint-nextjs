@@ -68,6 +68,7 @@ const testimonials = [
     name: "David Chen",
     role: "VP of Product, Tech Startup",
     company: "Former Amazon",
+    image: "/testimonial-david.jpg",
     text: "This bundle transformed my career trajectory. Within 6 months, I went from Senior Manager to VP with a $180K increase.",
     rating: 5
   },
@@ -75,6 +76,7 @@ const testimonials = [
     name: "Sarah Mitchell",
     role: "Managing Director",
     company: "Goldman Sachs",
+    image: "/testimonial-sarah.jpg",
     text: "The combination of all 7 courses gave me a complete toolkit. I've recommended this to my entire team.",
     rating: 5
   },
@@ -82,6 +84,7 @@ const testimonials = [
     name: "Marcus Johnson",
     role: "Chief Strategy Officer",
     company: "Fortune 500",
+    image: "/testimonial-marcus.jpg",
     text: "Best investment I've made in my career. The ROI was 50x within the first year.",
     rating: 5
   }
@@ -298,10 +301,20 @@ export default function ProfessionalBundlePage() {
                   ))}
                 </div>
                 <p className="text-slate-300 mb-6 leading-relaxed">"{testimonial.text}"</p>
-                <div>
-                  <div className="font-bold text-white">{testimonial.name}</div>
-                  <div className="text-purple-400 text-sm">{testimonial.role}</div>
-                  <div className="text-slate-500 text-sm">{testimonial.company}</div>
+                <div className="flex items-center gap-4">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-purple-500/50">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="font-bold text-white">{testimonial.name}</div>
+                    <div className="text-purple-400 text-sm">{testimonial.role}</div>
+                    <div className="text-slate-500 text-sm">{testimonial.company}</div>
+                  </div>
                 </div>
               </div>
             ))}
