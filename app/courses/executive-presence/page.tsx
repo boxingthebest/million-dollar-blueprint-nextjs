@@ -343,12 +343,16 @@ export default function ExecutivePresencePage() {
   ];
 
   const deliverables = [
-    "The Executive Presence Assessment™",
-    "The Gravitas Builder Framework",
-    "The C-Suite Communication Playbook",
-    "The Political Navigation Matrix",
-    "60+ page workbook with real-world scenarios",
-    "Access to a private community of executives"
+    "21 video lessons across 4 comprehensive modules",
+    "BONUS: Breaking the $120K Ceiling video lesson",
+    "5 downloadable PDF toolkits & workbooks",
+    "The Complete Framework Library - All 21 blueprints reference guide",
+    "90-Day Implementation Roadmap - Step-by-step action plan",
+    "The $400K Playbook - Reach $400K+ compensation",
+    "Executive Communication Toolkit - Templates & scripts",
+    "Career Acceleration Workbook - Track your progress",
+    "Real case studies from Goldman Sachs, McKinsey, Amazon, Google, Netflix, Apple",
+    "Lifetime access to all future updates"
   ];
 
   return (
@@ -387,6 +391,24 @@ export default function ExecutivePresencePage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               The executive presence frameworks used by Fortune 100 leaders to accelerate to the C-suite.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="flex items-center gap-2 text-white bg-slate-800/50 px-4 py-2 rounded-full">
+                <Check className="w-5 h-5 text-emerald-400" />
+                <span>21 Video Lessons + Bonus</span>
+              </div>
+              <div className="flex items-center gap-2 text-white bg-slate-800/50 px-4 py-2 rounded-full">
+                <Check className="w-5 h-5 text-emerald-400" />
+                <span>5 PDF Toolkits</span>
+              </div>
+              <div className="flex items-center gap-2 text-white bg-slate-800/50 px-4 py-2 rounded-full">
+                <Check className="w-5 h-5 text-emerald-400" />
+                <span>Lifetime Access</span>
+              </div>
+              <div className="flex items-center gap-2 text-white bg-slate-800/50 px-4 py-2 rounded-full">
+                <Check className="w-5 h-5 text-emerald-400" />
+                <span>30-Day Guarantee</span>
+              </div>
+            </div>
             <a
               href="https://buy.stripe.com/14A6oG95nguP9C43ly08g0h"
               className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
@@ -622,27 +644,31 @@ export default function ExecutivePresencePage() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">21 video masterclasses (3+ hours)</span>
+                  <span className="text-lg text-white">21 video lessons + 1 bonus lesson (3+ hours)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">Complete framework library</span>
+                  <span className="text-lg text-white">The Complete Framework Library PDF</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">Step-by-step implementation roadmap</span>
+                  <span className="text-lg text-white">90-Day Implementation Roadmap PDF</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">Advanced C-suite strategies</span>
+                  <span className="text-lg text-white">The $400K Playbook PDF</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">Private community (2,000+ executives)</span>
+                  <span className="text-lg text-white">Executive Communication Toolkit PDF</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">Copy-paste templates & frameworks</span>
+                  <span className="text-lg text-white">Career Acceleration Workbook PDF</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <span className="text-lg text-white">Lifetime access to all future updates</span>
                 </li>
               </ul>
 
