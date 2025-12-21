@@ -202,11 +202,13 @@ export default function AIResistantSkillsPage() {
 
   const deliverables = [
     "10 video lessons (~10 min each) with proprietary frameworks",
+    "BONUS: Executive Interview Mastery video lesson",
     "5 downloadable PDF toolkits with templates & worksheets",
-    "Strategic Thinking Blueprint with case studies",
-    "Influence & Communication Toolkit",
-    "Decision-Making Framework with calculators",
-    "Interview Mastery Guide (Bonus)",
+    "Complete Course Blueprints - All 10 frameworks reference guide",
+    "Strategic Thinking Toolkit - Diagnosis & System Mapping",
+    "Influence & Communication Blueprint - Commanding the Room",
+    "Decision-Making Toolkit - Uncertainty & Risk frameworks",
+    "Executive Interview Mastery Playbook",
     "Real case studies from Amazon, Goldman Sachs, McKinsey, Google, Apple",
     "Action steps after every lesson",
     "Lifetime access to all future updates"
@@ -269,7 +271,7 @@ export default function AIResistantSkillsPage() {
             >
               <div className="flex items-center gap-2 text-slate-300">
                 <Check className="w-5 h-5 text-cyan-400" />
-                <span>10 Video Lessons</span>
+                <span>10 Video Lessons + Bonus</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Check className="w-5 h-5 text-cyan-400" />
@@ -496,23 +498,23 @@ export default function AIResistantSkillsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
                   <Download className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white">Strategic Thinking Blueprint</span>
-                </div>
-                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
-                  <Download className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white">Influence & Communication Toolkit</span>
-                </div>
-                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
-                  <Download className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white">Decision-Making Framework</span>
-                </div>
-                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
-                  <Download className="w-5 h-5 text-cyan-400" />
-                  <span className="text-white">Interview Mastery Guide</span>
-                </div>
-                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
-                  <Download className="w-5 h-5 text-cyan-400" />
                   <span className="text-white">Complete Course Blueprints</span>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Strategic Thinking Toolkit</span>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Influence & Communication Blueprint</span>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Decision-Making Toolkit</span>
+                </div>
+                <div className="bg-black/30 rounded-lg p-4 flex items-center gap-3">
+                  <Download className="w-5 h-5 text-cyan-400" />
+                  <span className="text-white">Executive Interview Mastery Playbook</span>
                 </div>
               </div>
             </div>
