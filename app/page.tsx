@@ -70,7 +70,7 @@ export default function Home() {
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
       stripeLink: "https://buy.stripe.com/dRmbJ02GZ2DZ7tW5tG08g0q",
-      description: "Master the 10 proprietary frameworks AI can't replicate. From AWS & Goldman Sachs boardrooms.",
+      description: "Master the 10 proprietary frameworks AI can't replicate. From Fortune 100 boardrooms.",
       students: "253 enrolled",
       image: "/ai-resistant-hero-new.jpg",
       available: true
@@ -171,8 +171,8 @@ export default function Home() {
       name: "Sarah Chen",
       role: "VP of Product",
       company: "Apple",
-      text: "The AI-Resistant Skills course completely transformed how I approach product strategy. Within 3 months of implementing these frameworks, I negotiated a $85K salary increase and was promoted to VP. The insider strategies from AWS and Goldman Sachs are pure gold.",
-      result1: "+$85K Salary",
+      text: "The AI-Resistant Skills course completely transformed how I approach product strategy. Within 3 months of implementing these frameworks, I was promoted to VP. The insider strategies from top companies are pure gold.",
+      result1: "Promoted to VP",
       result2: "Promoted in 90 Days",
       rating: 5
     },
@@ -188,9 +188,9 @@ export default function Home() {
     {
       name: "David Thompson",
       role: "Principal Consultant",
-      company: "McKinsey & Company",
-      text: "As someone who advises C-suite executives daily, I can confirm these strategies are exactly what's used at the highest levels. The course paid for itself in the first week when I closed a $240K consulting engagement using these frameworks.",
-      result1: "$240K Contract",
+      company: "Top Consulting Firm",
+      text: "As someone who advises C-suite executives daily, I can confirm these strategies are exactly what's used at the highest levels. The course paid for itself quickly when I closed a major consulting engagement using these frameworks.",
+      result1: "Major Contract",
       result2: "First Week ROI",
       rating: 5
     }
@@ -211,7 +211,7 @@ export default function Home() {
     },
     {
       question: "How is this different from other online courses?",
-      answer: "Unlike theoretical courses taught by 'gurus,' our content comes from real executives with 22+ years of experience at companies like Apple, Google, Goldman Sachs, and McKinsey. These are battle-tested strategies that actually work at the highest levels."
+      answer: "Unlike theoretical courses taught by 'gurus,' our content comes from real executives with 22+ years of experience at Fortune 100 companies. These are battle-tested strategies that actually work at the highest levels."
     },
     {
       question: "Can I purchase individual courses or do I need the bundle?",
@@ -357,7 +357,7 @@ export default function Home() {
             </p>
             
             <p className="text-base md:text-lg text-slate-400 mb-6">
-              Frameworks from 22+ Years at Amazon, Goldman Sachs & Elite Tech Startups
+              Frameworks from 22+ Years at Fortune 100 Companies & Elite Tech Startups
             </p>
             
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 px-6 py-3 rounded-full mb-6 backdrop-blur-sm">
@@ -529,7 +529,7 @@ export default function Home() {
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">Dana Penza</h3>
                   <p className="text-cyan-400 text-xl font-semibold mb-6">Founder & CEO</p>
                   <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-                    Dana isn't a theoretical coach—he's a <span className="text-white font-semibold">battle-tested executive with 22+ years</span> at Amazon, Goldman Sachs, and elite tech startups, having driven <span className="text-cyan-400 font-semibold">$100M+ in revenue</span>.
+                    Dana isn't a theoretical coach—he's a <span className="text-white font-semibold">battle-tested executive with 22+ years</span> at Fortune 100 companies and elite tech startups, having driven <span className="text-cyan-400 font-semibold">significant revenue growth</span>.
                   </p>
                   <p className="text-slate-300 text-lg mb-8 leading-relaxed">
                     These frameworks helped scale companies from $10M to $100M+. Now they're yours.
@@ -879,7 +879,7 @@ export default function Home() {
                 Success Stories from Top Companies
               </h2>
               <p className="text-lg md:text-xl text-slate-400">
-                Join professionals from Amazon, Apple, Google, Goldman Sachs, McKinsey & Company, and other Fortune 100 companies who've transformed their careers
+                Join professionals from Fortune 100 companies who've transformed their careers
               </p>
             </div>
 

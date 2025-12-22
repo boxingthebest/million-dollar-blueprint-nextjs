@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import FuturisticBackground from "@/components/FuturisticBackground";
-import HeroSectionDivider from "@/components/HeroSectionDivider";
+// HeroSectionDivider removed for cleaner design
 
 export default function ExecutivePresencePage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
@@ -17,15 +17,15 @@ export default function ExecutivePresencePage() {
   const modules = [
     {
       number: 1,
-      title: "The Goldman Sachs Framework",
+      title: "The Executive Presence Framework",
       duration: "5 min",
       lessons: 1,
       icon: Crown,
       topics: [
-        "Command respect in any room with the 3-pillar system used at Goldman Sachs",
+        "Command respect in any room with the 3-pillar system used by Fortune 100 executives",
         "The foundation of executive presence: gravitas, communication, and appearance",
         "How to build instant credibility in high-stakes meetings",
-        "Real-world examples from Goldman Sachs boardrooms",
+        "Real-world examples from Fortune 100 boardrooms",
         "Key takeaway: Executive presence is a learnable skill, not a personality trait"
       ]
     },
@@ -101,7 +101,7 @@ export default function ExecutivePresencePage() {
     },
     {
       number: 7,
-      title: "The McKinsey Blueprint: How to Solve Any Business Problem",
+      title: "The Problem-Solving Blueprint: How to Solve Any Business Problem",
       duration: "5 min",
       lessons: 1,
       icon: Brain,
@@ -115,26 +115,26 @@ export default function ExecutivePresencePage() {
     },
     {
       number: 8,
-      title: "The Amazon Blueprint: Invent Like a Day 1 Company",
+      title: "The Innovation Blueprint: Invent Like a Day 1 Company",
       duration: "5 min",
       lessons: 1,
       icon: Lightbulb,
       topics: [
-        "The 'Working Backwards' process Amazon uses to create world-changing products",
+        "The 'Working Backwards' process top tech companies use to create world-changing products",
         "How to start with the customer and work backward to the solution",
         "Writing press releases before building the product",
-        "Why Amazon banned PowerPoint in favor of 6-page memos",
+        "Why top tech companies banned PowerPoint in favor of 6-page memos",
         "Key takeaway: Start with the end in mind, then build the path to get there"
       ]
     },
     {
       number: 9,
-      title: "The Google Blueprint: Get Promoted in Half the Time",
+      title: "The Career Acceleration Blueprint: Get Promoted in Half the Time",
       duration: "5 min",
       lessons: 1,
       icon: TrendingUp,
       topics: [
-        "The OKR system Google uses for career acceleration",
+        "The OKR system top tech companies use for career acceleration",
         "How to set objectives that align with company priorities",
         "Measuring key results that prove your impact",
         "The quarterly review process that drives promotions",
@@ -157,12 +157,12 @@ export default function ExecutivePresencePage() {
     },
     {
       number: 11,
-      title: "The Apple Blueprint: Think Like a Design Genius",
+      title: "The Innovation Blueprint: Think Like a Design Genius",
       duration: "5 min",
       lessons: 1,
       icon: Lightbulb,
       topics: [
-        "Deep dive into Apple's innovation framework",
+        "Deep dive into world-class innovation frameworks",
         "The 'Think Different' philosophy in practice",
         "How to simplify complexity and create elegant solutions",
         "Steve Jobs' product development process",
@@ -351,7 +351,7 @@ export default function ExecutivePresencePage() {
     "The $400K Playbook - Reach $400K+ compensation",
     "Executive Communication Toolkit - Templates & scripts",
     "Career Acceleration Workbook - Track your progress",
-    "Real case studies from Goldman Sachs, McKinsey, Amazon, Google, Netflix, Apple",
+    "Real case studies from Fortune 100 companies",
     "Lifetime access to all future updates"
   ];
 
@@ -590,11 +590,11 @@ export default function ExecutivePresencePage() {
         <div className="container mx-auto px-4">
           <h3 className="text-center text-white text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
           <p className="text-center text-white text-lg max-w-4xl mx-auto">
-            <span className="text-cyan-400 font-semibold">Microsoft executives</span> • 
-            <span className="text-cyan-400 font-semibold"> Amazon leaders</span> • 
-            <span className="text-cyan-400 font-semibold"> Google directors</span> • 
-            <span className="text-cyan-400 font-semibold"> Goldman Sachs partners</span> • 
-            <span className="text-cyan-400 font-semibold"> McKinsey consultants</span>
+            <span className="text-cyan-400 font-semibold">Fortune 100 executives</span> • 
+            <span className="text-cyan-400 font-semibold"> Tech leaders</span> • 
+            <span className="text-cyan-400 font-semibold"> Senior directors</span> • 
+            <span className="text-cyan-400 font-semibold"> Investment partners</span> • 
+            <span className="text-cyan-400 font-semibold"> Top consultants</span>
           </p>
         </div>
       </section>

@@ -407,7 +407,7 @@ export default function AIResistantSkillsPage() {
               10 Proprietary Frameworks in 10 Days
             </h2>
             <p className="text-xl text-slate-300 mb-12 text-center">
-              The exact methodologies that McKinsey charges $50,000/week to teach
+              The exact methodologies that top consulting firms charge $50,000/week to teach
             </p>
 
             <div className="space-y-4">

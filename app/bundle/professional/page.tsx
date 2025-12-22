@@ -26,7 +26,7 @@ const courses = [
     value: "$247",
     icon: TrendingUp,
     color: "emerald",
-    description: "Close deals like top performers at Goldman Sachs",
+    description: "Close deals like top performers at Fortune 100 companies",
     modules: "12 modules • 4 hours"
   },
   {
@@ -67,15 +67,15 @@ const testimonials = [
   {
     name: "David Chen",
     role: "VP of Product, Tech Startup",
-    company: "Former Amazon",
+    company: "Former Fortune 100",
     image: "/testimonial-david.jpg",
-    text: "This bundle transformed my career trajectory. Within 6 months, I went from Senior Manager to VP with a $180K increase.",
+    text: "This bundle transformed my career trajectory. Within 6 months, I went from Senior Manager to VP.",
     rating: 5
   },
   {
     name: "Sarah Mitchell",
     role: "Managing Director",
-    company: "Goldman Sachs",
+    company: "Fortune 100 Finance",
     image: "/testimonial-sarah.jpg",
     text: "The combination of all 7 courses gave me a complete toolkit. I've recommended this to my entire team.",
     rating: 5

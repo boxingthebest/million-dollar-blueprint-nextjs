@@ -82,7 +82,7 @@ export default function FlagshipBundlePage() {
                 </div>
               </div>
               <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-                Master the 10 proprietary frameworks AI can't replicate. Future-proof your career with the exact strategies used by Fortune 100 executives at Amazon, Goldman Sachs, and McKinsey.
+                Master the 10 proprietary frameworks AI can't replicate. Future-proof your career with the exact strategies used by Fortune 100 executives.
               </p>
               <ul className="space-y-3 text-slate-300">
                 <li className="flex items-start gap-2">

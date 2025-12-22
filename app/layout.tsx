@@ -14,7 +14,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Million Dollar Blueprint | Design Your Million-Dollar Future",
-  description: "Master the 5 skills AI can't replace. Learn frameworks from Fortune 100 companies like Amazon, Google, McKinsey, and Goldman Sachs.",
+  description: "Master the 5 skills AI can't replace. Learn frameworks from Fortune 100 companies and elite tech startups.",
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
