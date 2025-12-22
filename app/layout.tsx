@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import MetaPixel from "./components/MetaPixel";
 import GoogleAdsTag from "./components/GoogleAdsTag";
+import MicrosoftClarity from "./components/MicrosoftClarity";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -46,6 +47,7 @@ export default function RootLayout({
           <GoogleAnalytics />
           <MetaPixel />
           <GoogleAdsTag />
+          <MicrosoftClarity />
           {children}
 
           <SpeedInsights />
