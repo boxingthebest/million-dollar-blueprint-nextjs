@@ -180,9 +180,9 @@ export default function VIPBundlePage() {
 
       {/* Video Preview Section */}
       <section className="py-16 px-4 bg-black">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-md mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: Your Executive Fast-Track</h2>
-          <div className="rounded-xl overflow-hidden shadow-2xl border-2 border-amber-500/30">
+          <div className="rounded-xl overflow-hidden shadow-2xl border-2 border-amber-500/30" style={{maxHeight: '70vh'}}>
             <div style={{padding: '177.78% 0 0 0', position: 'relative'}}>
               <iframe 
                 src="https://player.vimeo.com/video/1148748639?badge=0&autopause=0&player_id=0&app_id=58479" 
