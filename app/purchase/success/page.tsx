@@ -1,12 +1,25 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
+import Script from "next/script";
 import { CheckCircle, Mail, ArrowRight, Trophy, Sparkles } from "lucide-react";
 import Link from "next/link";
 import FuturisticBackground from "@/components/FuturisticBackground";
 import HeroSectionDivider from "@/components/HeroSectionDivider";
 
 function PurchaseSuccessContent() {
+  // Track Google Ads conversion on page load
+  useEffect(() => {
+    // Fire Google Ads conversion event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17822482915/purchase',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Hero Background Image */}
