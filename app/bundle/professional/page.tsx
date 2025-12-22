@@ -178,6 +178,25 @@ export default function ProfessionalBundlePage() {
         </div>
       </section>
 
+      {/* Video Preview Section */}
+      <section className="py-16 px-4 bg-black">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: Your Complete Transformation</h2>
+          <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-purple-500/30">
+            <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
+              <iframe 
+                src="https://player.vimeo.com/video/1148758892?badge=0&autopause=0&player_id=0&app_id=58479" 
+                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
+                frameBorder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowFullScreen
+                title="Professional Bundle - Master Your Career"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* All 7 Courses Section */}
       <section className="py-20 px-4 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
