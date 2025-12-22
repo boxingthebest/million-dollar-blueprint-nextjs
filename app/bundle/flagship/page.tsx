@@ -62,6 +62,25 @@ export default function FlagshipBundlePage() {
         </div>
       </section>
 
+      {/* Video Preview Section */}
+      <section className="py-16 px-4 bg-black">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: Command Your Career</h2>
+          <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-orange-500/30">
+            <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
+              <iframe 
+                src="https://player.vimeo.com/video/1148769094?badge=0&autopause=0&player_id=0&app_id=58479" 
+                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
+                frameBorder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowFullScreen
+                title="Flagship Bundle - Command Your Career"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What You Get Section */}
       <section className="py-20 px-4 bg-slate-900/50">
         <div className="max-w-6xl mx-auto">
