@@ -339,7 +339,7 @@ export default function AIResistantSkillsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 text-center">
-              85 Million Jobs Will Be Displaced by AI by 2025
+              85 Million Jobs Will Be Displaced by AI by 2030
             </h2>
             <p className="text-xl text-slate-300 mb-8 text-center">
               That's not a prediction. That's a World Economic Forum report.
