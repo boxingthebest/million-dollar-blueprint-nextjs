@@ -1,7 +1,7 @@
 "use client";
 import ApexChatbot from "@/components/ApexChatbot";
 import FuturisticBackground from "@/components/FuturisticBackground";
-import HeroSectionDivider from "@/components/HeroSectionDivider";
+// HeroSectionDivider removed for cleaner design
 import TiltCard from "@/components/TiltCard";
 import { motion } from "framer-motion";
 
@@ -160,7 +160,7 @@ export default function AIResistantSkillsPage() {
   const faqs = [
     {
       question: "Is this course worth the investment?",
-      answer: "Our students report an average salary increase of $85,000+ within 6 months of completing the course. Many have been promoted, landed dream jobs, or started successful businesses. You're not just buying a course—you're investing in your irreplaceable future."
+      answer: "Our students report significant career advancement after completing the course. Many have been promoted, landed better opportunities, or started successful businesses. You're not just buying a course—you're investing in your irreplaceable future."
     },
     {
       question: "How long do I have access?",
@@ -172,7 +172,7 @@ export default function AIResistantSkillsPage() {
     },
     {
       question: "How is this different from other 'AI-proof' courses?",
-      answer: "This isn't generic advice about 'soft skills.' These are specific, proprietary frameworks used by executives at Amazon, Apple, Google, Goldman Sachs & McKinsey. You're learning the exact methodologies that separate $100K employees from $1M+ executives."
+      answer: "This isn't generic advice about 'soft skills.' These are specific, proprietary frameworks used by executives at top companies. You're learning the exact methodologies that help professionals advance to executive-level positions."
     },
     {
       question: "Can I pay in installments?",
@@ -193,9 +193,9 @@ export default function AIResistantSkillsPage() {
   ];
 
   const benefits = [
-    "Think strategically like a McKinsey consultant",
-    "Build trust like a Goldman Sachs relationship manager",
-    "Innovate like a Google product designer",
+    "Think strategically like a top consultant",
+    "Build trust like a top relationship manager",
+    "Innovate like a leading product designer",
     "Communicate like a Fortune 500 executive",
     "Negotiate like a Harvard-trained dealmaker"
   ];
@@ -209,7 +209,7 @@ export default function AIResistantSkillsPage() {
     "Influence & Communication Blueprint - Commanding the Room",
     "Decision-Making Toolkit - Uncertainty & Risk frameworks",
     "Executive Interview Mastery Playbook",
-    "Real case studies from Amazon, Goldman Sachs, McKinsey, Google, Apple",
+    "Real case studies from leading companies",
     "Action steps after every lesson",
     "Lifetime access to all future updates"
   ];
@@ -260,7 +260,7 @@ export default function AIResistantSkillsPage() {
               transition={{ delay: 0.1 }}
               className="text-xl md:text-2xl text-slate-300 mb-8"
             >
-              The exact strategic thinking, influence, and decision-making frameworks used by executives at Amazon, Goldman Sachs, and McKinsey—skills AI will never replace.
+              The strategic thinking, influence, and decision-making frameworks used by top executives at leading companies—skills AI will never replace.
             </motion.p>
 
             <motion.div 
@@ -308,7 +308,7 @@ export default function AIResistantSkillsPage() {
         </div>
       </section>
 
-      <HeroSectionDivider />
+      
 
       {/* Social Proof Bar */}
       <section className="py-8 bg-black border-y border-slate-800">
@@ -319,8 +319,8 @@ export default function AIResistantSkillsPage() {
               <p className="text-slate-400 text-sm">Students Enrolled</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">$85K+</p>
-              <p className="text-slate-400 text-sm">Avg. Salary Increase</p>
+              <p className="text-3xl md:text-4xl font-bold text-white">10</p>
+              <p className="text-slate-400 text-sm">Frameworks Taught</p>
             </div>
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-white">22</p>
@@ -545,7 +545,7 @@ export default function AIResistantSkillsPage() {
                   I spent 22 years at Amazon and Goldman Sachs, working alongside executives who earn seven figures. I've seen entire departments automated. But I've also seen professionals who became <span className="text-cyan-400 font-semibold">more valuable</span> because they developed the right skills.
                 </p>
                 <p className="text-slate-300 mb-6 text-lg">
-                  These aren't soft skills. They're <span className="text-orange-400 font-semibold">power skills</span>. They're the frameworks that McKinsey charges $50,000 per week to teach. And I've packaged them into a course you can complete in 10 days.
+                  These aren't soft skills. They're <span className="text-orange-400 font-semibold">power skills</span>. They're the frameworks that top consulting firms teach to their clients. And I've packaged them into a course you can complete in 10 days.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <div className="bg-slate-800 rounded-lg px-4 py-2">
@@ -592,9 +592,9 @@ export default function AIResistantSkillsPage() {
                   <Image
                     src="/michael-chen.png"
                     alt="Michael Chen"
-                    width={64}
-                    height={64}
-                    className="rounded-full border-2 border-cyan-400"
+                    width={80}
+                    height={80}
+                    className="rounded-full border-2 border-cyan-400 w-20 h-20 object-cover"
                   />
                   <div>
                     <h4 className="text-white font-bold">Michael Chen</h4>
@@ -607,7 +607,7 @@ export default function AIResistantSkillsPage() {
                   ))}
                 </div>
                 <p className="text-slate-300 leading-relaxed">
-                  "Within 3 months of completing this course, I was promoted to VP. The frameworks for strategic thinking and stakeholder influence completely changed how I approach my work. My salary increased by $120K."
+                  "Within 3 months of completing this course, I was promoted to VP. The frameworks for strategic thinking and stakeholder influence completely changed how I approach my work. The results exceeded my expectations."
                 </p>
               </div>
 
@@ -617,9 +617,9 @@ export default function AIResistantSkillsPage() {
                   <Image
                     src="/sarah-williams.png"
                     alt="Sarah Williams"
-                    width={64}
-                    height={64}
-                    className="rounded-full border-2 border-purple-400"
+                    width={80}
+                    height={80}
+                    className="rounded-full border-2 border-purple-400 w-20 h-20 object-cover"
                   />
                   <div>
                     <h4 className="text-white font-bold">Sarah Williams</h4>
@@ -642,9 +642,9 @@ export default function AIResistantSkillsPage() {
                   <Image
                     src="/david-rodriguez.png"
                     alt="David Rodriguez"
-                    width={64}
-                    height={64}
-                    className="rounded-full border-2 border-emerald-400"
+                    width={80}
+                    height={80}
+                    className="rounded-full border-2 border-emerald-400 w-20 h-20 object-cover"
                   />
                   <div>
                     <h4 className="text-white font-bold">David Rodriguez</h4>
@@ -657,13 +657,13 @@ export default function AIResistantSkillsPage() {
                   ))}
                 </div>
                 <p className="text-slate-300 leading-relaxed">
-                  "As a developer, I thought coding was enough. This course opened my eyes to executive-level thinking. The Pyramid Principle alone helped me secure $2M in funding by presenting to investors like a McKinsey consultant."
+                  "As a developer, I thought coding was enough. This course opened my eyes to executive-level thinking. The Pyramid Principle transformed how I present to investors and stakeholders."
                 </p>
               </div>
             </div>
 
             <div className="mt-12 text-center">
-              <p className="text-slate-400 text-sm">Average salary increase reported by students: <span className="text-cyan-400 font-bold">$85,000+</span></p>
+              <p className="text-slate-400 text-sm">Join professionals who are advancing their careers with these frameworks</p>
             </div>
           </div>
         </div>
