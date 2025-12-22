@@ -427,7 +427,7 @@ export default function ExecutivePresencePage() {
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-600">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
-                  src="https://player.vimeo.com/video/1141887983?h=9b8c7d6e5f&title=0&byline=0&portrait=0" 
+                  src="https://player.vimeo.com/video/1148739137?badge=0&autopause=0&player_id=0&app_id=58479" 
                   style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
                   frameBorder="0" 
                   allow="autoplay; fullscreen; picture-in-picture" 
