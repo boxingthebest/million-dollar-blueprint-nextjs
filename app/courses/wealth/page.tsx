@@ -253,7 +253,7 @@ export default function WealthPage() {
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-600">
               <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
-                  src="https://player.vimeo.com/video/1130648593?badge=0&autopause=0&player_id=0&app_id=58479&playsinline=1&muted=0" 
+                  src="https://player.vimeo.com/video/1148782012?badge=0&autopause=0&player_id=0&app_id=58479" 
                   frameBorder="0" 
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
                   style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
