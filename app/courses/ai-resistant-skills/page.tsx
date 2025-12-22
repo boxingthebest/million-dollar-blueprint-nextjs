@@ -334,6 +334,26 @@ export default function AIResistantSkillsPage() {
         </div>
       </section>
 
+      {/* Video Trailer Section */}
+      <section className="py-16 md:py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+              See What You'll Learn
+            </h2>
+            <div className="aspect-video bg-slate-800 rounded-xl overflow-hidden shadow-2xl border border-slate-700">
+              <iframe 
+                src="https://player.vimeo.com/video/1148730188?badge=0&autopause=0&player_id=0&app_id=58479" 
+                frameBorder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                className="w-full h-full"
+                title="AI Future Proof Your Career - Million Dollar Blueprint"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Problem Section */}
       <section className="py-16 md:py-24 bg-slate-950">
         <div className="container mx-auto px-4">
