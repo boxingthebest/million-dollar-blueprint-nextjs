@@ -18,6 +18,7 @@ import AnimatedNavigation from "@/components/AnimatedNavigation";
 import Enhanced3DCard from "@/components/Enhanced3DCard";
 import ScrollReveal from "@/components/ScrollReveal";
 import CountdownTimer from "@/components/CountdownTimer";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 
 
 export default function Home() {
@@ -486,15 +487,10 @@ export default function Home() {
             <p className="text-lg md:text-xl text-slate-400 text-center mb-12">
               Watch how 440+ professionals are breaking into six figures with Million Dollar Blueprint <span className="text-cyan-400">(55 sec)</span>
             </p>
-            <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
-              <iframe 
-                src="https://player.vimeo.com/video/1148793579?badge=0&autopause=0&player_id=0&app_id=58479" 
-                className="w-full h-full"
-                frameBorder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
+            <div className="shadow-2xl border-2 border-cyan-500/30 rounded-xl overflow-hidden">
+              <LazyVimeoPlayer
+                videoId="1148793579"
                 title="Million Dollar Blueprint - Your Blueprint to Millions"
-                allowFullScreen
               />
             </div>
             
