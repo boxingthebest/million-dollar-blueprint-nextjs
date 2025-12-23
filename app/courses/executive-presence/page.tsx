@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import FuturisticBackground from "@/components/FuturisticBackground";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 // HeroSectionDivider removed for cleaner design
 
 export default function ExecutivePresencePage() {
@@ -424,18 +425,11 @@ export default function ExecutivePresencePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
-            <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-slate-600">
-              <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
-                <iframe 
-                  src="https://player.vimeo.com/video/1148739137?badge=0&autopause=0&player_id=0&app_id=58479" 
-                  style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
-                  frameBorder="0" 
-                  allow="autoplay; fullscreen; picture-in-picture" 
-                  allowFullScreen
-                  title="Executive Presence Course"
-                />
-              </div>
-              <script src="https://player.vimeo.com/api/player.js"></script>
+            <div className="shadow-2xl border-2 border-slate-600 rounded-xl overflow-hidden">
+              <LazyVimeoPlayer
+                videoId="1148739137"
+                title="Executive Presence Course"
+              />
             </div>
           </div>
         </div>

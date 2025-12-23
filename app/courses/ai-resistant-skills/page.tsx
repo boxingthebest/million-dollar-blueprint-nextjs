@@ -9,6 +9,7 @@ import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, 
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 
 export default function AIResistantSkillsPage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
@@ -341,12 +342,9 @@ export default function AIResistantSkillsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
               See What You'll Learn
             </h2>
-            <div className="aspect-video bg-slate-800 rounded-xl overflow-hidden shadow-2xl border border-slate-700">
-              <iframe 
-                src="https://player.vimeo.com/video/1148730188?badge=0&autopause=0&player_id=0&app_id=58479" 
-                frameBorder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                className="w-full h-full"
+            <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden">
+              <LazyVimeoPlayer
+                videoId="1148730188"
                 title="AI Future Proof Your Career - Million Dollar Blueprint"
               />
             </div>

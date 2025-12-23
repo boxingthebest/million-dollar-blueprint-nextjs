@@ -3,6 +3,7 @@
 import { ArrowRight, CheckCircle2, Brain, Zap, Target, Award, TrendingUp, Shield, Users, DollarSign, Star, Clock, Sparkles, Trophy, BadgeCheck, Crown, Phone, FileText, MessageCircle, Calendar, Gem, Lock, Gift, Rocket, Heart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 
 const courses = [
   { name: "AI-Resistant Skills", value: "$197", icon: Brain },
@@ -182,17 +183,11 @@ export default function VIPBundlePage() {
       <section className="py-16 px-4 bg-black">
         <div className="max-w-md mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: Your Executive Fast-Track</h2>
-          <div className="rounded-xl overflow-hidden shadow-2xl border-2 border-amber-500/30" style={{maxHeight: '70vh'}}>
-            <div style={{padding: '177.78% 0 0 0', position: 'relative'}}>
-              <iframe 
-                src="https://player.vimeo.com/video/1148748639?badge=0&autopause=0&player_id=0&app_id=58479" 
-                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
-                frameBorder="0" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowFullScreen
-                title="VIP Million Dollar Bundle"
-              />
-            </div>
+          <div className="shadow-2xl border-2 border-amber-500/30 rounded-xl overflow-hidden">
+            <LazyVimeoPlayer
+              videoId="1148748639"
+              title="VIP Million Dollar Bundle"
+            />
           </div>
         </div>
       </section>
