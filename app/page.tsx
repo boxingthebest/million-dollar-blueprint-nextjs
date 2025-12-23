@@ -17,6 +17,7 @@ import ScrollIndicator from "@/components/ScrollIndicator";
 import AnimatedNavigation from "@/components/AnimatedNavigation";
 import Enhanced3DCard from "@/components/Enhanced3DCard";
 import ScrollReveal from "@/components/ScrollReveal";
+import CountdownTimer from "@/components/CountdownTimer";
 
 
 export default function Home() {
@@ -29,8 +30,7 @@ export default function Home() {
 
   // Countdown timer
   useEffect(() => {
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 7); // 7 days from now
+    const targetDate = new Date('2026-01-15T23:59:59'); // January 15, 2026
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -291,6 +291,12 @@ export default function Home() {
 
       {/* Navigation */}
       <AnimatedNavigation />
+
+      {/* Countdown Timer Banner */}
+      <CountdownTimer 
+        targetDate={new Date('2026-01-15T23:59:59')} 
+        title="Founding Member Pricing Ends January 15th"
+      />
 
       {/* Hero Section */}
       <section className="py-16 md:py-32 relative overflow-hidden animated-gradient-bg">
