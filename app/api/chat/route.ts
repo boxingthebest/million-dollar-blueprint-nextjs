@@ -1,9 +1,48 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
+import { prisma } from "@/lib/prisma";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+// Email regex pattern
+const EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+
+// Function to extract and save email from message
+async function captureEmailFromMessage(message: string): Promise<string | null> {
+  const emails = message.match(EMAIL_REGEX);
+  if (!emails || emails.length === 0) return null;
+  
+  const email = emails[0].toLowerCase();
+  
+  try {
+    // Check if already exists
+    const existingSubscriber = await prisma.newsletterSubscriber.findUnique({
+      where: { email }
+    });
+    
+    if (existingSubscriber) {
+      // Already in database
+      return email;
+    }
+    
+    // Create new subscriber (mark as verified since they gave it directly)
+    await prisma.newsletterSubscriber.create({
+      data: {
+        email,
+        verified: true, // Direct submission from chat = verified
+        verifiedAt: new Date(),
+      }
+    });
+    
+    console.log(`[Apex] Captured email: ${email}`);
+    return email;
+  } catch (error) {
+    console.error("[Apex] Error capturing email:", error);
+    return null;
+  }
+}
 
 const SYSTEM_PROMPT = `You are Apex, the AI success partner for Million Dollar Blueprint - an elite career acceleration platform founded by Dana Penza.
 
@@ -119,9 +158,9 @@ When they're ready:
 
 ## LEAD CAPTURE
 If someone is interested but not ready to buy, offer value:
-- "Want me to send you our free guide on [relevant topic]? Just drop your email."
+- "Want me to send you our free career acceleration guide? Just drop your email."
 - "I can send you a course preview - what's your email?"
-- If they give email, say: "Perfect! Check your inbox. In the meantime, any other questions I can help with?"
+- If they give email, say: "Perfect! 🎉 I've added you to our list - you'll get exclusive tips and early access to new content. Now, any other questions I can help with?"
 
 ## RULES
 - Never make up information about courses
@@ -130,7 +169,7 @@ If someone is interested but not ready to buy, offer value:
 - If they ask something you don't know, say "Great question! For that, I'd recommend emailing hello@milliondollarblueprint.ai"
 - Keep responses SHORT unless they ask for details
 - Always end with a question to keep the conversation going
-- When someone shares their email, acknowledge it warmly and continue helping
+- When someone shares their email, acknowledge it warmly and enthusiastically, then continue helping
 
 ## SAMPLE CONVERSATIONS
 
@@ -141,11 +180,22 @@ User: "I want to get promoted"
 Apex: "Love that energy. 🔥 For promotions, Executive Presence ($397) is your secret weapon - it teaches you how to command any room and influence without authority. Pair it with AI-Resistant Skills and you're unstoppable. The Flagship Bundle gives you both for $397 (saves $197). What level are you trying to reach?"
 
 User: "Is there a guarantee?"
-Apex: "100%. Every course comes with a 30-day money-back guarantee. Try it, implement the frameworks, and if you don't see value, get a full refund. Zero risk. Dana stands behind this because he knows it works. Ready to get started?"`;
+Apex: "100%. Every course comes with a 30-day money-back guarantee. Try it, implement the frameworks, and if you don't see value, get a full refund. Zero risk. Dana stands behind this because he knows it works. Ready to get started?"
+
+User: "my email is john@example.com"
+Apex: "Perfect! 🎉 I've added you to our list - you'll get exclusive career tips and early access to new content. In the meantime, is there anything specific about the courses I can help you with?"`;
 
 export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
+    
+    // Check the latest user message for an email
+    const latestUserMessage = messages.filter((m: any) => m.role === "user").pop();
+    let capturedEmail: string | null = null;
+    
+    if (latestUserMessage) {
+      capturedEmail = await captureEmailFromMessage(latestUserMessage.content);
+    }
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4.1-mini",
@@ -159,7 +209,10 @@ export async function POST(req: NextRequest) {
 
     const assistantMessage = completion.choices[0].message.content;
 
-    return NextResponse.json({ message: assistantMessage });
+    return NextResponse.json({ 
+      message: assistantMessage,
+      emailCaptured: capturedEmail ? true : false,
+    });
   } catch (error) {
     console.error("Chat API error:", error);
     return NextResponse.json(
