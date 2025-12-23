@@ -349,7 +349,7 @@ export default function Home() {
             </motion.h1>
             
             <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
-              6 Online Courses to Accelerate Your Career
+              7 Online Courses to Accelerate Your Career
             </p>
             
             <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
@@ -390,7 +390,7 @@ export default function Home() {
                 <p className="text-slate-300 text-sm mt-1">Years Experience</p>
               </div>
               <div className="bg-slate-900/50 backdrop-blur-sm border border-pink-500/30 rounded-lg p-4 text-center">
-                <AnimatedCounter end={6} className="text-3xl md:text-4xl font-bold text-pink-400" />
+                <AnimatedCounter end={7} className="text-3xl md:text-4xl font-bold text-pink-400" />
                 <p className="text-slate-300 text-sm mt-1">Elite Courses</p>
               </div>
               <div className="bg-slate-900/50 backdrop-blur-sm border border-orange-500/30 rounded-lg p-4 text-center">
@@ -758,10 +758,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Professional Bundle - MOST POPULAR */}
+                {/* Professional Bundle - BEST VALUE */}
                 <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 border-4 border-purple-400 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 relative group flex flex-col h-full bundle-pulse">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                    MOST POPULAR
+                    BEST VALUE
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col flex-grow pt-4">
@@ -773,7 +773,7 @@ export default function Home() {
                     Complete transformation across all areas of your professional life
                   </p>
                   <div className="mb-8">
-                    <div className="text-6xl font-bold text-white mb-2">$797</div>
+                    <div className="text-7xl font-bold text-white mb-2 animate-pulse">$797</div>
                     <div className="text-xl text-slate-400 line-through mb-2">$1,679</div>
                     <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $882 (53%)</div>
                   </div>
@@ -990,10 +990,10 @@ export default function Home() {
               Founding member pricing ends soon. Lock in lifetime access at the lowest price ever.
             </p>
             <a
-              href="https://buy.stripe.com/8x214mepH2DZ4hKcW808g0p"
+              href="/bundle/professional"
               className="inline-block bg-white text-red-600 hover:bg-slate-100 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
-              Get All 6 Courses - $597
+              Get All 7 Courses - $797
             </a>
             <p className="text-white/90 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | No Risk</p>
           </div>
