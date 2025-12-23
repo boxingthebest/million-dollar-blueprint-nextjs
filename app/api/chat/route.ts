@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { prisma } from "@/lib/prisma";
+import { sendLeadCaptureAlert } from "@/lib/email";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -37,6 +38,12 @@ async function captureEmailFromMessage(message: string): Promise<string | null> 
     });
     
     console.log(`[Apex] Captured email: ${email}`);
+    
+    // Send instant alert to admin
+    sendLeadCaptureAlert(email).catch(err => {
+      console.error("[Apex] Failed to send lead alert:", err);
+    });
+    
     return email;
   } catch (error) {
     console.error("[Apex] Error capturing email:", error);

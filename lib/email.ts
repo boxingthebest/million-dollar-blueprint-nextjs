@@ -663,3 +663,230 @@ export async function sendNewsletterVerificationEmail(email: string, verificatio
   }
 }
 
+
+
+// Send instant alert when Apex captures a new lead
+export async function sendLeadCaptureAlert(capturedEmail: string, conversationContext?: string) {
+  const adminEmail = "dapenza444@gmail.com";
+  const timestamp = new Date().toLocaleString("en-US", { 
+    timeZone: "America/New_York",
+    dateStyle: "full",
+    timeStyle: "short"
+  });
+  
+  try {
+    await transporter.sendMail({
+      from: `${process.env.SMTP_FROM_NAME || "Million Dollar Blueprint"} <${process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER}>`,
+      to: adminEmail,
+      subject: `🚀 New Lead from Apex: ${capturedEmail}`,
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>New Lead Captured</title>
+          </head>
+          <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0f172a;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0f172a; padding: 40px 20px;">
+              <tr>
+                <td align="center">
+                  <table width="600" cellpadding="0" cellspacing="0" style="background: linear-gradient(to bottom, #1e293b, #0f172a); border-radius: 16px; overflow: hidden; border: 1px solid #334155;">
+                    <!-- Header -->
+                    <tr>
+                      <td style="padding: 40px 40px 20px 40px; text-align: center;">
+                        <div style="font-size: 48px; margin-bottom: 16px;">🚀</div>
+                        <h1 style="margin: 0; color: #22d3ee; font-size: 24px; font-weight: bold;">
+                          New Lead Captured by Apex!
+                        </h1>
+                      </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                      <td style="padding: 20px 40px;">
+                        <div style="background-color: #1e293b; border-radius: 12px; padding: 24px; border: 1px solid #334155;">
+                          <table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td style="padding: 8px 0;">
+                                <span style="color: #94a3b8; font-size: 14px;">Email Address</span><br>
+                                <span style="color: #ffffff; font-size: 18px; font-weight: bold;">${capturedEmail}</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 8px 0; border-top: 1px solid #334155;">
+                                <span style="color: #94a3b8; font-size: 14px;">Captured At</span><br>
+                                <span style="color: #cbd5e1; font-size: 16px;">${timestamp} EST</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="padding: 8px 0; border-top: 1px solid #334155;">
+                                <span style="color: #94a3b8; font-size: 14px;">Source</span><br>
+                                <span style="color: #22d3ee; font-size: 16px;">Apex Chatbot</span>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        
+                        ${conversationContext ? `
+                        <div style="margin-top: 20px; background-color: #1e293b; border-radius: 12px; padding: 24px; border: 1px solid #334155;">
+                          <span style="color: #94a3b8; font-size: 14px;">Conversation Context</span><br>
+                          <p style="color: #cbd5e1; font-size: 14px; margin: 8px 0 0 0; line-height: 1.6;">${conversationContext}</p>
+                        </div>
+                        ` : ''}
+                        
+                        <p style="margin: 24px 0 0 0; color: #10b981; font-size: 14px; text-align: center;">
+                          ✅ This lead has been automatically added to your newsletter list
+                        </p>
+                      </td>
+                    </tr>
+                    
+                    <!-- CTA -->
+                    <tr>
+                      <td style="padding: 20px 40px 40px 40px; text-align: center;">
+                        <a href="https://www.milliondollarblueprint.ai/admin/dashboard" style="display: inline-block; padding: 14px 32px; background: linear-gradient(to right, #06b6d4, #3b82f6); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px;">
+                          View All Leads in Dashboard
+                        </a>
+                      </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                      <td style="padding: 20px 40px; border-top: 1px solid #334155; text-align: center;">
+                        <p style="margin: 0; color: #64748b; font-size: 12px;">
+                          Million Dollar Blueprint • Automated Lead Alert
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </body>
+        </html>
+      `,
+    });
+    console.log(`[Email] Lead capture alert sent for: ${capturedEmail}`);
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to send lead capture alert:", error);
+    return { success: false, error };
+  }
+}
+
+// Send daily digest of new leads
+export async function sendDailyLeadDigest(leads: { email: string; createdAt: Date }[]) {
+  const adminEmail = "dapenza444@gmail.com";
+  const today = new Date().toLocaleDateString("en-US", { 
+    timeZone: "America/New_York",
+    dateStyle: "full"
+  });
+  
+  if (leads.length === 0) {
+    // Don't send if no new leads
+    return { success: true, skipped: true };
+  }
+  
+  const leadRows = leads.map(lead => `
+    <tr>
+      <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #ffffff; font-size: 14px;">
+        ${lead.email}
+      </td>
+      <td style="padding: 12px 16px; border-bottom: 1px solid #334155; color: #94a3b8; font-size: 14px;">
+        ${new Date(lead.createdAt).toLocaleTimeString("en-US", { timeZone: "America/New_York", timeStyle: "short" })} EST
+      </td>
+    </tr>
+  `).join('');
+  
+  try {
+    await transporter.sendMail({
+      from: `${process.env.SMTP_FROM_NAME || "Million Dollar Blueprint"} <${process.env.SMTP_FROM_EMAIL || process.env.SMTP_USER}>`,
+      to: adminEmail,
+      subject: `📊 Daily Lead Digest: ${leads.length} new lead${leads.length > 1 ? 's' : ''} captured`,
+      html: `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Daily Lead Digest</title>
+          </head>
+          <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #0f172a;">
+            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0f172a; padding: 40px 20px;">
+              <tr>
+                <td align="center">
+                  <table width="600" cellpadding="0" cellspacing="0" style="background: linear-gradient(to bottom, #1e293b, #0f172a); border-radius: 16px; overflow: hidden; border: 1px solid #334155;">
+                    <!-- Header -->
+                    <tr>
+                      <td style="padding: 40px 40px 20px 40px; text-align: center;">
+                        <div style="font-size: 48px; margin-bottom: 16px;">📊</div>
+                        <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: bold;">
+                          Daily Lead Digest
+                        </h1>
+                        <p style="margin: 8px 0 0 0; color: #94a3b8; font-size: 14px;">
+                          ${today}
+                        </p>
+                      </td>
+                    </tr>
+                    
+                    <!-- Stats -->
+                    <tr>
+                      <td style="padding: 20px 40px;">
+                        <div style="background: linear-gradient(to right, #06b6d4, #3b82f6); border-radius: 12px; padding: 24px; text-align: center;">
+                          <span style="color: #ffffff; font-size: 48px; font-weight: bold;">${leads.length}</span>
+                          <p style="margin: 8px 0 0 0; color: #e0f2fe; font-size: 16px;">
+                            New Lead${leads.length > 1 ? 's' : ''} Captured Today
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <!-- Lead Table -->
+                    <tr>
+                      <td style="padding: 20px 40px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #1e293b; border-radius: 12px; overflow: hidden; border: 1px solid #334155;">
+                          <tr>
+                            <th style="padding: 12px 16px; text-align: left; color: #94a3b8; font-size: 12px; text-transform: uppercase; border-bottom: 1px solid #334155;">
+                              Email
+                            </th>
+                            <th style="padding: 12px 16px; text-align: left; color: #94a3b8; font-size: 12px; text-transform: uppercase; border-bottom: 1px solid #334155;">
+                              Time
+                            </th>
+                          </tr>
+                          ${leadRows}
+                        </table>
+                      </td>
+                    </tr>
+                    
+                    <!-- CTA -->
+                    <tr>
+                      <td style="padding: 20px 40px 40px 40px; text-align: center;">
+                        <a href="https://www.milliondollarblueprint.ai/admin/dashboard" style="display: inline-block; padding: 14px 32px; background: linear-gradient(to right, #06b6d4, #3b82f6); color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 14px;">
+                          View Full Dashboard
+                        </a>
+                      </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                      <td style="padding: 20px 40px; border-top: 1px solid #334155; text-align: center;">
+                        <p style="margin: 0; color: #64748b; font-size: 12px;">
+                          Million Dollar Blueprint • Daily Digest
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </body>
+        </html>
+      `,
+    });
+    console.log(`[Email] Daily digest sent with ${leads.length} leads`);
+    return { success: true };
+  } catch (error) {
+    console.error("Failed to send daily digest:", error);
+    return { success: false, error };
+  }
+}

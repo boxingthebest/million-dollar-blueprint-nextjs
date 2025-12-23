@@ -2,6 +2,12 @@
   "buildCommand": "prisma generate && next build",
   "env": {
     "NEXTAUTH_URL": "https://milliondollarblueprint.ai"
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/daily-digest",
+      "schedule": "0 2 * * *"
+    }
+  ]
 }
 

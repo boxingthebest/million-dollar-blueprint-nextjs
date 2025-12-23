@@ -459,6 +459,31 @@ export async function GET() {
     recentActivity.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
     const limitedActivity = recentActivity.slice(0, 20)
 
+    // Get newsletter subscribers (leads)
+    const [totalLeads, leadsToday, leadsThisWeek, recentLeads] = await Promise.all([
+      prisma.newsletterSubscriber.count(),
+      prisma.newsletterSubscriber.count({
+        where: {
+          createdAt: { gte: startOfToday },
+        },
+      }),
+      prisma.newsletterSubscriber.count({
+        where: {
+          createdAt: { gte: startOfWeek },
+        },
+      }),
+      prisma.newsletterSubscriber.findMany({
+        take: 20,
+        orderBy: { createdAt: "desc" },
+        select: {
+          id: true,
+          email: true,
+          verified: true,
+          createdAt: true,
+        },
+      }),
+    ])
+
     return NextResponse.json({
       overview: {
         totalStudents,
@@ -483,6 +508,12 @@ export async function GET() {
       signupTrends,
       revenueTrends,
       recentActivity: limitedActivity,
+      leads: {
+        total: totalLeads,
+        today: leadsToday,
+        thisWeek: leadsThisWeek,
+        recent: recentLeads,
+      },
     })
   } catch (error) {
     console.error("Dashboard API error:", error)
