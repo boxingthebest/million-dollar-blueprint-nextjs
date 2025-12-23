@@ -482,7 +482,7 @@ export default function Home() {
             </p>
             <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-cyan-500/30">
               <iframe 
-                src="https://player.vimeo.com/video/1130649118?badge=0&autopause=0&player_id=0&app_id=58479&h=0&title=1&byline=1&portrait=1&playsinline=1&muted=0" 
+                src="https://player.vimeo.com/video/1148793579?badge=0&autopause=0&player_id=0&app_id=58479" 
                 className="w-full h-full"
                 frameBorder="0" 
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
