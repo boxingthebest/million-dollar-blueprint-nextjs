@@ -546,8 +546,16 @@ export default function SalesMasteryPage() {
 
       {/* Footer */}
       <footer className="bg-slate-950 py-8">
-        <div className="container mx-auto px-4 text-center text-white">
-          <p>&copy; 2025 Million Dollar Blueprint. All rights reserved.</p>
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex justify-center gap-6 mb-4">
+            <Link href="/terms" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Privacy Policy</Link>
+            <Link href="/refund-policy" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Refund Policy</Link>
+          </div>
+          <p className="text-slate-600 text-xs mb-4 max-w-3xl mx-auto">
+            EARNINGS DISCLAIMER: Results vary. The testimonials and examples used are exceptional results and are not intended to guarantee that you will achieve the same results. Your results will depend on many factors including your background, experience, and work ethic.
+          </p>
+          <p className="text-slate-500 text-sm">&copy; 2025 Million Dollar Blueprint. All rights reserved.</p>
         </div>
       </footer>
     </div>

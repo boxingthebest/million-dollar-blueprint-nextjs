@@ -350,10 +350,14 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4">
         <div className="max-w-6xl mx-auto text-center text-slate-400">
+          <p className="text-slate-600 text-xs mb-4 max-w-3xl mx-auto">
+            EARNINGS DISCLAIMER: Results vary. The testimonials and examples used are exceptional results and are not intended to guarantee that you will achieve the same results. Your results will depend on many factors including your background, experience, and work ethic.
+          </p>
           <p>&copy; 2025 Million Dollar Blueprint. All rights reserved.</p>
           <div className="mt-4 flex justify-center gap-6">
             <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition">Terms of Service</Link>
+            <Link href="/refund-policy" className="hover:text-white transition">Refund Policy</Link>
             <Link href="/contact" className="hover:text-white transition">Contact</Link>
           </div>
         </div>
