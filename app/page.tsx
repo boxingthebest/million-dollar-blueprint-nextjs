@@ -200,7 +200,7 @@ export default function Home() {
   const faqs = [
     {
       question: "Is this right for me?",
-      answer: "These courses are designed for mid-career professionals (5-15 years of experience) making $60K-$150K who are ready to break into six figures and senior leadership. If you're ambitious, hardworking, but feeling stuck—and you want the insider frameworks used at Fortune 100 companies—this is for you. Entry-level professionals and students can benefit too, but the content is optimized for those with real-world experience to apply immediately."
+      answer: "These courses are designed for mid-career professionals (5-15 years of experience) making $60K-$150K who want to accelerate their career growth and develop leadership skills. If you're ambitious, hardworking, but feeling stuck—and you want the insider frameworks used at Fortune 100 companies—this is for you. Entry-level professionals and students can benefit too, but the content is optimized for those with real-world experience to apply immediately."
     },
     {
       question: "How long do I have access to the courses?",
@@ -351,7 +351,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="holographic-text inline-block"
               >
-                Create Real Wealth
+                Build Real Value
               </motion.span>
             </motion.h1>
             
@@ -360,7 +360,7 @@ export default function Home() {
             </p>
             
             <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
-              For Ambitious Professionals Ready to Break Into Six Figures & Senior Leadership
+              For Ambitious Professionals Building Toward Six-Figure Careers & Senior Leadership
             </p>
             
             <p className="text-base md:text-lg text-slate-400 mb-6">
@@ -878,10 +878,13 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Success Stories from Top Companies
+                What Our Students Are Saying
               </h2>
               <p className="text-lg md:text-xl text-slate-400">
-                Join professionals from Fortune 100 companies who've transformed their careers
+                Real results from professionals who've implemented these frameworks
+              </p>
+              <p className="text-sm text-slate-500 mt-2">
+                Our students work at leading companies including those shown below. Company names indicate current or former employers, not endorsements.
               </p>
             </div>
 
