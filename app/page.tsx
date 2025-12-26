@@ -1042,6 +1042,9 @@ export default function Home() {
             </div>
           </div>
           <div className="text-center text-slate-500 text-sm pt-8 border-t border-slate-800">
+            <p className="mb-4 text-xs text-slate-600 max-w-4xl mx-auto">
+              EARNINGS DISCLAIMER: Results vary. The testimonials and examples used are exceptional results and are not intended to guarantee that you will achieve the same results. Your results will depend on many factors including your background, experience, and work ethic. All business involves risk and requires consistent effort and action.
+            </p>
             © 2025 Million Dollar Blueprint. All rights reserved.
           </div>
         </div>
