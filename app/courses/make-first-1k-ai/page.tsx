@@ -1,6 +1,7 @@
 "use client";
 
 import FuturisticBackground from "@/components/FuturisticBackground";
+import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Clock, DollarSign, Zap, ChevronDown, Star, Users, Target } from "lucide-react";
 import Image from "next/image";
@@ -260,17 +261,11 @@ export default function MakeFirst1KPage() {
             <p className="text-slate-400 text-center mb-8 text-lg">
               Watch this 30-second overview
             </p>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-500/10 border border-slate-700">
-              <div style={{padding: '177.78% 0 0 0', position: 'relative'}}>
-                <iframe 
-                  src="https://player.vimeo.com/video/1150429734?badge=0&autopause=0&player_id=0&app_id=58479"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
-                  title="Make Your First $1K with AI"
-                  loading="lazy"
-                />
-              </div>
+            <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden">
+              <LazyVimeoPlayer
+                videoId="1150429734"
+                title="Make Your First $1K with AI"
+              />
             </div>
           </div>
         </div>
