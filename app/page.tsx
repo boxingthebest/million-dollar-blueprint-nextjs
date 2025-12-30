@@ -55,13 +55,30 @@ export default function Home() {
     "Leadership & Influence": "/courses/leadership",
     "Digital Marketing Mastery": "/courses/marketing",
     "Wealth Building": "/courses/wealth",
-    "The Executive Energy System™": "/courses/wellness"
+    "The Executive Energy System™": "/courses/wellness",
+    "Make Your First $1K with AI": "/courses/make-first-1k-ai"
   };
 
   // Courses ordered by purchase psychology and customer journey
+  // Featured: Make Your First $1K with AI (entry-level, high conversion)
   // Top row: AI-Resistant Skills, Executive Presence, Sales Mastery
   // Bottom row: Leadership, Digital Marketing, Wealth Building, Wellness
   const courses = [
+    {
+      title: "Make Your First $1K with AI",
+      subtitle: "Start Earning This Week",
+      price: "$47",
+      originalPrice: "$97",
+      icon: AIResistantIcon,
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-500 to-emerald-600",
+      stripeLink: "/courses/make-first-1k-ai",
+      description: "Learn one simple AI service you can sell to local businesses for $200. Do it 5 times, make $1,000.",
+      students: "New",
+      image: "/ai-resistant-hero-new.jpg",
+      available: true,
+      badge: "FEATURED"
+    },
     {
       title: "AI-Resistant Skills",
       subtitle: "Future-Proof Your Career",
