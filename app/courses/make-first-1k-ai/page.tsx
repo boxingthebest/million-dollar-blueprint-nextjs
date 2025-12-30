@@ -114,7 +114,7 @@ export default function MakeFirst1KPage() {
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
-        <div className="absolute inset-0 bg-[url('/ai-resistant-hero-new.jpg')] opacity-5 bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/make-1k-ai-hero.jpg')] opacity-5 bg-cover bg-center" />
         
         {/* Glowing Orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse" />

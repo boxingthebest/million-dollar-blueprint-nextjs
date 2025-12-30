@@ -75,7 +75,7 @@ export default function Home() {
       stripeLink: "/courses/make-first-1k-ai",
       description: "Learn one simple AI service you can sell to local businesses for $200. Do it 5 times, make $1,000.",
       students: "New",
-      image: "/ai-resistant-hero-new.jpg",
+      image: "/make-1k-ai-hero.jpg",
       available: true,
       badge: "FEATURED"
     },
