@@ -12,32 +12,10 @@ export default function MakeFirst1KPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const handleCheckout = async () => {
+  const handleCheckout = () => {
     setIsLoading(true);
-    try {
-      const response = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          productType: 'course',
-          productKey: 'makeFirst1K',
-          successUrl: `${window.location.origin}/welcome?course=make-first-1k-ai`,
-          cancelUrl: `${window.location.origin}/courses/make-first-1k-ai?canceled=true`,
-        }),
-      });
-
-      const data = await response.json();
-      if (data.url) {
-        window.location.href = data.url;
-      } else {
-        alert('Something went wrong. Please try again.');
-        setIsLoading(false);
-      }
-    } catch (error) {
-      console.error('Checkout error:', error);
-      alert('Something went wrong. Please try again.');
-      setIsLoading(false);
-    }
+    // Redirect to Stripe payment link
+    window.location.href = 'https://buy.stripe.com/fZufZg5TbguPg0scW808g0r';
   };
 
   const modules = [
@@ -251,31 +229,26 @@ export default function MakeFirst1KPage() {
         </div>
       </section>
 
-      {/* Promo Video Section */}
+      {/* Promo Video Section - Add back when 16:9 version is ready
       <section className="py-16 md:py-20 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-md mx-auto">
+          <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               See How It Works
             </h2>
             <p className="text-slate-400 text-center mb-8 text-lg">
               Watch this 30-second overview
             </p>
-            <div className="shadow-2xl border border-slate-700 rounded-2xl overflow-hidden">
-              <div className="relative" style={{paddingBottom: '177.78%'}}>
-                <iframe
-                  src="https://player.vimeo.com/video/1150429734?badge=0&autopause=0&player_id=0&app_id=58479"
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  title="Make Your First $1K with AI"
-                  loading="lazy"
-                />
-              </div>
+            <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden">
+              <LazyVimeoPlayer
+                videoId="VIDEO_ID_HERE"
+                title="Make Your First $1K with AI"
+              />
             </div>
           </div>
         </div>
       </section>
+      */}
 
       {/* What You'll Learn */}
       <section className="py-16 md:py-20 bg-slate-900/50 relative">

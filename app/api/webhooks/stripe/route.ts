@@ -104,6 +104,8 @@ export async function POST(request: NextRequest) {
           // Also support the ID-based keys for backwards compatibility
           "executive-presence-playbook": ["executive-presence-playbook"],
           "executive-presence-course": ["executive-presence-course"],
+          // Make Your First $1K with AI Course ($47)
+          "make-first-1k-ai": ["make-first-1k-ai"],
         }
 
         const courseSlugs = productToCourses[metadata.productKey]
