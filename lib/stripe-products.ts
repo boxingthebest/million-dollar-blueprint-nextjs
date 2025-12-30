@@ -46,6 +46,13 @@ export const STRIPE_PRODUCTS = {
       price: 19700, // $197.00 in cents
       currency: 'usd',
     },
+    makeFirst1K: {
+      id: 'make-first-1k-ai',
+      name: 'Make Your First $1K with AI',
+      description: 'Learn one simple AI service you can sell to local businesses for $200. Do it 5 times, make your first $1,000.',
+      price: 4700, // $47.00 in cents
+      currency: 'usd',
+    },
   },
   playbook: {
     playbook27: {
