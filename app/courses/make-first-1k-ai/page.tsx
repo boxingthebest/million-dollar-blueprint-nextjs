@@ -229,7 +229,7 @@ export default function MakeFirst1KPage() {
         </div>
       </section>
 
-      {/* Promo Video Section - Add back when 16:9 version is ready
+      {/* Promo Video Section */}
       <section className="py-16 md:py-20 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
@@ -241,14 +241,13 @@ export default function MakeFirst1KPage() {
             </p>
             <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden">
               <LazyVimeoPlayer
-                videoId="VIDEO_ID_HERE"
+                videoId="1150429734"
                 title="Make Your First $1K with AI"
               />
             </div>
           </div>
         </div>
       </section>
-      */}
 
       {/* What You'll Learn */}
       <section className="py-16 md:py-20 bg-slate-900/50 relative">
