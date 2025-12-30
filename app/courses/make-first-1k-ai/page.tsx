@@ -84,6 +84,12 @@ export default function MakeFirst1KPage() {
     },
   ];
 
+  const bonusModule = {
+    title: "The 'Bio Upgrade' Method",
+    duration: "4 min",
+    description: "For businesses that already have content. How to improve their existing bio and create a 'Change Report' that shows your value. An easier sell.",
+  };
+
   const faqs = [
     {
       question: "Do I need any tech experience?",
@@ -244,6 +250,32 @@ export default function MakeFirst1KPage() {
         </div>
       </section>
 
+      {/* Promo Video Section */}
+      <section className="py-16 md:py-20 bg-slate-900/50 relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+              See How It Works
+            </h2>
+            <p className="text-slate-400 text-center mb-8 text-lg">
+              Watch this 30-second overview
+            </p>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-green-500/10 border border-slate-700">
+              <div style={{padding: '177.78% 0 0 0', position: 'relative'}}>
+                <iframe 
+                  src="https://player.vimeo.com/video/1150429734?badge=0&autopause=0&player_id=0&app_id=58479"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+                  title="Make Your First $1K with AI"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What You'll Learn */}
       <section className="py-16 md:py-20 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
@@ -252,7 +284,7 @@ export default function MakeFirst1KPage() {
               What You'll Learn
             </h2>
             <p className="text-slate-400 text-center mb-12 text-lg">
-              Six modules. Under 30 minutes. Everything you need to make your first $1,000.
+              6 modules + bonus. Under 30 minutes. Everything you need to make your first $1,000.
             </p>
 
             <div className="space-y-6">
@@ -278,7 +310,29 @@ export default function MakeFirst1KPage() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+             ))})
+
+              {/* Bonus Module */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-yellow-500/10 to-amber-500/10 border border-yellow-500/50 rounded-xl p-6 hover:border-yellow-400 transition-all"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black font-bold px-3 py-1 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-500/20 text-sm">
+                    BONUS
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-xl font-bold text-white">{bonusModule.title}</h3>
+                      <span className="text-slate-400 text-sm">{bonusModule.duration}</span>
+                    </div>
+                    <p className="text-slate-300">{bonusModule.description}</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
