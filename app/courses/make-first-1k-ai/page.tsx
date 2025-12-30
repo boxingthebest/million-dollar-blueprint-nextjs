@@ -42,24 +42,45 @@ export default function MakeFirst1KPage() {
   const modules = [
     {
       number: 1,
-      title: "Your First $200 Service",
-      duration: "15 min",
-      icon: DollarSign,
-      description: "The exact AI service you can sell to local businesses tonight. No experience needed. I'll show you the 'AI Business Bio' offer that gets instant yes's.",
+      title: "Welcome + The Simple Plan",
+      duration: "4 min",
+      icon: Target,
+      description: "The 3-step framework that makes this work. Why this is perfect for complete beginners. What you can realistically expect in your first week.",
     },
     {
       number: 2,
-      title: "The AI Workflow",
-      duration: "20 min",
-      icon: Target,
-      description: "Step-by-step ChatGPT process. Research, prompt, refine, deliver. The exact prompts I use to create $200 deliverables in under an hour.",
+      title: "Your First $200 Service",
+      duration: "6 min",
+      icon: DollarSign,
+      description: "Exactly what an 'AI Business Bio' is and why businesses pay $200 for it. The complete ChatGPT prompt — copy, paste, and customize.",
     },
     {
       number: 3,
-      title: "From $200 to $2,000",
-      duration: "15 min",
+      title: "Finding Your First Client",
+      duration: "6 min",
+      icon: Users,
+      description: "The '5-a-Day' method for finding clients on Google Maps. The exact outreach message to send — copy and paste.",
+    },
+    {
+      number: 4,
+      title: "The Complete ChatGPT Workflow",
+      duration: "7 min",
       icon: Zap,
-      description: "Turn one-time clients into $300/month recurring revenue. The simple upsell that transforms a side hustle into a real business.",
+      description: "A real example walkthrough from start to finish. Exactly what to research, what to type, and how to deliver a professional PDF.",
+    },
+    {
+      number: 5,
+      title: "From $200 to $2,000",
+      duration: "5 min",
+      icon: Star,
+      description: "How to turn one-time clients into $300/month recurring revenue. The exact upsell message to send after you deliver.",
+    },
+    {
+      number: 6,
+      title: "Your 7-Day Action Plan",
+      duration: "4 min",
+      icon: Clock,
+      description: "Exactly what to do today, tomorrow, and this week. Your complete roadmap to hit $1,000 in your first two weeks.",
     },
   ];
 
@@ -231,7 +252,7 @@ export default function MakeFirst1KPage() {
               What You'll Learn
             </h2>
             <p className="text-slate-400 text-center mb-12 text-lg">
-              Three modules. Everything you need. Nothing you don't.
+              Six modules. Under 30 minutes. Everything you need to make your first $1,000.
             </p>
 
             <div className="space-y-6">
