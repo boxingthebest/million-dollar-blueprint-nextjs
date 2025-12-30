@@ -587,9 +587,9 @@ export default function Home() {
               </p>
             </ScrollReveal>
 
-            {/* Top Row - 3 Flagship Courses (Pyramid Top) */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8 items-stretch max-w-5xl mx-auto">
-              {courses.slice(0, 3).map((course, idx) => {
+            {/* Top Row - 4 Best Sellers */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8 items-stretch max-w-6xl mx-auto">
+              {courses.slice(0, 4).map((course, idx) => {
                 const Icon = course.icon;
                 return (
                   <motion.div
@@ -655,13 +655,13 @@ export default function Home() {
               })}
             </div>
 
-            {/* Bottom Row - 4 Growth Courses (Pyramid Base) */}
+            {/* Bottom Row - 4 Premium Courses */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 items-stretch max-w-6xl mx-auto">
-              {courses.slice(3).map((course, idx) => {
+              {courses.slice(4).map((course, idx) => {
                 const Icon = course.icon;
                 return (
                   <motion.div
-                    key={idx + 3}
+                    key={idx + 4}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
