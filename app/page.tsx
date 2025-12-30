@@ -60,10 +60,10 @@ export default function Home() {
   };
 
   // Courses ordered by purchase psychology and customer journey
-  // Featured: Make Your First $1K with AI (entry-level, high conversion)
-  // Top row: AI-Resistant Skills, Executive Presence, Sales Mastery
-  // Bottom row: Leadership, Digital Marketing, Wealth Building, Wellness
+  // Row 1 (Best sellers / Entry points): Make $1K, AI-Resistant, Sales, Digital Marketing
+  // Row 2 (Premium / Upsells): Executive Presence, Leadership, Wealth, Wellness
   const courses = [
+    // ROW 1 - Best Sellers
     {
       title: "Make Your First $1K with AI",
       subtitle: "Start Earning This Week",
@@ -94,20 +94,6 @@ export default function Home() {
       available: true
     },
     {
-      title: "Executive Presence",
-      subtitle: "Command Any Room",
-      price: "$397",
-      originalPrice: "$997",
-      icon: ExecutivePresenceIcon,
-      gradient: "from-emerald-500 to-teal-600",
-      bgGradient: "from-emerald-500 to-teal-600",
-      stripeLink: "https://buy.stripe.com/14A6oG95nguP9C43ly08g0h",
-      description: "Master executive presence and influence without authority. From Fortune 100 leaders.",
-      students: "187 enrolled",
-      image: "/hero-executive-presence-futuristic.png",
-      available: true,
-    },
-    {
       title: "Sales Mastery",
       subtitle: "Close High-Ticket Deals",
       price: "$247",
@@ -123,21 +109,6 @@ export default function Home() {
       badge: "NEW"
     },
     {
-      title: "Leadership & Influence",
-      subtitle: "Command Any Room",
-      price: "$247",
-      originalPrice: "$495",
-      icon: LeadershipIcon,
-      gradient: "from-purple-500 to-indigo-600",
-      bgGradient: "from-purple-500 to-indigo-600",
-      stripeLink: "https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j",
-      description: "Fortune 100 leadership strategies for executive presence.",
-      students: "168 enrolled",
-      image: "/course-leadership-new.jpg",
-      available: true,
-      badge: "NEW"
-    },
-    {
       title: "Digital Marketing Mastery",
       subtitle: "Grow Your Brand Online",
       price: "$197",
@@ -149,6 +120,37 @@ export default function Home() {
       description: "Enterprise digital marketing tactics that drive revenue.",
       students: "195 enrolled",
       image: "/course-marketing-new.jpg",
+      available: true,
+      badge: "NEW"
+    },
+    // ROW 2 - Premium / Upsells
+    {
+      title: "Executive Presence",
+      subtitle: "Command Any Room",
+      price: "$397",
+      originalPrice: "$997",
+      icon: ExecutivePresenceIcon,
+      gradient: "from-emerald-500 to-teal-600",
+      bgGradient: "from-emerald-500 to-teal-600",
+      stripeLink: "https://buy.stripe.com/14A6oG95nguP9C43ly08g0h",
+      description: "Master executive presence and influence without authority. From Fortune 100 leaders.",
+      students: "187 enrolled",
+      image: "/hero-executive-presence-futuristic.png",
+      available: true,
+      badge: "PREMIUM"
+    },
+    {
+      title: "Leadership & Influence",
+      subtitle: "Command Any Room",
+      price: "$247",
+      originalPrice: "$495",
+      icon: LeadershipIcon,
+      gradient: "from-purple-500 to-indigo-600",
+      bgGradient: "from-purple-500 to-indigo-600",
+      stripeLink: "https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j",
+      description: "Fortune 100 leadership strategies for executive presence.",
+      students: "168 enrolled",
+      image: "/course-leadership-new.jpg",
       available: true,
       badge: "NEW"
     },
@@ -168,7 +170,7 @@ export default function Home() {
       badge: "NEW"
     },
     {
-       title: "The Executive Energy System™",
+      title: "The Executive Energy System™",
       subtitle: "Peak Performance",
       price: "$197",
       originalPrice: "$395",
@@ -373,7 +375,7 @@ export default function Home() {
             </motion.h1>
             
             <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
-              7 Online Courses to Accelerate Your Career
+              8 Online Courses to Accelerate Your Career
             </p>
             
             <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
@@ -414,7 +416,7 @@ export default function Home() {
                 <p className="text-slate-300 text-sm mt-1">Years Experience</p>
               </div>
               <div className="bg-slate-900/50 backdrop-blur-sm border border-pink-500/30 rounded-lg p-4 text-center">
-                <AnimatedCounter end={7} className="text-3xl md:text-4xl font-bold text-pink-400" />
+                <AnimatedCounter end={8} className="text-3xl md:text-4xl font-bold text-pink-400" />
                 <p className="text-slate-300 text-sm mt-1">Elite Courses</p>
               </div>
               <div className="bg-slate-900/50 backdrop-blur-sm border border-orange-500/30 rounded-lg p-4 text-center">
@@ -787,7 +789,7 @@ export default function Home() {
                   <div className="inline-block bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-purple-400/30">
                     ⭐ PROFESSIONAL
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 7 Courses</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 8 Courses</h3>
                   <p className="text-lg text-slate-300 mb-8">
                     Complete transformation across all areas of your professional life
                   </p>
@@ -799,7 +801,7 @@ export default function Home() {
                   <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span className="font-semibold">All 7 premium courses</span>
+                      <span className="font-semibold">All 8 premium courses</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
@@ -849,7 +851,7 @@ export default function Home() {
                   <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
-                      <span className="font-semibold">All 7 premium courses</span>
+                      <span className="font-semibold">All 8 premium courses</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
@@ -1015,7 +1017,7 @@ export default function Home() {
               href="/bundle/professional"
               className="inline-block bg-white text-red-600 hover:bg-slate-100 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
             >
-              Get All 7 Courses - $797
+              Get All 8 Courses - $797
             </a>
             <p className="text-white/90 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | No Risk</p>
           </div>
