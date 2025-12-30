@@ -254,18 +254,24 @@ export default function MakeFirst1KPage() {
       {/* Promo Video Section */}
       <section className="py-16 md:py-20 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-md mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               See How It Works
             </h2>
             <p className="text-slate-400 text-center mb-8 text-lg">
               Watch this 30-second overview
             </p>
-            <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden">
-              <LazyVimeoPlayer
-                videoId="1150429734"
-                title="Make Your First $1K with AI"
-              />
+            <div className="shadow-2xl border border-slate-700 rounded-2xl overflow-hidden">
+              <div className="relative" style={{paddingBottom: '177.78%'}}>
+                <iframe
+                  src="https://player.vimeo.com/video/1150429734?badge=0&autopause=0&player_id=0&app_id=58479"
+                  className="absolute inset-0 w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  title="Make Your First $1K with AI"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
