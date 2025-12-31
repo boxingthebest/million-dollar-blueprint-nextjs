@@ -56,7 +56,8 @@ export default function Home() {
     "Digital Marketing Mastery": "/courses/marketing",
     "Wealth Building": "/courses/wealth",
     "The Executive Energy System™": "/courses/wellness",
-    "Make Your First $1K with AI": "/courses/make-first-1k-ai"
+    "Make Your First $1K with AI": "/courses/make-first-1k-ai",
+    "Start Your AI Side Hustle": "/courses/ai-side-hustle"
   };
 
   // Courses ordered by purchase psychology and customer journey
@@ -78,6 +79,21 @@ export default function Home() {
       image: "/make-1k-ai-hero-v2.jpg",
       available: true,
       badge: "FEATURED"
+    },
+    {
+      title: "Start Your AI Side Hustle",
+      subtitle: "Make $1K-$3K/Month",
+      price: "$47",
+      originalPrice: "$97",
+      icon: AIResistantIcon,
+      gradient: "from-cyan-500 to-blue-600",
+      bgGradient: "from-cyan-500 to-blue-600",
+      stripeLink: "/courses/ai-side-hustle",
+      description: "The exact system to land paying clients who need AI-powered content. No coding. No tech skills. Just a laptop and a proven system.",
+      students: "New",
+      image: "/ai-side-hustle-hero.jpg",
+      available: true,
+      badge: "NEW"
     },
     {
       title: "AI-Resistant Skills",
