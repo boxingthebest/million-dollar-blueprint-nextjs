@@ -99,18 +99,25 @@ async function main() {
             duration: 480, // 8 minutes
             order: 6,
           },
+          {
+            title: 'BONUS: Building Long-Term Client Relationships',
+            description: 'The secret to recurring revenue: how to keep clients for months and years. Communication strategies, adding unexpected value, and handling problems gracefully.',
+            videoUrl: 'https://player.vimeo.com/video/PLACEHOLDER_BONUS',
+            duration: 360, // 6 minutes
+            order: 7,
+          },
         ],
       },
     },
   })
 
-  console.log(`✅ Module 1 created with 6 lessons`)
+  console.log(`✅ Module 1 created with 7 lessons (6 + 1 bonus)`)
 
   console.log('\n📊 Course Summary:')
   console.log(`   Title: ${course.title}`)
   console.log(`   Modules: 1`)
-  console.log(`   Total Lessons: 6`)
-  console.log(`   Total Duration: ~47 minutes`)
+  console.log(`   Total Lessons: 7 (6 core + 1 bonus)`)
+  console.log(`   Total Duration: ~53 minutes`)
   console.log(`   Price: $${course.price / 100}`)
   console.log('\n✨ Seed completed successfully!')
 }

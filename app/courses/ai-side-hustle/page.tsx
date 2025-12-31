@@ -3,7 +3,7 @@
 import FuturisticBackground from "@/components/FuturisticBackground";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import { motion } from "framer-motion";
-import { Check, ArrowRight, Clock, DollarSign, Zap, ChevronDown, Star, Users, Target, Briefcase, TrendingUp } from "lucide-react";
+import { Check, ArrowRight, Clock, DollarSign, Zap, ChevronDown, Star, Users, Target, Briefcase, TrendingUp, Gift } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -60,6 +60,13 @@ export default function AISideHustlePage() {
       duration: "8 min",
       icon: TrendingUp,
       description: "Client retention strategies. Systems that save time. When to raise prices. Building a real business.",
+    },
+    {
+      number: "BONUS",
+      title: "Building Long-Term Client Relationships",
+      duration: "6 min",
+      icon: Gift,
+      description: "The secret to recurring revenue. Keep clients for months and years. Communication strategies and handling problems gracefully.",
     },
   ];
 
