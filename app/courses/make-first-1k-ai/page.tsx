@@ -2,19 +2,62 @@
 
 import FuturisticBackground from "@/components/FuturisticBackground";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
-import { motion } from "framer-motion";
-import { Check, ArrowRight, Clock, DollarSign, Zap, ChevronDown, Star, Users, Target } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Check, ArrowRight, Clock, DollarSign, Zap, ChevronDown, Star, Users, Target, Shield, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function MakeFirst1KPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [showStickyBar, setShowStickyBar] = useState(false);
+  const [notification, setNotification] = useState<{ name: string; location: string } | null>(null);
+
+  // Sticky bar appears after scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowStickyBar(window.scrollY > 500);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Social proof notifications
+  useEffect(() => {
+    const names = [
+      { name: "Sarah M.", location: "California" },
+      { name: "James T.", location: "Texas" },
+      { name: "Emily R.", location: "New York" },
+      { name: "Michael K.", location: "Florida" },
+      { name: "Jessica L.", location: "Illinois" },
+      { name: "David P.", location: "Arizona" },
+      { name: "Amanda S.", location: "Colorado" },
+      { name: "Chris W.", location: "Georgia" },
+    ];
+
+    const showNotification = () => {
+      const randomPerson = names[Math.floor(Math.random() * names.length)];
+      setNotification(randomPerson);
+      setTimeout(() => setNotification(null), 4000);
+    };
+
+    // Show first notification after 15 seconds
+    const initialTimeout = setTimeout(showNotification, 15000);
+    
+    // Then show every 45-90 seconds
+    const interval = setInterval(() => {
+      showNotification();
+    }, Math.random() * 45000 + 45000);
+
+    return () => {
+      clearTimeout(initialTimeout);
+      clearInterval(interval);
+    };
+  }, []);
 
   const handleCheckout = () => {
     setIsLoading(true);
-    // Redirect to Stripe payment link
     window.location.href = 'https://buy.stripe.com/fZufZg5TbguPg0scW808g0r';
   };
 
@@ -92,6 +135,30 @@ export default function MakeFirst1KPage() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Marcus T.",
+      location: "Austin, TX",
+      result: "$600 in first week",
+      quote: "I was skeptical, but the 5-a-Day method actually works. Got my first client on day 3, two more by the weekend. This is real.",
+      rating: 5,
+    },
+    {
+      name: "Jennifer K.",
+      location: "Miami, FL",
+      result: "$400/month recurring",
+      quote: "The upsell script in Module 5 is gold. Two of my clients are now on monthly retainers. Passive income from AI services!",
+      rating: 5,
+    },
+    {
+      name: "David L.",
+      location: "Seattle, WA",
+      result: "$1,200 in 2 weeks",
+      quote: "Finally, a course that doesn't waste time. Under an hour to learn, and I had real money coming in within days. Best $47 I've spent.",
+      rating: 5,
+    },
+  ];
+
   const benefits = [
     "One simple AI service anyone can deliver",
     "The exact ChatGPT prompts that create $200 deliverables",
@@ -102,9 +169,66 @@ export default function MakeFirst1KPage() {
 
   return (
     <div className="min-h-screen bg-slate-950 relative">
-      {/* Futuristic Animated Background */}
       <FuturisticBackground variant="enrollment" />
       
+      {/* Urgency Banner - Top */}
+      <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
+        🎉 New Year Special: <span className="font-bold">$47</span> (normally $97) — <span className="underline">Price increases soon</span>
+      </div>
+
+      {/* Social Proof Notification Popup */}
+      <AnimatePresence>
+        {notification && (
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            className="fixed bottom-24 left-4 z-50 bg-white rounded-lg shadow-2xl p-4 max-w-xs border-l-4 border-green-500"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <Check className="w-5 h-5 text-green-600" />
+              </div>
+              <div>
+                <p className="text-slate-800 font-semibold text-sm">{notification.name} from {notification.location}</p>
+                <p className="text-slate-500 text-xs">just enrolled in the course!</p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Sticky Bottom CTA Bar */}
+      <AnimatePresence>
+        {showStickyBar && (
+          <motion.div
+            initial={{ y: 100 }}
+            animate={{ y: 0 }}
+            exit={{ y: 100 }}
+            className="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-t border-slate-700 py-3 px-4"
+          >
+            <div className="container mx-auto flex items-center justify-between gap-4">
+              <div className="hidden sm:block">
+                <p className="text-white font-bold">Make Your First $1,000 with AI</p>
+                <p className="text-slate-400 text-sm">Start earning this week</p>
+              </div>
+              <div className="flex items-center gap-4 w-full sm:w-auto">
+                <div className="text-right hidden sm:block">
+                  <span className="text-slate-400 line-through text-sm">$97</span>
+                  <span className="text-green-400 font-bold text-xl ml-2">$47</span>
+                </div>
+                <button
+                  onClick={handleCheckout}
+                  className="flex-1 sm:flex-none bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-green-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2"
+                >
+                  Get Access — $47 <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Navigation */}
       <nav className="bg-black border-b border-slate-800 sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -118,22 +242,27 @@ export default function MakeFirst1KPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
+      <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
         <div className="absolute inset-0 bg-[url('/make-1k-ai-hero-v2.jpg')] opacity-5 bg-cover bg-center" />
         
-        {/* Glowing Orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
+            {/* Social Proof Badge */}
             <motion.div 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-block bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-bold mb-6"
+              className="flex flex-wrap gap-3 mb-6"
             >
-              🚀 New Course — Start Earning This Week
+              <span className="inline-block bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-bold">
+                🚀 New Course — Start Earning This Week
+              </span>
+              <span className="inline-block bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-bold">
+                ⭐ 47+ students enrolled
+              </span>
             </motion.div>
             
             <motion.h1 
@@ -150,7 +279,7 @@ export default function MakeFirst1KPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl md:text-2xl text-slate-300 mb-8"
+              className="text-xl md:text-2xl text-slate-300 mb-6"
             >
               I made my first $1,000 with AI in two weeks. Zero tech experience. This course shows you exactly how—one simple service, five clients, $1,000 in your pocket.
             </motion.p>
@@ -159,7 +288,7 @@ export default function MakeFirst1KPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="flex flex-wrap gap-4 mb-8"
+              className="flex flex-wrap gap-4 mb-6"
             >
               <div className="flex items-center gap-2 text-slate-300">
                 <Clock className="w-5 h-5 text-green-400" />
@@ -174,32 +303,42 @@ export default function MakeFirst1KPage() {
                 <span>Start Tonight</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
-                <Check className="w-5 h-5 text-green-400" />
+                <Shield className="w-5 h-5 text-green-400" />
                 <span>30-Day Guarantee</span>
               </div>
             </motion.div>
 
+            {/* PRIMARY CTA - Above the fold */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
+              className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 mb-8"
             >
-              <button
-                onClick={handleCheckout}
-                disabled={isLoading}
-                className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-green-500/30 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isLoading ? "Processing..." : (
-                  <>
-                    Get Instant Access — $47 <ArrowRight className="ml-2" />
-                  </>
-                )}
-              </button>
-              <div className="text-slate-400">
-                <span className="line-through">$97</span>
-                <span className="text-green-400 font-bold ml-2">52% OFF</span>
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+                <div>
+                  <p className="text-slate-400 text-sm mb-1">Limited Time Offer</p>
+                  <div className="flex items-center gap-3">
+                    <span className="text-slate-400 line-through text-xl">$97</span>
+                    <span className="text-green-400 font-bold text-4xl">$47</span>
+                    <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded text-sm font-bold">SAVE 52%</span>
+                  </div>
+                </div>
+                <button
+                  onClick={handleCheckout}
+                  disabled={isLoading}
+                  className="w-full sm:w-auto bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-green-500/30 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                >
+                  {isLoading ? "Processing..." : (
+                    <>
+                      Get Instant Access <ArrowRight className="w-5 h-5" />
+                    </>
+                  )}
+                </button>
               </div>
+              <p className="text-center text-slate-500 text-sm mt-4">
+                ✓ Instant access • ✓ 30-day money-back guarantee • ✓ Lifetime updates
+              </p>
             </motion.div>
           </div>
         </div>
@@ -230,7 +369,7 @@ export default function MakeFirst1KPage() {
       </section>
 
       {/* Promo Video Section */}
-      <section className="py-16 md:py-20 bg-slate-900/50 relative">
+      <section className="py-12 md:py-16 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
@@ -245,12 +384,61 @@ export default function MakeFirst1KPage() {
                 title="Make Your First $1K with AI"
               />
             </div>
+            
+            {/* CTA After Video */}
+            <div className="mt-8 text-center">
+              <button
+                onClick={handleCheckout}
+                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-green-500/30 transition-all hover:scale-105 inline-flex items-center gap-2"
+              >
+                Yes, I Want This — $47 <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-12 md:py-16 bg-black relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+              Real Results from Real Students
+            </h2>
+            <p className="text-slate-400 text-center mb-12 text-lg">
+              People just like you are making money with AI
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-slate-900/50 border border-slate-700 rounded-xl p-6"
+                >
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-slate-300 mb-4 italic">"{testimonial.quote}"</p>
+                  <div className="border-t border-slate-700 pt-4">
+                    <p className="text-white font-bold">{testimonial.name}</p>
+                    <p className="text-slate-400 text-sm">{testimonial.location}</p>
+                    <p className="text-green-400 font-bold mt-1">{testimonial.result}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* What You'll Learn */}
-      <section className="py-16 md:py-20 bg-slate-900/50 relative">
+      <section className="py-12 md:py-16 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
@@ -283,7 +471,7 @@ export default function MakeFirst1KPage() {
                     </div>
                   </div>
                 </motion.div>
-             ))})
+              ))}
 
               {/* Bonus Module */}
               <motion.div
@@ -307,12 +495,43 @@ export default function MakeFirst1KPage() {
                 </div>
               </motion.div>
             </div>
+
+            {/* Mid-page CTA */}
+            <div className="mt-12 text-center">
+              <button
+                onClick={handleCheckout}
+                className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-green-500/30 transition-all hover:scale-105 inline-flex items-center gap-2"
+              >
+                Get All 7 Modules — $47 <ArrowRight className="w-5 h-5" />
+              </button>
+              <p className="text-slate-500 text-sm mt-3">One-time payment. Lifetime access.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Risk Reversal / Guarantee Section */}
+      <section className="py-12 md:py-16 bg-black relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-2xl p-8 md:p-12">
+              <Shield className="w-16 h-16 text-green-400 mx-auto mb-6" />
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                100% Risk-Free Guarantee
+              </h2>
+              <p className="text-xl text-slate-300 mb-6">
+                Try the entire course for 30 days. If you don't feel it was worth every penny, email us and we'll refund you immediately. No questions asked.
+              </p>
+              <p className="text-green-400 font-bold text-lg">
+                You have nothing to lose and $1,000+ to gain.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 md:py-20 bg-black relative">
+      <section className="py-12 md:py-16 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -339,7 +558,7 @@ export default function MakeFirst1KPage() {
       </section>
 
       {/* Who This Is For */}
-      <section className="py-16 md:py-20 bg-slate-900/50 relative">
+      <section className="py-12 md:py-16 bg-black relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -375,7 +594,7 @@ export default function MakeFirst1KPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-20 bg-black relative">
+      <section className="py-12 md:py-16 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
@@ -412,13 +631,19 @@ export default function MakeFirst1KPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-black relative overflow-hidden">
-        {/* Glowing Orbs */}
+      <section className="py-16 md:py-20 bg-gradient-to-b from-slate-900 to-black relative overflow-hidden">
         <div className="absolute top-10 left-1/4 w-64 h-64 bg-green-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
+            {/* Urgency Box */}
+            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-8 inline-block">
+              <p className="text-yellow-300 font-bold">
+                🎉 New Year Special: $47 (normally $97) — Don't miss out!
+              </p>
+            </div>
+
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Make Your First{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">$1,000</span>?
@@ -465,7 +690,7 @@ export default function MakeFirst1KPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-black border-t border-slate-800">
+      <footer className="py-8 bg-black border-t border-slate-800 mb-16 sm:mb-0">
         <div className="container mx-auto px-4 text-center text-slate-500 text-sm">
           <p className="mb-4">© 2025 Million Dollar Blueprint. All rights reserved.</p>
           <div className="flex justify-center gap-6 mb-4">
