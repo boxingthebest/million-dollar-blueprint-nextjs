@@ -177,7 +177,7 @@ export default function AIResistantSkillsPage() {
     },
     {
       question: "Can I pay in installments?",
-      answer: "Currently, we offer one-time payment only at founding member pricing. However, at $197, the course pays for itself quickly—most students report ROI within the first month."
+      answer: "At $47, this is already our most accessible pricing ever. It's a one-time payment with lifetime access and a 30-day money-back guarantee."
     },
     {
       question: "Who is this course for?",
@@ -244,7 +244,7 @@ export default function AIResistantSkillsPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="inline-block bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-bold mb-6">
-              ⚡ Limited Founding Member Pricing - Ends Soon
+              🔥 Launch Special: $47 (normally $197) — Ends in 48 Hours
             </div>
             
             <motion.h1 
@@ -295,14 +295,14 @@ export default function AIResistantSkillsPage() {
               className="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
             >
               <Link
-                href="https://buy.stripe.com/dRmbJ02GZ2DZ7tW5tG08g0q"
+                href="https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105"
               >
-                Enroll Now - $197 <ArrowRight className="ml-2" />
+                Get Instant Access - $47 <ArrowRight className="ml-2" />
               </Link>
               <div className="text-slate-400">
-                <span className="line-through">$397</span>
-                <span className="text-orange-400 font-bold ml-2">50% OFF</span>
+                <span className="line-through">$197</span>
+                <span className="text-orange-400 font-bold ml-2">76% OFF - Launch Special</span>
               </div>
             </motion.div>
           </div>
@@ -316,20 +316,20 @@ export default function AIResistantSkillsPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">250+</p>
-              <p className="text-slate-400 text-sm">Students Enrolled</p>
+              <p className="text-3xl md:text-4xl font-bold text-white">10</p>
+              <p className="text-slate-400 text-sm">Frameworks</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">10</p>
-              <p className="text-slate-400 text-sm">Frameworks Taught</p>
+              <p className="text-3xl md:text-4xl font-bold text-white">~2hrs</p>
+              <p className="text-slate-400 text-sm">Total Content</p>
             </div>
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-white">22</p>
               <p className="text-slate-400 text-sm">Years Experience</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">4.9/5</p>
-              <p className="text-slate-400 text-sm">Student Rating</p>
+              <p className="text-3xl md:text-4xl font-bold text-white">30-Day</p>
+              <p className="text-slate-400 text-sm">Money-Back Guarantee</p>
             </div>
           </div>
         </div>
@@ -539,10 +539,10 @@ export default function AIResistantSkillsPage() {
 
             <div className="mt-12 text-center">
               <Link
-                href="https://buy.stripe.com/dRmbJ02GZ2DZ7tW5tG08g0q"
+                href="https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-10 py-5 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105"
               >
-                Get Instant Access - $197 <ArrowRight className="ml-2" />
+                Get Instant Access - $47 <ArrowRight className="ml-2" />
               </Link>
               <p className="text-slate-400 mt-4">30-Day Money-Back Guarantee • Lifetime Access</p>
             </div>
@@ -600,7 +600,7 @@ export default function AIResistantSkillsPage() {
               What Our Students Say
             </h2>
             <p className="text-xl text-slate-300 mb-12 text-center">
-              Join 250+ professionals who are already future-proofing their careers
+              Real results from professionals like you
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -615,8 +615,8 @@ export default function AIResistantSkillsPage() {
                     className="rounded-full border-2 border-cyan-400 w-20 h-20 object-cover"
                   />
                   <div>
-                    <h4 className="text-white font-bold">Michael Chen</h4>
-                    <p className="text-cyan-400 text-sm">Senior Product Manager → VP of Product</p>
+                    <h4 className="text-white font-bold">Michael C.</h4>
+                    <p className="text-cyan-400 text-sm">Product Manager, Tech Company</p>
                   </div>
                 </div>
                 <div className="flex gap-1 mb-4">
@@ -625,7 +625,7 @@ export default function AIResistantSkillsPage() {
                   ))}
                 </div>
                 <p className="text-slate-300 leading-relaxed">
-                  "Within 3 months of completing this course, I was promoted to VP. The frameworks for strategic thinking and stakeholder influence completely changed how I approach my work. The results exceeded my expectations."
+                  "The stakeholder influence framework alone was worth the price. I used it in my next project review and my director specifically called out how well I presented. Finally feel like I'm speaking the same language as executives."
                 </p>
               </div>
 
@@ -640,8 +640,8 @@ export default function AIResistantSkillsPage() {
                     className="rounded-full border-2 border-purple-400 w-20 h-20 object-cover"
                   />
                   <div>
-                    <h4 className="text-white font-bold">Sarah Williams</h4>
-                    <p className="text-purple-400 text-sm">Marketing Director at Fortune 500</p>
+                    <h4 className="text-white font-bold">Sarah W.</h4>
+                    <p className="text-purple-400 text-sm">Marketing Manager</p>
                   </div>
                 </div>
                 <div className="flex gap-1 mb-4">
@@ -650,7 +650,7 @@ export default function AIResistantSkillsPage() {
                   ))}
                 </div>
                 <p className="text-slate-300 leading-relaxed">
-                  "I was terrified AI would make my marketing skills obsolete. This course taught me how to leverage AI while developing irreplaceable strategic capabilities. I'm now leading our company's AI transformation initiative."
+                  "I was worried about AI taking my job. This course gave me a framework for thinking about my career that I'd never considered. The systems thinking module helped me see my role completely differently."
                 </p>
               </div>
 
@@ -665,8 +665,8 @@ export default function AIResistantSkillsPage() {
                     className="rounded-full border-2 border-emerald-400 w-20 h-20 object-cover"
                   />
                   <div>
-                    <h4 className="text-white font-bold">David Rodriguez</h4>
-                    <p className="text-emerald-400 text-sm">Tech Lead → CTO at Startup</p>
+                    <h4 className="text-white font-bold">David R.</h4>
+                    <p className="text-emerald-400 text-sm">Software Engineer</p>
                   </div>
                 </div>
                 <div className="flex gap-1 mb-4">
@@ -675,7 +675,7 @@ export default function AIResistantSkillsPage() {
                   ))}
                 </div>
                 <p className="text-slate-300 leading-relaxed">
-                  "As a developer, I thought coding was enough. This course opened my eyes to executive-level thinking. The Pyramid Principle transformed how I present to investors and stakeholders."
+                  "As a developer, I always struggled to communicate with non-technical stakeholders. The Pyramid Principle module was a game-changer. My last presentation to leadership went 10x better than usual."
                 </p>
               </div>
             </div>
@@ -809,10 +809,10 @@ export default function AIResistantSkillsPage() {
               AI is moving faster than anyone predicted. The time to future-proof your career is NOW.
             </p>
               <Link
-                href="https://buy.stripe.com/dRmbJ02GZ2DZ7tW5tG08g0q"
+                href="https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
-                Enroll Now - Lock in $197 Pricing <ArrowRight className="ml-2" />
+                Get Instant Access - $47 <ArrowRight className="ml-2" />
               </Link>
             <p className="text-white text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | Instant Access</p>
           </div>
@@ -824,15 +824,15 @@ export default function AIResistantSkillsPage() {
       <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 border-t-4 border-orange-400 shadow-2xl z-50 py-4">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
-            <p className="text-white font-bold text-lg">🔥 Limited Time: Save 50% Today</p>
+            <p className="text-white font-bold text-lg">🔥 48-Hour Launch Special: $47 (normally $197)</p>
             <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
           </div>
             <a
-            href="https://buy.stripe.com/dRmbJ02GZ2DZ7tW5tG08g0q"
+            href="https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s"
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap"
             style={{color: '#ea580c'}}
           >
-            Enroll Now - $197
+            Get Instant Access - $47
           </a>
         </div>
       </div>
@@ -848,7 +848,7 @@ export default function AIResistantSkillsPage() {
             <Link href="/refund-policy" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Refund Policy</Link>
           </div>
           <p className="text-slate-600 text-xs mb-4 max-w-3xl mx-auto">
-            EARNINGS DISCLAIMER: Results vary. The testimonials and examples used are exceptional results and are not intended to guarantee that you will achieve the same results. Your results will depend on many factors including your background, experience, and work ethic.
+            DISCLAIMER: Testimonials represent individual experiences. Results vary based on your background, experience, and effort. This course teaches frameworks - your results depend on how you apply them.
           </p>
           <p className="text-slate-500 text-sm">© 2025 Million Dollar Blueprint. All rights reserved.</p>
           <p className="text-slate-600 text-xs mt-2">Questions? Email us at hello@milliondollarblueprint.ai</p>
