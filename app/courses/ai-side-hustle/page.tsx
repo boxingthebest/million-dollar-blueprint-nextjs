@@ -15,7 +15,7 @@ export default function AISideHustlePage() {
   const handleCheckout = () => {
     setIsLoading(true);
     // Redirect to Stripe payment link - will be updated with actual link
-    window.location.href = 'https://buy.stripe.com/7sYfZgftLguPcOg1dq';
+    window.location.href = 'https://buy.stripe.com/7sYfZgftLguPcOg1dq08g0u';
   };
 
   const modules = [
