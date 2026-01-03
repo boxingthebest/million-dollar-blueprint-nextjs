@@ -106,6 +106,8 @@ export async function POST(request: NextRequest) {
           "executive-presence-course": ["executive-presence-course"],
           // Make Your First $1K with AI Course ($47)
           "make-first-1k-ai": ["make-first-1k-ai"],
+          // AI Side Hustle Course ($47)
+          "ai-side-hustle": ["ai-side-hustle"],
         }
 
         const courseSlugs = productToCourses[metadata.productKey]
