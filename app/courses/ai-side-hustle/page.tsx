@@ -15,7 +15,7 @@ export default function AISideHustlePage() {
   const handleCheckout = () => {
     setIsLoading(true);
     // Redirect to Stripe payment link - will be updated with actual link
-    window.location.href = 'https://buy.stripe.com/PLACEHOLDER_AI_SIDE_HUSTLE';
+    window.location.href = 'https://buy.stripe.com/7sYfZgftLguPcOg1dq';
   };
 
   const modules = [
