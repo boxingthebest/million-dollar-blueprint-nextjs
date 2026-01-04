@@ -237,12 +237,16 @@ export default function GetPaidTrainAIPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-12 md:py-20 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
+        <div className="absolute inset-0 bg-[url('/get-paid-train-ai-hero.jpg')] opacity-10 bg-cover bg-center" />
+        
+        {/* Glowing Orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <div>
+          <div className="max-w-4xl mx-auto">
             {/* Social Proof Badge */}
             <motion.div 
               initial={{ opacity: 0, y: -20 }}
@@ -330,26 +334,6 @@ export default function GetPaidTrainAIPage() {
               <p className="text-center text-slate-500 text-sm mt-4">
                 ✓ Instant access • ✓ 30-day money-back guarantee • ✓ Lifetime updates
               </p>
-            </motion.div>
-            </div>
-            
-            {/* Hero Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-              className="hidden md:block"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-2xl blur-3xl" />
-                <Image
-                  src="/get-paid-train-ai-hero.jpg"
-                  alt="Get Paid to Train AI"
-                  width={500}
-                  height={600}
-                  className="relative rounded-2xl shadow-2xl shadow-orange-500/20 object-cover"
-                />
-              </div>
             </motion.div>
           </div>
         </div>
