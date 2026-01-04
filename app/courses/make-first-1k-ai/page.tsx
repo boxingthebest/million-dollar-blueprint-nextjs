@@ -173,7 +173,7 @@ export default function MakeFirst1KPage() {
       
       {/* Urgency Banner - Top */}
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
-        🎉 New Year Special: <span className="font-bold">$47</span> (normally $97) — <span className="underline">Price increases soon</span>
+        🔥 LAUNCH SALE: <span className="font-bold">$197 → $47</span> (76% OFF) — <span className="underline">Ends January 12th at Midnight</span>
       </div>
 
       {/* Social Proof Notification Popup */}
@@ -214,7 +214,7 @@ export default function MakeFirst1KPage() {
               </div>
               <div className="flex items-center gap-4 w-full sm:w-auto">
                 <div className="text-right hidden sm:block">
-                  <span className="text-slate-400 line-through text-sm">$97</span>
+                  <span className="text-slate-400 line-through text-sm">$197</span>
                   <span className="text-green-400 font-bold text-xl ml-2">$47</span>
                 </div>
                 <button
@@ -319,9 +319,9 @@ export default function MakeFirst1KPage() {
                 <div>
                   <p className="text-green-400 text-sm mb-1 font-bold">$491 VALUE → Just $47</p>
                   <div className="flex items-center gap-3">
-                    <span className="text-slate-400 line-through text-xl">$97</span>
+                    <span className="text-slate-400 line-through text-xl">$197</span>
                     <span className="text-green-400 font-bold text-4xl">$47</span>
-                    <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded text-sm font-bold">SAVE 90%</span>
+                    <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded text-sm font-bold">SAVE 76%</span>
                   </div>
                 </div>
                 <button
@@ -640,7 +640,7 @@ export default function MakeFirst1KPage() {
             {/* Urgency Box */}
             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-8 inline-block">
               <p className="text-yellow-300 font-bold">
-                🎉 New Year Special: $47 (normally $97) — Don't miss out!
+                🔥 FINAL CHANCE: $197 → $47 (76% OFF) — Sale Ends January 12th!
               </p>
             </div>
 
@@ -667,7 +667,7 @@ export default function MakeFirst1KPage() {
             </button>
 
             <p className="text-slate-500 text-sm mb-8">
-              30-day money-back guarantee • Instant access • Lifetime updates
+              100% Risk-Free: Complete all modules. No client in 30 days? Full refund. • Instant access • Lifetime updates
             </p>
 
             {/* Trust Elements */}
