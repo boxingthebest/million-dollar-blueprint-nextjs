@@ -168,7 +168,7 @@ export default function GetPaidTrainAIPage() {
       
       {/* Urgency Banner - Top */}
       <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
-        ⏰ 48-HOUR SALE: <span className="font-bold">$47</span> (normally $197) — <span className="underline">Ends Monday at Midnight</span>
+        🔥 LAUNCH SALE: <span className="font-bold">$47</span> (normally $197) — <span className="underline">Ends January 12th</span>
       </div>
 
       {/* Social Proof Notification Popup */}
@@ -205,7 +205,7 @@ export default function GetPaidTrainAIPage() {
             <div className="container mx-auto flex items-center justify-between gap-4">
               <div className="hidden sm:block">
                 <p className="text-white font-bold">Get Paid to Train AI</p>
-                <p className="text-slate-400 text-sm">48-hour sale ends soon</p>
+                <p className="text-slate-400 text-sm">Sale ends January 12th</p>
               </div>
               <div className="flex items-center gap-4 w-full sm:w-auto">
                 <div className="text-right hidden sm:block">
@@ -249,7 +249,7 @@ export default function GetPaidTrainAIPage() {
               className="flex flex-wrap gap-3 mb-6"
             >
               <span className="inline-block bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-bold">
-                🔥 48-HOUR SALE
+                🔥 LAUNCH SALE
               </span>
               <span className="inline-block bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-bold">
                 ⭐ Limited Time Offer
@@ -307,7 +307,7 @@ export default function GetPaidTrainAIPage() {
             >
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
                 <div>
-                  <p className="text-orange-400 text-sm mb-1 font-bold">⏰ 48-HOUR SALE</p>
+                  <p className="text-orange-400 text-sm mb-1 font-bold">🔥 LAUNCH SALE</p>
                   <div className="flex items-center gap-3">
                     <span className="text-slate-400 line-through text-xl">$197</span>
                     <span className="text-green-400 font-bold text-4xl">$47</span>
@@ -522,7 +522,7 @@ export default function GetPaidTrainAIPage() {
               >
                 Get All 6 Modules — $47 <ArrowRight className="w-5 h-5" />
               </button>
-              <p className="text-slate-500 text-sm mt-3">One-time payment. Lifetime access. Sale ends Monday.</p>
+              <p className="text-slate-500 text-sm mt-3">One-time payment. Lifetime access. Sale ends January 12th.</p>
             </div>
           </div>
         </div>
@@ -658,7 +658,7 @@ export default function GetPaidTrainAIPage() {
             {/* Urgency Box */}
             <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg p-4 mb-8 inline-block">
               <p className="text-orange-300 font-bold">
-                ⏰ 48-HOUR SALE: $197 → $47 — Ends Monday at Midnight!
+                🔥 LAUNCH SALE: $197 → $47 — Ends January 12th!
               </p>
             </div>
 
@@ -685,7 +685,7 @@ export default function GetPaidTrainAIPage() {
             </button>
 
             <p className="text-slate-500 text-sm mb-8">
-              ⏰ Sale ends Monday • 30-day money-back guarantee • Instant access
+              🔥 Sale ends January 12th • 30-day money-back guarantee • Instant access
             </p>
 
             {/* Trust Elements */}
