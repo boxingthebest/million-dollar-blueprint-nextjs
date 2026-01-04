@@ -49,6 +49,7 @@ export default function Home() {
   }, []);
 
   const courseUrlMap: Record<string, string> = {
+    "Get Paid to Train AI": "/courses/get-paid-train-ai",
     "AI-Resistant Skills": "/courses/ai-resistant-skills",
     "Executive Presence": "/courses/executive-presence",
     "Sales Mastery": "/courses/sales",
