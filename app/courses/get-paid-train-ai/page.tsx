@@ -79,10 +79,10 @@ export default function GetPaidTrainAIPage() {
     },
     {
       number: 3,
-      title: "Passing the Tests",
+      title: "Passing the Tests (The Game-Changer)",
       duration: "10 min",
       icon: Shield,
-      description: "Our proven framework for acing the qualification tests. Real examples, common traps to avoid, and the exact strategies our students use to get accepted on their first try.",
+      description: "This is why most people fail—and why you won't. Our proven framework for acing the qualification tests on your first try. Real examples, common traps, and the exact strategies that got our students accepted when others couldn't.",
     },
     {
       number: 4,
@@ -271,7 +271,7 @@ export default function GetPaidTrainAIPage() {
               transition={{ delay: 0.1 }}
               className="text-xl md:text-2xl text-slate-300 mb-6"
             >
-              What Forbes calls the "hidden job market of the AI era" is hiring NOW. Learn how to make $50-$200/hour training AI models for companies like Google, Apple, and Microsoft. No tech skills required.
+              700,000+ people have signed up for AI training platforms. Most fail the assessments and never get paid. This course shows you exactly how to pass the tests, get accepted, and start earning $50-$200/hour. No tech skills required.
             </motion.p>
 
             <motion.div 
@@ -363,7 +363,7 @@ export default function GetPaidTrainAIPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
-              The Opportunity Everyone's Talking About
+              The Opportunity Is Real. Getting In Is the Hard Part.
             </h2>
             
             <div className="space-y-6">
@@ -383,7 +383,7 @@ export default function GetPaidTrainAIPage() {
             </div>
             
             <p className="text-center text-orange-400 font-bold text-xl mt-8">
-              This course shows you exactly how to get in.
+              This course shows you how to pass the assessments and actually get paid.
             </p>
           </div>
         </div>
@@ -461,10 +461,10 @@ export default function GetPaidTrainAIPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-              Your Complete Roadmap
+              Your Complete Roadmap to Getting Accepted & Paid
             </h2>
             <p className="text-slate-400 text-center mb-12 text-lg">
-              5 modules + bonus. Under 2 hours. Everything you need to start earning.
+              5 modules + bonus. Under 2 hours. The exact system to pass assessments and start earning.
             </p>
 
             <div className="space-y-6">

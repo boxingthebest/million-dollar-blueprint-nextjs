@@ -74,7 +74,7 @@ export default function Home() {
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
       stripeLink: "/courses/get-paid-train-ai",
-      description: "What Forbes calls the 'hidden job market of the AI era.' Learn how to make $50-$200/hour training AI models. No tech skills required.",
+      description: "700K+ people signed up. Most fail the assessments. This course shows you how to pass the tests and start earning $50-$200/hour training AI.",
       students: "New",
       image: "/get-paid-train-ai-hero.jpg",
       available: true,
