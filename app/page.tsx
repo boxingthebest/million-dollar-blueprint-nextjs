@@ -66,6 +66,21 @@ export default function Home() {
   const courses = [
     // ROW 1 - Best Sellers
     {
+      title: "Get Paid to Train AI",
+      subtitle: "$50-$200/Hour",
+      price: "$47",
+      originalPrice: "$197",
+      icon: AIResistantIcon,
+      gradient: "from-orange-500 to-red-600",
+      bgGradient: "from-orange-500 to-red-600",
+      stripeLink: "/courses/get-paid-train-ai",
+      description: "What Forbes calls the 'hidden job market of the AI era.' Learn how to make $50-$200/hour training AI models. No tech skills required.",
+      students: "New",
+      image: "/get-paid-train-ai-hero.jpg",
+      available: true,
+      badge: "🔥 HOT"
+    },
+    {
       title: "Make Your First $1K with AI",
       subtitle: "Start Earning This Week",
       price: "$47",
