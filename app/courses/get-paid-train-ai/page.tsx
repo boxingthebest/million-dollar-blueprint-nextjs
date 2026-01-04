@@ -59,7 +59,7 @@ export default function GetPaidTrainAIPage() {
   const handleCheckout = () => {
     setIsLoading(true);
     // TODO: Replace with actual Stripe checkout link
-    window.location.href = 'https://buy.stripe.com/REPLACE_WITH_ACTUAL_LINK';
+    window.location.href = 'https://buy.stripe.com/14A00i81j6Uf29C3ly08g0v';
   };
 
   const modules = [
