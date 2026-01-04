@@ -164,19 +164,19 @@ export default function AISideHustlePage() {
             >
               <div className="flex items-center gap-2 text-slate-300">
                 <Clock className="w-5 h-5 text-cyan-400" />
-                <span>Under 1 Hour</span>
+                <span>7 Video Modules ($397 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <DollarSign className="w-5 h-5 text-cyan-400" />
-                <span>$300-500 Per Client</span>
+                <span>Outreach Scripts ($147 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Zap className="w-5 h-5 text-cyan-400" />
-                <span>Start This Weekend</span>
+                <span>Profile Templates ($97 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Check className="w-5 h-5 text-cyan-400" />
-                <span>30-Day Guarantee</span>
+                <span>100% Risk-Free Guarantee</span>
               </div>
             </motion.div>
 
@@ -193,13 +193,12 @@ export default function AISideHustlePage() {
               >
                 {isLoading ? "Processing..." : (
                   <>
-                    Get Instant Access — $47 <ArrowRight className="ml-2" />
+                    Land Your First Client — $47 <ArrowRight className="ml-2" />
                   </>
                 )}
               </button>
               <div className="text-slate-400">
-                <span className="line-through">$97</span>
-                <span className="text-cyan-400 font-bold ml-2">52% OFF</span>
+                <span className="text-cyan-400 font-bold">$641 VALUE → Just $47</span>
               </div>
             </motion.div>
           </div>
@@ -372,7 +371,7 @@ export default function AISideHustlePage() {
             >
               {isLoading ? "Processing..." : (
                 <>
-                  Get Instant Access — $47 <ArrowRight className="ml-2" />
+                  Land Your First Client — $47 <ArrowRight className="ml-2" />
                 </>
               )}
             </button>
@@ -445,7 +444,7 @@ export default function AISideHustlePage() {
             >
               {isLoading ? "Processing..." : (
                 <>
-                  Get Instant Access — $47 <ArrowRight className="ml-2" />
+                  Land Your First Client — $47 <ArrowRight className="ml-2" />
                 </>
               )}
             </button>

@@ -209,8 +209,8 @@ export default function MakeFirst1KPage() {
           >
             <div className="container mx-auto flex items-center justify-between gap-4">
               <div className="hidden sm:block">
-                <p className="text-white font-bold">Make Your First $1,000 with AI</p>
-                <p className="text-slate-400 text-sm">Start earning this week</p>
+                <p className="text-white font-bold">$491 Value → Just $47</p>
+                <p className="text-slate-400 text-sm">100% Risk-Free Guarantee</p>
               </div>
               <div className="flex items-center gap-4 w-full sm:w-auto">
                 <div className="text-right hidden sm:block">
@@ -221,7 +221,7 @@ export default function MakeFirst1KPage() {
                   onClick={handleCheckout}
                   className="flex-1 sm:flex-none bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-green-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2"
                 >
-                  Get Access — $47 <ArrowRight className="w-4 h-4" />
+                  Make Your First $1K — $47 <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -292,19 +292,19 @@ export default function MakeFirst1KPage() {
             >
               <div className="flex items-center gap-2 text-slate-300">
                 <Clock className="w-5 h-5 text-green-400" />
-                <span>Under 1 Hour</span>
+                <span>6 Video Modules ($297 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <DollarSign className="w-5 h-5 text-green-400" />
-                <span>$200 Per Service</span>
+                <span>Copy-Paste Scripts ($97 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Zap className="w-5 h-5 text-green-400" />
-                <span>Start Tonight</span>
+                <span>Client Templates ($97 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Shield className="w-5 h-5 text-green-400" />
-                <span>30-Day Guarantee</span>
+                <span>100% Risk-Free Guarantee</span>
               </div>
             </motion.div>
 
@@ -317,11 +317,11 @@ export default function MakeFirst1KPage() {
             >
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
                 <div>
-                  <p className="text-slate-400 text-sm mb-1">Limited Time Offer</p>
+                  <p className="text-green-400 text-sm mb-1 font-bold">$491 VALUE → Just $47</p>
                   <div className="flex items-center gap-3">
                     <span className="text-slate-400 line-through text-xl">$97</span>
                     <span className="text-green-400 font-bold text-4xl">$47</span>
-                    <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded text-sm font-bold">SAVE 52%</span>
+                    <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded text-sm font-bold">SAVE 90%</span>
                   </div>
                 </div>
                 <button
@@ -331,13 +331,13 @@ export default function MakeFirst1KPage() {
                 >
                   {isLoading ? "Processing..." : (
                     <>
-                      Get Instant Access <ArrowRight className="w-5 h-5" />
+                      Make Your First $1K <ArrowRight className="w-5 h-5" />
                     </>
                   )}
                 </button>
               </div>
               <p className="text-center text-slate-500 text-sm mt-4">
-                ✓ Instant access • ✓ 30-day money-back guarantee • ✓ Lifetime updates
+                100% Risk-Free: If you don't land your first client, get every penny back.
               </p>
             </motion.div>
           </div>
@@ -661,7 +661,7 @@ export default function MakeFirst1KPage() {
             >
               {isLoading ? "Processing..." : (
                 <>
-                  Get Instant Access — $47 <ArrowRight className="ml-2 w-6 h-6" />
+                  Make Your First $1K — $47 <ArrowRight className="ml-2 w-6 h-6" />
                 </>
               )}
             </button>

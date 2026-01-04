@@ -202,17 +202,17 @@ export default function AIResistantSkillsPage() {
   ];
 
   const deliverables = [
-    "10 video lessons (~10 min each) with proprietary frameworks",
-    "BONUS: Executive Interview Mastery video lesson",
-    "5 downloadable PDF toolkits with templates & worksheets",
-    "Complete Course Blueprints - All 10 frameworks reference guide",
-    "Strategic Thinking Toolkit - Diagnosis & System Mapping",
-    "Influence & Communication Blueprint - Commanding the Room",
-    "Decision-Making Toolkit - Uncertainty & Risk frameworks",
-    "Executive Interview Mastery Playbook",
-    "Real case studies from leading companies",
-    "Action steps after every lesson",
-    "Lifetime access to all future updates"
+    { item: "10 video lessons (~10 min each) with proprietary frameworks", value: "$497 value" },
+    { item: "BONUS: Executive Interview Mastery video lesson", value: "$97 value" },
+    { item: "5 downloadable PDF toolkits with templates & worksheets", value: "$197 value" },
+    { item: "Complete Course Blueprints - All 10 frameworks reference guide", value: "Included" },
+    { item: "Strategic Thinking Toolkit - Diagnosis & System Mapping", value: "Included" },
+    { item: "Influence & Communication Blueprint - Commanding the Room", value: "Included" },
+    { item: "Decision-Making Toolkit - Uncertainty & Risk frameworks", value: "Included" },
+    { item: "Executive Interview Mastery Playbook", value: "Included" },
+    { item: "Real case studies from leading companies", value: "Priceless" },
+    { item: "Action steps after every lesson", value: "Included" },
+    { item: "Lifetime access to all future updates", value: "$97 value" }
   ];
 
   return (
@@ -272,19 +272,19 @@ export default function AIResistantSkillsPage() {
             >
               <div className="flex items-center gap-2 text-slate-300">
                 <Check className="w-5 h-5 text-cyan-400" />
-                <span>10 Video Lessons + Bonus</span>
+                <span>10 Video Lessons ($497 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Check className="w-5 h-5 text-cyan-400" />
-                <span>5 PDF Toolkits</span>
+                <span>5 PDF Toolkits ($197 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Check className="w-5 h-5 text-cyan-400" />
-                <span>Lifetime Access</span>
+                <span>Bonus Interview Mastery ($97 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Check className="w-5 h-5 text-cyan-400" />
-                <span>30-Day Guarantee</span>
+                <span>Lifetime Updates ($97 value)</span>
               </div>
             </motion.div>
 
@@ -298,7 +298,7 @@ export default function AIResistantSkillsPage() {
                 href="https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105"
               >
-                Get Instant Access - $47 <ArrowRight className="ml-2" />
+                Become Irreplaceable - $47 <ArrowRight className="ml-2" />
               </Link>
               <div className="text-slate-400">
                 <span className="line-through">$197</span>
@@ -492,17 +492,25 @@ export default function AIResistantSkillsPage() {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 text-center">
               Everything You Get Today
             </h2>
-            <p className="text-xl text-slate-300 mb-12 text-center">
+            <p className="text-xl text-slate-300 mb-4 text-center">
               Instant access to the complete AI-Resistant Skills system
             </p>
+            <div className="text-center mb-12">
+              <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">$888 Total Value</span>
+              <span className="text-2xl text-slate-400 mx-3">→</span>
+              <span className="text-4xl font-bold text-orange-400">Just $47</span>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              {deliverables.map((item, idx) => (
+              {deliverables.map((deliverable, idx) => (
                 <div key={idx} className="flex items-start gap-4 bg-slate-900/50 border border-slate-700 rounded-xl p-5">
                   <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Check className="w-5 h-5 text-white" />
                   </div>
-                  <p className="text-white text-lg">{item}</p>
+                  <div className="flex-1">
+                    <p className="text-white text-lg">{deliverable.item}</p>
+                    <p className="text-cyan-400 text-sm font-semibold">{deliverable.value}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -542,9 +550,9 @@ export default function AIResistantSkillsPage() {
                 href="https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-10 py-5 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105"
               >
-                Get Instant Access - $47 <ArrowRight className="ml-2" />
+                Become Irreplaceable - $47 <ArrowRight className="ml-2" />
               </Link>
-              <p className="text-slate-400 mt-4">30-Day Money-Back Guarantee • Lifetime Access</p>
+              <p className="text-slate-400 mt-4">100% Risk-Free: If it doesn't work, get every penny back.</p>
             </div>
           </div>
         </div>
@@ -812,9 +820,9 @@ export default function AIResistantSkillsPage() {
                 href="https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 md:px-12 py-4 md:py-6 rounded-lg text-lg md:text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
               >
-                Get Instant Access - $47 <ArrowRight className="ml-2" />
+                Become Irreplaceable - $47 <ArrowRight className="ml-2" />
               </Link>
-            <p className="text-white text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | Instant Access</p>
+            <p className="text-white text-sm mt-6">100% Risk-Free Guarantee | Lifetime Access | Instant Access</p>
           </div>
         </div>
       </section>
@@ -824,15 +832,15 @@ export default function AIResistantSkillsPage() {
       <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-red-600 border-t-4 border-orange-400 shadow-2xl z-50 py-4">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
-            <p className="text-white font-bold text-lg">🔥 48-Hour Launch Special: $47 (normally $197)</p>
-            <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
+          <p className="text-white font-bold text-lg">🔥 $888 Value → Just $47 (76% OFF)</p>
+            <p className="text-white text-sm">100% Risk-Free Guarantee • Lifetime Access</p>
           </div>
             <a
             href="https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s"
             className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap"
             style={{color: '#ea580c'}}
           >
-            Get Instant Access - $47
+            Become Irreplaceable - $47
           </a>
         </div>
       </div>

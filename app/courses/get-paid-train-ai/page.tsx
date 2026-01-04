@@ -168,7 +168,7 @@ export default function GetPaidTrainAIPage() {
       
       {/* Urgency Banner - Top */}
       <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
-        🔥 LAUNCH SALE: <span className="font-bold">$47</span> (normally $197) — <span className="underline">Ends January 12th</span>
+        🔥 $641 VALUE → Just $47 (93% OFF) — <span className="underline">Sale Ends January 12th</span>
       </div>
 
       {/* Social Proof Notification Popup */}
@@ -204,8 +204,8 @@ export default function GetPaidTrainAIPage() {
           >
             <div className="container mx-auto flex items-center justify-between gap-4">
               <div className="hidden sm:block">
-                <p className="text-white font-bold">Get Paid to Train AI</p>
-                <p className="text-slate-400 text-sm">Sale ends January 12th</p>
+                <p className="text-white font-bold">$641 Value → Just $47</p>
+                <p className="text-slate-400 text-sm">100% Risk-Free Guarantee</p>
               </div>
               <div className="flex items-center gap-4 w-full sm:w-auto">
                 <div className="text-right hidden sm:block">
@@ -216,7 +216,7 @@ export default function GetPaidTrainAIPage() {
                   onClick={handleCheckout}
                   className="flex-1 sm:flex-none bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-orange-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2"
                 >
-                  Get Access — $47 <ArrowRight className="w-4 h-4" />
+                  Start Earning — $47 <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -287,19 +287,19 @@ export default function GetPaidTrainAIPage() {
             >
               <div className="flex items-center gap-2 text-slate-300">
                 <Clock className="w-5 h-5 text-orange-400" />
-                <span>Under 2 Hours</span>
+                <span>5 Video Modules ($297 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <DollarSign className="w-5 h-5 text-orange-400" />
-                <span>$50-$200/Hour</span>
+                <span>Assessment Frameworks ($197 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Zap className="w-5 h-5 text-orange-400" />
-                <span>Start This Week</span>
+                <span>AI Agent Bonus ($147 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Shield className="w-5 h-5 text-orange-400" />
-                <span>30-Day Guarantee</span>
+                <span>100% Risk-Free Guarantee</span>
               </div>
             </motion.div>
 
@@ -326,7 +326,7 @@ export default function GetPaidTrainAIPage() {
                 >
                   {isLoading ? "Processing..." : (
                     <>
-                      Get Instant Access <ArrowRight className="w-5 h-5" />
+                      Start Earning This Week <ArrowRight className="w-5 h-5" />
                     </>
                   )}
                 </button>
@@ -663,7 +663,7 @@ export default function GetPaidTrainAIPage() {
             {/* Urgency Box */}
             <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg p-4 mb-8 inline-block">
               <p className="text-orange-300 font-bold">
-                🔥 LAUNCH SALE: $197 → $47 — Ends January 12th!
+                🔥 $641 VALUE → Just $47 (93% OFF) — Ends January 12th!
               </p>
             </div>
 
@@ -684,13 +684,13 @@ export default function GetPaidTrainAIPage() {
             >
               {isLoading ? "Processing..." : (
                 <>
-                  Get Instant Access — $47 <ArrowRight className="ml-2 w-6 h-6" />
+                  Start Earning This Week — $47 <ArrowRight className="ml-2 w-6 h-6" />
                 </>
               )}
             </button>
 
             <p className="text-slate-500 text-sm mb-8">
-              🔥 Sale ends January 12th • 30-day money-back guarantee • Instant access
+              100% Risk-Free: Complete the course. If you don't land your first gig, get every penny back.
             </p>
 
             {/* Trust Elements */}
