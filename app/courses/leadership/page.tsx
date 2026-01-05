@@ -110,10 +110,10 @@ export default function LeadershipPage() {
             <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
               <div className="text-center mb-6">
                 <div className="inline-block bg-red-500/20 text-red-400 px-4 py-1 rounded-full text-sm font-bold mb-4">50% OFF — ENDS JAN 12</div>
-                <div className="flex items-center justify-center gap-4 mb-2"><span className="text-slate-500 line-through text-2xl">$397</span><span className="text-5xl font-black text-white">$97</span></div>
-                <p className="text-purple-400 font-semibold">Save $300 Today</p>
+                <div className="flex items-center justify-center gap-4 mb-2"><span className="text-slate-500 line-through text-2xl">$495</span><span className="text-5xl font-black text-white">$247</span></div>
+                <p className="text-purple-400 font-semibold">Save $248 Today</p>
               </div>
-              <a href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j" className="block w-full bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white text-center py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25 mb-4">Get Instant Access — $97<ArrowRight className="inline ml-2 w-5 h-5" /></a>
+              <a href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j" className="block w-full bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white text-center py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25 mb-4">Get Instant Access — $247<ArrowRight className="inline ml-2 w-5 h-5" /></a>
               <div className="flex items-center justify-center gap-6 text-sm text-slate-400"><div className="flex items-center gap-2"><Shield className="w-4 h-4" /><span>30-Day Guarantee</span></div><div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Instant Access</span></div></div>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function LeadershipPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">See How It Works</h2><p className="text-slate-400 text-lg">Watch how leadership skills can transform your career</p></div>
           <div className="aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-2xl"><LazyVimeoPlayer videoId="1148769094" /></div>
-          <div className="text-center mt-8"><a href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105">Get Instant Access — $97<ArrowRight className="w-5 h-5" /></a></div>
+          <div className="text-center mt-8"><a href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105">Get Instant Access — $247<ArrowRight className="w-5 h-5" /></a></div>
         </div>
       </section>
 
@@ -211,7 +211,7 @@ export default function LeadershipPage() {
           <div className="inline-block bg-red-500/20 text-red-400 px-6 py-2 rounded-full text-sm font-bold mb-6">⏰ SALE ENDS JANUARY 12TH AT MIDNIGHT</div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to Lead With Influence?</h2>
           <p className="text-xl text-slate-300 mb-8">Join hundreds of leaders who&apos;ve transformed their leadership abilities.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><span className="text-slate-500 line-through text-2xl">$397</span><span className="text-5xl font-black text-white">$97</span><span className="text-purple-400 font-bold">Save $300</span></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><span className="text-slate-500 line-through text-2xl">$495</span><span className="text-5xl font-black text-white">$247</span><span className="text-purple-400 font-bold">Save $248</span></div>
           <a href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25">Get Instant Access Now<ArrowRight className="w-6 h-6" /></a>
         </div>
       </section>
@@ -227,8 +227,8 @@ export default function LeadershipPage() {
         {showStickyBar && (
           <motion.div initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 100, opacity: 0 }} className="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700 py-4 px-4 z-40">
             <div className="max-w-6xl mx-auto flex items-center justify-between">
-              <div className="hidden md:block"><div className="text-white font-bold">Leadership &amp; Influence</div><div className="text-slate-400 text-sm"><span className="line-through">$397</span><span className="text-purple-400 ml-2 font-bold">$97</span></div></div>
-              <a href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j" className="w-full md:w-auto bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-3 rounded-xl font-bold text-center transition-all duration-300">Get Instant Access — $97</a>
+              <div className="hidden md:block"><div className="text-white font-bold">Leadership &amp; Influence</div><div className="text-slate-400 text-sm"><span className="line-through">$495</span><span className="text-purple-400 ml-2 font-bold">$247</span></div></div>
+              <a href="https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j" className="w-full md:w-auto bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-3 rounded-xl font-bold text-center transition-all duration-300">Get Instant Access — $247</a>
             </div>
           </motion.div>
         )}
