@@ -405,7 +405,7 @@ export default function AIResistantSkillsPage() {
             </p>
             <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden">
               <LazyVimeoPlayer
-                videoId="1148769094"
+                videoId="1151726269"
                 title="AI-Resistant Skills Course Overview"
               />
             </div>
