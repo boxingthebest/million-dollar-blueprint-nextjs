@@ -38,14 +38,14 @@ export default function FlagshipBundlePage() {
               Combine <strong className="text-white">AI-Resistant Skills</strong> and <strong className="text-white">Executive Presence</strong> to future-proof your career and command executive-level compensation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-4xl font-bold text-orange-400 mb-1">$397</div>
-                <div className="text-sm text-slate-400">Bundle Price</div>
+              <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-6 text-center shadow-2xl shadow-orange-500/20">
+                <div className="text-sm text-slate-400 mb-1 uppercase tracking-widest">Total Value</div>
+                <div className="text-4xl font-bold text-slate-500 line-through mb-1">$1,297</div>
               </div>
-              <div className="text-slate-400 text-2xl font-bold">vs</div>
-              <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-4xl font-bold text-slate-500 line-through mb-1">$594</div>
-                <div className="text-sm text-slate-400">Individual Price</div>
+              <div className="text-orange-500 text-4xl font-black">→</div>
+              <div className="bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg p-6 text-center shadow-2xl shadow-orange-500/40">
+                <div className="text-sm text-white/80 mb-1 uppercase tracking-widest">Bundle Price</div>
+                <div className="text-5xl font-black text-white mb-1">$397</div>
               </div>
             </div>
             <div className="inline-block bg-emerald-500/20 text-emerald-400 px-6 py-3 rounded-full text-lg font-bold mb-8">
@@ -58,7 +58,20 @@ export default function FlagshipBundlePage() {
             >
               Get Started Now - $397 <ArrowRight className="ml-2" />
             </Link>
-            <p className="text-slate-400 text-sm mt-4">✓ 30-Day Money-Back Guarantee • Lifetime Access • Instant Access</p>
+            
+            <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6 mt-12 max-w-2xl mx-auto text-left">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">The "Career Insurance" Guarantee</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed">
+                Complete all modules. If you don't see measurable improvement in your career within 30 days, email us for a full refund. No questions asked. <strong className="text-white">You keep all the templates and resources.</strong>
+              </p>
+            </div>
+            
+            <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Founding Member Pricing Ends January 12th — Price increases to $1,297 after</p>
           </div>
         </div>
       </section>
@@ -153,11 +166,12 @@ export default function FlagshipBundlePage() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 border-2 border-emerald-500/50 rounded-2xl p-8 text-center">
-            <h3 className="text-3xl font-bold text-white mb-4">Total Bundle Value: $594</h3>
-            <p className="text-2xl text-emerald-400 font-bold mb-4">Your Price: $397</p>
-            <p className="text-xl text-slate-300">You Save: <span className="text-emerald-400 font-bold">$197 (33% OFF)</span></p>
-          </div>
+	          <div className="bg-gradient-to-r from-emerald-900/40 to-teal-900/40 border-2 border-emerald-500/50 rounded-2xl p-8 text-center">
+	            <h3 className="text-3xl font-bold text-white mb-4">Total Bundle Value: $1,297</h3>
+	            <p className="text-4xl text-emerald-400 font-black mb-4">Your Price: $397</p>
+	            <p className="text-xl text-slate-300 uppercase tracking-widest">You Save: <span className="text-emerald-400 font-bold">$900 (70% OFF)</span></p>
+              <p className="text-orange-400 font-bold mt-4">⚠️ Price increases to $1,297 on January 12th</p>
+	          </div>
         </div>
       </section>
 
@@ -206,13 +220,14 @@ export default function FlagshipBundlePage() {
             Join 440+ professionals who are building AI-resistant skills and executive presence.
           </p>
           
-          <Link
-            href="https://buy.stripe.com/14A28q0yRa6rbKc3ly08g0n"
-            className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-slate-100 px-12 py-6 rounded-lg text-xl font-bold shadow-2xl transition-all hover:scale-105"
-          >
-            Get Started Now - $397 <ArrowRight className="ml-2" />
-          </Link>
-          <p className="text-white text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | Instant Access</p>
+	          <Link
+	            href="https://buy.stripe.com/14A28q0yRa6rbKc3ly08g0n"
+	            className="inline-flex items-center justify-center bg-white text-orange-600 hover:bg-slate-100 px-12 py-6 rounded-lg text-xl font-bold shadow-2xl transition-all hover:scale-105"
+	          >
+	            Get Started Now - $397 <ArrowRight className="ml-2" />
+	          </Link>
+            <p className="text-white font-bold mt-6 text-xl italic">"The best investment I've made in my career. Period."</p>
+	          <p className="text-white/80 text-sm mt-6">30-Day "Career Insurance" Guarantee | Lifetime Access | Instant Access</p>
         </div>
       </section>
     </div>

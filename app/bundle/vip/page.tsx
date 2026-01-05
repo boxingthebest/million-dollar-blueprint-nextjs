@@ -127,16 +127,14 @@ export default function VIPBundlePage() {
             
             {/* Price Comparison */}
             <div className="flex flex-col lg:flex-row gap-6 justify-center items-center mb-8">
-              <div className="bg-slate-900/80 border-2 border-amber-500/50 rounded-2xl p-8 text-center shadow-2xl shadow-amber-500/20">
-                <div className="text-amber-400 text-sm font-bold mb-2">VIP BUNDLE PRICE</div>
-                <div className="text-6xl font-black text-white mb-2">$2,497</div>
-                <div className="text-slate-400">One-time investment</div>
+              <div className="bg-slate-900/80 border border-slate-700 rounded-2xl p-8 text-center shadow-2xl shadow-amber-500/20">
+                <div className="text-sm text-slate-400 mb-1 uppercase tracking-widest">Total Value</div>
+                <div className="text-4xl font-bold text-slate-500 line-through mb-1">$9,997</div>
               </div>
-              <div className="text-slate-400 text-3xl font-bold">vs</div>
-              <div className="bg-slate-900/50 border border-slate-700 rounded-2xl p-8 text-center">
-                <div className="text-slate-500 text-sm font-bold mb-2">TOTAL VALUE</div>
-                <div className="text-5xl font-bold text-slate-500 line-through mb-2">${totalValue.toLocaleString()}</div>
-                <div className="text-slate-500">If purchased separately</div>
+              <div className="text-amber-500 text-4xl font-black">→</div>
+              <div className="bg-gradient-to-br from-amber-500 via-yellow-500 to-orange-500 rounded-2xl p-8 text-center shadow-2xl shadow-amber-500/40">
+                <div className="text-sm text-slate-900/80 mb-1 uppercase tracking-widest font-bold">VIP Bundle Price</div>
+                <div className="text-6xl font-black text-slate-900 mb-1">$2,497</div>
               </div>
             </div>
             
@@ -153,7 +151,20 @@ export default function VIPBundlePage() {
                 Claim Your VIP Spot - $2,497
                 <ArrowRight className="ml-2" />
               </Link>
-              <p className="text-slate-400 text-sm">✓ 30-Day Money-Back Guarantee • Lifetime Access • Strategy Session Within 7 Days</p>
+              
+              <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6 mt-12 max-w-2xl mx-auto text-left">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                    <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">The "Career Insurance" Guarantee</h3>
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  Complete all modules and your strategy session. If you don't see a clear path to a 10x ROI on your investment within 30 days, email us for a full refund. No questions asked. <strong className="text-white">You keep all the templates and your customized roadmap.</strong>
+                </p>
+              </div>
+              
+              <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Only 3 VIP Spots Remaining for January — Price increases to $9,997 after January 12th</p>
             </div>
           </div>
           
@@ -398,16 +409,17 @@ export default function VIPBundlePage() {
               ))}
             </div>
             
-            <div className="mt-8 pt-8 border-t-2 border-amber-500/30">
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-slate-400 text-xl">Total Value:</span>
-                <span className="text-slate-400 text-2xl line-through">${totalValue.toLocaleString()}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-white text-2xl font-bold">Your VIP Price:</span>
-                <span className="text-amber-400 text-4xl font-black">$2,497</span>
-              </div>
-            </div>
+	            <div className="mt-8 pt-8 border-t-2 border-amber-500/30">
+	              <div className="flex justify-between items-center mb-4">
+	                <span className="text-slate-400 text-xl">Total Value:</span>
+	                <span className="text-slate-400 text-2xl line-through">$9,997</span>
+	              </div>
+	              <div className="flex justify-between items-center">
+	                <span className="text-white text-2xl font-bold">Your VIP Price:</span>
+	                <span className="text-amber-400 text-4xl font-black">$2,497</span>
+	              </div>
+                <p className="text-orange-400 font-bold mt-6 text-center">⚠️ Price increases to $9,997 on January 12th</p>
+	            </div>
           </div>
         </div>
       </section>

@@ -131,14 +131,14 @@ export default function ProfessionalBundlePage() {
             
             {/* Price Comparison */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <div className="bg-slate-900/80 border border-purple-500/50 rounded-xl p-6 text-center shadow-2xl shadow-purple-500/20">
-                <div className="text-5xl font-black text-purple-400 mb-1">$797</div>
-                <div className="text-sm text-slate-400">Bundle Price</div>
+              <div className="bg-slate-900/80 border border-slate-700 rounded-xl p-6 text-center shadow-2xl shadow-purple-500/20">
+                <div className="text-sm text-slate-400 mb-1 uppercase tracking-widest">Total Value</div>
+                <div className="text-4xl font-bold text-slate-500 line-through mb-1">$2,497</div>
               </div>
-              <div className="text-slate-400 text-3xl font-bold">vs</div>
-              <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6 text-center">
-                <div className="text-5xl font-bold text-slate-500 line-through mb-1">${totalValue.toLocaleString()}</div>
-                <div className="text-sm text-slate-400">If Purchased Separately</div>
+              <div className="text-purple-500 text-4xl font-black">→</div>
+              <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 text-center shadow-2xl shadow-purple-500/40">
+                <div className="text-sm text-white/80 mb-1 uppercase tracking-widest">Bundle Price</div>
+                <div className="text-5xl font-black text-white mb-1">$797</div>
               </div>
             </div>
             
@@ -153,7 +153,20 @@ export default function ProfessionalBundlePage() {
               >
                 Get All 7 Courses - $797 <ArrowRight className="ml-2" />
               </Link>
-              <p className="text-slate-400 text-sm">✓ 30-Day Money-Back Guarantee • Lifetime Access • Instant Access</p>
+              
+              <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6 mt-12 max-w-2xl mx-auto text-left">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                    <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">The "Career Insurance" Guarantee</h3>
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  Complete all modules. If you don't see measurable improvement in your career within 30 days, email us for a full refund. No questions asked. <strong className="text-white">You keep all the templates and resources.</strong>
+                </p>
+              </div>
+              
+              <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Founding Member Pricing Ends January 12th — Price increases to $2,497 after</p>
             </div>
           </div>
           
@@ -237,22 +250,23 @@ export default function ProfessionalBundlePage() {
           </div>
 
           {/* Total Value Box */}
-          <div className="bg-gradient-to-r from-purple-900/60 to-pink-900/60 border-2 border-purple-500/50 rounded-2xl p-8 text-center">
-            <div className="grid md:grid-cols-3 gap-8 items-center">
-              <div>
-                <div className="text-slate-400 text-lg mb-2">Total Value</div>
-                <div className="text-4xl font-bold text-slate-400 line-through">${totalValue.toLocaleString()}</div>
-              </div>
-              <div>
-                <div className="text-purple-300 text-lg mb-2">Your Price Today</div>
-                <div className="text-5xl font-black text-white">$797</div>
-              </div>
-              <div>
-                <div className="text-emerald-300 text-lg mb-2">You Save</div>
-                <div className="text-4xl font-bold text-emerald-400">${savings}</div>
-              </div>
-            </div>
-          </div>
+	          <div className="bg-gradient-to-r from-purple-900/60 to-pink-900/60 border-2 border-purple-500/50 rounded-2xl p-8 text-center">
+	            <div className="grid md:grid-cols-3 gap-8 items-center">
+	              <div>
+	                <div className="text-slate-400 text-lg mb-2">Total Value</div>
+	                <div className="text-4xl font-bold text-slate-400 line-through">$2,497</div>
+	              </div>
+	              <div>
+	                <div className="text-purple-300 text-lg mb-2">Your Price Today</div>
+	                <div className="text-5xl font-black text-white">$797</div>
+	              </div>
+	              <div>
+	                <div className="text-emerald-300 text-lg mb-2">You Save</div>
+	                <div className="text-4xl font-bold text-emerald-400">$1,700</div>
+	              </div>
+	            </div>
+              <p className="text-orange-400 font-bold mt-6">⚠️ Price increases to $2,497 on January 12th</p>
+	          </div>
         </div>
       </section>
 
@@ -381,13 +395,14 @@ export default function ProfessionalBundlePage() {
             Get all 7 courses for just <span className="font-bold">$797</span> (save ${savings})
           </p>
           
-          <Link
-            href="https://buy.stripe.com/dRmfZg1CV1zV29C3ly08g0o"
-            className="inline-flex items-center justify-center bg-white text-purple-600 hover:bg-slate-100 px-12 py-6 rounded-xl text-xl font-bold shadow-2xl transition-all hover:scale-105"
-          >
-            Get All 7 Courses Now - $797 <ArrowRight className="ml-2" />
-          </Link>
-          <p className="text-white/80 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | Instant Access</p>
+	          <Link
+	            href="https://buy.stripe.com/dRmfZg1CV1zV29C3ly08g0o"
+	            className="inline-flex items-center justify-center bg-white text-purple-600 hover:bg-slate-100 px-12 py-6 rounded-xl text-xl font-bold shadow-2xl transition-all hover:scale-105"
+	          >
+	            Get All 7 Courses Now - $797 <ArrowRight className="ml-2" />
+	          </Link>
+            <p className="text-white font-bold mt-6 text-xl italic">"The most comprehensive career transformation system I've ever seen."</p>
+	          <p className="text-white/80 text-sm mt-6">30-Day "Career Insurance" Guarantee | Lifetime Access | Instant Access</p>
         </div>
       </section>
     </div>
