@@ -83,7 +83,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               href={`/auth/signup?course=${course.slug}`}
               className="bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-4 md:px-6 py-2 rounded-lg font-semibold transition-all text-sm md:text-base"
             >
-              Enroll Now - ${course.price / 100}
+              Enroll Now - <span className="line-through opacity-70 mr-1">${(course.price * 4) / 100}</span> ${course.price / 100}
             </Link>
           </div>
         </div>
@@ -130,10 +130,13 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                 </div>
                 <div className="text-sm text-slate-400">Content</div>
               </div>
-              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-1">${course.price / 100}</div>
-                <div className="text-sm text-slate-400">Investment</div>
-              </div>
+	              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
+	                <div className="text-3xl font-bold text-purple-400 mb-1">
+                    <span className="text-sm line-through opacity-50 mr-1">${(course.price * 4) / 100}</span>
+                    ${course.price / 100}
+                  </div>
+	                <div className="text-sm text-slate-400">Investment</div>
+	              </div>
             </div>
             
             {course.isPublished ? (
@@ -161,9 +164,20 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               </div>
             )}
 
-            <p className="text-slate-400 text-sm mt-6">
-              ✓ 30-Day Money-Back Guarantee &nbsp;&nbsp; ✓ Lifetime Access &nbsp;&nbsp; ✓ Instant Access
-            </p>
+	            <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6 mt-8">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                    <Check className="w-6 h-6 text-emerald-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">The "Career Insurance" Guarantee</h3>
+                </div>
+                <p className="text-slate-300 leading-relaxed">
+                  Complete all modules. If you don't see measurable improvement in your career within 30 days, email us for a full refund. No questions asked. <strong className="text-white">You keep all the templates and resources.</strong>
+                </p>
+              </div>
+              <p className="text-slate-400 text-sm mt-6">
+	              ✓ Lifetime Access &nbsp;&nbsp; ✓ Instant Access &nbsp;&nbsp; ✓ Secure Payment
+	            </p>
           </div>
         </div>
       </section>
@@ -229,14 +243,15 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                 ))}
               </div>
 
-              <div className="mt-12 text-center">
-                <EnrollButton 
-                  courseSlug={course.slug} 
-                  coursePrice={course.price}
-                >
-                  Start Learning Today - ${course.price / 100}
-                </EnrollButton>
-              </div>
+	              <div className="mt-12 text-center">
+	                <EnrollButton 
+	                  courseSlug={course.slug} 
+	                  coursePrice={course.price}
+	                >
+	                  Start Learning Today - <span className="line-through opacity-70 mr-2">${(course.price * 4) / 100}</span> ${course.price / 100}
+	                </EnrollButton>
+                  <p className="text-orange-400 font-bold mt-4">⚠️ Founding Member Pricing Ends January 12th — Price increases to $197 after</p>
+	              </div>
             </div>
           </div>
         </section>
@@ -322,12 +337,13 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               <p className="text-xl text-slate-300 mb-8">
                 Join hundreds of professionals transforming their careers
               </p>
-              <Link
-                href={`/auth/signup?course=${course.slug}`}
-                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-12 py-6 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
-              >
-                Enroll Now - ${course.price / 100} <ArrowRight className="ml-2" />
-              </Link>
+	              <Link
+	                href={`/auth/signup?course=${course.slug}`}
+	                className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-12 py-6 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/50 transition-all"
+	              >
+	                Enroll Now - <span className="line-through opacity-70 mr-2">${(course.price * 4) / 100}</span> ${course.price / 100} <ArrowRight className="ml-2" />
+	              </Link>
+                <p className="text-orange-400 font-bold mt-6 text-xl">⚠️ Price increases to $197 on January 12th</p>
               <p className="text-slate-400 text-sm mt-6">
                 30-Day Money-Back Guarantee • Secure Payment • Instant Access
               </p>
