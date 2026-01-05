@@ -1,562 +1,238 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
-import ApexChatbot from "@/components/ApexChatbot";
-import FuturisticBackground from "@/components/FuturisticBackground";
-import TiltCard from "@/components/TiltCard";
-import { motion } from "framer-motion";
-import HeroSectionDivider from "@/components/HeroSectionDivider";
 
-import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, TrendingUp } from "lucide-react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Crown, Users, Shield, Clock, Zap, Award, CheckCircle2, TrendingUp, BarChart3, Megaphone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 
 export default function MarketingPage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [showStickyBar, setShowStickyBar] = useState(false);
+  const [notification, setNotification] = useState<{ name: string; location: string } | null>(null);
 
-    const modules = [
-    {
-      number: 1,
-      title: "Growth Engineering vs. Traditional Marketing",
-      duration: "8 min",
-      lessons: 1,
-      icon: Brain,
-      topics: [
-        "Why \"marketing\" is dead and \"growth engineering\" replaced it",
-        "The mindset shift from campaigns to systems",
-        "How Airbnb grew from $0 to $31B without traditional marketing",
-        "The \"T-Shaped Marketer\" model from Buffer",
-        "Key takeaway: Marketing is no longer creative. It's scientific."
-      ]
-    },
-    {
-      number: 2,
-      title: "The AARRR Pirate Metrics Framework",
-      duration: "10 min",
-      lessons: 1,
-      icon: TrendingUp,
-      topics: [
-        "Acquisition, Activation, Retention, Referral, Revenue",
-        "How to diagnose growth bottlenecks in your funnel",
-        "The metrics that actually predict sustainable growth",
-        "Case study: How Dropbox used referrals to grow 3900% in 15 months",
-        "Key takeaway: You can't fix what you don't measure."
-      ]
-    },
-    {
-      number: 3,
-      title: "The Viral Loop: Engineering Word-of-Mouth",
-      duration: "9 min",
-      lessons: 1,
-      icon: Target,
-      topics: [
-        "The \"K-Factor\": measuring virality mathematically",
-        "How Uber, Airbnb, and PayPal engineered viral growth",
-        "The \"Double-Sided Incentive\" model from Dropbox",
-        "Building network effects into your product",
-        "Key takeaway: The best marketing doesn't feel like marketing."
-      ]
-    },
-    {
-      number: 4,
-      title: "The Hook Model: Making Products Addictive",
-      duration: "10 min",
-      lessons: 1,
-      icon: Lightbulb,
-      topics: [
-        "Trigger, Action, Variable Reward, Investment (Nir Eyal framework)",
-        "How Instagram, TikTok, and Slack create habit-forming products",
-        "The psychology of dopamine and behavioral loops",
-        "Ethical persuasion vs. manipulation",
-        "Key takeaway: Retention beats acquisition. Every time."
-      ]
-    },
-    {
-      number: 5,
-      title: "Content Marketing That Converts",
-      duration: "9 min",
-      lessons: 1,
-      icon: Star,
-      topics: [
-        "The \"Skyscraper Technique\" from Backlinko (10x content)",
-        "How HubSpot built a $30B company on content marketing",
-        "SEO fundamentals: keywords, backlinks, and domain authority",
-        "The \"Jobs to Be Done\" framework for content strategy",
-        "Key takeaway: Content is king. But distribution is queen."
-      ]
-    },
-    {
-      number: 6,
-      title: "Paid Acquisition: Facebook, Google, LinkedIn",
-      duration: "8 min",
-      lessons: 1,
-      icon: Target,
-      topics: [
-        "The \"CAC < LTV\" rule for profitable growth",
-        "How to run profitable Facebook and Google Ads campaigns",
-        "The \"Ladder of Awareness\" for targeting (Eugene Schwartz)",
-        "A/B testing frameworks from Optimizely and VWO",
-        "Key takeaway: Paid ads are a tax on companies that can't do organic."
-      ]
-    },
-    {
-      number: 7,
-      title: "Email Marketing & Marketing Automation",
-      duration: "10 min",
-      lessons: 1,
-      icon: Heart,
-      topics: [
-        "Why email has 40x ROI compared to social media",
-        "The \"Welcome Series\" framework that converts 50%+ of subscribers",
-        "Marketing automation with HubSpot, Marketo, and ActiveCampaign",
-        "Segmentation and personalization at scale",
-        "Key takeaway: The money is in the list. And the follow-up."
-      ]
-    },
-    {
-      number: 8,
-      title: "Conversion Rate Optimization (CRO)",
-      duration: "9 min",
-      lessons: 1,
-      icon: TrendingUp,
-      topics: [
-        "The \"LIFT Model\" for conversion optimization (WiderFunnel)",
-        "How to run A/B tests that actually matter",
-        "Landing page psychology: headlines, CTAs, social proof",
-        "Case study: How Booking.com tests 1,000+ experiments per year",
-        "Key takeaway: A 1% conversion lift = millions in revenue."
-      ]
-    },
-    {
-      number: 9,
-      title: "Data-Driven Marketing & Analytics",
-      duration: "10 min",
-      lessons: 1,
-      icon: Lightbulb,
-      topics: [
-        "Google Analytics 4: tracking the customer journey",
-        "Building a marketing dashboard (the 5 metrics that matter)",
-        "Attribution modeling: first-touch, last-touch, multi-touch",
-        "How Netflix uses data to drive $30B in revenue",
-        "Key takeaway: Intuition is great. Data is better."
-      ]
-    },
-    {
-      number: 10,
-      title: "The Future of Marketing: AI & Automation",
-      duration: "8 min",
-      lessons: 1,
-      icon: Star,
-      topics: [
-        "How AI is changing SEO, content, and paid ads",
-        "The skills that will be irreplaceable in 2030 (strategy, creativity, empathy)",
-        "Building a personal brand as a marketing leader",
-        "The path to Chief Marketing Officer (CMO)",
-        "Key takeaway: AI will replace marketers. But not marketing strategists."
-      ]
-    }
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowStickyBar(window.scrollY > 500);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const names = [
+      { name: "Jessica M.", location: "Los Angeles" },
+      { name: "Brandon K.", location: "Miami" },
+      { name: "Stephanie L.", location: "Austin" },
+      { name: "Tyler R.", location: "Portland" },
+      { name: "Nicole S.", location: "Phoenix" },
+    ];
+
+    const showNotification = () => {
+      const randomPerson = names[Math.floor(Math.random() * names.length)];
+      setNotification(randomPerson);
+      setTimeout(() => setNotification(null), 4000);
+    };
+
+    const initialTimeout = setTimeout(showNotification, 8000);
+    const interval = setInterval(() => {
+      showNotification();
+    }, Math.random() * 30000 + 30000);
+
+    return () => {
+      clearTimeout(initialTimeout);
+      clearInterval(interval);
+    };
+  }, []);
+
+  const modules = [
+    { number: 1, title: "Digital Marketing Foundations", duration: "10 min", icon: Megaphone, topics: ["The modern marketing landscape", "Customer journey mapping", "Building your marketing stack"] },
+    { number: 2, title: "Content Marketing Mastery", duration: "12 min", icon: Lightbulb, topics: ["Content strategy that converts", "SEO fundamentals for visibility", "Creating viral-worthy content"] },
+    { number: 3, title: "Social Media Strategy", duration: "11 min", icon: Users, topics: ["Platform selection for your audience", "Organic growth strategies", "Building engaged communities"] },
+    { number: 4, title: "Paid Advertising Fundamentals", duration: "10 min", icon: Target, topics: ["Facebook/Meta ads basics", "Google Ads essentials", "Budget allocation strategies"] },
+    { number: 5, title: "Email Marketing & Automation", duration: "9 min", icon: Zap, topics: ["Building high-converting email lists", "Automation sequences that sell", "Segmentation for personalization"] },
+    { number: 6, title: "Analytics & Optimization", duration: "8 min", icon: BarChart3, topics: ["Key metrics that matter", "A/B testing frameworks", "Data-driven decision making"] }
   ];
 
   const faqs = [
-    {
-      question: "Is this course for B2B or B2C?",
-      answer: "Both. The principles of growth are universal and can be applied to any business model."
-    },
-    {
-      question: "I'm not a marketer. Is this course for me?",
-      answer: "If you're a founder, product manager, or anyone responsible for growth, this course is for you. We teach you how to think like a growth engineer, not just a marketer."
-    },
-    {
-      question: "How much of a marketing budget do I need?",
-      answer: "We'll teach you how to grow with a small budget (or no budget at all). Many of the strategies we teach are organic and rely on creativity, not cash."
-    },
-    {
-      question: "Is this course up-to-date?",
-      answer: "Yes. We update the course monthly with the latest growth strategies and tactics from Silicon Valley and beyond."
-    },
-    {
-      question: "Is there a money-back guarantee?",
-      answer: "Yes, a 30-day, no-questions-asked money-back guarantee. We're so confident in the value of this course that we'll take on all the risk."
-    }
+    { question: "Do I need marketing experience?", answer: "No! This course is designed for beginners and intermediate marketers alike. We start with foundations and build up to advanced strategies." },
+    { question: "Will this work for my industry?", answer: "Yes. These are universal digital marketing principles that work across B2B, B2C, e-commerce, SaaS, and service businesses." },
+    { question: "How long do I have access?", answer: "Lifetime access. Once you enroll, the course is yours forever, including all future updates as platforms change." },
+    { question: "What's your refund policy?", answer: "30-day money-back guarantee. If you don't see value, email us for a full refund. No questions asked." },
+    { question: "Is this course up-to-date with 2026 strategies?", answer: "Absolutely! We update the course regularly to reflect the latest platform changes, algorithm updates, and marketing trends." }
   ];
 
-  const benefits = [
-    "Think like a data-driven growth engineer",
-    "Build a scalable, predictable growth engine",
-    "Acquire and retain users at a fraction of the cost",
-    "Master the art of conversion rate optimization",
-    "Become a top 1% marketer"
-  ];
-
-  const deliverables = [
-    "The Growth Engineering Canvas™",
-    "The AARRR Pirate Metrics Dashboard",
-    "The Bullseye Framework Calculator",
-    "The Viral Loop Simulator",
-    "50+ page workbook with real-world growth hacks",
-    "Access to a private community of growth leaders"
+  const testimonials = [
+    { name: "Ashley Rodriguez", role: "E-commerce Owner", company: "Online Store", result: "3x revenue in 90 days", text: "Implemented the paid ads strategy and tripled my store revenue in just 3 months. The ROI on this course is insane.", rating: 5 },
+    { name: "Derek Thompson", role: "Marketing Manager", company: "SaaS Startup", result: "500% more leads", text: "Our lead generation increased 5x after applying the content marketing and SEO strategies. Game changer.", rating: 5 },
+    { name: "Melissa Park", role: "Freelance Marketer", company: "Self-Employed", result: "Doubled client rates", text: "The skills I learned allowed me to double my freelance rates. Clients see me as a strategic partner now.", rating: 5 }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 relative">
-      {/* Futuristic Animated Background */}
-      <FuturisticBackground variant="enrollment" />
-      {/* Navigation */}
-      <nav className="bg-black border-b border-slate-800 sticky top-0 z-50 shadow-lg">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16 logo-glow" />
-          </Link>
-          <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden animated-gradient-bg">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-cyan-900/20" />
-        <div className="absolute inset-0 bg-[url('/course-marketing.jpg')] bg-cover bg-center opacity-10" />
-        
-        
-        {/* Glowing Orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-glow-pulse" style={{animationDelay: '2s'}} />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-blue-500/20 text-blue-300 px-6 py-2 rounded-full text-sm font-bold mb-6">
-              📈 $197 • 312 Students Enrolled • Only 47 Spots Left This Month
+    <div className="min-h-screen bg-slate-950">
+      <AnimatePresence>
+        {notification && (
+          <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} className="fixed bottom-24 left-4 z-50 bg-white rounded-lg shadow-2xl p-4 max-w-xs border-l-4 border-orange-500">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center"><Check className="w-5 h-5 text-orange-600" /></div>
+              <div><p className="text-slate-800 font-semibold text-sm">{notification.name} from {notification.location}</p><p className="text-slate-500 text-xs">just enrolled in Digital Marketing!</p></div>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Stop Marketing. Start Engineering Growth.
-            </h1>
-            <p className="text-xl md:text-2xl text-white mb-8">
-              The data-driven growth hacking playbooks used by Airbnb, Dropbox, and Uber to acquire millions of users.
-            </p>
-            <a
-              href="#enroll"
-              className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
-            >
-              Enroll Now - $197 (Originally $395 • Save 50%)
-            </a>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Video Preview Section */}
-      <section className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
-            <div className="shadow-2xl border-2 border-slate-600 rounded-xl overflow-hidden">
-              <LazyVimeoPlayer
-                videoId="1148781069"
-                title="Digital Marketing Mastery Preview"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Problem & Solution Section */}
-      <section className="py-16 md:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Problem: You're Stuck in the Marketing Hamster Wheel</h2>
-              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
-                You're spending money on ads, posting on social media, and writing blog posts. But your growth has flatlined. You're stuck in a cycle of "more content, more ads, more everything" with diminishing returns. Why? Because you're a marketer, not a growth engineer. The old marketing playbook is obsolete. In a world of infinite noise, the only way to win is to build a growth engine, not just run campaigns.
-              </p>
-            </div>
-            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Solution: Become a Growth Engineer</h2>
-              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
-                This isn't a course on how to use Facebook Ads or write a blog post. This is a masterclass in **growth engineering**. We've dissected the growth playbooks of the fastest-growing companies in history—Airbnb, Dropbox, Uber, and more—to give you a systematic approach to acquiring and retaining users at scale. You'll learn how to think like a growth hacker and build a marketing machine that runs on data, not just creativity.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What You'll Master Section */}
-      <section className="py-16 md:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">What You'll Master</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[{
-              title: "The AARRR Pirate Metrics Framework",
-              description: "How to measure what actually matters and build a full-funnel growth model.",
-              icon: <TrendingUp className="h-20 w-20 text-cyan-400" />
-            }, {
-              title: "The Hook Model",
-              description: "How to build products and marketing campaigns that are so engaging, they're addictive.",
-              icon: <Heart className="h-20 w-20 text-cyan-400" />
-            }, {
-              title: "The Bullseye Framework",
-              description: "How to identify and dominate the one marketing channel that will drive 80% of your growth.",
-              icon: <Target className="h-20 w-20 text-cyan-400" />
-            }, {
-              title: "The Viral Loop",
-              description: "How to build virality into your product from day one.",
-              icon: <Brain className="h-20 w-20 text-cyan-400" />
-            }, {
-              title: "The CRO Playbook",
-              description: "How to systematically increase your conversion rates at every step of the funnel.",
-              icon: <Lightbulb className="h-20 w-20 text-cyan-400" />
-            }].map((item, index) => (
-              <div key={index} className="bg-black p-8 rounded-lg border-2 border-slate-800">
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-white">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Curriculum Section */}
-      <section id="curriculum" className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
-          <div className="max-w-4xl mx-auto">
-            {modules.map((module) => (
-              <div key={module.number} className="bg-black border-2 border-slate-600 rounded-lg mb-4">
-                <button
-                  className="w-full flex justify-between items-center p-6 text-left"
-                  onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-4 rounded-full shadow-lg shadow-cyan-500/50">
-                      <module.icon className="h-14 w-14 text-cyan-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
-                      <p className="text-sm text-white">{module.duration} • {module.lessons} lessons</p>
-                    </div>
-                  </div>
-                  <ChevronDown className={`h-14 w-14 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
-                </button>
-                {openModule === module.number && (
-                  <div className="p-6 border-t border-slate-600">
-                    <ul className="space-y-3">
-                      {module.topics.map((topic, index) => (
-                        <li key={index} className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-cyan-400" />
-                          <span className="text-white">{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof Section */}
-      <section className="py-16 bg-slate-950">
-        <div className="container mx-auto px-4">
-                    <h3 className="text-center text-white text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
-          <p className="text-center text-white text-lg max-w-4xl mx-auto">
-            <span className="text-cyan-400 font-semibold">Airbnb growth teams</span> • 
-            <span className="text-cyan-400 font-semibold"> Dropbox viral engineers</span> • 
-            <span className="text-cyan-400 font-semibold"> HubSpot marketers</span> • 
-            <span className="text-cyan-400 font-semibold"> Netflix data scientists</span> • 
-            <span className="text-cyan-400 font-semibold"> Google Ads specialists</span>
-          </p>
-        </div>
-      </section>
-
-      {/* Benefits & Deliverables Section */}
-      <section className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
-              <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="h-14 w-14 text-cyan-400 mt-1 flex-shrink-0" />
-                    <span className="text-lg text-white">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
-              <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
-              <ul className="space-y-4">
-                {deliverables.map((deliverable, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="h-14 w-14 text-cyan-400 mt-1 flex-shrink-0" />
-                    <span className="text-lg text-white">{deliverable}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Professional Certificate Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">Earn Your Professional Certificate</h2>
-            <p className="text-xl text-white text-center mb-12 max-w-3xl mx-auto">
-              Upon completion, receive a verified certificate you can share with employers, add to your LinkedIn profile, and showcase your expertise.
-            </p>
-            
-            <div className="bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-cyan-400 rounded-2xl p-8 md:p-12 shadow-2xl shadow-cyan-500/20">
-              <div className="text-center mb-8">
-                <div className="inline-block bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
-                  <h3 className="text-3xl md:text-4xl font-bold mb-2">Certificate of Completion</h3>
-                </div>
-                <p className="text-white text-lg">Million Dollar Blueprint</p>
-              </div>
-              
-              <div className="border-t-2 border-b-2 border-cyan-400/30 py-8 mb-8">
-                <p className="text-white text-sm text-center mb-2">This certifies that</p>
-                <p className="text-3xl md:text-4xl font-bold text-white text-center mb-4">[Your Name]</p>
-                <p className="text-white text-sm text-center mb-2">has successfully completed</p>
-                <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 text-center mb-4">
-                  Digital Marketing Mastery Certificate
-                </p>
-                <p className="text-white text-center text-sm md:text-base">
-                  Demonstrating mastery in: Growth Engineering, AARRR Metrics, Viral Marketing, Conversion Optimization
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <p className="text-white text-sm mb-1">Certificate ID</p>
-                  <p className="text-white font-mono text-xs">MDB-MAR-XXXXX</p>
-                </div>
-                <div>
-                  <p className="text-white text-sm mb-1">Issued Date</p>
-                  <p className="text-white font-semibold">Upon Completion</p>
-                </div>
-                <div>
-                  <p className="text-white text-sm mb-1">Verification</p>
-                  <p className="text-cyan-400 font-semibold">Blockchain Verified</p>
-                </div>
-              </div>
-              
-              <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-                <div className="flex items-center justify-center gap-2 text-white">
-                  <Check className="h-5 w-5 text-cyan-400" />
-                  <span>Add to LinkedIn</span>
-                </div>
-                <div className="flex items-center justify-center gap-2 text-white">
-                  <Check className="h-5 w-5 text-cyan-400" />
-                  <span>Download PDF</span>
-                </div>
-                <div className="flex items-center justify-center gap-2 text-white">
-                  <Check className="h-5 w-5 text-cyan-400" />
-                  <span>Share on Social Media</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-              <div className="bg-black/30 border border-cyan-400/30 rounded-xl p-6">
-                <div className="text-4xl mb-3">🎓</div>
-                <h4 className="text-white font-bold mb-2">Career Advancement</h4>
-                <p className="text-white text-sm">Show employers your commitment to professional development</p>
-              </div>
-              <div className="bg-black/30 border border-purple-400/30 rounded-xl p-6">
-                <div className="text-4xl mb-3">✅</div>
-                <h4 className="text-white font-bold mb-2">Verified Credentials</h4>
-                <p className="text-white text-sm">Blockchain-verified certificates with unique IDs</p>
-              </div>
-              <div className="bg-black/30 border border-emerald-400/30 rounded-xl p-6">
-                <div className="text-4xl mb-3">💼</div>
-                <h4 className="text-white font-bold mb-2">LinkedIn Ready</h4>
-                <p className="text-white text-sm">One-click integration with your LinkedIn profile</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-          <div className="max-w-3xl mx-auto">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-slate-800">
-                <button
-                  className="w-full flex justify-between items-center py-6 text-left"
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                >
-                  <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                  <ChevronDown className={`h-14 w-14 text-white transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
-                </button>
-                {openFaq === index && (
-                  <div className="pb-6">
-                    <p className="text-white leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section id="enroll" className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Don't Just Market. Engineer Growth.</h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">Ready to build a growth engine? Enroll now and get lifetime access to the playbooks that build unicorns.</p>
-          <a
-            href="https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k"
-
-            className="inline-block bg-white text-blue-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
-          >
-            Enroll Now - $197 (Originally $395 • Save 50%)
-          </a>
-        </div>
-      </section>
-
-
-      {/* Sticky Bottom CTA Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-blue-600 border-t-4 border-cyan-400 shadow-2xl z-50 py-4">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-center md:text-left">
-            <p className="text-white font-bold text-lg">🔥 Limited Time: Save 50% Today</p>
-            <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
-          </div>
-          <a
-            href="https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k"
-
-            className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap text-cyan-600 hover:bg-cyan-50"
-          >
-            Enroll Now - $197
-          </a>
-        </div>
+      <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-4 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
+        <p className="text-sm md:text-base font-semibold relative z-10">🔥 LAUNCH SALE: <span className="text-yellow-300">75% OFF</span> — Ends January 12th at Midnight</p>
       </div>
 
-      <ApexChatbot />
-
-      {/* Footer */}
-      <footer className="bg-slate-950 py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center gap-6 mb-4">
-            <Link href="/terms" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Terms of Service</Link>
-            <Link href="/privacy" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Privacy Policy</Link>
-            <Link href="/refund-policy" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Refund Policy</Link>
+      <section className="relative pt-20 pb-16 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-slate-950 to-red-900/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(249,115,22,0.15),transparent_50%)]" />
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <span className="bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">📈 HIGH DEMAND</span>
+                <span className="bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold border border-yellow-500/30">🎯 MARKETING</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">Digital Marketing<span className="block text-orange-400">Master the Modern Game</span></h1>
+              <p className="text-xl text-slate-300 mb-8 leading-relaxed">Learn the <strong className="text-white">complete digital marketing stack</strong> from content to paid ads to analytics.</p>
+              <div className="space-y-3 mb-8">
+                {["6 comprehensive modules (60 min total)", "Content & SEO strategies", "Social media growth tactics", "Paid advertising fundamentals", "Email marketing automation", "Lifetime access + future updates"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-orange-400 flex-shrink-0" /><span className="text-slate-300">{item}</span></div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+              <div className="text-center mb-6">
+                <div className="inline-block bg-red-500/20 text-red-400 px-4 py-1 rounded-full text-sm font-bold mb-4">75% OFF — ENDS JAN 12</div>
+                <div className="flex items-center justify-center gap-4 mb-2"><span className="text-slate-500 line-through text-2xl">$297</span><span className="text-5xl font-black text-white">$77</span></div>
+                <p className="text-orange-400 font-semibold">Save $220 Today</p>
+              </div>
+              <a href="https://buy.stripe.com/5kA00i5T95Ql3o07t608g0s" className="block w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-center py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/25 mb-4">Get Instant Access — $77<ArrowRight className="inline ml-2 w-5 h-5" /></a>
+              <div className="flex items-center justify-center gap-6 text-sm text-slate-400"><div className="flex items-center gap-2"><Shield className="w-4 h-4" /><span>30-Day Guarantee</span></div><div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Instant Access</span></div></div>
+            </div>
           </div>
-          <p className="text-slate-600 text-xs mb-4 max-w-3xl mx-auto">
-            EARNINGS DISCLAIMER: Results vary. The testimonials and examples used are exceptional results and are not intended to guarantee that you will achieve the same results. Your results will depend on many factors including your background, experience, and work ethic.
-          </p>
-          <p className="text-slate-500 text-sm">&copy; 2025 Million Dollar Blueprint. All rights reserved.</p>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-r from-orange-900/50 to-red-900/50 py-8 border-y border-orange-500/20">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-3 gap-4 text-center">
+            <div><div className="text-3xl md:text-4xl font-black text-white">3x</div><div className="text-orange-400 text-sm">Revenue Growth</div></div>
+            <div><div className="text-3xl md:text-4xl font-black text-white">500%</div><div className="text-orange-400 text-sm">More Leads</div></div>
+            <div><div className="text-3xl md:text-4xl font-black text-white">2x</div><div className="text-orange-400 text-sm">Client Rates</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">See How It Works</h2><p className="text-slate-400 text-lg">Watch how digital marketing can transform your business</p></div>
+          <div className="aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-2xl"><LazyVimeoPlayer videoId="1148769094" /></div>
+          <div className="text-center mt-8"><a href="https://buy.stripe.com/5kA00i5T95Ql3o07t608g0s" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105">Get Instant Access — $77<ArrowRight className="w-5 h-5" /></a></div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Real Results from Real Marketers</h2></div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-slate-900/50 border border-slate-700 rounded-2xl p-6">
+                <div className="flex gap-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />))}</div>
+                <p className="text-slate-300 mb-6 italic">&quot;{testimonial.text}&quot;</p>
+                <div className="border-t border-slate-700 pt-4"><div className="font-bold text-white">{testimonial.name}</div><div className="text-slate-400 text-sm">{testimonial.role}</div><div className="text-orange-400 font-semibold mt-2">{testimonial.result}</div></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Course Curriculum</h2><p className="text-slate-400">6 modules • 60 minutes of focused content</p></div>
+          <div className="space-y-4">
+            {modules.map((module) => (
+              <div key={module.number} className="bg-slate-900/80 border border-slate-700 rounded-xl overflow-hidden">
+                <button onClick={() => setOpenModule(openModule === module.number ? null : module.number)} className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-800/50 transition-colors">
+                  <div className="flex items-center gap-4"><div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center"><module.icon className="w-6 h-6 text-orange-400" /></div><div><div className="text-white font-bold">Module {module.number}: {module.title}</div><div className="text-slate-400 text-sm">{module.duration}</div></div></div>
+                  <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence>{openModule === module.number && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="border-t border-slate-700"><div className="p-6 space-y-3">{module.topics.map((topic, i) => (<div key={i} className="flex items-start gap-3"><Check className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" /><span className="text-slate-300">{topic}</span></div>))}</div></motion.div>)}</AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 border border-orange-500/30 rounded-2xl p-12">
+            <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-6"><Shield className="w-10 h-10 text-orange-400" /></div>
+            <h2 className="text-3xl font-bold text-white mb-4">100% Risk-Free Guarantee</h2>
+            <p className="text-slate-300 text-lg mb-6">Try Digital Marketing for 30 days. If you don&apos;t see improvement in your marketing results, email us for a full refund. No questions asked.</p>
+            <div className="text-orange-400 font-semibold">30-Day Money-Back Guarantee</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">This Course Is For You If...</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {["You want to grow your business online", "You're confused by all the marketing options", "You want to reduce your customer acquisition cost", "You need to build a consistent lead pipeline", "You want to understand what actually works", "You're ready to master digital marketing"].map((item, i) => (
+              <div key={i} className="flex items-center gap-4 bg-slate-900/50 border border-slate-700 rounded-xl p-4"><CheckCircle2 className="w-6 h-6 text-orange-400 flex-shrink-0" /><span className="text-slate-300">{item}</span></div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-slate-900/50 border border-slate-700 rounded-xl overflow-hidden">
+                <button onClick={() => setOpenFaq(openFaq === index ? null : index)} className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-800/50 transition-colors"><span className="text-white font-semibold pr-4">{faq.question}</span><ChevronDown className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} /></button>
+                <AnimatePresence>{openFaq === index && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="border-t border-slate-700"><div className="p-6"><p className="text-slate-300">{faq.answer}</p></div></motion.div>)}</AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-gradient-to-br from-orange-900/30 to-red-900/30">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="inline-block bg-red-500/20 text-red-400 px-6 py-2 rounded-full text-sm font-bold mb-6">⏰ SALE ENDS JANUARY 12TH AT MIDNIGHT</div>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to Master Digital Marketing?</h2>
+          <p className="text-xl text-slate-300 mb-8">Join hundreds of marketers who&apos;ve transformed their results.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><span className="text-slate-500 line-through text-2xl">$297</span><span className="text-5xl font-black text-white">$77</span><span className="text-orange-400 font-bold">Save $220</span></div>
+          <a href="https://buy.stripe.com/5kA00i5T95Ql3o07t608g0s" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/25">Get Instant Access Now<ArrowRight className="w-6 h-6" /></a>
+        </div>
+      </section>
+
+      <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-slate-500 text-sm">© 2026 Million Dollar Blueprint. All rights reserved.</p>
+          <div className="flex justify-center gap-6 mt-4"><Link href="/terms" className="text-slate-500 hover:text-slate-300 text-sm">Terms</Link><Link href="/privacy" className="text-slate-500 hover:text-slate-300 text-sm">Privacy</Link><Link href="/refund" className="text-slate-500 hover:text-slate-300 text-sm">Refund Policy</Link></div>
         </div>
       </footer>
+
+      <AnimatePresence>
+        {showStickyBar && (
+          <motion.div initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 100, opacity: 0 }} className="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700 py-4 px-4 z-40">
+            <div className="max-w-6xl mx-auto flex items-center justify-between">
+              <div className="hidden md:block"><div className="text-white font-bold">Digital Marketing</div><div className="text-slate-400 text-sm"><span className="line-through">$297</span><span className="text-orange-400 ml-2 font-bold">$77</span></div></div>
+              <a href="https://buy.stripe.com/5kA00i5T95Ql3o07t608g0s" className="w-full md:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-3 rounded-xl font-bold text-center transition-all duration-300">Get Instant Access — $77</a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

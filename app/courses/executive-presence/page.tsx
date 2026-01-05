@@ -1,831 +1,238 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
-import ApexChatbot from "@/components/ApexChatbot";
-import TiltCard from "@/components/TiltCard";
-import { motion } from "framer-motion";
-import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Heart, TrendingUp, Crown, Users, Zap } from "lucide-react";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Star, Check, ChevronDown, Brain, Target, Lightbulb, Crown, Users, Shield, Clock, Zap, Award, CheckCircle2, Heart, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import FuturisticBackground from "@/components/FuturisticBackground";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
-// HeroSectionDivider removed for cleaner design
 
 export default function ExecutivePresencePage() {
   const [openModule, setOpenModule] = useState<number | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [showStickyBar, setShowStickyBar] = useState(false);
+  const [notification, setNotification] = useState<{ name: string; location: string } | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowStickyBar(window.scrollY > 500);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const names = [
+      { name: "Alexandra K.", location: "New York" },
+      { name: "Robert M.", location: "California" },
+      { name: "Patricia L.", location: "Texas" },
+      { name: "William S.", location: "Florida" },
+      { name: "Elizabeth R.", location: "Illinois" },
+    ];
+
+    const showNotification = () => {
+      const randomPerson = names[Math.floor(Math.random() * names.length)];
+      setNotification(randomPerson);
+      setTimeout(() => setNotification(null), 4000);
+    };
+
+    const initialTimeout = setTimeout(showNotification, 8000);
+    const interval = setInterval(() => {
+      showNotification();
+    }, Math.random() * 30000 + 30000);
+
+    return () => {
+      clearTimeout(initialTimeout);
+      clearInterval(interval);
+    };
+  }, []);
 
   const modules = [
-    {
-      number: 1,
-      title: "The Executive Presence Framework",
-      duration: "5 min",
-      lessons: 1,
-      icon: Crown,
-      topics: [
-        "Command respect in any room with the 3-pillar system used by Fortune 100 executives",
-        "The foundation of executive presence: gravitas, communication, and appearance",
-        "How to build instant credibility in high-stakes meetings",
-        "Real-world examples from Fortune 100 boardrooms",
-        "Key takeaway: Executive presence is a learnable skill, not a personality trait"
-      ]
-    },
-    {
-      number: 2,
-      title: "The Strategic Pause Technique",
-      duration: "5 min",
-      lessons: 1,
-      icon: Target,
-      topics: [
-        "Control any conversation using silence as your secret weapon",
-        "The psychology of the strategic pause in negotiations",
-        "How top executives use silence to command attention",
-        "When and how to pause for maximum impact",
-        "Key takeaway: The most powerful thing you can say is nothing"
-      ]
-    },
-    {
-      number: 3,
-      title: "Salary Negotiation Mastery",
-      duration: "5 min",
-      lessons: 1,
-      icon: TrendingUp,
-      topics: [
-        "The exact 3-step framework I used to negotiate $100K+ raises",
-        "How to anchor the negotiation in your favor",
-        "The \"walk-away\" strategy that gets you what you deserve",
-        "Timing your ask for maximum leverage",
-        "Key takeaway: You don't get what you deserve. You get what you negotiate"
-      ]
-    },
-    {
-      number: 4,
-      title: "Executive Communication",
-      duration: "5 min",
-      lessons: 1,
-      icon: Users,
-      topics: [
-        "Speak with authority and influence without needing a title",
-        "The Pyramid Principle for C-suite presentations",
-        "How to structure your message for executive audiences",
-        "Storytelling techniques that drive action",
-        "Key takeaway: Executives don't have time for details. Lead with the answer"
-      ]
-    },
-    {
-      number: 5,
-      title: "The Meeting Before the Meeting",
-      duration: "5 min",
-      lessons: 1,
-      icon: Lightbulb,
-      topics: [
-        "Amazon's insider strategy for winning decisions before they're made",
-        "How to build consensus before the formal meeting",
-        "The art of pre-selling your ideas to key stakeholders",
-        "Why decisions are made in hallways, not conference rooms",
-        "Key takeaway: The meeting is just a formality. The real work happens before"
-      ]
-    },
-    {
-      number: 6,
-      title: "Breaking the $120K Ceiling (BONUS)",
-      duration: "5 min",
-      lessons: 1,
-      icon: Star,
-      topics: [
-        "The mindset shifts required to reach $400K+",
-        "Why most professionals plateau at $120K-$150K",
-        "The identity shift from employee to executive",
-        "How to think like a $400K+ earner",
-        "Key takeaway: Your income is a reflection of your identity, not your effort"
-      ]
-    },
-    {
-      number: 7,
-      title: "The Problem-Solving Blueprint: How to Solve Any Business Problem",
-      duration: "5 min",
-      lessons: 1,
-      icon: Brain,
-      topics: [
-        "The exact problem-solving system used by elite consultants",
-        "How to dissect complex challenges using the MECE framework",
-        "Building issue trees to map every possible solution",
-        "The 80/20 rule for prioritizing high-impact actions",
-        "Key takeaway: Executives don't solve problems. They dissect them"
-      ]
-    },
-    {
-      number: 8,
-      title: "The Innovation Blueprint: Invent Like a Day 1 Company",
-      duration: "5 min",
-      lessons: 1,
-      icon: Lightbulb,
-      topics: [
-        "The 'Working Backwards' process top tech companies use to create world-changing products",
-        "How to start with the customer and work backward to the solution",
-        "Writing press releases before building the product",
-        "Why top tech companies banned PowerPoint in favor of 6-page memos",
-        "Key takeaway: Start with the end in mind, then build the path to get there"
-      ]
-    },
-    {
-      number: 9,
-      title: "The Career Acceleration Blueprint: Get Promoted in Half the Time",
-      duration: "5 min",
-      lessons: 1,
-      icon: TrendingUp,
-      topics: [
-        "The OKR system top tech companies use for career acceleration",
-        "How to set objectives that align with company priorities",
-        "Measuring key results that prove your impact",
-        "The quarterly review process that drives promotions",
-        "Key takeaway: You get promoted when your impact is undeniable"
-      ]
-    },
-    {
-      number: 10,
-      title: "The Netflix Blueprint: Lead Like a Silicon Valley Icon",
-      duration: "5 min",
-      lessons: 1,
-      icon: Users,
-      topics: [
-        "Build and lead high-performance teams using Netflix's culture principles",
-        "The 'Freedom and Responsibility' framework",
-        "How to hire A-players and fire fast",
-        "Creating a culture of radical candor and high performance",
-        "Key takeaway: Great teams are built, not found"
-      ]
-    },
-    {
-      number: 11,
-      title: "The Innovation Blueprint: Think Like a Design Genius",
-      duration: "5 min",
-      lessons: 1,
-      icon: Lightbulb,
-      topics: [
-        "Deep dive into world-class innovation frameworks",
-        "The 'Think Different' philosophy in practice",
-        "How to simplify complexity and create elegant solutions",
-        "Steve Jobs' product development process",
-        "Key takeaway: Innovation is saying no to 1,000 things"
-      ]
-    },
-    {
-      number: 12,
-      title: "The Networking Blueprint: Build a World-Class Network",
-      duration: "5 min",
-      lessons: 1,
-      icon: Users,
-      topics: [
-        "Strategic networking systems for executive-level relationships",
-        "The 'Give First' philosophy for building powerful connections",
-        "How to network without feeling salesy or transactional",
-        "Building a personal board of advisors",
-        "Key takeaway: Your network is your net worth"
-      ]
-    },
-    {
-      number: 13,
-      title: "The Writing Blueprint: Write Like a C-Suite Executive",
-      duration: "5 min",
-      lessons: 1,
-      icon: Brain,
-      topics: [
-        "Master executive-level written communication",
-        "The BLUF (Bottom Line Up Front) writing method",
-        "How to write emails that get read and acted on",
-        "Crafting executive summaries and strategic memos",
-        "Key takeaway: Clear writing is clear thinking"
-      ]
-    },
-    {
-      number: 14,
-      title: "The Finance Blueprint: Speak the Language of the C-Suite",
-      duration: "5 min",
-      lessons: 1,
-      icon: TrendingUp,
-      topics: [
-        "Financial acumen for non-finance leaders",
-        "Understanding P&L, balance sheets, and cash flow",
-        "How to speak confidently about ROI, EBITDA, and margins",
-        "Making data-driven decisions that drive business results",
-        "Key takeaway: If you can't speak finance, you can't lead at the executive level"
-      ]
-    },
-    {
-      number: 15,
-      title: "The 90-Day Blueprint: Master Any New Leadership Role",
-      duration: "5 min",
-      lessons: 1,
-      icon: Target,
-      topics: [
-        "The leadership transition framework for new roles",
-        "How to make an impact in your first 90 days",
-        "Building credibility and trust with your new team",
-        "The 30-60-90 day plan for executive success",
-        "Key takeaway: The first 90 days set the tone for your entire tenure"
-      ]
-    },
-    {
-      number: 16,
-      title: "The Boardroom Blueprint: Command the Highest-Stakes Room",
-      duration: "5 min",
-      lessons: 1,
-      icon: Crown,
-      topics: [
-        "Presence and influence in boardroom settings",
-        "How to present to board members and investors",
-        "Handling tough questions with confidence and grace",
-        "The art of executive storytelling in high-stakes presentations",
-        "Key takeaway: The boardroom is where careers are made or broken"
-      ]
-    },
-    {
-      number: 17,
-      title: "The Thought Leadership Blueprint: Become the Go-To Expert",
-      duration: "5 min",
-      lessons: 1,
-      icon: Star,
-      topics: [
-        "Build your reputation as an industry thought leader",
-        "How to create content that positions you as an expert",
-        "Speaking, writing, and publishing strategies",
-        "Building a personal brand that opens doors",
-        "Key takeaway: Thought leadership is the ultimate career accelerator"
-      ]
-    },
-    {
-      number: 18,
-      title: "The Wealth Blueprint: Turn Your Income into Freedom",
-      duration: "5 min",
-      lessons: 1,
-      icon: TrendingUp,
-      topics: [
-        "Wealth generation strategies for high earners",
-        "How to invest your executive income for long-term wealth",
-        "Tax optimization strategies for $200K+ earners",
-        "Building multiple income streams beyond your salary",
-        "Key takeaway: High income doesn't equal wealth. Wealth is what you keep"
-      ]
-    },
-    {
-      number: 19,
-      title: "The Legacy Blueprint: Define Your Ultimate Mission",
-      duration: "5 min",
-      lessons: 1,
-      icon: Heart,
-      topics: [
-        "Create lasting impact and define your leadership legacy",
-        "How to align your career with your deepest values",
-        "Building a mission-driven career that matters",
-        "Defining success on your own terms",
-        "Key takeaway: Your legacy is not what you achieve. It's who you become"
-      ]
-    },
-    {
-      number: 20,
-      title: "The Energy Blueprint: Perform Like a World-Class Athlete",
-      duration: "5 min",
-      lessons: 1,
-      icon: Zap,
-      topics: [
-        "Personal energy management for sustained high performance",
-        "The sleep, nutrition, and exercise habits of top executives",
-        "How to manage stress and avoid burnout",
-        "Building sustainable high-performance routines",
-        "Key takeaway: You can't lead others if you can't manage your own energy"
-      ]
-    },
-    {
-      number: 21,
-      title: "The Final Blueprint: Make Executive Presence Your Identity",
-      duration: "5 min",
-      lessons: 1,
-      icon: Crown,
-      topics: [
-        "Integration of all frameworks into your daily leadership practice",
-        "Creating your personal executive presence playbook",
-        "The 30-day integration challenge",
-        "How to make these principles automatic and effortless",
-        "Key takeaway: Executive presence is not something you do. It's who you are"
-      ]
-    }
+    { number: 1, title: "The Executive Presence Framework", duration: "5 min", icon: Crown, topics: ["The 3 pillars of executive presence", "How Fortune 100 leaders command attention", "Building instant credibility in high-stakes meetings"] },
+    { number: 2, title: "The Strategic Pause Technique", duration: "5 min", icon: Target, topics: ["Control any conversation using silence", "The psychology of the strategic pause", "When and how to pause for maximum impact"] },
+    { number: 3, title: "Salary Negotiation Mastery", duration: "5 min", icon: TrendingUp, topics: ["The 3-step framework for $100K+ raises", "How to anchor the negotiation in your favor", "The walk-away strategy that works"] },
+    { number: 4, title: "Executive Communication", duration: "5 min", icon: Users, topics: ["The Pyramid Principle for C-suite presentations", "Structuring your message for executive audiences", "Storytelling techniques that drive action"] },
+    { number: 5, title: "The Meeting Before the Meeting", duration: "5 min", icon: Lightbulb, topics: ["Amazon's insider strategy for winning decisions", "Building consensus before the formal meeting", "Pre-selling your ideas to key stakeholders"] },
+    { number: 6, title: "Breaking the $120K Ceiling", duration: "5 min", icon: Star, topics: ["The mindset shifts required to reach $400K+", "Why most professionals plateau at $120K-$150K", "The identity shift from employee to executive"] }
   ];
 
   const faqs = [
-    {
-      question: "Who is this course for?",
-      answer: "This course is for mid-level to senior professionals who want to accelerate their path to executive leadership. Whether you're a manager, director, or VP, if you're ready to command the room and influence without authority, this is for you."
-    },
-    {
-      question: "How is this different from other leadership courses?",
-      answer: "We don't teach generic leadership theory. We teach the specific frameworks, behaviors, and communication patterns used by Fortune 100 executives. This is reverse-engineered executive presence from the world's top companies."
-    },
-    {
-      question: "I'm not naturally charismatic. Can I still develop executive presence?",
-      answer: "Absolutely. Executive presence is a skill, not a personality trait. We break it down into learnable, repeatable frameworks that anyone can master with practice."
-    },
-    {
-      question: "How long does it take to complete?",
-      answer: "The course is approximately 2 hours of video content, but you'll want to spend time implementing the frameworks. Most students complete it in 2-3 weeks while applying the concepts in real-time."
-    },
-    {
-      question: "Is there a money-back guarantee?",
-      answer: "Yes, a 30-day, no-questions-asked money-back guarantee. If you don't feel like you've gotten 10x the value, we'll refund you in full."
-    }
+    { question: "Is this course right for me if I'm not yet an executive?", answer: "Absolutely! Executive presence is a skill you develop before you get the title. Most successful executives started building these skills early in their careers." },
+    { question: "How is this different from other leadership courses?", answer: "This isn't theory. These are the exact frameworks used by Fortune 100 executives. Real strategies from 22+ years of experience at the highest levels." },
+    { question: "How long do I have access?", answer: "Lifetime access. Once you enroll, the course is yours forever, including all future updates." },
+    { question: "What's your refund policy?", answer: "30-day money-back guarantee. If you don't see value, email us for a full refund. No questions asked." },
+    { question: "Can I apply these skills in virtual meetings?", answer: "Yes! These skills translate perfectly to Zoom, Teams, and video calls. Virtual presence is covered in the course." }
   ];
 
-  const benefits = [
-    "Command any room with confidence and gravitas",
-    "Influence without authority across all levels",
-    "Present to C-suite executives with clarity and impact",
-    "Navigate office politics strategically",
-    "Accelerate your path to senior leadership"
-  ];
-
-  const deliverables = [
-    "21 video lessons across 4 modules + bonus toolkit",
-    "BONUS: Breaking the $120K Ceiling video lesson",
-    "5 downloadable PDF toolkits & workbooks",
-    "The Complete Framework Library - All 21 blueprints reference guide",
-    "90-Day Implementation Roadmap - Step-by-step action plan",
-    "The $400K Playbook - Reach $400K+ compensation",
-    "Executive Communication Toolkit - Templates & scripts",
-    "Career Acceleration Workbook - Track your progress",
-    "Real case studies from Fortune 100 companies",
-    "Lifetime access to all future updates"
+  const testimonials = [
+    { name: "Jennifer Chen", role: "VP of Strategy", company: "Fortune 500", result: "Promoted in 90 days", text: "This course gave me the confidence to speak up in board meetings. I was promoted to VP within 3 months.", rating: 5 },
+    { name: "Marcus Williams", role: "Senior Director", company: "Tech Company", result: "Led $50M initiative", text: "I went from being overlooked to being chosen to lead our biggest strategic initiative. Executive presence is real.", rating: 5 },
+    { name: "Sarah Thompson", role: "Managing Partner", company: "Consulting Firm", result: "2x client wins", text: "My client win rate doubled after implementing these frameworks. People trust leaders who have presence.", rating: 5 }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 relative">
-      {/* Futuristic Animated Background */}
-      <FuturisticBackground variant="enrollment" />
-      {/* Navigation */}
-      <nav className="bg-black border-b border-slate-800 sticky top-0 z-50 shadow-lg">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16 logo-glow" />
-          </Link>
-          <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-cyan-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden animated-gradient-bg">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-teal-900/20" />
-        <div className="absolute inset-0 bg-[url('/hero-executive-presence-futuristic.png')] bg-cover bg-top opacity-30" />
-        
-        {/* Glowing Orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-glow-pulse" />
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-glow-pulse" style={{animationDelay: '2s'}} />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-emerald-500/20 text-emerald-300 px-6 py-2 rounded-full text-sm font-bold mb-6">
-              👑 $397 • 187 Students Enrolled • Only 47 Spots Left This Month
+    <div className="min-h-screen bg-slate-950">
+      <AnimatePresence>
+        {notification && (
+          <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} className="fixed bottom-24 left-4 z-50 bg-white rounded-lg shadow-2xl p-4 max-w-xs border-l-4 border-cyan-500">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center"><Check className="w-5 h-5 text-cyan-600" /></div>
+              <div><p className="text-slate-800 font-semibold text-sm">{notification.name} from {notification.location}</p><p className="text-slate-500 text-xs">just enrolled in Executive Presence!</p></div>
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Command Any Room. Lead Without a Title.
-            </h1>
-            <p className="text-xl md:text-2xl text-white mb-8">
-              The executive presence frameworks used by Fortune 100 leaders to accelerate to the C-suite.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="flex items-center gap-2 text-white bg-slate-800/50 px-4 py-2 rounded-full">
-                <Check className="w-5 h-5 text-emerald-400" />
-                <span>21 Video Lessons + Bonus</span>
-              </div>
-              <div className="flex items-center gap-2 text-white bg-slate-800/50 px-4 py-2 rounded-full">
-                <Check className="w-5 h-5 text-emerald-400" />
-                <span>5 PDF Toolkits</span>
-              </div>
-              <div className="flex items-center gap-2 text-white bg-slate-800/50 px-4 py-2 rounded-full">
-                <Check className="w-5 h-5 text-emerald-400" />
-                <span>Lifetime Access</span>
-              </div>
-              <div className="flex items-center gap-2 text-white bg-slate-800/50 px-4 py-2 rounded-full">
-                <Check className="w-5 h-5 text-emerald-400" />
-                <span>30-Day Guarantee</span>
-              </div>
-            </div>
-            <a
-              href="https://buy.stripe.com/14A6oG95nguP9C43ly08g0h"
-              className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
-            >
-              Enroll Now - $397 (Originally $997 • Save 60%)
-            </a>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Video Preview Section */}
-      <section className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: What You'll Learn</h2>
-            <div className="shadow-2xl border-2 border-slate-600 rounded-xl overflow-hidden">
-              <LazyVimeoPlayer
-                videoId="1148739137"
-                title="Executive Presence Course"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Problem & Solution Section */}
-      <section className="py-16 md:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Problem: You're Invisible at the Top</h2>
-              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
-                You're smart. You work hard. You deliver results. But when it comes to promotions, you're passed over for someone with less experience but more "presence." You've been told you need to "think more strategically" or "communicate better," but no one tells you how. The truth? Executive presence isn't taught in business school. It's learned in the boardrooms of Fortune 100 companies—and we've reverse-engineered it for you.
-              </p>
-            </div>
-            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: "#ffffff"}}>The Solution: Master Executive Presence</h2>
-              <p className="text-lg leading-relaxed" style={{color: "#ffffff"}}>
-                This isn't another course on "leadership skills." This is a masterclass in **executive presence**—the invisible force that separates directors from VPs, and VPs from C-suite executives. We've studied the communication patterns, decision-making frameworks, and influence tactics of the world's top executives and distilled them into a repeatable system. You'll learn how to command any room, influence without authority, and accelerate your path to senior leadership.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What You'll Master Section */}
-      <section className="py-16 md:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">What You'll Master</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[{
-              title: "The Gravitas Framework",
-              description: "How to project confidence and authority in any situation.",
-              icon: <Crown className="h-20 w-20 text-emerald-400" />
-            }, {
-              title: "C-Suite Communication",
-              description: "The McKinsey Pyramid Principle for executive presentations.",
-              icon: <Users className="h-20 w-20 text-emerald-400" />
-            }, {
-              title: "Influence Without Authority",
-              description: "How to lead cross-functional teams without being the boss.",
-              icon: <Zap className="h-20 w-20 text-emerald-400" />
-            }, {
-              title: "Political Navigation",
-              description: "Understanding and leveraging organizational power dynamics.",
-              icon: <Brain className="h-20 w-20 text-emerald-400" />
-            }, {
-              title: "Decision-Making Under Pressure",
-              description: "The OODA Loop for high-stakes executive decisions.",
-              icon: <Target className="h-20 w-20 text-emerald-400" />
-            }].map((item, index) => (
-              <div key={index} className="bg-black p-8 rounded-lg border-2 border-slate-800">
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-white">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Curriculum Section */}
-      <section id="curriculum" className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Complete Course Curriculum</h2>
-          <div className="max-w-4xl mx-auto">
-            {/* Modules 1-10 */}
-            {modules.slice(0, 10).map((module) => (
-              <div key={module.number} className="bg-black border-2 border-slate-600 rounded-lg mb-4">
-                <button
-                  className="w-full flex justify-between items-center p-6 text-left"
-                  onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 p-4 rounded-full shadow-lg shadow-emerald-500/50">
-                      <module.icon className="h-14 w-14 text-emerald-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
-                      <p className="text-sm text-white">{module.duration} • {module.lessons} lessons</p>
-                    </div>
-                  </div>
-                  <ChevronDown className={`h-14 w-14 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
-                </button>
-                {openModule === module.number && (
-                  <div className="p-6 border-t border-slate-600">
-                    <ul className="space-y-3">
-                      {module.topics.map((topic, index) => (
-                        <li key={index} className="flex items-center gap-3">
-                          <Check className="h-5 w-5 text-emerald-400" />
-                          <span className="text-white">{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            ))}
-            
-            {/* Advanced Modules Dropdown (11-21) */}
-            <div className="mt-8">
-              <button
-                className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-4 px-6 rounded-lg flex justify-between items-center transition-all"
-                onClick={() => setOpenModule(openModule === 999 ? null : 999)}
-              >
-                <span className="text-lg">View Advanced Modules (11-21)</span>
-                <ChevronDown className={`h-6 w-6 transition-transform ${openModule === 999 ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {openModule === 999 && (
-                <div className="mt-4 space-y-4">
-                  {modules.slice(10).map((module) => (
-                    <div key={module.number} className="bg-black border-2 border-slate-600 rounded-lg">
-                      <button
-                        className="w-full flex justify-between items-center p-6 text-left"
-                        onClick={() => setOpenModule(openModule === module.number ? null : module.number)}
-                      >
-                        <div className="flex items-center gap-4">
-                          <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 p-4 rounded-full shadow-lg shadow-emerald-500/50">
-                            <module.icon className="h-14 w-14 text-emerald-400" />
-                          </div>
-                          <div>
-                            <h3 className="text-xl font-bold text-white">Module {module.number}: {module.title}</h3>
-                            <p className="text-sm text-white">{module.duration} • {module.lessons} lessons</p>
-                          </div>
-                        </div>
-                        <ChevronDown className={`h-14 w-14 text-white transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
-                      </button>
-                      {openModule === module.number && (
-                        <div className="p-6 border-t border-slate-600">
-                          <ul className="space-y-3">
-                            {module.topics.map((topic, index) => (
-                              <li key={index} className="flex items-center gap-3">
-                                <Check className="h-5 w-5 text-emerald-400" />
-                                <span className="text-white">{topic}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof Section */}
-      <section className="py-16 bg-slate-950">
-        <div className="container mx-auto px-4">
-          <h3 className="text-center text-white text-2xl font-bold mb-4">Learn the frameworks used by:</h3>
-          <p className="text-center text-white text-lg max-w-4xl mx-auto">
-            <span className="text-cyan-400 font-semibold">Fortune 100 executives</span> • 
-            <span className="text-cyan-400 font-semibold"> Tech leaders</span> • 
-            <span className="text-cyan-400 font-semibold"> Senior directors</span> • 
-            <span className="text-cyan-400 font-semibold"> Investment partners</span> • 
-            <span className="text-cyan-400 font-semibold"> Top consultants</span>
-          </p>
-        </div>
-      </section>
-
-      {/* Benefits & Deliverables Section */}
-      <section className="py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
-              <h3 className="text-3xl font-bold text-white mb-6">After Completing This Course, You Will:</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="h-14 w-14 text-emerald-400 mt-1 flex-shrink-0" />
-                    <span className="text-lg text-white">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black border-2 border-slate-600 rounded-lg p-8">
-              <h3 className="text-3xl font-bold text-white mb-6">Proprietary Frameworks & Tools</h3>
-              <ul className="space-y-4">
-                {deliverables.map((deliverable, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="h-14 w-14 text-emerald-400 mt-1 flex-shrink-0" />
-                    <span className="text-lg text-white">{deliverable}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What You Need Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-emerald-500/20 to-teal-500/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-900 to-black border-2 border-emerald-500 rounded-2xl p-8 md:p-12 shadow-2xl">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="bg-emerald-500/20 p-4 rounded-full">
-                  <Crown className="h-12 w-12 text-emerald-400" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white">What You Need ($397)</h2>
-              </div>
-              
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">21 video lessons + 1 bonus lesson (3+ hours)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">The Complete Framework Library PDF</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">90-Day Implementation Roadmap PDF</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">The $400K Playbook PDF</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">Executive Communication Toolkit PDF</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">Career Acceleration Workbook PDF</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-white">Lifetime access to all future updates</span>
-                </li>
-              </ul>
-
-              <div className="mt-8 bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6 text-center">
-                <p className="text-2xl font-bold text-white">Result: You'll reach VP/C-suite in 18-24 months</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Professional Certificate Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-emerald-500/20 to-teal-500/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">Earn Your Professional Certificate</h2>
-            <p className="text-xl text-white text-center mb-12 max-w-3xl mx-auto">
-              Upon completion, receive a verified certificate you can share with employers, add to your LinkedIn profile, and showcase your expertise.
-            </p>
-            
-            <div className="bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-cyan-400 rounded-2xl p-8 md:p-12 shadow-2xl shadow-cyan-500/20">
-              <div className="text-center mb-8">
-                <div className="inline-block bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
-                  <h3 className="text-3xl md:text-4xl font-bold mb-2">Certificate of Completion</h3>
-                </div>
-                <p className="text-white text-lg">Million Dollar Blueprint</p>
-              </div>
-              
-              <div className="border-t-2 border-b-2 border-cyan-400/30 py-8 mb-8">
-                <p className="text-white text-sm text-center mb-2">This certifies that</p>
-                <p className="text-3xl md:text-4xl font-bold text-white text-center mb-4">[Your Name]</p>
-                <p className="text-white text-sm text-center mb-2">has successfully completed</p>
-                <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 text-center mb-4">
-                  Executive Presence Certificate
-                </p>
-                <p className="text-white text-center text-sm md:text-base">
-                  Demonstrating mastery in: Gravitas, C-Suite Communication, Influence Without Authority, Political Navigation
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <p className="text-white text-sm mb-1">Certificate ID</p>
-                  <p className="text-white font-mono text-xs">MDB-EXP-XXXXX</p>
-                </div>
-                <div>
-                  <p className="text-white text-sm mb-1">Issued Date</p>
-                  <p className="text-white font-semibold">Upon Completion</p>
-                </div>
-                <div>
-                  <p className="text-white text-sm mb-1">Verification</p>
-                  <p className="text-cyan-400 font-semibold">Blockchain Verified</p>
-                </div>
-              </div>
-              
-              <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-                <div className="flex items-center justify-center gap-2 text-white">
-                  <Check className="h-5 w-5 text-emerald-400" />
-                  <span>Add to LinkedIn</span>
-                </div>
-                <div className="flex items-center justify-center gap-2 text-white">
-                  <Check className="h-5 w-5 text-emerald-400" />
-                  <span>Download PDF</span>
-                </div>
-                <div className="flex items-center justify-center gap-2 text-white">
-                  <Check className="h-5 w-5 text-emerald-400" />
-                  <span>Share on Social Media</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-              <div className="bg-black/30 border border-cyan-400/30 rounded-xl p-6">
-                <div className="text-4xl mb-3">🎓</div>
-                <h4 className="text-white font-bold mb-2">Career Advancement</h4>
-                <p className="text-white text-sm">Show employers your commitment to professional development</p>
-              </div>
-              <div className="bg-black/30 border border-purple-400/30 rounded-xl p-6">
-                <div className="text-4xl mb-3">✅</div>
-                <h4 className="text-white font-bold mb-2">Verified Credentials</h4>
-                <p className="text-white text-sm">Blockchain-verified certificates with unique IDs</p>
-              </div>
-              <div className="bg-black/30 border border-emerald-400/30 rounded-xl p-6">
-                <div className="text-4xl mb-3">💼</div>
-                <h4 className="text-white font-bold mb-2">LinkedIn Ready</h4>
-                <p className="text-white text-sm">One-click integration with your LinkedIn profile</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-slate-950">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-          <div className="max-w-3xl mx-auto">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-slate-800">
-                <button
-                  className="w-full flex justify-between items-center py-6 text-left"
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                >
-                  <h3 className="text-xl font-semibold text-white">{faq.question}</h3>
-                  <ChevronDown className={`h-14 w-14 text-white transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
-                </button>
-                {openFaq === index && (
-                  <div className="pb-6">
-                    <p className="text-white leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section id="enroll" className="py-16 md:py-24 bg-gradient-to-r from-emerald-600 to-teal-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Command Any Room?</h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">Enroll now and get lifetime access to the frameworks that accelerate careers to the C-suite.</p>
-          <a
-            href="https://buy.stripe.com/14A6oG95nguP9C43ly08g0h"
-            className="inline-block bg-white text-emerald-600 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
-          >
-            Enroll Now - $397 (Originally $997 • Save 60%)
-          </a>
-        </div>
-      </section>
-
-      {/* Sticky Bottom CTA Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-emerald-600 to-teal-600 border-t-4 border-emerald-400 shadow-2xl z-50 py-4">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-center md:text-left">
-            <p className="text-white font-bold text-lg">🔥 Limited Time: Save 60% Today</p>
-            <p className="text-white text-sm">30-Day Money-Back Guarantee • Lifetime Access</p>
-          </div>
-          <a
-            href="https://buy.stripe.com/14A6oG95nguP9C43ly08g0h"
-            className="bg-white px-8 py-3 rounded-lg font-bold text-lg hover:scale-105 transition-all shadow-xl whitespace-nowrap" style={{color: '#059669'}}
-          >
-            Enroll Now - $397
-          </a>
-        </div>
+      <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
+        <p className="text-sm md:text-base font-semibold relative z-10">🔥 LAUNCH SALE: <span className="text-yellow-300">75% OFF</span> — Ends January 12th at Midnight</p>
       </div>
 
-      <ApexChatbot />
-
-      {/* Footer */}
-      <footer className="bg-slate-950 py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center gap-6 mb-4">
-            <Link href="/terms" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Terms of Service</Link>
-            <Link href="/privacy" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Privacy Policy</Link>
-            <Link href="/refund-policy" className="text-slate-500 hover:text-cyan-400 text-sm transition-colors">Refund Policy</Link>
+      <section className="relative pt-20 pb-16 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-slate-950 to-blue-900/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.15),transparent_50%)]" />
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <span className="bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-500/30">⭐ TOP RATED</span>
+                <span className="bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold border border-yellow-500/30">👔 LEADERSHIP</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">Executive Presence<span className="block text-cyan-400">Command Any Room</span></h1>
+              <p className="text-xl text-slate-300 mb-8 leading-relaxed">The exact frameworks used by <strong className="text-white">Fortune 100 executives</strong> to command attention, build trust, and lead with authority.</p>
+              <div className="space-y-3 mb-8">
+                {["21 comprehensive modules (2+ hours)", "Fortune 100 executive frameworks", "Salary negotiation mastery", "C-suite communication techniques", "Board meeting strategies", "Lifetime access + future updates"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" /><span className="text-slate-300">{item}</span></div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+              <div className="text-center mb-6">
+                <div className="inline-block bg-red-500/20 text-red-400 px-4 py-1 rounded-full text-sm font-bold mb-4">75% OFF — ENDS JAN 12</div>
+                <div className="flex items-center justify-center gap-4 mb-2"><span className="text-slate-500 line-through text-2xl">$497</span><span className="text-5xl font-black text-white">$127</span></div>
+                <p className="text-cyan-400 font-semibold">Save $370 Today</p>
+              </div>
+              <a href="https://buy.stripe.com/9AQcN4ftz6Upg0s9Ba08g0p" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-center py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 mb-4">Get Instant Access — $127<ArrowRight className="inline ml-2 w-5 h-5" /></a>
+              <div className="flex items-center justify-center gap-6 text-sm text-slate-400"><div className="flex items-center gap-2"><Shield className="w-4 h-4" /><span>30-Day Guarantee</span></div><div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Instant Access</span></div></div>
+            </div>
           </div>
-          <p className="text-slate-600 text-xs mb-4 max-w-3xl mx-auto">
-            EARNINGS DISCLAIMER: Results vary. The testimonials and examples used are exceptional results and are not intended to guarantee that you will achieve the same results. Your results will depend on many factors including your background, experience, and work ethic.
-          </p>
-          <p className="text-slate-500 text-sm">&copy; 2025 Million Dollar Blueprint. All rights reserved.</p>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 py-8 border-y border-cyan-500/20">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-3 gap-4 text-center">
+            <div><div className="text-3xl md:text-4xl font-black text-white">90</div><div className="text-cyan-400 text-sm">Day Promotion Avg</div></div>
+            <div><div className="text-3xl md:text-4xl font-black text-white">2x</div><div className="text-cyan-400 text-sm">Leadership Impact</div></div>
+            <div><div className="text-3xl md:text-4xl font-black text-white">$100K+</div><div className="text-cyan-400 text-sm">Salary Increases</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">See How It Works</h2><p className="text-slate-400 text-lg">Watch how executive presence can transform your career</p></div>
+          <div className="aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-2xl"><LazyVimeoPlayer videoId="1148769094" /></div>
+          <div className="text-center mt-8"><a href="https://buy.stripe.com/9AQcN4ftz6Upg0s9Ba08g0p" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105">Get Instant Access — $127<ArrowRight className="w-5 h-5" /></a></div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Real Results from Real Leaders</h2></div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-slate-900/50 border border-slate-700 rounded-2xl p-6">
+                <div className="flex gap-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />))}</div>
+                <p className="text-slate-300 mb-6 italic">&quot;{testimonial.text}&quot;</p>
+                <div className="border-t border-slate-700 pt-4"><div className="font-bold text-white">{testimonial.name}</div><div className="text-slate-400 text-sm">{testimonial.role}</div><div className="text-cyan-400 font-semibold mt-2">{testimonial.result}</div></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Course Curriculum</h2><p className="text-slate-400">21 modules • 2+ hours of focused content</p></div>
+          <div className="space-y-4">
+            {modules.map((module) => (
+              <div key={module.number} className="bg-slate-900/80 border border-slate-700 rounded-xl overflow-hidden">
+                <button onClick={() => setOpenModule(openModule === module.number ? null : module.number)} className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-800/50 transition-colors">
+                  <div className="flex items-center gap-4"><div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center"><module.icon className="w-6 h-6 text-cyan-400" /></div><div><div className="text-white font-bold">Module {module.number}: {module.title}</div><div className="text-slate-400 text-sm">{module.duration}</div></div></div>
+                  <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${openModule === module.number ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence>{openModule === module.number && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="border-t border-slate-700"><div className="p-6 space-y-3">{module.topics.map((topic, i) => (<div key={i} className="flex items-start gap-3"><Check className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" /><span className="text-slate-300">{topic}</span></div>))}</div></motion.div>)}</AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-2xl p-12">
+            <div className="w-20 h-20 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-6"><Shield className="w-10 h-10 text-cyan-400" /></div>
+            <h2 className="text-3xl font-bold text-white mb-4">100% Risk-Free Guarantee</h2>
+            <p className="text-slate-300 text-lg mb-6">Try Executive Presence for 30 days. If you don&apos;t see improvement in how you&apos;re perceived as a leader, email us for a full refund. No questions asked.</p>
+            <div className="text-cyan-400 font-semibold">30-Day Money-Back Guarantee</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-slate-900/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">This Course Is For You If...</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {["You want to be seen as leadership material", "You struggle to command attention in meetings", "You want to accelerate your path to executive roles", "You need to present to C-suite with confidence", "You want to negotiate higher compensation", "You're ready to invest in your leadership presence"].map((item, i) => (
+              <div key={i} className="flex items-center gap-4 bg-slate-900/50 border border-slate-700 rounded-xl p-4"><CheckCircle2 className="w-6 h-6 text-cyan-400 flex-shrink-0" /><span className="text-slate-300">{item}</span></div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-slate-900/50 border border-slate-700 rounded-xl overflow-hidden">
+                <button onClick={() => setOpenFaq(openFaq === index ? null : index)} className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-800/50 transition-colors"><span className="text-white font-semibold pr-4">{faq.question}</span><ChevronDown className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} /></button>
+                <AnimatePresence>{openFaq === index && (<motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="border-t border-slate-700"><div className="p-6"><p className="text-slate-300">{faq.answer}</p></div></motion.div>)}</AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-gradient-to-br from-cyan-900/30 to-blue-900/30">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="inline-block bg-red-500/20 text-red-400 px-6 py-2 rounded-full text-sm font-bold mb-6">⏰ SALE ENDS JANUARY 12TH AT MIDNIGHT</div>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to Command Any Room?</h2>
+          <p className="text-xl text-slate-300 mb-8">Join hundreds of leaders who&apos;ve transformed their executive presence.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><span className="text-slate-500 line-through text-2xl">$497</span><span className="text-5xl font-black text-white">$127</span><span className="text-cyan-400 font-bold">Save $370</span></div>
+          <a href="https://buy.stripe.com/9AQcN4ftz6Upg0s9Ba08g0p" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">Get Instant Access Now<ArrowRight className="w-6 h-6" /></a>
+        </div>
+      </section>
+
+      <footer className="bg-slate-950 border-t border-slate-800 py-12 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-slate-500 text-sm">© 2026 Million Dollar Blueprint. All rights reserved.</p>
+          <div className="flex justify-center gap-6 mt-4"><Link href="/terms" className="text-slate-500 hover:text-slate-300 text-sm">Terms</Link><Link href="/privacy" className="text-slate-500 hover:text-slate-300 text-sm">Privacy</Link><Link href="/refund" className="text-slate-500 hover:text-slate-300 text-sm">Refund Policy</Link></div>
         </div>
       </footer>
+
+      <AnimatePresence>
+        {showStickyBar && (
+          <motion.div initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 100, opacity: 0 }} className="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700 py-4 px-4 z-40">
+            <div className="max-w-6xl mx-auto flex items-center justify-between">
+              <div className="hidden md:block"><div className="text-white font-bold">Executive Presence</div><div className="text-slate-400 text-sm"><span className="line-through">$497</span><span className="text-cyan-400 ml-2 font-bold">$127</span></div></div>
+              <a href="https://buy.stripe.com/9AQcN4ftz6Upg0s9Ba08g0p" className="w-full md:w-auto bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-xl font-bold text-center transition-all duration-300">Get Instant Access — $127</a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
