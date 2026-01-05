@@ -6,19 +6,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import AnimatedCounter from "@/components/AnimatedCounter";
-import StickyCTABar from "@/components/StickyCTABar";
-import ValueProposition from "@/components/ValueProposition";
-import ApexChatbot from "@/components/ApexChatbot";
+import dynamic from "next/dynamic";
 
-import TiltCard from "@/components/TiltCard";
-import TrustBadgeCarousel from "@/components/TrustBadgeCarousel";
-import ScrollIndicator from "@/components/ScrollIndicator";
-import AnimatedNavigation from "@/components/AnimatedNavigation";
-import Enhanced3DCard from "@/components/Enhanced3DCard";
-import ScrollReveal from "@/components/ScrollReveal";
+// Static imports for critical above-the-fold components
+import StickyCTABar from "@/components/StickyCTABar";
 import CountdownTimer from "@/components/CountdownTimer";
-import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
+
+// Dynamic imports for below-the-fold components
+const AnimatedCounter = dynamic(() => import("@/components/AnimatedCounter"), { ssr: false });
+const ValueProposition = dynamic(() => import("@/components/ValueProposition"), { ssr: false });
+const ApexChatbot = dynamic(() => import("@/components/ApexChatbot"), { ssr: false });
+const TiltCard = dynamic(() => import("@/components/TiltCard"), { ssr: false });
+const TrustBadgeCarousel = dynamic(() => import("@/components/TrustBadgeCarousel"), { ssr: false });
+const ScrollIndicator = dynamic(() => import("@/components/ScrollIndicator"), { ssr: false });
+const AnimatedNavigation = dynamic(() => import("@/components/AnimatedNavigation"), { ssr: false });
+const Enhanced3DCard = dynamic(() => import("@/components/Enhanced3DCard"), { ssr: false });
+const ScrollReveal = dynamic(() => import("@/components/ScrollReveal"), { ssr: false });
+const LazyVimeoPlayer = dynamic(() => import("@/components/LazyVimeoPlayer"), { ssr: false });
 
 
 export default function Home() {
@@ -49,10 +53,10 @@ export default function Home() {
       setTimeout(() => setNotification(null), 4000);
     };
 
-    const initialTimeout = setTimeout(showNotification, 15000);
+    const initialTimeout = setTimeout(showNotification, 30000);
     const interval = setInterval(() => {
       showNotification();
-    }, Math.random() * 45000 + 45000);
+    }, Math.random() * 60000 + 60000);
 
     return () => {
       clearTimeout(initialTimeout);
@@ -243,7 +247,7 @@ export default function Home() {
       stripeLink: "https://buy.stripe.com/14A00ibdvdiDaG86xK08g0m",
       description: "Master executive wellness and sustainable high performance.",
       students: "134 enrolled",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80&v=2",
+      image: "/course-wellness.jpg",
       available: true,
       badge: "NEW"
     }
