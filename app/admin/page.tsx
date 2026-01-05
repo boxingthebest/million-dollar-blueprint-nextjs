@@ -6,30 +6,44 @@ import Link from "next/link"
 import Image from "next/image"
 
 export default async function AdminDashboard() {
-  const session = await getServerSession(authOptions)
+  let session
+  
+  try {
+    session = await getServerSession(authOptions)
+  } catch (error) {
+    console.error("Error getting session:", error)
+    redirect("/auth/signin?error=session")
+  }
 
   if (!session?.user?.email) {
     redirect("/auth/signin")
   }
 
-  // Get all courses
-  const courses = await prisma.course.findMany({
-    include: {
-      modules: {
-        include: {
-          lessons: true,
+  let courses = []
+  
+  try {
+    // Get all courses
+    courses = await prisma.course.findMany({
+      include: {
+        modules: {
+          include: {
+            lessons: true,
+          },
+        },
+        _count: {
+          select: {
+            enrollments: true,
+          },
         },
       },
-      _count: {
-        select: {
-          enrollments: true,
-        },
+      orderBy: {
+        createdAt: "desc",
       },
-    },
-    orderBy: {
-      createdAt: "desc",
-    },
-  })
+    })
+  } catch (error) {
+    console.error("Error fetching courses:", error)
+    // Continue with empty courses array instead of crashing
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-black">
@@ -148,4 +162,3 @@ export default async function AdminDashboard() {
     </div>
   )
 }
-
