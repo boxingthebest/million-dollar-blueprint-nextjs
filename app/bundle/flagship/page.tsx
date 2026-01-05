@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, CheckCircle2, Brain, Zap, Target, Award } from "lucide-react";
+import { ArrowRight, CheckCircle2, Brain, Zap, Target, Award, Clock, Shield } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
