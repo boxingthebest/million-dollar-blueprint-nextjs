@@ -619,9 +619,9 @@ export default function Home() {
               </p>
             </ScrollReveal>
 
-            {/* Top Row - 4 Best Sellers */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8 items-stretch max-w-6xl mx-auto">
-              {courses.slice(0, 4).map((course, idx) => {
+            {/* All Courses Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 items-stretch max-w-6xl mx-auto">
+              {courses.map((course, idx) => {
                 const Icon = course.icon;
                 return (
                   <motion.div
@@ -656,79 +656,11 @@ export default function Home() {
                       <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{course.title}</h3>
                       <p className="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">{course.description}</p>
                       
-	                      <div className="mb-6">
-	                        <div className="flex flex-col mb-3">
-	                          <span className="text-slate-500 text-lg line-through">{course.originalPrice}</span>
-	                          <div className="text-4xl md:text-5xl font-bold text-white">{course.price}</div>
-	                        </div>
-	                        <div className="text-sm text-slate-400">
-	                          {course.students}
-	                        </div>
-	                      </div>
-                      
-                      <div className="mt-auto">
-                        {course.available ? (
-                          <Link
-                            href={courseUrlMap[course.title] || '#'}
-                            className={`neon-button-cyan block w-full text-center bg-gradient-to-r ${course.gradient} text-white px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg`}
-                          >
-                            Enroll Now
-                          </Link>
-                        ) : (
-                          <button
-                            disabled
-                            className="block w-full text-center bg-slate-700 text-slate-400 px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg cursor-not-allowed"
-                          >
-                            Coming Soon
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            {/* Remaining Courses */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 items-stretch max-w-6xl mx-auto">
-              {courses.slice(4).map((course, idx) => {
-                const Icon = course.icon;
-                return (
-                  <motion.div
-                    key={idx + 4}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.5, delay: (idx + 3) * 0.1 }}
-                    className="h-full"
-                  >
-                    <div className="glass-card rounded-xl overflow-hidden group relative hover:scale-[1.02] transition-transform duration-200 flex flex-col h-full cursor-pointer">
-                    {course.badge && (
-                      <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10">
-                        {course.badge}
-                      </div>
-                    )}
-                    <div className="relative h-48 overflow-hidden">
-                      <Image 
-                        src={course.image} 
-                        alt={course.title}
-                        width={400}
-                        height={300}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
-                    </div>
-                    <div className="p-6 md:p-8 flex flex-col flex-grow">
-                      <div className={`w-16 h-16 md:w-20 md:h-20 rounded-xl bg-gradient-to-br shadow-2xl hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-shadow duration-300 ${course.bgGradient} flex items-center justify-center mb-4 md:mb-6`}>
-                        <Icon className="w-8 h-8 md:w-12 md:h-12 text-white" style={{filter: "drop-shadow(0 0 8px rgba(255,255,255,0.8))"}} />
-                      </div>
-                      
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{course.title}</h3>
-                      <p className="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">{course.description}</p>
-                      
                       <div className="mb-6">
-                        <div className="text-4xl md:text-5xl font-bold text-white mb-3">{course.price}</div>
+                        <div className="flex flex-col mb-3">
+                          <span className="text-slate-500 text-lg line-through">{course.originalPrice}</span>
+                          <div className="text-4xl md:text-5xl font-bold text-white">{course.price}</div>
+                        </div>
                         <div className="text-sm text-slate-400">
                           {course.students}
                         </div>
