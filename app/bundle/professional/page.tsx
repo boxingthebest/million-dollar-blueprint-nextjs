@@ -150,14 +150,14 @@ export default function ProfessionalBundlePage() {
               Unlock Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Complete Potential</span>
             </h1>
             <p className="text-2xl md:text-3xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Get <strong className="text-white">ALL 7 Premium Courses</strong> for one incredible price. Master every skill needed to dominate in the modern business world.
+              Get <strong className="text-white">ALL 10 Premium Courses</strong> for one incredible price. Master every skill needed to dominate in the modern business world.
             </p>
             
             {/* Price Comparison */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="bg-slate-900/80 border border-slate-700 rounded-xl p-6 text-center shadow-2xl shadow-purple-500/20">
                 <div className="text-sm text-slate-400 mb-1 uppercase tracking-widest">Total Value</div>
-                <div className="text-4xl font-bold text-slate-500 line-through mb-1">$2,497</div>
+                <div className="text-4xl font-bold text-slate-500 line-through mb-1">$2,070</div>
               </div>
               <div className="text-purple-500 text-4xl font-black">→</div>
               <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 text-center shadow-2xl shadow-purple-500/40">
@@ -167,7 +167,7 @@ export default function ProfessionalBundlePage() {
             </div>
             
             <div className="inline-block bg-emerald-500/20 text-emerald-400 px-8 py-4 rounded-full text-xl font-bold mb-8 border border-emerald-500/30">
-              Save ${savings} ({savingsPercent}% OFF)
+              Save $1,273 (61% OFF)
             </div>
             
             <div className="flex flex-col items-center gap-4">
@@ -175,7 +175,7 @@ export default function ProfessionalBundlePage() {
                 href="https://buy.stripe.com/dRmfZg1CV1zV29C3ly08g0o"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-12 py-6 rounded-xl text-xl font-bold shadow-2xl shadow-purple-500/50 transition-all hover:scale-105"
               >
-                Get All 7 Courses - $797 <ArrowRight className="ml-2" />
+                Get All 10 Courses - $797 <ArrowRight className="ml-2" />
               </Link>
               
               <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6 mt-12 max-w-2xl mx-auto text-left">
@@ -210,7 +210,7 @@ export default function ProfessionalBundlePage() {
             </div>
             <div className="flex items-center gap-2 text-slate-400">
               <Trophy className="w-5 h-5 text-purple-400" />
-              <span>7 Certificates</span>
+              <span>10 Certificates</span>
             </div>
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function ProfessionalBundlePage() {
               Everything You Get in the Professional Bundle
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              7 comprehensive courses covering every skill you need to accelerate your career and build lasting wealth
+              10 comprehensive courses covering every skill you need to accelerate your career and build lasting wealth
             </p>
           </div>
           
@@ -278,7 +278,7 @@ export default function ProfessionalBundlePage() {
 	            <div className="grid md:grid-cols-3 gap-8 items-center">
 	              <div>
 	                <div className="text-slate-400 text-lg mb-2">Total Value</div>
-	                <div className="text-4xl font-bold text-slate-400 line-through">$2,497</div>
+	                <div className="text-4xl font-bold text-slate-400 line-through">$2,070</div>
 	              </div>
 	              <div>
 	                <div className="text-purple-300 text-lg mb-2">Your Price Today</div>
@@ -286,10 +286,10 @@ export default function ProfessionalBundlePage() {
 	              </div>
 	              <div>
 	                <div className="text-emerald-300 text-lg mb-2">You Save</div>
-	                <div className="text-4xl font-bold text-emerald-400">$1,700</div>
+	                <div className="text-4xl font-bold text-emerald-400">$1,273</div>
 	              </div>
 	            </div>
-              <p className="text-orange-400 font-bold mt-6">⚠️ Price increases to $2,497 on January 12th</p>
+              <p className="text-orange-400 font-bold mt-6">⚠️ Price increases to $2,070 on January 12th</p>
 	          </div>
         </div>
       </section>
@@ -303,20 +303,20 @@ export default function ProfessionalBundlePage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all">
-              <div className="bg-purple-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">21+ Hours</h3>
-              <p className="text-slate-400">Of premium video content across all courses</p>
-            </div>
-            
-            <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all">
-              <div className="bg-cyan-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Trophy className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">7 Certificates</h3>
-              <p className="text-slate-400">Professional certificates for each course</p>
-            </div>
+	            <div className="bg-purple-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+	                <Clock className="w-8 h-8 text-purple-400" />
+	              </div>
+	              <h3 className="text-xl font-bold text-white mb-2">25+ Hours</h3>
+	              <p className="text-slate-400">Of premium video content across all courses</p>
+	            </div>
+	            
+	            <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all">
+	              <div className="bg-cyan-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+	                <Trophy className="w-8 h-8 text-cyan-400" />
+	              </div>
+	              <h3 className="text-xl font-bold text-white mb-2">10 Certificates</h3>
+	              <p className="text-slate-400">Professional certificates for each course</p>
+	            </div>
             
             <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6 text-center hover:border-emerald-500/50 transition-all">
               <div className="bg-emerald-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -353,21 +353,21 @@ export default function ProfessionalBundlePage() {
                   ))}
                 </div>
                 <p className="text-slate-300 mb-6 leading-relaxed">"{testimonial.text}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-purple-500/50">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <div className="font-bold text-white">{testimonial.name}</div>
-                    <div className="text-purple-400 text-sm">{testimonial.role}</div>
-                    <div className="text-slate-500 text-sm">{testimonial.company}</div>
-                  </div>
-                </div>
+	                <div className="flex items-center gap-4">
+	                  <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-purple-500/50">
+	                    <Image
+	                      src={photoMap[testimonial.name] || testimonial.image}
+	                      alt={testimonial.name}
+	                      fill
+	                      className="object-cover"
+	                    />
+	                  </div>
+	                  <div>
+	                    <div className="font-bold text-white">{testimonial.name}</div>
+	                    <div className="text-purple-400 text-sm">{testimonial.role}</div>
+	                    <div className="text-slate-500 text-sm">{testimonial.company}</div>
+	                  </div>
+	                </div>
               </div>
             ))}
           </div>
