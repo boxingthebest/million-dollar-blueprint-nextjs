@@ -5,6 +5,23 @@ import { prisma } from "@/lib/prisma"
 import Link from "next/link"
 import Image from "next/image"
 
+type CourseWithDetails = {
+  id: string
+  slug: string
+  title: string
+  description: string
+  price: number
+  isFree: boolean
+  isPublished: boolean
+  modules: {
+    id: string
+    lessons: { id: string }[]
+  }[]
+  _count: {
+    enrollments: number
+  }
+}
+
 export default async function AdminDashboard() {
   let session
   
@@ -19,7 +36,7 @@ export default async function AdminDashboard() {
     redirect("/auth/signin")
   }
 
-  let courses = []
+  let courses: CourseWithDetails[] = []
   
   try {
     // Get all courses
