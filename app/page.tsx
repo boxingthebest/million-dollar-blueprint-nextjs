@@ -387,28 +387,28 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
             >
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="inline-block"
-              >
-                Master the Skills That
-              </motion.span>
-              <br />
-              <motion.span 
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="holographic-text inline-block"
-              >
-                Build Real Value
-              </motion.span>
+	              <motion.span
+	                initial={{ opacity: 0, y: 20 }}
+	                animate={{ opacity: 1, y: 0 }}
+	                transition={{ duration: 0.6, delay: 0.4 }}
+	                className="inline-block"
+	              >
+	                The 8-Course System to
+	              </motion.span>
+	              <br />
+	              <motion.span 
+	                initial={{ opacity: 0, scale: 0.9 }}
+	                animate={{ opacity: 1, scale: 1 }}
+	                transition={{ duration: 0.8, delay: 0.6 }}
+	                className="holographic-text inline-block"
+	              >
+	                Break Into Six Figures
+	              </motion.span>
             </motion.h1>
             
-            <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
-              8 Online Courses to Accelerate Your Career
-            </p>
+	            <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
+	              Get Promoted in 90 Days — Or Your Money Back
+	            </p>
             
             <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
               For Ambitious Professionals Building Toward Six-Figure Careers & Senior Leadership
@@ -656,12 +656,15 @@ export default function Home() {
                       <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{course.title}</h3>
                       <p className="text-slate-300 mb-6 text-sm md:text-base leading-relaxed">{course.description}</p>
                       
-                      <div className="mb-6">
-                        <div className="text-4xl md:text-5xl font-bold text-white mb-3">{course.price}</div>
-                        <div className="text-sm text-slate-400">
-                          {course.students}
-                        </div>
-                      </div>
+	                      <div className="mb-6">
+	                        <div className="flex flex-col mb-3">
+	                          <span className="text-slate-500 text-lg line-through">{course.originalPrice}</span>
+	                          <div className="text-4xl md:text-5xl font-bold text-white">{course.price}</div>
+	                        </div>
+	                        <div className="text-sm text-slate-400">
+	                          {course.students}
+	                        </div>
+	                      </div>
                       
                       <div className="mt-auto">
                         {course.available ? (
@@ -687,7 +690,7 @@ export default function Home() {
               })}
             </div>
 
-            {/* Bottom Row - 4 Premium Courses */}
+            {/* Remaining Courses */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 items-stretch max-w-6xl mx-auto">
               {courses.slice(4).map((course, idx) => {
                 const Icon = course.icon;
@@ -1035,26 +1038,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Don't Wait Until It's Too Late
-            </h2>
-            <p className="text-xl md:text-2xl mb-8">
-              Founding member pricing ends soon. Lock in lifetime access at the lowest price ever.
-            </p>
-            <a
-              href="/bundle/professional"
-              className="inline-block bg-white text-red-600 hover:bg-slate-100 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl"
-            >
-              Get All 8 Courses - $797
-            </a>
-            <p className="text-white/90 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | No Risk</p>
-          </div>
-        </div>
-      </section>
+	      {/* Hormozi Guarantee Section */}
+	      <section className="py-20 bg-slate-900 border-y border-cyan-500/20">
+	        <div className="container mx-auto px-4">
+	          <div className="max-w-4xl mx-auto bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-cyan-500/50 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
+	            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+	            <div className="relative z-10">
+	              <div className="inline-flex items-center justify-center w-20 h-20 bg-cyan-500/20 rounded-full mb-8 border border-cyan-500/30">
+	                <svg className="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+	                </svg>
+	              </div>
+	              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The "Career Insurance" Guarantee</h2>
+	              <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed">
+	                "Complete all modules. If you don't feel more confident about your AI-proof career, or if you don't see a clear path to your first $1K within 30 days, email us for a <span className="text-white font-bold underline decoration-cyan-500">full refund</span>. No questions asked. <span className="text-cyan-400 font-bold">You keep all the templates and frameworks.</span>"
+	              </p>
+	              <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-slate-400 font-medium">
+	                <span className="flex items-center gap-2"><Check className="w-5 h-5 text-cyan-400" /> 100% Risk-Free</span>
+	                <span className="hidden md:block text-slate-600">|</span>
+	                <span className="flex items-center gap-2"><Check className="w-5 h-5 text-cyan-400" /> Instant Access</span>
+	                <span className="hidden md:block text-slate-600">|</span>
+	                <span className="flex items-center gap-2"><Check className="w-5 h-5 text-cyan-400" /> Lifetime Updates</span>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </section>
+
+	      {/* Final CTA Section */}
+	      <section className="py-16 md:py-24 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+	        <div className="container mx-auto px-4">
+	          <div className="max-w-4xl mx-auto text-center text-white">
+	            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+	              Don't Wait Until It's Too Late
+	            </h2>
+	            <p className="text-xl md:text-2xl mb-8">
+	              Founding member pricing ends January 15th. <span className="font-bold underline">Price increases to $1,497 after the deadline.</span>
+	            </p>
+	            <a
+	              href="/bundle/professional"
+	              className="inline-block bg-white text-red-600 hover:bg-slate-100 px-12 md:px-16 py-4 md:py-6 rounded-lg font-bold text-xl md:text-2xl transition-all shadow-2xl hover:scale-105"
+	            >
+	              Get All 10 Courses - $797
+	            </a>
+	            <p className="text-white/90 text-sm mt-6">30-Day Money-Back Guarantee | Lifetime Access | No Risk</p>
+	          </div>
+	        </div>
+	      </section>
 
       {/* Footer */}
       <footer className="bg-gradient-to-b from-slate-900 via-slate-950 to-black border-t border-cyan-500/20 py-16">
