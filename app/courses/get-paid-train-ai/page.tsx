@@ -274,10 +274,23 @@ export default function GetPaidTrainAIPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl md:text-2xl text-slate-300 mb-6"
+              className="text-xl md:text-2xl text-slate-300 mb-8"
             >
               700,000+ people have signed up for AI training platforms. Most fail the assessments and never get paid. This course shows you exactly how to pass the tests, get accepted, and start earning $50-$200/hour. No tech skills required.
             </motion.p>
+
+            {/* VSL Video - Hero Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              className="mb-8 shadow-2xl border border-orange-500/30 rounded-xl overflow-hidden"
+            >
+              <LazyVimeoPlayer
+                videoId="1151497816"
+                title="Get Paid to Train AI - Course Overview"
+              />
+            </motion.div>
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

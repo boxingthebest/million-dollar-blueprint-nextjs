@@ -82,7 +82,7 @@ export default function FlagshipBundlePage() {
 	          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">Watch: Your Path to $1,000</h2>
 	          <div className="shadow-2xl border-2 border-orange-500/30 rounded-xl overflow-hidden">
 	            <LazyVimeoPlayer
-	              videoId="1148769094"
+	              videoId="1151497816"
 	              title="AI Cash-Flow Duo - Start Earning"
 	            />
 	          </div>
