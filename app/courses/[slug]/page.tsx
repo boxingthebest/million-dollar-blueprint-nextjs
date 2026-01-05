@@ -10,18 +10,6 @@ import EnrollButton from "@/components/EnrollButton";
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-// Optional: Keep static params for known courses
-export async function generateStaticParams() {
-  const courses = await prisma.course.findMany({
-    where: { isPublished: true },
-    select: { slug: true },
-  });
-
-  return courses.map((course) => ({
-    slug: course.slug,
-  }));
-}
-
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const course = await prisma.course.findUnique({
     where: { slug: params.slug },
@@ -371,7 +359,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
           </div>
         </section>
       )}
+      <ApexChatbot />
     </div>
   );
 }
-
