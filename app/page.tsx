@@ -5,7 +5,7 @@ import { AIResistantIcon, ExecutiveEnergyIcon, ExecutivePresenceIcon, SalesMaste
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import StickyCTABar from "@/components/StickyCTABar";
 import ValueProposition from "@/components/ValueProposition";
@@ -28,10 +28,41 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
+  const [notification, setNotification] = useState<{ name: string; location: string } | null>(null);
+
+  // Social proof notifications
+  useEffect(() => {
+    const names = [
+      { name: "Sarah M.", location: "California" },
+      { name: "James T.", location: "Texas" },
+      { name: "Emily R.", location: "New York" },
+      { name: "Michael K.", location: "Florida" },
+      { name: "Jessica L.", location: "Illinois" },
+      { name: "David P.", location: "Arizona" },
+      { name: "Amanda S.", location: "Colorado" },
+      { name: "Chris W.", location: "Georgia" },
+    ];
+
+    const showNotification = () => {
+      const randomPerson = names[Math.floor(Math.random() * names.length)];
+      setNotification(randomPerson);
+      setTimeout(() => setNotification(null), 4000);
+    };
+
+    const initialTimeout = setTimeout(showNotification, 15000);
+    const interval = setInterval(() => {
+      showNotification();
+    }, Math.random() * 45000 + 45000);
+
+    return () => {
+      clearTimeout(initialTimeout);
+      clearInterval(interval);
+    };
+  }, []);
 
   // Countdown timer
   useEffect(() => {
-    const targetDate = new Date('2026-01-15T23:59:59'); // January 15, 2026
+    const targetDate = new Date('2026-01-12T23:59:59'); // January 12, 2026
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -323,12 +354,33 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-950">
+      {/* Social Proof Notification Popup */}
+      <AnimatePresence>
+        {notification && (
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            className="fixed bottom-24 left-4 z-50 bg-white rounded-lg shadow-2xl p-4 max-w-xs border-l-4 border-green-500"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <Check className="w-5 h-5 text-green-600" />
+              </div>
+              <div>
+                <p className="text-slate-800 font-semibold text-sm">{notification.name} from {notification.location}</p>
+                <p className="text-slate-500 text-xs">just enrolled in a course!</p>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       {/* Top Bar with Social Links */}
       <div className="bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400 py-3 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-white text-sm relative z-10">
           <div className="flex items-center gap-3">
-            <span className="font-semibold tracking-wide text-base">✨ Master the Skills That Create Real Wealth</span>
+            <span className="font-semibold tracking-wide text-base">🔥 LAUNCH SALE — Selected Courses 75%+ OFF — Ends January 12th</span>
           </div>
           <div className="flex gap-4">
             <a href="https://www.facebook.com/milliondollarblueprint.official/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
@@ -346,8 +398,8 @@ export default function Home() {
 
       {/* Countdown Timer Banner */}
       <CountdownTimer 
-        targetDate={new Date('2026-01-15T23:59:59')} 
-        title="Founding Member Pricing Ends January 15th"
+        targetDate={new Date('2026-01-12T23:59:59')} 
+        title="🔥 LAUNCH SALE ENDS JANUARY 12TH — Selected Courses 75%+ OFF"
       />
 
       {/* Hero Section */}
