@@ -393,7 +393,7 @@ export default function Home() {
 	                transition={{ duration: 0.6, delay: 0.4 }}
 	                className="inline-block"
 	              >
-	                The 8-Course System to
+	                The 10-Course System to
 	              </motion.span>
 	              <br />
 	              <motion.span 
@@ -429,7 +429,7 @@ export default function Home() {
             </div>
             
             <p className="text-base md:text-lg text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Learn <strong className="text-white">AI-Resistant Skills</strong>, <strong className="text-white">Sales Mastery</strong>, <strong className="text-white">Leadership</strong>, <strong className="text-white">Digital Marketing</strong>, <strong className="text-white">Executive Wellness</strong> & <strong className="text-white">Wealth Building</strong> from battle-tested frameworks used to scale companies from $10M to $100M+.
+              Learn <strong className="text-white">AI-Resistant Skills</strong>, <strong className="text-white">Sales Mastery</strong>, <strong className="text-white">Leadership</strong>, <strong className="text-white">Digital Marketing</strong>, <strong className="text-white">Executive Wellness</strong>, <strong className="text-white">Wealth Building</strong>, and our new <strong className="text-white">AI Side Hustle</strong> courses from battle-tested frameworks used to scale companies from $10M to $100M+.
             </p>
             
             {/* Animated Stats Counter */}
@@ -448,7 +448,7 @@ export default function Home() {
                 <p className="text-slate-300 text-sm mt-1">Years Experience</p>
               </div>
               <div className="bg-slate-900/50 backdrop-blur-sm border border-pink-500/30 rounded-lg p-4 text-center">
-                <AnimatedCounter end={8} className="text-3xl md:text-4xl font-bold text-pink-400" />
+                <AnimatedCounter end={10} className="text-3xl md:text-4xl font-bold text-pink-400" />
                 <p className="text-slate-300 text-sm mt-1">Elite Courses</p>
               </div>
               <div className="bg-slate-900/50 backdrop-blur-sm border border-orange-500/30 rounded-lg p-4 text-center">
