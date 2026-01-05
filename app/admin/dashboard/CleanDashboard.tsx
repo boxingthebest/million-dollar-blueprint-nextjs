@@ -194,10 +194,25 @@ export default function CleanDashboard({ data }: CleanDashboardProps) {
         )}
       </div>
 
-      {/* Course Performance */}
+      {/* Course Performance - All Courses */}
       <div className="bg-slate-900/50 border border-slate-700/50 rounded-2xl overflow-hidden">
-        <div className="px-6 py-4 border-b border-slate-700/50">
-          <h2 className="text-xl font-bold text-white">Course Performance</h2>
+        <div className="px-6 py-4 border-b border-slate-700/50 flex items-center justify-between">
+          <h2 className="text-xl font-bold text-white">All Courses</h2>
+          <div className="flex items-center gap-4 text-sm">
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span className="text-slate-400">Published</span>
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-slate-500"></span>
+              <span className="text-slate-400">Draft</span>
+            </span>
+          </div>
+        </div>
+        
+        {/* Paid Courses Section */}
+        <div className="px-6 py-3 bg-emerald-500/10 border-b border-slate-700/50">
+          <p className="text-emerald-400 text-sm font-semibold uppercase tracking-wide">💰 Paid Courses</p>
         </div>
         <div className="divide-y divide-slate-700/50">
           {data.courseStats
@@ -212,12 +227,12 @@ export default function CleanDashboard({ data }: CleanDashboardProps) {
                     <p className="text-slate-400 text-sm">{course.modules} modules • {course.lessons} lessons</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-8">
-                  <div className="text-center">
+                <div className="flex items-center gap-6 md:gap-8">
+                  <div className="text-center min-w-[60px]">
                     <p className="text-white font-semibold">{course.enrollments}</p>
                     <p className="text-slate-500 text-xs">Students</p>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center min-w-[60px]">
                     <p className="text-cyan-400 font-semibold">{formatCurrency(course.price)}</p>
                     <p className="text-slate-500 text-xs">Price</p>
                   </div>
@@ -228,6 +243,47 @@ export default function CleanDashboard({ data }: CleanDashboardProps) {
                 </div>
               </div>
             ))}
+          {data.courseStats.filter(course => !course.isFree).length === 0 && (
+            <div className="px-6 py-8 text-center text-slate-500">No paid courses yet</div>
+          )}
+        </div>
+
+        {/* Free Courses Section */}
+        <div className="px-6 py-3 bg-cyan-500/10 border-y border-slate-700/50">
+          <p className="text-cyan-400 text-sm font-semibold uppercase tracking-wide">🎁 Free Courses (Lead Magnets)</p>
+        </div>
+        <div className="divide-y divide-slate-700/50">
+          {data.courseStats
+            .filter(course => course.isFree)
+            .sort((a, b) => b.enrollments - a.enrollments)
+            .map((course) => (
+              <div key={course.id} className="px-6 py-4 flex items-center justify-between hover:bg-slate-800/30 transition-colors">
+                <div className="flex items-center gap-4">
+                  <div className={`w-3 h-3 rounded-full ${course.isPublished ? 'bg-emerald-500' : 'bg-slate-500'}`}></div>
+                  <div>
+                    <p className="text-white font-medium">{course.title}</p>
+                    <p className="text-slate-400 text-sm">{course.modules} modules • {course.lessons} lessons</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-6 md:gap-8">
+                  <div className="text-center min-w-[60px]">
+                    <p className="text-white font-semibold">{course.enrollments}</p>
+                    <p className="text-slate-500 text-xs">Students</p>
+                  </div>
+                  <div className="text-center min-w-[60px]">
+                    <p className="text-slate-400 font-semibold">Free</p>
+                    <p className="text-slate-500 text-xs">Price</p>
+                  </div>
+                  <div className="text-center min-w-[80px]">
+                    <p className="text-slate-500">—</p>
+                    <p className="text-slate-500 text-xs">Revenue</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          {data.courseStats.filter(course => course.isFree).length === 0 && (
+            <div className="px-6 py-8 text-center text-slate-500">No free courses yet</div>
+          )}
         </div>
       </div>
 
