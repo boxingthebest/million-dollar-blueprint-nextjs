@@ -85,7 +85,7 @@ export default function MarketingPage() {
 
       <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-4 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
-        <p className="text-sm md:text-base font-semibold relative z-10">🔥 LAUNCH SALE: <span className="text-yellow-300">75% OFF</span> — Ends January 12th at Midnight</p>
+        <p className="text-sm md:text-base font-semibold relative z-10">🔥 LAUNCH SALE: <span className="text-yellow-300">50% OFF</span> — Ends January 12th at Midnight</p>
       </div>
 
       <section className="relative pt-20 pb-16 px-4 overflow-hidden">
@@ -109,11 +109,11 @@ export default function MarketingPage() {
             </div>
             <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
               <div className="text-center mb-6">
-                <div className="inline-block bg-red-500/20 text-red-400 px-4 py-1 rounded-full text-sm font-bold mb-4">75% OFF — ENDS JAN 12</div>
-                <div className="flex items-center justify-center gap-4 mb-2"><span className="text-slate-500 line-through text-2xl">$297</span><span className="text-5xl font-black text-white">$77</span></div>
-                <p className="text-orange-400 font-semibold">Save $220 Today</p>
+                <div className="inline-block bg-red-500/20 text-red-400 px-4 py-1 rounded-full text-sm font-bold mb-4">50% OFF — ENDS JAN 12</div>
+                <div className="flex items-center justify-center gap-4 mb-2"><span className="text-slate-500 line-through text-2xl">$395</span><span className="text-5xl font-black text-white">$197</span></div>
+                <p className="text-orange-400 font-semibold">Save $198 Today</p>
               </div>
-              <a href="https://buy.stripe.com/5kA00i5T95Ql3o07t608g0s" className="block w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-center py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/25 mb-4">Get Instant Access — $77<ArrowRight className="inline ml-2 w-5 h-5" /></a>
+              <a href="https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k" className="block w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-center py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/25 mb-4">Get Instant Access — $197<ArrowRight className="inline ml-2 w-5 h-5" /></a>
               <div className="flex items-center justify-center gap-6 text-sm text-slate-400"><div className="flex items-center gap-2"><Shield className="w-4 h-4" /><span>30-Day Guarantee</span></div><div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Instant Access</span></div></div>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function MarketingPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">See How It Works</h2><p className="text-slate-400 text-lg">Watch how digital marketing can transform your business</p></div>
           <div className="aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-2xl"><LazyVimeoPlayer videoId="1148769094" /></div>
-          <div className="text-center mt-8"><a href="https://buy.stripe.com/5kA00i5T95Ql3o07t608g0s" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105">Get Instant Access — $77<ArrowRight className="w-5 h-5" /></a></div>
+          <div className="text-center mt-8"><a href="https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105">Get Instant Access — $197<ArrowRight className="w-5 h-5" /></a></div>
         </div>
       </section>
 
@@ -211,8 +211,8 @@ export default function MarketingPage() {
           <div className="inline-block bg-red-500/20 text-red-400 px-6 py-2 rounded-full text-sm font-bold mb-6">⏰ SALE ENDS JANUARY 12TH AT MIDNIGHT</div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to Master Digital Marketing?</h2>
           <p className="text-xl text-slate-300 mb-8">Join hundreds of marketers who&apos;ve transformed their results.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><span className="text-slate-500 line-through text-2xl">$297</span><span className="text-5xl font-black text-white">$77</span><span className="text-orange-400 font-bold">Save $220</span></div>
-          <a href="https://buy.stripe.com/5kA00i5T95Ql3o07t608g0s" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/25">Get Instant Access Now<ArrowRight className="w-6 h-6" /></a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><span className="text-slate-500 line-through text-2xl">$395</span><span className="text-5xl font-black text-white">$197</span><span className="text-orange-400 font-bold">Save $198</span></div>
+          <a href="https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k" className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/25">Get Instant Access Now<ArrowRight className="w-6 h-6" /></a>
         </div>
       </section>
 
@@ -227,8 +227,8 @@ export default function MarketingPage() {
         {showStickyBar && (
           <motion.div initial={{ y: 100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 100, opacity: 0 }} className="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700 py-4 px-4 z-40">
             <div className="max-w-6xl mx-auto flex items-center justify-between">
-              <div className="hidden md:block"><div className="text-white font-bold">Digital Marketing</div><div className="text-slate-400 text-sm"><span className="line-through">$297</span><span className="text-orange-400 ml-2 font-bold">$77</span></div></div>
-              <a href="https://buy.stripe.com/5kA00i5T95Ql3o07t608g0s" className="w-full md:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-3 rounded-xl font-bold text-center transition-all duration-300">Get Instant Access — $77</a>
+              <div className="hidden md:block"><div className="text-white font-bold">Digital Marketing</div><div className="text-slate-400 text-sm"><span className="line-through">$395</span><span className="text-orange-400 ml-2 font-bold">$197</span></div></div>
+              <a href="https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k" className="w-full md:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-3 rounded-xl font-bold text-center transition-all duration-300">Get Instant Access — $197</a>
             </div>
           </motion.div>
         )}

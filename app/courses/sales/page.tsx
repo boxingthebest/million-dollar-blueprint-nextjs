@@ -197,7 +197,7 @@ export default function SalesMasteryPage() {
       <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 px-4 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
         <p className="text-sm md:text-base font-semibold relative z-10">
-          🔥 LAUNCH SALE: <span className="text-yellow-300">75% OFF</span> — Ends January 12th at Midnight
+          🔥 LAUNCH SALE: <span className="text-yellow-300">50% OFF</span> — Ends January 12th at Midnight
         </p>
       </div>
 
@@ -251,7 +251,7 @@ export default function SalesMasteryPage() {
             <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
               <div className="text-center mb-6">
                 <div className="inline-block bg-red-500/20 text-red-400 px-4 py-1 rounded-full text-sm font-bold mb-4">
-                  75% OFF — ENDS JAN 12
+                  50% OFF — ENDS JAN 12
                 </div>
                 <div className="flex items-center justify-center gap-4 mb-2">
                   <span className="text-slate-500 line-through text-2xl">$397</span>
@@ -261,7 +261,7 @@ export default function SalesMasteryPage() {
               </div>
 
               <a
-                href="https://buy.stripe.com/8wM6oGdlD1A52aA8xJ08g0o"
+                href="https://buy.stripe.com/6oU8wO3L31zV4hKe0c08g0i"
                 className="block w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-center py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-emerald-500/25 mb-4"
               >
                 Get Instant Access — $97
@@ -321,7 +321,7 @@ export default function SalesMasteryPage() {
 
           <div className="text-center mt-8">
             <a
-              href="https://buy.stripe.com/8wM6oGdlD1A52aA8xJ08g0o"
+              href="https://buy.stripe.com/6oU8wO3L31zV4hKe0c08g0i"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105"
             >
               Get Instant Access — $97
@@ -512,7 +512,7 @@ export default function SalesMasteryPage() {
             <span className="text-emerald-400 font-bold">Save $300</span>
           </div>
           <a
-            href="https://buy.stripe.com/8wM6oGdlD1A52aA8xJ08g0o"
+            href="https://buy.stripe.com/6oU8wO3L31zV4hKe0c08g0i"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-emerald-500/25"
           >
             Get Instant Access Now
@@ -553,7 +553,7 @@ export default function SalesMasteryPage() {
                 </div>
               </div>
               <a
-                href="https://buy.stripe.com/8wM6oGdlD1A52aA8xJ08g0o"
+                href="https://buy.stripe.com/6oU8wO3L31zV4hKe0c08g0i"
                 className="w-full md:w-auto bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-3 rounded-xl font-bold text-center transition-all duration-300"
               >
                 Get Instant Access — $97
