@@ -59,6 +59,22 @@ export default async function CoursePage({ params }: { params: { slug: string } 
     notFound();
   }
 
+  // Source of Truth Metadata for all 10 courses
+  const courseMetadata: Record<string, { originalValue: string, dreamOutcome: string, priceIncrease: string }> = {
+    "get-paid-train-ai": { originalValue: "$197", dreamOutcome: "Make $50-$200/hr training AI models", priceIncrease: "$197" },
+    "make-first-1k-ai": { originalValue: "$491", dreamOutcome: "Earn your first $1,000 this week", priceIncrease: "$197" },
+    "ai-side-hustle": { originalValue: "$641", dreamOutcome: "Build a $1K-$3K/mo recurring income", priceIncrease: "$197" },
+    "ai-resistant-skills": { originalValue: "$888", dreamOutcome: "Future-proof your career against AI", priceIncrease: "$197" },
+    "executive-presence": { originalValue: "$997", dreamOutcome: "Command any room & influence leaders", priceIncrease: "$997" },
+    "sales": { originalValue: "$495", dreamOutcome: "Close high-ticket deals like a pro", priceIncrease: "$495" },
+    "leadership": { originalValue: "$495", dreamOutcome: "Lead teams at the Fortune 100 level", priceIncrease: "$495" },
+    "marketing": { originalValue: "$395", dreamOutcome: "Scale brands with enterprise tactics", priceIncrease: "$395" },
+    "wealth": { originalValue: "$395", dreamOutcome: "Build wealth with Wall St. strategies", priceIncrease: "$395" },
+    "wellness": { originalValue: "$395", dreamOutcome: "Sustain peak performance without burnout", priceIncrease: "$395" }
+  };
+
+  const meta = courseMetadata[course.slug] || { originalValue: `$${(course.price * 4) / 100}`, dreamOutcome: course.description, priceIncrease: "$197" };
+
   const totalLessons = course.modules.reduce((sum, module) => sum + module.lessons.length, 0);
   const totalDuration = course.modules.reduce(
     (sum, module) => sum + module.lessons.reduce((lessonSum, lesson) => lessonSum + lesson.duration, 0),
@@ -111,6 +127,10 @@ export default async function CoursePage({ params }: { params: { slug: string } 
               {course.title}
             </h1>
             
+            <p className="text-2xl md:text-3xl font-bold text-cyan-400 mb-4">
+              {meta.dreamOutcome}
+            </p>
+
             <p className="text-xl md:text-2xl text-slate-200 mb-8 leading-relaxed">
               {course.description}
             </p>
@@ -130,13 +150,13 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                 </div>
                 <div className="text-sm text-slate-400">Content</div>
               </div>
-	              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
-	                <div className="text-3xl font-bold text-purple-400 mb-1">
-                    <span className="text-sm line-through opacity-50 mr-1">${(course.price * 4) / 100}</span>
-                    ${course.price / 100}
-                  </div>
-	                <div className="text-sm text-slate-400">Investment</div>
-	              </div>
+		              <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4 text-center">
+		                <div className="text-3xl font-bold text-purple-400 mb-1">
+	                    <span className="text-sm line-through opacity-50 mr-1">{meta.originalValue}</span>
+	                    ${course.price / 100}
+	                  </div>
+		                <div className="text-sm text-slate-400">Investment</div>
+		              </div>
             </div>
             
             {course.isPublished ? (
@@ -250,7 +270,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
 	                >
 	                  Start Learning Today - <span className="line-through opacity-70 mr-2">${(course.price * 4) / 100}</span> ${course.price / 100}
 	                </EnrollButton>
-                  <p className="text-orange-400 font-bold mt-4">⚠️ Founding Member Pricing Ends January 12th — Price increases to $197 after</p>
+	                  <p className="text-orange-400 font-bold mt-4">⚠️ Founding Member Pricing Ends January 12th — Price increases to {meta.priceIncrease} after</p>
 	              </div>
             </div>
           </div>
