@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react"
 import { redirect } from "next/navigation"
 import LogoutButton from "@/components/LogoutButton"
 import EnhancedPremiumDashboard from "./EnhancedPremiumDashboard"
+import CleanDashboard from "./CleanDashboard"
 import FuturisticBackground from "@/components/FuturisticBackground"
 import HeroSectionDivider from "@/components/HeroSectionDivider"
 
@@ -276,8 +277,21 @@ export default function AdminDashboard() {
 
       {/* Main Content */}
       <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 z-10">
-        {/* Premium McKinsey-Level Dashboard */}
-        <EnhancedPremiumDashboard data={data} />
+        {/* Clean Dashboard - Revenue & Sales Focus */}
+        <CleanDashboard data={data} />
+
+        {/* Detailed Analytics (Expandable) */}
+        <details className="mt-8 group">
+          <summary className="cursor-pointer text-slate-400 hover:text-white transition-colors flex items-center gap-2 py-4">
+            <svg className="w-5 h-5 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            Show Detailed Analytics
+          </summary>
+          <div className="pt-4">
+            <EnhancedPremiumDashboard data={data} />
+          </div>
+        </details>
 
         {/* Hero Divider */}
         <HeroSectionDivider variant="admin" />
