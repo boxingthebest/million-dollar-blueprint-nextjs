@@ -404,9 +404,11 @@ export default function GetPaidTrainAIPage() {
             <p className="text-slate-400 text-center mb-8 text-lg">
               Watch this 60-second overview
             </p>
-            <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden bg-slate-900 aspect-video flex items-center justify-center">
-              {/* TODO: Replace with actual video */}
-              <p className="text-slate-500">Video Coming Soon</p>
+            <div className="shadow-2xl border border-orange-500/30 rounded-xl overflow-hidden">
+              <LazyVimeoPlayer
+                videoId="1151497816"
+                title="Get Paid to Train AI - Course Overview"
+              />
             </div>
             
             {/* CTA After Video */}
