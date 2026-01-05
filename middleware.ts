@@ -53,13 +53,15 @@ export function middleware(request: NextRequest) {
   let limit = 100; // Default: 100 requests per minute
   let windowSeconds = 60;
 
-  // Stricter limits for sensitive endpoints
-  if (pathname.startsWith('/api/auth')) {
-    limit = 10; // Auth endpoints: 10 per minute
+  // More generous limits for auth (session checks happen frequently)
+  if (pathname.startsWith('/api/auth/session')) {
+    limit = 120; // Session checks: 120 per minute (2 per second)
+  } else if (pathname.startsWith('/api/auth')) {
+    limit = 30; // Other auth endpoints: 30 per minute
   } else if (pathname.startsWith('/api/checkout') || pathname.startsWith('/api/webhooks')) {
-    limit = 20; // Payment endpoints: 20 per minute
+    limit = 30; // Payment endpoints: 30 per minute
   } else if (pathname.startsWith('/api/admin')) {
-    limit = 50; // Admin endpoints: 50 per minute
+    limit = 100; // Admin endpoints: 100 per minute
   } else if (pathname.startsWith('/api/')) {
     limit = 60; // Other API endpoints: 60 per minute
   }
