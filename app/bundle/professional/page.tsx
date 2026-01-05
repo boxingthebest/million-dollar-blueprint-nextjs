@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Brain, Zap, Target, Award, TrendingUp, Shield
 import Link from "next/link";
 import Image from "next/image";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
+const photoMap: Record<string, string> = {};
 
 const courses = [
   {
@@ -97,7 +98,6 @@ const testimonials = [
     text: "This bundle transformed my career trajectory. Within 6 months, I went from Senior Manager to VP.",
     rating: 5
   },
-const photoMap: Record<string, string> = {};
   {
     name: "Sarah Mitchell",
     role: "Managing Director",
