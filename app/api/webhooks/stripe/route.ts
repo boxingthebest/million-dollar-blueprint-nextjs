@@ -58,11 +58,15 @@ export async function POST(request: NextRequest) {
         // Get product metadata
         const metadata = session.metadata
         console.log("Session metadata:", JSON.stringify(metadata))
-        if (!metadata?.productKey) {
-          console.error("No product key in metadata. Full metadata:", JSON.stringify(metadata))
+        
+        // Support both 'course' (new standard) and 'productKey' (legacy)
+        const productKey = metadata?.course || metadata?.productKey
+        
+        if (!productKey) {
+          console.error("No course or productKey in metadata. Full metadata:", JSON.stringify(metadata))
           break
         }
-        console.log("Product key:", metadata.productKey)
+        console.log("Product key identified:", productKey)
 
         // Find or create user
         let user = await prisma.user.findUnique({
@@ -88,29 +92,33 @@ export async function POST(request: NextRequest) {
 
         // Map product key to course slugs (bundles return array, single courses return single slug)
         const productToCourses: Record<string, string[]> = {
-          // Bundles
-          "starter-bundle": ["ai-resistant-skills", "executive-energy-system"],
-          "complete-mastery-bundle": ["ai-resistant-skills", "executive-energy-system", "sales", "leadership", "marketing", "wealth"],
-          // Individual Courses
+          // --- BUNDLES ---
+          "bundle-flagship": ["ai-resistant-skills", "executive-presence"],
+          "bundle-professional": ["get-paid-train-ai", "make-first-1k-ai", "ai-side-hustle", "ai-resistant-skills", "executive-presence", "sales", "leadership", "marketing", "wealth", "wellness"],
+          "bundle-vip": ["get-paid-train-ai", "make-first-1k-ai", "ai-side-hustle", "ai-resistant-skills", "executive-presence", "sales", "leadership", "marketing", "wealth", "wellness"],
+          
+          // --- INDIVIDUAL COURSES ---
+          "get-paid-train-ai": ["get-paid-train-ai"],
+          "make-first-1k-ai": ["make-first-1k-ai"],
+          "ai-side-hustle": ["ai-side-hustle"],
           "ai-resistant-skills": ["ai-resistant-skills"],
-          "executive-energy-system": ["executive-energy-system"],
-          "sales-mastery": ["sales"],
+          "executive-presence": ["executive-presence"],
+          "sales": ["sales"],
           "leadership": ["leadership"],
           "marketing": ["marketing"],
           "wealth": ["wealth"],
-          // Playbook Products (using the actual keys from STRIPE_PRODUCTS)
-          "playbook27": ["executive-presence-playbook"],
-          "executivePresence397": ["executive-presence-course"],
-          // Also support the ID-based keys for backwards compatibility
-          "executive-presence-playbook": ["executive-presence-playbook"],
-          "executive-presence-course": ["executive-presence-course"],
-          // Make Your First $1K with AI Course ($47)
-          "make-first-1k-ai": ["make-first-1k-ai"],
-          // AI Side Hustle Course ($47)
-          "ai-side-hustle": ["ai-side-hustle"],
+          "wellness": ["wellness"],
+
+          // --- LEGACY SUPPORT ---
+          "starter-bundle": ["ai-resistant-skills", "executive-presence"],
+          "complete-mastery-bundle": ["get-paid-train-ai", "make-first-1k-ai", "ai-side-hustle", "ai-resistant-skills", "executive-presence", "sales", "leadership", "marketing", "wealth", "wellness"],
+          "sales-mastery": ["sales"],
+          "executive-energy-system": ["wellness"],
+          "playbook27": ["executive-presence"],
+          "executivePresence397": ["executive-presence"]
         }
 
-        const courseSlugs = productToCourses[metadata.productKey]
+        const courseSlugs = productToCourses[productKey]
 
         if (!courseSlugs) {
           console.error("Unknown product key:", metadata.productKey)
