@@ -756,19 +756,19 @@ export default function Home() {
                   <div className="inline-block bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-purple-400/30">
                     ⭐ PROFESSIONAL
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 8 Courses</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 10 Courses</h3>
                   <p className="text-lg text-slate-300 mb-8">
                     Complete transformation across all areas of your professional life
                   </p>
                   <div className="mb-8">
                     <div className="text-7xl font-bold text-white mb-2 animate-pulse">$797</div>
-                    <div className="text-xl text-slate-400 line-through mb-2">$1,679</div>
-                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $882 (53%)</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$2,497</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $1,700 (68%)</div>
                   </div>
                   <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span className="font-semibold">All 8 premium courses</span>
+                      <span className="font-semibold">All 10 premium courses</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
@@ -776,11 +776,11 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span>7 professional certificates</span>
+                      <span>10 professional certificates</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
-                      <span>30-day money-back guarantee</span>
+                      <span>30-day "Career Insurance" guarantee</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">✓</span>
@@ -806,19 +806,19 @@ export default function Home() {
                   <div className="inline-block bg-gradient-to-r from-amber-500/30 to-orange-500/30 text-amber-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-amber-400/30">
                     👑 VIP
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 7 + 1-on-1 Strategy</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">All 10 + 1-on-1 Strategy</h3>
                   <p className="text-lg text-slate-300 mb-8">
                     Everything plus personalized 1-on-1 coaching and private community
                   </p>
                   <div className="mb-8">
                     <div className="text-5xl font-bold text-white mb-2">$2,497</div>
-                    <div className="text-xl text-slate-400 line-through mb-2">$4,679</div>
-                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $2,182 (47%)</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$9,997</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $7,500 (75%)</div>
                   </div>
                   <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
-                      <span className="font-semibold">All 8 premium courses</span>
+                      <span className="font-semibold">All 10 premium courses</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
@@ -830,7 +830,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>
-                      <span>7 professional certificates</span>
+                      <span>10 professional certificates</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-amber-400 mt-1">✓</span>

@@ -7,6 +7,30 @@ import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 
 const courses = [
   {
+    name: "Get Paid to Train AI",
+    value: "$197",
+    icon: Brain,
+    color: "orange",
+    description: "Master the 'hidden job market' of the AI era",
+    modules: "8 modules • 3 hours"
+  },
+  {
+    name: "Make Your First $1K with AI",
+    value: "$97",
+    icon: Target,
+    color: "emerald",
+    description: "One simple AI service you can sell for $200",
+    modules: "5 modules • 2 hours"
+  },
+  {
+    name: "Start Your AI Side Hustle",
+    value: "$97",
+    icon: Zap,
+    color: "cyan",
+    description: "Land paying clients who need AI-powered content",
+    modules: "6 modules • 2.5 hours"
+  },
+  {
     name: "AI-Resistant Skills",
     value: "$197",
     icon: Brain,
@@ -92,7 +116,7 @@ const testimonials = [
 ];
 
 export default function ProfessionalBundlePage() {
-  const totalValue = 197 + 397 + 247 + 247 + 197 + 197 + 197; // $1,679
+  const totalValue = 197 + 97 + 97 + 197 + 397 + 247 + 247 + 197 + 197 + 197; // $2,070
   const bundlePrice = 797;
   const savings = totalValue - bundlePrice;
   const savingsPercent = Math.round((savings / totalValue) * 100);
@@ -365,10 +389,10 @@ export default function ProfessionalBundlePage() {
             </div>
             
             {[
-              { feature: "All 7 Courses", individual: "Select individually", bundle: "All included" },
-              { feature: "Total Price", individual: "$1,679", bundle: "$797" },
-              { feature: "Savings", individual: "$0", bundle: "$882 (53%)" },
-              { feature: "Certificates", individual: "Per course", bundle: "All 7 included" },
+	              { feature: "All 10 Courses", individual: "Select individually", bundle: "All included" },
+	              { feature: "Total Price", individual: "$2,070", bundle: "$797" },
+	              { feature: "Savings", individual: "$0", bundle: "$1,273 (61%)" },
+	              { feature: "Certificates", individual: "Per course", bundle: "All 10 included" },
               { feature: "Future Updates", individual: "Per course", bundle: "All courses FREE" },
               { feature: "Lifetime Access", individual: "✓", bundle: "✓" },
             ].map((row, idx) => (
@@ -391,15 +415,15 @@ export default function ProfessionalBundlePage() {
           <p className="text-2xl text-white/90 mb-4">
             Join 440+ professionals who've invested in their complete development.
           </p>
-          <p className="text-xl text-white/80 mb-8">
-            Get all 7 courses for just <span className="font-bold">$797</span> (save ${savings})
-          </p>
-          
+	          <p className="text-xl text-white/80 mb-8">
+	            Get all 10 courses for just <span className="font-bold">$797</span> (save ${savings})
+	          </p>
+	          
 	          <Link
 	            href="https://buy.stripe.com/dRmfZg1CV1zV29C3ly08g0o"
 	            className="inline-flex items-center justify-center bg-white text-purple-600 hover:bg-slate-100 px-12 py-6 rounded-xl text-xl font-bold shadow-2xl transition-all hover:scale-105"
 	          >
-	            Get All 7 Courses Now - $797 <ArrowRight className="ml-2" />
+	            Get All 10 Courses Now - $797 <ArrowRight className="ml-2" />
 	          </Link>
             <p className="text-white font-bold mt-6 text-xl italic">"The most comprehensive career transformation system I've ever seen."</p>
 	          <p className="text-white/80 text-sm mt-6">30-Day "Career Insurance" Guarantee | Lifetime Access | Instant Access</p>

@@ -6,6 +6,9 @@ import Image from "next/image";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 
 const courses = [
+  { name: "Get Paid to Train AI", value: "$197", icon: Brain },
+  { name: "Make Your First $1K with AI", value: "$97", icon: Target },
+  { name: "Start Your AI Side Hustle", value: "$97", icon: Zap },
   { name: "AI-Resistant Skills", value: "$197", icon: Brain },
   { name: "Executive Presence", value: "$397", icon: Zap },
   { name: "Sales Mastery", value: "$247", icon: TrendingUp },
@@ -67,9 +70,9 @@ const testimonials = [
 ];
 
 export default function VIPBundlePage() {
-  const coursesValue = 197 + 397 + 247 + 247 + 197 + 197 + 197; // $1,679
+  const coursesValue = 197 + 97 + 97 + 197 + 397 + 247 + 247 + 197 + 197 + 197; // $2,070
   const vipServicesValue = 1500 + 800 + 500; // $2,800
-  const totalValue = coursesValue + vipServicesValue; // $4,479
+  const totalValue = 9997; // Value stack total
   const bundlePrice = 2497;
   const savings = totalValue - bundlePrice;
   const savingsPercent = Math.round((savings / totalValue) * 100);
@@ -110,7 +113,7 @@ export default function VIPBundlePage() {
             </h1>
             
             <p className="text-2xl md:text-3xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              All 7 courses <strong className="text-white">PLUS</strong> personalized 1-on-1 executive coaching, a customized career roadmap, and 30 days of priority support.
+              All 10 courses <strong className="text-white">PLUS</strong> personalized 1-on-1 executive coaching, a customized career roadmap, and 30 days of priority support.
             </p>
             
             {/* Exclusive Badge */}
@@ -252,10 +255,10 @@ export default function VIPBundlePage() {
               COMPLETE COURSE LIBRARY
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              All 7 Premium Courses Included
+              All 10 Premium Courses Included
             </h2>
             <p className="text-xl text-slate-400">
-              ${coursesValue.toLocaleString()} worth of courses, yours forever
+              $2,070 worth of courses, yours forever
             </p>
           </div>
           
@@ -391,11 +394,11 @@ export default function VIPBundlePage() {
           <div className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 border-2 border-amber-500/40 rounded-2xl p-8 md:p-12">
             <div className="space-y-4">
               {[
-                { item: "All 7 Premium Courses (21+ hours)", value: "$1,679" },
+                { item: "All 10 Premium Courses (25+ hours)", value: "$2,070" },
                 { item: "1-Hour Private Strategy Session", value: "$1,500" },
                 { item: "Customized Career Roadmap Document", value: "$800" },
                 { item: "30-Day Priority Support Access", value: "$500" },
-                { item: "7 Professional Certificates", value: "Included" },
+                { item: "10 Professional Certificates", value: "Included" },
                 { item: "Lifetime Access to All Content", value: "Included" },
                 { item: "All Future Course Updates", value: "Included" },
               ].map((item, idx) => (
