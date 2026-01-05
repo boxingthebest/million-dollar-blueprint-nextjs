@@ -97,6 +97,7 @@ const testimonials = [
     text: "This bundle transformed my career trajectory. Within 6 months, I went from Senior Manager to VP.",
     rating: 5
   },
+const photoMap: Record<string, string> = {};
   {
     name: "Sarah Mitchell",
     role: "Managing Director",
