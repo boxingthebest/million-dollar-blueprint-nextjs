@@ -9,7 +9,7 @@ const photoMap: Record<string, string> = {};
 const courses = [
   {
     name: "Get Paid to Train AI",
-    value: "$197",
+    value: "$297",
     icon: Brain,
     color: "orange",
     description: "Master the 'hidden job market' of the AI era",
@@ -17,7 +17,7 @@ const courses = [
   },
   {
     name: "Make Your First $1K with AI",
-    value: "$97",
+    value: "$197",
     icon: Target,
     color: "emerald",
     description: "One simple AI service you can sell for $200",
@@ -25,7 +25,7 @@ const courses = [
   },
   {
     name: "Start Your AI Side Hustle",
-    value: "$97",
+    value: "$197",
     icon: Zap,
     color: "cyan",
     description: "Land paying clients who need AI-powered content",
@@ -33,7 +33,7 @@ const courses = [
   },
   {
     name: "AI-Resistant Skills",
-    value: "$197",
+    value: "$397",
     icon: Brain,
     color: "orange",
     description: "Master the 10 proprietary frameworks AI can't replicate",
@@ -41,7 +41,7 @@ const courses = [
   },
   {
     name: "Executive Presence",
-    value: "$397",
+    value: "$497",
     icon: Zap,
     color: "cyan",
     description: "Command any room with Fortune 100 executive frameworks",
@@ -49,7 +49,7 @@ const courses = [
   },
   {
     name: "Sales Mastery",
-    value: "$247",
+    value: "$397",
     icon: TrendingUp,
     color: "emerald",
     description: "Close deals like top performers at Fortune 100 companies",
@@ -57,7 +57,7 @@ const courses = [
   },
   {
     name: "Leadership & Influence",
-    value: "$247",
+    value: "$397",
     icon: Users,
     color: "purple",
     description: "Lead teams and influence without authority",
@@ -65,7 +65,7 @@ const courses = [
   },
   {
     name: "Digital Marketing",
-    value: "$197",
+    value: "$297",
     icon: Target,
     color: "pink",
     description: "Master modern marketing strategies that drive revenue",
@@ -73,7 +73,7 @@ const courses = [
   },
   {
     name: "Wealth Building",
-    value: "$197",
+    value: "$297",
     icon: DollarSign,
     color: "amber",
     description: "Build lasting wealth with proven investment frameworks",
@@ -81,7 +81,7 @@ const courses = [
   },
   {
     name: "Executive Energy System",
-    value: "$197",
+    value: "$297",
     icon: Shield,
     color: "teal",
     description: "Sustain peak performance without burnout",
@@ -117,7 +117,7 @@ const testimonials = [
 ];
 
 export default function ProfessionalBundlePage() {
-  const totalValue = 197 + 97 + 97 + 197 + 397 + 247 + 247 + 197 + 197 + 197; // $2,070
+  const totalValue = 297 + 197 + 197 + 397 + 497 + 397 + 397 + 297 + 297 + 297; // $3,270
   const bundlePrice = 797;
   const savings = totalValue - bundlePrice;
   const savingsPercent = Math.round((savings / totalValue) * 100);
