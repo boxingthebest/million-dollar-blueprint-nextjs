@@ -287,7 +287,7 @@ export default function GetPaidTrainAIPage() {
               className="mb-8 shadow-2xl border border-orange-500/30 rounded-xl overflow-hidden"
             >
               <LazyVimeoPlayer
-                videoId="1151497816"
+                videoId="1151511216"
                 title="Get Paid to Train AI - Course Overview"
               />
             </motion.div>
@@ -419,7 +419,7 @@ export default function GetPaidTrainAIPage() {
             </p>
             <div className="shadow-2xl border border-orange-500/30 rounded-xl overflow-hidden">
               <LazyVimeoPlayer
-                videoId="1151497816"
+                videoId="1151511216"
                 title="Get Paid to Train AI - Course Overview"
               />
             </div>
