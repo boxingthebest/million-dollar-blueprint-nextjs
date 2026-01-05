@@ -703,23 +703,23 @@ export default function Home() {
                   <div className="inline-block bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-200 px-6 py-2 rounded-full text-sm font-bold mb-6 border border-cyan-400/30">
                     🚀 FLAGSHIP
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">2-Course Bundle</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">AI Cash-Flow Duo</h3>
                   <p className="text-lg text-slate-300 mb-8">
-                    AI-Resistant Skills + Executive Presence - the foundation for career success
+                    The fastest path to your first $1,000 in the AI economy. Start earning this week.
                   </p>
                   <div className="mb-8">
                     <div className="text-5xl font-bold text-white mb-2">$397</div>
-                    <div className="text-xl text-slate-400 line-through mb-2">$594</div>
-                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $197 (33%)</div>
+                    <div className="text-xl text-slate-400 line-through mb-2">$688</div>
+                    <div className="inline-block bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-bold">Save $291 (42%)</div>
                   </div>
                   <ul className="text-left text-white mb-6 space-y-3 flex-grow">
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
-                      <span className="font-semibold">AI-Resistant Skills ($197 value)</span>
+                      <span className="font-semibold">Get Paid to Train AI ($197 value)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
-                      <span className="font-semibold">Executive Presence ($397 value)</span>
+                      <span className="font-semibold">Make Your First $1K ($491 value)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
@@ -731,7 +731,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-cyan-400 mt-1">✓</span>
-                      <span>30-day money-back guarantee</span>
+                      <span>30-day "Career Insurance" guarantee</span>
                     </li>
                   </ul>
                   <div className="mt-auto">
