@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import { Clock, Shield, Zap } from "lucide-react";
 import ApexChatbot from "@/components/ApexChatbot";
 import { notFound } from "next/navigation";
 import Link from "next/link";
