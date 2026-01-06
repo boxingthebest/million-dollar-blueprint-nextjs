@@ -95,7 +95,7 @@ export default function Home() {
     "Wealth Building": "/courses/wealth",
     "The Executive Energy System™": "/courses/wellness",
     "Make Your First $1K with AI": "/courses/make-first-1k-ai",
-    "The AI Client Acquisition System™": "/courses/ai-side-hustle"
+    "The AI Income Accelerator™": "/courses/ai-side-hustle"
   };
 
   // Courses ordered by purchase psychology and customer journey
@@ -134,15 +134,15 @@ export default function Home() {
       badge: "FEATURED"
     },
     {
-      title: "The AI Client Acquisition System™",
-      subtitle: "Land Your First Paying Clients This Week",
-      price: "$47",
-      originalPrice: "$97",
+      title: "The AI Income Accelerator™",
+      subtitle: "Make Your First $5K/Month with AI",
+      price: "$97",
+      originalPrice: "$297",
       icon: AIResistantIcon,
       gradient: "from-cyan-500 to-blue-600",
       bgGradient: "from-cyan-500 to-blue-600",
       stripeLink: "/courses/ai-side-hustle",
-      description: "$641 value → $47. The proven system to land your first paying AI clients this week. No coding. No experience needed. Just follow the step-by-step blueprint.",
+      description: "$1,532 value → $97. The complete system to land paying AI clients and build a real income stream. 7 modules. Done-for-you templates. The \"First Client\" Guarantee™.",
       students: "New",
       image: "/ai-side-hustle-hero.jpg",
       available: true,
@@ -502,7 +502,7 @@ export default function Home() {
             </div>
             
             <p className="text-base md:text-lg text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Learn <strong className="text-white">AI-Resistant Skills</strong>, <strong className="text-white">Sales Mastery</strong>, <strong className="text-white">Leadership</strong>, <strong className="text-white">Digital Marketing</strong>, <strong className="text-white">Executive Wellness</strong>, <strong className="text-white">Wealth Building</strong>, and our new <strong className="text-white">AI Client Acquisition</strong> courses from battle-tested frameworks used to scale companies from $10M to $100M+.
+              Learn <strong className="text-white">AI-Resistant Skills</strong>, <strong className="text-white">Sales Mastery</strong>, <strong className="text-white">Leadership</strong>, <strong className="text-white">Digital Marketing</strong>, <strong className="text-white">Executive Wellness</strong>, <strong className="text-white">Wealth Building</strong>, and our new <strong className="text-white">AI Income Accelerator</strong> courses from battle-tested frameworks used to scale companies from $10M to $100M+.
             </p>
             
             {/* Animated Stats Counter */}

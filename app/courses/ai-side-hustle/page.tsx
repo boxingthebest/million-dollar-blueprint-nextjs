@@ -64,45 +64,52 @@ export default function AISideHustlePage() {
   const modules = [
     {
       number: 1,
-      title: "The AI Side Hustle Opportunity",
-      duration: "7 min",
+      title: "The Hidden $47 Billion Opportunity",
+      duration: "8 min",
       icon: Target,
-      description: "The hidden market of millions of businesses that need AI help. Why this is the perfect time to start. Real income expectations.",
+      description: "Why right now is the single best time to start an AI services business. The math behind $3K-$5K/month. The window that won't last forever.",
     },
     {
       number: 2,
-      title: "5 AI Services That Sell Right Now",
-      duration: "8 min",
+      title: "The 5 AI Services That Sell Right Now",
+      duration: "12 min",
       icon: Briefcase,
-      description: "Social media content, blog posts, video scripts, email sequences, presentations. Which one to start with based on your skills.",
+      description: "Content creation, research reports, automation setup, customer service, and consulting. Which one to start with based on YOUR skills. Real pricing for each.",
     },
     {
       number: 3,
-      title: "Setting Up Your Freelance Profile",
-      duration: "8 min",
+      title: "The Expert Positioning Framework",
+      duration: "10 min",
       icon: Users,
-      description: "Step-by-step Fiverr/Upwork setup. The exact profile template that converts. How to create samples with zero clients.",
+      description: "How to position yourself as the expert (even with zero experience). The 4-component framework: niche specificity, proof of concept, origin story, and social proof stacking.",
     },
     {
       number: 4,
-      title: "Pricing Your Services for Profit",
-      duration: "7 min",
-      icon: DollarSign,
-      description: "The 3-tier pricing framework. Real numbers that work. Psychology of pricing and when to raise rates.",
+      title: "The Client Acquisition System™",
+      duration: "15 min",
+      icon: Star,
+      description: "The 3 channels for finding clients. The Fiverr Flywheel Method. The DM script with 67% response rate. The 7-Day Client Sprint to land your first paying client.",
     },
     {
       number: 5,
-      title: "Landing Your First 3 Clients",
-      duration: "9 min",
-      icon: Star,
-      description: "The Fiverr flywheel. Local business outreach with exact scripts. Leveraging your network. Copy-paste templates.",
+      title: "The Pricing & Profit Framework",
+      duration: "10 min",
+      icon: DollarSign,
+      description: "The 3-tier pricing model that maximizes income. Exact numbers for every service. When to raise prices. How to handle objections without lowering your rate.",
     },
     {
       number: 6,
-      title: "Scaling to $3K/Month",
-      duration: "8 min",
+      title: "The Delivery System",
+      duration: "12 min",
+      icon: Zap,
+      description: "How AI makes you 10x more efficient. The 4-step delivery framework. Systems that scale. Templates for onboarding, production, and client management.",
+    },
+    {
+      number: 7,
+      title: "Scaling to $5K/Month and Beyond",
+      duration: "12 min",
       icon: TrendingUp,
-      description: "Client retention strategies. Systems that save time. When to raise prices. Building a real business.",
+      description: "The scaling roadmap from $1K to $10K/month. When to raise prices. When to hire help. Building a real business that runs without you.",
     },
   ];
 
@@ -160,12 +167,12 @@ export default function AISideHustlePage() {
   ];
 
   const benefits = [
-    "The exact 5 AI services clients pay for right now",
-    "Copy-paste profile templates for Fiverr & Upwork",
-    "Word-for-word outreach scripts that get responses",
-    "The 3-tier pricing framework that maximizes income",
-    "Client retention strategies for recurring revenue",
-    "Systems to deliver faster and earn more per hour",
+    "The 5 AI services businesses are paying $300-$2000 for right now",
+    "The Client Acquisition System™ with 67% response rate scripts",
+    "The Expert Positioning Framework (even with zero experience)",
+    "The 3-tier pricing model that maximizes your income",
+    "The Delivery System that makes you 10x more efficient",
+    "The scaling roadmap from $1K to $10K/month",
   ];
 
   return (
@@ -174,7 +181,7 @@ export default function AISideHustlePage() {
       
       {/* Urgency Banner - Top */}
       <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
-        🔥 LAUNCH SALE: <span className="font-bold">$641 → $47</span> (93% OFF) — <span className="underline">Ends January 12th at Midnight</span>
+        🔥 FOUNDING MEMBER PRICE: <span className="font-bold">$1,532 → $97</span> (94% OFF) — <span className="underline">Ends January 15th at Midnight</span>
       </div>
 
       {/* Social Proof Notification Popup */}
@@ -210,19 +217,19 @@ export default function AISideHustlePage() {
           >
             <div className="container mx-auto flex items-center justify-between gap-4">
               <div className="hidden sm:block">
-                <p className="text-white font-bold">$641 Value → Just $47</p>
+                <p className="text-white font-bold">$1,532 Value → Just $97</p>
                 <p className="text-slate-400 text-sm">100% Risk-Free Guarantee</p>
               </div>
               <div className="flex items-center gap-4 w-full sm:w-auto">
                 <div className="text-right hidden sm:block">
-                  <span className="text-slate-400 line-through text-sm">$197</span>
-                  <span className="text-cyan-400 font-bold text-xl ml-2">$47</span>
+                  <span className="text-slate-400 line-through text-sm">$297</span>
+                  <span className="text-cyan-400 font-bold text-xl ml-2">$97</span>
                 </div>
                 <button
                   onClick={handleCheckout}
                   className="flex-1 sm:flex-none bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-cyan-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2"
                 >
-                  Start Your Side Hustle — $47 <ArrowRight className="w-4 h-4" />
+                  Get Instant Access — $97 <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -268,8 +275,8 @@ export default function AISideHustlePage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
-              The AI Client Acquisition System™:{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">$1K-$3K/Month</span>
+              The AI Income Accelerator™:{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Your First $5K/Month with AI</span>
             </motion.h1>
             
             <motion.p 
@@ -278,7 +285,7 @@ export default function AISideHustlePage() {
               transition={{ delay: 0.1 }}
               className="text-xl md:text-2xl text-slate-300 mb-6"
             >
-              The exact system to land paying clients who need AI-powered content. No coding. No tech skills. Just a laptop and a proven system you can start this weekend.
+              The complete system to land paying AI clients and build a real income stream. No coding. No experience needed. Just follow the 7-module system and start earning this week.
             </motion.p>
 
             <motion.div 
@@ -289,15 +296,15 @@ export default function AISideHustlePage() {
             >
               <div className="flex items-center gap-2 text-slate-300">
                 <Clock className="w-5 h-5 text-cyan-400" />
-                <span>7 Video Modules ($397 value)</span>
+                <span>7 Deep-Dive Modules ($597 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <DollarSign className="w-5 h-5 text-cyan-400" />
-                <span>Outreach Scripts ($147 value)</span>
+                <span>Client Acquisition System™ ($297 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Zap className="w-5 h-5 text-cyan-400" />
-                <span>Profile Templates ($97 value)</span>
+                <span>Done-For-You Templates ($197 value)</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
                 <Shield className="w-5 h-5 text-cyan-400" />
@@ -314,11 +321,11 @@ export default function AISideHustlePage() {
             >
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
                 <div>
-                  <p className="text-cyan-400 text-sm mb-1 font-bold">$641 VALUE → Just $47</p>
+                  <p className="text-cyan-400 text-sm mb-1 font-bold">$1,532 VALUE → Just $97</p>
                   <div className="flex items-center gap-3">
-                    <span className="text-slate-400 line-through text-xl">$197</span>
-                    <span className="text-cyan-400 font-bold text-4xl">$47</span>
-                    <span className="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded text-sm font-bold">SAVE 93%</span>
+                    <span className="text-slate-400 line-through text-xl">$297</span>
+                    <span className="text-cyan-400 font-bold text-4xl">$97</span>
+                    <span className="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded text-sm font-bold">SAVE 94%</span>
                   </div>
                 </div>
                 <button
@@ -328,13 +335,13 @@ export default function AISideHustlePage() {
                 >
                   {isLoading ? "Processing..." : (
                     <>
-                      Start Your Side Hustle <ArrowRight className="w-5 h-5" />
+                      Get Instant Access — $97 <ArrowRight className="w-5 h-5" />
                     </>
                   )}
                 </button>
               </div>
               <p className="text-center text-slate-500 text-sm mt-4">
-                100% Risk-Free: If you don't land your first client, get every penny back.
+                The "First Client" Guarantee™: Land your first paying client in 30 days or get every penny back.
               </p>
             </motion.div>
           </div>
@@ -346,7 +353,7 @@ export default function AISideHustlePage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">$500</p>
+              <p className="text-3xl md:text-4xl font-bold text-white">$800</p>
               <p className="text-slate-400 text-sm">Per Client/Month</p>
             </div>
             <div className="text-center">
@@ -358,7 +365,7 @@ export default function AISideHustlePage() {
               <p className="text-slate-400 text-sm">&nbsp;</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-cyan-400">$3,000</p>
+              <p className="text-3xl md:text-4xl font-bold text-cyan-400">$4,800</p>
               <p className="text-slate-400 text-sm">Per Month</p>
             </div>
           </div>
@@ -388,7 +395,7 @@ export default function AISideHustlePage() {
                 onClick={handleCheckout}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-cyan-500/30 transition-all hover:scale-105 inline-flex items-center gap-2"
               >
-                Yes, I Want This — $47 <ArrowRight className="w-5 h-5" />
+                Yes, I Want This — $97 <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -442,7 +449,7 @@ export default function AISideHustlePage() {
               What You'll Learn
             </h2>
             <p className="text-slate-400 text-center mb-12 text-lg">
-              7 modules + bonus. Under 1 hour. Everything you need to land your first paying client.
+              7 deep-dive modules. ~80 minutes total. Everything you need to build a real AI income stream.
             </p>
 
             <div className="space-y-6">
@@ -499,7 +506,7 @@ export default function AISideHustlePage() {
                 onClick={handleCheckout}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-cyan-500/30 transition-all hover:scale-105 inline-flex items-center gap-2"
               >
-                Get All 7 Modules — $47 <ArrowRight className="w-5 h-5" />
+                Get All 7 Modules — $97 <ArrowRight className="w-5 h-5" />
               </button>
               <p className="text-slate-500 text-sm mt-3">One-time payment. Lifetime access.</p>
             </div>
@@ -520,7 +527,7 @@ export default function AISideHustlePage() {
                 Try the entire course for 30 days. If you don't feel it was worth every penny, email us and we'll refund you immediately. No questions asked.
               </p>
               <p className="text-cyan-400 font-bold text-lg">
-                You have nothing to lose and $3,000/month to gain.
+                You have nothing to lose and $5,000/month to gain.
               </p>
             </div>
           </div>
@@ -637,18 +644,18 @@ export default function AISideHustlePage() {
             {/* Urgency Box */}
             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-8 inline-block">
               <p className="text-yellow-300 font-bold">
-                🔥 FINAL CHANCE: $641 → $47 (93% OFF) — Sale Ends January 12th!
+                🔥 FOUNDING MEMBER PRICE: $1,532 → $97 (94% OFF) — Ends January 15th!
               </p>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Start Your{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">AI Side Hustle</span>?
+              Ready to Build Your{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">AI Income Stream</span>?
             </h2>
             <p className="text-xl text-slate-400 mb-10">
-              One proven system. Six clients. $3,000/month.
+              One proven system. Six clients. $5,000/month.
               <br />
-              The course takes under an hour. You could land your first client this week.
+              7 modules. ~80 minutes. You could land your first client this week.
             </p>
 
             <button
@@ -658,13 +665,13 @@ export default function AISideHustlePage() {
             >
               {isLoading ? "Processing..." : (
                 <>
-                  Start Your Side Hustle — $47 <ArrowRight className="ml-2 w-6 h-6" />
+                  Get Instant Access — $97 <ArrowRight className="ml-2 w-6 h-6" />
                 </>
               )}
             </button>
 
             <p className="text-slate-500 text-sm mb-8">
-              100% Risk-Free: Complete all modules. No client in 30 days? Full refund. • Instant access • Lifetime updates
+              The "First Client" Guarantee™: Complete all modules. No client in 30 days? Full refund. • Instant access • Lifetime updates
             </p>
 
             {/* Trust Elements */}
