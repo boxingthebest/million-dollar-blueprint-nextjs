@@ -58,7 +58,7 @@ export default function AISideHustlePage() {
 
   const handleCheckout = () => {
     setIsLoading(true);
-    window.location.href = 'https://buy.stripe.com/7sYfZgftLguPcOg1dq08g0u';
+    window.location.href = 'https://buy.stripe.com/5kQ6oG81j4M77tW8FS08g0w';
   };
 
   const modules = [
