@@ -616,7 +616,7 @@ export default function Home() {
             </p>
             <div className="shadow-2xl border-2 border-cyan-500/30 rounded-xl overflow-hidden">
               <LazyVimeoPlayer
-                videoId="1151961653"
+                videoId="1151486661"
                 title="Million Dollar Blueprint - Your Blueprint to Millions"
               />
             </div>
