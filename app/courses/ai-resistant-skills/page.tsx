@@ -58,7 +58,7 @@ export default function AIResistantSkillsPage() {
 
   const handleCheckout = () => {
     setIsLoading(true);
-    window.location.href = 'https://buy.stripe.com/9B614m4P7guPfasdTb08g0s';
+    window.location.href = 'https://buy.stripe.com/3cI7sK2GZ7Yj5lO4pC08g0s';
   };
 
   const modules = [
