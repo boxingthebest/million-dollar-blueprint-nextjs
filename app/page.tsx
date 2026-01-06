@@ -23,6 +23,8 @@ const AnimatedNavigation = dynamic(() => import("@/components/AnimatedNavigation
 const Enhanced3DCard = dynamic(() => import("@/components/Enhanced3DCard"), { ssr: false });
 const ScrollReveal = dynamic(() => import("@/components/ScrollReveal"), { ssr: false });
 const LazyVimeoPlayer = dynamic(() => import("@/components/LazyVimeoPlayer"), { ssr: false });
+const ProblemAgitation = dynamic(() => import("@/components/ProblemAgitation"), { ssr: false });
+const GodfatherOffer = dynamic(() => import("@/components/GodfatherOffer"), { ssr: false });
 
 
 export default function Home() {
@@ -103,14 +105,14 @@ export default function Home() {
     // ROW 1 - Best Sellers
     {
       title: "Get Paid to Train AI",
-      subtitle: "$50-$200/Hour",
+      subtitle: "The A.I. Income Blueprint™",
       price: "$47",
       originalPrice: "$197",
       icon: AIResistantIcon,
       gradient: "from-orange-500 to-red-600",
       bgGradient: "from-orange-500 to-red-600",
       stripeLink: "/courses/get-paid-train-ai",
-      description: "What Forbes calls the 'hidden job market of the AI era.' Learn how to make $50-$200/hour training AI models. No tech skills required.",
+      description: "The exact system to earn $50-$200/hour training AI models. Forbes calls it 'the hidden job market of the AI era.' No tech skills required.",
       students: "New",
       image: "/get-paid-train-ai-hero.jpg",
       available: true,
@@ -118,7 +120,7 @@ export default function Home() {
     },
     {
       title: "Make Your First $1K with AI",
-      subtitle: "Start Earning This Week",
+      subtitle: "The $1K Quick-Start System™",
       price: "$47",
       originalPrice: "$97",
       icon: AIResistantIcon,
@@ -133,7 +135,7 @@ export default function Home() {
     },
     {
       title: "Start Your AI Side Hustle",
-      subtitle: "Make $1K-$3K/Month",
+      subtitle: "The A.I. Client Acquisition Method™",
       price: "$47",
       originalPrice: "$97",
       icon: AIResistantIcon,
@@ -148,7 +150,7 @@ export default function Home() {
     },
     {
       title: "AI-Resistant Skills",
-      subtitle: "Future-Proof Your Career",
+      subtitle: "The 10 Irreplaceable Skills Framework™",
       price: "$47",
       originalPrice: "$197",
       icon: AIResistantIcon,
@@ -162,7 +164,7 @@ export default function Home() {
     },
     {
       title: "Sales Mastery",
-      subtitle: "Close High-Ticket Deals",
+      subtitle: "The Fortune 100 Close System™",
       price: "$247",
       originalPrice: "$495",
       icon: SalesMasteryIcon,
@@ -177,7 +179,7 @@ export default function Home() {
     },
     {
       title: "Digital Marketing Mastery",
-      subtitle: "Grow Your Brand Online",
+      subtitle: "The Digital Revenue Engine™",
       price: "$197",
       originalPrice: "$395",
       icon: DigitalMarketingIcon,
@@ -193,7 +195,7 @@ export default function Home() {
     // ROW 2 - Premium / Upsells
     {
       title: "Executive Presence",
-      subtitle: "Command Any Room",
+      subtitle: "The Command Presence Protocol™",
       price: "$397",
       originalPrice: "$997",
       icon: ExecutivePresenceIcon,
@@ -208,7 +210,7 @@ export default function Home() {
     },
     {
       title: "Leadership & Influence",
-      subtitle: "Command Any Room",
+      subtitle: "The Influence Without Authority Method™",
       price: "$247",
       originalPrice: "$495",
       icon: LeadershipIcon,
@@ -223,7 +225,7 @@ export default function Home() {
     },
     {
       title: "Wealth Building",
-      subtitle: "Financial Intelligence",
+      subtitle: "The Income-to-Freedom Formula™",
       price: "$197",
       originalPrice: "$395",
       icon: WealthBuildingIcon,
@@ -238,7 +240,7 @@ export default function Home() {
     },
     {
       title: "The Executive Energy System™",
-      subtitle: "Peak Performance",
+      subtitle: "Sustainable High Performance",
       price: "$197",
       originalPrice: "$395",
       icon: ExecutiveEnergyIcon,
@@ -434,7 +436,7 @@ export default function Home() {
             
             {/* Premium Badge */}
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-pink-500/20 border border-orange-500/30 px-6 py-3 rounded-full mb-8 backdrop-blur-sm">
-              <span className="text-white font-semibold text-sm md:text-base">AI-Resistant Skills Training</span>
+              <span className="text-white font-semibold text-sm md:text-base">⚠️ WARNING: This Isn't Another Generic Course</span>
             </div>
             
             <motion.h1 
@@ -443,23 +445,32 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
             >
-	              <motion.span
-	                initial={{ opacity: 0, y: 20 }}
-	                animate={{ opacity: 1, y: 0 }}
-	                transition={{ duration: 0.6, delay: 0.4 }}
-	                className="inline-block"
-	              >
-	                The 10-Course System to
-	              </motion.span>
-	              <br />
-	              <motion.span 
-	                initial={{ opacity: 0, scale: 0.9 }}
-	                animate={{ opacity: 1, scale: 1 }}
-	                transition={{ duration: 0.8, delay: 0.6 }}
-	                className="holographic-text inline-block"
-	              >
-	                Break Into Six Figures
-	              </motion.span>
+<motion.span
+		                initial={{ opacity: 0, y: 20 }}
+		                animate={{ opacity: 1, y: 0 }}
+		                transition={{ duration: 0.6, delay: 0.4 }}
+		                className="inline-block"
+		              >
+		                The Hidden Career Accelerator That Got
+		              </motion.span>
+		              <br />
+		              <motion.span 
+		                initial={{ opacity: 0, scale: 0.9 }}
+		                animate={{ opacity: 1, scale: 1 }}
+		                transition={{ duration: 0.8, delay: 0.6 }}
+		                className="holographic-text inline-block"
+		              >
+		                440+ Professionals Promoted
+		              </motion.span>
+		              <br />
+		              <motion.span
+		                initial={{ opacity: 0, y: 10 }}
+		                animate={{ opacity: 1, y: 0 }}
+		                transition={{ duration: 0.6, delay: 0.8 }}
+		                className="text-2xl md:text-3xl lg:text-4xl text-slate-300 inline-block mt-2"
+		              >
+		                (While Everyone Else Stayed Stuck)
+		              </motion.span>
             </motion.h1>
             
 	            <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
@@ -467,12 +478,18 @@ export default function Home() {
 	            </p>
             
             <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
-              For Ambitious Professionals Building Toward Six-Figure Careers & Senior Leadership
+              Discover the 10 AI-Resistant Skills Fortune 100 Executives Use to Command Six Figures
             </p>
             
-            <p className="text-base md:text-lg text-slate-400 mb-6">
-              Frameworks from 22+ Years at Fortune 100 Companies & Elite Tech Startups
+            <p className="text-base md:text-lg text-slate-400 mb-3">
+              — That They'll Never Teach You at Work
             </p>
+            
+            {/* Unique Mechanism - Todd Brown */}
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 px-6 py-3 rounded-full mb-6 backdrop-blur-sm">
+              <span className="text-emerald-400 font-bold text-sm md:text-base">Introducing The M.D.B. Acceleration Method™</span>
+              <span className="text-slate-400 text-sm">— The Same Framework That Scaled Companies from $10M to $100M+</span>
+            </div>
             
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 px-6 py-3 rounded-full mb-6 backdrop-blur-sm">
               <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-cyan-400">
@@ -579,6 +596,9 @@ export default function Home() {
 
 
       <ValueProposition />
+
+      {/* Problem Agitation - Suby Style */}
+      <ProblemAgitation />
 
       {/* Founder's Welcome Video */}
       <section className="py-16 md:py-24 bg-slate-950 relative overflow-hidden">
@@ -978,6 +998,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Godfather Offer - Suby Style Value Stack */}
+      <GodfatherOffer />
+
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -1037,7 +1060,7 @@ export default function Home() {
 	                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 	                </svg>
 	              </div>
-	              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The "Career Insurance" Guarantee</h2>
+	              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Results-Or-Refund Promise™</h2>
 	              <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed">
 	                "Complete all modules. If you don't feel more confident about your AI-proof career, or if you don't see a clear path to your first $1K within 30 days, email us for a <span className="text-white font-bold underline decoration-cyan-500">full refund</span>. No questions asked. <span className="text-cyan-400 font-bold">You keep all the templates and frameworks.</span>"
 	              </p>

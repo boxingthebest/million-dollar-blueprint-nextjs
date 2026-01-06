@@ -99,8 +99,8 @@ export default function WealthPage() {
                 <span className="bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-semibold border border-emerald-500/30">💰 ESSENTIAL</span>
                 <span className="bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold border border-yellow-500/30">📈 FINANCE</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">Wealth Building<span className="block text-emerald-400">Turn Income Into Freedom</span></h1>
-              <p className="text-xl text-slate-300 mb-8 leading-relaxed">Learn the <strong className="text-white">wealth-building strategies</strong> used by high earners to create lasting financial freedom.</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">The Income-to-Freedom Formula™<span className="block text-emerald-400">Why 95% of High Earners Stay Broke</span></h1>
+              <p className="text-xl text-slate-300 mb-8 leading-relaxed">Discover the <strong className="text-white">exact wealth-building system</strong> Wall Street insiders use to turn income into lasting freedom — <strong className="text-emerald-400">that they'll never teach you at work</strong>.</p>
               <div className="space-y-3 mb-8">
                 {["6 comprehensive modules (60 min total)", "Investment fundamentals", "Tax optimization strategies", "Multiple income streams", "Real estate basics", "Lifetime access + future updates"].map((item, i) => (
                   <div key={i} className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" /><span className="text-slate-300">{item}</span></div>
@@ -174,9 +174,9 @@ export default function WealthPage() {
         <div className="max-w-3xl mx-auto text-center">
           <div className="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 border border-emerald-500/30 rounded-2xl p-12">
             <div className="w-20 h-20 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6"><Shield className="w-10 h-10 text-emerald-400" /></div>
-            <h2 className="text-3xl font-bold text-white mb-4">100% Risk-Free Guarantee</h2>
-            <p className="text-slate-300 text-lg mb-6">Try Wealth Building for 30 days. If you don&apos;t see value in the financial education, email us for a full refund. No questions asked.</p>
-            <div className="text-emerald-400 font-semibold">30-Day Money-Back Guarantee</div>
+            <h2 className="text-3xl font-bold text-white mb-4">The Results-Or-Refund Promise™</h2>
+            <p className="text-slate-300 text-lg mb-6">Complete all modules. If you don&apos;t feel more confident about your wealth-building strategy within 30 days, email us for a <strong className="text-white">full refund</strong>. No questions asked. <strong className="text-emerald-400">You keep all the templates and frameworks.</strong></p>
+            <div className="text-emerald-400 font-semibold">100% Risk-Free • Instant Access • Lifetime Updates</div>
           </div>
         </div>
       </section>
