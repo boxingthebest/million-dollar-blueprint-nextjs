@@ -381,7 +381,7 @@ export default function MakeFirst1KPage() {
             <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden">
               <LazyVimeoPlayer
                 videoId="1150429734"
-                title="Make Your First $1K with AI"
+                title="The First $1K AI Blueprint™"
               />
             </div>
             

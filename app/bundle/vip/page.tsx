@@ -108,8 +108,8 @@ export default function VIPBundlePage() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-              The <span className="bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent">Executive Fast-Track</span>
-              <br />to Six-Figure Success
+              The <span className="bg-gradient-to-r from-amber-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent">Executive Transformation System™</span>
+              <br />Everything You Need to Command Six Figures
             </h1>
             
             <p className="text-2xl md:text-3xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">

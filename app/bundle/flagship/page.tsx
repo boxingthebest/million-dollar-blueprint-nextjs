@@ -32,8 +32,11 @@ export default function FlagshipBundlePage() {
               🔥 FLAGSHIP BUNDLE • LIMITED TIME OFFER
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-              The <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">AI Cash-Flow Duo</span>
+              The <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">AI Income Accelerator Bundle™</span>
             </h1>
+            <p className="text-xl text-orange-300 font-semibold mb-4">
+              Two Proven Systems. One Goal: Your First $1,000 This Month.
+            </p>
             <p className="text-2xl md:text-3xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               The fastest path to your first $1,000 in the AI economy. Combine <strong className="text-white">Get Paid to Train AI</strong> and <strong className="text-white">Make Your First $1K with AI</strong> to start earning this week.
             </p>

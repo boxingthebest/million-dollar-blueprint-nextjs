@@ -148,7 +148,7 @@ export default function ProfessionalBundlePage() {
               ⭐ MOST POPULAR • COMPLETE TRANSFORMATION BUNDLE
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-              Unlock Your <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Complete Potential</span>
+              The Complete <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Career Domination System™</span>
             </h1>
             <p className="text-2xl md:text-3xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Get <strong className="text-white">ALL 10 Premium Courses</strong> for one incredible price. Master every skill needed to dominate in the modern business world.

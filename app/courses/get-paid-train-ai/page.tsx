@@ -407,7 +407,7 @@ export default function GetPaidTrainAIPage() {
             <div className="shadow-2xl border border-orange-500/30 rounded-xl overflow-hidden">
               <LazyVimeoPlayer
                 videoId="1151511216"
-                title="Get Paid to Train AI - Course Overview"
+                title="The AI Trainer Profit System™ - Course Overview"
               />
             </div>
             

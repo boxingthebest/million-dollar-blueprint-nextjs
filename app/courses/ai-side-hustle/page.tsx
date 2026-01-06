@@ -268,7 +268,7 @@ export default function AISideHustlePage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
-              Start Your AI Side Hustle:{" "}
+              The AI Client Acquisition System™:{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">$1K-$3K/Month</span>
             </motion.h1>
             

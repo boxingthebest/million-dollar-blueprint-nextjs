@@ -296,8 +296,9 @@ export default function AIResistantSkillsPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
-              AI-Resistant Skills:{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Become Irreplaceable</span>
+              The 10 Skills That Made Executives{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Untouchable by AI</span>
+              <span className="block text-2xl md:text-3xl mt-2 text-slate-400 font-normal">(While Everyone Else Scrambles to Stay Relevant)</span>
             </motion.h1>
             
             <motion.p 
@@ -306,7 +307,7 @@ export default function AIResistantSkillsPage() {
               transition={{ delay: 0.1 }}
               className="text-xl md:text-2xl text-slate-300 mb-6"
             >
-              The 10 executive frameworks that AI can't replicate. Strategic thinking, emotional intelligence, and leadership skills from Amazon, Google, McKinsey, and Goldman Sachs.
+              <span className="text-purple-400 font-semibold">The Executive Shield System™</span> — 10 proprietary frameworks from Amazon, Google, McKinsey, and Goldman Sachs that AI physically cannot replicate. Master them and become the person AI works FOR, not the person AI replaces.
             </motion.p>
 
             <motion.div 
