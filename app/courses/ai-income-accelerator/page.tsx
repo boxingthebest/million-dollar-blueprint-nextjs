@@ -115,7 +115,7 @@ export default function AISideHustlePage() {
 
   const bonusModule = {
     title: "Building Long-Term Client Relationships",
-    duration: "6 min",
+    duration: "4 min",
     description: "The secret to recurring revenue. Keep clients for months and years. Communication strategies and handling problems gracefully.",
   };
 

@@ -109,8 +109,8 @@ export async function GET() {
             {
               title: 'BONUS - Building Long-Term Client Relationships',
               description: 'The secret to recurring revenue. Keep clients for months and years. Communication strategies and handling problems gracefully.',
-              videoUrl: 'https://player.vimeo.com/video/PLACEHOLDER_BONUS',
-              duration: 360, // 6 min
+              videoUrl: 'https://player.vimeo.com/video/1152086166',
+              duration: 231, // 3:51
               order: 8,
             },
           ],
