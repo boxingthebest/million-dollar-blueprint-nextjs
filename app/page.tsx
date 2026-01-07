@@ -417,17 +417,7 @@ Master AI to Get Promoted
               <span className="text-slate-400 text-sm">— The Same Framework That Scaled Companies from $10M to $100M+</span>
             </div>
             
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 px-6 py-3 rounded-full mb-6 backdrop-blur-sm">
-              <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-cyan-400">
-                <Image src="/dana-penza-headshot.png" alt="Dana Penza" width={40} height={40} className="object-cover" />
-              </div>
-              <div className="text-left">
-                <div className="text-cyan-400 font-bold text-sm">Created by Dana Penza</div>
-                <div className="text-slate-300 text-xs">22+ Years in Cloud Computing, Wall Street & Tech Startups</div>
-              </div>
-            </div>
-            
-            <p className="text-base md:text-lg text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+<p className="text-base md:text-lg text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Learn <strong className="text-white">AI-Resistant Skills</strong>, <strong className="text-white">Sales Mastery</strong>, <strong className="text-white">Leadership</strong>, <strong className="text-white">Digital Marketing</strong>, <strong className="text-white">Executive Wellness</strong>, <strong className="text-white">Wealth Building</strong>, and our new <strong className="text-white">AI Income Accelerator</strong> courses from battle-tested frameworks used to scale companies from $10M to $100M+.
             </p>
             
