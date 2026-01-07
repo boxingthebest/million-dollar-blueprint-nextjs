@@ -327,21 +327,20 @@ export default function AIAutomationAgencyPage() {
               No coding required. No prior experience needed. Just follow the system.
             </motion.p>
 
-            {/* Video Placeholder */}
+            {/* Hero Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
               className="relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 mb-8 aspect-video bg-slate-900 border border-slate-800"
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-purple-500/20 flex items-center justify-center mx-auto mb-4">
-                    <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1" />
-                  </div>
-                  <p className="text-slate-400">Video Coming Soon</p>
-                </div>
-              </div>
+              <Image
+                src="/ai-agency-blueprint-hero.webp"
+                alt="AI Automation Agency Blueprint"
+                fill
+                className="object-cover"
+                priority
+              />
             </motion.div>
 
             {/* CTA Button */}
