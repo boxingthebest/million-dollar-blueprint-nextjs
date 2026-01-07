@@ -56,7 +56,7 @@ export default function AIAutomationAgencyPage() {
   const handleCheckout = () => {
     setIsLoading(true);
     // Stripe checkout link for $297
-    window.location.href = 'https://buy.stripe.com/YOUR_STRIPE_LINK_HERE';
+    window.location.href = 'https://buy.stripe.com/28E14m4P7diD15yf4g08g0x';
   };
 
   const modules = [
