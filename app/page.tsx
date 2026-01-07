@@ -86,6 +86,7 @@ export default function Home() {
   }, []);
 
   const courseUrlMap: Record<string, string> = {
+    "AI Automation Agency Blueprint™": "/courses/ai-automation-agency",
     "Get Paid to Train AI": "/courses/get-paid-train-ai",
     "AI-Resistant Skills": "/courses/ai-resistant-skills",
     "Executive Presence": "/courses/executive-presence",
