@@ -384,8 +384,8 @@ export default function AISideHustlePage() {
             </p>
             <div className="shadow-2xl border border-slate-700 rounded-xl overflow-hidden">
               <LazyVimeoPlayer
-                videoId="1151961653"
-                title="AI Side Hustle Course Overview"
+                videoId="1152074282"
+                title="AI Income Accelerator Course Overview"
               />
             </div>
             

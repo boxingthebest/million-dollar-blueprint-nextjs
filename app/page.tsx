@@ -96,7 +96,7 @@ export default function Home() {
     "Wealth Building": "/courses/wealth",
     "The Executive Energy System™": "/courses/wellness",
     "Make Your First $1K with AI": "/courses/make-first-1k-ai",
-    "The AI Income Accelerator™": "/courses/ai-side-hustle"
+    "The AI Income Accelerator™": "/courses/ai-income-accelerator"
   };
 
   // Courses ordered by purchase psychology and customer journey
