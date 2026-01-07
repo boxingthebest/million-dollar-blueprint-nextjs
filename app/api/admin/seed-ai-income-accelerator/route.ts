@@ -67,7 +67,7 @@ export async function GET() {
             {
               title: 'Video 2 - The 5 High-Demand AI Services',
               description: 'The exact AI services that clients are paying $500-$2,000 for right now. Content creation, research reports, automation, and more.',
-              videoUrl: 'https://player.vimeo.com/video/PLACEHOLDER_2',
+              videoUrl: 'https://player.vimeo.com/video/1152075444',
               duration: 720, // 12 minutes
               order: 2,
             },
