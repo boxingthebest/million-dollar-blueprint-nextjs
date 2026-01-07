@@ -377,34 +377,21 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="holographic-text inline-block"
               >
-                Get Promoted in 90 Days
-              </motion.span>
-              <br />
-              <motion.span 
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="holographic-text inline-block"
-              >
-                OR Build a $20K/Month AI Business
+                Master AI. Make More Money.
               </motion.span>
               <br />
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="text-xl md:text-2xl lg:text-3xl text-slate-300 inline-block mt-2"
+                className="text-xl md:text-2xl lg:text-3xl text-slate-300 inline-block mt-3"
               >
-                Without Going Back to School or Starting From Scratch
+                Whether you want a promotion or your own business — we have the blueprint
               </motion.span>
             </motion.h1>
             
-<p className="text-xl md:text-2xl text-slate-200 mb-4 font-semibold">
-              440+ professionals already chose their path. Now it's your turn.
-            </p>
-            
-            <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
-              The same frameworks used at Apple, Goldman Sachs & Amazon — now available to you
+<p className="text-xl md:text-2xl text-cyan-300 mb-4 font-semibold">
+              440+ professionals transformed their income. You're next.
             </p>
             
             {/* Unique Mechanism - Todd Brown */}
