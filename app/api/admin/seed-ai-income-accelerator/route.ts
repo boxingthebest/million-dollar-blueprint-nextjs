@@ -102,7 +102,7 @@ export async function GET() {
             {
               title: 'Video 7 - Building Recurring Revenue',
               description: 'How to convert one-time projects into monthly retainers. The secret to predictable income and long-term client relationships.',
-              videoUrl: 'https://player.vimeo.com/video/PLACEHOLDER_7',
+              videoUrl: 'https://player.vimeo.com/video/1152077520',
               duration: 600, // 10 minutes
               order: 7,
             },
