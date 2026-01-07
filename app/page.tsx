@@ -372,43 +372,39 @@ export default function Home() {
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
             >
 <motion.span
-		                initial={{ opacity: 0, y: 20 }}
-		                animate={{ opacity: 1, y: 0 }}
-		                transition={{ duration: 0.6, delay: 0.4 }}
-		                className="inline-block"
-		              >
-		                The Hidden Career Accelerator That Got
-		              </motion.span>
-		              <br />
-		              <motion.span 
-		                initial={{ opacity: 0, scale: 0.9 }}
-		                animate={{ opacity: 1, scale: 1 }}
-		                transition={{ duration: 0.8, delay: 0.6 }}
-		                className="holographic-text inline-block"
-		              >
-Master AI to Get Promoted
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="holographic-text inline-block"
+              >
+                Get Promoted in 90 Days
+              </motion.span>
+              <br />
+              <motion.span 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="holographic-text inline-block"
+              >
+                OR Build a $20K/Month AI Business
               </motion.span>
               <br />
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="text-2xl md:text-3xl lg:text-4xl text-slate-300 inline-block mt-2"
+                className="text-xl md:text-2xl lg:text-3xl text-slate-300 inline-block mt-2"
               >
-                OR Build a $20K/Month AI Business
-		              </motion.span>
+                Without Going Back to School or Starting From Scratch
+              </motion.span>
             </motion.h1>
             
-	            <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
-	              Two Paths. One Decision. Your Future Starts Now.
-	            </p>
-            
-            <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
-              Whether you want to climb the corporate ladder or build your own AI income stream — we have the blueprint
+<p className="text-xl md:text-2xl text-slate-200 mb-4 font-semibold">
+              440+ professionals already chose their path. Now it's your turn.
             </p>
             
-            <p className="text-base md:text-lg text-slate-400 mb-3">
-              Join 440+ professionals who chose their path
+            <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
+              The same frameworks used at Apple, Goldman Sachs & Amazon — now available to you
             </p>
             
             {/* Unique Mechanism - Todd Brown */}
