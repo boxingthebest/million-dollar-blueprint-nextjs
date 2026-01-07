@@ -111,7 +111,7 @@ export default function Home() {
       icon: AIResistantIcon,
       gradient: "from-purple-500 to-indigo-600",
       bgGradient: "from-purple-500 to-indigo-600",
-      stripeLink: "/courses/get-paid-train-ai",
+      stripeLink: "/courses/ai-automation-agency",
       description: "$2,582 value → $297. The complete system to land $5K-$10K+ clients and scale to six figures. 7 modules. Done-for-you templates. 30-day guarantee.",
       students: "New",
       image: "/ai-agency-blueprint-hero.jpg",
