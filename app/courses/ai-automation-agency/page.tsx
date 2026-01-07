@@ -335,7 +335,7 @@ export default function AIAutomationAgencyPage() {
               className="relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 mb-8 border border-slate-800"
             >
               <LazyVimeoPlayer
-                videoId="1151961653"
+                videoId="1152074282"
                 title="AI Automation Agency Blueprint Overview"
               />
             </motion.div>
