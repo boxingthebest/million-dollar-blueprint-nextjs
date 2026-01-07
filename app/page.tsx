@@ -386,29 +386,29 @@ export default function Home() {
 		                transition={{ duration: 0.8, delay: 0.6 }}
 		                className="holographic-text inline-block"
 		              >
-		                440+ Professionals Promoted
-		              </motion.span>
-		              <br />
-		              <motion.span
-		                initial={{ opacity: 0, y: 10 }}
-		                animate={{ opacity: 1, y: 0 }}
-		                transition={{ duration: 0.6, delay: 0.8 }}
-		                className="text-2xl md:text-3xl lg:text-4xl text-slate-300 inline-block mt-2"
-		              >
-		                (While Everyone Else Stayed Stuck)
+Master AI to Get Promoted
+              </motion.span>
+              <br />
+              <motion.span
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="text-2xl md:text-3xl lg:text-4xl text-slate-300 inline-block mt-2"
+              >
+                OR Build a $20K/Month AI Business
 		              </motion.span>
             </motion.h1>
             
 	            <p className="text-2xl md:text-3xl lg:text-4xl text-slate-200 mb-4 font-bold">
-	              Get Promoted in 90 Days — Or Your Money Back
+	              Two Paths. One Decision. Your Future Starts Now.
 	            </p>
             
             <p className="text-lg md:text-xl text-cyan-300 mb-3 font-semibold">
-              Discover the 10 AI-Resistant Skills Fortune 100 Executives Use to Command Six Figures
+              Whether you want to climb the corporate ladder or build your own AI income stream — we have the blueprint
             </p>
             
             <p className="text-base md:text-lg text-slate-400 mb-3">
-              — That They'll Never Teach You at Work
+              Join 440+ professionals who chose their path
             </p>
             
             {/* Unique Mechanism - Todd Brown */}
