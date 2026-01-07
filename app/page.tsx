@@ -104,19 +104,19 @@ export default function Home() {
   const courses = [
     // ROW 1 - Best Sellers
     {
-      title: "Get Paid to Train AI",
-      subtitle: "The A.I. Income Blueprint™",
-      price: "$47",
-      originalPrice: "$197",
+      title: "AI Automation Agency Blueprint™",
+      subtitle: "Build a $20K/Month Agency",
+      price: "$297",
+      originalPrice: "$997",
       icon: AIResistantIcon,
-      gradient: "from-orange-500 to-red-600",
-      bgGradient: "from-orange-500 to-red-600",
+      gradient: "from-purple-500 to-indigo-600",
+      bgGradient: "from-purple-500 to-indigo-600",
       stripeLink: "/courses/get-paid-train-ai",
-      description: "The exact system to earn $50-$200/hour training AI models. Forbes calls it 'the hidden job market of the AI era.' No tech skills required.",
+      description: "$2,582 value → $297. The complete system to land $5K-$10K+ clients and scale to six figures. 7 modules. Done-for-you templates. 30-day guarantee.",
       students: "New",
-      image: "/get-paid-train-ai-hero.jpg",
+      image: "/ai-agency-blueprint-hero.jpg",
       available: true,
-      badge: "🔥 HOT"
+      badge: "🚀 PREMIUM"
     },
     {
       title: "Make Your First $1K with AI",

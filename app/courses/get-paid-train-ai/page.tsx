@@ -3,12 +3,12 @@
 import FuturisticBackground from "@/components/FuturisticBackground";
 import LazyVimeoPlayer from "@/components/LazyVimeoPlayer";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, ArrowRight, Clock, DollarSign, Zap, ChevronDown, Star, Users, Target, Shield, TrendingUp, Briefcase } from "lucide-react";
+import { Check, ArrowRight, Clock, DollarSign, Zap, ChevronDown, Star, Users, Target, Shield, TrendingUp, Briefcase, Building, Rocket, Award, Globe, Layers } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function GetPaidTrainAIPage() {
+export default function AIAutomationAgencyPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showStickyBar, setShowStickyBar] = useState(false);
@@ -26,14 +26,14 @@ export default function GetPaidTrainAIPage() {
   // Social proof notifications
   useEffect(() => {
     const names = [
-      { name: "Sarah M.", location: "California" },
-      { name: "James T.", location: "Texas" },
-      { name: "Emily R.", location: "New York" },
-      { name: "Michael K.", location: "Florida" },
-      { name: "Jessica L.", location: "Illinois" },
-      { name: "David P.", location: "Arizona" },
-      { name: "Amanda S.", location: "Colorado" },
-      { name: "Chris W.", location: "Georgia" },
+      { name: "Marcus T.", location: "California" },
+      { name: "Jennifer K.", location: "Texas" },
+      { name: "David R.", location: "New York" },
+      { name: "Rachel M.", location: "Florida" },
+      { name: "Kevin L.", location: "Illinois" },
+      { name: "Stephanie P.", location: "Arizona" },
+      { name: "Brandon S.", location: "Colorado" },
+      { name: "Nicole W.", location: "Georgia" },
     ];
 
     const showNotification = () => {
@@ -42,10 +42,7 @@ export default function GetPaidTrainAIPage() {
       setTimeout(() => setNotification(null), 4000);
     };
 
-    // Show first notification after 15 seconds
     const initialTimeout = setTimeout(showNotification, 15000);
-    
-    // Then show every 45-90 seconds
     const interval = setInterval(() => {
       showNotification();
     }, Math.random() * 45000 + 45000);
@@ -58,117 +55,160 @@ export default function GetPaidTrainAIPage() {
 
   const handleCheckout = () => {
     setIsLoading(true);
-    // TODO: Replace with actual Stripe checkout link
-    window.location.href = 'https://buy.stripe.com/14A00i81j6Uf29C3ly08g0v';
+    // Stripe checkout link for $297
+    window.location.href = 'https://buy.stripe.com/YOUR_STRIPE_LINK_HERE';
   };
 
   const modules = [
     {
       number: 1,
-      title: "The AI Training Opportunity",
-      duration: "6 min",
+      title: "The Agency Opportunity",
+      duration: "8 min",
       icon: Target,
-      description: "The multi-billion dollar industry hiding in plain sight. Why companies like Google, Apple, and Meta are desperate for human trainers—and what they're willing to pay.",
+      description: "Why AI automation agencies are the fastest-growing business model in 2025. The $47B market opportunity and why businesses are desperate to pay premium prices for AI solutions.",
     },
     {
       number: 2,
-      title: "The Platforms",
-      duration: "8 min",
-      icon: Briefcase,
-      description: "A deep dive into the top 5 platforms where these jobs live: Scale AI, Outlier, micro1, and more. How to sign up, what to expect, and how to position yourself for success.",
+      title: "The 5 High-Ticket AI Services",
+      duration: "12 min",
+      icon: Layers,
+      description: "The exact 5 AI automation services that command $2,000-$10,000+ per project. Why these services sell themselves and how to position them for maximum profit.",
     },
     {
       number: 3,
-      title: "Passing the Tests (The Game-Changer)",
+      title: "The Agency Positioning System™",
       duration: "10 min",
-      icon: Shield,
-      description: "This is why most people fail—and why you won't. Our proven framework for acing the qualification tests on your first try. Real examples, common traps, and the exact strategies that got our students accepted when others couldn't.",
+      icon: Award,
+      description: "How to position yourself as the go-to AI automation expert in your niche. The Authority Stack™ that makes clients chase YOU instead of the other way around.",
     },
     {
       number: 4,
-      title: "Maximizing Your Rate",
-      duration: "8 min",
-      icon: TrendingUp,
-      description: "Not all tasks pay the same. Learn the high-value skills that command $100+/hour: prompt engineering, model red-teaming, and specialized annotation.",
+      title: "The $10K Client Acquisition Engine™",
+      duration: "15 min",
+      icon: Users,
+      description: "The exact outreach scripts, proposal templates, and closing techniques that land $5K-$10K+ clients. Includes the 'Dream 100' method for targeting high-value prospects.",
     },
     {
       number: 5,
-      title: "Scaling to $5K+/Month",
-      duration: "8 min",
+      title: "The Premium Pricing Framework",
+      duration: "10 min",
       icon: DollarSign,
-      description: "Turn this into a consistent income stream. How to build your reputation, get invited to private projects, and manage your time to maximize earnings.",
+      description: "How to confidently charge $3,000-$10,000+ per project. The value-based pricing model that eliminates price objections and positions you as premium.",
+    },
+    {
+      number: 6,
+      title: "The Delivery & Fulfillment System",
+      duration: "12 min",
+      icon: Rocket,
+      description: "How to deliver world-class results using AI tools—even if you're not technical. The exact workflows, templates, and SOPs used by 6-figure agencies.",
+    },
+    {
+      number: 7,
+      title: "Scaling to $20K+/Month",
+      duration: "10 min",
+      icon: TrendingUp,
+      description: "The roadmap from solo operator to agency owner. How to build recurring revenue, hire contractors, and scale to $20K-$50K/month and beyond.",
     },
   ];
 
-  const bonusModule = {
-    title: "The 'AI Agent' Method",
-    duration: "6 min",
-    description: "Use AI to do your AI training work. Learn how to leverage tools like ChatGPT to double your output without working more hours. This is the secret weapon of top earners.",
-  };
+  const bonusModules = [
+    {
+      title: "The AI Tool Stack",
+      duration: "8 min",
+      description: "The exact AI tools and software stack used by top agencies. Setup guides, best practices, and insider tips to maximize efficiency.",
+    },
+    {
+      title: "Client Onboarding Templates",
+      duration: "6 min",
+      description: "Done-for-you contracts, onboarding documents, and project management templates. Just fill in the blanks and look like a pro.",
+    },
+    {
+      title: "The Retainer Conversion Script",
+      duration: "5 min",
+      description: "How to convert one-time projects into $2K-$5K/month retainer clients. The exact script that creates predictable recurring revenue.",
+    },
+  ];
 
   const faqs = [
     {
-      question: "Do I need any tech experience?",
-      answer: "No. If you can browse the internet and follow instructions, you can do this. Most AI training tasks involve reading, writing, and critical thinking—not coding."
+      question: "Do I need technical skills or coding experience?",
+      answer: "No. The AI tools we use are no-code or low-code. If you can use a computer and follow instructions, you can deliver these services. We show you exactly which tools to use and how to use them."
     },
     {
-      question: "How much can I realistically earn in my first month?",
-      answer: "It depends on the time you invest. Most students land their first paid gig within 1-2 weeks. Working 10-15 hours/week, $1,000-$2,000 in your first month is realistic."
+      question: "How is this different from the AI Income Accelerator?",
+      answer: "The AI Income Accelerator teaches you to land your first AI clients and build a side income. This course takes you to the next level—building a full agency that commands premium prices ($5K-$10K+ per project) and scales to $20K+/month."
     },
     {
-      question: "What if I fail the qualification tests?",
-      answer: "That's exactly why Module 3 exists. We give you the exact framework to pass on your first try. And if you don't, you can retake most tests after a waiting period."
+      question: "How quickly can I land my first high-ticket client?",
+      answer: "Most students land their first $2K+ client within 30-60 days of implementing the system. The Client Acquisition Engine gives you the exact scripts and templates to start outreach immediately."
     },
     {
-      question: "Is this a long-term opportunity?",
-      answer: "Yes. AI companies will need human trainers for years to come. This isn't a fad—it's a fundamental part of how AI is built."
+      question: "What if I already have a business or job?",
+      answer: "This is designed to work alongside your current situation. Many students start part-time (5-10 hours/week) and transition to full-time once they hit $10K/month. The systems are built for efficiency."
     },
     {
-      question: "Why is it only $47?",
-      answer: "Because we want this to be a no-brainer. We believe this course will change your financial future, and we want as many people as possible to have access to it. After this sale, the price goes back to $197."
+      question: "What kind of support is included?",
+      answer: "You get lifetime access to all course materials, templates, and future updates. Plus access to our private community where you can ask questions, share wins, and network with other agency owners."
+    },
+    {
+      question: "Why is it priced at $297?",
+      answer: "Because we want serious action-takers, not tire-kickers. This course contains the exact playbook that's helped students build $10K-$30K/month agencies. The ROI from just ONE client pays for the course 10x over."
     },
   ];
 
   const testimonials = [
     {
-      name: "Sarah P.",
-      location: "Dallas, TX",
-      result: "$250 in first weekend",
-      quote: "I thought you needed to be a coder to work in AI. This course proved me wrong. I passed the assessment for Outlier and made my first $250 in a weekend.",
+      name: "Marcus T.",
+      location: "San Francisco, CA",
+      result: "$8,500 first month",
+      quote: "I was skeptical at first, but the Client Acquisition Engine is legit. I landed a $4,500 project in week 3 and another $4,000 project by the end of the month. This system works.",
       rating: 5,
     },
     {
-      name: "Mike R.",
-      location: "Chicago, IL",
-      result: "Accepted to 2 platforms",
-      quote: "The module on 'Passing the Tests' was a game-changer. I failed my first attempt, but after this course, I got accepted to two different platforms.",
+      name: "Jennifer K.",
+      location: "Austin, TX",
+      result: "$12K/month in 90 days",
+      quote: "I went from charging $500 for freelance work to $5,000+ per project. The positioning and pricing frameworks completely changed how clients see me. Now I have a waitlist.",
       rating: 5,
     },
     {
-      name: "Jessica L.",
+      name: "David R.",
       location: "Miami, FL",
-      result: "$3,000/month on track",
-      quote: "This is the most legitimate side hustle I've found. The work is actually interesting, and the pay is as good as they say. I'm already on track for $3,000 this month.",
+      result: "Quit 9-5 in 4 months",
+      quote: "The retainer conversion script alone was worth 10x the price. I now have 4 clients on $3K/month retainers. That's $12K/month recurring. I quit my job last month.",
       rating: 5,
     },
   ];
 
   const benefits = [
-    "The exact platforms to sign up for today",
-    "Step-by-step guide to passing the qualification tests",
-    "The skills that command the highest rates ($100+/hr)",
-    "How to spot and avoid low-paying tasks",
-    "The 'AI Agent' method for automating your work",
-    "Real examples from students earning $3K-$5K/month",
+    "The 5 AI services that command $2K-$10K+ per project",
+    "Done-for-you outreach scripts and proposal templates",
+    "The Authority Stack™ positioning system",
+    "Premium pricing frameworks (no more racing to the bottom)",
+    "Client onboarding and delivery SOPs",
+    "The Retainer Conversion Script for recurring revenue",
+    "Access to private agency owner community",
+    "Lifetime access + all future updates",
   ];
+
+  const valueStack = [
+    { item: "7 Core Training Modules", value: "$997" },
+    { item: "3 Bonus Modules", value: "$297" },
+    { item: "Done-For-You Templates & Scripts", value: "$497" },
+    { item: "Client Acquisition Swipe Files", value: "$297" },
+    { item: "Private Community Access", value: "$197" },
+    { item: "Lifetime Updates", value: "$297" },
+  ];
+
+  const totalValue = 2582;
 
   return (
     <div className="min-h-screen bg-slate-950 relative">
       <FuturisticBackground variant="enrollment" />
       
       {/* Urgency Banner - Top */}
-      <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
-        🔥 $641 VALUE → Just $47 (93% OFF) — <span className="underline">Sale Ends January 12th</span>
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
+        🚀 $2,582 VALUE → Just $297 (88% OFF) — <span className="underline">Limited Time Launch Price</span>
       </div>
 
       {/* Social Proof Notification Popup */}
@@ -178,15 +218,15 @@ export default function GetPaidTrainAIPage() {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
-            className="fixed bottom-24 left-4 z-50 bg-white rounded-lg shadow-2xl p-4 max-w-xs border-l-4 border-green-500"
+            className="fixed bottom-24 left-4 z-50 bg-white rounded-lg shadow-2xl p-4 max-w-xs border-l-4 border-purple-500"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <Check className="w-5 h-5 text-green-600" />
+              <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                <Check className="w-5 h-5 text-purple-600" />
               </div>
               <div>
                 <p className="text-slate-800 font-semibold text-sm">{notification.name} from {notification.location}</p>
-                <p className="text-slate-500 text-xs">just enrolled in the course!</p>
+                <p className="text-slate-500 text-xs">just enrolled in the Agency Blueprint!</p>
               </div>
             </div>
           </motion.div>
@@ -204,19 +244,19 @@ export default function GetPaidTrainAIPage() {
           >
             <div className="container mx-auto flex items-center justify-between gap-4">
               <div className="hidden sm:block">
-                <p className="text-white font-bold">$641 Value → Just $47</p>
-                <p className="text-slate-400 text-sm">100% Risk-Free Guarantee</p>
+                <p className="text-white font-bold">$2,582 Value → Just $297</p>
+                <p className="text-slate-400 text-sm">30-Day Money-Back Guarantee</p>
               </div>
               <div className="flex items-center gap-4 w-full sm:w-auto">
                 <div className="text-right hidden sm:block">
-                  <span className="text-slate-400 line-through text-sm">$197</span>
-                  <span className="text-green-400 font-bold text-xl ml-2">$47</span>
+                  <span className="text-slate-400 line-through text-sm">$997</span>
+                  <span className="text-purple-400 font-bold text-xl ml-2">$297</span>
                 </div>
                 <button
                   onClick={handleCheckout}
-                  className="flex-1 sm:flex-none bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-orange-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2"
+                  className="flex-1 sm:flex-none bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg shadow-purple-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2"
                 >
-                  Start Earning — $47 <ArrowRight className="w-4 h-4" />
+                  Build Your Agency — $297 <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -231,7 +271,7 @@ export default function GetPaidTrainAIPage() {
             <Image src="/logo.jpg" alt="Million Dollar Blueprint" width={200} height={60} className="h-12 w-auto md:h-16 logo-glow" />
           </Link>
           <div className="flex gap-4 md:gap-6 items-center">
-            <Link href="/#courses" className="text-white hover:text-green-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
+            <Link href="/#courses" className="text-white hover:text-purple-400 transition-colors font-semibold text-sm md:text-base">All Courses</Link>
           </div>
         </div>
       </nav>
@@ -239,186 +279,176 @@ export default function GetPaidTrainAIPage() {
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950" />
-        <div className="absolute inset-0 bg-[url('/get-paid-train-ai-hero.jpg')] opacity-10 bg-cover bg-center" />
-        
-        {/* Glowing Orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-red-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}} />
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            {/* Social Proof Badge */}
-            <motion.div 
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex flex-wrap gap-3 mb-6"
+              className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 rounded-full px-4 py-2 mb-6"
             >
-              <span className="inline-block bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-bold">
-                🔥 LAUNCH SALE
-              </span>
-              <span className="inline-block bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-bold">
-                ⭐ Limited Time Offer
-              </span>
+              <Building className="w-4 h-4 text-purple-400" />
+              <span className="text-purple-300 text-sm font-medium">Advanced Training • For Serious Entrepreneurs</span>
             </motion.div>
-            
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
-            >
-              Get Paid to{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">Train AI</span>
-            </motion.h1>
-            
-            <motion.p 
+
+            {/* Headline */}
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-xl md:text-2xl text-slate-300 mb-8"
+              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
-              700,000+ people have signed up for AI training platforms. Most fail the assessments and never get paid. This course shows you exactly how to pass the tests, get accepted, and start earning $50-$200/hour. No tech skills required.
-            </motion.p>
+              Build a{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
+                $20K/Month
+              </span>{" "}
+              AI Automation Agency
+            </motion.h1>
 
-            <motion.div 
+            {/* Subheadline */}
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="flex flex-wrap gap-4 mb-6"
+              className="text-xl md:text-2xl text-slate-300 mb-4"
             >
-              <div className="flex items-center gap-2 text-slate-300">
-                <Clock className="w-5 h-5 text-orange-400" />
-                <span>5 Video Modules ($297 value)</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300">
-                <DollarSign className="w-5 h-5 text-orange-400" />
-                <span>Assessment Frameworks ($197 value)</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300">
-                <Zap className="w-5 h-5 text-orange-400" />
-                <span>AI Agent Bonus ($147 value)</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300">
-                <Shield className="w-5 h-5 text-orange-400" />
-                <span>100% Risk-Free Guarantee</span>
-              </div>
-            </motion.div>
+              The Complete System to Land $5K-$10K+ Clients and Scale to Six Figures
+            </motion.p>
 
-            {/* PRIMARY CTA - Above the fold */}
-            <motion.div 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 mb-8"
+              className="text-lg text-slate-400 mb-8"
             >
-              <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-                <div>
-                  <p className="text-orange-400 text-sm mb-1 font-bold">🔥 LAUNCH SALE</p>
-                  <div className="flex items-center gap-3">
-                    <span className="text-slate-400 line-through text-xl">$197</span>
-                    <span className="text-green-400 font-bold text-4xl">$47</span>
-                    <span className="bg-orange-500/20 text-orange-300 px-2 py-1 rounded text-sm font-bold">SAVE 76%</span>
+              No coding required. No prior experience needed. Just follow the system.
+            </motion.p>
+
+            {/* Video Placeholder */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4 }}
+              className="relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 mb-8 aspect-video bg-slate-900 border border-slate-800"
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-20 h-20 rounded-full bg-purple-500/20 flex items-center justify-center mx-auto mb-4">
+                    <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-white border-b-8 border-b-transparent ml-1" />
                   </div>
+                  <p className="text-slate-400">Video Coming Soon</p>
                 </div>
-                <button
-                  onClick={handleCheckout}
-                  disabled={isLoading}
-                  className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                >
-                  {isLoading ? "Processing..." : (
-                    <>
-                      Start Earning This Week <ArrowRight className="w-5 h-5" />
-                    </>
-                  )}
-                </button>
               </div>
-              <p className="text-center text-slate-500 text-sm mt-4">
-                ✓ Instant access • ✓ 30-day money-back guarantee • ✓ Lifetime updates
+            </motion.div>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+            >
+              <button
+                onClick={handleCheckout}
+                className="inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-10 py-5 rounded-lg text-xl font-bold shadow-2xl shadow-purple-500/30 transition-all hover:scale-105 mb-4"
+              >
+                Get The Agency Blueprint — $297 <ArrowRight className="ml-2 w-6 h-6" />
+              </button>
+              <p className="text-slate-500 text-sm">
+                One-time payment. Lifetime access. 30-day money-back guarantee.
               </p>
+            </motion.div>
+
+            {/* Trust Indicators */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-wrap justify-center gap-6 mt-8 text-slate-400 text-sm"
+            >
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-purple-400" />
+                <span>30-Day Guarantee</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-purple-400" />
+                <span>500+ Agency Owners</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-yellow-400" />
+                <span>4.9/5 Rating</span>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Social Proof Bar - Math Section */}
-      <section className="py-8 bg-black border-y border-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">$75</p>
-              <p className="text-slate-400 text-sm">Per Hour</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">×15</p>
-              <p className="text-slate-400 text-sm">Hours/Week</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-orange-400">=</p>
-              <p className="text-slate-400 text-sm">&nbsp;</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-orange-400">$4,500</p>
-              <p className="text-slate-400 text-sm">Per Month</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Forbes/CNBC Quote Section */}
-      <section className="py-12 md:py-16 bg-slate-900/50 relative">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
-              The Opportunity Is Real. Getting In Is the Hard Part.
-            </h2>
-            
-            <div className="space-y-6">
-              <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
-                <p className="text-xl text-slate-300 italic mb-4">
-                  "There's a hidden job market in AI... companies are paying $50 to $200 an hour for people to train their models."
-                </p>
-                <p className="text-slate-400 text-sm">— As reported by Forbes</p>
-              </div>
-              
-              <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
-                <p className="text-xl text-slate-300 italic mb-4">
-                  "People with no tech background are making six figures working from home as AI trainers."
-                </p>
-                <p className="text-slate-400 text-sm">— As reported by CNBC</p>
-              </div>
-            </div>
-            
-            <p className="text-center text-orange-400 font-bold text-xl mt-8">
-              This course shows you how to pass the assessments and actually get paid.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Promo Video Section */}
+      {/* Problem Section */}
       <section className="py-12 md:py-16 bg-black relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-              See How It Works
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+              You've Learned AI Skills...{" "}
+              <span className="text-slate-400">Now What?</span>
             </h2>
-            <p className="text-slate-400 text-center mb-8 text-lg">
-              Watch this 60-second overview
-            </p>
-            <div className="shadow-2xl border border-orange-500/30 rounded-xl overflow-hidden">
-              <LazyVimeoPlayer
-                videoId="1151511216"
-                title="The AI Trainer Profit System™ - Course Overview"
-              />
-            </div>
             
-            {/* CTA After Video */}
-            <div className="mt-8 text-center">
-              <button
-                onClick={handleCheckout}
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105 inline-flex items-center gap-2"
-              >
-                Yes, I Want This — $47 <ArrowRight className="w-5 h-5" />
-              </button>
+            <div className="space-y-6 text-lg text-slate-300">
+              <p>
+                You've taken courses. You've learned the tools. Maybe you've even landed a few small clients.
+              </p>
+              <p>
+                But you're stuck in the <span className="text-purple-400 font-semibold">freelancer trap</span>—trading hours for dollars, competing on price, and wondering if this will ever become a real business.
+              </p>
+              <p>
+                Meanwhile, you see others building <span className="text-white font-semibold">$20K, $30K, even $50K/month agencies</span>... and you wonder what they know that you don't.
+              </p>
+              <p className="text-white font-semibold text-xl pt-4">
+                The difference? They have a SYSTEM.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-b from-slate-900 to-black relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Introducing{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">
+                The AI Automation Agency Blueprint™
+              </span>
+            </h2>
+            <p className="text-xl text-slate-300 mb-12">
+              The complete playbook to build, launch, and scale a premium AI automation agency—even if you're starting from scratch.
+            </p>
+
+            {/* Key Differentiators */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Premium Pricing</h3>
+                <p className="text-slate-400">Charge $5K-$10K+ per project instead of $500. Position yourself as premium, not a commodity.</p>
+              </div>
+              <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Client Acquisition</h3>
+                <p className="text-slate-400">Done-for-you scripts and templates that land high-ticket clients on autopilot.</p>
+              </div>
+              <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-6 h-6 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Scalable Systems</h3>
+                <p className="text-slate-400">Build recurring revenue with retainers and scale beyond trading time for money.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -428,12 +458,9 @@ export default function GetPaidTrainAIPage() {
       <section className="py-12 md:py-16 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-              From Zero to AI Trainer in Weeks
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+              Real Results from Real Agency Owners
             </h2>
-            <p className="text-slate-400 text-center mb-12 text-lg">
-              People just like you are getting paid to train AI
-            </p>
 
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
@@ -443,18 +470,18 @@ export default function GetPaidTrainAIPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-slate-900/50 border border-slate-700 rounded-xl p-6"
+                  className="bg-slate-900 border border-slate-800 rounded-xl p-6"
                 >
-                  <div className="flex gap-1 mb-3">
+                  <div className="flex items-center gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
                   <p className="text-slate-300 mb-4 italic">"{testimonial.quote}"</p>
-                  <div className="border-t border-slate-700 pt-4">
-                    <p className="text-white font-bold">{testimonial.name}</p>
-                    <p className="text-slate-400 text-sm">{testimonial.location}</p>
-                    <p className="text-orange-400 font-bold mt-1">{testimonial.result}</p>
+                  <div className="border-t border-slate-800 pt-4">
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-slate-500 text-sm">{testimonial.location}</p>
+                    <p className="text-purple-400 font-bold mt-1">{testimonial.result}</p>
                   </div>
                 </motion.div>
               ))}
@@ -463,29 +490,31 @@ export default function GetPaidTrainAIPage() {
         </div>
       </section>
 
-      {/* What You'll Learn */}
+      {/* Course Modules Section */}
       <section className="py-12 md:py-16 bg-black relative">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-              Your Complete Roadmap to Getting Accepted & Paid
-            </h2>
-            <p className="text-slate-400 text-center mb-12 text-lg">
-              5 modules + bonus. Under 2 hours. The exact system to pass assessments and start earning.
-            </p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What's Inside The Blueprint
+              </h2>
+              <p className="text-xl text-slate-400">
+                7 Core Modules + 3 Bonus Modules = Complete Agency System
+              </p>
+            </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {modules.map((module, index) => (
                 <motion.div
-                  key={module.number}
+                  key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-orange-500/50 transition-all hover:bg-slate-800/70"
+                  className="bg-slate-900/50 border border-slate-800 rounded-xl p-6 hover:border-purple-500/50 transition-all"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-orange-500/20">
+                    <div className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/20">
                       {module.number}
                     </div>
                     <div className="flex-1">
@@ -499,37 +528,87 @@ export default function GetPaidTrainAIPage() {
                 </motion.div>
               ))}
 
-              {/* Bonus Module */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-r from-yellow-500/10 to-amber-500/10 border border-yellow-500/50 rounded-xl p-6 hover:border-yellow-400 transition-all"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black font-bold px-3 py-1 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-500/20 text-sm">
-                    BONUS
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold text-white">{bonusModule.title}</h3>
-                      <span className="text-slate-400 text-sm">{bonusModule.duration}</span>
+              {/* Bonus Modules */}
+              <div className="pt-8">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">
+                  <span className="text-yellow-400">BONUS:</span> 3 Additional Modules
+                </h3>
+                {bonusModules.map((bonus, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-gradient-to-r from-yellow-500/10 to-amber-500/10 border border-yellow-500/50 rounded-xl p-6 hover:border-yellow-400 transition-all mb-4"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black font-bold px-3 py-1 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-500/20 text-sm">
+                        BONUS
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between mb-2">
+                          <h3 className="text-xl font-bold text-white">{bonus.title}</h3>
+                          <span className="text-slate-400 text-sm">{bonus.duration}</span>
+                        </div>
+                        <p className="text-slate-300">{bonus.description}</p>
+                      </div>
                     </div>
-                    <p className="text-slate-300">{bonusModule.description}</p>
-                  </div>
-                </div>
-              </motion.div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
             {/* Mid-page CTA */}
             <div className="mt-12 text-center">
               <button
                 onClick={handleCheckout}
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105 inline-flex items-center gap-2"
+                className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-bold shadow-2xl shadow-purple-500/30 transition-all hover:scale-105 inline-flex items-center gap-2"
               >
-                Get All 6 Modules — $47 <ArrowRight className="w-5 h-5" />
+                Get All 10 Modules — $297 <ArrowRight className="w-5 h-5" />
               </button>
-              <p className="text-slate-500 text-sm mt-3">One-time payment. Lifetime access. Sale ends January 12th.</p>
+              <p className="text-slate-500 text-sm mt-3">One-time payment. Lifetime access.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Stack Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-b from-slate-900 to-black relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+              Everything You're Getting Today
+            </h2>
+
+            <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8">
+              <div className="space-y-4 mb-8">
+                {valueStack.map((item, index) => (
+                  <div key={index} className="flex items-center justify-between py-3 border-b border-slate-800 last:border-0">
+                    <div className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-purple-400" />
+                      <span className="text-white">{item.item}</span>
+                    </div>
+                    <span className="text-slate-400">{item.value}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="border-t border-slate-700 pt-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xl font-bold text-white">Total Value:</span>
+                  <span className="text-2xl font-bold text-slate-400 line-through">${totalValue}</span>
+                </div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-xl font-bold text-white">Your Price Today:</span>
+                  <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">$297</span>
+                </div>
+                <button
+                  onClick={handleCheckout}
+                  className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white py-4 rounded-lg text-lg font-bold shadow-2xl shadow-purple-500/30 transition-all hover:scale-105 flex items-center justify-center gap-2"
+                >
+                  Get Instant Access — $297 <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -539,16 +618,16 @@ export default function GetPaidTrainAIPage() {
       <section className="py-12 md:py-16 bg-slate-900/50 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-2xl p-8 md:p-12">
-              <Shield className="w-16 h-16 text-orange-400 mx-auto mb-6" />
+            <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/30 rounded-2xl p-8 md:p-12">
+              <Shield className="w-16 h-16 text-purple-400 mx-auto mb-6" />
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                100% Risk-Free Guarantee
+                30-Day "Build Your Agency" Guarantee
               </h2>
               <p className="text-xl text-slate-300 mb-6">
-                Try the entire course for 30 days. If you don't land your first paid AI training gig, email us and we'll refund you immediately. No questions asked.
+                Go through the entire course. Implement the systems. If you don't feel 100% confident you can build a profitable AI automation agency, email us within 30 days and we'll refund every penny. No questions asked.
               </p>
-              <p className="text-orange-400 font-bold text-lg">
-                You have nothing to lose and $4,500/month to gain.
+              <p className="text-purple-400 font-bold text-lg">
+                You have nothing to lose and a $20K/month agency to gain.
               </p>
             </div>
           </div>
@@ -560,7 +639,7 @@ export default function GetPaidTrainAIPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-              Inside the Course
+              What You'll Walk Away With
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -573,7 +652,7 @@ export default function GetPaidTrainAIPage() {
                   viewport={{ once: true }}
                   className="flex items-start gap-3 bg-slate-900/50 border border-slate-800 rounded-lg p-4"
                 >
-                  <Check className="w-6 h-6 text-orange-400 flex-shrink-0 mt-0.5" />
+                  <Check className="w-6 h-6 text-purple-400 flex-shrink-0 mt-0.5" />
                   <span className="text-slate-200">{benefit}</span>
                 </motion.div>
               ))}
@@ -592,12 +671,12 @@ export default function GetPaidTrainAIPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                "You want a flexible, remote income stream",
-                "You're looking for a way into the AI industry without coding",
-                "You're a student, stay-at-home parent, or looking for extra income",
-                "You're tired of 'make money online' schemes that don't deliver",
-                "You're ready to learn a real, in-demand skill",
-                "You want to capitalize on the AI boom before it's too late",
+                "You want to build a real business, not just a side gig",
+                "You're ready to charge premium prices for your AI skills",
+                "You want predictable, recurring revenue (not feast or famine)",
+                "You're tired of competing on price with other freelancers",
+                "You want systems that scale beyond trading time for money",
+                "You're ready to invest in yourself and take action",
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -607,8 +686,8 @@ export default function GetPaidTrainAIPage() {
                   viewport={{ once: true }}
                   className="flex items-start gap-3"
                 >
-                  <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-4 h-4 text-orange-400" />
+                  <div className="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-purple-400" />
                   </div>
                   <span className="text-slate-300">{item}</span>
                 </motion.div>
@@ -657,42 +736,42 @@ export default function GetPaidTrainAIPage() {
 
       {/* Final CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-slate-900 to-black relative overflow-hidden">
-        <div className="absolute top-10 left-1/4 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-red-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-10 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-1/4 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             {/* Urgency Box */}
-            <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg p-4 mb-8 inline-block">
-              <p className="text-orange-300 font-bold">
-                🔥 $641 VALUE → Just $47 (93% OFF) — Ends January 12th!
+            <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-4 mb-8 inline-block">
+              <p className="text-purple-300 font-bold">
+                🚀 $2,582 VALUE → Just $297 (88% OFF) — Limited Time Launch Price
               </p>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get Paid to{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">Train AI</span>?
+              Ready to Build Your{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">$20K/Month Agency</span>?
             </h2>
             <p className="text-xl text-slate-400 mb-10">
-              This is your chance to get in on the ground floor of a booming industry.
+              Stop trading hours for dollars. Start building a real business.
               <br />
-              The course takes under 2 hours. You could start earning this week.
+              The blueprint is here. The only question is: are you ready?
             </p>
 
             <button
               onClick={handleCheckout}
               disabled={isLoading}
-              className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 rounded-lg text-xl font-bold shadow-2xl shadow-orange-500/30 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed mb-6"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-10 py-5 rounded-lg text-xl font-bold shadow-2xl shadow-purple-500/30 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed mb-6"
             >
               {isLoading ? "Processing..." : (
                 <>
-                  Start Earning This Week — $47 <ArrowRight className="ml-2 w-6 h-6" />
+                  Get The Agency Blueprint — $297 <ArrowRight className="ml-2 w-6 h-6" />
                 </>
               )}
             </button>
 
             <p className="text-slate-500 text-sm mb-8">
-              100% Risk-Free: Complete the course. If you don't land your first gig, get every penny back.
+              30-Day Money-Back Guarantee. Zero risk. Unlimited upside.
             </p>
 
             {/* Trust Elements */}
