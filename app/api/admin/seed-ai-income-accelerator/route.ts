@@ -74,7 +74,7 @@ export async function GET() {
             {
               title: 'Video 3 - The Client Acquisition System™',
               description: 'The proven system to find and land your first paying clients. Includes outreach scripts, proposal templates, and closing techniques.',
-              videoUrl: 'https://player.vimeo.com/video/PLACEHOLDER_3',
+              videoUrl: 'https://player.vimeo.com/video/1152076047',
               duration: 900, // 15 minutes
               order: 3,
             },
