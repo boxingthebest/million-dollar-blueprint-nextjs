@@ -191,7 +191,7 @@ export default function ProfessionalBundlePage() {
                 </p>
               </div>
               
-              <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Founding Member Pricing Ends January 12th — Price increases to $2,497 after</p>
+              <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Founding Member Pricing Ends January 15th — Price increases to $2,497 after</p>
             </div>
           </div>
           
@@ -290,7 +290,7 @@ export default function ProfessionalBundlePage() {
 	                <div className="text-4xl font-bold text-emerald-400">$1,273</div>
 	              </div>
 	            </div>
-              <p className="text-orange-400 font-bold mt-6">⚠️ Price increases to $2,070 on January 12th</p>
+              <p className="text-orange-400 font-bold mt-6">⚠️ Price increases to $2,070 on January 15th</p>
 	          </div>
         </div>
       </section>

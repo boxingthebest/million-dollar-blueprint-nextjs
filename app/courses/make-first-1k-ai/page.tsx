@@ -173,7 +173,7 @@ export default function MakeFirst1KPage() {
       
       {/* Urgency Banner - Top */}
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
-        🔥 LAUNCH SALE: <span className="font-bold">$197 → $47</span> (76% OFF) — <span className="underline">Ends January 12th at Midnight</span>
+        🔥 LAUNCH SALE: <span className="font-bold">$197 → $47</span> (76% OFF) — <span className="underline">Ends January 15th at Midnight</span>
       </div>
 
       {/* Social Proof Notification Popup */}
@@ -640,7 +640,7 @@ export default function MakeFirst1KPage() {
             {/* Urgency Box */}
             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-8 inline-block">
               <p className="text-yellow-300 font-bold">
-                🔥 FINAL CHANCE: $197 → $47 (76% OFF) — Sale Ends January 12th!
+                🔥 FINAL CHANCE: $197 → $47 (76% OFF) — Sale Ends January 15th!
               </p>
             </div>
 

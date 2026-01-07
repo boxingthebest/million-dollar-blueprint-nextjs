@@ -85,7 +85,7 @@ export default function ExecutivePresencePage() {
 
       <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 px-4 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
-        <p className="text-sm md:text-base font-semibold relative z-10">🔥 LAUNCH SALE: <span className="text-yellow-300">60% OFF</span> — Ends January 12th at Midnight</p>
+        <p className="text-sm md:text-base font-semibold relative z-10">🔥 LAUNCH SALE: <span className="text-yellow-300">60% OFF</span> — Ends January 15th at Midnight</p>
       </div>
 
       <section className="relative pt-20 pb-16 px-4 overflow-hidden">

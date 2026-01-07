@@ -345,7 +345,7 @@ export default async function CoursePage({ params }: { params: { slug: string } 
                 >
                   Start Learning Today - <span className="line-through opacity-70 mr-2">${(course.price * 4) / 100}</span> ${course.price / 100}
                 </EnrollButton>
-                <p className="text-orange-400 font-bold mt-4">⚠️ Founding Member Pricing Ends January 12th — Price increases to {meta.priceIncrease} after</p>
+                <p className="text-orange-400 font-bold mt-4">⚠️ Founding Member Pricing Ends January 15th — Price increases to {meta.priceIncrease} after</p>
               </div>
             </div>
           </div>

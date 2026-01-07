@@ -167,7 +167,7 @@ export default function VIPBundlePage() {
                 </p>
               </div>
               
-              <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Only 3 VIP Spots Remaining for January — Price increases to $9,997 after January 12th</p>
+              <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Only 3 VIP Spots Remaining for January — Price increases to $9,997 after January 15th</p>
             </div>
           </div>
           
@@ -421,7 +421,7 @@ export default function VIPBundlePage() {
 	                <span className="text-white text-2xl font-bold">Your VIP Price:</span>
 	                <span className="text-amber-400 text-4xl font-black">$2,497</span>
 	              </div>
-                <p className="text-orange-400 font-bold mt-6 text-center">⚠️ Price increases to $9,997 on January 12th</p>
+                <p className="text-orange-400 font-bold mt-6 text-center">⚠️ Price increases to $9,997 on January 15th</p>
 	            </div>
           </div>
         </div>

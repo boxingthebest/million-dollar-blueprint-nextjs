@@ -74,7 +74,7 @@ export default function FlagshipBundlePage() {
               </p>
             </div>
             
-            <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Founding Member Pricing Ends January 12th — Price increases to $688 after</p>
+            <p className="text-orange-400 font-bold mt-8 text-xl">⚠️ Founding Member Pricing Ends January 15th — Price increases to $688 after</p>
           </div>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function FlagshipBundlePage() {
 		            <h3 className="text-3xl font-bold text-white mb-4">Total Bundle Value: $688</h3>
 		            <p className="text-4xl text-emerald-400 font-black mb-4">Your Price: $397</p>
 		            <p className="text-xl text-slate-300 uppercase tracking-widest">You Save: <span className="text-emerald-400 font-bold">$291 (42% OFF)</span></p>
-	              <p className="text-orange-400 font-bold mt-4">⚠️ Price increases to $688 on January 12th</p>
+	              <p className="text-orange-400 font-bold mt-4">⚠️ Price increases to $688 on January 15th</p>
 		          </div>
         </div>
       </section>

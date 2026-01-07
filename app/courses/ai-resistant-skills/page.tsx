@@ -202,7 +202,7 @@ export default function AIResistantSkillsPage() {
       
       {/* Urgency Banner - Top */}
       <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-4 text-center text-sm md:text-base font-semibold">
-        🔥 LAUNCH SALE: <span className="font-bold">$888 → $47</span> (95% OFF) — <span className="underline">Ends January 12th at Midnight</span>
+        🔥 LAUNCH SALE: <span className="font-bold">$888 → $47</span> (95% OFF) — <span className="underline">Ends January 15th at Midnight</span>
       </div>
 
       {/* Social Proof Notification Popup */}
@@ -666,7 +666,7 @@ export default function AIResistantSkillsPage() {
             {/* Urgency Box */}
             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-8 inline-block">
               <p className="text-yellow-300 font-bold">
-                🔥 FINAL CHANCE: $888 → $47 (95% OFF) — Sale Ends January 12th!
+                🔥 FINAL CHANCE: $888 → $47 (95% OFF) — Sale Ends January 15th!
               </p>
             </div>
 
