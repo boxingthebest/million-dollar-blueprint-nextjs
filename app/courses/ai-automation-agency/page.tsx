@@ -327,19 +327,16 @@ export default function AIAutomationAgencyPage() {
               No coding required. No prior experience needed. Just follow the system.
             </motion.p>
 
-            {/* Hero Image */}
+            {/* Video Section */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 mb-8 aspect-video bg-slate-900 border border-slate-800"
+              className="relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 mb-8 border border-slate-800"
             >
-              <Image
-                src="/ai-agency-blueprint-hero.webp"
-                alt="AI Automation Agency Blueprint"
-                fill
-                className="object-cover"
-                priority
+              <LazyVimeoPlayer
+                videoId="1151961653"
+                title="AI Automation Agency Blueprint Overview"
               />
             </motion.div>
 
