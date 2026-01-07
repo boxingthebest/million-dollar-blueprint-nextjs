@@ -95,7 +95,7 @@ export async function GET() {
             {
               title: 'Video 6 - Scaling to $5K/Month',
               description: 'The roadmap from your first client to consistent $5K months. Systems, processes, and strategies for sustainable growth.',
-              videoUrl: 'https://player.vimeo.com/video/PLACEHOLDER_6',
+              videoUrl: 'https://player.vimeo.com/video/1152077099',
               duration: 600, // 10 minutes
               order: 6,
             },
