@@ -229,36 +229,20 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "Is this right for me?",
-      answer: "These courses are designed for mid-career professionals (5-15 years of experience) making $60K-$150K who want to accelerate their career growth and develop leadership skills. If you're ambitious, hardworking, but feeling stuck—and you want the insider frameworks used at Fortune 100 companies—this is for you. Entry-level professionals and students can benefit too, but the content is optimized for those with real-world experience to apply immediately."
-    },
-    {
-      question: "How long do I have access to the courses?",
-      answer: "You get lifetime access to all course materials, including any future updates. Once you enroll, the content is yours forever."
-    },
-    {
       question: "What if I'm not satisfied?",
-      answer: "We offer a 30-day money-back guarantee. If you're not completely satisfied with the course, simply email us within 30 days for a full refund—no questions asked."
+      answer: "We offer a 30-day money-back guarantee. If you're not completely satisfied, simply email us within 30 days for a full refund—no questions asked. You keep all the templates and frameworks."
     },
     {
-      question: "How is this different from other online courses?",
-      answer: "Unlike theoretical courses taught by 'gurus,' our content comes from real executives with 22+ years of experience at Fortune 100 companies. These are battle-tested strategies that actually work at the highest levels."
+      question: "How is this different from free content or AI?",
+      answer: "Free content gives you information—we give you implementation. These are battle-tested frameworks from 22+ years at Fortune 100 companies that actually work. You're buying a shortcut that saves years of trial and error."
     },
     {
-      question: "Can I purchase individual courses or do I need the bundle?",
-      answer: "You can purchase courses individually for $197-$247 each, or get the complete bundle and save $100. The bundle gives you both flagship courses (AI-Resistant Skills + High-Performance Wellness) for just $297."
+      question: "How long do I have access?",
+      answer: "Lifetime access to all course materials, including future updates. Once you enroll, the content is yours forever."
     },
     {
-      question: "How long does it take to complete each course?",
-      answer: "Each course is designed to be completed at your own pace. Most students finish within 4-6 weeks, spending 2-3 hours per week. However, you can go faster or slower based on your schedule."
-    },
-    {
-      question: "Will this work for my industry?",
-      answer: "Yes! The skills taught—emotional intelligence, strategic thinking, wellness protocols, and relationship building—are universal. Our students come from tech, finance, healthcare, consulting, and more, all seeing remarkable results."
-    },
-    {
-      question: "Is there a payment plan available?",
-      answer: "Currently, we offer one-time payment only. However, at these founding member prices, the courses pay for themselves quickly. Many students report ROI within the first month."
+      question: "Is there a payment plan?",
+      answer: "Currently one-time payment only. At these founding member prices, most students report ROI within the first month."
     }
   ];
 
@@ -537,8 +521,6 @@ export default function Home() {
 
 
 
-      <ValueProposition />
-
       {/* Choose Your Path - Two Persona Selection */}
       <ChooseYourPath />
 
@@ -571,58 +553,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Your Instructor Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent" />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <ScrollReveal className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Learn From Someone Who's <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Been There</span>
-              </h2>
-              <p className="text-xl text-slate-300">Real Experience. Real Results. Real Frameworks.</p>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-            <div className="bg-gradient-to-br from-slate-900/80 via-slate-800/50 to-slate-900/80 border border-cyan-500/30 rounded-3xl p-8 md:p-12 shadow-2xl shadow-cyan-500/10">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                {/* Photo */}
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-2xl"></div>
-                  <Image 
-                    src="/dana-penza-headshot.png" 
-                    alt="Dana Penza - Founder & CEO" 
-                    width={500} 
-                    height={500}
-                    className="relative rounded-2xl shadow-2xl border-2 border-cyan-500/30"
-                  />
-                </div>
-                {/* Bio */}
-                <div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">Dana Penza</h3>
-                  <p className="text-cyan-400 text-xl font-semibold mb-6">Founder & CEO</p>
-                  <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-                    Dana isn't a theoretical coach—he's a <span className="text-white font-semibold">battle-tested executive with 22+ years</span> at Fortune 100 companies and elite tech startups, having driven <span className="text-cyan-400 font-semibold">significant revenue growth</span>.
-                  </p>
-                  <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                    These frameworks helped scale companies from $10M to $100M+. Now they're yours.
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-4">
-                      <div className="text-3xl font-bold text-cyan-400 mb-1">22+</div>
-                      <div className="text-sm text-slate-400">Years Experience</div>
-                    </div>
-                    <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg p-4">
-                      <div className="text-3xl font-bold text-cyan-400 mb-1">$100M+</div>
-                      <div className="text-sm text-slate-400">Revenue Driven</div>
-                    </div>
-                  </div>
-                </div>
+      {/* Compact Instructor Credibility Bar */}
+      <section className="py-8 bg-slate-900/50 border-y border-cyan-500/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+            <div className="flex items-center gap-4">
+              <Image 
+                src="/dana-penza-headshot.png" 
+                alt="Dana Penza" 
+                width={60} 
+                height={60}
+                className="rounded-full border-2 border-cyan-500/30"
+              />
+              <div>
+                <p className="text-white font-bold">Dana Penza</p>
+                <p className="text-cyan-400 text-sm">22+ Years Fortune 100 Experience</p>
               </div>
             </div>
-            </ScrollReveal>
+            <div className="hidden md:block w-px h-10 bg-slate-700"></div>
+            <div className="flex gap-6 text-center">
+              <div>
+                <div className="text-2xl font-bold text-cyan-400">$100M+</div>
+                <div className="text-xs text-slate-400">Revenue Driven</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-cyan-400">440+</div>
+                <div className="text-xs text-slate-400">Professionals Helped</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -943,20 +901,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Godfather Offer - Suby Style Value Stack */}
-      <GodfatherOffer />
-
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-slate-900">
+      {/* FAQ Section - Condensed to 4 key questions */}
+      <section className="py-12 md:py-16 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Frequently Asked Questions
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                Questions? We've Got Answers
               </h2>
-              <p className="text-lg md:text-xl text-slate-400">
-                Everything you need to know about Million Dollar Blueprint
-              </p>
             </div>
 
             <div className="space-y-4">
@@ -995,9 +947,9 @@ export default function Home() {
       </section>
 
 	      {/* Hormozi Guarantee Section */}
-	      <section className="py-20 bg-slate-900 border-y border-cyan-500/20">
+	      <section className="py-12 bg-slate-900 border-y border-cyan-500/20">
 	        <div className="container mx-auto px-4">
-	          <div className="max-w-4xl mx-auto bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-cyan-500/50 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden shadow-2xl">
+	          <div className="max-w-4xl mx-auto bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-cyan-500/50 rounded-2xl p-6 md:p-10 text-center relative overflow-hidden shadow-2xl">
 	            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
 	            <div className="relative z-10">
 	              <div className="inline-flex items-center justify-center w-20 h-20 bg-cyan-500/20 rounded-full mb-8 border border-cyan-500/30">
@@ -1022,10 +974,10 @@ export default function Home() {
 	      </section>
 
 	      {/* Final CTA Section */}
-	      <section className="py-16 md:py-24 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+	      <section className="py-12 md:py-16 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
 	        <div className="container mx-auto px-4">
 	          <div className="max-w-4xl mx-auto text-center text-white">
-	            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+	            <h2 className="text-3xl md:text-4xl font-bold mb-4">
 	              Don't Wait Until It's Too Late
 	            </h2>
 	            <p className="text-xl md:text-2xl mb-8">
