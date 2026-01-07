@@ -88,7 +88,7 @@ export async function GET() {
             {
               title: 'Video 5 - Delivering World-Class Results',
               description: 'How to deliver exceptional results that get you referrals and repeat business. Quality control, client communication, and exceeding expectations.',
-              videoUrl: 'https://player.vimeo.com/video/PLACEHOLDER_5',
+              videoUrl: 'https://player.vimeo.com/video/1152076726',
               duration: 720, // 12 minutes
               order: 5,
             },
