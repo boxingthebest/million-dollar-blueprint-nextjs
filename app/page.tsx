@@ -669,8 +669,33 @@ export default function Home() {
               })}
             </div>
 
+            {/* Course Library Box */}
+            <div className="mt-10 mb-8">
+              <Link href="/courses" className="block">
+                <div className="bg-gradient-to-r from-slate-800/80 to-slate-900/80 border-2 border-dashed border-cyan-500/40 hover:border-cyan-500 rounded-2xl p-6 md:p-8 text-center transition-all hover:scale-[1.01] hover:shadow-lg hover:shadow-cyan-500/20 group">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                      <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                    <div className="text-center md:text-left">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-1">📚 Full Course Library</h3>
+                      <p className="text-slate-400 text-sm md:text-base">View all 10 courses + 3 bundle options including Leadership, Marketing, Wealth & more</p>
+                    </div>
+                    <div className="flex items-center gap-2 text-cyan-400 font-semibold group-hover:translate-x-1 transition-transform">
+                      <span>Browse All</span>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
             {/* Bundle Section */}
-            <ScrollReveal id="bundles" className="mt-16">
+            <ScrollReveal id="bundles" className="mt-8">
               <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">Choose Your Bundle</h2>
               <p className="text-xl md:text-2xl text-slate-400 text-center mb-16">Save more when you invest in your complete transformation</p>
               
