@@ -65,49 +65,49 @@ export default function AISideHustlePage() {
     {
       number: 1,
       title: "The Hidden $47 Billion Opportunity",
-      duration: "8 min",
+      duration: "2 min",
       icon: Target,
       description: "Why right now is the single best time to start an AI services business. The math behind $3K-$5K/month. The window that won't last forever.",
     },
     {
       number: 2,
       title: "The 5 AI Services That Sell Right Now",
-      duration: "12 min",
+      duration: "3 min",
       icon: Briefcase,
       description: "Content creation, research reports, automation setup, customer service, and consulting. Which one to start with based on YOUR skills. Real pricing for each.",
     },
     {
       number: 3,
       title: "The Expert Positioning Framework",
-      duration: "10 min",
+      duration: "2 min",
       icon: Users,
       description: "How to position yourself as the expert (even with zero experience). The 4-component framework: niche specificity, proof of concept, origin story, and social proof stacking.",
     },
     {
       number: 4,
       title: "The Client Acquisition System™",
-      duration: "15 min",
+      duration: "2 min",
       icon: Star,
       description: "The 3 channels for finding clients. The Fiverr Flywheel Method. The DM script with 67% response rate. The 7-Day Client Sprint to land your first paying client.",
     },
     {
       number: 5,
       title: "The Pricing & Profit Framework",
-      duration: "10 min",
+      duration: "2 min",
       icon: DollarSign,
       description: "The 3-tier pricing model that maximizes income. Exact numbers for every service. When to raise prices. How to handle objections without lowering your rate.",
     },
     {
       number: 6,
       title: "The Delivery System",
-      duration: "12 min",
+      duration: "2 min",
       icon: Zap,
       description: "How AI makes you 10x more efficient. The 4-step delivery framework. Systems that scale. Templates for onboarding, production, and client management.",
     },
     {
       number: 7,
       title: "Scaling to $5K/Month and Beyond",
-      duration: "12 min",
+      duration: "3 min",
       icon: TrendingUp,
       description: "The scaling roadmap from $1K to $10K/month. When to raise prices. When to hire help. Building a real business that runs without you.",
     },
@@ -449,7 +449,7 @@ export default function AISideHustlePage() {
               What You'll Learn
             </h2>
             <p className="text-slate-400 text-center mb-12 text-lg">
-              7 deep-dive modules. ~80 minutes total. Everything you need to build a real AI income stream.
+              7 deep-dive modules. Complete in under 1 hour. Everything you need to build a real AI income stream.
             </p>
 
             <div className="space-y-6">
@@ -655,7 +655,7 @@ export default function AISideHustlePage() {
             <p className="text-xl text-slate-400 mb-10">
               One proven system. Six clients. $5,000/month.
               <br />
-              7 modules. ~80 minutes. You could land your first client this week.
+              7 modules. Under 1 hour. You could land your first client this week.
             </p>
 
             <button

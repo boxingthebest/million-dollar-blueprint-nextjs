@@ -61,49 +61,49 @@ export async function GET() {
               title: 'Video 1 - The AI Income Opportunity',
               description: 'Discover the massive opportunity in AI services. Why businesses are desperate to pay for AI help and how you can position yourself to capture this demand.',
               videoUrl: 'https://player.vimeo.com/video/1152074282',
-              duration: 600, // 10 minutes
+              duration: 152, // 2:32
               order: 1,
             },
             {
               title: 'Video 2 - The 5 High-Demand AI Services',
               description: 'The exact AI services that clients are paying $500-$2,000 for right now. Content creation, research reports, automation, and more.',
               videoUrl: 'https://player.vimeo.com/video/1152075444',
-              duration: 720, // 12 minutes
+              duration: 158, // 2:38
               order: 2,
             },
             {
               title: 'Video 3 - The Client Acquisition System™',
               description: 'The proven system to find and land your first paying clients. Includes outreach scripts, proposal templates, and closing techniques.',
               videoUrl: 'https://player.vimeo.com/video/1152076047',
-              duration: 900, // 15 minutes
+              duration: 128, // 2:08
               order: 3,
             },
             {
               title: 'Video 4 - Pricing for Profit',
               description: 'How to price your services for maximum profit. The psychology of pricing, value-based pricing, and when to raise your rates.',
               videoUrl: 'https://player.vimeo.com/video/1152076436',
-              duration: 600, // 10 minutes
+              duration: 132, // 2:12
               order: 4,
             },
             {
               title: 'Video 5 - Delivering World-Class Results',
               description: 'How to deliver exceptional results that get you referrals and repeat business. Quality control, client communication, and exceeding expectations.',
               videoUrl: 'https://player.vimeo.com/video/1152076726',
-              duration: 720, // 12 minutes
+              duration: 149, // 2:29
               order: 5,
             },
             {
               title: 'Video 6 - Scaling to $5K/Month',
               description: 'The roadmap from your first client to consistent $5K months. Systems, processes, and strategies for sustainable growth.',
               videoUrl: 'https://player.vimeo.com/video/1152077099',
-              duration: 600, // 10 minutes
+              duration: 133, // 2:13
               order: 6,
             },
             {
               title: 'Video 7 - Building Recurring Revenue',
               description: 'How to convert one-time projects into monthly retainers. The secret to predictable income and long-term client relationships.',
               videoUrl: 'https://player.vimeo.com/video/1152077520',
-              duration: 600, // 10 minutes
+              duration: 166, // 2:46
               order: 7,
             },
           ],
@@ -130,7 +130,7 @@ export async function GET() {
         price: course.price / 100,
         modules: 1,
         lessons: lessonCount,
-        totalDuration: '~69 minutes'
+        totalDuration: '~17 minutes'
       }
     })
 
