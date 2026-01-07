@@ -81,7 +81,7 @@ export async function GET() {
             {
               title: 'Video 4 - Pricing for Profit',
               description: 'How to price your services for maximum profit. The psychology of pricing, value-based pricing, and when to raise your rates.',
-              videoUrl: 'https://player.vimeo.com/video/PLACEHOLDER_4',
+              videoUrl: 'https://player.vimeo.com/video/1152076436',
               duration: 600, // 10 minutes
               order: 4,
             },
