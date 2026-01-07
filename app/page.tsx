@@ -25,6 +25,7 @@ const ScrollReveal = dynamic(() => import("@/components/ScrollReveal"), { ssr: f
 const LazyVimeoPlayer = dynamic(() => import("@/components/LazyVimeoPlayer"), { ssr: false });
 const ProblemAgitation = dynamic(() => import("@/components/ProblemAgitation"), { ssr: false });
 const GodfatherOffer = dynamic(() => import("@/components/GodfatherOffer"), { ssr: false });
+const ChooseYourPath = dynamic(() => import("@/components/ChooseYourPath"), { ssr: false });
 
 
 export default function Home() {
@@ -68,7 +69,7 @@ export default function Home() {
 
   // Countdown timer
   useEffect(() => {
-    const targetDate = new Date('2026-01-12T23:59:59'); // January 12, 2026
+    const targetDate = new Date('2026-01-15T23:59:59'); // January 15, 2026
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -99,11 +100,40 @@ export default function Home() {
     "The AI Income Accelerator™": "/courses/ai-income-accelerator"
   };
 
-  // Courses ordered by purchase psychology and customer journey
-  // Row 1 (Best sellers / Entry points): Make $1K, AI-Resistant, Sales, Digital Marketing
-  // Row 2 (Premium / Upsells): Executive Presence, Leadership, Wealth, Wellness
+  // Courses ordered by persona: AI/Entrepreneur Track first (most popular), then Career Track
+  // Showing 6 featured courses to minimize scrolling on mobile
   const courses = [
-    // ROW 1 - Best Sellers
+    // 💰 ENTREPRENEUR TRACK - AI Income Courses (First 3)
+    {
+      title: "The AI Income Accelerator™",
+      subtitle: "Make Your First $5K/Month with AI",
+      price: "$97",
+      originalPrice: "$297",
+      icon: AIResistantIcon,
+      gradient: "from-cyan-500 to-blue-600",
+      bgGradient: "from-cyan-500 to-blue-600",
+      stripeLink: "/courses/ai-income-accelerator",
+      description: "$1,532 value → $97. The complete system to land paying AI clients and build a real income stream. 7 modules. Done-for-you templates. The \"First Client\" Guarantee™.",
+      students: "New",
+      image: "/ai-side-hustle-hero.jpg",
+      available: true,
+      badge: "⭐ START HERE"
+    },
+    {
+      title: "Make Your First $1K with AI",
+      subtitle: "The $1K Quick-Start System™",
+      price: "$47",
+      originalPrice: "$97",
+      icon: AIResistantIcon,
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-500 to-emerald-600",
+      stripeLink: "/courses/make-first-1k-ai",
+      description: "$491 value → $47. One simple AI service you can sell to local businesses for $200. Do it 5 times, make $1,000.",
+      students: "New",
+      image: "/make-1k-ai-hero-v2.jpg",
+      available: true,
+      badge: "🔥 QUICKEST WIN"
+    },
     {
       title: "AI Automation Agency Blueprint™",
       subtitle: "Build a $20K/Month Agency",
@@ -119,36 +149,7 @@ export default function Home() {
       available: true,
       badge: "🚀 PREMIUM"
     },
-    {
-      title: "Make Your First $1K with AI",
-      subtitle: "The $1K Quick-Start System™",
-      price: "$47",
-      originalPrice: "$97",
-      icon: AIResistantIcon,
-      gradient: "from-green-500 to-emerald-600",
-      bgGradient: "from-green-500 to-emerald-600",
-      stripeLink: "/courses/make-first-1k-ai",
-      description: "$491 value → $47. One simple AI service you can sell to local businesses for $200. Do it 5 times, make $1,000.",
-      students: "New",
-      image: "/make-1k-ai-hero-v2.jpg",
-      available: true,
-      badge: "FEATURED"
-    },
-    {
-      title: "The AI Income Accelerator™",
-      subtitle: "Make Your First $5K/Month with AI",
-      price: "$97",
-      originalPrice: "$297",
-      icon: AIResistantIcon,
-      gradient: "from-cyan-500 to-blue-600",
-      bgGradient: "from-cyan-500 to-blue-600",
-      stripeLink: "/courses/ai-side-hustle",
-      description: "$1,532 value → $97. The complete system to land paying AI clients and build a real income stream. 7 modules. Done-for-you templates. The \"First Client\" Guarantee™.",
-      students: "New",
-      image: "/ai-side-hustle-hero.jpg",
-      available: true,
-      badge: "NEW"
-    },
+    // 🏢 CAREER TRACK - Professional Development (Next 3)
     {
       title: "AI-Resistant Skills",
       subtitle: "The 10 Irreplaceable Skills Framework™",
@@ -161,39 +162,9 @@ export default function Home() {
       description: "$888 value → $47. Master the 10 proprietary frameworks AI can't replicate. From Fortune 100 boardrooms.",
       students: "253 enrolled",
       image: "/ai-resistant-hero-new.jpg",
-      available: true
-    },
-    {
-      title: "Sales Mastery",
-      subtitle: "The Fortune 100 Close System™",
-      price: "$247",
-      originalPrice: "$495",
-      icon: SalesMasteryIcon,
-      gradient: "from-orange-500 to-amber-600",
-      bgGradient: "from-orange-500 to-amber-600",
-      stripeLink: "https://buy.stripe.com/6oU8wO3L31zV4hKe0c08g0i",
-      description: "Sales frameworks that scaled companies from $500K to $50B+.",
-      students: "142 enrolled",
-      image: "/course-sales-new.jpg",
       available: true,
-      badge: "NEW"
+      badge: "CAREER TRACK"
     },
-    {
-      title: "Digital Marketing Mastery",
-      subtitle: "The Digital Revenue Engine™",
-      price: "$197",
-      originalPrice: "$395",
-      icon: DigitalMarketingIcon,
-      gradient: "from-cyan-500 to-blue-600",
-      bgGradient: "from-cyan-500 to-blue-600",
-      stripeLink: "https://buy.stripe.com/cNi8wO81j4M7g0sbS408g0k",
-      description: "Enterprise digital marketing tactics that drive revenue.",
-      students: "195 enrolled",
-      image: "/course-marketing-new.jpg",
-      available: true,
-      badge: "NEW"
-    },
-    // ROW 2 - Premium / Upsells
     {
       title: "Executive Presence",
       subtitle: "The Command Presence Protocol™",
@@ -210,47 +181,17 @@ export default function Home() {
       badge: "PREMIUM"
     },
     {
-      title: "Leadership & Influence",
-      subtitle: "The Influence Without Authority Method™",
+      title: "Sales Mastery",
+      subtitle: "The Fortune 100 Close System™",
       price: "$247",
       originalPrice: "$495",
-      icon: LeadershipIcon,
-      gradient: "from-purple-500 to-indigo-600",
-      bgGradient: "from-purple-500 to-indigo-600",
-      stripeLink: "https://buy.stripe.com/eVq3cuchz3I3dSkf4g08g0j",
-      description: "Fortune 100 leadership strategies for executive presence.",
-      students: "168 enrolled",
-      image: "/course-leadership-new.jpg",
-      available: true,
-      badge: "NEW"
-    },
-    {
-      title: "Wealth Building",
-      subtitle: "The Income-to-Freedom Formula™",
-      price: "$197",
-      originalPrice: "$395",
-      icon: WealthBuildingIcon,
-      gradient: "from-emerald-500 to-green-600",
-      bgGradient: "from-emerald-500/10 to-green-500/10",
-      stripeLink: "https://buy.stripe.com/fZu00i2GZemH15yf4g08g0l",
-      description: "Build wealth with Wall Street insider strategies.",
-      students: "221 enrolled",
-      image: "/course-wealth-new.jpg",
-      available: true,
-      badge: "NEW"
-    },
-    {
-      title: "The Executive Energy System™",
-      subtitle: "Sustainable High Performance",
-      price: "$197",
-      originalPrice: "$395",
-      icon: ExecutiveEnergyIcon,
-      gradient: "from-pink-500 to-rose-600",
-      bgGradient: "from-pink-500 to-rose-600",
-      stripeLink: "https://buy.stripe.com/14A00ibdvdiDaG86xK08g0m",
-      description: "Master executive wellness and sustainable high performance.",
-      students: "134 enrolled",
-      image: "/course-wellness.jpg",
+      icon: SalesMasteryIcon,
+      gradient: "from-orange-500 to-amber-600",
+      bgGradient: "from-orange-500 to-amber-600",
+      stripeLink: "https://buy.stripe.com/6oU8wO3L31zV4hKe0c08g0i",
+      description: "Sales frameworks that scaled companies from $500K to $50B+.",
+      students: "142 enrolled",
+      image: "/course-sales-new.jpg",
       available: true,
       badge: "NEW"
     }
@@ -387,7 +328,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-white text-sm relative z-10">
           <div className="flex items-center gap-3">
-            <span className="font-semibold tracking-wide text-base">🔥 LAUNCH SALE — Selected Courses 75%+ OFF — Ends January 12th</span>
+            <span className="font-semibold tracking-wide text-base">🔥 LAUNCH SALE — Selected Courses 75%+ OFF — Ends January 15th</span>
           </div>
           <div className="flex gap-4">
             <a href="https://www.facebook.com/milliondollarblueprint.official/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
@@ -405,8 +346,8 @@ export default function Home() {
 
       {/* Countdown Timer Banner */}
       <CountdownTimer 
-        targetDate={new Date('2026-01-12T23:59:59')} 
-        title="🔥 LAUNCH SALE ENDS JANUARY 12TH — Selected Courses 75%+ OFF"
+        targetDate={new Date('2026-01-15T23:59:59')} 
+        title="🔥 LAUNCH SALE ENDS JANUARY 15TH — Selected Courses 75%+ OFF"
       />
 
       {/* Hero Section */}
@@ -597,6 +538,9 @@ export default function Home() {
 
 
       <ValueProposition />
+
+      {/* Choose Your Path - Two Persona Selection */}
+      <ChooseYourPath />
 
       {/* Problem Agitation - Suby Style */}
       <ProblemAgitation />
@@ -826,7 +770,7 @@ export default function Home() {
                 {/* Professional Bundle - BEST VALUE */}
                 <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 border-4 border-purple-400 rounded-2xl p-8 text-center hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 relative group flex flex-col h-full bundle-pulse">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-                    BEST VALUE
+                    🔥 MOST POPULAR
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col flex-grow pt-4">
